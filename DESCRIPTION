@@ -9,7 +9,9 @@ License: file LICENSE
 Depends:
     R (>= 4.1.0)
 Imports:
-    checkmate,
+    dplyr,
+    httr2,
+    tibble
 Config/testthat/edition: 3
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)

@@ -9,14 +9,16 @@ repos:
       - id: end-of-file-fixer
         exclude: \.Rd$
       - id: file-contents-sorter
-        files: ^\.Rbuildignore|\.dockerignore$
+        files: ^\.Rbuildignore$
       - id: trailing-whitespace
   - repo: https://github.com/lorenzwalthert/precommit
     rev: v0.3.2.9027
     hooks:
       - id: roxygenize
         additional_dependencies:
+          - dplyr
           - httr2
+          - tibble
       - id: deps-in-desc
       - id: no-browser-statement
       - id: parsable-R
