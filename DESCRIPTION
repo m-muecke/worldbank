@@ -2,7 +2,7 @@ Package: worldbank
 Title: World Bank Data API Wrapper
 Version: 0.0.1
 Authors@R: c(
-    person("Maximilian", "Muecke", , "muecke.maximilian@gmail.com", role = c("aut", "cre")),
+    person("Maximilian", "Muecke", , "muecke.maximilian@gmail.com", role = c("aut", "cre"))
   )
 Description: `replraw` acts as the ingestion pipeline for the replication
     project. It imports SFTP data from MSCI and ICE, saves them on a SMB,
