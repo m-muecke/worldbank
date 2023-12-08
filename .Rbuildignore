@@ -6,6 +6,7 @@
 ^.pre-commit-config.yaml$
 ^CITATION.cff$
 ^Dockerfile$
+^LICENSE\.md$
 ^README.html$
 ^README\.Rmd$
 ^\.Rproj\.user$
