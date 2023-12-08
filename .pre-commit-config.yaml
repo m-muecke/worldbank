@@ -18,7 +18,6 @@ repos:
         additional_dependencies:
           - dplyr
           - httr2
-          - tibble
       - id: deps-in-desc
       - id: no-browser-statement
       - id: parsable-R

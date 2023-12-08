@@ -1,17 +1,17 @@
 Package: worldbank
 Title: World Bank Data API Wrapper
 Version: 0.0.1
-Authors@R: c(
+Authors@R:
     person("Maximilian", "Muecke", , "muecke.maximilian@gmail.com", role = c("aut", "cre"))
-  )
 Description: ...
 License: MIT + file LICENSE
 Depends:
     R (>= 4.1.0)
 Imports:
     dplyr,
-    httr2,
-    tibble
+    httr2
+Suggests:
+    testthat (>= 3.0.0)
 Config/testthat/edition: 3
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
