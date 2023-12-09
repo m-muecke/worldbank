@@ -122,6 +122,14 @@ worldbank <- function(resource, resp_data, ..., page = NULL) {
   }
 }
 
+worldbank_page <- function(resource, resp_data, ..., page = 1) {
+  request("http://api.worldbank.org/v2") |>
+    req_url_path_append(resource) |>
+    req_url_query(..., format = "json", page = page) |>
+    req_perform() |>
+    resp_data()
+}
+
 worldbank_iter <- function(resource, resp_data, ...) {
   req <- request("http://api.worldbank.org/v2") |>
     req_url_path_append(resource) |>
