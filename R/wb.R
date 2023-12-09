@@ -1,8 +1,18 @@
+wb_country <- function() {
+  request("http://api.worldbank.org/v2") |>
+    req_url_path_append("country/US") |>
+    req_url_query(format = "json", page = 1) |>
+    req_perform() |>
+    resp_body_json()
+}
+
 #' @export
-wb_indicators <- function(page = NULL) {
+wb_indicator <- function(indicator = "all", page = NULL) {
+  stopifnot(is.character(indicator) && length(indicator) == 1)
   stopifnot(is.null(page) || is.numeric(page) && length(page) == 1)
 
-  res <- worldbank("indicators", \(resp) {
+  resource <- sprintf("indicator/%s", indicator)
+  res <- worldbank(resource, \(resp) {
     data <- resp_body_json(resp)[[2]]
     data <- lapply(data, \(x) {
       if (length(x$topics) > 0 && length(x$topics[[1]]) > 0) {
@@ -112,14 +122,6 @@ worldbank <- function(resource, resp_data, ..., page = NULL) {
   }
 }
 
-worldbank_page <- function(resource, resp_data, ..., page = 1) {
-  request("http://api.worldbank.org/v2") |>
-    req_url_path_append(resource) |>
-    req_url_query(..., format = "json", page = page) |>
-    req_perform() |>
-    resp_data()
-}
-
 worldbank_iter <- function(resource, resp_data, ...) {
   req <- request("http://api.worldbank.org/v2") |>
     req_url_path_append(resource) |>
@@ -134,5 +136,5 @@ worldbank_iter <- function(resource, resp_data, ...) {
       max_reqs = Inf
     ) |>
     resps_data(resp_data)
+  data
 }
-data
