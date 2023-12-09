@@ -1,21 +1,13 @@
-fetch_wb <- function(country, indicator, page) {
+worldbank <- function(resource, ..., page = 1) {
   request("http://api.worldbank.org/v2") |>
-    req_url_path_append("country", country, "indicator", indicator) |>
-    req_url_query(format = "json", page = page) |>
-    req_perform() |>
-    resp_body_json()
-}
-
-fetch_indicators <- function(page = 1) {
-  request("http://api.worldbank.org/v2") |>
-    req_url_path_append("indicator") |>
-    req_url_query(format = "json", page = page) |>
+    req_url_path_append(resource) |>
+    req_url_query(..., format = "json", page = page) |>
     req_perform() |>
     resp_body_json()
 }
 
 parse_indicator <- function(page = 1) {
-  resp <- fetch_indicators()
+  resp <- worldbank("indicator")
   npages <- resp[[1]]$pages
   data <- lapply(resp[[2]], \(row) {
     if (length(row$topics) > 0 && length(row$topics[[1]]) > 0) {
@@ -43,7 +35,8 @@ parse_indicator <- function(page = 1) {
 }
 
 parse_indicator_page <- function(indicator, country = "US", page = 1) {
-  resp <- fetch_wb(country, indicator, page)
+  resource <- sprintf("country/%s/indicator/%s", country, indicator)
+  resp <- worldbank(resource)
   npages <- resp[[1]]$pages
   data <- lapply(resp[[2]], \(row) {
     if (is.null(row$value) || is.null(row$date)) {
