@@ -16,7 +16,6 @@ repos:
     hooks:
       - id: roxygenize
         additional_dependencies:
-          - dplyr
           - httr2
       - id: deps-in-desc
       - id: no-browser-statement

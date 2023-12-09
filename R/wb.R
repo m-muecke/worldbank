@@ -1,7 +1,3 @@
-`%||%` <- function(x, y) {
-  if (is.null(x)) y else x
-}
-
 fetch_wb <- function(country, indicator, page) {
   request("http://api.worldbank.org/v2") |>
     req_url_path_append("country", country, "indicator", indicator) |>
@@ -22,19 +18,27 @@ parse_indicator <- function(page = 1) {
   resp <- fetch_indicators()
   npages <- resp[[1]]$pages
   data <- lapply(resp[[2]], \(row) {
-    list(
+    if (length(row$topics) > 0 && length(row$topics[[1]]) > 0) {
+      topic_id <- row$topics[[1]]$id
+      topic_value <- row$topics[[1]]$value
+    } else {
+      topic_id <- NA
+      topic_value <- NA
+    }
+    unit <- if (row$unit == "") NA else row$unit
+    data.frame(
       id = row$id,
       name = row$name,
-      unit = if (row$unit == "") NA else row$unit,
+      unit = unit,
       source_id = row$source$id,
       source_value = row$source$value,
-      source_unit = row$sourceUnit,
-      source_organization = row$source_organization,
-      topic_id = row$topics$id,
-      topic_value = row$topics$value
+      sourceNote = row$sourceNote,
+      source_organization = row$sourceOrganization,
+      topic_id = topic_id,
+      topic_value = topic_value
     )
-  }) |>
-    bind_rows()
+  })
+  data <- do.call(rbind, data)
   list(page = page, npages = npages, data = data)
 }
 
@@ -45,14 +49,17 @@ parse_indicator_page <- function(indicator, country = "US", page = 1) {
     if (is.null(row$value) || is.null(row$date)) {
       return()
     }
-    list(
+    data.frame(
       year = row$date,
-      country_code = country,
-      indicator_code = indicator,
+      indicator_id = row$indicator$id,
+      indicator_name = row$indicator$value,
+      country_id = row$country$id,
+      country_name = row$country$value,
+      country_code = row$countryiso3code,
       value = row$value
     )
-  }) |>
-    bind_rows()
+  })
+  data <- do.call(rbind, data)
   list(page = page, npages = npages, data = data)
 }
 
@@ -63,11 +70,12 @@ wb_indicator <- function(indicator = "NY.GDP.MKTP.CD", country = "US") {
   if (npages == 1) {
     return(resp$data)
   }
-  lapply(seq(2, npages), \(page) {
+  res <- lapply(seq(2, npages), \(page) {
     parse_indicator_page(indicator, country, page) |> _$data
-  }) |>
-    bind_rows(resp$data) |>
-    arrange(year)
+  })
+  res <- do.call(rbind, res)
+  res <- rbind(resp$data, res)
+  as_tibble(res)
 }
 
 wb_list_indicators <- function(page = NULL) {
@@ -75,8 +83,10 @@ wb_list_indicators <- function(page = NULL) {
   if (resp$npages == 1) {
     return(resp$data)
   }
-  lapply(seq(2, resp$npage), \(page) {
+  res <- lapply(seq(2, resp$npage), \(page) {
     parse_indicator(page) |> _$data
-  }) |>
-    bind_rows(resp$data)
+  })
+  res <- do.call(rbind, res)
+  res <- rbind(resp$data, res)
+  as_tibble(res)
 }
