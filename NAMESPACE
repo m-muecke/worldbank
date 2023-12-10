@@ -3,6 +3,8 @@
 export(wb_country)
 export(wb_country_indicator)
 export(wb_indicator)
+export(wb_source)
+export(wb_topic)
 importFrom(httr2,iterate_with_offset)
 importFrom(httr2,req_perform)
 importFrom(httr2,req_perform_iterative)

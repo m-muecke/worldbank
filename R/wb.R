@@ -1,4 +1,44 @@
 #' @export
+wb_source <- function(source = "all", page = NULL) {
+  stopifnot(is.character(source) && length(source) == 1)
+  stopifnot(is.null(page) || is.numeric(page) && length(page) == 1)
+
+  resource <- sprintf("source/%s", source)
+  res <- worldbank(resource, \(resp) {
+    data <- resp_body_json(resp)[[2]]
+    data.frame(
+      id = map_chr(data, "id"),
+      last_updated = map_chr(data, "lastupdated"),
+      name = map_chr(data, "name"),
+      code = map_chr(data, "code"),
+      description = map_chr(data, "description"),
+      url = map_chr(data, "url"),
+      data_availability = map_chr(data, "dataavailability"),
+      metadata_availability = map_chr(data, "metadataavailability"),
+      concepts = map_chr(data, "concepts")
+    )
+  }, page = page)
+  as_tibble(res)
+}
+
+#' @export
+wb_topic <- function(topic = "all", page = NULL) {
+  stopifnot(is.character(topic) && length(topic) == 1)
+  stopifnot(is.null(page) || is.numeric(page) && length(page) == 1)
+
+  resource <- sprintf("topic/%s", topic)
+  res <- worldbank(resource, \(resp) {
+    data <- resp_body_json(resp)[[2]]
+    data.frame(
+      id = map_chr(data, "id"),
+      value = map_chr(data, "value"),
+      source_note = map_chr(data, "sourceNote")
+    )
+  }, page = page)
+  as_tibble(res)
+}
+
+#' @export
 wb_country <- function(country = "all", page = NULL) {
   stopifnot(is.character(country) && length(country) == 1)
   stopifnot(is.null(page) || is.numeric(page) && length(page) == 1)
@@ -49,10 +89,10 @@ wb_indicator <- function(indicator = "all", page = NULL) {
       data.frame(
         id = x$id,
         name = x$name,
-        unit = if (x$unit == "") NA_character_ else x$unit,
+        unit = x$unit,
         source_id = x$source$id,
         source_value = x$source$value,
-        source_note = if (x$sourceNote == "") NA_character_ else x$sourceNote,
+        source_note = x$sourceNote,
         source_organization = x$sourceOrganization,
         topic_id = topic_id,
         topic_value = topic_value
@@ -88,8 +128,8 @@ wb_country_indicator <- function(indicator = "NY.GDP.MKTP.CD",
         country_name = x$country$value,
         country_code = x$countryiso3code,
         value = x$value,
-        unit = if (x$unit == "") NA_character_ else x$unit,
-        obs_status = if (x$obs_status == "") NA_character_ else x$obs_status,
+        unit = x$unit,
+        obs_status = x$obs_status,
         decimal = x$decimal
       )
     })
@@ -101,14 +141,10 @@ wb_country_indicator <- function(indicator = "NY.GDP.MKTP.CD",
 parse_indicators2 <- function(data) {
   id <- map_chr(data, "id")
   name <- map_chr(data, "name")
-  unit <- map_chr(data, \(x) {
-    if (x$unit == "") NA_character_ else x$unit
-  })
+  unit <- map_chr(data, "unit")
   source_id <- map_chr(data, \(x) x$source$id)
   source_value <- map_chr(data, \(x) x$source$value)
-  source_note <- map_chr(data, \(x) {
-    if (x$sourceNote == "") NA_character_ else x$sourceNote
-  })
+  source_note <- map_chr(data, "sourceNote")
   source_organization <- map_chr(data, "sourceOrganization")
   topic_id <- map_chr(data, \(x) {
     if (length(x$topics) > 0 && length(x$topics[[1]]) > 0) {
@@ -163,7 +199,7 @@ worldbank_iter <- function(resource, resp_data, ...) {
     req_perform_iterative(
       next_req = iterate_with_offset(
         "page",
-        resp_pages = \(resp) resp_body_json(resp)[[1]]$pages
+        resp_pages = \(resp) as.numeric(resp_body_json(resp)[[1]]$pages)
       ),
       max_reqs = Inf
     ) |>
