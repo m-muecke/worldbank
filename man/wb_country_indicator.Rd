@@ -10,6 +10,8 @@ wb_country_indicator(indicator = "NY.GDP.MKTP.CD", country = "US", page = NULL)
 \item{indicator}{character(1) indicator to query.}
 
 \item{country}{character(1) country to query.}
+
+\item{page}{integer(1) page number to query. Default is NULL.}
 }
 \description{
 World Bank country indicator data

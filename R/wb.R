@@ -183,6 +183,7 @@ wb_indicator <- function(indicator = "all", page = NULL) {
 #'
 #' @param indicator character(1) indicator to query.
 #' @param country character(1) country to query.
+#' @param page integer(1) page number to query. Default is NULL.
 #' @export
 wb_country_indicator <- function(indicator = "NY.GDP.MKTP.CD",
                                  country = "US",
