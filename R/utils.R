@@ -1,3 +1,7 @@
+is_page <- function(x) {
+  is.null(page) || is.numeric(page) && length(page) == 1
+}
+
 is_installed <- function(pkg) {
   isTRUE(requireNamespace(pkg, quietly = TRUE))
 }

@@ -1,7 +1,39 @@
 #' @export
+wb_lending_type <- function(type = "all") {
+  stopifnot(is.character(type) && length(type) == 1)
+
+  resource <- sprintf("lendingType/%s", type)
+  res <- worldbank(resource, \(resp) {
+    data <- resp_body_json(resp)[[2]]
+    data.frame(
+      id = map_chr(data, "id"),
+      iso2code = map_chr(data, "iso2code"),
+      value = map_chr(data, "value")
+    )
+  }, page = 1)
+  as_tibble(res)
+}
+
+#' @export
+wb_income_lvl <- function(income = "all") {
+  stopifnot(is.character(income) && length(income) == 1)
+
+  resource <- sprintf("incomeLevel/%s", income)
+  res <- worldbank(resource, \(resp) {
+    data <- resp_body_json(resp)[[2]]
+    data.frame(
+      id = map_chr(data, "id"),
+      iso2code = map_chr(data, "iso2code"),
+      value = map_chr(data, "value")
+    )
+  }, page = 1)
+  as_tibble(res)
+}
+
+#' @export
 wb_source <- function(source = "all", page = NULL) {
   stopifnot(is.character(source) && length(source) == 1)
-  stopifnot(is.null(page) || is.numeric(page) && length(page) == 1)
+  stopifnot(is_page(page))
 
   resource <- sprintf("source/%s", source)
   res <- worldbank(resource, \(resp) {
@@ -24,7 +56,7 @@ wb_source <- function(source = "all", page = NULL) {
 #' @export
 wb_topic <- function(topic = "all", page = NULL) {
   stopifnot(is.character(topic) && length(topic) == 1)
-  stopifnot(is.null(page) || is.numeric(page) && length(page) == 1)
+  stopifnot(is_page(page))
 
   resource <- sprintf("topic/%s", topic)
   res <- worldbank(resource, \(resp) {
@@ -39,9 +71,27 @@ wb_topic <- function(topic = "all", page = NULL) {
 }
 
 #' @export
+wb_region <- function(region = "all", page = NULL) {
+  stopifnot(is.character(region) && length(region) == 1)
+  stopifnot(is_page(page))
+
+  resource <- sprintf("region/%s", region)
+  res <- worldbank(resource, \(resp) {
+    data <- resp_body_json(resp)[[2]]
+    data.frame(
+      id = map_chr(data, "id"),
+      code = map_chr(data, "code"),
+      iso2code = map_chr(data, "iso2code"),
+      name = map_chr(data, "name")
+    )
+  }, page = page)
+  as_tibble(res)
+}
+
+#' @export
 wb_country <- function(country = "all", page = NULL) {
   stopifnot(is.character(country) && length(country) == 1)
-  stopifnot(is.null(page) || is.numeric(page) && length(page) == 1)
+  stopifnot(is_page(page))
 
   resource <- sprintf("country/%s", country)
   res <- worldbank(resource, \(resp) {
@@ -73,7 +123,7 @@ wb_country <- function(country = "all", page = NULL) {
 #' @export
 wb_indicator <- function(indicator = "all", page = NULL) {
   stopifnot(is.character(indicator) && length(indicator) == 1)
-  stopifnot(is.null(page) || is.numeric(page) && length(page) == 1)
+  stopifnot(is_page(page))
 
   resource <- sprintf("indicator/%s", indicator)
   res <- worldbank(resource, \(resp) {
@@ -111,7 +161,7 @@ wb_country_indicator <- function(indicator = "NY.GDP.MKTP.CD",
   stopifnot(
     is.character(country) && length(country) == 1 && nchar(country) %in% 2:3
   )
-  stopifnot(is.null(page) || is.numeric(page) && length(page) == 1)
+  stopifnot(is_page(page))
 
   resource <- sprintf("country/%s/indicator/%s", country, indicator)
   res <- worldbank(resource, \(resp) {

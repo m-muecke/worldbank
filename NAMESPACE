@@ -2,7 +2,10 @@
 
 export(wb_country)
 export(wb_country_indicator)
+export(wb_income_lvl)
 export(wb_indicator)
+export(wb_lending_type)
+export(wb_region)
 export(wb_source)
 export(wb_topic)
 importFrom(httr2,iterate_with_offset)

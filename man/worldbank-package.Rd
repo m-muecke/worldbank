@@ -4,7 +4,7 @@
 \name{worldbank-package}
 \alias{worldbank}
 \alias{worldbank-package}
-\title{worldbank: World Bank Data API Wrapper}
+\title{worldbank: Modern World Bank API Wrapper}
 \description{
 ...
 }
