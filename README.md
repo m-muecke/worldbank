@@ -10,6 +10,9 @@ experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](h
 [![R-CMD-check](https://github.com/m-muecke/worldbank/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/m-muecke/worldbank/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
 
+The goal of worldbank is to provide a simple interface to the World Bank
+API.
+
 ## Installation
 
 You can install the development version of worldbank from
@@ -19,3 +22,5 @@ You can install the development version of worldbank from
 # install.packages("pak")
 pak::pak("m-muecke/worldbank")
 ```
+
+## Usage
