@@ -6,6 +6,11 @@
 \usage{
 wb_country_indicator(indicator = "NY.GDP.MKTP.CD", country = "US", page = NULL)
 }
+\arguments{
+\item{indicator}{character(1) indicator to query.}
+
+\item{country}{character(1) country to query.}
+}
 \description{
 World Bank country indicator data
 }

@@ -6,6 +6,11 @@
 \usage{
 wb_source(source = "all", page = NULL)
 }
+\arguments{
+\item{source}{character(1) source to query. Default is "all".}
+
+\item{page}{integer(1) page number to query. Default is NULL.}
+}
 \description{
 World Bank source data
 }

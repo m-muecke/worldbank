@@ -6,6 +6,11 @@
 \usage{
 wb_topic(topic = "all", page = NULL)
 }
+\arguments{
+\item{topic}{character(1) topic to query. Default is "all".}
+
+\item{page}{integer(1) page number to query. Default is NULL.}
+}
 \description{
 World Bank topic data
 }

@@ -6,6 +6,11 @@
 \usage{
 wb_country(country = "all", page = NULL)
 }
+\arguments{
+\item{country}{character(1) country to query.}
+
+\item{page}{integer(1) page number to query. Default is NULL.}
+}
 \description{
 World Bank country data
 }

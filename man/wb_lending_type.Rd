@@ -6,6 +6,9 @@
 \usage{
 wb_lending_type(type = "all")
 }
+\arguments{
+\item{type}{character(1) lending type to query. Default is "all".}
+}
 \description{
 World Bank lending type data
 }

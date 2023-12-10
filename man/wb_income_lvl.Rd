@@ -6,6 +6,9 @@
 \usage{
 wb_income_lvl(income = "all")
 }
+\arguments{
+\item{income}{character(1) income level to query. Default is "all".}
+}
 \description{
 World Bank income level data
 }

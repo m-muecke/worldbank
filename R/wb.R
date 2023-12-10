@@ -1,5 +1,6 @@
 #' World Bank lending type data
 #'
+#' @param type character(1) lending type to query. Default is "all".
 #' @export
 wb_lending_type <- function(type = "all") {
   stopifnot(is.character(type) && length(type) == 1)
@@ -18,6 +19,7 @@ wb_lending_type <- function(type = "all") {
 
 #' World Bank income level data
 #'
+#' @param income character(1) income level to query. Default is "all".
 #' @export
 wb_income_lvl <- function(income = "all") {
   stopifnot(is.character(income) && length(income) == 1)
@@ -36,6 +38,8 @@ wb_income_lvl <- function(income = "all") {
 
 #' World Bank source data
 #'
+#' @param source character(1) source to query. Default is "all".
+#' @param page integer(1) page number to query. Default is NULL.
 #' @export
 wb_source <- function(source = "all", page = NULL) {
   stopifnot(is.character(source) && length(source) == 1)
@@ -61,6 +65,8 @@ wb_source <- function(source = "all", page = NULL) {
 
 #' World Bank topic data
 #'
+#' @param topic character(1) topic to query. Default is "all".
+#' @param page integer(1) page number to query. Default is NULL.
 #' @export
 wb_topic <- function(topic = "all", page = NULL) {
   stopifnot(is.character(topic) && length(topic) == 1)
@@ -80,6 +86,8 @@ wb_topic <- function(topic = "all", page = NULL) {
 
 #' World Bank region data
 #'
+#' @param region character(1) region to query. Default is "all".
+#' @param page integer(1) page number to query. Default is NULL.
 #' @export
 wb_region <- function(region = "all", page = NULL) {
   stopifnot(is.character(region) && length(region) == 1)
@@ -100,6 +108,8 @@ wb_region <- function(region = "all", page = NULL) {
 
 #' World Bank country data
 #'
+#' @param country character(1) country to query.
+#' @param page integer(1) page number to query. Default is NULL.
 #' @export
 wb_country <- function(country = "all", page = NULL) {
   stopifnot(is.character(country) && length(country) == 1)
@@ -134,6 +144,8 @@ wb_country <- function(country = "all", page = NULL) {
 
 #' World Bank indicator data
 #'
+#' @param indicator character(1) indicator to query. Default is "all".
+#' @param page integer(1) page number to query. Default is NULL.
 #' @export
 wb_indicator <- function(indicator = "all", page = NULL) {
   stopifnot(is.character(indicator) && length(indicator) == 1)
@@ -169,6 +181,8 @@ wb_indicator <- function(indicator = "all", page = NULL) {
 
 #' World Bank country indicator data
 #'
+#' @param indicator character(1) indicator to query.
+#' @param country character(1) country to query.
 #' @export
 wb_country_indicator <- function(indicator = "NY.GDP.MKTP.CD",
                                  country = "US",

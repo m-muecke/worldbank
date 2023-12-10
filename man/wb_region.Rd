@@ -6,6 +6,11 @@
 \usage{
 wb_region(region = "all", page = NULL)
 }
+\arguments{
+\item{region}{character(1) region to query. Default is "all".}
+
+\item{page}{integer(1) page number to query. Default is NULL.}
+}
 \description{
 World Bank region data
 }
