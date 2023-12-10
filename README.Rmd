@@ -15,3 +15,11 @@ knitr::opts_chunk$set(
 
 <!-- badges: start -->
 <!-- badges: end -->
+
+## Installation
+You can install the development version of worldbank from [GitHub](https://github.com/) with:
+
+```{r, eval = FALSE}
+# install.packages("pak")
+pak::pak("m-muecke/worldbank")
+```

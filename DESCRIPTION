@@ -1,5 +1,5 @@
 Package: worldbank
-Title: World Bank Data API Wrapper
+Title: Modern World Bank API Wrapper
 Version: 0.0.1
 Authors@R:
     person("Maximilian", "Muecke", , "muecke.maximilian@gmail.com", role = c("aut", "cre"))
