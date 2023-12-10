@@ -248,11 +248,21 @@ worldbank <- function(resource, resp_data, ..., page = NULL) {
   }
 }
 
+is_wb_error <- function(resp) {
+  status <- resp_status(resp)
+  if (status >= 400) {
+    return(TRUE)
+  }
+  is_invalid <- resp_body_json(resp)[[1]]$message[[1]]$key == "Invalid value"
+  status == 200 && is_invalid
+}
+
 worldbank_page <- function(resource, resp_data, ..., page = 1) {
   request("http://api.worldbank.org/v2") |>
     req_user_agent("worldbank (https://m-muecke.github.io/worldbank)") |>
     req_url_path_append(resource) |>
     req_url_query(..., format = "json", page = page) |>
+    req_error(is_error = is_wb_error) |>
     req_perform() |>
     resp_data()
 }
@@ -261,7 +271,8 @@ worldbank_iter <- function(resource, resp_data, ...) {
   req <- request("http://api.worldbank.org/v2") |>
     req_user_agent("worldbank (https://m-muecke.github.io/worldbank)") |>
     req_url_path_append(resource) |>
-    req_url_query(..., format = "json")
+    req_url_query(..., format = "json") |>
+    req_error(is_error = is_wb_error)
 
   data <- req |>
     req_perform_iterative(
