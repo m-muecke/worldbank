@@ -1,3 +1,5 @@
+#' World Bank lending type data
+#'
 #' @export
 wb_lending_type <- function(type = "all") {
   stopifnot(is.character(type) && length(type) == 1)
@@ -14,6 +16,8 @@ wb_lending_type <- function(type = "all") {
   as_tibble(res)
 }
 
+#' World Bank income level data
+#'
 #' @export
 wb_income_lvl <- function(income = "all") {
   stopifnot(is.character(income) && length(income) == 1)
@@ -30,6 +34,8 @@ wb_income_lvl <- function(income = "all") {
   as_tibble(res)
 }
 
+#' World Bank source data
+#'
 #' @export
 wb_source <- function(source = "all", page = NULL) {
   stopifnot(is.character(source) && length(source) == 1)
@@ -53,6 +59,8 @@ wb_source <- function(source = "all", page = NULL) {
   as_tibble(res)
 }
 
+#' World Bank topic data
+#'
 #' @export
 wb_topic <- function(topic = "all", page = NULL) {
   stopifnot(is.character(topic) && length(topic) == 1)
@@ -70,6 +78,8 @@ wb_topic <- function(topic = "all", page = NULL) {
   as_tibble(res)
 }
 
+#' World Bank region data
+#'
 #' @export
 wb_region <- function(region = "all", page = NULL) {
   stopifnot(is.character(region) && length(region) == 1)
@@ -88,6 +98,8 @@ wb_region <- function(region = "all", page = NULL) {
   as_tibble(res)
 }
 
+#' World Bank country data
+#'
 #' @export
 wb_country <- function(country = "all", page = NULL) {
   stopifnot(is.character(country) && length(country) == 1)
@@ -120,6 +132,8 @@ wb_country <- function(country = "all", page = NULL) {
   as_tibble(res)
 }
 
+#' World Bank indicator data
+#'
 #' @export
 wb_indicator <- function(indicator = "all", page = NULL) {
   stopifnot(is.character(indicator) && length(indicator) == 1)
@@ -153,6 +167,8 @@ wb_indicator <- function(indicator = "all", page = NULL) {
   as_tibble(res)
 }
 
+#' World Bank country indicator data
+#'
 #' @export
 wb_country_indicator <- function(indicator = "NY.GDP.MKTP.CD",
                                  country = "US",
