@@ -1,9 +1,33 @@
-wb_country <- function() {
-  request("http://api.worldbank.org/v2") |>
-    req_url_path_append("country/US") |>
-    req_url_query(format = "json", page = 1) |>
-    req_perform() |>
-    resp_body_json()
+#' @export
+wb_country <- function(country = "all", page = NULL) {
+  stopifnot(is.character(country) && length(country) == 1)
+  stopifnot(is.null(page) || is.numeric(page) && length(page) == 1)
+
+  resource <- sprintf("country/%s", country)
+  res <- worldbank(resource, \(resp) {
+    data <- resp_body_json(resp)[[2]]
+    data.frame(
+      country_id = map_chr(data, "id"),
+      country_code = map_chr(data, "iso2Code"),
+      country_name = map_chr(data, "name"),
+      region_id = map_chr(data, \(x) x$region$id),
+      region_code = map_chr(data, \(x) x$region$iso2code),
+      region_value = map_chr(data, \(x) x$region$value),
+      admin_region_id = map_chr(data, \(x) x$adminregion$id),
+      admin_region_code = map_chr(data, \(x) x$adminregion$iso2code),
+      admin_region_value = map_chr(data, \(x) x$adminregion$value),
+      income_level_id = map_chr(data, \(x) x$incomeLevel$id),
+      income_level_code = map_chr(data, \(x) x$incomeLevel$iso2code),
+      income_level_value = map_chr(data, \(x) x$incomeLevel$value),
+      lending_type_id = map_chr(data, \(x) x$lendingType$id),
+      lending_type_code = map_chr(data, \(x) x$lendingType$iso2code),
+      lending_type_value = map_chr(data, \(x) x$lendingType$value),
+      capital_city = map_chr(data, "capitalCity"),
+      longitude = map_chr(data, "longitude"),
+      latitude = map_chr(data, "latitude")
+    )
+  }, page = page)
+  as_tibble(res)
 }
 
 #' @export
@@ -75,31 +99,31 @@ wb_country_indicator <- function(indicator = "NY.GDP.MKTP.CD",
 }
 
 parse_indicators2 <- function(data) {
-  id <- vapply(data, \(x) x$id, character(1))
-  name <- vapply(data, \(x) x$id, character(1))
-  unit <- vapply(data, \(x) {
+  id <- map_chr(data, "id")
+  name <- map_chr(data, "name")
+  unit <- map_chr(data, \(x) {
     if (x$unit == "") NA_character_ else x$unit
-  }, character(1))
-  source_id <- vapply(data, \(x) x$source$id, character(1))
-  source_value <- vapply(data, \(x) x$source$value, character(1))
-  source_note <- vapply(data, \(x) {
+  })
+  source_id <- map_chr(data, \(x) x$source$id)
+  source_value <- map_chr(data, \(x) x$source$value)
+  source_note <- map_chr(data, \(x) {
     if (x$sourceNote == "") NA_character_ else x$sourceNote
-  }, character(1))
-  source_organization <- vapply(data, \(x) x$sourceOrganization, character(1))
-  topic_id <- vapply(data, \(x) {
+  })
+  source_organization <- map_chr(data, "sourceOrganization")
+  topic_id <- map_chr(data, \(x) {
     if (length(x$topics) > 0 && length(x$topics[[1]]) > 0) {
       x$topics[[1]]$id
     } else {
       NA_character_
     }
-  }, character(1))
-  topic_value <- vapply(data, \(x) {
+  })
+  topic_value <- map_chr(data, \(x) {
     if (length(x$topics) > 0 && length(x$topics[[1]]) > 0) {
       x$topics[[1]]$value
     } else {
       NA_character_
     }
-  }, character(1))
+  })
 
   data.frame(
     id = id,
