@@ -4,6 +4,8 @@
 # worldbank
 
 <!-- badges: start -->
+
+[![R-CMD-check](https://github.com/m-muecke/worldbank/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/m-muecke/worldbank/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
 
 ## Installation
