@@ -19,6 +19,30 @@
     <loc>/reference/index.html</loc>
   </url>
   <url>
+    <loc>/reference/wb_country.html</loc>
+  </url>
+  <url>
+    <loc>/reference/wb_country_indicator.html</loc>
+  </url>
+  <url>
+    <loc>/reference/wb_income_lvl.html</loc>
+  </url>
+  <url>
+    <loc>/reference/wb_indicator.html</loc>
+  </url>
+  <url>
+    <loc>/reference/wb_lending_type.html</loc>
+  </url>
+  <url>
+    <loc>/reference/wb_region.html</loc>
+  </url>
+  <url>
+    <loc>/reference/wb_source.html</loc>
+  </url>
+  <url>
+    <loc>/reference/wb_topic.html</loc>
+  </url>
+  <url>
     <loc>/reference/worldbank-package.html</loc>
   </url>
 </urlset>
