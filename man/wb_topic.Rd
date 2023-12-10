@@ -14,3 +14,8 @@ wb_topic(topic = "all", page = NULL)
 \description{
 World Bank topic data
 }
+\examples{
+\dontrun{
+wb_topic()
+}
+}

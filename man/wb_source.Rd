@@ -14,3 +14,8 @@ wb_source(source = "all", page = NULL)
 \description{
 World Bank source data
 }
+\examples{
+\dontrun{
+wb_source()
+}
+}

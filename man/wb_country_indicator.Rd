@@ -16,3 +16,8 @@ wb_country_indicator(indicator = "NY.GDP.MKTP.CD", country = "US", page = NULL)
 \description{
 World Bank country indicator data
 }
+\examples{
+\dontrun{
+wb_country_indicator()
+}
+}

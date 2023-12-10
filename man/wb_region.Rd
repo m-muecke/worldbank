@@ -14,3 +14,8 @@ wb_region(region = "all", page = NULL)
 \description{
 World Bank region data
 }
+\examples{
+\dontrun{
+wb_region()
+}
+}

@@ -12,3 +12,8 @@ wb_income_lvl(income = "all")
 \description{
 World Bank income level data
 }
+\examples{
+\dontrun{
+wb_income_lvl()
+}
+}

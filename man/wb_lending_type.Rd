@@ -12,3 +12,8 @@ wb_lending_type(type = "all")
 \description{
 World Bank lending type data
 }
+\examples{
+\dontrun{
+wb_lending_type()
+}
+}

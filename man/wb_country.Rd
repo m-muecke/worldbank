@@ -14,3 +14,8 @@ wb_country(country = "all", page = NULL)
 \description{
 World Bank country data
 }
+\examples{
+\dontrun{
+wb_country()
+}
+}

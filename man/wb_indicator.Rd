@@ -14,3 +14,8 @@ wb_indicator(indicator = "all", page = NULL)
 \description{
 World Bank indicator data
 }
+\examples{
+\dontrun{
+wb_indicator()
+}
+}

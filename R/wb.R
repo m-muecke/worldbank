@@ -2,6 +2,10 @@
 #'
 #' @param type character(1) lending type to query. Default is "all".
 #' @export
+#' @examples
+#' \dontrun{
+#' wb_lending_type()
+#' }
 wb_lending_type <- function(type = "all") {
   stopifnot(is.character(type) && length(type) == 1)
 
@@ -21,6 +25,10 @@ wb_lending_type <- function(type = "all") {
 #'
 #' @param income character(1) income level to query. Default is "all".
 #' @export
+#' @examples
+#' \dontrun{
+#' wb_income_lvl()
+#' }
 wb_income_lvl <- function(income = "all") {
   stopifnot(is.character(income) && length(income) == 1)
 
@@ -41,6 +49,10 @@ wb_income_lvl <- function(income = "all") {
 #' @param source character(1) source to query. Default is "all".
 #' @param page integer(1) page number to query. Default is NULL.
 #' @export
+#' @examples
+#' \dontrun{
+#' wb_source()
+#' }
 wb_source <- function(source = "all", page = NULL) {
   stopifnot(is.character(source) && length(source) == 1)
   stopifnot(is_page(page))
@@ -68,6 +80,10 @@ wb_source <- function(source = "all", page = NULL) {
 #' @param topic character(1) topic to query. Default is "all".
 #' @param page integer(1) page number to query. Default is NULL.
 #' @export
+#' @examples
+#' \dontrun{
+#' wb_topic()
+#' }
 wb_topic <- function(topic = "all", page = NULL) {
   stopifnot(is.character(topic) && length(topic) == 1)
   stopifnot(is_page(page))
@@ -89,6 +105,10 @@ wb_topic <- function(topic = "all", page = NULL) {
 #' @param region character(1) region to query. Default is "all".
 #' @param page integer(1) page number to query. Default is NULL.
 #' @export
+#' @examples
+#' \dontrun{
+#' wb_region()
+#' }
 wb_region <- function(region = "all", page = NULL) {
   stopifnot(is.character(region) && length(region) == 1)
   stopifnot(is_page(page))
@@ -111,6 +131,10 @@ wb_region <- function(region = "all", page = NULL) {
 #' @param country character(1) country to query.
 #' @param page integer(1) page number to query. Default is NULL.
 #' @export
+#' @examples
+#' \dontrun{
+#' wb_country()
+#' }
 wb_country <- function(country = "all", page = NULL) {
   stopifnot(is.character(country) && length(country) == 1)
   stopifnot(is_page(page))
@@ -147,6 +171,10 @@ wb_country <- function(country = "all", page = NULL) {
 #' @param indicator character(1) indicator to query. Default is "all".
 #' @param page integer(1) page number to query. Default is NULL.
 #' @export
+#' @examples
+#' \dontrun{
+#' wb_indicator()
+#' }
 wb_indicator <- function(indicator = "all", page = NULL) {
   stopifnot(is.character(indicator) && length(indicator) == 1)
   stopifnot(is_page(page))
@@ -185,6 +213,10 @@ wb_indicator <- function(indicator = "all", page = NULL) {
 #' @param country character(1) country to query.
 #' @param page integer(1) page number to query. Default is NULL.
 #' @export
+#' @examples
+#' \dontrun{
+#' wb_country_indicator()
+#' }
 wb_country_indicator <- function(indicator = "NY.GDP.MKTP.CD",
                                  country = "US",
                                  page = NULL) {
