@@ -2,6 +2,10 @@ is_page <- function(x) {
   is.null(page) || is.numeric(page) && length(page) == 1
 }
 
+na_if_empty <- function(x) replace(x, x == "", NA_character_)
+
+to_logical <- function(x) ifelse(x == "Y", TRUE, FALSE)
+
 is_installed <- function(pkg) {
   isTRUE(requireNamespace(pkg, quietly = TRUE))
 }

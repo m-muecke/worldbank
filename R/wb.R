@@ -1,3 +1,22 @@
+#' World Bank available languages
+#'
+#' @export
+#' @examples
+#' \dontrun{
+#' wb_lang()
+#' }
+wb_lang <- function() {
+  res <- worldbank("languages", \(resp) {
+    data <- resp_body_json(resp)[[2]]
+    data.frame(
+      code = map_chr(data, "code"),
+      name = map_chr(data, "name") |> trimws(),
+      native_form = map_chr(data, "nativeForm")
+    )
+  }, page = 1)
+  as_tibble(res)
+}
+
 #' World Bank lending type data
 #'
 #' @param type character(1) lending type to query. Default is "all".
@@ -65,8 +84,8 @@ wb_source <- function(source = "all", page = NULL) {
       last_updated = map_chr(data, "lastupdated"),
       name = map_chr(data, "name"),
       code = map_chr(data, "code"),
-      description = map_chr(data, "description"),
-      url = map_chr(data, "url"),
+      description = map_chr(data, "description") |> na_if_empty(),
+      url = map_chr(data, "url") |> na_if_empty(),
       data_availability = map_chr(data, "dataavailability"),
       metadata_availability = map_chr(data, "metadataavailability"),
       concepts = map_chr(data, "concepts")
@@ -117,7 +136,7 @@ wb_region <- function(region = "all", page = NULL) {
   res <- worldbank(resource, \(resp) {
     data <- resp_body_json(resp)[[2]]
     data.frame(
-      id = map_chr(data, "id"),
+      id = map_chr(data, "id") |> na_if_empty(),
       code = map_chr(data, "code"),
       iso2code = map_chr(data, "iso2code"),
       name = map_chr(data, "name")
@@ -148,19 +167,22 @@ wb_country <- function(country = "all", page = NULL) {
       country_name = map_chr(data, "name"),
       region_id = map_chr(data, \(x) x$region$id),
       region_code = map_chr(data, \(x) x$region$iso2code),
-      region_value = map_chr(data, \(x) x$region$value),
-      admin_region_id = map_chr(data, \(x) x$adminregion$id),
-      admin_region_code = map_chr(data, \(x) x$adminregion$iso2code),
-      admin_region_value = map_chr(data, \(x) x$adminregion$value),
+      region_value = map_chr(data, \(x) x$region$value) |> trimws(),
+      admin_region_id = map_chr(data, \(x) x$adminregion$id) |> na_if_empty(),
+      admin_region_code = map_chr(data, \(x) x$adminregion$iso2code) |>
+        na_if_empty(),
+      admin_region_value = map_chr(data, \(x) x$adminregion$value) |>
+        na_if_empty(),
       income_level_id = map_chr(data, \(x) x$incomeLevel$id),
       income_level_code = map_chr(data, \(x) x$incomeLevel$iso2code),
       income_level_value = map_chr(data, \(x) x$incomeLevel$value),
-      lending_type_id = map_chr(data, \(x) x$lendingType$id),
-      lending_type_code = map_chr(data, \(x) x$lendingType$iso2code),
+      lending_type_id = map_chr(data, \(x) x$lendingType$id) |> na_if_empty(),
+      lending_type_code = map_chr(data, \(x) x$lendingType$iso2code) |>
+        na_if_empty(),
       lending_type_value = map_chr(data, \(x) x$lendingType$value),
-      capital_city = map_chr(data, "capitalCity"),
-      longitude = map_chr(data, "longitude"),
-      latitude = map_chr(data, "latitude")
+      capital_city = map_chr(data, "capitalCity") |> na_if_empty(),
+      longitude = map_chr(data, "longitude") |> na_if_empty() |> as.numeric(),
+      latitude = map_chr(data, "latitude") |> na_if_empty() |> as.numeric()
     )
   }, page = page)
   as_tibble(res)
@@ -300,26 +322,27 @@ is_wb_error <- function(resp) {
   if (status >= 400) {
     return(TRUE)
   }
+  body <- resp_body_json(resp)
   is_invalid <- resp_body_json(resp)[[1]]$message[[1]]$key == "Invalid value"
   status == 200 && is_invalid
 }
 
-worldbank_page <- function(resource, resp_data, ..., page = 1) {
+worldbank_page <- function(resource, resp_data, ..., page = 1, per_page = 50) {
   request("http://api.worldbank.org/v2") |>
     req_user_agent("worldbank (https://m-muecke.github.io/worldbank)") |>
     req_url_path_append(resource) |>
-    req_url_query(..., format = "json", page = page) |>
-    req_error(is_error = is_wb_error) |>
+    req_url_query(..., format = "json", page = page, per_page = per_page) |>
+    # req_error(is_error = is_wb_error) |>
     req_perform() |>
     resp_data()
 }
 
-worldbank_iter <- function(resource, resp_data, ...) {
+worldbank_iter <- function(resource, resp_data, ..., per_page = 50) {
   req <- request("http://api.worldbank.org/v2") |>
     req_user_agent("worldbank (https://m-muecke.github.io/worldbank)") |>
     req_url_path_append(resource) |>
-    req_url_query(..., format = "json") |>
-    req_error(is_error = is_wb_error)
+    req_url_query(..., format = "json", per_page = 50)
+  # req_error(is_error = is_wb_error)
 
   data <- req |>
     req_perform_iterative(
