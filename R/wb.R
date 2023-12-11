@@ -1,10 +1,16 @@
 #' World Bank available languages
 #'
+#' @description
+#' List all languages supported by the World Bank API.
+#'
+#' @source <http://api.worldbank.org/v2/languages>
+#' @returns A data.frame with the available languages. The columns are:
+#' \item{code}{The language code.}
+#' \item{name}{The language name.}
+#' \item{native_form}{The native form of the language name.}
 #' @export
 #' @examples
-#' \dontrun{
 #' wb_lang()
-#' }
 wb_lang <- function() {
   res <- worldbank("languages", \(resp) {
     data <- resp_body_json(resp)[[2]]

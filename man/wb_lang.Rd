@@ -3,14 +3,21 @@
 \name{wb_lang}
 \alias{wb_lang}
 \title{World Bank available languages}
+\source{
+\url{http://api.worldbank.org/v2/languages}
+}
 \usage{
 wb_lang()
 }
+\value{
+A data.frame with the available languages. The columns are:
+\item{code}{The language code.}
+\item{name}{The language name.}
+\item{native_form}{The native form of the language name.}
+}
 \description{
-World Bank available languages
+List all languages supported by the World Bank API.
 }
 \examples{
-\dontrun{
 wb_lang()
-}
 }
