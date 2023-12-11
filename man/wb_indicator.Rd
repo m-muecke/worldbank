@@ -7,10 +7,11 @@
 \url{http://api.worldbank.org/v2/indicator}
 }
 \usage{
-wb_indicator(indicator = "all", lang = "en", page = NULL)
+wb_indicator(indicator = NULL, lang = "en", page = NULL)
 }
 \arguments{
-\item{indicator}{character(1) indicator to query. Default is "all".}
+\item{indicator}{character(1) indicator to query. Default is \code{NULL}.
+If \code{NULL}, all indicators are returned.}
 
 \item{lang}{character(1) language to query. Default is "en".}
 

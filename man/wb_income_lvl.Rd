@@ -7,12 +7,13 @@
 \url{http://api.worldbank.org/v2/incomeLevels}
 }
 \usage{
-wb_income_lvl(income = "all", lang = "en")
+wb_income_lvl(income = NULL, lang = "en")
 }
 \arguments{
-\item{income}{character(1) income level to query. Default is "all".}
-
 \item{lang}{character(1) language to query. Default is "en".}
+
+\item{source}{character() income level to query. Default is \code{NULL}.
+If \code{NULL}, all levels are returned.}
 }
 \value{
 A data.frame with the available income levels. The columns are:

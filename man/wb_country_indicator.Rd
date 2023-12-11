@@ -7,21 +7,15 @@
 \url{http://api.worldbank.org/v2/country/{country}/indicator/{indicator}}
 }
 \usage{
-wb_country_indicator(
-  indicator = "NY.GDP.MKTP.CD",
-  country = "US",
-  lang = "en",
-  page = NULL
-)
+wb_country_indicator(indicator = "NY.GDP.MKTP.CD", country = NULL, lang = "en")
 }
 \arguments{
 \item{indicator}{character(1) indicator to query.}
 
-\item{country}{character(1) country to query.}
+\item{country}{character() country to query. Default is \code{NULL}.
+If \code{NULL}, all countries are returned}
 
 \item{lang}{character(1) language to query. Default is "en".}
-
-\item{page}{integer(1) page number to query. Default is NULL.}
 }
 \value{
 A data.frame with the available country indicators. The columns are:

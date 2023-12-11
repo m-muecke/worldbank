@@ -7,10 +7,11 @@
 \url{http://api.worldbank.org/v2/sources}
 }
 \usage{
-wb_source(source = "all", lang = "en")
+wb_source(source = NULL, lang = "en")
 }
 \arguments{
-\item{source}{character(1) source to query. Default is "all".}
+\item{source}{character() source to query. Default is \code{NULL}.
+If \code{NULL}, all sources are returned.}
 
 \item{lang}{character(1) language to query. Default is "en".}
 }

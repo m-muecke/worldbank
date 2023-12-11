@@ -7,10 +7,11 @@
 \url{http://api.worldbank.org/v2/region}
 }
 \usage{
-wb_region(region = "all", lang = "en")
+wb_region(region = NULL, lang = "en")
 }
 \arguments{
-\item{region}{character(1) region to query. Default is "all".}
+\item{region}{character() region to query. Default is \code{NULL}.
+If \code{NULL}, all regions are returned}
 
 \item{lang}{character(1) language to query. Default is "en".}
 }

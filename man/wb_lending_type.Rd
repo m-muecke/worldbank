@@ -7,10 +7,11 @@
 \url{http://api.worldbank.org/v2/lendingTypes}
 }
 \usage{
-wb_lending_type(type = "all", lang = "en")
+wb_lending_type(type = NULL, lang = "en")
 }
 \arguments{
-\item{type}{character(1) lending type to query. Default is "all".}
+\item{type}{character() lending type to query. Default is \code{NULL}.
+If \code{NULL}, all types are returned.}
 
 \item{lang}{character(1) language to query. Default is "en".}
 }

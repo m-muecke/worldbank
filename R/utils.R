@@ -2,6 +2,8 @@ is_page <- function(x) is.null(x) || is.numeric(x) && length(x) == 1
 
 is_string <- function(x) is.character(x) && length(x) == 1
 
+is_character <- function(x) is.null(x) || is.character(x) && length(x) > 0
+
 na_if_empty <- function(x) replace(x, x == "", NA_character_)
 
 to_logical <- function(x) ifelse(x == "Y", TRUE, FALSE)
@@ -33,4 +35,12 @@ map_mold <- function(.x, .f, .value, ...) {
 
 map_chr <- function(.x, .f, ...) {
   map_mold(.x, .f, NA_character_, ...)
+}
+
+format_param <- function(x) {
+  x <- x %||% "all"
+  if (length(x) > 1) {
+    x <- paste(x, collapse = ";")
+  }
+  x
 }

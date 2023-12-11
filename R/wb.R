@@ -28,7 +28,8 @@ wb_lang <- function() {
 #' @description
 #' List all lending types supported by the World Bank API.
 #'
-#' @param type character(1) lending type to query. Default is "all".
+#' @param type character() lending type to query. Default is `NULL`.
+#'   If `NULL`, all types are returned.
 #' @param lang character(1) language to query. Default is "en".
 #' @returns A data.frame with the available lending types. The columns are:
 #' \item{id}{The lending type ID.}
@@ -38,8 +39,9 @@ wb_lang <- function() {
 #' @export
 #' @examples
 #' wb_lending_type()
-wb_lending_type <- function(type = "all", lang = "en") {
-  stopifnot(is_string(type))
+wb_lending_type <- function(type = NULL, lang = "en") {
+  stopifnot(is_character(type))
+  type <- format_param(type)
   lang <- match.arg(lang, c("en", "fr", "es", "ar", "zh"))
 
   resource <- sprintf("%s/lendingType/%s", lang, type)
@@ -59,7 +61,8 @@ wb_lending_type <- function(type = "all", lang = "en") {
 #' @description
 #' List all income levels supported by the World Bank API.
 #'
-#' @param income character(1) income level to query. Default is "all".
+#' @param source character() income level to query. Default is `NULL`.
+#'   If `NULL`, all levels are returned.
 #' @param lang character(1) language to query. Default is "en".
 #' @returns A data.frame with the available income levels. The columns are:
 #' \item{id}{The income level ID.}
@@ -69,8 +72,9 @@ wb_lending_type <- function(type = "all", lang = "en") {
 #' @export
 #' @examples
 #' wb_income_lvl()
-wb_income_lvl <- function(income = "all", lang = "en") {
-  stopifnot(is_string(income))
+wb_income_lvl <- function(income = NULL, lang = "en") {
+  stopifnot(is_character(income))
+  income <- format_param(income)
   lang <- match.arg(lang, c("en", "fr", "es", "ar", "zh"))
 
   resource <- sprintf("%s/incomeLevel/%s", lang, income)
@@ -90,7 +94,8 @@ wb_income_lvl <- function(income = "all", lang = "en") {
 #' @description
 #' List all sources supported by the World Bank API.
 #'
-#' @param source character(1) source to query. Default is "all".
+#' @param source character() source to query. Default is `NULL`.
+#'   If `NULL`, all sources are returned.
 #' @param lang character(1) language to query. Default is "en".
 #' @returns A data.frame with the available sources. The columns are:
 #' \item{id}{The source ID.}
@@ -106,8 +111,9 @@ wb_income_lvl <- function(income = "all", lang = "en") {
 #' @export
 #' @examples
 #' wb_source()
-wb_source <- function(source = "all", lang = "en") {
-  stopifnot(is_string(source))
+wb_source <- function(source = NULL, lang = "en") {
+  stopifnot(is_character(source))
+  source <- format_param(source)
   lang <- match.arg(lang, c("en", "fr", "es", "ar", "zh"))
 
   resource <- sprintf("%s/source/%s", lang, source)
@@ -134,7 +140,8 @@ wb_source <- function(source = "all", lang = "en") {
 #' @description
 #' List all topics supported by the World Bank API.
 #'
-#' @param topic character(1) topic to query. Default is "all".
+#' @param topic character() topic to query. Default is `NULL`.
+#'   If `NULL`, all topics are returned.
 #' @param lang character(1) language to query. Default is "en".
 #' @returns A data.frame with the available topics. The columns are:
 #' \item{id}{The topic ID.}
@@ -144,8 +151,9 @@ wb_source <- function(source = "all", lang = "en") {
 #' @export
 #' @examples
 #' wb_topic()
-wb_topic <- function(topic = "all", lang = "en") {
-  stopifnot(is_string(topic))
+wb_topic <- function(topic = NULL, lang = "en") {
+  stopifnot(is_character(topic))
+  topic <- format_param(topic)
   lang <- match.arg(lang, c("en", "fr", "es", "ar", "zh"))
 
   resource <- sprintf("%s/topic/%s", lang, topic)
@@ -165,7 +173,8 @@ wb_topic <- function(topic = "all", lang = "en") {
 #' @description
 #' List all regions supported by the World Bank API.
 #'
-#' @param region character(1) region to query. Default is "all".
+#' @param region character() region to query. Default is `NULL`.
+#'   If `NULL`, all regions are returned
 #' @param lang character(1) language to query. Default is "en".
 #' @returns A data.frame with the available regions. The columns are:
 #' \item{id}{The region ID.}
@@ -176,8 +185,9 @@ wb_topic <- function(topic = "all", lang = "en") {
 #' @export
 #' @examples
 #' wb_region()
-wb_region <- function(region = "all", lang = "en") {
-  stopifnot(is_string(region))
+wb_region <- function(region = NULL, lang = "en") {
+  stopifnot(is_character(region))
+  region <- format_param(region)
   lang <- match.arg(lang, c("en", "fr", "es", "ar", "zh"))
 
   resource <- sprintf("%s/region/%s", lang, region)
@@ -198,7 +208,8 @@ wb_region <- function(region = "all", lang = "en") {
 #' @description
 #' List all countries supported by the World Bank API.
 #'
-#' @param country character(1) country to query.
+#' @param country character() country to query. Default is `NULL`.
+#'   If `NULL`, all countries are returned.
 #' @param lang character(1) language to query. Default is "en".
 #' @returns A data.frame with the available countries. The columns are:
 #' \item{country_id}{The country ID.}
@@ -223,8 +234,9 @@ wb_region <- function(region = "all", lang = "en") {
 #' @export
 #' @examples
 #' wb_country()
-wb_country <- function(country = "all", lang = "en") {
-  stopifnot(is_string(country))
+wb_country <- function(country = NULL, lang = "en") {
+  stopifnot(is_character(country) && all(nchar(country) %in% 2:3))
+  country <- tolower(format_param(country))
   lang <- match.arg(lang, c("en", "fr", "es", "ar", "zh"))
 
   resource <- sprintf("%s/country/%s", lang, country)
@@ -265,7 +277,8 @@ wb_country <- function(country = "all", lang = "en") {
 #' @description
 #' List all indicators supported by the World Bank API.
 #'
-#' @param indicator character(1) indicator to query. Default is "all".
+#' @param indicator character(1) indicator to query. Default is `NULL`.
+#'   If `NULL`, all indicators are returned.
 #' @param lang character(1) language to query. Default is "en".
 #' @param page integer(1) page number to query. Default is NULL.
 #' @returns A data.frame with the available indicators. The columns are:
@@ -282,10 +295,10 @@ wb_country <- function(country = "all", lang = "en") {
 #' @export
 #' @examples
 #' wb_indicator("NY.GDP.MKTP.CD")
-wb_indicator <- function(indicator = "all", lang = "en", page = NULL) {
+wb_indicator <- function(indicator = NULL, lang = "en", page = NULL) {
   stopifnot(is_string(indicator))
+  indicator <- indicator %||% "all"
   lang <- match.arg(lang, c("en", "fr", "es", "ar", "zh"))
-  stopifnot(is_page(page))
 
   resource <- sprintf("%s/indicator/%s", lang, indicator)
   res <- worldbank(resource, \(resp) {
@@ -324,9 +337,9 @@ wb_indicator <- function(indicator = "all", lang = "en", page = NULL) {
 #' List all country indicators supported by the World Bank API.
 #'
 #' @param indicator character(1) indicator to query.
-#' @param country character(1) country to query.
+#' @param country character() country to query. Default is `NULL`.
+#'   If `NULL`, all countries are returned
 #' @param lang character(1) language to query. Default is "en".
-#' @param page integer(1) page number to query. Default is NULL.
 #' @returns A data.frame with the available country indicators. The columns are:
 #' \item{year}{The year.}
 #' \item{indicator_id}{The indicator ID.}
@@ -343,13 +356,12 @@ wb_indicator <- function(indicator = "all", lang = "en", page = NULL) {
 #' @examples
 #' wb_country_indicator("NY.GDP.MKTP.CD", "US")
 wb_country_indicator <- function(indicator = "NY.GDP.MKTP.CD",
-                                 country = "US",
-                                 lang = "en",
-                                 page = NULL) {
+                                 country = NULL,
+                                 lang = "en") {
   stopifnot(is_string(indicator))
-  stopifnot(is_string(country) && nchar(country) %in% 2:3)
+  stopifnot(is_character(country) && all(nchar(country) %in% 2:3))
+  country <- tolower(format_param(country))
   lang <- match.arg(lang, c("en", "fr", "es", "ar", "zh"))
-  stopifnot(is_page(page))
 
   resource <- sprintf("%s/country/%s/indicator/%s", lang, country, indicator)
   res <- worldbank(resource, \(resp) {
@@ -376,7 +388,7 @@ wb_country_indicator <- function(indicator = "NY.GDP.MKTP.CD",
     data$unit <- na_if_empty(data$unit)
     data$obs_status <- na_if_empty(data$obs_status)
     data
-  }, page = page)
+  })
   as_tibble(res)
 }
 

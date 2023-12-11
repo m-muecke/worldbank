@@ -7,10 +7,11 @@
 \url{http://api.worldbank.org/v2/topics}
 }
 \usage{
-wb_topic(topic = "all", lang = "en")
+wb_topic(topic = NULL, lang = "en")
 }
 \arguments{
-\item{topic}{character(1) topic to query. Default is "all".}
+\item{topic}{character() topic to query. Default is \code{NULL}.
+If \code{NULL}, all topics are returned.}
 
 \item{lang}{character(1) language to query. Default is "en".}
 }
