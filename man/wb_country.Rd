@@ -4,12 +4,12 @@
 \alias{wb_country}
 \title{World Bank country data}
 \usage{
-wb_country(country = "all", page = NULL)
+wb_country(country = "all", lang = "en")
 }
 \arguments{
 \item{country}{character(1) country to query.}
 
-\item{page}{integer(1) page number to query. Default is NULL.}
+\item{lang}{character(1) language to query. Default is "en".}
 }
 \description{
 World Bank country data

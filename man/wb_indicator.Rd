@@ -4,10 +4,12 @@
 \alias{wb_indicator}
 \title{World Bank indicator data}
 \usage{
-wb_indicator(indicator = "all", page = NULL)
+wb_indicator(indicator = "all", lang = "en", page = NULL)
 }
 \arguments{
 \item{indicator}{character(1) indicator to query. Default is "all".}
+
+\item{lang}{character(1) language to query. Default is "en".}
 
 \item{page}{integer(1) page number to query. Default is NULL.}
 }

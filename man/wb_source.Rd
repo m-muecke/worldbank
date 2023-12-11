@@ -4,12 +4,12 @@
 \alias{wb_source}
 \title{World Bank source data}
 \usage{
-wb_source(source = "all", page = NULL)
+wb_source(source = "all", lang = "en")
 }
 \arguments{
 \item{source}{character(1) source to query. Default is "all".}
 
-\item{page}{integer(1) page number to query. Default is NULL.}
+\item{lang}{character(1) language to query. Default is "en".}
 }
 \description{
 World Bank source data

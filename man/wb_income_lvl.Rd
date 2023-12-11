@@ -4,10 +4,12 @@
 \alias{wb_income_lvl}
 \title{World Bank income level data}
 \usage{
-wb_income_lvl(income = "all")
+wb_income_lvl(income = "all", lang = "en")
 }
 \arguments{
 \item{income}{character(1) income level to query. Default is "all".}
+
+\item{lang}{character(1) language to query. Default is "en".}
 }
 \description{
 World Bank income level data

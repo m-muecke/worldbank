@@ -4,12 +4,12 @@
 \alias{wb_region}
 \title{World Bank region data}
 \usage{
-wb_region(region = "all", page = NULL)
+wb_region(region = "all", lang = "en")
 }
 \arguments{
 \item{region}{character(1) region to query. Default is "all".}
 
-\item{page}{integer(1) page number to query. Default is NULL.}
+\item{lang}{character(1) language to query. Default is "en".}
 }
 \description{
 World Bank region data

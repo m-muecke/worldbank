@@ -4,10 +4,12 @@
 \alias{wb_lending_type}
 \title{World Bank lending type data}
 \usage{
-wb_lending_type(type = "all")
+wb_lending_type(type = "all", lang = "en")
 }
 \arguments{
 \item{type}{character(1) lending type to query. Default is "all".}
+
+\item{lang}{character(1) language to query. Default is "en".}
 }
 \description{
 World Bank lending type data
