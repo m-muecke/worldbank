@@ -3,6 +3,9 @@
 \name{wb_country}
 \alias{wb_country}
 \title{World Bank country data}
+\source{
+\url{http://api.worldbank.org/v2/country}
+}
 \usage{
 wb_country(country = "all", lang = "en")
 }
@@ -11,11 +14,30 @@ wb_country(country = "all", lang = "en")
 
 \item{lang}{character(1) language to query. Default is "en".}
 }
+\value{
+A data.frame with the available countries. The columns are:
+\item{country_id}{The country ID.}
+\item{country_code}{The country code.}
+\item{country_name}{The country name.}
+\item{region_id}{The region ID.}
+\item{region_code}{The region code.}
+\item{region_value}{The region value.}
+\item{admin_region_id}{The admin region ID.}
+\item{admin_region_code}{The admin region code.}
+\item{admin_region_value}{The admin region value.}
+\item{income_level_id}{The income level ID.}
+\item{income_level_code}{The income level code.}
+\item{income_level_value}{The income level value.}
+\item{lending_type_id}{The lending type ID.}
+\item{lending_type_code}{The lending type code.}
+\item{lending_type_value}{The lending type value.}
+\item{capital_city}{The capital city.}
+\item{longitude}{The longitude.}
+\item{latitude}{The latitude.}
+}
 \description{
-World Bank country data
+List all countries supported by the World Bank API.
 }
 \examples{
-\dontrun{
 wb_country()
-}
 }

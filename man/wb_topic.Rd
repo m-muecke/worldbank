@@ -3,6 +3,9 @@
 \name{wb_topic}
 \alias{wb_topic}
 \title{World Bank topic data}
+\source{
+\url{http://api.worldbank.org/v2/topics}
+}
 \usage{
 wb_topic(topic = "all", lang = "en")
 }
@@ -11,11 +14,15 @@ wb_topic(topic = "all", lang = "en")
 
 \item{lang}{character(1) language to query. Default is "en".}
 }
+\value{
+A data.frame with the available topics. The columns are:
+\item{id}{The topic ID.}
+\item{value}{The topic value.}
+\item{source_note}{The source note.}
+}
 \description{
-World Bank topic data
+List all topics supported by the World Bank API.
 }
 \examples{
-\dontrun{
 wb_topic()
-}
 }

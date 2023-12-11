@@ -3,6 +3,9 @@
 \name{wb_source}
 \alias{wb_source}
 \title{World Bank source data}
+\source{
+\url{http://api.worldbank.org/v2/sources}
+}
 \usage{
 wb_source(source = "all", lang = "en")
 }
@@ -11,11 +14,21 @@ wb_source(source = "all", lang = "en")
 
 \item{lang}{character(1) language to query. Default is "en".}
 }
+\value{
+A data.frame with the available sources. The columns are:
+\item{id}{The source ID.}
+\item{last_updated}{The date the source was last updated.}
+\item{name}{The source name.}
+\item{code}{The source code.}
+\item{description}{The source description.}
+\item{url}{The source URL.}
+\item{data_availability}{Whether the source has data available.}
+\item{metadata_availability}{Whether the source has metadata available.}
+\item{concepts}{The concepts associated with the source.}
+}
 \description{
-World Bank source data
+List all sources supported by the World Bank API.
 }
 \examples{
-\dontrun{
 wb_source()
-}
 }

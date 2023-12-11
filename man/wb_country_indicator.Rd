@@ -3,6 +3,9 @@
 \name{wb_country_indicator}
 \alias{wb_country_indicator}
 \title{World Bank country indicator data}
+\source{
+\url{http://api.worldbank.org/v2/country/{country}/indicator/{indicator}}
+}
 \usage{
 wb_country_indicator(
   indicator = "NY.GDP.MKTP.CD",
@@ -20,11 +23,22 @@ wb_country_indicator(
 
 \item{page}{integer(1) page number to query. Default is NULL.}
 }
+\value{
+A data.frame with the available country indicators. The columns are:
+\item{year}{The year.}
+\item{indicator_id}{The indicator ID.}
+\item{indicator_name}{The indicator name.}
+\item{country_id}{The country ID.}
+\item{country_name}{The country name.}
+\item{country_code}{The country code.}
+\item{value}{The indicator value.}
+\item{unit}{The indicator unit.}
+\item{obs_status}{The observation status.}
+\item{decimal}{The decimal.}
+}
 \description{
-World Bank country indicator data
+List all country indicators supported by the World Bank API.
 }
 \examples{
-\dontrun{
-wb_country_indicator()
-}
+wb_country_indicator("NY.GDP.MKTP.CD", "US")
 }

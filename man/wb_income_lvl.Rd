@@ -3,6 +3,9 @@
 \name{wb_income_lvl}
 \alias{wb_income_lvl}
 \title{World Bank income level data}
+\source{
+\url{http://api.worldbank.org/v2/incomeLevels}
+}
 \usage{
 wb_income_lvl(income = "all", lang = "en")
 }
@@ -11,11 +14,15 @@ wb_income_lvl(income = "all", lang = "en")
 
 \item{lang}{character(1) language to query. Default is "en".}
 }
+\value{
+A data.frame with the available income levels. The columns are:
+\item{id}{The income level ID.}
+\item{iso2code}{The ISO 2 code of the income level.}
+\item{value}{The income level value.}
+}
 \description{
-World Bank income level data
+List all income levels supported by the World Bank API.
 }
 \examples{
-\dontrun{
 wb_income_lvl()
-}
 }

@@ -3,6 +3,9 @@
 \name{wb_lending_type}
 \alias{wb_lending_type}
 \title{World Bank lending type data}
+\source{
+\url{http://api.worldbank.org/v2/lendingTypes}
+}
 \usage{
 wb_lending_type(type = "all", lang = "en")
 }
@@ -11,11 +14,15 @@ wb_lending_type(type = "all", lang = "en")
 
 \item{lang}{character(1) language to query. Default is "en".}
 }
+\value{
+A data.frame with the available lending types. The columns are:
+\item{id}{The lending type ID.}
+\item{iso2code}{The ISO 2 code of the lending type.}
+\item{value}{The lending type value.}
+}
 \description{
-World Bank lending type data
+List all lending types supported by the World Bank API.
 }
 \examples{
-\dontrun{
 wb_lending_type()
-}
 }

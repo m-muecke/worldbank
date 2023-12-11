@@ -3,6 +3,9 @@
 \name{wb_indicator}
 \alias{wb_indicator}
 \title{World Bank indicator data}
+\source{
+\url{http://api.worldbank.org/v2/indicator}
+}
 \usage{
 wb_indicator(indicator = "all", lang = "en", page = NULL)
 }
@@ -13,11 +16,21 @@ wb_indicator(indicator = "all", lang = "en", page = NULL)
 
 \item{page}{integer(1) page number to query. Default is NULL.}
 }
+\value{
+A data.frame with the available indicators. The columns are:
+\item{id}{The indicator ID.}
+\item{name}{The indicator name.}
+\item{unit}{The indicator unit.}
+\item{source_id}{The source ID.}
+\item{source_value}{The source value.}
+\item{source_note}{The source note.}
+\item{source_organization}{The source organization.}
+\item{topic_id}{The topic ID.}
+\item{topic_value}{The topic value.}
+}
 \description{
-World Bank indicator data
+List all indicators supported by the World Bank API.
 }
 \examples{
-\dontrun{
-wb_indicator()
-}
+wb_indicator("NY.GDP.MKTP.CD")
 }

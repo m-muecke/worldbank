@@ -3,6 +3,9 @@
 \name{wb_region}
 \alias{wb_region}
 \title{World Bank region data}
+\source{
+\url{http://api.worldbank.org/v2/region}
+}
 \usage{
 wb_region(region = "all", lang = "en")
 }
@@ -11,11 +14,16 @@ wb_region(region = "all", lang = "en")
 
 \item{lang}{character(1) language to query. Default is "en".}
 }
+\value{
+A data.frame with the available regions. The columns are:
+\item{id}{The region ID.}
+\item{code}{The region code.}
+\item{iso2code}{The ISO 2 code of the region.}
+\item{name}{The region name.}
+}
 \description{
-World Bank region data
+List all regions supported by the World Bank API.
 }
 \examples{
-\dontrun{
 wb_region()
-}
 }
