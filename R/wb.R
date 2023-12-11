@@ -307,7 +307,7 @@ worldbank_iter <- function(resource, resp_data, ..., per_page = 500) {
   req <- request("http://api.worldbank.org/v2") |>
     req_user_agent("worldbank (https://m-muecke.github.io/worldbank)") |>
     req_url_path_append(resource) |>
-    req_url_query(..., format = "json", per_page = 50)
+    req_url_query(..., format = "json", per_page = per_page)
 
   data <- req |>
     req_perform_iterative(
