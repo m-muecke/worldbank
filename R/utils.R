@@ -1,5 +1,7 @@
 is_page <- function(x) is.null(x) || is.numeric(x) && length(x) == 1
 
+is_string <- function(x) is.character(x) && length(x) == 1
+
 na_if_empty <- function(x) replace(x, x == "", NA_character_)
 
 to_logical <- function(x) ifelse(x == "Y", TRUE, FALSE)

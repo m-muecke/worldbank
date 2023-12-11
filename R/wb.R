@@ -39,7 +39,7 @@ wb_lang <- function() {
 #' @examples
 #' wb_lending_type()
 wb_lending_type <- function(type = "all", lang = "en") {
-  stopifnot(is.character(type) && length(type) == 1)
+  stopifnot(is_string(type))
   lang <- match.arg(lang, c("en", "fr", "es", "ar", "zh"))
 
   resource <- sprintf("%s/lendingType/%s", lang, type)
@@ -70,7 +70,7 @@ wb_lending_type <- function(type = "all", lang = "en") {
 #' @examples
 #' wb_income_lvl()
 wb_income_lvl <- function(income = "all", lang = "en") {
-  stopifnot(is.character(income) && length(income) == 1)
+  stopifnot(is_string(income))
   lang <- match.arg(lang, c("en", "fr", "es", "ar", "zh"))
 
   resource <- sprintf("%s/incomeLevel/%s", lang, income)
@@ -107,7 +107,7 @@ wb_income_lvl <- function(income = "all", lang = "en") {
 #' @examples
 #' wb_source()
 wb_source <- function(source = "all", lang = "en") {
-  stopifnot(is.character(source) && length(source) == 1)
+  stopifnot(is_string(source))
   lang <- match.arg(lang, c("en", "fr", "es", "ar", "zh"))
 
   resource <- sprintf("%s/source/%s", lang, source)
@@ -145,7 +145,7 @@ wb_source <- function(source = "all", lang = "en") {
 #' @examples
 #' wb_topic()
 wb_topic <- function(topic = "all", lang = "en") {
-  stopifnot(is.character(topic) && length(topic) == 1)
+  stopifnot(is_string(topic))
   lang <- match.arg(lang, c("en", "fr", "es", "ar", "zh"))
 
   resource <- sprintf("%s/topic/%s", lang, topic)
@@ -177,7 +177,7 @@ wb_topic <- function(topic = "all", lang = "en") {
 #' @examples
 #' wb_region()
 wb_region <- function(region = "all", lang = "en") {
-  stopifnot(is.character(region) && length(region) == 1)
+  stopifnot(is_string(region))
   lang <- match.arg(lang, c("en", "fr", "es", "ar", "zh"))
 
   resource <- sprintf("%s/region/%s", lang, region)
@@ -224,7 +224,7 @@ wb_region <- function(region = "all", lang = "en") {
 #' @examples
 #' wb_country()
 wb_country <- function(country = "all", lang = "en") {
-  stopifnot(is.character(country) && length(country) == 1)
+  stopifnot(is_string(country))
   lang <- match.arg(lang, c("en", "fr", "es", "ar", "zh"))
 
   resource <- sprintf("%s/country/%s", lang, country)
@@ -283,7 +283,7 @@ wb_country <- function(country = "all", lang = "en") {
 #' @examples
 #' wb_indicator("NY.GDP.MKTP.CD")
 wb_indicator <- function(indicator = "all", lang = "en", page = NULL) {
-  stopifnot(is.character(indicator) && length(indicator) == 1)
+  stopifnot(is_string(indicator))
   lang <- match.arg(lang, c("en", "fr", "es", "ar", "zh"))
   stopifnot(is_page(page))
 
@@ -346,10 +346,8 @@ wb_country_indicator <- function(indicator = "NY.GDP.MKTP.CD",
                                  country = "US",
                                  lang = "en",
                                  page = NULL) {
-  stopifnot(is.character(indicator) && length(indicator) == 1)
-  stopifnot(
-    is.character(country) && length(country) == 1 && nchar(country) %in% 2:3
-  )
+  stopifnot(is_string(indicator))
+  stopifnot(is_string(country) && nchar(country) %in% 2:3)
   lang <- match.arg(lang, c("en", "fr", "es", "ar", "zh"))
   stopifnot(is_page(page))
 
