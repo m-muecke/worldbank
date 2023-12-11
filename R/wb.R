@@ -226,7 +226,6 @@ wb_region <- function(region = "all", lang = "en") {
 wb_country <- function(country = "all", lang = "en") {
   stopifnot(is.character(country) && length(country) == 1)
   lang <- match.arg(lang, c("en", "fr", "es", "ar", "zh"))
-  stopifnot(is_page(page))
 
   resource <- sprintf("%s/country/%s", lang, country)
   res <- worldbank(resource, \(resp) {
