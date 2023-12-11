@@ -204,27 +204,30 @@ wb_indicator <- function(indicator = "all", page = NULL) {
   resource <- sprintf("indicator/%s", indicator)
   res <- worldbank(resource, \(resp) {
     data <- resp_body_json(resp)[[2]]
-    data <- lapply(data, \(x) {
-      if (length(x$topics) > 0 && length(x$topics[[1]]) > 0) {
-        topic_id <- x$topics[[1]]$id
-        topic_value <- x$topics[[1]]$value
-      } else {
-        topic_id <- NA_character_
-        topic_value <- NA_character_
-      }
-      data.frame(
-        id = x$id,
-        name = x$name,
-        unit = x$unit,
-        source_id = x$source$id,
-        source_value = x$source$value,
-        source_note = x$sourceNote,
-        source_organization = x$sourceOrganization,
-        topic_id = topic_id,
-        topic_value = topic_value
-      )
-    })
-    do.call(rbind, data)
+    data.frame(
+      id = map_chr(data, "id"),
+      name = map_chr(data, "name"),
+      unit = map_chr(data, "unit") |> na_if_empty(),
+      source_id = map_chr(data, \(x) x$source$id),
+      source_value = map_chr(data, \(x) x$source$value),
+      source_note = map_chr(data, "sourceNote"),
+      source_organization = map_chr(data, "sourceOrganization"),
+      topic_id = map_chr(data, \(x) {
+        if (length(x$topics) > 0 && length(x$topics[[1]]) > 0) {
+          x$topics[[1]]$id
+        } else {
+          NA_character_
+        }
+      }),
+      topic_value = map_chr(data, \(x) {
+        if (length(x$topics) > 0 && length(x$topics[[1]]) > 0) {
+          x$topics[[1]]$value
+        } else {
+          NA_character_
+        }
+      }) |>
+        trimws()
+    )
   }, page = page)
   as_tibble(res)
 }
@@ -273,42 +276,6 @@ wb_country_indicator <- function(indicator = "NY.GDP.MKTP.CD",
   as_tibble(res)
 }
 
-parse_indicators2 <- function(data) {
-  id <- map_chr(data, "id")
-  name <- map_chr(data, "name")
-  unit <- map_chr(data, "unit")
-  source_id <- map_chr(data, \(x) x$source$id)
-  source_value <- map_chr(data, \(x) x$source$value)
-  source_note <- map_chr(data, "sourceNote")
-  source_organization <- map_chr(data, "sourceOrganization")
-  topic_id <- map_chr(data, \(x) {
-    if (length(x$topics) > 0 && length(x$topics[[1]]) > 0) {
-      x$topics[[1]]$id
-    } else {
-      NA_character_
-    }
-  })
-  topic_value <- map_chr(data, \(x) {
-    if (length(x$topics) > 0 && length(x$topics[[1]]) > 0) {
-      x$topics[[1]]$value
-    } else {
-      NA_character_
-    }
-  })
-
-  data.frame(
-    id = id,
-    name = name,
-    unit = unit,
-    source_id = source_id,
-    source_value = source_value,
-    source_note = source_note,
-    source_organization = source_organization,
-    topic_id = topic_id,
-    topic_value = topic_value
-  )
-}
-
 worldbank <- function(resource, resp_data, ..., page = NULL) {
   if (is.null(page)) {
     worldbank_iter(resource, resp_data, ...)
@@ -327,22 +294,20 @@ is_wb_error <- function(resp) {
   status == 200 && is_invalid
 }
 
-worldbank_page <- function(resource, resp_data, ..., page = 1, per_page = 50) {
+worldbank_page <- function(resource, resp_data, ..., page = 1, per_page = 500) {
   request("http://api.worldbank.org/v2") |>
     req_user_agent("worldbank (https://m-muecke.github.io/worldbank)") |>
     req_url_path_append(resource) |>
     req_url_query(..., format = "json", page = page, per_page = per_page) |>
-    # req_error(is_error = is_wb_error) |>
     req_perform() |>
     resp_data()
 }
 
-worldbank_iter <- function(resource, resp_data, ..., per_page = 50) {
+worldbank_iter <- function(resource, resp_data, ..., per_page = 500) {
   req <- request("http://api.worldbank.org/v2") |>
     req_user_agent("worldbank (https://m-muecke.github.io/worldbank)") |>
     req_url_path_append(resource) |>
     req_url_query(..., format = "json", per_page = 50)
-  # req_error(is_error = is_wb_error)
 
   data <- req |>
     req_perform_iterative(
