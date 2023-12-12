@@ -60,7 +60,7 @@
 </h1></div>
 <!-- badges: start -->
 
-<p>The goal of worldbank is to provide a simple interface to the <a href="World%20Bank%20API%20v2">World Bank API v2</a>.</p>
+<p>The goal of worldbank is to provide a simple interface to the <a href="World%20Bank%20API%20v2">World Bank API v2</a>. The main difference to other packages is that it’s a modern implementation using the <a href="https://httr2.r-lib.org" class="external-link">httr2</a> package without any other dependencies.</p>
 <div class="section level2">
 <h2 id="installation">Installation<a class="anchor" aria-label="anchor" href="#installation"></a>
 </h2>
@@ -76,7 +76,7 @@
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va">worldbank</span><span class="op">)</span></span>
 <span></span>
-<span><span class="co"># specifiy the input</span></span>
+<span><span class="co"># filter by specific country</span></span>
 <span><span class="fu"><a href="reference/wb_country.html">wb_country</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"US"</span>, <span class="st">"DE"</span><span class="op">)</span><span class="op">)</span></span>
 <span><span class="co">#&gt; # A tibble: 2 × 18</span></span>
 <span><span class="co">#&gt;   country_id country_code country_name  region_id region_code region_value</span></span>
@@ -88,6 +88,7 @@
 <span><span class="co">#&gt; #   income_level_value &lt;chr&gt;, lending_type_id &lt;chr&gt;, lending_type_code &lt;chr&gt;,</span></span>
 <span><span class="co">#&gt; #   lending_type_value &lt;chr&gt;, capital_city &lt;chr&gt;, longitude &lt;dbl&gt;,</span></span>
 <span><span class="co">#&gt; #   latitude &lt;dbl&gt;</span></span>
+<span></span>
 <span><span class="co"># or fetch all (default)</span></span>
 <span><span class="fu"><a href="reference/wb_country.html">wb_country</a></span><span class="op">(</span><span class="op">)</span></span>
 <span><span class="co">#&gt; # A tibble: 297 × 18</span></span>
