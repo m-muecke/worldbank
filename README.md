@@ -11,7 +11,9 @@ experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](h
 <!-- badges: end -->
 
 The goal of worldbank is to provide a simple interface to the [World
-Bank API v2](World%20Bank%20API%20v2).
+Bank API v2](World%20Bank%20API%20v2). The main difference to other
+packages is that it’s a modern implementation using the
+[httr2](https://httr2.r-lib.org) package without any other dependencies.
 
 ## Installation
 
@@ -32,7 +34,7 @@ v2](https://datahelpdesk.worldbank.org/knowledgebase/articles/889392-about-the-i
 ``` r
 library(worldbank)
 
-# specifiy the input
+# filter by specific country
 wb_country(c("US", "DE"))
 #> # A tibble: 2 × 18
 #>   country_id country_code country_name  region_id region_code region_value
@@ -44,6 +46,7 @@ wb_country(c("US", "DE"))
 #> #   income_level_value <chr>, lending_type_id <chr>, lending_type_code <chr>,
 #> #   lending_type_value <chr>, capital_city <chr>, longitude <dbl>,
 #> #   latitude <dbl>
+
 # or fetch all (default)
 wb_country()
 #> # A tibble: 297 × 18
