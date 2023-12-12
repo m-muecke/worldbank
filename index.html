@@ -60,7 +60,7 @@
 </h1></div>
 <!-- badges: start -->
 
-<p>The goal of worldbank is to provide a simple interface to the World Bank API.</p>
+<p>The goal of worldbank is to provide a simple interface to the <a href="World%20Bank%20API%20v2">World Bank API v2</a>.</p>
 <div class="section level2">
 <h2 id="installation">Installation<a class="anchor" aria-label="anchor" href="#installation"></a>
 </h2>
@@ -72,6 +72,51 @@
 <div class="section level2">
 <h2 id="usage">Usage<a class="anchor" aria-label="anchor" href="#usage"></a>
 </h2>
+<p>worldbank functions are prefixed with <code>wb_</code> and follow the naming convention of the <a href="https://datahelpdesk.worldbank.org/knowledgebase/articles/889392-about-the-indicators-api-documentation" class="external-link">World Bank API v2</a>.</p>
+<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va">worldbank</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># specifiy the input</span></span>
+<span><span class="fu"><a href="reference/wb_country.html">wb_country</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"US"</span>, <span class="st">"DE"</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="co">#&gt; # A tibble: 2 × 18</span></span>
+<span><span class="co">#&gt;   country_id country_code country_name  region_id region_code region_value</span></span>
+<span><span class="co">#&gt;   &lt;chr&gt;      &lt;chr&gt;        &lt;chr&gt;         &lt;chr&gt;     &lt;chr&gt;       &lt;chr&gt;</span></span>
+<span><span class="co">#&gt; 1 DEU        DE           Germany       ECS       Z7          Europe &amp; Central …</span></span>
+<span><span class="co">#&gt; 2 USA        US           United States NAC       XU          North America</span></span>
+<span><span class="co">#&gt; # ℹ 12 more variables: admin_region_id &lt;chr&gt;, admin_region_code &lt;chr&gt;,</span></span>
+<span><span class="co">#&gt; #   admin_region_value &lt;chr&gt;, income_level_id &lt;chr&gt;, income_level_code &lt;chr&gt;,</span></span>
+<span><span class="co">#&gt; #   income_level_value &lt;chr&gt;, lending_type_id &lt;chr&gt;, lending_type_code &lt;chr&gt;,</span></span>
+<span><span class="co">#&gt; #   lending_type_value &lt;chr&gt;, capital_city &lt;chr&gt;, longitude &lt;dbl&gt;,</span></span>
+<span><span class="co">#&gt; #   latitude &lt;dbl&gt;</span></span>
+<span><span class="co"># or fetch all (default)</span></span>
+<span><span class="fu"><a href="reference/wb_country.html">wb_country</a></span><span class="op">(</span><span class="op">)</span></span>
+<span><span class="co">#&gt; # A tibble: 297 × 18</span></span>
+<span><span class="co">#&gt;    country_id country_code country_name       region_id region_code region_value</span></span>
+<span><span class="co">#&gt;    &lt;chr&gt;      &lt;chr&gt;        &lt;chr&gt;              &lt;chr&gt;     &lt;chr&gt;       &lt;chr&gt;</span></span>
+<span><span class="co">#&gt;  1 ABW        AW           Aruba              LCN       ZJ          Latin Ameri…</span></span>
+<span><span class="co">#&gt;  2 AFE        ZH           Africa Eastern an… NA        NA          Aggregates</span></span>
+<span><span class="co">#&gt;  3 AFG        AF           Afghanistan        SAS       8S          South Asia</span></span>
+<span><span class="co">#&gt;  4 AFR        A9           Africa             NA        NA          Aggregates</span></span>
+<span><span class="co">#&gt;  5 AFW        ZI           Africa Western an… NA        NA          Aggregates</span></span>
+<span><span class="co">#&gt;  6 AGO        AO           Angola             SSF       ZG          Sub-Saharan…</span></span>
+<span><span class="co">#&gt;  7 ALB        AL           Albania            ECS       Z7          Europe &amp; Ce…</span></span>
+<span><span class="co">#&gt;  8 AND        AD           Andorra            ECS       Z7          Europe &amp; Ce…</span></span>
+<span><span class="co">#&gt;  9 ARB        1A           Arab World         NA        NA          Aggregates</span></span>
+<span><span class="co">#&gt; 10 ARE        AE           United Arab Emira… MEA       ZQ          Middle East…</span></span>
+<span><span class="co">#&gt; # ℹ 287 more rows</span></span>
+<span><span class="co">#&gt; # ℹ 12 more variables: admin_region_id &lt;chr&gt;, admin_region_code &lt;chr&gt;,</span></span>
+<span><span class="co">#&gt; #   admin_region_value &lt;chr&gt;, income_level_id &lt;chr&gt;, income_level_code &lt;chr&gt;,</span></span>
+<span><span class="co">#&gt; #   income_level_value &lt;chr&gt;, lending_type_id &lt;chr&gt;, lending_type_code &lt;chr&gt;,</span></span>
+<span><span class="co">#&gt; #   lending_type_value &lt;chr&gt;, capital_city &lt;chr&gt;, longitude &lt;dbl&gt;,</span></span>
+<span><span class="co">#&gt; #   latitude &lt;dbl&gt;</span></span></code></pre></div>
+</div>
+<div class="section level2">
+<h2 id="other-world-bank-packages">Other World Bank packages<a class="anchor" aria-label="anchor" href="#other-world-bank-packages"></a>
+</h2>
+<ul>
+<li><a href="https://github.com/gshs-ornl/wbstats" class="external-link">wbstats</a></li>
+<li><a href="https://github.com/vincentarelbundock/WDI" class="external-link">WDI</a></li>
+</ul>
 </div>
 </div>
   </div>
