@@ -3,9 +3,6 @@
 \name{wb_source}
 \alias{wb_source}
 \title{World Bank source data}
-\source{
-\url{http://api.worldbank.org/v2/sources}
-}
 \usage{
 wb_source(source = NULL, lang = "en")
 }
@@ -32,4 +29,7 @@ List all sources supported by the World Bank API.
 }
 \examples{
 wb_source()
+}
+\references{
+\url{http://api.worldbank.org/v2/sources}
 }

@@ -3,9 +3,6 @@
 \name{wb_lang}
 \alias{wb_lang}
 \title{World Bank available languages}
-\source{
-\url{http://api.worldbank.org/v2/languages}
-}
 \usage{
 wb_lang()
 }
@@ -20,4 +17,7 @@ List all languages supported by the World Bank API.
 }
 \examples{
 wb_lang()
+}
+\references{
+\url{http://api.worldbank.org/v2/languages}
 }

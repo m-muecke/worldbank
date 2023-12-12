@@ -3,9 +3,6 @@
 \name{wb_indicator}
 \alias{wb_indicator}
 \title{World Bank indicator data}
-\source{
-\url{http://api.worldbank.org/v2/indicator}
-}
 \usage{
 wb_indicator(indicator = NULL, lang = "en", page = NULL)
 }
@@ -34,4 +31,7 @@ List all indicators supported by the World Bank API.
 }
 \examples{
 wb_indicator("NY.GDP.MKTP.CD")
+}
+\references{
+\url{http://api.worldbank.org/v2/indicator}
 }

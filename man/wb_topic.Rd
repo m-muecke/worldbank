@@ -3,9 +3,6 @@
 \name{wb_topic}
 \alias{wb_topic}
 \title{World Bank topic data}
-\source{
-\url{http://api.worldbank.org/v2/topics}
-}
 \usage{
 wb_topic(topic = NULL, lang = "en")
 }
@@ -26,4 +23,7 @@ List all topics supported by the World Bank API.
 }
 \examples{
 wb_topic()
+}
+\references{
+\url{http://api.worldbank.org/v2/topics}
 }

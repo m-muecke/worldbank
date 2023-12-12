@@ -3,9 +3,6 @@
 \name{wb_region}
 \alias{wb_region}
 \title{World Bank region data}
-\source{
-\url{http://api.worldbank.org/v2/region}
-}
 \usage{
 wb_region(region = NULL, lang = "en")
 }
@@ -27,4 +24,7 @@ List all regions supported by the World Bank API.
 }
 \examples{
 wb_region()
+}
+\references{
+\url{http://api.worldbank.org/v2/region}
 }

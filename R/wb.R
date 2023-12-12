@@ -7,7 +7,7 @@
 #' \item{code}{The language code.}
 #' \item{name}{The language name.}
 #' \item{native_form}{The native form of the language name.}
-#' @source <http://api.worldbank.org/v2/languages>
+#' @references <http://api.worldbank.org/v2/languages>
 #' @export
 #' @examples
 #' wb_lang()
@@ -35,7 +35,7 @@ wb_lang <- function() {
 #' \item{id}{The lending type ID.}
 #' \item{iso2code}{The ISO 2 code of the lending type.}
 #' \item{value}{The lending type value.}
-#' @source <http://api.worldbank.org/v2/lendingTypes>
+#' @references <http://api.worldbank.org/v2/lendingTypes>
 #' @export
 #' @examples
 #' wb_lending_type()
@@ -68,7 +68,7 @@ wb_lending_type <- function(type = NULL, lang = "en") {
 #' \item{id}{The income level ID.}
 #' \item{iso2code}{The ISO 2 code of the income level.}
 #' \item{value}{The income level value.}
-#' @source <http://api.worldbank.org/v2/incomeLevels>
+#' @references <http://api.worldbank.org/v2/incomeLevels>
 #' @export
 #' @examples
 #' wb_income_lvl()
@@ -107,7 +107,7 @@ wb_income_lvl <- function(income = NULL, lang = "en") {
 #' \item{data_availability}{Whether the source has data available.}
 #' \item{metadata_availability}{Whether the source has metadata available.}
 #' \item{concepts}{The concepts associated with the source.}
-#' @source <http://api.worldbank.org/v2/sources>
+#' @references <http://api.worldbank.org/v2/sources>
 #' @export
 #' @examples
 #' wb_source()
@@ -147,7 +147,7 @@ wb_source <- function(source = NULL, lang = "en") {
 #' \item{id}{The topic ID.}
 #' \item{value}{The topic value.}
 #' \item{source_note}{The source note.}
-#' @source <http://api.worldbank.org/v2/topics>
+#' @references <http://api.worldbank.org/v2/topics>
 #' @export
 #' @examples
 #' wb_topic()
@@ -181,7 +181,7 @@ wb_topic <- function(topic = NULL, lang = "en") {
 #' \item{code}{The region code.}
 #' \item{iso2code}{The ISO 2 code of the region.}
 #' \item{name}{The region name.}
-#' @source <http://api.worldbank.org/v2/region>
+#' @references <http://api.worldbank.org/v2/region>
 #' @export
 #' @examples
 #' wb_region()
@@ -230,7 +230,7 @@ wb_region <- function(region = NULL, lang = "en") {
 #' \item{capital_city}{The capital city.}
 #' \item{longitude}{The longitude.}
 #' \item{latitude}{The latitude.}
-#' @source <http://api.worldbank.org/v2/country>
+#' @references <http://api.worldbank.org/v2/country>
 #' @export
 #' @examples
 #' wb_country()
@@ -291,7 +291,7 @@ wb_country <- function(country = NULL, lang = "en") {
 #' \item{source_organization}{The source organization.}
 #' \item{topic_id}{The topic ID.}
 #' \item{topic_value}{The topic value.}
-#' @source <http://api.worldbank.org/v2/indicator>
+#' @references <http://api.worldbank.org/v2/indicator>
 #' @export
 #' @examples
 #' wb_indicator("NY.GDP.MKTP.CD")
@@ -351,7 +351,7 @@ wb_indicator <- function(indicator = NULL, lang = "en", page = NULL) {
 #' \item{unit}{The indicator unit.}
 #' \item{obs_status}{The observation status.}
 #' \item{decimal}{The decimal.}
-#' @source <http://api.worldbank.org/v2/country/{country}/indicator/{indicator}>
+#' @references <http://api.worldbank.org/v2/country/{country}/indicator/{indicator}>
 #' @export
 #' @examples
 #' wb_country_indicator("NY.GDP.MKTP.CD", "US")
