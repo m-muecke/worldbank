@@ -2,9 +2,12 @@ Package: worldbank
 Title: Modern World Bank API Wrapper
 Version: 0.0.1
 Authors@R:
-    person("Maximilian", "Muecke", , "muecke.maximilian@gmail.com", role = c("aut", "cre"))
-Description: ...
+    person("Maximilian", "Muecke", , "muecke.maximilian@gmail.com", role = c("aut", "cre"),
+           comment = c(ORCID = "0009-0000-9432-9795"))
+Description: Download data from the World Bank API.
 License: MIT + file LICENSE
+URL: https://m-muecke.github.io/worldbank,
+    https://github.com/m-muecke/worldbank
 Depends:
     R (>= 4.1.0)
 Imports:

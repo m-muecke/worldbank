@@ -6,10 +6,18 @@
 \alias{worldbank-package}
 \title{worldbank: Modern World Bank API Wrapper}
 \description{
-...
+Download data from the World Bank API.
+}
+\seealso{
+Useful links:
+\itemize{
+  \item \url{https://m-muecke.github.io/worldbank}
+  \item \url{https://github.com/m-muecke/worldbank}
+}
+
 }
 \author{
-\strong{Maintainer}: Maximilian Muecke \email{muecke.maximilian@gmail.com}
+\strong{Maintainer}: Maximilian Muecke \email{muecke.maximilian@gmail.com} (\href{https://orcid.org/0009-0000-9432-9795}{ORCID})
 
 }
 \keyword{internal}
