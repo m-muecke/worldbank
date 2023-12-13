@@ -13,6 +13,7 @@ Useful links:
 \itemize{
   \item \url{https://m-muecke.github.io/worldbank}
   \item \url{https://github.com/m-muecke/worldbank}
+  \item Report bugs at \url{https://github.com/m-muecke/worldbank/issues}
 }
 
 }

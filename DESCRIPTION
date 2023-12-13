@@ -8,6 +8,7 @@ Description: Download data from the World Bank API.
 License: MIT + file LICENSE
 URL: https://m-muecke.github.io/worldbank,
     https://github.com/m-muecke/worldbank
+BugReports: https://github.com/m-muecke/worldbank/issues
 Depends:
     R (>= 4.1.0)
 Imports:
