@@ -24,6 +24,14 @@ as_tibble <- function(x) {
   if (is.null(x)) y else x
 }
 
+map <- function(.x, .f, ...) {
+  if (is.function(.f)) {
+    lapply(.x, .f, ...)
+  } else {
+    lapply(.x, `[[`, .f, ...)
+  }
+}
+
 map_mold <- function(.x, .f, .value, ...) {
   out <- if (is.function(.f)) {
     vapply(.x, .f, FUN.VALUE = .value, USE.NAMES = FALSE, ...)
