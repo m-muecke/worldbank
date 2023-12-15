@@ -61,7 +61,7 @@ wb_lending_type <- function(type = NULL, lang = "en") {
 #' @description
 #' List all income levels supported by the World Bank API.
 #'
-#' @param source character() income level to query. Default is `NULL`.
+#' @param income character() income level to query. Default is `NULL`.
 #'   If `NULL`, all levels are returned.
 #' @param lang character(1) language to query. Default is "en".
 #' @returns A data.frame with the available income levels. The columns are:
@@ -416,7 +416,7 @@ wb_error_body <- function(resp) {
   body <- resp_body_json(resp)
   message <- body[[1]]$message[[1]]
   error_code <- paste0("Error code: ", message$id)
-  docs <- "See docs at <https://datahelpdesk.worldbank.org/knowledgebase/articles/898620-api-error-codes>"
+  docs <- "See docs at <https://datahelpdesk.worldbank.org/knowledgebase/articles/898620-api-error-codes>" # nolint
   c(error_code, message$value, docs)
 }
 
