@@ -406,8 +406,18 @@ is_wb_error <- function(resp) {
     return(TRUE)
   }
   body <- resp_body_json(resp)
-  is_invalid <- resp_body_json(resp)[[1]]$message[[1]]$key == "Invalid value"
-  status == 200 && is_invalid
+  if (length(body) == 1 && length(body[[1]]$message) == 1) {
+    return(TRUE)
+  }
+  FALSE
+}
+
+wb_error_body <- function(resp) {
+  body <- resp_body_json(resp)
+  message <- body[[1]]$message[[1]]
+  error_code <- paste0("Error code: ", message$id)
+  docs <- "See docs at <https://datahelpdesk.worldbank.org/knowledgebase/articles/898620-api-error-codes>"
+  c(error_code, message$value, docs)
 }
 
 worldbank_page <- function(resource, resp_data, ..., page = 1, per_page = 500) {
@@ -415,6 +425,7 @@ worldbank_page <- function(resource, resp_data, ..., page = 1, per_page = 500) {
     req_user_agent("worldbank (https://m-muecke.github.io/worldbank)") |>
     req_url_path_append(resource) |>
     req_url_query(..., format = "json", page = page, per_page = per_page) |>
+    req_error(is_error = is_wb_error, body = wb_error_body) |>
     req_perform() |>
     resp_data()
 }
@@ -423,7 +434,8 @@ worldbank_iter <- function(resource, resp_data, ..., per_page = 500) {
   req <- request("http://api.worldbank.org/v2") |>
     req_user_agent("worldbank (https://m-muecke.github.io/worldbank)") |>
     req_url_path_append(resource) |>
-    req_url_query(..., format = "json", per_page = per_page)
+    req_url_query(..., format = "json", per_page = per_page) |>
+    req_error(is_error = is_wb_error, body = wb_error_body)
 
   data <- req |>
     req_perform_iterative(
