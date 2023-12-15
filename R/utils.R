@@ -1,8 +1,12 @@
-is_page <- function(x) is.null(x) || is.numeric(x) && length(x) == 1
-
 is_string <- function(x) is.character(x) && length(x) == 1
 
-is_character <- function(x) is.null(x) || is.character(x) && length(x) > 0
+is_lang_code <- function(x) is_string(x) && nchar(x) == 2
+
+is_country_code <- function(x) {
+  is.character(x) && length(x) > 0 && all(nchar(x) %in% c(2, 3))
+}
+
+is_id_code <- function(x) is.character(x) && length(x) > 0 && all(nchar(x) == 3)
 
 na_if_empty <- function(x) replace(x, x == "", NA_character_)
 

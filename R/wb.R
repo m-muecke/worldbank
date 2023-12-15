@@ -40,9 +40,13 @@ wb_lang <- function() {
 #' @examples
 #' wb_lending_type()
 wb_lending_type <- function(type = NULL, lang = "en") {
-  stopifnot(is_character(type))
+  if (!is.null(type) && !is_id_code(type)) {
+    stop("type must be a character vector of three-letter codes")
+  }
+  if (!is_lang_code(lang)) {
+    stop("lang must be a two-letter language code")
+  }
   type <- format_param(type)
-  lang <- match.arg(lang, c("en", "fr", "es", "ar", "zh"))
 
   resource <- sprintf("%s/lendingType/%s", lang, type)
   res <- worldbank(resource, \(resp) {
@@ -73,9 +77,13 @@ wb_lending_type <- function(type = NULL, lang = "en") {
 #' @examples
 #' wb_income_lvl()
 wb_income_lvl <- function(income = NULL, lang = "en") {
-  stopifnot(is_character(income))
+  if (!is.null(income) && !is_id_code(income)) {
+    stop("income must be a character vector of three-letter codes")
+  }
+  if (!is_lang_code(lang)) {
+    stop("lang must be a two-letter language code")
+  }
   income <- format_param(income)
-  lang <- match.arg(lang, c("en", "fr", "es", "ar", "zh"))
 
   resource <- sprintf("%s/incomeLevel/%s", lang, income)
   res <- worldbank(resource, \(resp) {
@@ -112,9 +120,13 @@ wb_income_lvl <- function(income = NULL, lang = "en") {
 #' @examples
 #' wb_source()
 wb_source <- function(source = NULL, lang = "en") {
-  stopifnot(is_character(source))
+  if (!is.null(source) && !(is.character(source) && length(source) > 0)) {
+    stop("source must be a character vector")
+  }
+  if (!is_lang_code(lang)) {
+    stop("lang must be a two-letter language code")
+  }
   source <- format_param(source)
-  lang <- match.arg(lang, c("en", "fr", "es", "ar", "zh"))
 
   resource <- sprintf("%s/source/%s", lang, source)
   res <- worldbank(resource, \(resp) {
@@ -152,9 +164,13 @@ wb_source <- function(source = NULL, lang = "en") {
 #' @examples
 #' wb_topic()
 wb_topic <- function(topic = NULL, lang = "en") {
-  stopifnot(is_character(topic))
+  if (!is.null(topic) && !(is.character(topic) && length(topic) > 0)) {
+    stop("topic must be a character vector")
+  }
+  if (!is_lang_code(lang)) {
+    stop("lang must be a two-letter language code")
+  }
   topic <- format_param(topic)
-  lang <- match.arg(lang, c("en", "fr", "es", "ar", "zh"))
 
   resource <- sprintf("%s/topic/%s", lang, topic)
   res <- worldbank(resource, \(resp) {
@@ -186,9 +202,13 @@ wb_topic <- function(topic = NULL, lang = "en") {
 #' @examples
 #' wb_region()
 wb_region <- function(region = NULL, lang = "en") {
-  stopifnot(is_character(region))
+  if (!is.null(region) && !(is.character(region) && length(region) > 0)) {
+    stop("region must be a character vector")
+  }
+  if (!is_lang_code(lang)) {
+    stop("lang must be a two-letter language code")
+  }
   region <- format_param(region)
-  lang <- match.arg(lang, c("en", "fr", "es", "ar", "zh"))
 
   resource <- sprintf("%s/region/%s", lang, region)
   res <- worldbank(resource, \(resp) {
@@ -235,9 +255,13 @@ wb_region <- function(region = NULL, lang = "en") {
 #' @examples
 #' wb_country()
 wb_country <- function(country = NULL, lang = "en") {
-  stopifnot(is_character(country) && all(nchar(country) %in% 2:3))
+  if (!is.null(country) && !is_country_code(country)) {
+    stop("country must be a character vector of ISO 2 or 3 codes")
+  }
+  if (!is_lang_code(lang)) {
+    stop("lang must be a two-letter language code")
+  }
   country <- tolower(format_param(country))
-  lang <- match.arg(lang, c("en", "fr", "es", "ar", "zh"))
 
   resource <- sprintf("%s/country/%s", lang, country)
   res <- worldbank(resource, \(resp) {
@@ -296,9 +320,13 @@ wb_country <- function(country = NULL, lang = "en") {
 #' @examples
 #' wb_indicator("NY.GDP.MKTP.CD")
 wb_indicator <- function(indicator = NULL, lang = "en", page = NULL) {
-  stopifnot(is_string(indicator))
+  if (!is.null && !is_string(indicator)) {
+    stop("indicator must be a character vector of length 1")
+  }
+  if (!is_lang_code(lang)) {
+    stop("lang must be a two-letter language code")
+  }
   indicator <- indicator %||% "all"
-  lang <- match.arg(lang, c("en", "fr", "es", "ar", "zh"))
 
   resource <- sprintf("%s/indicator/%s", lang, indicator)
   res <- worldbank(resource, \(resp) {
@@ -358,8 +386,12 @@ wb_indicator <- function(indicator = NULL, lang = "en", page = NULL) {
 wb_country_indicator <- function(indicator = "NY.GDP.MKTP.CD",
                                  country = NULL,
                                  lang = "en") {
-  stopifnot(is_string(indicator))
-  stopifnot(is_character(country) && all(nchar(country) %in% 2:3))
+  if (!is_string(indicator)) {
+    stop("indicator must be a character vector of length 1")
+  }
+  if (!is.null(country) && !is_country_code(country)) {
+    stop("country must be a character vector of ISO 2 or 3 codes")
+  }
   country <- tolower(format_param(country))
   lang <- match.arg(lang, c("en", "fr", "es", "ar", "zh"))
 
