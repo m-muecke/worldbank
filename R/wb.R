@@ -368,8 +368,10 @@ wb_indicator <- function(indicator = NULL, lang = "en", page = NULL) {
 #' @param country character() country to query. Default is `NULL`.
 #'   If `NULL`, all countries are returned
 #' @param lang character(1) language to query. Default is "en".
+#' @param start_year integer(1) start year to query. Default is `NULL`.
+#' @param end_year integer(1) end year to query. Default is `NULL`.
 #' @returns A data.frame with the available country indicators. The columns are:
-#' \item{year}{The year.}
+#' \item{date}{The date}
 #' \item{indicator_id}{The indicator ID.}
 #' \item{indicator_name}{The indicator name.}
 #' \item{country_id}{The country ID.}
@@ -385,24 +387,41 @@ wb_indicator <- function(indicator = NULL, lang = "en", page = NULL) {
 #' wb_country_indicator("NY.GDP.MKTP.CD", "US")
 wb_country_indicator <- function(indicator = "NY.GDP.MKTP.CD",
                                  country = NULL,
-                                 lang = "en") {
+                                 lang = "en",
+                                 start_year = NULL,
+                                 end_year = NULL) {
   if (!is_string(indicator)) {
     stop("indicator must be a character vector of length 1")
   }
   if (!is.null(country) && !is_country_code(country)) {
     stop("country must be a character vector of ISO 2 or 3 codes")
   }
+  has_start_year <- !is.null(start_year)
+  has_end_year <- !is.null(end_year)
+  if (has_start_year && !is_year(start_year)) {
+    stop("start_year must be numeric")
+  }
+  if (has_end_year && !is_year(end_year)) {
+    stop("end_year must be numeric")
+  }
+  if (has_start_year && has_end_year) {
+    if (start_year > end_year) {
+      stop("start_year must be less than or equal to end_year")
+    }
+  }
+  indicator <- toupper(indicator)
   country <- tolower(format_param(country))
+  date <- format_date(start_year, end_year)
 
   resource <- sprintf("%s/country/%s/indicator/%s", lang, country, indicator)
   res <- worldbank(resource, \(resp) {
     data <- resp_body_json(resp)[[2]]
-    data <- lapply(data, \(x) {
+    data <- map(data, \(x) {
       if (is.null(x$value) || is.null(x$date)) {
         return()
       }
       data.frame(
-        year = x$date,
+        date = x$date,
         indicator_id = x$indicator$id,
         indicator_name = x$indicator$value,
         country_id = x$country$id,
@@ -415,11 +434,11 @@ wb_country_indicator <- function(indicator = "NY.GDP.MKTP.CD",
       )
     })
     data <- do.call(rbind, data)
-    data$year <- as.integer(data$year)
+    data$date <- as.integer(data$date)
     data$unit <- na_if_empty(data$unit)
     data$obs_status <- na_if_empty(data$obs_status)
     data
-  })
+  }, date = date)
   as_tibble(res)
 }
 

@@ -4,7 +4,13 @@
 \alias{wb_country_indicator}
 \title{World Bank country indicator data}
 \usage{
-wb_country_indicator(indicator = "NY.GDP.MKTP.CD", country = NULL, lang = "en")
+wb_country_indicator(
+  indicator = "NY.GDP.MKTP.CD",
+  country = NULL,
+  lang = "en",
+  start_year = NULL,
+  end_year = NULL
+)
 }
 \arguments{
 \item{indicator}{character(1) indicator to query.}
@@ -13,10 +19,14 @@ wb_country_indicator(indicator = "NY.GDP.MKTP.CD", country = NULL, lang = "en")
 If \code{NULL}, all countries are returned}
 
 \item{lang}{character(1) language to query. Default is "en".}
+
+\item{start_year}{integer(1) start year to query. Default is \code{NULL}.}
+
+\item{end_year}{integer(1) end year to query. Default is \code{NULL}.}
 }
 \value{
 A data.frame with the available country indicators. The columns are:
-\item{year}{The year.}
+\item{date}{The date}
 \item{indicator_id}{The indicator ID.}
 \item{indicator_name}{The indicator name.}
 \item{country_id}{The country ID.}

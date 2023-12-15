@@ -1,5 +1,7 @@
 is_string <- function(x) is.character(x) && length(x) == 1
 
+is_year <- function(x) is.numeric(x) && length(x) == 1 && x >= 1960 && x <= 2100
+
 is_lang_code <- function(x) is_string(x) && nchar(x) == 2
 
 is_country_code <- function(x) {
@@ -56,3 +58,17 @@ format_param <- function(x) {
   }
   x
 }
+
+format_date <- function(start_date, end_date) {
+  if (!is.null(start_date) && !is.null(end_date)) {
+    paste(start_date, end_date, sep = ":")
+  } else if (!is.null(start_date)) {
+    start_date
+  } else if (!is.null(end_date)) {
+    end_date
+  } else {
+    NULL
+  }
+}
+
+cur_year <- function() as.numeric(format(Sys.Date(), "%Y"))
