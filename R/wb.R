@@ -385,7 +385,6 @@ wb_indicator <- function(indicator = NULL, lang = "en", page = NULL) {
 #' wb_country_indicator("NY.GDP.MKTP.CD", "US")
 wb_country_indicator <- function(indicator = "NY.GDP.MKTP.CD",
                                  country = NULL,
-                                 frequency = "yearly",
                                  lang = "en") {
   if (!is_string(indicator)) {
     stop("indicator must be a character vector of length 1")
@@ -396,7 +395,7 @@ wb_country_indicator <- function(indicator = "NY.GDP.MKTP.CD",
   country <- tolower(format_param(country))
 
   resource <- sprintf("%s/country/%s/indicator/%s", lang, country, indicator)
-  res <- worldbank(resource, frequency = frequency, \(resp) {
+  res <- worldbank(resource, \(resp) {
     data <- resp_body_json(resp)[[2]]
     data <- lapply(data, \(x) {
       if (is.null(x$value) || is.null(x$date)) {
