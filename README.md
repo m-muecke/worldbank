@@ -11,9 +11,11 @@ experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](h
 <!-- badges: end -->
 
 The goal of worldbank is to provide a simple interface to the [World
-Bank API v2](World%20Bank%20API%20v2). The main difference to other
-packages is that it’s a modern implementation using the
-[httr2](https://httr2.r-lib.org) package without any other dependencies.
+Bank API
+v2](https://datahelpdesk.worldbank.org/knowledgebase/articles/889392-about-the-indicators-api-documentation).
+The main difference to other packages is that it’s a modern
+implementation using the [httr2](https://httr2.r-lib.org) package
+without any other dependencies.
 
 ## Installation
 

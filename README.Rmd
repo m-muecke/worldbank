@@ -18,7 +18,7 @@ knitr::opts_chunk$set(
 [![R-CMD-check](https://github.com/m-muecke/worldbank/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/m-muecke/worldbank/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
 
-The goal of worldbank is to provide a simple interface to the [World Bank API v2](World Bank API v2).
+The goal of worldbank is to provide a simple interface to the [World Bank API v2](https://datahelpdesk.worldbank.org/knowledgebase/articles/889392-about-the-indicators-api-documentation).
 The main difference to other packages is that it's a modern implementation using the [httr2](https://httr2.r-lib.org) package without any other
 dependencies.
 
