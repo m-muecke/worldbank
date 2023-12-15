@@ -320,7 +320,7 @@ wb_country <- function(country = NULL, lang = "en") {
 #' @examples
 #' wb_indicator("NY.GDP.MKTP.CD")
 wb_indicator <- function(indicator = NULL, lang = "en", page = NULL) {
-  if (!is.null && !is_string(indicator)) {
+  if (!is.null(indicator) && !is_string(indicator)) {
     stop("indicator must be a character vector of length 1")
   }
   if (!is_lang_code(lang)) {
@@ -393,7 +393,6 @@ wb_country_indicator <- function(indicator = "NY.GDP.MKTP.CD",
     stop("country must be a character vector of ISO 2 or 3 codes")
   }
   country <- tolower(format_param(country))
-  lang <- match.arg(lang, c("en", "fr", "es", "ar", "zh"))
 
   resource <- sprintf("%s/country/%s/indicator/%s", lang, country, indicator)
   res <- worldbank(resource, \(resp) {
