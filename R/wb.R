@@ -10,8 +10,8 @@
 #' @references <http://api.worldbank.org/v2/languages>
 #' @export
 #' @examples
-#' wb_languages()
-wb_languages <- function() {
+#' wb_language()
+wb_language <- function() {
   res <- worldbank("languages", \(resp) {
     data <- resp_body_json(resp)[[2]]
     data.frame(
