@@ -10,8 +10,8 @@
 #' @references <http://api.worldbank.org/v2/languages>
 #' @export
 #' @examples
-#' wb_lang()
-wb_lang <- function() {
+#' wb_languages()
+wb_languages <- function() {
   res <- worldbank("languages", \(resp) {
     data <- resp_body_json(resp)[[2]]
     data.frame(
@@ -75,8 +75,8 @@ wb_lending_type <- function(type = NULL, lang = "en") {
 #' @references <http://api.worldbank.org/v2/incomeLevels>
 #' @export
 #' @examples
-#' wb_income_lvl()
-wb_income_lvl <- function(income = NULL, lang = "en") {
+#' wb_income_level()
+wb_income_level <- function(income = NULL, lang = "en") {
   if (!is.null(income) && !is_id_code(income)) {
     stop("income must be a character vector of three-letter codes")
   }
@@ -385,6 +385,7 @@ wb_indicator <- function(indicator = NULL, lang = "en", page = NULL) {
 #' wb_country_indicator("NY.GDP.MKTP.CD", "US")
 wb_country_indicator <- function(indicator = "NY.GDP.MKTP.CD",
                                  country = NULL,
+                                 frequency = "yearly",
                                  lang = "en") {
   if (!is_string(indicator)) {
     stop("indicator must be a character vector of length 1")
@@ -395,7 +396,7 @@ wb_country_indicator <- function(indicator = "NY.GDP.MKTP.CD",
   country <- tolower(format_param(country))
 
   resource <- sprintf("%s/country/%s/indicator/%s", lang, country, indicator)
-  res <- worldbank(resource, \(resp) {
+  res <- worldbank(resource, frequency = frequency, \(resp) {
     data <- resp_body_json(resp)[[2]]
     data <- lapply(data, \(x) {
       if (is.null(x$value) || is.null(x$date)) {

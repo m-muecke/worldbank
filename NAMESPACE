@@ -2,9 +2,9 @@
 
 export(wb_country)
 export(wb_country_indicator)
-export(wb_income_lvl)
+export(wb_income_level)
 export(wb_indicator)
-export(wb_lang)
+export(wb_languages)
 export(wb_lending_type)
 export(wb_region)
 export(wb_source)

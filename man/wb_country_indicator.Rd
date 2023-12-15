@@ -4,7 +4,12 @@
 \alias{wb_country_indicator}
 \title{World Bank country indicator data}
 \usage{
-wb_country_indicator(indicator = "NY.GDP.MKTP.CD", country = NULL, lang = "en")
+wb_country_indicator(
+  indicator = "NY.GDP.MKTP.CD",
+  country = NULL,
+  frequency = "yearly",
+  lang = "en"
+)
 }
 \arguments{
 \item{indicator}{character(1) indicator to query.}
