@@ -60,11 +60,13 @@ format_param <- function(x) {
 }
 
 format_date <- function(start_date, end_date) {
-  if (!is.null(start_date) && !is.null(end_date)) {
+  has_start <- !is.null(start_date)
+  has_end <- !is.null(end_date)
+  if (has_start && has_end) {
     paste(start_date, end_date, sep = ":")
-  } else if (!is.null(start_date)) {
+  } else if (has_start) {
     start_date
-  } else if (!is.null(end_date)) {
+  } else if (has_end) {
     end_date
   } else {
     NULL
