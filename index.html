@@ -116,7 +116,25 @@
 <span><span class="co">#&gt; #   admin_region_value &lt;chr&gt;, income_level_id &lt;chr&gt;, income_level_code &lt;chr&gt;,</span></span>
 <span><span class="co">#&gt; #   income_level_value &lt;chr&gt;, lending_type_id &lt;chr&gt;, lending_type_code &lt;chr&gt;,</span></span>
 <span><span class="co">#&gt; #   lending_type_value &lt;chr&gt;, capital_city &lt;chr&gt;, longitude &lt;dbl&gt;,</span></span>
-<span><span class="co">#&gt; #   latitude &lt;dbl&gt;</span></span></code></pre></div>
+<span><span class="co">#&gt; #   latitude &lt;dbl&gt;</span></span>
+<span></span>
+<span><span class="co"># fetch indicator data for specific country</span></span>
+<span><span class="fu"><a href="reference/wb_country_indicator.html">wb_country_indicator</a></span><span class="op">(</span><span class="st">"NY.GDP.MKTP.CD"</span>, <span class="st">"US"</span><span class="op">)</span></span>
+<span><span class="co">#&gt; # A tibble: 63 × 10</span></span>
+<span><span class="co">#&gt;     year indicator_id   indicator_name    country_id country_name  country_code</span></span>
+<span><span class="co">#&gt;    &lt;int&gt; &lt;chr&gt;          &lt;chr&gt;             &lt;chr&gt;      &lt;chr&gt;         &lt;chr&gt;</span></span>
+<span><span class="co">#&gt;  1  2022 NY.GDP.MKTP.CD GDP (current US$) US         United States USA</span></span>
+<span><span class="co">#&gt;  2  2021 NY.GDP.MKTP.CD GDP (current US$) US         United States USA</span></span>
+<span><span class="co">#&gt;  3  2020 NY.GDP.MKTP.CD GDP (current US$) US         United States USA</span></span>
+<span><span class="co">#&gt;  4  2019 NY.GDP.MKTP.CD GDP (current US$) US         United States USA</span></span>
+<span><span class="co">#&gt;  5  2018 NY.GDP.MKTP.CD GDP (current US$) US         United States USA</span></span>
+<span><span class="co">#&gt;  6  2017 NY.GDP.MKTP.CD GDP (current US$) US         United States USA</span></span>
+<span><span class="co">#&gt;  7  2016 NY.GDP.MKTP.CD GDP (current US$) US         United States USA</span></span>
+<span><span class="co">#&gt;  8  2015 NY.GDP.MKTP.CD GDP (current US$) US         United States USA</span></span>
+<span><span class="co">#&gt;  9  2014 NY.GDP.MKTP.CD GDP (current US$) US         United States USA</span></span>
+<span><span class="co">#&gt; 10  2013 NY.GDP.MKTP.CD GDP (current US$) US         United States USA</span></span>
+<span><span class="co">#&gt; # ℹ 53 more rows</span></span>
+<span><span class="co">#&gt; # ℹ 4 more variables: value &lt;dbl&gt;, unit &lt;chr&gt;, obs_status &lt;chr&gt;, decimal &lt;int&gt;</span></span></code></pre></div>
 </div>
 <div class="section level2">
 <h2 id="other-world-bank-packages">Other World Bank packages<a class="anchor" aria-label="anchor" href="#other-world-bank-packages"></a>
