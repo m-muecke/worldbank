@@ -42,6 +42,9 @@ wb_country(c("US", "DE"))
 
 # or fetch all (default)
 wb_country()
+
+# fetch indicator data for specific country
+wb_country_indicator("NY.GDP.MKTP.CD", "US")
 ```
 
 ## Other World Bank packages

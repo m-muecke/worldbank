@@ -68,6 +68,24 @@ wb_country()
 #> #   income_level_value <chr>, lending_type_id <chr>, lending_type_code <chr>,
 #> #   lending_type_value <chr>, capital_city <chr>, longitude <dbl>,
 #> #   latitude <dbl>
+
+# fetch indicator data for specific country
+wb_country_indicator("NY.GDP.MKTP.CD", "US")
+#> # A tibble: 63 × 10
+#>     year indicator_id   indicator_name    country_id country_name  country_code
+#>    <int> <chr>          <chr>             <chr>      <chr>         <chr>
+#>  1  2022 NY.GDP.MKTP.CD GDP (current US$) US         United States USA
+#>  2  2021 NY.GDP.MKTP.CD GDP (current US$) US         United States USA
+#>  3  2020 NY.GDP.MKTP.CD GDP (current US$) US         United States USA
+#>  4  2019 NY.GDP.MKTP.CD GDP (current US$) US         United States USA
+#>  5  2018 NY.GDP.MKTP.CD GDP (current US$) US         United States USA
+#>  6  2017 NY.GDP.MKTP.CD GDP (current US$) US         United States USA
+#>  7  2016 NY.GDP.MKTP.CD GDP (current US$) US         United States USA
+#>  8  2015 NY.GDP.MKTP.CD GDP (current US$) US         United States USA
+#>  9  2014 NY.GDP.MKTP.CD GDP (current US$) US         United States USA
+#> 10  2013 NY.GDP.MKTP.CD GDP (current US$) US         United States USA
+#> # ℹ 53 more rows
+#> # ℹ 4 more variables: value <dbl>, unit <chr>, obs_status <chr>, decimal <int>
 ```
 
 ## Other World Bank packages
