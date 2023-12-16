@@ -54,7 +54,7 @@ wb_lending_type <- function(type = NULL, lang = "en") {
     data.frame(
       id = map_chr(data, "id"),
       iso2code = map_chr(data, "iso2code"),
-      value = map_chr(data, "value")
+      value = map_chr(data, "value") |> na_if_empty()
     )
   }, page = 1)
   as_tibble(res)
@@ -91,7 +91,7 @@ wb_income_level <- function(income = NULL, lang = "en") {
     data.frame(
       id = map_chr(data, "id"),
       iso2code = map_chr(data, "iso2code"),
-      value = map_chr(data, "value")
+      value = map_chr(data, "value") |> na_if_empty()
     )
   }, page = 1)
   as_tibble(res)
@@ -177,8 +177,8 @@ wb_topic <- function(topic = NULL, lang = "en") {
     data <- resp_body_json(resp)[[2]]
     data.frame(
       id = map_chr(data, "id") |> as.integer(),
-      value = map_chr(data, "value"),
-      source_note = map_chr(data, "sourceNote")
+      value = map_chr(data, "value") |> na_if_empty(),
+      source_note = map_chr(data, "sourceNote") |> na_if_empty() |> trimws()
     )
   }, page = 1)
   as_tibble(res)
