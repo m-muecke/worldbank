@@ -304,7 +304,6 @@ wb_country <- function(country = NULL, lang = "en") {
 #' @param indicator character(1) indicator to query. Default is `NULL`.
 #'   If `NULL`, all indicators are returned.
 #' @param lang character(1) language to query. Default is "en".
-#' @param page integer(1) page number to query. Default is NULL.
 #' @returns A data.frame with the available indicators. The columns are:
 #' \item{id}{The indicator ID.}
 #' \item{name}{The indicator name.}
@@ -319,7 +318,7 @@ wb_country <- function(country = NULL, lang = "en") {
 #' @export
 #' @examples
 #' wb_indicator("NY.GDP.MKTP.CD")
-wb_indicator <- function(indicator = NULL, lang = "en", page = NULL) {
+wb_indicator <- function(indicator = NULL, lang = "en") {
   if (!is.null(indicator) && !is_string(indicator)) {
     stop("indicator must be a character vector of length 1")
   }
@@ -355,7 +354,7 @@ wb_indicator <- function(indicator = NULL, lang = "en", page = NULL) {
       }) |>
         trimws()
     )
-  }, page = page)
+  }, page = 1)
   as_tibble(res)
 }
 
@@ -470,7 +469,11 @@ wb_error_body <- function(resp) {
   c(error_code, message$value, docs)
 }
 
-worldbank_page <- function(resource, resp_data, ..., page = 1, per_page = 500) {
+worldbank_page <- function(resource,
+                           resp_data,
+                           ...,
+                           page = 1,
+                           per_page = 32500) {
   request("http://api.worldbank.org/v2") |>
     req_user_agent("worldbank (https://m-muecke.github.io/worldbank)") |>
     req_url_path_append(resource) |>
@@ -480,7 +483,7 @@ worldbank_page <- function(resource, resp_data, ..., page = 1, per_page = 500) {
     resp_data()
 }
 
-worldbank_iter <- function(resource, resp_data, ..., per_page = 500) {
+worldbank_iter <- function(resource, resp_data, ..., per_page = 32500) {
   req <- request("http://api.worldbank.org/v2") |>
     req_user_agent("worldbank (https://m-muecke.github.io/worldbank)") |>
     req_url_path_append(resource) |>

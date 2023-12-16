@@ -4,15 +4,13 @@
 \alias{wb_indicator}
 \title{World Bank indicator data}
 \usage{
-wb_indicator(indicator = NULL, lang = "en", page = NULL)
+wb_indicator(indicator = NULL, lang = "en")
 }
 \arguments{
 \item{indicator}{character(1) indicator to query. Default is \code{NULL}.
 If \code{NULL}, all indicators are returned.}
 
 \item{lang}{character(1) language to query. Default is "en".}
-
-\item{page}{integer(1) page number to query. Default is NULL.}
 }
 \value{
 A data.frame with the available indicators. The columns are:
