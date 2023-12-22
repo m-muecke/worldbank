@@ -464,7 +464,7 @@ is_wb_error <- function(resp) {
 wb_error_body <- function(resp) {
   body <- resp_body_json(resp)
   message <- body[[1]]$message[[1]]
-  error_code <- paste0("Error code: ", message$id)
+  error_code <- paste("Error code:", message$id)
   docs <- "See docs at <https://datahelpdesk.worldbank.org/knowledgebase/articles/898620-api-error-codes>" # nolint
   c(error_code, message$value, docs)
 }
