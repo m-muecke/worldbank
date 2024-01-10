@@ -203,7 +203,7 @@ wb_region <- function(region = NULL, lang = "en") {
   resource <- sprintf("%s/region/%s", lang, region)
   data <- worldbank(resource)
   res <- data.frame(
-    id = map_chr(data, "id") |> na_if_empty(),
+    id = map_chr(data, "id") |> na_if_empty() |> as.integer(),
     code = map_chr(data, "code"),
     iso2code = map_chr(data, "iso2code"),
     name = map_chr(data, "name") |> na_if_empty() |> trimws()
