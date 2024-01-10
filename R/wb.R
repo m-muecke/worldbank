@@ -12,14 +12,12 @@
 #' @examples
 #' wb_language()
 wb_language <- function() {
-  res <- worldbank("languages", \(resp) {
-    data <- resp_body_json(resp)[[2]]
-    data.frame(
-      code = map_chr(data, "code"),
-      name = map_chr(data, "name") |> trimws(),
-      native_form = map_chr(data, "nativeForm")
-    )
-  }, page = 1)
+  data <- worldbank("languages")
+  res <- data.frame(
+    code = map_chr(data, "code"),
+    name = map_chr(data, "name") |> trimws(),
+    native_form = map_chr(data, "nativeForm")
+  )
   as_tibble(res)
 }
 
@@ -49,14 +47,12 @@ wb_lending_type <- function(type = NULL, lang = "en") {
   type <- format_param(type)
 
   resource <- sprintf("%s/lendingType/%s", lang, type)
-  res <- worldbank(resource, \(resp) {
-    data <- resp_body_json(resp)[[2]]
-    data.frame(
-      id = map_chr(data, "id"),
-      iso2code = map_chr(data, "iso2code"),
-      value = map_chr(data, "value") |> na_if_empty()
-    )
-  }, page = 1)
+  data <- worldbank(resource)
+  res <- data.frame(
+    id = map_chr(data, "id"),
+    iso2code = map_chr(data, "iso2code"),
+    value = map_chr(data, "value") |> na_if_empty()
+  )
   as_tibble(res)
 }
 
@@ -86,14 +82,12 @@ wb_income_level <- function(income = NULL, lang = "en") {
   income <- format_param(income)
 
   resource <- sprintf("%s/incomeLevel/%s", lang, income)
-  res <- worldbank(resource, \(resp) {
-    data <- resp_body_json(resp)[[2]]
-    data.frame(
-      id = map_chr(data, "id"),
-      iso2code = map_chr(data, "iso2code"),
-      value = map_chr(data, "value") |> na_if_empty()
-    )
-  }, page = 1)
+  data <- worldbank(resource)
+  res <- data.frame(
+    id = map_chr(data, "id"),
+    iso2code = map_chr(data, "iso2code"),
+    value = map_chr(data, "value") |> na_if_empty()
+  )
   as_tibble(res)
 }
 
@@ -129,21 +123,19 @@ wb_source <- function(source = NULL, lang = "en") {
   source <- format_param(source)
 
   resource <- sprintf("%s/source/%s", lang, source)
-  res <- worldbank(resource, \(resp) {
-    data <- resp_body_json(resp)[[2]]
-    data.frame(
-      id = map_chr(data, "id") |> as.integer(),
-      last_updated = map_chr(data, "lastupdated") |> as.Date(),
-      name = map_chr(data, "name") |> na_if_empty(),
-      code = map_chr(data, "code"),
-      description = map_chr(data, "description") |> na_if_empty(),
-      url = map_chr(data, "url") |> na_if_empty(),
-      data_availability = map_chr(data, "dataavailability") |> to_logical(),
-      metadata_availability = map_chr(data, "metadataavailability") |>
-        to_logical(),
-      concepts = map_chr(data, "concepts") |> as.integer()
-    )
-  }, page = 1)
+  data <- worldbank(resource)
+  res <- data.frame(
+    id = map_chr(data, "id") |> as.integer(),
+    last_updated = map_chr(data, "lastupdated") |> as.Date(),
+    name = map_chr(data, "name") |> na_if_empty(),
+    code = map_chr(data, "code"),
+    description = map_chr(data, "description") |> na_if_empty(),
+    url = map_chr(data, "url") |> na_if_empty(),
+    data_availability = map_chr(data, "dataavailability") |> to_logical(),
+    metadata_availability = map_chr(data, "metadataavailability") |>
+      to_logical(),
+    concepts = map_chr(data, "concepts") |> as.integer()
+  )
   as_tibble(res)
 }
 
@@ -173,14 +165,12 @@ wb_topic <- function(topic = NULL, lang = "en") {
   topic <- format_param(topic)
 
   resource <- sprintf("%s/topic/%s", lang, topic)
-  res <- worldbank(resource, \(resp) {
-    data <- resp_body_json(resp)[[2]]
-    data.frame(
-      id = map_chr(data, "id") |> as.integer(),
-      value = map_chr(data, "value") |> na_if_empty(),
-      source_note = map_chr(data, "sourceNote") |> na_if_empty() |> trimws()
-    )
-  }, page = 1)
+  data <- worldbank(resource)
+  res <- data.frame(
+    id = map_chr(data, "id") |> as.integer(),
+    value = map_chr(data, "value") |> na_if_empty(),
+    source_note = map_chr(data, "sourceNote") |> na_if_empty() |> trimws()
+  )
   as_tibble(res)
 }
 
@@ -211,15 +201,13 @@ wb_region <- function(region = NULL, lang = "en") {
   region <- format_param(region)
 
   resource <- sprintf("%s/region/%s", lang, region)
-  res <- worldbank(resource, \(resp) {
-    data <- resp_body_json(resp)[[2]]
-    data.frame(
-      id = map_chr(data, "id") |> na_if_empty(),
-      code = map_chr(data, "code"),
-      iso2code = map_chr(data, "iso2code"),
-      name = map_chr(data, "name") |> na_if_empty() |> trimws()
-    )
-  }, page = 1)
+  data <- worldbank(resource)
+  res <- data.frame(
+    id = map_chr(data, "id") |> na_if_empty(),
+    code = map_chr(data, "code"),
+    iso2code = map_chr(data, "iso2code"),
+    name = map_chr(data, "name") |> na_if_empty() |> trimws()
+  )
   as_tibble(res)
 }
 
@@ -264,35 +252,33 @@ wb_country <- function(country = NULL, lang = "en") {
   country <- tolower(format_param(country))
 
   resource <- sprintf("%s/country/%s", lang, country)
-  res <- worldbank(resource, \(resp) {
-    data <- resp_body_json(resp)[[2]]
-    data.frame(
-      country_id = map_chr(data, "id"),
-      country_code = map_chr(data, "iso2Code"),
-      country_name = map_chr(data, "name") |> na_if_empty(),
-      region_id = map_chr(data, \(x) x$region$id),
-      region_code = map_chr(data, \(x) x$region$iso2code),
-      region_value = map_chr(data, \(x) x$region$value) |>
-        trimws() |>
-        na_if_empty(),
-      admin_region_id = map_chr(data, \(x) x$adminregion$id) |> na_if_empty(),
-      admin_region_code = map_chr(data, \(x) x$adminregion$iso2code) |>
-        na_if_empty(),
-      admin_region_value = map_chr(data, \(x) x$adminregion$value) |>
-        na_if_empty(),
-      income_level_id = map_chr(data, \(x) x$incomeLevel$id),
-      income_level_code = map_chr(data, \(x) x$incomeLevel$iso2code),
-      income_level_value = map_chr(data, \(x) x$incomeLevel$value),
-      lending_type_id = map_chr(data, \(x) x$lendingType$id) |> na_if_empty(),
-      lending_type_code = map_chr(data, \(x) x$lendingType$iso2code) |>
-        na_if_empty(),
-      lending_type_value = map_chr(data, \(x) x$lendingType$value) |>
-        na_if_empty(),
-      capital_city = map_chr(data, "capitalCity") |> na_if_empty(),
-      longitude = map_chr(data, "longitude") |> na_if_empty() |> as.numeric(),
-      latitude = map_chr(data, "latitude") |> na_if_empty() |> as.numeric()
-    )
-  }, page = 1)
+  data <- worldbank(resource)
+  res <- data.frame(
+    country_id = map_chr(data, "id"),
+    country_code = map_chr(data, "iso2Code"),
+    country_name = map_chr(data, "name") |> na_if_empty(),
+    region_id = map_chr(data, \(x) x$region$id),
+    region_code = map_chr(data, \(x) x$region$iso2code),
+    region_value = map_chr(data, \(x) x$region$value) |>
+      trimws() |>
+      na_if_empty(),
+    admin_region_id = map_chr(data, \(x) x$adminregion$id) |> na_if_empty(),
+    admin_region_code = map_chr(data, \(x) x$adminregion$iso2code) |>
+      na_if_empty(),
+    admin_region_value = map_chr(data, \(x) x$adminregion$value) |>
+      na_if_empty(),
+    income_level_id = map_chr(data, \(x) x$incomeLevel$id),
+    income_level_code = map_chr(data, \(x) x$incomeLevel$iso2code),
+    income_level_value = map_chr(data, \(x) x$incomeLevel$value),
+    lending_type_id = map_chr(data, \(x) x$lendingType$id) |> na_if_empty(),
+    lending_type_code = map_chr(data, \(x) x$lendingType$iso2code) |>
+      na_if_empty(),
+    lending_type_value = map_chr(data, \(x) x$lendingType$value) |>
+      na_if_empty(),
+    capital_city = map_chr(data, "capitalCity") |> na_if_empty(),
+    longitude = map_chr(data, "longitude") |> na_if_empty() |> as.numeric(),
+    latitude = map_chr(data, "latitude") |> na_if_empty() |> as.numeric()
+  )
   as_tibble(res)
 }
 
@@ -328,33 +314,31 @@ wb_indicator <- function(indicator = NULL, lang = "en") {
   indicator <- indicator %||% "all"
 
   resource <- sprintf("%s/indicator/%s", lang, indicator)
-  res <- worldbank(resource, \(resp) {
-    data <- resp_body_json(resp)[[2]]
-    data.frame(
-      id = map_chr(data, "id"),
-      name = map_chr(data, "name"),
-      unit = map_chr(data, "unit") |> na_if_empty(),
-      source_id = map_chr(data, \(x) x$source$id),
-      source_value = map_chr(data, \(x) x$source$value),
-      source_note = map_chr(data, "sourceNote"),
-      source_organization = map_chr(data, "sourceOrganization"),
-      topic_id = map_chr(data, \(x) {
-        if (length(x$topics) > 0 && length(x$topics[[1]]) > 0) {
-          x$topics[[1]]$id
-        } else {
-          NA_character_
-        }
-      }),
-      topic_value = map_chr(data, \(x) {
-        if (length(x$topics) > 0 && length(x$topics[[1]]) > 0) {
-          x$topics[[1]]$value
-        } else {
-          NA_character_
-        }
-      }) |>
-        trimws()
-    )
-  }, page = 1)
+  data <- worldbank(resource)
+  res <- data.frame(
+    id = map_chr(data, "id"),
+    name = map_chr(data, "name"),
+    unit = map_chr(data, "unit") |> na_if_empty(),
+    source_id = map_chr(data, \(x) x$source$id),
+    source_value = map_chr(data, \(x) x$source$value),
+    source_note = map_chr(data, "sourceNote") |> na_if_empty() |> trimws(),
+    source_organization = map_chr(data, "sourceOrganization"),
+    topic_id = map_chr(data, \(x) {
+      if (length(x$topics) > 0 && length(x$topics[[1]]) > 0) {
+        x$topics[[1]]$id
+      } else {
+        NA_character_
+      }
+    }),
+    topic_value = map_chr(data, \(x) {
+      if (length(x$topics) > 0 && length(x$topics[[1]]) > 0) {
+        x$topics[[1]]$value
+      } else {
+        NA_character_
+      }
+    }) |>
+      trimws()
+  )
   as_tibble(res)
 }
 
@@ -413,40 +397,29 @@ wb_country_indicator <- function(indicator = "NY.GDP.MKTP.CD",
   date <- format_date(start_year, end_year)
 
   resource <- sprintf("%s/country/%s/indicator/%s", lang, country, indicator)
-  res <- worldbank(resource, \(resp) {
-    data <- resp_body_json(resp)[[2]]
-    data <- map(data, \(x) {
-      if (is.null(x$value) || is.null(x$date)) {
-        return()
-      }
-      data.frame(
-        date = x$date,
-        indicator_id = x$indicator$id,
-        indicator_name = x$indicator$value,
-        country_id = x$country$id,
-        country_name = x$country$value,
-        country_code = x$countryiso3code,
-        value = x$value,
-        unit = x$unit,
-        obs_status = x$obs_status,
-        decimal = x$decimal
-      )
-    })
-    data <- do.call(rbind, data)
-    data$date <- as.integer(data$date)
-    data$unit <- na_if_empty(data$unit)
-    data$obs_status <- na_if_empty(data$obs_status)
-    data
-  }, date = date)
+  data <- worldbank(resource, date = date)
+  res <- map(data, \(x) {
+    if (is.null(x$value) || is.null(x$date)) {
+      return()
+    }
+    data.frame(
+      date = x$date,
+      indicator_id = x$indicator$id,
+      indicator_name = x$indicator$value,
+      country_id = x$country$id,
+      country_name = x$country$value,
+      country_code = x$countryiso3code,
+      value = x$value,
+      unit = x$unit,
+      obs_status = x$obs_status,
+      decimal = x$decimal
+    )
+  })
+  res <- do.call(rbind, res)
+  res$date <- as.integer(res$date)
+  res$unit <- na_if_empty(res$unit)
+  res$obs_status <- na_if_empty(res$obs_status)
   as_tibble(res)
-}
-
-worldbank <- function(resource, resp_data, ..., page = NULL) {
-  if (is.null(page)) {
-    worldbank_iter(resource, resp_data, ...)
-  } else {
-    worldbank_page(resource, resp_data, ..., page = page)
-  }
 }
 
 is_wb_error <- function(resp) {
@@ -469,21 +442,18 @@ wb_error_body <- function(resp) {
   c(error_code, message$value, docs)
 }
 
-worldbank_page <- function(resource,
-                           resp_data,
-                           ...,
-                           page = 1,
-                           per_page = 32500) {
-  request("http://api.worldbank.org/v2") |>
+worldbank <- function(resource, ..., per_page = 32500L) {
+  body <- request("http://api.worldbank.org/v2") |>
     req_user_agent("worldbank (https://m-muecke.github.io/worldbank)") |>
     req_url_path_append(resource) |>
-    req_url_query(..., format = "json", page = page, per_page = per_page) |>
+    req_url_query(..., format = "json", per_page = per_page) |>
     req_error(is_error = is_wb_error, body = wb_error_body) |>
     req_perform() |>
-    resp_data()
+    resp_body_json()
+  body[[2]]
 }
 
-worldbank_iter <- function(resource, resp_data, ..., per_page = 32500) {
+worldbank_iter <- function(resource, resp_data, ..., per_page = 32500L) {
   req <- request("http://api.worldbank.org/v2") |>
     req_user_agent("worldbank (https://m-muecke.github.io/worldbank)") |>
     req_url_path_append(resource) |>
