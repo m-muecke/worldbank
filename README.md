@@ -72,23 +72,34 @@ wb_country()
 #> #   latitude <dbl>
 
 # fetch indicator data for specific country
-wb_country_indicator("NY.GDP.MKTP.CD", "US")
-#> # A tibble: 63 × 10
-#>     year indicator_id   indicator_name    country_id country_name  country_code
-#>    <int> <chr>          <chr>             <chr>      <chr>         <chr>
-#>  1  2022 NY.GDP.MKTP.CD GDP (current US$) US         United States USA
-#>  2  2021 NY.GDP.MKTP.CD GDP (current US$) US         United States USA
-#>  3  2020 NY.GDP.MKTP.CD GDP (current US$) US         United States USA
-#>  4  2019 NY.GDP.MKTP.CD GDP (current US$) US         United States USA
-#>  5  2018 NY.GDP.MKTP.CD GDP (current US$) US         United States USA
-#>  6  2017 NY.GDP.MKTP.CD GDP (current US$) US         United States USA
-#>  7  2016 NY.GDP.MKTP.CD GDP (current US$) US         United States USA
-#>  8  2015 NY.GDP.MKTP.CD GDP (current US$) US         United States USA
-#>  9  2014 NY.GDP.MKTP.CD GDP (current US$) US         United States USA
-#> 10  2013 NY.GDP.MKTP.CD GDP (current US$) US         United States USA
-#> # ℹ 53 more rows
+indicators <- wb_country_indicator("NY.GDP.MKTP.CD")
+indicators
+#> # A tibble: 13,200 × 10
+#>     date indicator_id   indicator_name    country_id country_name   country_code
+#>    <int> <chr>          <chr>             <chr>      <chr>          <chr>
+#>  1  2022 NY.GDP.MKTP.CD GDP (current US$) ZH         Africa Easter… AFE
+#>  2  2021 NY.GDP.MKTP.CD GDP (current US$) ZH         Africa Easter… AFE
+#>  3  2020 NY.GDP.MKTP.CD GDP (current US$) ZH         Africa Easter… AFE
+#>  4  2019 NY.GDP.MKTP.CD GDP (current US$) ZH         Africa Easter… AFE
+#>  5  2018 NY.GDP.MKTP.CD GDP (current US$) ZH         Africa Easter… AFE
+#>  6  2017 NY.GDP.MKTP.CD GDP (current US$) ZH         Africa Easter… AFE
+#>  7  2016 NY.GDP.MKTP.CD GDP (current US$) ZH         Africa Easter… AFE
+#>  8  2015 NY.GDP.MKTP.CD GDP (current US$) ZH         Africa Easter… AFE
+#>  9  2014 NY.GDP.MKTP.CD GDP (current US$) ZH         Africa Easter… AFE
+#> 10  2013 NY.GDP.MKTP.CD GDP (current US$) ZH         Africa Easter… AFE
+#> # ℹ 13,190 more rows
 #> # ℹ 4 more variables: value <dbl>, unit <chr>, obs_status <chr>, decimal <int>
+
+# plot indicator data for specific countries
+library(ggplot2)
+
+subset(indicators, country_id %in% c("US", "DE", "FR", "CH", "JP")) |>
+  ggplot(aes(x = date, y = value, color = country_code)) +
+  geom_line() +
+  labs(x = "Date", y = "GDP (current US$)", color = "Country")
 ```
+
+![](man/figures/README-unnamed-chunk-3-1.png)<!-- -->
 
 ## Other World Bank packages
 

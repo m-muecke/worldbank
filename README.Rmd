@@ -7,7 +7,8 @@ output: github_document
 ```{r, include = FALSE}
 knitr::opts_chunk$set(
   collapse = TRUE,
-  comment = "#>"
+  comment = "#>",
+  fig.path = "man/figures/README-"
 )
 ```
 
@@ -44,7 +45,16 @@ wb_country(c("US", "DE"))
 wb_country()
 
 # fetch indicator data for specific country
-wb_country_indicator("NY.GDP.MKTP.CD", "US")
+indicators <- wb_country_indicator("NY.GDP.MKTP.CD")
+indicators
+
+# plot indicator data for specific countries
+library(ggplot2)
+
+subset(indicators, country_id %in% c("US", "DE", "FR", "CH", "JP")) |>
+  ggplot(aes(x = date, y = value, color = country_code)) +
+  geom_line() +
+  labs(x = "Date", y = "GDP (current US$)", color = "Country")
 ```
 
 ## Other World Bank packages
