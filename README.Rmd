@@ -35,7 +35,7 @@ pak::pak("m-muecke/worldbank")
 
 worldbank functions are prefixed with `wb_` and follow the naming convention of the [World Bank API v2](https://datahelpdesk.worldbank.org/knowledgebase/articles/889392-about-the-indicators-api-documentation).
 
-```{r}
+```{r dpi = 300}
 library(worldbank)
 
 # filter by specific country
