@@ -99,7 +99,7 @@ subset(indicators, country_id %in% c("US", "DE", "FR", "CH", "JP")) |>
   labs(x = "Date", y = "GDP (current US$)", color = "Country")
 ```
 
-![](man/figures/README-unnamed-chunk-3-1.png)<!-- -->
+![](man/figures/README-demo-1.png)<!-- -->
 
 ## Other World Bank packages
 
