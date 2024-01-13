@@ -131,8 +131,9 @@ subset(indicators, country_id %in% c("US", "DE", "FR", "CH", "JP")) |>
   labs(x = "Date", y = "GDP (current US$)", color = "Country")
 ```
 
-<img src="man/figures/README-demo-1.png" width="100%" /> \## Related
-work
+<img src="man/figures/README-demo-1.png" width="100%" />
+
+## Related work
 
 - [wbstats](https://github.com/gshs-ornl/wbstats): An R package for
   searching and downloading data from the World Bank API

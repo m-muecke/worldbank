@@ -73,6 +73,7 @@ subset(indicators, country_id %in% c("US", "DE", "FR", "CH", "JP")) |>
   geom_line() +
   labs(x = "Date", y = "GDP (current US$)", color = "Country")
 ```
+
 ## Related work
 
 * [wbstats](https://github.com/gshs-ornl/wbstats): An R package for searching and downloading data from the World Bank API
