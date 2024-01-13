@@ -51,7 +51,7 @@ wb_country(c("US", "DE"))
 
 # or fetch all (default)
 wb_country()
-#> # A tibble: 297 × 18
+#> # A tibble: 296 × 18
 #>    country_id country_code country_name       region_id region_code region_value
 #>    <chr>      <chr>        <chr>              <chr>     <chr>       <chr>
 #>  1 ABW        AW           Aruba              LCN       ZJ          Latin Ameri…
@@ -64,7 +64,7 @@ wb_country()
 #>  8 AND        AD           Andorra            ECS       Z7          Europe & Ce…
 #>  9 ARB        1A           Arab World         NA        NA          Aggregates
 #> 10 ARE        AE           United Arab Emira… MEA       ZQ          Middle East…
-#> # ℹ 287 more rows
+#> # ℹ 286 more rows
 #> # ℹ 12 more variables: admin_region_id <chr>, admin_region_code <chr>,
 #> #   admin_region_value <chr>, income_level_id <chr>, income_level_code <chr>,
 #> #   income_level_value <chr>, lending_type_id <chr>, lending_type_code <chr>,
@@ -99,7 +99,7 @@ subset(indicators, country_id %in% c("US", "DE", "FR", "CH", "JP")) |>
   labs(x = "Date", y = "GDP (current US$)", color = "Country")
 ```
 
-![](man/figures/README-demo-1.png)<!-- -->
+<img src="man/figures/README-demo-1.png" width="100%" />
 
 ## Other World Bank packages
 

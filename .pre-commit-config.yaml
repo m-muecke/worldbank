@@ -7,7 +7,7 @@ repos:
         args:
           - --unsafe
       - id: end-of-file-fixer
-        exclude: \.Rd$
+        exclude: \.Rd
       - id: file-contents-sorter
         files: ^\.Rbuildignore$
       - id: trailing-whitespace
@@ -19,7 +19,8 @@ repos:
           - httr2
       - id: deps-in-desc
       - id: no-browser-statement
+      - id: no-debug-statement
       - id: parsable-R
-      - id: style-files
       - id: readme-rmd-rendered
+      - id: style-files
       - id: use-tidy-description
