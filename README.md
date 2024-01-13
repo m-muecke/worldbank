@@ -10,12 +10,44 @@ experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](h
 [![R-CMD-check](https://github.com/m-muecke/worldbank/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/m-muecke/worldbank/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
 
+## Overview
+
 The goal of worldbank is to provide a simple interface to the [World
 Bank API
 v2](https://datahelpdesk.worldbank.org/knowledgebase/articles/889392-about-the-indicators-api-documentation).
 The main difference to other packages is that it’s a modern
 implementation using the [httr2](https://httr2.r-lib.org) package
 without any other dependencies.
+
+The `worldbank` package provides a set of functions to interact with
+various endpoints of the World Bank API. Each function is designed to
+retrieve specific types of data, making it easier to access and analyze
+World Bank datasets. Below is an overview of the available endpoints and
+their corresponding functions in the package:
+
+- **Languages** (`wb_language`): Retrieves a list of all languages
+  supported by the World Bank API. Useful for obtaining
+  language-specific data.
+- **Lending Types** (`wb_lending_type`): Fetches information about
+  different lending types as recognized by the World Bank.
+- **Income Levels** (`wb_income_level`): Allows users to access data
+  about various income levels defined by the World Bank.
+- **Sources** (`wb_source`): Provides details about the different data
+  sources available within the World Bank’s datasets.
+- **Topics** (`wb_topic`): Lists all topics covered by the World Bank
+  API, helping users to narrow down their data search to specific areas
+  of interest.
+- **Regions** (`wb_region`): Offers information on different
+  geographical regions as categorized by the World Bank.
+- **Countries** (`wb_country`): Enables access to detailed data about
+  individual countries, including socio-economic and developmental
+  indicators.
+- **Country Indicators** (`wb_country_indicator`): Specific to
+  retrieving indicators for a particular country or countries, allowing
+  for more targeted data analysis.
+- **Indicators** (`wb_indicator`): This endpoint gives users access to a
+  wide array of indicators used by the World Bank in its data analysis
+  and reports.
 
 ## Installation
 
@@ -28,36 +60,6 @@ pak::pak("m-muecke/worldbank")
 ```
 
 ## Usage
-
-The `worldbank` package provides a set of functions to interact with
-various endpoints of the World Bank API. Each function is designed to
-retrieve specific types of data, making it easier to access and analyze
-World Bank datasets. Below is an overview of the available endpoints and
-their corresponding functions in the package:
-
-1.  **Languages** (`wb_language`): Retrieves a list of all languages
-    supported by the World Bank API. Useful for obtaining
-    language-specific data.
-2.  **Lending Types** (`wb_lending_type`): Fetches information about
-    different lending types as recognized by the World Bank.
-3.  **Income Levels** (`wb_income_level`): Allows users to access data
-    about various income levels defined by the World Bank.
-4.  **Sources** (`wb_source`): Provides details about the different data
-    sources available within the World Bank’s datasets.
-5.  **Topics** (`wb_topic`): Lists all topics covered by the World Bank
-    API, helping users to narrow down their data search to specific
-    areas of interest.
-6.  **Regions** (`wb_region`): Offers information on different
-    geographical regions as categorized by the World Bank.
-7.  **Countries** (`wb_country`): Enables access to detailed data about
-    individual countries, including socio-economic and developmental
-    indicators.
-8.  **Country Indicators** (`wb_country_indicator`): Specific to
-    retrieving indicators for a particular country or countries,
-    allowing for more targeted data analysis.
-9.  **Indicators** (`wb_indicator`): This endpoint gives users access to
-    a wide array of indicators used by the World Bank in its data
-    analysis and reports.
 
 worldbank functions are prefixed with `wb_` and follow the naming
 convention of the [World Bank API
@@ -131,7 +133,7 @@ subset(indicators, country_id %in% c("US", "DE", "FR", "CH", "JP")) |>
 
 <img src="man/figures/README-demo-1.png" width="100%" />
 
-## Other World Bank packages
+## Related Work
 
 - [wbstats](https://github.com/gshs-ornl/wbstats)
 - [WDI](https://github.com/vincentarelbundock/WDI)
