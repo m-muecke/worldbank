@@ -7,10 +7,10 @@
 wb_source(source = NULL, lang = "en")
 }
 \arguments{
-\item{source}{character() source to query. Default is \code{NULL}.
+\item{source}{\code{character()} source to query. Default is \code{NULL}.
 If \code{NULL}, all sources are returned.}
 
-\item{lang}{character(1) language to query. Default is "en".}
+\item{lang}{\code{character(1)} language to query. Default is "en".}
 }
 \value{
 A data.frame with the available sources. The columns are:

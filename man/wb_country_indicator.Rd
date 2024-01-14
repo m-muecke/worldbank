@@ -13,16 +13,16 @@ wb_country_indicator(
 )
 }
 \arguments{
-\item{indicator}{character(1) indicator to query.}
+\item{indicator}{\code{character(1)} indicator to query.}
 
-\item{country}{character() country to query. Default is \code{NULL}.
+\item{country}{\code{character()} country to query. Default is \code{NULL}.
 If \code{NULL}, all countries are returned}
 
-\item{lang}{character(1) language to query. Default is "en".}
+\item{lang}{\code{character(1)} language to query. Default is "en".}
 
-\item{start_year}{integer(1) start year to query. Default is \code{NULL}.}
+\item{start_year}{\code{integer(1)} start year to query. Default is \code{NULL}.}
 
-\item{end_year}{integer(1) end year to query. Default is \code{NULL}.}
+\item{end_year}{\code{integer(1)} end year to query. Default is \code{NULL}.}
 }
 \value{
 A data.frame with the available country indicators. The columns are:
