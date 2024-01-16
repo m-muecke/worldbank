@@ -1,14 +1,18 @@
-is_string <- function(x) is.character(x) && length(x) == 1
+is_string <- function(x) is.character(x) && length(x) == 1L
 
-is_year <- function(x) is.numeric(x) && length(x) == 1 && x >= 1960 && x <= 2100
-
-is_lang_code <- function(x) is_string(x) && nchar(x) == 2
-
-is_country_code <- function(x) {
-  is.character(x) && length(x) > 0 && all(nchar(x) %in% c(2, 3))
+is_year <- function(x) {
+  is.numeric(x) && length(x) == 1L && x >= 1960L && x <= 2100L
 }
 
-is_id_code <- function(x) is.character(x) && length(x) > 0 && all(nchar(x) == 3)
+is_lang_code <- function(x) is_string(x) && nchar(x) == 2L
+
+is_country_code <- function(x) {
+  is.character(x) && length(x) > 0L && all(nchar(x) %in% 2:3)
+}
+
+is_id_code <- function(x) {
+  is.character(x) && length(x) > 0L && all(nchar(x) == 3L)
+}
 
 na_if_empty <- function(x) replace(x, x == "", NA_character_)
 
@@ -53,7 +57,7 @@ map_chr <- function(.x, .f, ...) {
 
 format_param <- function(x) {
   x <- x %||% "all"
-  if (length(x) > 1) {
+  if (length(x) > 1L) {
     x <- paste(x, collapse = ";")
   }
   x

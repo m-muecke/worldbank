@@ -4,9 +4,9 @@
 #' List all languages supported by the World Bank API.
 #'
 #' @returns A data.frame with the available languages. The columns are:
-#' \item{code}{The language code.}
-#' \item{name}{The language name.}
-#' \item{native_form}{The native form of the language name.}
+#'   \item{code}{The language code.}
+#'   \item{name}{The language name.}
+#'   \item{native_form}{The native form of the language name.}
 #' @references <http://api.worldbank.org/v2/languages>
 #' @export
 #' @examples
@@ -30,9 +30,9 @@ wb_language <- function() {
 #'   If `NULL`, all types are returned.
 #' @param lang `character(1)` language to query. Default is "en".
 #' @returns A data.frame with the available lending types. The columns are:
-#' \item{id}{The lending type ID.}
-#' \item{iso2code}{The ISO 2 code of the lending type.}
-#' \item{value}{The lending type value.}
+#'   \item{id}{The lending type ID.}
+#'   \item{iso2code}{The ISO 2 code of the lending type.}
+#'   \item{value}{The lending type value.}
 #' @references <http://api.worldbank.org/v2/lendingTypes>
 #' @export
 #' @examples
@@ -65,9 +65,9 @@ wb_lending_type <- function(type = NULL, lang = "en") {
 #'   If `NULL`, all levels are returned.
 #' @param lang `character(1)` language to query. Default is "en".
 #' @returns A data.frame with the available income levels. The columns are:
-#' \item{id}{The income level ID.}
-#' \item{iso2code}{The ISO 2 code of the income level.}
-#' \item{value}{The income level value.}
+#'   \item{id}{The income level ID.}
+#'   \item{iso2code}{The ISO 2 code of the income level.}
+#'   \item{value}{The income level value.}
 #' @references <http://api.worldbank.org/v2/incomeLevels>
 #' @export
 #' @examples
@@ -100,21 +100,21 @@ wb_income_level <- function(income = NULL, lang = "en") {
 #'   If `NULL`, all sources are returned.
 #' @param lang `character(1)` language to query. Default is "en".
 #' @returns A data.frame with the available sources. The columns are:
-#' \item{id}{The source ID.}
-#' \item{last_updated}{The date the source was last updated.}
-#' \item{name}{The source name.}
-#' \item{code}{The source code.}
-#' \item{description}{The source description.}
-#' \item{url}{The source URL.}
-#' \item{data_availability}{Whether the source has data available.}
-#' \item{metadata_availability}{Whether the source has metadata available.}
-#' \item{concepts}{The concepts associated with the source.}
+#'   \item{id}{The source ID.}
+#'   \item{last_updated}{The date the source was last updated.}
+#'   \item{name}{The source name.}
+#'   \item{code}{The source code.}
+#'   \item{description}{The source description.}
+#'   \item{url}{The source URL.}
+#'   \item{data_availability}{Whether the source has data available.}
+#'   \item{metadata_availability}{Whether the source has metadata available.}
+#'   \item{concepts}{The concepts associated with the source.}
 #' @references <http://api.worldbank.org/v2/sources>
 #' @export
 #' @examples
 #' wb_source()
 wb_source <- function(source = NULL, lang = "en") {
-  if (!is.null(source) && !(is.character(source) && length(source) > 0)) {
+  if (!is.null(source) && !(is.character(source) && length(source) > 0L)) {
     stop("source must be a character vector")
   }
   if (!is_lang_code(lang)) {
@@ -148,15 +148,15 @@ wb_source <- function(source = NULL, lang = "en") {
 #'   If `NULL`, all topics are returned.
 #' @param lang `character(1)` language to query. Default is "en".
 #' @returns A data.frame with the available topics. The columns are:
-#' \item{id}{The topic ID.}
-#' \item{value}{The topic value.}
-#' \item{source_note}{The source note.}
+#'   \item{id}{The topic ID.}
+#'   \item{value}{The topic value.}
+#'   \item{source_note}{The source note.}
 #' @references <http://api.worldbank.org/v2/topics>
 #' @export
 #' @examples
 #' wb_topic()
 wb_topic <- function(topic = NULL, lang = "en") {
-  if (!is.null(topic) && !(is.character(topic) && length(topic) > 0)) {
+  if (!is.null(topic) && !(is.character(topic) && length(topic) > 0L)) {
     stop("topic must be a character vector")
   }
   if (!is_lang_code(lang)) {
@@ -183,16 +183,16 @@ wb_topic <- function(topic = NULL, lang = "en") {
 #'   If `NULL`, all regions are returned
 #' @param lang `character(1)` language to query. Default is "en".
 #' @returns A data.frame with the available regions. The columns are:
-#' \item{id}{The region ID.}
-#' \item{code}{The region code.}
-#' \item{iso2code}{The ISO 2 code of the region.}
-#' \item{name}{The region name.}
+#'   \item{id}{The region ID.}
+#'   \item{code}{The region code.}
+#'   \item{iso2code}{The ISO 2 code of the region.}
+#'   \item{name}{The region name.}
 #' @references <http://api.worldbank.org/v2/region>
 #' @export
 #' @examples
 #' wb_region()
 wb_region <- function(region = NULL, lang = "en") {
-  if (!is.null(region) && !(is.character(region) && length(region) > 0)) {
+  if (!is.null(region) && !(is.character(region) && length(region) > 0L)) {
     stop("region must be a character vector")
   }
   if (!is_lang_code(lang)) {
@@ -220,24 +220,24 @@ wb_region <- function(region = NULL, lang = "en") {
 #'   If `NULL`, all countries are returned.
 #' @param lang `character(1)` language to query. Default is "en".
 #' @returns A data.frame with the available countries. The columns are:
-#' \item{country_id}{The country ID.}
-#' \item{country_code}{The country code.}
-#' \item{country_name}{The country name.}
-#' \item{region_id}{The region ID.}
-#' \item{region_code}{The region code.}
-#' \item{region_value}{The region value.}
-#' \item{admin_region_id}{The admin region ID.}
-#' \item{admin_region_code}{The admin region code.}
-#' \item{admin_region_value}{The admin region value.}
-#' \item{income_level_id}{The income level ID.}
-#' \item{income_level_code}{The income level code.}
-#' \item{income_level_value}{The income level value.}
-#' \item{lending_type_id}{The lending type ID.}
-#' \item{lending_type_code}{The lending type code.}
-#' \item{lending_type_value}{The lending type value.}
-#' \item{capital_city}{The capital city.}
-#' \item{longitude}{The longitude.}
-#' \item{latitude}{The latitude.}
+#'   \item{country_id}{The country ID.}
+#'   \item{country_code}{The country code.}
+#'   \item{country_name}{The country name.}
+#'   \item{region_id}{The region ID.}
+#'   \item{region_code}{The region code.}
+#'   \item{region_value}{The region value.}
+#'   \item{admin_region_id}{The admin region ID.}
+#'   \item{admin_region_code}{The admin region code.}
+#'   \item{admin_region_value}{The admin region value.}
+#'   \item{income_level_id}{The income level ID.}
+#'   \item{income_level_code}{The income level code.}
+#'   \item{income_level_value}{The income level value.}
+#'   \item{lending_type_id}{The lending type ID.}
+#'   \item{lending_type_code}{The lending type code.}
+#'   \item{lending_type_value}{The lending type value.}
+#'   \item{capital_city}{The capital city.}
+#'   \item{longitude}{The longitude.}
+#'   \item{latitude}{The latitude.}
 #' @references <http://api.worldbank.org/v2/country>
 #' @export
 #' @examples
@@ -291,15 +291,15 @@ wb_country <- function(country = NULL, lang = "en") {
 #'   If `NULL`, all indicators are returned.
 #' @param lang `character(1)` language to query. Default is "en".
 #' @returns A data.frame with the available indicators. The columns are:
-#' \item{id}{The indicator ID.}
-#' \item{name}{The indicator name.}
-#' \item{unit}{The indicator unit.}
-#' \item{source_id}{The source ID.}
-#' \item{source_value}{The source value.}
-#' \item{source_note}{The source note.}
-#' \item{source_organization}{The source organization.}
-#' \item{topic_id}{The topic ID.}
-#' \item{topic_value}{The topic value.}
+#'   \item{id}{The indicator ID.}
+#'   \item{name}{The indicator name.}
+#'   \item{unit}{The indicator unit.}
+#'   \item{source_id}{The source ID.}
+#'   \item{source_value}{The source value.}
+#'   \item{source_note}{The source note.}
+#'   \item{source_organization}{The source organization.}
+#'   \item{topic_id}{The topic ID.}
+#'   \item{topic_value}{The topic value.}
 #' @references <http://api.worldbank.org/v2/indicator>
 #' @export
 #' @examples
@@ -324,15 +324,15 @@ wb_indicator <- function(indicator = NULL, lang = "en") {
     source_note = map_chr(data, "sourceNote") |> na_if_empty() |> trimws(),
     source_organization = map_chr(data, "sourceOrganization"),
     topic_id = map_chr(data, \(x) {
-      if (length(x$topics) > 0 && length(x$topics[[1]]) > 0) {
-        x$topics[[1]]$id
+      if (length(x$topics) > 0L && length(x$topics[[1L]]) > 0L) {
+        x$topics[[1L]]$id
       } else {
         NA_character_
       }
     }),
     topic_value = map_chr(data, \(x) {
-      if (length(x$topics) > 0 && length(x$topics[[1]]) > 0) {
-        x$topics[[1]]$value
+      if (length(x$topics) > 0L && length(x$topics[[1L]]) > 0L) {
+        x$topics[[1L]]$value
       } else {
         NA_character_
       }
@@ -354,16 +354,16 @@ wb_indicator <- function(indicator = NULL, lang = "en") {
 #' @param start_year `integer(1)` start year to query. Default is `NULL`.
 #' @param end_year `integer(1)` end year to query. Default is `NULL`.
 #' @returns A data.frame with the available country indicators. The columns are:
-#' \item{date}{The date}
-#' \item{indicator_id}{The indicator ID.}
-#' \item{indicator_name}{The indicator name.}
-#' \item{country_id}{The country ID.}
-#' \item{country_name}{The country name.}
-#' \item{country_code}{The country code.}
-#' \item{value}{The indicator value.}
-#' \item{unit}{The indicator unit.}
-#' \item{obs_status}{The observation status.}
-#' \item{decimal}{The decimal.}
+#'   \item{date}{The date}
+#'   \item{indicator_id}{The indicator ID.}
+#'   \item{indicator_name}{The indicator name.}
+#'   \item{country_id}{The country ID.}
+#'   \item{country_name}{The country name.}
+#'   \item{country_code}{The country code.}
+#'   \item{value}{The indicator value.}
+#'   \item{unit}{The indicator unit.}
+#'   \item{obs_status}{The observation status.}
+#'   \item{decimal}{The decimal.}
 #' @references <http://api.worldbank.org/v2/country/{country}/indicator/{indicator}>
 #' @export
 #' @examples
@@ -424,11 +424,11 @@ wb_country_indicator <- function(indicator = "NY.GDP.MKTP.CD",
 
 is_wb_error <- function(resp) {
   status <- resp_status(resp)
-  if (status >= 400) {
+  if (status >= 400L) {
     return(TRUE)
   }
   body <- resp_body_json(resp)
-  if (length(body) == 1 && length(body[[1]]$message) == 1) {
+  if (length(body) == 1L && length(body[[1L]]$message) == 1L) {
     return(TRUE)
   }
   FALSE
@@ -436,7 +436,7 @@ is_wb_error <- function(resp) {
 
 wb_error_body <- function(resp) {
   body <- resp_body_json(resp)
-  message <- body[[1]]$message[[1]]
+  message <- body[[1L]]$message[[1L]]
   error_code <- paste("Error code:", message$id)
   docs <- "See docs at <https://datahelpdesk.worldbank.org/knowledgebase/articles/898620-api-error-codes>" # nolint
   c(error_code, message$value, docs)
@@ -450,7 +450,7 @@ worldbank <- function(resource, ..., per_page = 32500L) {
     req_error(is_error = is_wb_error, body = wb_error_body) |>
     req_perform() |>
     resp_body_json()
-  body[[2]]
+  body[[2L]]
 }
 
 worldbank_iter <- function(resource, resp_data, ..., per_page = 32500L) {
