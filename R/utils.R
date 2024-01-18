@@ -1,19 +1,3 @@
-is_string <- function(x) is.character(x) && length(x) == 1L
-
-is_year <- function(x) {
-  is.numeric(x) && length(x) == 1L && x >= 1960L && x <= 2100L
-}
-
-is_lang_code <- function(x) is_string(x) && nchar(x) == 2L
-
-is_country_code <- function(x) {
-  is.character(x) && length(x) > 0L && all(nchar(x) %in% 2:3)
-}
-
-is_id_code <- function(x) {
-  is.character(x) && length(x) > 0L && all(nchar(x) == 3L)
-}
-
 na_if_empty <- function(x) replace(x, x == "", NA_character_)
 
 to_logical <- function(x) ifelse(x == "Y", TRUE, FALSE)

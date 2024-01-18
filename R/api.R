@@ -38,16 +38,14 @@ wb_language <- function() {
 #' @examples
 #' wb_lending_type()
 wb_lending_type <- function(type = NULL, lang = "en") {
-  if (!is.null(type) && !is_id_code(type)) {
-    stop("type must be a character vector of three-letter codes")
-  }
-  if (!is_lang_code(lang)) {
-    stop("lang must be a two-letter language code")
-  }
+  stopifnot(
+    is.null(type) ||
+      is.character(type) && length(type) > 0L && all(nchar(type) == 3L)
+  )
   type <- format_param(type)
 
-  resource <- sprintf("%s/lendingType/%s", lang, type)
-  data <- worldbank(resource)
+  resource <- sprintf("lendingType/%s", type)
+  data <- worldbank(resource, lang = lang)
   res <- data.frame(
     id = map_chr(data, "id"),
     iso2code = map_chr(data, "iso2code"),
@@ -73,16 +71,14 @@ wb_lending_type <- function(type = NULL, lang = "en") {
 #' @examples
 #' wb_income_level()
 wb_income_level <- function(income = NULL, lang = "en") {
-  if (!is.null(income) && !is_id_code(income)) {
-    stop("income must be a character vector of three-letter codes")
-  }
-  if (!is_lang_code(lang)) {
-    stop("lang must be a two-letter language code")
-  }
+  stopifnot(
+    is.null(income) ||
+      is.character(income) && length(income) > 0L && all(nchar(income) == 3L)
+  )
   income <- format_param(income)
 
-  resource <- sprintf("%s/incomeLevel/%s", lang, income)
-  data <- worldbank(resource)
+  resource <- sprintf("incomeLevel/%s", income)
+  data <- worldbank(resource, lang = lang)
   res <- data.frame(
     id = map_chr(data, "id"),
     iso2code = map_chr(data, "iso2code"),
@@ -114,16 +110,11 @@ wb_income_level <- function(income = NULL, lang = "en") {
 #' @examples
 #' wb_source()
 wb_source <- function(source = NULL, lang = "en") {
-  if (!is.null(source) && !(is.character(source) && length(source) > 0L)) {
-    stop("source must be a character vector")
-  }
-  if (!is_lang_code(lang)) {
-    stop("lang must be a two-letter language code")
-  }
+  stopifnot(is.null(source) || is.character(source) && length(source) > 0L)
   source <- format_param(source)
 
-  resource <- sprintf("%s/source/%s", lang, source)
-  data <- worldbank(resource)
+  resource <- sprintf("source/%s", source)
+  data <- worldbank(resource, lang = lang)
   res <- data.frame(
     id = map_chr(data, "id") |> as.integer(),
     last_updated = map_chr(data, "lastupdated") |> as.Date(),
@@ -156,16 +147,11 @@ wb_source <- function(source = NULL, lang = "en") {
 #' @examples
 #' wb_topic()
 wb_topic <- function(topic = NULL, lang = "en") {
-  if (!is.null(topic) && !(is.character(topic) && length(topic) > 0L)) {
-    stop("topic must be a character vector")
-  }
-  if (!is_lang_code(lang)) {
-    stop("lang must be a two-letter language code")
-  }
+  stopifnot(is.null(topic) || is.character(topic) && length(topic) > 0L)
   topic <- format_param(topic)
 
-  resource <- sprintf("%s/topic/%s", lang, topic)
-  data <- worldbank(resource)
+  resource <- sprintf("topic/%s", topic)
+  data <- worldbank(resource, lang = lang)
   res <- data.frame(
     id = map_chr(data, "id") |> as.integer(),
     value = map_chr(data, "value") |> na_if_empty(),
@@ -192,12 +178,8 @@ wb_topic <- function(topic = NULL, lang = "en") {
 #' @examples
 #' wb_region()
 wb_region <- function(region = NULL, lang = "en") {
-  if (!is.null(region) && !(is.character(region) && length(region) > 0L)) {
-    stop("region must be a character vector")
-  }
-  if (!is_lang_code(lang)) {
-    stop("lang must be a two-letter language code")
-  }
+  stopifnot(is.null(region) || is.character(region) && length(region) > 0L)
+  stopifnot(is.character(lang), length(lang) == 1L, nchar(lang) == 2L)
   region <- format_param(region)
 
   resource <- sprintf("%s/region/%s", lang, region)
@@ -243,12 +225,10 @@ wb_region <- function(region = NULL, lang = "en") {
 #' @examples
 #' wb_country()
 wb_country <- function(country = NULL, lang = "en") {
-  if (!is.null(country) && !is_country_code(country)) {
-    stop("country must be a character vector of ISO 2 or 3 codes")
-  }
-  if (!is_lang_code(lang)) {
-    stop("lang must be a two-letter language code")
-  }
+  stopifnot(
+    is.null(country) || is.character(country) && all(nchar(country) %in% 2:3)
+  )
+  stopifnot(is.character(lang), length(lang) == 1L, nchar(lang) == 2L)
   country <- tolower(format_param(country))
 
   resource <- sprintf("%s/country/%s", lang, country)
@@ -305,16 +285,13 @@ wb_country <- function(country = NULL, lang = "en") {
 #' @examples
 #' wb_indicator("NY.GDP.MKTP.CD")
 wb_indicator <- function(indicator = NULL, lang = "en") {
-  if (!is.null(indicator) && !is_string(indicator)) {
-    stop("indicator must be a character vector of length 1")
-  }
-  if (!is_lang_code(lang)) {
-    stop("lang must be a two-letter language code")
-  }
+  stopifnot(
+    is.null(indicator) || is.character(indicator) && length(indicator) == 1L
+  )
   indicator <- indicator %||% "all"
 
-  resource <- sprintf("%s/indicator/%s", lang, indicator)
-  data <- worldbank(resource)
+  resource <- sprintf("indicator/%s", indicator)
+  data <- worldbank(resource, lang = lang)
   res <- data.frame(
     id = map_chr(data, "id"),
     name = map_chr(data, "name"),
@@ -343,8 +320,8 @@ wb_indicator <- function(indicator = NULL, lang = "en") {
 }
 
 #' World Bank country indicator data
-#'
 #' @description
+#'
 #' List all country indicators supported by the World Bank API.
 #'
 #' @param indicator `character(1)` indicator to query.
@@ -373,31 +350,27 @@ wb_country_indicator <- function(indicator = "NY.GDP.MKTP.CD",
                                  lang = "en",
                                  start_year = NULL,
                                  end_year = NULL) {
-  if (!is_string(indicator)) {
-    stop("indicator must be a character vector of length 1")
-  }
-  if (!is.null(country) && !is_country_code(country)) {
-    stop("country must be a character vector of ISO 2 or 3 codes")
-  }
+  stopifnot(is.character(indicator), length(indicator) == 1L)
+  stopifnot(
+    is.null(country) || is.character(country) && all(nchar(country) %in% 2:3)
+  )
   has_start_year <- !is.null(start_year)
   has_end_year <- !is.null(end_year)
-  if (has_start_year && !is_year(start_year)) {
-    stop("start_year must be numeric")
+  if (has_start_year) {
+    stopifnot(is.numeric(start_year) && length(start_year) == 1L)
   }
-  if (has_end_year && !is_year(end_year)) {
-    stop("end_year must be numeric")
+  if (has_end_year) {
+    stopifnot(is.numeric(end_year) && length(end_year) == 1L)
   }
   if (has_start_year && has_end_year) {
-    if (start_year > end_year) {
-      stop("start_year must be less than or equal to end_year")
-    }
+    stopifnot(start_year <= end_year)
   }
   indicator <- toupper(indicator)
   country <- tolower(format_param(country))
   date <- format_date(start_year, end_year)
 
-  resource <- sprintf("%s/country/%s/indicator/%s", lang, country, indicator)
-  data <- worldbank(resource, date = date)
+  resource <- sprintf("country/%s/indicator/%s", country, indicator)
+  data <- worldbank(resource, lang = lang, date = date)
   res <- map(data, \(x) {
     if (is.null(x$value) || is.null(x$date)) {
       return()
@@ -417,6 +390,7 @@ wb_country_indicator <- function(indicator = "NY.GDP.MKTP.CD",
   })
   res <- do.call(rbind, res)
   res$date <- as.integer(res$date)
+  res$country_name <- na_if_empty(res$country_name)
   res$unit <- na_if_empty(res$unit)
   res$obs_status <- na_if_empty(res$obs_status)
   as_tibble(res)
@@ -442,10 +416,14 @@ wb_error_body <- function(resp) {
   c(error_code, message$value, docs)
 }
 
-worldbank <- function(resource, ..., per_page = 32500L) {
+worldbank <- function(resource, ..., lang = NULL, per_page = 32500L) {
+  stopifnot(
+    is.null(lang) ||
+      is.character(lang) && length(lang) == 1L && nchar(lang) == 2L
+  )
   body <- request("http://api.worldbank.org/v2") |>
     req_user_agent("worldbank (https://m-muecke.github.io/worldbank)") |>
-    req_url_path_append(resource) |>
+    req_url_path_append(lang, resource) |>
     req_url_query(..., format = "json", per_page = per_page) |>
     req_error(is_error = is_wb_error, body = wb_error_body) |>
     req_perform() |>
