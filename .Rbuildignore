@@ -10,14 +10,16 @@
 ^\.Rproj\.user$
 ^\.ccache$
 ^\.editorconfig$
-^\.git$
 ^\.github$
 ^\.gitignore$
+^\.httr-oauth$
 ^\.ignore$
 ^\.lintr$
 ^\.vscode$
 ^_pkgdown\.yml$
+^codecov\.yml$
 ^compose.ya?ml$
+^cran-comments\.md$
 ^data-raw$
 ^docs$
 ^inst/extdata/.+\.R$
