@@ -1,8 +1,6 @@
 ^.*\.Rproj$
 ^.Renviron$
 ^.dockerignore$
-^.drone\.ya?ml$
-^.netrc$
 ^.pre-commit-config.yaml$
 ^CITATION.cff$
 ^Dockerfile$
@@ -13,12 +11,12 @@
 ^\.ccache$
 ^\.editorconfig$
 ^\.git$
-^\.gitea$
 ^\.github$
 ^\.gitignore$
 ^\.ignore$
 ^\.lintr$
 ^\.vscode$
+^_pkgdown\.yml$
 ^compose.ya?ml$
 ^data-raw$
 ^docs$
