@@ -7,7 +7,7 @@
 wb_language()
 }
 \value{
-A data.frame with the available languages. The columns are:
+A \code{data.frame()} with the available languages. The columns are:
 \item{code}{The language code.}
 \item{name}{The language name.}
 \item{native_form}{The native form of the language name.}

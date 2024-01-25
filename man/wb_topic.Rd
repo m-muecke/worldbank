@@ -7,13 +7,13 @@
 wb_topic(topic = NULL, lang = "en")
 }
 \arguments{
-\item{topic}{\code{character()} topic to query. Default is \code{NULL}.
+\item{topic}{\code{character()} topic to query. Default \code{NULL}.
 If \code{NULL}, all topics are returned.}
 
-\item{lang}{\code{character(1)} language to query. Default is "en".}
+\item{lang}{\code{character(1)} language to query. Default \code{"en"}.}
 }
 \value{
-A data.frame with the available topics. The columns are:
+A \code{data.frame()} with the available topics. The columns are:
 \item{id}{The topic ID.}
 \item{value}{The topic value.}
 \item{source_note}{The source note.}

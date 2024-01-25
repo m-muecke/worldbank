@@ -7,13 +7,13 @@
 wb_country(country = NULL, lang = "en")
 }
 \arguments{
-\item{country}{\code{character()} country to query. Default is \code{NULL}.
+\item{country}{\code{character()} country to query. Default \code{NULL}.
 If \code{NULL}, all countries are returned.}
 
-\item{lang}{\code{character(1)} language to query. Default is "en".}
+\item{lang}{\code{character(1)} language to query. Default \code{"en"}.}
 }
 \value{
-A data.frame with the available countries. The columns are:
+A \code{data.frame()} with the available countries. The columns are:
 \item{country_id}{The country ID.}
 \item{country_code}{The country code.}
 \item{country_name}{The country name.}

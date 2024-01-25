@@ -3,7 +3,7 @@
 #' @description
 #' List all languages supported by the World Bank API.
 #'
-#' @returns A data.frame with the available languages. The columns are:
+#' @returns A `data.frame()` with the available languages. The columns are:
 #'   \item{code}{The language code.}
 #'   \item{name}{The language name.}
 #'   \item{native_form}{The native form of the language name.}
@@ -26,10 +26,10 @@ wb_language <- function() {
 #' @description
 #' List all lending types supported by the World Bank API.
 #'
-#' @param type `character()` lending type to query. Default is `NULL`.
+#' @param type `character()` lending type to query. Default `NULL`.
 #'   If `NULL`, all types are returned.
-#' @param lang `character(1)` language to query. Default is "en".
-#' @returns A data.frame with the available lending types. The columns are:
+#' @param lang `character(1)` language to query. Default `"en"`.
+#' @returns A `data.frame()` with the available lending types. The columns are:
 #'   \item{id}{The lending type ID.}
 #'   \item{iso2code}{The ISO 2 code of the lending type.}
 #'   \item{value}{The lending type value.}
@@ -59,10 +59,10 @@ wb_lending_type <- function(type = NULL, lang = "en") {
 #' @description
 #' List all income levels supported by the World Bank API.
 #'
-#' @param income `character()` income level to query. Default is `NULL`.
+#' @param income `character()` income level to query. Default `NULL`.
 #'   If `NULL`, all levels are returned.
-#' @param lang `character(1)` language to query. Default is "en".
-#' @returns A data.frame with the available income levels. The columns are:
+#' @param lang `character(1)` language to query. Default `"en"`.
+#' @returns A `data.frame()` with the available income levels. The columns are:
 #'   \item{id}{The income level ID.}
 #'   \item{iso2code}{The ISO 2 code of the income level.}
 #'   \item{value}{The income level value.}
@@ -92,10 +92,10 @@ wb_income_level <- function(income = NULL, lang = "en") {
 #' @description
 #' List all sources supported by the World Bank API.
 #'
-#' @param source `character()` source to query. Default is `NULL`.
+#' @param source `character()` source to query. Default `NULL`.
 #'   If `NULL`, all sources are returned.
-#' @param lang `character(1)` language to query. Default is "en".
-#' @returns A data.frame with the available sources. The columns are:
+#' @param lang `character(1)` language to query. Default `"en"`.
+#' @returns A `data.frame()` with the available sources. The columns are:
 #'   \item{id}{The source ID.}
 #'   \item{last_updated}{The date the source was last updated.}
 #'   \item{name}{The source name.}
@@ -135,10 +135,10 @@ wb_source <- function(source = NULL, lang = "en") {
 #' @description
 #' List all topics supported by the World Bank API.
 #'
-#' @param topic `character()` topic to query. Default is `NULL`.
+#' @param topic `character()` topic to query. Default `NULL`.
 #'   If `NULL`, all topics are returned.
-#' @param lang `character(1)` language to query. Default is "en".
-#' @returns A data.frame with the available topics. The columns are:
+#' @param lang `character(1)` language to query. Default `"en"`.
+#' @returns A `data.frame()` with the available topics. The columns are:
 #'   \item{id}{The topic ID.}
 #'   \item{value}{The topic value.}
 #'   \item{source_note}{The source note.}
@@ -165,10 +165,10 @@ wb_topic <- function(topic = NULL, lang = "en") {
 #' @description
 #' List all regions supported by the World Bank API.
 #'
-#' @param region `character()` region to query. Default is `NULL`.
+#' @param region `character()` region to query. Default `NULL`.
 #'   If `NULL`, all regions are returned
-#' @param lang `character(1)` language to query. Default is "en".
-#' @returns A data.frame with the available regions. The columns are:
+#' @param lang `character(1)` language to query. Default `"en"`.
+#' @returns A `data.frame()` with the available regions. The columns are:
 #'   \item{id}{The region ID.}
 #'   \item{code}{The region code.}
 #'   \item{iso2code}{The ISO 2 code of the region.}
@@ -198,10 +198,10 @@ wb_region <- function(region = NULL, lang = "en") {
 #' @description
 #' List all countries supported by the World Bank API.
 #'
-#' @param country `character()` country to query. Default is `NULL`.
+#' @param country `character()` country to query. Default `NULL`.
 #'   If `NULL`, all countries are returned.
-#' @param lang `character(1)` language to query. Default is "en".
-#' @returns A data.frame with the available countries. The columns are:
+#' @param lang `character(1)` language to query. Default `"en"`.
+#' @returns A `data.frame()` with the available countries. The columns are:
 #'   \item{country_id}{The country ID.}
 #'   \item{country_code}{The country code.}
 #'   \item{country_name}{The country name.}
@@ -267,10 +267,10 @@ wb_country <- function(country = NULL, lang = "en") {
 #' @description
 #' List all indicators supported by the World Bank API.
 #'
-#' @param indicator `character(1)` indicator to query. Default is `NULL`.
+#' @param indicator `character(1)` indicator to query. Default `NULL`.
 #'   If `NULL`, all indicators are returned.
-#' @param lang `character(1)` language to query. Default is "en".
-#' @returns A data.frame with the available indicators. The columns are:
+#' @param lang `character(1)` language to query. Default `"en"`.
+#' @returns A `data.frame()` with the available indicators. The columns are:
 #'   \item{id}{The indicator ID.}
 #'   \item{name}{The indicator name.}
 #'   \item{unit}{The indicator unit.}
@@ -325,12 +325,13 @@ wb_indicator <- function(indicator = NULL, lang = "en") {
 #' List all country indicators supported by the World Bank API.
 #'
 #' @param indicator `character(1)` indicator to query.
-#' @param country `character()` country to query. Default is `NULL`.
+#' @param country `character()` country to query. Default `NULL`.
 #'   If `NULL`, all countries are returned
-#' @param lang `character(1)` language to query. Default is "en".
-#' @param start_year `integer(1)` start year to query. Default is `NULL`.
-#' @param end_year `integer(1)` end year to query. Default is `NULL`.
-#' @returns A data.frame with the available country indicators. The columns are:
+#' @param lang `character(1)` language to query. Default `"en"`.
+#' @param start_year `integer(1)` start year to query. Default `NULL`.
+#' @param end_year `integer(1)` end year to query. Default `NULL`.
+#' @returns A `data.frame()` with the available country indicators.
+#'   The columns are:
 #'   \item{date}{The date}
 #'   \item{indicator_id}{The indicator ID.}
 #'   \item{indicator_name}{The indicator name.}
