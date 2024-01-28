@@ -1,6 +1,10 @@
-na_if_empty <- function(x) replace(x, x == "", NA_character_)
+na_if_empty <- function(x) {
+  replace(x, x == "", NA_character_)
+}
 
-to_logical <- function(x) ifelse(x == "Y", TRUE, FALSE)
+to_logical <- function(x) {
+  ifelse(x == "Y", TRUE, FALSE)
+}
 
 is_installed <- function(pkg) {
   isTRUE(requireNamespace(pkg, quietly = TRUE))
@@ -60,5 +64,3 @@ format_date <- function(start_date, end_date) {
     NULL
   }
 }
-
-cur_year <- function() as.numeric(format(Sys.Date(), "%Y"))
