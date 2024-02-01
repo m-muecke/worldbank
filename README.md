@@ -71,10 +71,10 @@ library(worldbank)
 # filter by specific country
 wb_country(c("US", "DE"))
 #> # A tibble: 2 × 18
-#>   country_id country_code country_name  region_id region_code region_value
-#>   <chr>      <chr>        <chr>         <chr>     <chr>       <chr>
+#>   country_id country_code country_name  region_id region_code region_value      
+#>   <chr>      <chr>        <chr>         <chr>     <chr>       <chr>             
 #> 1 DEU        DE           Germany       ECS       Z7          Europe & Central …
-#> 2 USA        US           United States NAC       XU          North America
+#> 2 USA        US           United States NAC       XU          North America     
 #> # ℹ 12 more variables: admin_region_id <chr>, admin_region_code <chr>,
 #> #   admin_region_value <chr>, income_level_id <chr>, income_level_code <chr>,
 #> #   income_level_value <chr>, lending_type_id <chr>, lending_type_code <chr>,
@@ -84,19 +84,14 @@ wb_country(c("US", "DE"))
 # or fetch all (default)
 wb_country()
 #> # A tibble: 296 × 18
-#>    country_id country_code country_name       region_id region_code region_value
-#>    <chr>      <chr>        <chr>              <chr>     <chr>       <chr>
-#>  1 ABW        AW           Aruba              LCN       ZJ          Latin Ameri…
-#>  2 AFE        ZH           Africa Eastern an… NA        NA          Aggregates
-#>  3 AFG        AF           Afghanistan        SAS       8S          South Asia
-#>  4 AFR        A9           Africa             NA        NA          Aggregates
-#>  5 AFW        ZI           Africa Western an… NA        NA          Aggregates
-#>  6 AGO        AO           Angola             SSF       ZG          Sub-Saharan…
-#>  7 ALB        AL           Albania            ECS       Z7          Europe & Ce…
-#>  8 AND        AD           Andorra            ECS       Z7          Europe & Ce…
-#>  9 ARB        1A           Arab World         NA        NA          Aggregates
-#> 10 ARE        AE           United Arab Emira… MEA       ZQ          Middle East…
-#> # ℹ 286 more rows
+#>   country_id country_code country_name        region_id region_code region_value
+#>   <chr>      <chr>        <chr>               <chr>     <chr>       <chr>       
+#> 1 ABW        AW           Aruba               LCN       ZJ          Latin Ameri…
+#> 2 AFE        ZH           Africa Eastern and… NA        NA          Aggregates  
+#> 3 AFG        AF           Afghanistan         SAS       8S          South Asia  
+#> 4 AFR        A9           Africa              NA        NA          Aggregates  
+#> 5 AFW        ZI           Africa Western and… NA        NA          Aggregates  
+#> # ℹ 291 more rows
 #> # ℹ 12 more variables: admin_region_id <chr>, admin_region_code <chr>,
 #> #   admin_region_value <chr>, income_level_id <chr>, income_level_code <chr>,
 #> #   income_level_value <chr>, lending_type_id <chr>, lending_type_code <chr>,
@@ -107,20 +102,15 @@ wb_country()
 indicators <- wb_country_indicator("NY.GDP.MKTP.CD")
 indicators
 #> # A tibble: 13,200 × 10
-#>     date indicator_id   indicator_name    country_id country_name   country_code
-#>    <int> <chr>          <chr>             <chr>      <chr>          <chr>
-#>  1  2022 NY.GDP.MKTP.CD GDP (current US$) ZH         Africa Easter… AFE
-#>  2  2021 NY.GDP.MKTP.CD GDP (current US$) ZH         Africa Easter… AFE
-#>  3  2020 NY.GDP.MKTP.CD GDP (current US$) ZH         Africa Easter… AFE
-#>  4  2019 NY.GDP.MKTP.CD GDP (current US$) ZH         Africa Easter… AFE
-#>  5  2018 NY.GDP.MKTP.CD GDP (current US$) ZH         Africa Easter… AFE
-#>  6  2017 NY.GDP.MKTP.CD GDP (current US$) ZH         Africa Easter… AFE
-#>  7  2016 NY.GDP.MKTP.CD GDP (current US$) ZH         Africa Easter… AFE
-#>  8  2015 NY.GDP.MKTP.CD GDP (current US$) ZH         Africa Easter… AFE
-#>  9  2014 NY.GDP.MKTP.CD GDP (current US$) ZH         Africa Easter… AFE
-#> 10  2013 NY.GDP.MKTP.CD GDP (current US$) ZH         Africa Easter… AFE
-#> # ℹ 13,190 more rows
-#> # ℹ 4 more variables: value <dbl>, unit <chr>, obs_status <chr>, decimal <int>
+#>    date indicator_id indicator_name country_id country_name country_code   value
+#>   <int> <chr>        <chr>          <chr>      <chr>        <chr>          <dbl>
+#> 1  2022 NY.GDP.MKTP… GDP (current … ZH         Africa East… AFE          1.19e12
+#> 2  2021 NY.GDP.MKTP… GDP (current … ZH         Africa East… AFE          1.09e12
+#> 3  2020 NY.GDP.MKTP… GDP (current … ZH         Africa East… AFE          9.29e11
+#> 4  2019 NY.GDP.MKTP… GDP (current … ZH         Africa East… AFE          1.01e12
+#> 5  2018 NY.GDP.MKTP… GDP (current … ZH         Africa East… AFE          1.01e12
+#> # ℹ 13,195 more rows
+#> # ℹ 3 more variables: unit <chr>, obs_status <chr>, decimal <int>
 
 # plot indicator data for specific countries
 library(ggplot2)
@@ -128,7 +118,8 @@ library(ggplot2)
 subset(indicators, country_id %in% c("US", "DE", "FR", "CH", "JP")) |>
   ggplot(aes(x = date, y = value, color = country_code)) +
   geom_line() +
-  labs(x = "Date", y = "GDP (current US$)", color = "Country")
+  labs(x = NULL, y = NULL, title = "GDP (current US$)", color = "Country") +
+  theme_minimal()
 ```
 
 <img src="man/figures/README-demo-1.png" width="100%" />
