@@ -66,6 +66,7 @@ convention of the [World Bank API
 v2](https://datahelpdesk.worldbank.org/knowledgebase/articles/889392-about-the-indicators-api-documentation).
 
 ``` r
+
 library(worldbank)
 
 # filter by specific country
@@ -101,7 +102,7 @@ wb_country()
 # fetch indicator data for specific country
 indicators <- wb_country_indicator("NY.GDP.MKTP.CD")
 indicators
-#> # A tibble: 13,200 × 10
+#> # A tibble: 13,198 × 10
 #>    date indicator_id indicator_name country_id country_name country_code   value
 #>   <int> <chr>        <chr>          <chr>      <chr>        <chr>          <dbl>
 #> 1  2022 NY.GDP.MKTP… GDP (current … ZH         Africa East… AFE          1.19e12
@@ -109,20 +110,11 @@ indicators
 #> 3  2020 NY.GDP.MKTP… GDP (current … ZH         Africa East… AFE          9.29e11
 #> 4  2019 NY.GDP.MKTP… GDP (current … ZH         Africa East… AFE          1.01e12
 #> 5  2018 NY.GDP.MKTP… GDP (current … ZH         Africa East… AFE          1.01e12
-#> # ℹ 13,195 more rows
+#> # ℹ 13,193 more rows
 #> # ℹ 3 more variables: unit <chr>, obs_status <chr>, decimal <int>
-
-# plot indicator data for specific countries
-library(ggplot2)
-
-subset(indicators, country_id %in% c("US", "DE", "FR", "CH", "JP")) |>
-  ggplot(aes(x = date, y = value, color = country_code)) +
-  geom_line() +
-  labs(x = NULL, y = NULL, title = "GDP (current US$)", color = "Country") +
-  theme_minimal()
 ```
 
-<img src="man/figures/README-demo-1.png" width="100%" />
+<img src="man/figures/README-plotting-1.png" width="100%" />
 
 ## Related work
 

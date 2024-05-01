@@ -11,7 +11,7 @@ knitr::opts_chunk$set(
   fig.path = "man/figures/README-",
   out.width = "100%"
 )
-options(tibble.print_min = 5, tibble.print_max = 5)
+options(tibble.print_min = 5L, tibble.print_max = 5L)
 ```
 
 # worldbank
@@ -53,7 +53,8 @@ pak::pak("m-muecke/worldbank")
 
 worldbank functions are prefixed with `wb_` and follow the naming convention of the [World Bank API v2](https://datahelpdesk.worldbank.org/knowledgebase/articles/889392-about-the-indicators-api-documentation).
 
-```{r demo, dpi = 300}
+```{r demo}
+
 library(worldbank)
 
 # filter by specific country
@@ -65,15 +66,27 @@ wb_country()
 # fetch indicator data for specific country
 indicators <- wb_country_indicator("NY.GDP.MKTP.CD")
 indicators
+```
 
-# plot indicator data for specific countries
+```{r plotting, message = FALSE, echo = FALSE, dpi = 300}
 library(ggplot2)
 
 subset(indicators, country_id %in% c("US", "DE", "FR", "CH", "JP")) |>
   ggplot(aes(x = date, y = value, color = country_code)) +
   geom_line() +
-  labs(x = NULL, y = NULL, title = "GDP (current US$)", color = "Country") +
-  theme_minimal()
+  theme_minimal() +
+  theme(
+    plot.title = element_text(face = "bold"),
+    panel.grid.major.y = element_line(color = "black", linewidth = 0.2),
+    panel.grid.major.x = element_blank(),
+    panel.grid.minor = element_blank(),
+    axis.text = element_text(color = "black"),
+    axis.title = element_blank()
+  ) +
+  scale_y_continuous(
+    labels = scales::label_currency(scale_cut = scales::cut_short_scale())
+  ) +
+  labs(title = "GDP (current US$)", color = "Country")
 ```
 
 ## Related work
