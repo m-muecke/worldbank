@@ -172,8 +172,10 @@ wb_topic <- function(topic = NULL, lang = "en") {
 #' @examples
 #' wb_region()
 wb_region <- function(region = NULL, lang = "en") {
-  stopifnot(is_character_or_null(region))
-  stopifnot(is_string(lang), nchar(lang) == 2L)
+  stopifnot(
+    is_character_or_null(region),
+    is_string(lang), nchar(lang) == 2L
+  )
   region <- format_param(region)
 
   resource <- sprintf("%s/region/%s", lang, region)
@@ -219,8 +221,10 @@ wb_region <- function(region = NULL, lang = "en") {
 #' @examples
 #' wb_country()
 wb_country <- function(country = NULL, lang = "en") {
-  stopifnot(is_character_or_null(country), all(nchar(country) %in% 2:3))
-  stopifnot(is_string(lang), nchar(lang) == 2L)
+  stopifnot(
+    is_character_or_null(country), all(nchar(country) %in% 2:3),
+    is_string(lang), nchar(lang) == 2L
+  )
   country <- tolower(format_param(country))
 
   resource <- sprintf("%s/country/%s", lang, country)
@@ -341,8 +345,10 @@ wb_country_indicator <- function(indicator = "NY.GDP.MKTP.CD",
                                  lang = "en",
                                  start_year = NULL,
                                  end_year = NULL) {
-  stopifnot(is_string(indicator))
-  stopifnot(is_character_or_null(country), all(nchar(country) %in% 2:3))
+  stopifnot(
+    is_string(indicator),
+    is_character_or_null(country), all(nchar(country) %in% 2:3)
+  )
   has_start_year <- !is.null(start_year)
   has_end_year <- !is.null(end_year)
   if (has_start_year) {

@@ -1,9 +1,5 @@
-na_if_empty <- function(x) {
-  replace(x, x == "", NA_character_)
-}
-
-to_logical <- function(x) {
-  ifelse(x == "Y", TRUE, FALSE)
+`%||%` <- function(x, y) {
+  if (is.null(x)) y else x
 }
 
 is_installed <- function(pkg) {
@@ -18,8 +14,12 @@ as_tibble <- function(x) {
   }
 }
 
-`%||%` <- function(x, y) {
-  if (is.null(x)) y else x
+na_if_empty <- function(x) {
+  replace(x, x == "", NA_character_)
+}
+
+to_logical <- function(x) {
+  ifelse(x == "Y", TRUE, FALSE)
 }
 
 map <- function(.x, .f, ...) {

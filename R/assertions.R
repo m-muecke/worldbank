@@ -1,5 +1,5 @@
 is_character <- function(x) {
-  is.character(x) && !any(is.na(x)) && length(x) > 0L
+  is.character(x) && !anyNA(x) && length(x) > 0L
 }
 
 is_character_or_null <- function(x) {
