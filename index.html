@@ -104,8 +104,7 @@
 </h2>
 <p>worldbank functions are prefixed with <code>wb_</code> and follow the naming convention of the <a href="https://datahelpdesk.worldbank.org/knowledgebase/articles/889392-about-the-indicators-api-documentation" class="external-link">World Bank API v2</a>.</p>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span></span>
-<span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://m-muecke.github.io/worldbank">worldbank</a></span><span class="op">)</span></span>
+<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://m-muecke.github.io/worldbank">worldbank</a></span><span class="op">)</span></span>
 <span></span>
 <span><span class="co"># filter by specific country</span></span>
 <span><span class="fu"><a href="reference/wb_country.html">wb_country</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"US"</span>, <span class="st">"DE"</span><span class="op">)</span><span class="op">)</span></span>
@@ -118,8 +117,9 @@
 <span><span class="co">#&gt; #   admin_region_value &lt;chr&gt;, income_level_id &lt;chr&gt;, income_level_code &lt;chr&gt;,</span></span>
 <span><span class="co">#&gt; #   income_level_value &lt;chr&gt;, lending_type_id &lt;chr&gt;, lending_type_code &lt;chr&gt;,</span></span>
 <span><span class="co">#&gt; #   lending_type_value &lt;chr&gt;, capital_city &lt;chr&gt;, longitude &lt;dbl&gt;,</span></span>
-<span><span class="co">#&gt; #   latitude &lt;dbl&gt;</span></span>
-<span></span>
+<span><span class="co">#&gt; #   latitude &lt;dbl&gt;</span></span></code></pre></div>
+<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span></span>
 <span><span class="co"># or fetch all (default)</span></span>
 <span><span class="fu"><a href="reference/wb_country.html">wb_country</a></span><span class="op">(</span><span class="op">)</span></span>
 <span><span class="co">#&gt; # A tibble: 296 × 18</span></span>
@@ -135,12 +135,31 @@
 <span><span class="co">#&gt; #   admin_region_value &lt;chr&gt;, income_level_id &lt;chr&gt;, income_level_code &lt;chr&gt;,</span></span>
 <span><span class="co">#&gt; #   income_level_value &lt;chr&gt;, lending_type_id &lt;chr&gt;, lending_type_code &lt;chr&gt;,</span></span>
 <span><span class="co">#&gt; #   lending_type_value &lt;chr&gt;, capital_city &lt;chr&gt;, longitude &lt;dbl&gt;,</span></span>
-<span><span class="co">#&gt; #   latitude &lt;dbl&gt;</span></span>
-<span></span>
+<span><span class="co">#&gt; #   latitude &lt;dbl&gt;</span></span></code></pre></div>
+<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span></span>
+<span><span class="co"># search for specific indicator</span></span>
+<span><span class="va">ind</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/wb_indicator.html">wb_indicator</a></span><span class="op">(</span><span class="op">)</span></span>
+<span><span class="va">ind</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/subset.html" class="external-link">subset</a></span><span class="op">(</span></span>
+<span>  <span class="va">ind</span>, <span class="fu"><a href="https://rdrr.io/r/base/grep.html" class="external-link">grepl</a></span><span class="op">(</span><span class="st">"GDP"</span>, <span class="va">id</span>, fixed <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span> <span class="op">&amp;</span> <span class="va">source_value</span> <span class="op">==</span> <span class="st">"World Development Indicators"</span></span>
+<span><span class="op">)</span></span>
+<span><span class="va">ind</span></span>
+<span><span class="co">#&gt; # A tibble: 35 × 9</span></span>
+<span><span class="co">#&gt;   id          name  unit  source_id source_value source_note source_organization</span></span>
+<span><span class="co">#&gt;   &lt;chr&gt;       &lt;chr&gt; &lt;chr&gt; &lt;chr&gt;     &lt;chr&gt;        &lt;chr&gt;       &lt;chr&gt;              </span></span>
+<span><span class="co">#&gt; 1 EG.GDP.PUS… GDP … &lt;NA&gt;  2         World Devel… GDP per un… IEA Statistics © O…</span></span>
+<span><span class="co">#&gt; 2 EG.GDP.PUS… GDP … &lt;NA&gt;  2         World Devel… GDP per un… IEA Statistics © O…</span></span>
+<span><span class="co">#&gt; 3 ER.GDP.FWT… Wate… &lt;NA&gt;  2         World Devel… Water prod… Food and Agricultu…</span></span>
+<span><span class="co">#&gt; 4 NY.GDP.COA… Coal… &lt;NA&gt;  2         World Devel… Coal rents… World Bank staff e…</span></span>
+<span><span class="co">#&gt; 5 NY.GDP.DEF… Infl… &lt;NA&gt;  2         World Devel… Inflation … World Bank nationa…</span></span>
+<span><span class="co">#&gt; # ℹ 30 more rows</span></span>
+<span><span class="co">#&gt; # ℹ 2 more variables: topic_id &lt;chr&gt;, topic_value &lt;chr&gt;</span></span></code></pre></div>
+<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span></span>
 <span><span class="co"># fetch indicator data for specific country</span></span>
-<span><span class="va">indicators</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/wb_country_indicator.html">wb_country_indicator</a></span><span class="op">(</span><span class="st">"NY.GDP.MKTP.CD"</span><span class="op">)</span></span>
-<span><span class="va">indicators</span></span>
-<span><span class="co">#&gt; # A tibble: 13,198 × 10</span></span>
+<span><span class="va">gdp</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/wb_country_indicator.html">wb_country_indicator</a></span><span class="op">(</span><span class="st">"NY.GDP.MKTP.CD"</span><span class="op">)</span></span>
+<span><span class="va">gdp</span></span>
+<span><span class="co">#&gt; # A tibble: 13,178 × 10</span></span>
 <span><span class="co">#&gt;    date indicator_id indicator_name country_id country_name country_code   value</span></span>
 <span><span class="co">#&gt;   &lt;int&gt; &lt;chr&gt;        &lt;chr&gt;          &lt;chr&gt;      &lt;chr&gt;        &lt;chr&gt;          &lt;dbl&gt;</span></span>
 <span><span class="co">#&gt; 1  2022 NY.GDP.MKTP… GDP (current … ZH         Africa East… AFE          1.19e12</span></span>
@@ -148,7 +167,7 @@
 <span><span class="co">#&gt; 3  2020 NY.GDP.MKTP… GDP (current … ZH         Africa East… AFE          9.29e11</span></span>
 <span><span class="co">#&gt; 4  2019 NY.GDP.MKTP… GDP (current … ZH         Africa East… AFE          1.01e12</span></span>
 <span><span class="co">#&gt; 5  2018 NY.GDP.MKTP… GDP (current … ZH         Africa East… AFE          1.01e12</span></span>
-<span><span class="co">#&gt; # ℹ 13,193 more rows</span></span>
+<span><span class="co">#&gt; # ℹ 13,173 more rows</span></span>
 <span><span class="co">#&gt; # ℹ 3 more variables: unit &lt;chr&gt;, obs_status &lt;chr&gt;, decimal &lt;int&gt;</span></span></code></pre></div>
 <p><img src="reference/figures/README-plotting-1.png" width="100%"></p>
 </div>
