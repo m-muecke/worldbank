@@ -124,18 +124,18 @@ ind
 
 ``` r
 
-# fetch indicator data for specific country
-gdp <- wb_country_indicator("NY.GDP.MKTP.CD")
+# fetch indicator data for specific or all countries (default)
+gdp <- wb_country_indicator("NY.GDP.MKTP.CD", c("US", "DE", "FR", "CH", "JP"))
 gdp
-#> # A tibble: 13,178 × 10
+#> # A tibble: 295 × 10
 #>    date indicator_id indicator_name country_id country_name country_code   value
 #>   <int> <chr>        <chr>          <chr>      <chr>        <chr>          <dbl>
-#> 1  2022 NY.GDP.MKTP… GDP (current … ZH         Africa East… AFE          1.19e12
-#> 2  2021 NY.GDP.MKTP… GDP (current … ZH         Africa East… AFE          1.09e12
-#> 3  2020 NY.GDP.MKTP… GDP (current … ZH         Africa East… AFE          9.29e11
-#> 4  2019 NY.GDP.MKTP… GDP (current … ZH         Africa East… AFE          1.01e12
-#> 5  2018 NY.GDP.MKTP… GDP (current … ZH         Africa East… AFE          1.01e12
-#> # ℹ 13,173 more rows
+#> 1  2022 NY.GDP.MKTP… GDP (current … CH         Switzerland  CHE          8.18e11
+#> 2  2021 NY.GDP.MKTP… GDP (current … CH         Switzerland  CHE          8.13e11
+#> 3  2020 NY.GDP.MKTP… GDP (current … CH         Switzerland  CHE          7.42e11
+#> 4  2019 NY.GDP.MKTP… GDP (current … CH         Switzerland  CHE          7.21e11
+#> 5  2018 NY.GDP.MKTP… GDP (current … CH         Switzerland  CHE          7.26e11
+#> # ℹ 290 more rows
 #> # ℹ 3 more variables: unit <chr>, obs_status <chr>, decimal <int>
 ```
 
