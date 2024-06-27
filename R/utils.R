@@ -15,11 +15,11 @@ as_tibble <- function(x) {
 }
 
 na_if_empty <- function(x) {
-  replace(x, x == "", NA_character_)
+  replace(x, !nzchar(x), NA_character_)
 }
 
 to_logical <- function(x) {
-  ifelse(x == "Y", TRUE, FALSE)
+  x == "Y"
 }
 
 map <- function(.x, .f, ...) {

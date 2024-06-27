@@ -3,6 +3,9 @@
 \name{wb_lending_type}
 \alias{wb_lending_type}
 \title{World Bank lending type data}
+\source{
+\url{http://api.worldbank.org/v2/lendingTypes}
+}
 \usage{
 wb_lending_type(type = NULL, lang = "en")
 }
@@ -23,7 +26,4 @@ List all lending types supported by the World Bank API.
 }
 \examples{
 wb_lending_type()
-}
-\references{
-\url{http://api.worldbank.org/v2/lendingTypes}
 }

@@ -1,6 +1,6 @@
 test_that("wb_lending_type input validation works", {
   # type should be a three letter code or NULL
-  expect_error(wb_lending_type(character(0)))
+  expect_error(wb_lending_type(character()))
   expect_error(wb_lending_type(""))
   expect_error(wb_lending_type("ab"))
   expect_error(wb_lending_type("abcd"))
@@ -18,7 +18,7 @@ test_that("wb_lending_type input validation works", {
 
 test_that("wb_income_level input validation works", {
   # income should be a three letter code or NULL
-  expect_error(wb_income_level(character(0)))
+  expect_error(wb_income_level(character()))
   expect_error(wb_income_level(""))
   expect_error(wb_income_level("ab"))
   expect_error(wb_income_level("abcd"))
@@ -36,7 +36,7 @@ test_that("wb_income_level input validation works", {
 
 test_that("wb_source input validation works", {
   # source should be a character vector or NULL
-  expect_error(wb_source(character(0)))
+  expect_error(wb_source(character()))
   expect_error(wb_source(NA))
   expect_error(wb_source(1L))
   expect_error(wb_source(TRUE))
@@ -50,7 +50,7 @@ test_that("wb_source input validation works", {
 
 test_that("wb_topic input validation works", {
   # topic should be a character vector or NULL
-  expect_error(wb_topic(character(0)))
+  expect_error(wb_topic(character()))
   expect_error(wb_topic(NA))
   expect_error(wb_topic(1L))
   expect_error(wb_topic(TRUE))
@@ -64,7 +64,7 @@ test_that("wb_topic input validation works", {
 
 test_that("wb_region input validation works", {
   # region should be a character vector or NULL
-  expect_error(wb_region(character(0)))
+  expect_error(wb_region(character()))
   expect_error(wb_region(NA))
   expect_error(wb_region(1L))
   expect_error(wb_region(TRUE))
@@ -81,7 +81,7 @@ test_that("wb_country input validation works", {
   expect_error(wb_country("a"))
   expect_error(wb_country("abcd"))
   expect_error(wb_country(c("ab", "abcd")))
-  expect_error(wb_country(character(0)))
+  expect_error(wb_country(character()))
   expect_error(wb_country(NA))
   expect_error(wb_country(1L))
   expect_error(wb_country(TRUE))
@@ -98,7 +98,7 @@ test_that("wb_indicator input validation works", {
   expect_error(wb_indicator("a"))
   expect_error(wb_indicator("abcd"))
   expect_error(wb_indicator(c("ab", "abcd")))
-  expect_error(wb_indicator(character(0)))
+  expect_error(wb_indicator(character()))
   expect_error(wb_indicator(NA))
   expect_error(wb_indicator(1L))
   expect_error(wb_indicator(TRUE))
@@ -120,7 +120,7 @@ test_that("wb_country_indicator input validation works", {
   expect_error(wb_country_indicator(country = "a"))
   expect_error(wb_country_indicator(country = "abcd"))
   expect_error(wb_country_indicator(country = c("ab", "abcd")))
-  expect_error(wb_country_indicator(country = character(0)))
+  expect_error(wb_country_indicator(country = character()))
   expect_error(wb_country_indicator(country = NA))
   expect_error(wb_country_indicator(country = 1L))
   expect_error(wb_country_indicator(country = TRUE))

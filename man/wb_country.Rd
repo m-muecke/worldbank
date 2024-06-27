@@ -3,6 +3,9 @@
 \name{wb_country}
 \alias{wb_country}
 \title{World Bank country data}
+\source{
+\url{http://api.worldbank.org/v2/country}
+}
 \usage{
 wb_country(country = NULL, lang = "en")
 }
@@ -38,7 +41,4 @@ List all countries supported by the World Bank API.
 }
 \examples{
 wb_country()
-}
-\references{
-\url{http://api.worldbank.org/v2/country}
 }

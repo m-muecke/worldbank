@@ -3,6 +3,9 @@
 \name{wb_income_level}
 \alias{wb_income_level}
 \title{World Bank income level data}
+\source{
+\url{http://api.worldbank.org/v2/incomeLevels}
+}
 \usage{
 wb_income_level(income = NULL, lang = "en")
 }
@@ -23,7 +26,4 @@ List all income levels supported by the World Bank API.
 }
 \examples{
 wb_income_level()
-}
-\references{
-\url{http://api.worldbank.org/v2/incomeLevels}
 }
