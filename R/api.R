@@ -149,7 +149,7 @@ wb_topic <- function(topic = NULL, lang = "en") {
   res <- data.frame(
     id = map_chr(data, "id") |> as.integer(),
     value = map_chr(data, "value") |> na_if_empty(),
-    source_note = map_chr(data, "sourceNote") |> na_if_empty() |> trimws()
+    source_note = map_chr(data, "sourceNote") |> trimws() |> na_if_empty()
   )
   as_tibble(res)
 }
@@ -184,7 +184,7 @@ wb_region <- function(region = NULL, lang = "en") {
     id = map_chr(data, "id") |> na_if_empty() |> as.integer(),
     code = map_chr(data, "code"),
     iso2code = map_chr(data, "iso2code"),
-    name = map_chr(data, "name") |> na_if_empty() |> trimws()
+    name = map_chr(data, "name") |> trimws() |> na_if_empty()
   )
   as_tibble(res)
 }
@@ -288,12 +288,12 @@ wb_indicator <- function(indicator = NULL, lang = "en") {
   data <- worldbank(resource, lang = lang)
   res <- data.frame(
     id = map_chr(data, "id"),
-    name = map_chr(data, "name"),
+    name = map_chr(data, "name") |> trimws(),
     unit = map_chr(data, "unit") |> na_if_empty(),
     source_id = map_chr(data, \(x) x$source$id),
-    source_value = map_chr(data, \(x) x$source$value),
-    source_note = map_chr(data, "sourceNote") |> na_if_empty() |> trimws(),
-    source_organization = map_chr(data, "sourceOrganization"),
+    source_value = map_chr(data, \(x) x$source$value) |> trimws(),
+    source_note = map_chr(data, "sourceNote") |> trimws() |> na_if_empty(),
+    source_organization = map_chr(data, "sourceOrganization") |> na_if_empty(),
     topic_id = map_chr(data, \(x) {
       if (length(x$topics) > 0L && length(x$topics[[1L]]) > 0L) {
         x$topics[[1L]]$id
@@ -320,7 +320,7 @@ wb_indicator <- function(indicator = NULL, lang = "en") {
 #'
 #' @param indicator `character(1)` indicator to query.
 #' @param country `character()` country to query. Default `NULL`.
-#'   If `NULL`, all countries are returned
+#'   If `NULL`, all countries are returned.
 #' @param lang `character(1)` language to query. Default `"en"`.
 #' @param start_year `integer(1)` start year to query. Default `NULL`.
 #' @param end_year `integer(1)` end year to query. Default `NULL`.

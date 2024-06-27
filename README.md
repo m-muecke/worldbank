@@ -66,7 +66,6 @@ convention of the [World Bank API
 v2](https://datahelpdesk.worldbank.org/knowledgebase/articles/889392-about-the-indicators-api-documentation).
 
 ``` r
-
 library(worldbank)
 
 # filter by specific country
@@ -81,6 +80,9 @@ wb_country(c("US", "DE"))
 #> #   income_level_value <chr>, lending_type_id <chr>, lending_type_code <chr>,
 #> #   lending_type_value <chr>, capital_city <chr>, longitude <dbl>,
 #> #   latitude <dbl>
+```
+
+``` r
 
 # or fetch all (default)
 wb_country()
@@ -98,11 +100,34 @@ wb_country()
 #> #   income_level_value <chr>, lending_type_id <chr>, lending_type_code <chr>,
 #> #   lending_type_value <chr>, capital_city <chr>, longitude <dbl>,
 #> #   latitude <dbl>
+```
+
+``` r
+
+# search for specific indicator
+ind <- wb_indicator()
+ind <- subset(
+  ind, grepl("GDP", id, fixed = TRUE) & source_value == "World Development Indicators"
+)
+ind
+#> # A tibble: 35 × 9
+#>   id          name  unit  source_id source_value source_note source_organization
+#>   <chr>       <chr> <chr> <chr>     <chr>        <chr>       <chr>              
+#> 1 EG.GDP.PUS… GDP … <NA>  2         World Devel… GDP per un… IEA Statistics © O…
+#> 2 EG.GDP.PUS… GDP … <NA>  2         World Devel… GDP per un… IEA Statistics © O…
+#> 3 ER.GDP.FWT… Wate… <NA>  2         World Devel… Water prod… Food and Agricultu…
+#> 4 NY.GDP.COA… Coal… <NA>  2         World Devel… Coal rents… World Bank staff e…
+#> 5 NY.GDP.DEF… Infl… <NA>  2         World Devel… Inflation … World Bank nationa…
+#> # ℹ 30 more rows
+#> # ℹ 2 more variables: topic_id <chr>, topic_value <chr>
+```
+
+``` r
 
 # fetch indicator data for specific country
-indicators <- wb_country_indicator("NY.GDP.MKTP.CD")
-indicators
-#> # A tibble: 13,198 × 10
+gdp <- wb_country_indicator("NY.GDP.MKTP.CD")
+gdp
+#> # A tibble: 13,178 × 10
 #>    date indicator_id indicator_name country_id country_name country_code   value
 #>   <int> <chr>        <chr>          <chr>      <chr>        <chr>          <dbl>
 #> 1  2022 NY.GDP.MKTP… GDP (current … ZH         Africa East… AFE          1.19e12
@@ -110,7 +135,7 @@ indicators
 #> 3  2020 NY.GDP.MKTP… GDP (current … ZH         Africa East… AFE          9.29e11
 #> 4  2019 NY.GDP.MKTP… GDP (current … ZH         Africa East… AFE          1.01e12
 #> 5  2018 NY.GDP.MKTP… GDP (current … ZH         Africa East… AFE          1.01e12
-#> # ℹ 13,193 more rows
+#> # ℹ 13,173 more rows
 #> # ℹ 3 more variables: unit <chr>, obs_status <chr>, decimal <int>
 ```
 
