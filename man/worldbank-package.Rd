@@ -6,7 +6,7 @@
 \alias{worldbank-package}
 \title{worldbank: Client for the World Bank API}
 \description{
-Download data from the World Bank API.
+Download data from the 'World Bank API'.
 }
 \seealso{
 Useful links:
