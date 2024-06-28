@@ -40,5 +40,7 @@ A \code{data.frame()} with the available countries. The columns are:
 List all countries supported by the World Bank API.
 }
 \examples{
+\donttest{
 wb_country()
+}
 }

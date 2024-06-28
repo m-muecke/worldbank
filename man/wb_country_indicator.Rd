@@ -45,5 +45,7 @@ The columns are:
 List all country indicators supported by the World Bank API.
 }
 \examples{
+\donttest{
 wb_country_indicator("NY.GDP.MKTP.CD", "US")
+}
 }

@@ -25,5 +25,7 @@ A \code{data.frame()} with the available topics. The columns are:
 List all topics supported by the World Bank API.
 }
 \examples{
+\donttest{
 wb_topic()
+}
 }

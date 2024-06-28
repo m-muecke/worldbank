@@ -31,5 +31,7 @@ A \code{data.frame()} with the available sources. The columns are:
 List all sources supported by the World Bank API.
 }
 \examples{
+\donttest{
 wb_source()
+}
 }

@@ -19,5 +19,7 @@ A \code{data.frame()} with the available languages. The columns are:
 List all languages supported by the World Bank API.
 }
 \examples{
+\donttest{
 wb_language()
+}
 }

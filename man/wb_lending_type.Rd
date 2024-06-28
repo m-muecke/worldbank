@@ -25,5 +25,7 @@ A \code{data.frame()} with the available lending types. The columns are:
 List all lending types supported by the World Bank API.
 }
 \examples{
+\donttest{
 wb_lending_type()
+}
 }
