@@ -83,6 +83,51 @@ test_that("wb_region", {
   }
 })
 
+test_that("wb_country", {
+  local_mocked_bindings(
+    worldbank = function(...) readRDS(test_path("fixtures", "wb-country.rds"))
+  )
+  actual <- wb_country()
+  expect_s3_class(actual, "data.frame")
+  expect_identical(dim(actual), c(296L, 18L))
+  for (x in actual) {
+    if (is.character(x)) {
+      expect_true(all(nzchar(x)))
+      expect_false(has_ws(x))
+    }
+  }
+})
+
+test_that("wb_indicator", {
+  local_mocked_bindings(
+    worldbank = function(...) readRDS(test_path("fixtures", "wb-indicator.rds"))
+  )
+  actual <- wb_indicator()
+  expect_s3_class(actual, "data.frame")
+  expect_identical(dim(actual), c(100L, 9L))
+  for (x in actual) {
+    if (is.character(x)) {
+      expect_true(all(nzchar(x)))
+      expect_false(has_ws(x))
+    }
+  }
+})
+
+test_that("wb_country_indicator", {
+  local_mocked_bindings(
+    worldbank = function(...) readRDS(test_path("fixtures", "wb-country-indicator.rds"))
+  )
+  actual <- wb_country_indicator()
+  expect_s3_class(actual, "data.frame")
+  expect_identical(dim(actual), c(63L, 10L))
+  for (x in actual) {
+    if (is.character(x)) {
+      expect_true(all(nzchar(x)))
+      expect_false(has_ws(x))
+    }
+  }
+})
+
 test_that("wb_lending_type input validation works", {
   # type should be a three letter code or NULL
   expect_error(wb_lending_type(character()))

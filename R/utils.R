@@ -14,6 +14,16 @@ as_tibble <- function(x) {
   }
 }
 
+clean_strings <- function(data) {
+  for (i in seq_along(data)) {
+    x <- data[[i]]
+    if (is.character(x)) {
+      data[[i]] <- trimws(x) |> na_if_empty()
+    }
+  }
+  data
+}
+
 na_if_empty <- function(x) {
   replace(x, !nzchar(x), NA_character_)
 }

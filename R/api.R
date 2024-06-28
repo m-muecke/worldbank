@@ -17,9 +17,10 @@ wb_language <- function() {
   data <- worldbank("languages")
   res <- data.frame(
     code = map_chr(data, "code"),
-    name = map_chr(data, "name") |> trimws(),
+    name = map_chr(data, "name"),
     native_form = map_chr(data, "nativeForm")
   )
+  res <- clean_strings(res)
   as_tibble(res)
 }
 
@@ -50,8 +51,9 @@ wb_lending_type <- function(type = NULL, lang = "en") {
   res <- data.frame(
     id = map_chr(data, "id"),
     iso2code = map_chr(data, "iso2code"),
-    value = map_chr(data, "value") |> na_if_empty()
+    value = map_chr(data, "value")
   )
+  res <- clean_strings(res)
   as_tibble(res)
 }
 
@@ -82,8 +84,9 @@ wb_income_level <- function(income = NULL, lang = "en") {
   res <- data.frame(
     id = map_chr(data, "id"),
     iso2code = map_chr(data, "iso2code"),
-    value = map_chr(data, "value") |> na_if_empty()
+    value = map_chr(data, "value")
   )
+  res <- clean_strings(res)
   as_tibble(res)
 }
 
@@ -120,15 +123,16 @@ wb_source <- function(source = NULL, lang = "en") {
   res <- data.frame(
     id = map_chr(data, "id") |> as.integer(),
     last_updated = map_chr(data, "lastupdated") |> as.Date(),
-    name = map_chr(data, "name") |> trimws() |> na_if_empty(),
+    name = map_chr(data, "name"),
     code = map_chr(data, "code"),
-    description = map_chr(data, "description") |> na_if_empty(),
-    url = map_chr(data, "url") |> na_if_empty(),
+    description = map_chr(data, "description"),
+    url = map_chr(data, "url"),
     data_availability = map_chr(data, "dataavailability") |> to_logical(),
     metadata_availability = map_chr(data, "metadataavailability") |>
       to_logical(),
     concepts = map_chr(data, "concepts") |> as.integer()
   )
+  res <- clean_strings(res)
   as_tibble(res)
 }
 
@@ -158,9 +162,10 @@ wb_topic <- function(topic = NULL, lang = "en") {
   data <- worldbank(resource, lang = lang)
   res <- data.frame(
     id = map_chr(data, "id") |> as.integer(),
-    value = map_chr(data, "value") |> na_if_empty(),
-    source_note = map_chr(data, "sourceNote") |> trimws() |> na_if_empty()
+    value = map_chr(data, "value"),
+    source_note = map_chr(data, "sourceNote")
   )
+  res <- clean_strings(res)
   as_tibble(res)
 }
 
@@ -196,8 +201,9 @@ wb_region <- function(region = NULL, lang = "en") {
     id = map_chr(data, "id") |> na_if_empty() |> as.integer(),
     code = map_chr(data, "code"),
     iso2code = map_chr(data, "iso2code"),
-    name = map_chr(data, "name") |> trimws() |> na_if_empty()
+    name = map_chr(data, "name")
   )
+  res <- clean_strings(res)
   as_tibble(res)
 }
 
@@ -246,29 +252,24 @@ wb_country <- function(country = NULL, lang = "en") {
   res <- data.frame(
     country_id = map_chr(data, "id"),
     country_code = map_chr(data, "iso2Code"),
-    country_name = map_chr(data, "name") |> na_if_empty(),
+    country_name = map_chr(data, "name"),
     region_id = map_chr(data, \(x) x$region$id),
     region_code = map_chr(data, \(x) x$region$iso2code),
-    region_value = map_chr(data, \(x) x$region$value) |>
-      trimws() |>
-      na_if_empty(),
-    admin_region_id = map_chr(data, \(x) x$adminregion$id) |> na_if_empty(),
-    admin_region_code = map_chr(data, \(x) x$adminregion$iso2code) |>
-      na_if_empty(),
-    admin_region_value = map_chr(data, \(x) x$adminregion$value) |>
-      na_if_empty(),
+    region_value = map_chr(data, \(x) x$region$value),
+    admin_region_id = map_chr(data, \(x) x$adminregion$id),
+    admin_region_code = map_chr(data, \(x) x$adminregion$iso2code),
+    admin_region_value = map_chr(data, \(x) x$adminregion$value),
     income_level_id = map_chr(data, \(x) x$incomeLevel$id),
     income_level_code = map_chr(data, \(x) x$incomeLevel$iso2code),
     income_level_value = map_chr(data, \(x) x$incomeLevel$value),
-    lending_type_id = map_chr(data, \(x) x$lendingType$id) |> na_if_empty(),
-    lending_type_code = map_chr(data, \(x) x$lendingType$iso2code) |>
-      na_if_empty(),
-    lending_type_value = map_chr(data, \(x) x$lendingType$value) |>
-      na_if_empty(),
-    capital_city = map_chr(data, "capitalCity") |> na_if_empty(),
+    lending_type_id = map_chr(data, \(x) x$lendingType$id),
+    lending_type_code = map_chr(data, \(x) x$lendingType$iso2code),
+    lending_type_value = map_chr(data, \(x) x$lendingType$value),
+    capital_city = map_chr(data, "capitalCity"),
     longitude = map_chr(data, "longitude") |> na_if_empty() |> as.numeric(),
     latitude = map_chr(data, "latitude") |> na_if_empty() |> as.numeric()
   )
+  res <- clean_strings(res)
   as_tibble(res)
 }
 
@@ -304,12 +305,12 @@ wb_indicator <- function(indicator = NULL, lang = "en") {
   data <- worldbank(resource, lang = lang)
   res <- data.frame(
     id = map_chr(data, "id"),
-    name = map_chr(data, "name") |> trimws(),
-    unit = map_chr(data, "unit") |> na_if_empty(),
+    name = map_chr(data, "name"),
+    unit = map_chr(data, "unit"),
     source_id = map_chr(data, \(x) x$source$id),
-    source_value = map_chr(data, \(x) x$source$value) |> trimws(),
-    source_note = map_chr(data, "sourceNote") |> trimws() |> na_if_empty(),
-    source_organization = map_chr(data, "sourceOrganization") |> na_if_empty(),
+    source_value = map_chr(data, \(x) x$source$value),
+    source_note = map_chr(data, "sourceNote"),
+    source_organization = map_chr(data, "sourceOrganization"),
     topic_id = map_chr(data, \(x) {
       if (length(x$topics) > 0L && length(x$topics[[1L]]) > 0L) {
         x$topics[[1L]]$id
@@ -323,15 +324,15 @@ wb_indicator <- function(indicator = NULL, lang = "en") {
       } else {
         NA_character_
       }
-    }) |>
-      trimws()
+    })
   )
+  res <- clean_strings(res)
   as_tibble(res)
 }
 
 #' World Bank country indicator data
-#' @description
 #'
+#' @description
 #' List all country indicators supported by the World Bank API.
 #'
 #' @param indicator `character(1)` indicator to query.
@@ -403,9 +404,7 @@ wb_country_indicator <- function(indicator = "NY.GDP.MKTP.CD",
   })
   res <- do.call(rbind, res)
   res$date <- as.integer(res$date)
-  res$country_name <- na_if_empty(res$country_name)
-  res$unit <- na_if_empty(res$unit)
-  res$obs_status <- na_if_empty(res$obs_status)
+  res <- clean_strings(res)
   as_tibble(res)
 }
 
