@@ -19,7 +19,7 @@ wb_country_indicator(
 \item{indicator}{\code{character(1)} indicator to query.}
 
 \item{country}{\code{character()} country to query. Default \code{NULL}.
-If \code{NULL}, all countries are returned}
+If \code{NULL}, all countries are returned.}
 
 \item{lang}{\code{character(1)} language to query. Default \code{"en"}.}
 
