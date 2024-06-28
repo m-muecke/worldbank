@@ -1,3 +1,88 @@
+has_ws <- function(x) {
+  any(!is.na(x) & (startsWith(x, " ") | endsWith(x, " ")))
+}
+
+test_that("wb_language", {
+  local_mocked_bindings(
+    worldbank = function(...) readRDS(test_path("fixtures", "wb-language.rds"))
+  )
+  actual <- wb_language()
+  expect_s3_class(actual, "data.frame")
+  expect_identical(dim(actual), c(23L, 3L))
+  expect_true(all(map_lgl(actual, is.character)))
+  expect_true(all(map_lgl(actual, \(x) all(nzchar(x)))))
+  expect_false(any(map_lgl(actual, has_ws)))
+})
+
+test_that("wb_lending_type", {
+  local_mocked_bindings(
+    worldbank = function(...) readRDS(test_path("fixtures", "wb-lending-type.rds"))
+  )
+  actual <- wb_lending_type()
+  expect_s3_class(actual, "data.frame")
+  expect_identical(dim(actual), c(4L, 3L))
+  expect_true(all(map_lgl(actual, is.character)))
+  expect_true(all(map_lgl(actual, \(x) all(nzchar(x)))))
+  expect_false(any(map_lgl(actual, has_ws)))
+})
+
+test_that("wb_income_level", {
+  local_mocked_bindings(
+    worldbank = function(...) readRDS(test_path("fixtures", "wb-income-level.rds"))
+  )
+  actual <- wb_income_level()
+  expect_s3_class(actual, "data.frame")
+  expect_identical(dim(actual), c(7L, 3L))
+  expect_true(all(map_lgl(actual, is.character)))
+  expect_true(all(map_lgl(actual, \(x) all(nzchar(x)))))
+  expect_false(any(map_lgl(actual, has_ws)))
+})
+
+test_that("wb_source", {
+  local_mocked_bindings(
+    worldbank = function(...) readRDS(test_path("fixtures", "wb-source.rds"))
+  )
+  actual <- wb_source()
+  expect_s3_class(actual, "data.frame")
+  expect_identical(dim(actual), c(69L, 9L))
+  for (x in actual) {
+    if (is.character(x)) {
+      expect_true(all(nzchar(x)))
+      expect_false(has_ws(x))
+    }
+  }
+})
+
+test_that("wb_topic", {
+  local_mocked_bindings(
+    worldbank = function(...) readRDS(test_path("fixtures", "wb-topic.rds"))
+  )
+  actual <- wb_topic()
+  expect_s3_class(actual, "data.frame")
+  expect_identical(dim(actual), c(21L, 3L))
+  for (x in actual) {
+    if (is.character(x)) {
+      expect_true(all(nzchar(x)))
+      expect_false(has_ws(x))
+    }
+  }
+})
+
+test_that("wb_region", {
+  local_mocked_bindings(
+    worldbank = function(...) readRDS(test_path("fixtures", "wb-region.rds"))
+  )
+  actual <- wb_region()
+  expect_s3_class(actual, "data.frame")
+  expect_identical(dim(actual), c(44L, 4L))
+  for (x in actual) {
+    if (is.character(x)) {
+      expect_true(all(nzchar(x)))
+      expect_false(has_ws(x))
+    }
+  }
+})
+
 test_that("wb_lending_type input validation works", {
   # type should be a three letter code or NULL
   expect_error(wb_lending_type(character()))

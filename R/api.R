@@ -112,7 +112,7 @@ wb_source <- function(source = NULL, lang = "en") {
   res <- data.frame(
     id = map_chr(data, "id") |> as.integer(),
     last_updated = map_chr(data, "lastupdated") |> as.Date(),
-    name = map_chr(data, "name") |> na_if_empty(),
+    name = map_chr(data, "name") |> trimws() |> na_if_empty(),
     code = map_chr(data, "code"),
     description = map_chr(data, "description") |> na_if_empty(),
     url = map_chr(data, "url") |> na_if_empty(),

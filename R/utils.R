@@ -43,6 +43,10 @@ map_chr <- function(.x, .f, ...) {
   map_mold(.x, .f, NA_character_, ...)
 }
 
+map_lgl <- function(.x, .f, ...) {
+  map_mold(.x, .f, NA, ...)
+}
+
 format_param <- function(x) {
   x <- x %||% "all"
   if (length(x) > 1L) {
