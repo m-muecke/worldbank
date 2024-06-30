@@ -128,8 +128,7 @@ wb_source <- function(source = NULL, lang = "en") {
     description = map_chr(data, "description"),
     url = map_chr(data, "url"),
     data_availability = map_chr(data, "dataavailability") |> to_logical(),
-    metadata_availability = map_chr(data, "metadataavailability") |>
-      to_logical(),
+    metadata_availability = map_chr(data, "metadataavailability") |> to_logical(),
     concepts = map_chr(data, "concepts") |> as.integer()
   )
   res <- clean_strings(res)
