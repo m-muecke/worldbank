@@ -26,7 +26,5 @@ A \code{data.frame()} with the available regions. The columns are:
 List all regions supported by the World Bank API.
 }
 \examples{
-\donttest{
 wb_region()
-}
 }

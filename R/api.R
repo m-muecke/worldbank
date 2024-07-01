@@ -10,9 +10,7 @@
 #' @source <http://api.worldbank.org/v2/languages>
 #' @export
 #' @examples
-#' \donttest{
 #' wb_language()
-#' }
 wb_language <- function() {
   data <- worldbank("languages")
   res <- data.frame(
@@ -39,9 +37,7 @@ wb_language <- function() {
 #' @source <http://api.worldbank.org/v2/lendingTypes>
 #' @export
 #' @examples
-#' \donttest{
 #' wb_lending_type()
-#' }
 wb_lending_type <- function(type = NULL, lang = "en") {
   stopifnot(is_character_or_null(type), nchar(type) == 3L)
   type <- format_param(type)
@@ -72,9 +68,7 @@ wb_lending_type <- function(type = NULL, lang = "en") {
 #' @source <http://api.worldbank.org/v2/incomeLevels>
 #' @export
 #' @examples
-#' \donttest{
 #' wb_income_level()
-#' }
 wb_income_level <- function(income = NULL, lang = "en") {
   stopifnot(is_character_or_null(income), nchar(income) == 3L)
   income <- format_param(income)
@@ -111,9 +105,7 @@ wb_income_level <- function(income = NULL, lang = "en") {
 #' @source <http://api.worldbank.org/v2/sources>
 #' @export
 #' @examples
-#' \donttest{
 #' wb_source()
-#' }
 wb_source <- function(source = NULL, lang = "en") {
   stopifnot(is_character_or_null(source))
   source <- format_param(source)
@@ -150,9 +142,7 @@ wb_source <- function(source = NULL, lang = "en") {
 #' @source <http://api.worldbank.org/v2/topics>
 #' @export
 #' @examples
-#' \donttest{
 #' wb_topic()
-#' }
 wb_topic <- function(topic = NULL, lang = "en") {
   stopifnot(is_character_or_null(topic))
   topic <- format_param(topic)
@@ -184,9 +174,7 @@ wb_topic <- function(topic = NULL, lang = "en") {
 #' @source <http://api.worldbank.org/v2/region>
 #' @export
 #' @examples
-#' \donttest{
 #' wb_region()
-#' }
 wb_region <- function(region = NULL, lang = "en") {
   stopifnot(
     is_character_or_null(region),
@@ -236,9 +224,7 @@ wb_region <- function(region = NULL, lang = "en") {
 #' @source <http://api.worldbank.org/v2/country>
 #' @export
 #' @examples
-#' \donttest{
 #' wb_country()
-#' }
 wb_country <- function(country = NULL, lang = "en") {
   stopifnot(
     is_character_or_null(country), nchar(country) %in% 2:3,
@@ -293,9 +279,7 @@ wb_country <- function(country = NULL, lang = "en") {
 #' @source <http://api.worldbank.org/v2/indicator>
 #' @export
 #' @examples
-#' \donttest{
 #' wb_indicator("NY.GDP.MKTP.CD")
-#' }
 wb_indicator <- function(indicator = NULL, lang = "en") {
   stopifnot(is_string_or_null(indicator))
   indicator <- indicator %||% "all"
@@ -355,9 +339,7 @@ wb_indicator <- function(indicator = NULL, lang = "en") {
 #' @source <http://api.worldbank.org/v2/country/{country}/indicator/{indicator}>
 #' @export
 #' @examples
-#' \donttest{
 #' wb_country_indicator("NY.GDP.MKTP.CD", "US")
-#' }
 wb_country_indicator <- function(indicator = "NY.GDP.MKTP.CD",
                                  country = NULL,
                                  lang = "en",

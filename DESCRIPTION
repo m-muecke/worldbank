@@ -1,10 +1,14 @@
 Package: worldbank
-Title: Client for the World Bank API
+Title: Client for the 'World Bank Indicators API'
 Version: 0.1.0
 Authors@R:
     person("Maximilian", "Muecke", , "muecke.maximilian@gmail.com", role = c("aut", "cre"),
            comment = c(ORCID = "0009-0000-9432-9795"))
-Description: Download data from the 'World Bank API'.
+Description: Download and search data from the 'World Bank Indicators
+    API', which provides access to nearly 16,000 time series indicators.
+    See
+    <https://datahelpdesk.worldbank.org/knowledgebase/articles/889392-about-the-indicators-api-documentation>
+    for further details about the API.
 License: MIT + file LICENSE
 URL: https://m-muecke.github.io/worldbank/,
     https://github.com/m-muecke/worldbank
@@ -21,4 +25,4 @@ Suggests:
 Config/testthat/edition: 3
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
-RoxygenNote: 7.3.1
+RoxygenNote: 7.3.2
