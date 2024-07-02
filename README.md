@@ -8,6 +8,8 @@
 [![Lifecycle:
 experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
 [![R-CMD-check](https://github.com/m-muecke/worldbank/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/m-muecke/worldbank/actions/workflows/R-CMD-check.yaml)
+[![CRAN
+status](https://www.r-pkg.org/badges/version/worldbank)](https://CRAN.R-project.org/package=worldbank)
 <!-- badges: end -->
 
 ## Overview
@@ -127,15 +129,15 @@ ind
 # fetch indicator data for specific or all countries (default)
 gdp <- wb_country_indicator("NY.GDP.MKTP.CD", c("US", "DE", "FR", "CH", "JP"))
 gdp
-#> # A tibble: 295 × 10
+#> # A tibble: 320 × 10
 #>    date indicator_id indicator_name country_id country_name country_code   value
 #>   <int> <chr>        <chr>          <chr>      <chr>        <chr>          <dbl>
-#> 1  2022 NY.GDP.MKTP… GDP (current … CH         Switzerland  CHE          8.18e11
-#> 2  2021 NY.GDP.MKTP… GDP (current … CH         Switzerland  CHE          8.13e11
-#> 3  2020 NY.GDP.MKTP… GDP (current … CH         Switzerland  CHE          7.42e11
-#> 4  2019 NY.GDP.MKTP… GDP (current … CH         Switzerland  CHE          7.21e11
-#> 5  2018 NY.GDP.MKTP… GDP (current … CH         Switzerland  CHE          7.26e11
-#> # ℹ 290 more rows
+#> 1  2023 NY.GDP.MKTP… GDP (current … CH         Switzerland  CHE          8.85e11
+#> 2  2022 NY.GDP.MKTP… GDP (current … CH         Switzerland  CHE          8.18e11
+#> 3  2021 NY.GDP.MKTP… GDP (current … CH         Switzerland  CHE          8.13e11
+#> 4  2020 NY.GDP.MKTP… GDP (current … CH         Switzerland  CHE          7.42e11
+#> 5  2019 NY.GDP.MKTP… GDP (current … CH         Switzerland  CHE          7.21e11
+#> # ℹ 315 more rows
 #> # ℹ 3 more variables: unit <chr>, obs_status <chr>, decimal <int>
 ```
 
