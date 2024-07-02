@@ -159,15 +159,15 @@
 <span><span class="co"># fetch indicator data for specific or all countries (default)</span></span>
 <span><span class="va">gdp</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/wb_country_indicator.html">wb_country_indicator</a></span><span class="op">(</span><span class="st">"NY.GDP.MKTP.CD"</span>, <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"US"</span>, <span class="st">"DE"</span>, <span class="st">"FR"</span>, <span class="st">"CH"</span>, <span class="st">"JP"</span><span class="op">)</span><span class="op">)</span></span>
 <span><span class="va">gdp</span></span>
-<span><span class="co">#&gt; # A tibble: 295 × 10</span></span>
+<span><span class="co">#&gt; # A tibble: 320 × 10</span></span>
 <span><span class="co">#&gt;    date indicator_id indicator_name country_id country_name country_code   value</span></span>
 <span><span class="co">#&gt;   &lt;int&gt; &lt;chr&gt;        &lt;chr&gt;          &lt;chr&gt;      &lt;chr&gt;        &lt;chr&gt;          &lt;dbl&gt;</span></span>
-<span><span class="co">#&gt; 1  2022 NY.GDP.MKTP… GDP (current … CH         Switzerland  CHE          8.18e11</span></span>
-<span><span class="co">#&gt; 2  2021 NY.GDP.MKTP… GDP (current … CH         Switzerland  CHE          8.13e11</span></span>
-<span><span class="co">#&gt; 3  2020 NY.GDP.MKTP… GDP (current … CH         Switzerland  CHE          7.42e11</span></span>
-<span><span class="co">#&gt; 4  2019 NY.GDP.MKTP… GDP (current … CH         Switzerland  CHE          7.21e11</span></span>
-<span><span class="co">#&gt; 5  2018 NY.GDP.MKTP… GDP (current … CH         Switzerland  CHE          7.26e11</span></span>
-<span><span class="co">#&gt; # ℹ 290 more rows</span></span>
+<span><span class="co">#&gt; 1  2023 NY.GDP.MKTP… GDP (current … CH         Switzerland  CHE          8.85e11</span></span>
+<span><span class="co">#&gt; 2  2022 NY.GDP.MKTP… GDP (current … CH         Switzerland  CHE          8.18e11</span></span>
+<span><span class="co">#&gt; 3  2021 NY.GDP.MKTP… GDP (current … CH         Switzerland  CHE          8.13e11</span></span>
+<span><span class="co">#&gt; 4  2020 NY.GDP.MKTP… GDP (current … CH         Switzerland  CHE          7.42e11</span></span>
+<span><span class="co">#&gt; 5  2019 NY.GDP.MKTP… GDP (current … CH         Switzerland  CHE          7.21e11</span></span>
+<span><span class="co">#&gt; # ℹ 315 more rows</span></span>
 <span><span class="co">#&gt; # ℹ 3 more variables: unit &lt;chr&gt;, obs_status &lt;chr&gt;, decimal &lt;int&gt;</span></span></code></pre></div>
 <p><img src="reference/figures/README-plotting-1.png" width="100%"></p>
 </div>
@@ -218,6 +218,7 @@
 <ul class="list-unstyled">
 <li><a href="https://lifecycle.r-lib.org/articles/stages.html#experimental" class="external-link"><img src="https://img.shields.io/badge/lifecycle-experimental-orange.svg" alt="Lifecycle: experimental"></a></li>
 <li><a href="https://github.com/m-muecke/worldbank/actions/workflows/R-CMD-check.yaml" class="external-link"><img src="https://github.com/m-muecke/worldbank/actions/workflows/R-CMD-check.yaml/badge.svg" alt="R-CMD-check"></a></li>
+<li><a href="https://CRAN.R-project.org/package=worldbank" class="external-link"><img src="https://www.r-pkg.org/badges/version/worldbank" alt="CRAN status"></a></li>
 </ul>
 </div>
 
