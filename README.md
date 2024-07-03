@@ -15,17 +15,17 @@ status](https://www.r-pkg.org/badges/version/worldbank)](https://CRAN.R-project.
 ## Overview
 
 The goal of worldbank is to provide a simple interface to the [World
-Bank API
+Bank Indicators API
 v2](https://datahelpdesk.worldbank.org/knowledgebase/articles/889392-about-the-indicators-api-documentation).
 The main difference to other packages is that it’s a modern
-implementation using the [httr2](https://httr2.r-lib.org) package
-without any other dependencies.
+implementation using the [httr2](https://httr2.r-lib.org) package and
+supports all available endpoints and parameters.
 
 The `worldbank` package provides a set of functions to interact with
-various endpoints of the World Bank API. Each function is designed to
-retrieve specific types of data, making it easier to access and analyze
-World Bank datasets. Below is an overview of the available endpoints and
-their corresponding functions in the package:
+various endpoints of the World Bank Indicators API. Each function is
+designed to retrieve specific types of data, making it easier to access
+and analyze World Bank datasets. Below is an overview of the available
+endpoints and their corresponding functions in the package:
 
 - **Languages** (`wb_language`): Retrieves a list of all languages
   supported by the World Bank API. Useful for obtaining
