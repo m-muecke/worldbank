@@ -2,3 +2,4 @@ url: https://m-muecke.github.io/worldbank
 
 template:
   bootstrap: 5
+  light-switch: true
