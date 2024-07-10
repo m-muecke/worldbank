@@ -322,8 +322,13 @@ wb_indicator <- function(indicator = NULL, lang = "en") {
 #' @param country `character()` country to query. Default `NULL`.
 #'   If `NULL`, all countries are returned.
 #' @param lang `character(1)` language to query. Default `"en"`.
-#' @param start_year `integer(1)` start year to query. Default `NULL`.
-#' @param end_year `integer(1)` end year to query. Default `NULL`.
+#' @param start_date `character(1)` or `integer(1)` start date to query. Default `NULL`.
+#'   Supported formats:
+#'   * YYYY for yearly data (e.g. `2020` or `"2020"`)
+#'   * YYYYQ\[1-4\] for quarterly data (e.g. "2020Q1")
+#'   * YYYYM\[1-12\] for monthly data (e.g. `"2020M02"`)
+#' @param end_date `character(1)` or `integer(1)` end date to query, in the same format
+#'   as start_date. Default `NULL`.
 #' @returns A `data.frame()` with the available country indicators.
 #'   The columns are:
 #'   \item{date}{The date}
@@ -340,29 +345,29 @@ wb_indicator <- function(indicator = NULL, lang = "en") {
 #' @export
 #' @examples
 #' wb_country_indicator("NY.GDP.MKTP.CD", "US")
+#' wb_country_indicator(
+#'   "DPANUSSPB", c("CHN", "BRA"),
+#'   start_date = "2012M01", end_date = "2012M08"
+#' )
 wb_country_indicator <- function(indicator = "NY.GDP.MKTP.CD",
                                  country = NULL,
                                  lang = "en",
-                                 start_year = NULL,
-                                 end_year = NULL) {
+                                 start_date = NULL,
+                                 end_date = NULL) {
   stopifnot(
     is_string(indicator),
-    is_character_or_null(country), nchar(country) %in% 2:3
+    is_character_or_null(country), nchar(country) %in% 2:3,
+    is_valid_date(start_date),
+    is_valid_date(end_date)
   )
-  has_start_year <- !is.null(start_year)
-  has_end_year <- !is.null(end_year)
-  if (has_start_year) {
-    stopifnot(is_count(start_year))
-  }
-  if (has_end_year) {
-    stopifnot(is_count(end_year))
-  }
-  if (has_start_year && has_end_year) {
-    stopifnot(start_year <= end_year)
+  has_start_date <- !is.null(start_date)
+  has_end_date <- !is.null(end_date)
+  if (has_start_date && has_end_date) {
+    stopifnot(start_date <= end_date)
   }
   indicator <- toupper(indicator)
   country <- tolower(format_param(country))
-  date <- format_date(start_year, end_year)
+  date <- format_date(start_date, end_date)
 
   resource <- sprintf("country/%s/indicator/%s", country, indicator)
   data <- worldbank(resource, lang = lang, date = date)
@@ -384,8 +389,12 @@ wb_country_indicator <- function(indicator = "NY.GDP.MKTP.CD",
     )
   })
   res <- do.call(rbind, res)
-  res$date <- as.integer(res$date)
-  res <- clean_strings(res)
+  if (nrow(res) > 0L) {
+    if (nchar(res[1L, "date"]) == 4L) {
+      res$date <- as.integer(res$date)
+    }
+    res <- clean_strings(res)
+  }
   as_tibble(res)
 }
 

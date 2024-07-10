@@ -78,3 +78,18 @@ format_date <- function(start_date, end_date) {
     NULL
   }
 }
+
+is_valid_date <- function(x) {
+  if (is.null(x)) {
+    return(TRUE)
+  }
+  if (length(x) > 1L) {
+    return(FALSE)
+  }
+  x <- as.character(x)
+  if (grepl("^\\d{4}(M(0[1-9]|1[0-2])|Q[1-4])?$", x)) {
+    TRUE
+  } else {
+    FALSE
+  }
+}
