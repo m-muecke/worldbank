@@ -142,7 +142,9 @@ gdp
 
 ## Related work
 
-- [wbstats](https://github.com/gshs-ornl/wbstats): An R package for
+- [wbstats](https://github.com/gshs-ornl/wbstats): R package for
   searching and downloading data from the World Bank API
 - [WDI](https://github.com/vincentarelbundock/WDI): R package to
   download World Bank data
+- [pipr](https://github.com/worldbank/pipr): R client for the PIP
+  Worldbank API
