@@ -43,7 +43,14 @@ Below is an overview of the available endpoints and their corresponding function
 - **Indicators** (`wb_indicator`): This endpoint gives users access to a wide array of indicators used by the World Bank in its data analysis and reports.
 
 ## Installation
-You can install the development version of worldbank from [GitHub](https://github.com/) with:
+
+You can install the released version of **worldbank** from [CRAN](https://CRAN.R-project.org) with:
+
+```{r, eval = FALSE}
+install.packages("wordbank")
+```
+
+And the development version from [GitHub](https://github.com/) with:
 
 ```{r, eval = FALSE}
 # install.packages("pak")

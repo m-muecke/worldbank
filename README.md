@@ -53,8 +53,14 @@ endpoints and their corresponding functions in the package:
 
 ## Installation
 
-You can install the development version of worldbank from
-[GitHub](https://github.com/) with:
+You can install the released version of **worldbank** from
+[CRAN](https://CRAN.R-project.org) with:
+
+``` r
+install.packages("wordbank")
+```
+
+And the development version from [GitHub](https://github.com/) with:
 
 ``` r
 # install.packages("pak")
@@ -82,9 +88,6 @@ wb_country(c("US", "DE"))
 #> #   income_level_value <chr>, lending_type_id <chr>, lending_type_code <chr>,
 #> #   lending_type_value <chr>, capital_city <chr>, longitude <dbl>,
 #> #   latitude <dbl>
-```
-
-``` r
 
 # or fetch all (default)
 wb_country()
@@ -102,9 +105,6 @@ wb_country()
 #> #   income_level_value <chr>, lending_type_id <chr>, lending_type_code <chr>,
 #> #   lending_type_value <chr>, capital_city <chr>, longitude <dbl>,
 #> #   latitude <dbl>
-```
-
-``` r
 
 # search for specific indicator
 ind <- wb_indicator()
@@ -122,9 +122,6 @@ ind
 #> 5 NY.GDP.DEF… Infl… <NA>  2         World Devel… Inflation … World Bank nationa…
 #> # ℹ 30 more rows
 #> # ℹ 2 more variables: topic_id <chr>, topic_value <chr>
-```
-
-``` r
 
 # fetch indicator data for specific or all countries (default)
 gdp <- wb_country_indicator("NY.GDP.MKTP.CD", c("US", "DE", "FR", "CH", "JP"))
