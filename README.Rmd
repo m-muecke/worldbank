@@ -47,7 +47,7 @@ Below is an overview of the available endpoints and their corresponding function
 You can install the released version of **worldbank** from [CRAN](https://CRAN.R-project.org) with:
 
 ```{r, eval = FALSE}
-install.packages("wordbank")
+install.packages("worldbank")
 ```
 
 And the development version from [GitHub](https://github.com/) with:

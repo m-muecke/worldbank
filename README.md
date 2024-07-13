@@ -57,7 +57,7 @@ You can install the released version of **worldbank** from
 [CRAN](https://CRAN.R-project.org) with:
 
 ``` r
-install.packages("wordbank")
+install.packages("worldbank")
 ```
 
 And the development version from [GitHub](https://github.com/) with:
