@@ -2,7 +2,7 @@ Package: worldbank
 Title: Client for the 'World Bank Indicators API'
 Version: 0.1.0.9000
 Authors@R:
-    person("Maximilian", "Muecke", , "muecke.maximilian@gmail.com", role = c("aut", "cre"),
+    person("Maximilian", "Mücke", , "muecke.maximilian@gmail.com", role = c("aut", "cre"),
            comment = c(ORCID = "0009-0000-9432-9795"))
 Description: Download and search data from the 'World Bank Indicators
     API', which provides access to nearly 16,000 time series indicators.
