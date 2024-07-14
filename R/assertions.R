@@ -18,3 +18,18 @@ is_count <- function(x) {
   is.numeric(x) && length(x) == 1L && !is.na(x) &&
     as.integer(x) == x && x > 0L
 }
+
+is_valid_date <- function(x) {
+  if (is.null(x)) {
+    return(TRUE)
+  }
+  if (length(x) != 1L) {
+    return(FALSE)
+  }
+  x <- as.character(x)
+  if (grepl("^\\d{4}(M(0[1-9]|1[0-2])|Q[1-4])?$", x)) {
+    TRUE
+  } else {
+    FALSE
+  }
+}
