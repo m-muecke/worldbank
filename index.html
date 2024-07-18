@@ -136,7 +136,8 @@
 <span><span class="co"># search for specific indicator</span></span>
 <span><span class="va">ind</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/wb_indicator.html">wb_indicator</a></span><span class="op">(</span><span class="op">)</span></span>
 <span><span class="va">ind</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/subset.html" class="external-link">subset</a></span><span class="op">(</span></span>
-<span>  <span class="va">ind</span>, <span class="fu"><a href="https://rdrr.io/r/base/grep.html" class="external-link">grepl</a></span><span class="op">(</span><span class="st">"GDP"</span>, <span class="va">id</span>, fixed <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span> <span class="op">&amp;</span> <span class="va">source_value</span> <span class="op">==</span> <span class="st">"World Development Indicators"</span></span>
+<span>  <span class="va">ind</span>,</span>
+<span>  <span class="fu"><a href="https://rdrr.io/r/base/grep.html" class="external-link">grepl</a></span><span class="op">(</span><span class="st">"GDP"</span>, <span class="va">id</span>, fixed <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span> <span class="op">&amp;</span> <span class="va">source_value</span> <span class="op">==</span> <span class="st">"World Development Indicators"</span></span>
 <span><span class="op">)</span></span>
 <span><span class="va">ind</span></span>
 <span><span class="co">#&gt; # A tibble: 35 × 9</span></span>
