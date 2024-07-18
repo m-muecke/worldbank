@@ -109,7 +109,8 @@ wb_country()
 # search for specific indicator
 ind <- wb_indicator()
 ind <- subset(
-  ind, grepl("GDP", id, fixed = TRUE) & source_value == "World Development Indicators"
+  ind,
+  grepl("GDP", id, fixed = TRUE) & source_value == "World Development Indicators"
 )
 ind
 #> # A tibble: 35 × 9
