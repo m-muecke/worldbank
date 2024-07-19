@@ -85,10 +85,20 @@ If <code>NULL</code>, all regions are returned</p></dd>
     <div class="section level2">
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
     <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="fu">wb_region</span><span class="op">(</span><span class="op">)</span></span></span>
-<span class="r-err co"><span class="r-pr">#&gt;</span> <span class="error">Error in req_perform(req_error(req_url_query(req_url_path_append(req_user_agent(request("http://api.worldbank.org/v2"),     "worldbank (https://m-muecke.github.io/worldbank)"), lang,     resource), ..., format = "json", per_page = per_page), is_error = is_wb_error,     body = wb_error_body)):</span> Failed to parse error body with method defined in `req_error()`.</span>
-<span class="r-err co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">Caused by error in `resp_body_json()`:</span></span>
-<span class="r-err co"><span class="r-pr">#&gt;</span> <span style="color: #BBBB00;">!</span> Unexpected content type "text/html".</span>
-<span class="r-err co"><span class="r-pr">#&gt;</span> <span style="color: #00BBBB;">•</span> Expecting type "application/json" or suffix "json".</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># A tibble: 44 × 4</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>       id code  iso2code name                                                </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>    <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>                                               </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 1</span>    <span style="color: #BB0000;">NA</span> AFE   ZH       Africa Eastern and Southern                         </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 2</span>    <span style="color: #BB0000;">NA</span> AFR   A9       Africa                                              </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 3</span>    <span style="color: #BB0000;">NA</span> AFW   ZI       Africa Western and Central                          </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 4</span>    <span style="color: #BB0000;">NA</span> ARB   1A       Arab World                                          </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 5</span>    <span style="color: #BB0000;">NA</span> CAA   C9       Sub-Saharan Africa (IFC classification)             </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 6</span>    <span style="color: #BB0000;">NA</span> CEA   C4       East Asia and the Pacific (IFC classification)      </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 7</span>    <span style="color: #BB0000;">NA</span> CEB   B8       Central Europe and the Baltics                      </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 8</span>    <span style="color: #BB0000;">NA</span> CEU   C5       Europe and Central Asia (IFC classification)        </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 9</span>    <span style="color: #BB0000;">NA</span> CLA   C6       Latin America and the Caribbean (IFC classification)</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">10</span>    <span style="color: #BB0000;">NA</span> CME   C7       Middle East and North Africa (IFC classification)   </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># ℹ 34 more rows</span></span>
 </code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc" aria-label="Table of contents"><h2>On this page</h2>

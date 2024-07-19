@@ -100,10 +100,11 @@ If <code>NULL</code>, all indicators are returned.</p></dd>
     <div class="section level2">
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
     <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="fu">wb_indicator</span><span class="op">(</span><span class="st">"NY.GDP.MKTP.CD"</span><span class="op">)</span></span></span>
-<span class="r-err co"><span class="r-pr">#&gt;</span> <span class="error">Error in req_perform(req_error(req_url_query(req_url_path_append(req_user_agent(request("http://api.worldbank.org/v2"),     "worldbank (https://m-muecke.github.io/worldbank)"), lang,     resource), ..., format = "json", per_page = per_page), is_error = is_wb_error,     body = wb_error_body)):</span> Failed to parse error body with method defined in `req_error()`.</span>
-<span class="r-err co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">Caused by error in `resp_body_json()`:</span></span>
-<span class="r-err co"><span class="r-pr">#&gt;</span> <span style="color: #BBBB00;">!</span> Unexpected content type "text/html".</span>
-<span class="r-err co"><span class="r-pr">#&gt;</span> <span style="color: #00BBBB;">•</span> Expecting type "application/json" or suffix "json".</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># A tibble: 1 × 9</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   id          name  unit  source_id source_value source_note source_organization</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>       <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>     <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>        <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>       <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>              </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">1</span> NY.GDP.MKT… GDP … <span style="color: #BB0000;">NA</span>    2         World Devel… GDP at pur… World Bank nationa…</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># ℹ 2 more variables: topic_id &lt;chr&gt;, topic_value &lt;chr&gt;</span></span>
 </code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc" aria-label="Table of contents"><h2>On this page</h2>
