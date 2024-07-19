@@ -100,21 +100,10 @@ If <code>NULL</code>, all sources are returned.</p></dd>
     <div class="section level2">
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
     <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="fu">wb_source</span><span class="op">(</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># A tibble: 69 × 9</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>       id last_updated name             code  description url   data_availability</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> <span style="color: #949494; font-style: italic;">&lt;date&gt;</span>       <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>            <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>       <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> <span style="color: #949494; font-style: italic;">&lt;lgl&gt;</span>            </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 1</span>     1 2021-08-18   Doing Business   DBS   <span style="color: #BB0000;">NA</span>          <span style="color: #BB0000;">NA</span>    TRUE             </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 2</span>     2 2024-06-28   World Developme… WDI   <span style="color: #BB0000;">NA</span>          <span style="color: #BB0000;">NA</span>    TRUE             </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 3</span>     3 2023-09-29   Worldwide Gover… WGI   <span style="color: #BB0000;">NA</span>          <span style="color: #BB0000;">NA</span>    TRUE             </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 4</span>     5 2016-03-21   Subnational Mal… SNM   <span style="color: #BB0000;">NA</span>          <span style="color: #BB0000;">NA</span>    TRUE             </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 5</span>     6 2024-02-29   International D… IDS   <span style="color: #BB0000;">NA</span>          <span style="color: #BB0000;">NA</span>    TRUE             </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 6</span>    11 2013-02-22   Africa Developm… ADI   <span style="color: #BB0000;">NA</span>          <span style="color: #BB0000;">NA</span>    TRUE             </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 7</span>    12 2024-06-25   Education Stati… EDS   <span style="color: #BB0000;">NA</span>          <span style="color: #BB0000;">NA</span>    TRUE             </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 8</span>    13 2022-03-25   Enterprise Surv… ESY   <span style="color: #BB0000;">NA</span>          <span style="color: #BB0000;">NA</span>    TRUE             </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 9</span>    14 2024-07-01   Gender Statisti… GDS   <span style="color: #BB0000;">NA</span>          <span style="color: #BB0000;">NA</span>    TRUE             </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">10</span>    15 2024-07-10   Global Economic… GEM   <span style="color: #BB0000;">NA</span>          <span style="color: #BB0000;">NA</span>    TRUE             </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># ℹ 59 more rows</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># ℹ 2 more variables: metadata_availability &lt;lgl&gt;, concepts &lt;int&gt;</span></span>
+<span class="r-err co"><span class="r-pr">#&gt;</span> <span class="error">Error in req_perform(req_error(req_url_query(req_url_path_append(req_user_agent(request("http://api.worldbank.org/v2"),     "worldbank (https://m-muecke.github.io/worldbank)"), lang,     resource), ..., format = "json", per_page = per_page), is_error = is_wb_error,     body = wb_error_body)):</span> Failed to parse error body with method defined in `req_error()`.</span>
+<span class="r-err co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">Caused by error in `resp_body_json()`:</span></span>
+<span class="r-err co"><span class="r-pr">#&gt;</span> <span style="color: #BBBB00;">!</span> Unexpected content type "text/html".</span>
+<span class="r-err co"><span class="r-pr">#&gt;</span> <span style="color: #00BBBB;">•</span> Expecting type "application/json" or suffix "json".</span>
 </code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc" aria-label="Table of contents"><h2>On this page</h2>
