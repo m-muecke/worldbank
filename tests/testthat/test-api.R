@@ -261,3 +261,9 @@ test_that("wb_country_indicator input validation works", {
   expect_error(wb_country_indicaotr(lang = TRUE))
   expect_error(wb_country_indicaotr(lang = 1L))
 })
+
+test_that("error parsing works", {
+  skip_on_cran()
+  skip_on_ci()
+  expect_snapshot(wb_indicator("something.wrong"), error = TRUE)
+})
