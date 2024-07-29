@@ -411,7 +411,7 @@ is_wb_error <- function(resp) {
 }
 
 wb_error_body <- function(resp) {
-  content_type <- httr2::resp_content_type(resp)
+  content_type <- resp_content_type(resp)
   if (identical(content_type, "application/json")) {
     body <- resp_body_json(resp)
     msg <- body[[1L]]$message[[1L]]
