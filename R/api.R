@@ -16,7 +16,8 @@ wb_language <- function() {
   res <- data.frame(
     code = map_chr(data, "code"),
     name = map_chr(data, "name"),
-    native_form = map_chr(data, "nativeForm")
+    native_form = map_chr(data, "nativeForm"),
+    check.names = FALSE
   )
   res <- clean_strings(res)
   as_tibble(res)
@@ -47,7 +48,8 @@ wb_lending_type <- function(type = NULL, lang = "en") {
   res <- data.frame(
     id = map_chr(data, "id"),
     iso2code = map_chr(data, "iso2code"),
-    value = map_chr(data, "value")
+    value = map_chr(data, "value"),
+    check.names = FALSE
   )
   res <- clean_strings(res)
   as_tibble(res)
@@ -78,7 +80,8 @@ wb_income_level <- function(income = NULL, lang = "en") {
   res <- data.frame(
     id = map_chr(data, "id"),
     iso2code = map_chr(data, "iso2code"),
-    value = map_chr(data, "value")
+    value = map_chr(data, "value"),
+    check.names = FALSE
   )
   res <- clean_strings(res)
   as_tibble(res)
@@ -121,7 +124,8 @@ wb_source <- function(source = NULL, lang = "en") {
     url = map_chr(data, "url"),
     data_availability = map_chr(data, "dataavailability") |> to_logical(),
     metadata_availability = map_chr(data, "metadataavailability") |> to_logical(),
-    concepts = map_chr(data, "concepts") |> as.integer()
+    concepts = map_chr(data, "concepts") |> as.integer(),
+    check.names = FALSE
   )
   res <- clean_strings(res)
   as_tibble(res)
@@ -152,7 +156,8 @@ wb_topic <- function(topic = NULL, lang = "en") {
   res <- data.frame(
     id = map_chr(data, "id") |> as.integer(),
     value = map_chr(data, "value"),
-    source_note = map_chr(data, "sourceNote")
+    source_note = map_chr(data, "sourceNote"),
+    check.names = FALSE
   )
   res <- clean_strings(res)
   as_tibble(res)
@@ -188,7 +193,8 @@ wb_region <- function(region = NULL, lang = "en") {
     id = map_chr(data, "id") |> na_if_empty() |> as.integer(),
     code = map_chr(data, "code"),
     iso2code = map_chr(data, "iso2code"),
-    name = map_chr(data, "name")
+    name = map_chr(data, "name"),
+    check.names = FALSE
   )
   res <- clean_strings(res)
   as_tibble(res)
@@ -252,7 +258,8 @@ wb_country <- function(country = NULL, lang = "en") {
     lending_type_value = map_chr(data, \(x) x$lendingType$value),
     capital_city = map_chr(data, "capitalCity"),
     longitude = map_chr(data, "longitude") |> na_if_empty() |> as.numeric(),
-    latitude = map_chr(data, "latitude") |> na_if_empty() |> as.numeric()
+    latitude = map_chr(data, "latitude") |> na_if_empty() |> as.numeric(),
+    check.names = FALSE
   )
   res <- clean_strings(res)
   as_tibble(res)
@@ -307,7 +314,8 @@ wb_indicator <- function(indicator = NULL, lang = "en") {
       } else {
         NA_character_
       }
-    })
+    }),
+    check.names = FALSE
   )
   res <- clean_strings(res)
   as_tibble(res)
@@ -385,7 +393,8 @@ wb_country_indicator <- function(indicator = "NY.GDP.MKTP.CD",
       value = x$value,
       unit = x$unit,
       obs_status = x$obs_status,
-      decimal = x$decimal
+      decimal = x$decimal,
+      check.names = FALSE
     )
   })
   res <- do.call(rbind, res)

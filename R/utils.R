@@ -12,12 +12,7 @@ as_tibble <- function(x) {
 }
 
 clean_strings <- function(data) {
-  for (i in seq_along(data)) {
-    x <- data[[i]]
-    if (is.character(x)) {
-      data[[i]] <- trimws(x) |> na_if_empty()
-    }
-  }
+  data[] <- lapply(data, \(x) if (is.character(x)) na_if_empty(trimws(x)) else x)
   data
 }
 
