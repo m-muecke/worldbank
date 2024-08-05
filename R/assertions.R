@@ -1,3 +1,7 @@
+is_bool <- function(x) {
+  is.logical(x) && length(x) == 1L
+}
+
 is_character <- function(x) {
   is.character(x) && !anyNA(x) && length(x) > 0L
 }

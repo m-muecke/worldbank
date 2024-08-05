@@ -263,6 +263,7 @@ test_that("wb_country_indicator input validation works", {
 })
 
 test_that("error parsing works", {
+  skip_if_offline()
   skip_on_cran()
   skip_on_ci()
   expect_snapshot(wb_indicator("something.wrong"), error = TRUE)
