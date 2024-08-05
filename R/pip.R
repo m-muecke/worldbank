@@ -93,6 +93,8 @@ pip_summary <- function(country = NULL,
   as_tibble(res)
 }
 
+#' Return the available data versions
+#'
 #' @export
 pip_versions <- function() {
   res <- pip("versions", format = "csv")
