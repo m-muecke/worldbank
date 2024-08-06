@@ -21,6 +21,55 @@ pip_data(
   version = NULL
 )
 }
+\arguments{
+\item{country}{\code{character()} countries for which statistics are to be computed,
+specified as ISO3 codes. Default \code{NULL}.}
+
+\item{year}{\code{character()} | \code{numeric()} year(s) for which statistics are to be computed,
+specified as YYYY. Default \code{NULL}.}
+
+\item{povline}{\code{numeric(1)} poverty line to be used to compute poverty mesures.
+Poverty lines are only accepted up to 3 decimals. Default \code{NULL}.}
+
+\item{popshare}{\code{numeric(1)} proportion of the population living below the poverty
+line. Will be ignored if povline is specified. Default \code{NULL}.}
+
+\item{fill_gaps}{\code{logical(1)} whether to fill gaps in the data. Default \code{FALSE}.}
+
+\item{welfare_type}{\code{character(1)} type of welfare measure to be used. Default \code{all}.}
+
+\item{additional_ind}{\code{logical(1)} whether to include additional indicators.
+Default \code{FALSE}.}
+
+\item{release_version}{\code{character(1)} version of the data release in YYYYMMDD format.
+Default \code{NULL}.}
+
+\item{ppp_version}{\code{character(1)} | \code{numeric(1)} version of the data. Default \code{NULL}.}
+
+\item{version}{\code{character(1)} version of the data. Default \code{NULL}.}
+
+\item{report_level}{\code{character(1)} level of reporting for the statistics.
+Default \code{all}.}
+}
+\value{
+A \code{data.frame()} with the requested statistics.
+}
 \description{
 Return main poverty and inequality statistics
 }
+\examples{
+\donttest{
+pip_data(c("ZAF", "ZMB"))
+}
+}
+\seealso{
+Other poverty and inequality statistics: 
+\code{\link{pip_aux}()},
+\code{\link{pip_citation}()},
+\code{\link{pip_health_check}()},
+\code{\link{pip_info}()},
+\code{\link{pip_summary}()},
+\code{\link{pip_valid_params}()},
+\code{\link{pip_versions}()}
+}
+\concept{poverty and inequality statistics}

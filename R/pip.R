@@ -1,7 +1,31 @@
 #' Return main poverty and inequality statistics
 #'
+#' @param country `character()` countries for which statistics are to be computed,
+#'   specified as ISO3 codes. Default `NULL`.
+#' @param year `character()` | `numeric()` year(s) for which statistics are to be computed,
+#'   specified as YYYY. Default `NULL`.
+#' @param povline `numeric(1)` poverty line to be used to compute poverty mesures.
+#'   Poverty lines are only accepted up to 3 decimals. Default `NULL`.
+#' @param popshare `numeric(1)` proportion of the population living below the poverty
+#'   line. Will be ignored if povline is specified. Default `NULL`.
+#' @param fill_gaps `logical(1)` whether to fill gaps in the data. Default `FALSE`.
+#' @param welfare_type `character(1)` type of welfare measure to be used. Default `all`.
+#' @param report_level `character(1)` level of reporting for the statistics.
+#'   Default `all`.
+#' @param additional_ind `logical(1)` whether to include additional indicators.
+#'   Default `FALSE`.
+#' @param release_version `character(1)` version of the data release in YYYYMMDD format.
+#'   Default `NULL`.
+#' @param ppp_version `character(1)` | `numeric(1)` version of the data. Default `NULL`.
+#' @param version `character(1)` version of the data. Default `NULL`.
+#' @returns A `data.frame()` with the requested statistics.
 #' @source <https://pip.worldbank.org/api>
+#' @family poverty and inequality statistics
 #' @export
+#' @examples
+#' \donttest{
+#' pip_data(c("ZAF", "ZMB"))
+#' }
 pip_data <- function(country = NULL,
                      year = NULL,
                      povline = NULL,
@@ -15,11 +39,15 @@ pip_data <- function(country = NULL,
                      version = NULL) {
   welfare_type <- match.arg(welfare_type)
   reporting_level <- match.arg(reporting_level)
+  if (!is.null(year)) {
+    year <- as.character(year)
+  }
   if (!is.null(ppp_version)) {
     ppp_version <- as.character(ppp_version)
   }
   stopifnot(
     is.null(country) || is_character(country) && all(nchar(country) == 3L),
+    is.null(year) || is_character(year) && all(grepl("[0-9]{4}", year)),
     is_bool(fill_gaps),
     is_string_or_null(release_version), grepl("[0-9]{8}", release_version),
     is_bool(additional_ind),
@@ -47,7 +75,14 @@ pip_data <- function(country = NULL,
 
 #' Return aggregation of PIP statistics
 #'
+#' @inheritParams pip_data
+#' @returns A `data.frame()` with the requested statistics.
+#' @family poverty and inequality statistics
 #' @export
+#' @examples
+#' \donttest{
+#' pip_summary(c("ZAF", "ZMB"))
+#' }
 pip_summary <- function(country = NULL,
                         year = NULL,
                         povline = NULL,
@@ -62,11 +97,15 @@ pip_summary <- function(country = NULL,
                         version = NULL) {
   welfare_type <- match.arg(welfare_type)
   reporting_level <- match.arg(reporting_level)
+  if (!is.null(year)) {
+    year <- as.character(year)
+  }
   if (!is.null(ppp_version)) {
     ppp_version <- as.character(ppp_version)
   }
   stopifnot(
     is.null(country) || is_character(country) && all(nchar(country) == 3L),
+    is_null(year) || is_character(year) && all(grepl("[0-9]{4}", year)),
     is_bool(fill_gaps),
     is_string_or_null(release_version), grepl("[0-9]{8}", release_version),
     is_bool(additional_ind),
@@ -95,7 +134,13 @@ pip_summary <- function(country = NULL,
 
 #' Return the available data versions
 #'
+#' @returns A `data.frame()` with the available versions.
+#' @family poverty and inequality statistics
 #' @export
+#' @examples
+#' \donttest{
+#' pip_versions()
+#' }
 pip_versions <- function() {
   res <- pip("versions", format = "csv")
   as_tibble(res)
@@ -103,7 +148,14 @@ pip_versions <- function() {
 
 #' Return citation for a given version
 #'
+#' @inheritParams pip_data
+#' @returns A `data.frame()` with the citation.
+#' @family poverty and inequality statistics
 #' @export
+#' @examples
+#' \donttest{
+#' pip_citation()
+#' }
 pip_citation <- function(release_version = NULL,
                          ppp_version = NULL,
                          version = NULL) {
@@ -133,7 +185,15 @@ pip_citation <- function(release_version = NULL,
 
 #' Return auxiliary data tables
 #'
+#' @param table `character(1)` table to be returned. Default `NULL`.
+#' @inheritParams pip_data
+#' @returns A `character()` with the requested tables.
+#' @family poverty and inequality statistics
 #' @export
+#' @examples
+#' \donttest{
+#' pip_aux()
+#' }
 pip_aux <- function(table = NULL,
                     release_version = NULL,
                     ppp_version = NULL,
@@ -159,7 +219,16 @@ pip_aux <- function(table = NULL,
 
 #' Return valid query parameters
 #'
+#' @param endpoint `character(1)` endpoint for which valid parameters are to be
+#'   returned. Default `all`.
+#' @inheritParams pip_data
+#' @returns A `data.frame()` with the valid parameters.
+#' @family poverty and inequality statistics
 #' @export
+#' @examples
+#' \donttest{
+#' pip_valid_params()
+#' }
 pip_valid_params <- function(endpoint = c("all", "aux", "pip", "pip-grp", "pip-info", "valid-params"),
                              release_version = NULL,
                              ppp_version = NULL,
@@ -188,14 +257,26 @@ pip_valid_params <- function(endpoint = c("all", "aux", "pip", "pip-grp", "pip-i
 
 #' Return information about the API
 #'
+#' @returns A `data.frame()` with the API information.
+#' @family poverty and inequality statistics
 #' @export
+#' @examples
+#' \donttest{
+#' pip_info()
+#' }
 pip_info <- function() {
   pip("pip-info", format = "json")
 }
 
 #' Determine if the API is running and listening as expected
 #'
+#' @returns A `character()` with the health check message.
+#' @family poverty and inequality statistics
 #' @export
+#' @examples
+#' \donttest{
+#' pip_health_check()
+#' }
 pip_health_check <- function() {
   msg <- pip("health-check", format = "json")
   msg[[1L]]
@@ -221,7 +302,7 @@ pip <- function(resource, ..., format = c("json", "csv", "xml", "rds")) {
     json = resp_body_json(resp),
     csv = {
       body <- resp_body_string(resp)
-      body <- utils::read.csv(textConnection(body, encoding = "UTF-8"))
+      utils::read.csv(textConnection(body, encoding = "UTF-8"))
     },
     xml = resp_body_xml(resp),
     rds = resp_body_raw(resp)

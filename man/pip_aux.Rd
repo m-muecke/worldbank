@@ -11,6 +11,35 @@ pip_aux(
   version = NULL
 )
 }
+\arguments{
+\item{table}{\code{character(1)} table to be returned. Default \code{NULL}.}
+
+\item{release_version}{\code{character(1)} version of the data release in YYYYMMDD format.
+Default \code{NULL}.}
+
+\item{ppp_version}{\code{character(1)} | \code{numeric(1)} version of the data. Default \code{NULL}.}
+
+\item{version}{\code{character(1)} version of the data. Default \code{NULL}.}
+}
+\value{
+A \code{character()} with the requested tables.
+}
 \description{
 Return auxiliary data tables
 }
+\examples{
+\donttest{
+pip_aux()
+}
+}
+\seealso{
+Other poverty and inequality statistics: 
+\code{\link{pip_citation}()},
+\code{\link{pip_data}()},
+\code{\link{pip_health_check}()},
+\code{\link{pip_info}()},
+\code{\link{pip_summary}()},
+\code{\link{pip_valid_params}()},
+\code{\link{pip_versions}()}
+}
+\concept{poverty and inequality statistics}

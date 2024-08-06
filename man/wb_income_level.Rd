@@ -27,3 +27,14 @@ List all income levels supported by the World Bank API.
 \examples{
 wb_income_level()
 }
+\seealso{
+Other indicators data: 
+\code{\link{wb_country}()},
+\code{\link{wb_indicator}()},
+\code{\link{wb_language}()},
+\code{\link{wb_lending_type}()},
+\code{\link{wb_region}()},
+\code{\link{wb_source}()},
+\code{\link{wb_topic}()}
+}
+\concept{indicators data}

@@ -42,3 +42,14 @@ List all countries supported by the World Bank API.
 \examples{
 wb_country()
 }
+\seealso{
+Other indicators data: 
+\code{\link{wb_income_level}()},
+\code{\link{wb_indicator}()},
+\code{\link{wb_language}()},
+\code{\link{wb_lending_type}()},
+\code{\link{wb_region}()},
+\code{\link{wb_source}()},
+\code{\link{wb_topic}()}
+}
+\concept{indicators data}

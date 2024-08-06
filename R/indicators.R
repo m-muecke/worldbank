@@ -8,6 +8,7 @@
 #'   \item{name}{The language name.}
 #'   \item{native_form}{The native form of the language name.}
 #' @source <http://api.worldbank.org/v2/languages>
+#' @family indicators data
 #' @export
 #' @examples
 #' wb_language()
@@ -36,6 +37,7 @@ wb_language <- function() {
 #'   \item{iso2code}{The ISO 2 code of the lending type.}
 #'   \item{value}{The lending type value.}
 #' @source <http://api.worldbank.org/v2/lendingTypes>
+#' @family indicators data
 #' @export
 #' @examples
 #' wb_lending_type()
@@ -68,6 +70,7 @@ wb_lending_type <- function(type = NULL, lang = "en") {
 #'   \item{iso2code}{The ISO 2 code of the income level.}
 #'   \item{value}{The income level value.}
 #' @source <http://api.worldbank.org/v2/incomeLevels>
+#' @family indicators data
 #' @export
 #' @examples
 #' wb_income_level()
@@ -106,6 +109,7 @@ wb_income_level <- function(income = NULL, lang = "en") {
 #'   \item{metadata_availability}{Whether the source has metadata available.}
 #'   \item{concepts}{The concepts associated with the source.}
 #' @source <http://api.worldbank.org/v2/sources>
+#' @family indicators data
 #' @export
 #' @examples
 #' wb_source()
@@ -144,6 +148,7 @@ wb_source <- function(source = NULL, lang = "en") {
 #'   \item{value}{The topic value.}
 #'   \item{source_note}{The source note.}
 #' @source <http://api.worldbank.org/v2/topics>
+#' @family indicators data
 #' @export
 #' @examples
 #' wb_topic()
@@ -177,6 +182,7 @@ wb_topic <- function(topic = NULL, lang = "en") {
 #'   \item{iso2code}{The ISO 2 code of the region.}
 #'   \item{name}{The region name.}
 #' @source <http://api.worldbank.org/v2/region>
+#' @family indicators data
 #' @export
 #' @examples
 #' wb_region()
@@ -228,6 +234,7 @@ wb_region <- function(region = NULL, lang = "en") {
 #'   \item{longitude}{The longitude.}
 #'   \item{latitude}{The latitude.}
 #' @source <http://api.worldbank.org/v2/country>
+#' @family indicators data
 #' @export
 #' @examples
 #' wb_country()
@@ -284,6 +291,7 @@ wb_country <- function(country = NULL, lang = "en") {
 #'   \item{topic_id}{The topic ID.}
 #'   \item{topic_value}{The topic value.}
 #' @source <http://api.worldbank.org/v2/indicator>
+#' @family indicators data
 #' @export
 #' @examples
 #' wb_indicator("NY.GDP.MKTP.CD")
