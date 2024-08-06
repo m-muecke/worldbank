@@ -22,8 +22,8 @@ Other poverty and inequality statistics:
 \code{\link{pip_aux}()},
 \code{\link{pip_citation}()},
 \code{\link{pip_data}()},
+\code{\link{pip_group}()},
 \code{\link{pip_info}()},
-\code{\link{pip_summary}()},
 \code{\link{pip_valid_params}()},
 \code{\link{pip_versions}()}
 }

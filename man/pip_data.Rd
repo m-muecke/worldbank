@@ -10,7 +10,7 @@
 pip_data(
   country = NULL,
   year = NULL,
-  povline = NULL,
+  povline = 2.15,
   popshare = NULL,
   fill_gaps = FALSE,
   welfare_type = c("all", "consumption", "income"),
@@ -29,7 +29,7 @@ specified as ISO3 codes. Default \code{NULL}.}
 specified as YYYY. Default \code{NULL}.}
 
 \item{povline}{\code{numeric(1)} poverty line to be used to compute poverty mesures.
-Poverty lines are only accepted up to 3 decimals. Default \code{NULL}.}
+Poverty lines are only accepted up to 3 decimals. Default \code{2.15}.}
 
 \item{popshare}{\code{numeric(1)} proportion of the population living below the poverty
 line. Will be ignored if povline is specified. Default \code{NULL}.}
@@ -37,6 +37,9 @@ line. Will be ignored if povline is specified. Default \code{NULL}.}
 \item{fill_gaps}{\code{logical(1)} whether to fill gaps in the data. Default \code{FALSE}.}
 
 \item{welfare_type}{\code{character(1)} type of welfare measure to be used. Default \code{all}.}
+
+\item{reporting_level}{\code{character(1)} level of reporting for the statistics.
+Default \code{all}.}
 
 \item{additional_ind}{\code{logical(1)} whether to include additional indicators.
 Default \code{FALSE}.}
@@ -47,9 +50,6 @@ Default \code{NULL}.}
 \item{ppp_version}{\code{character(1)} | \code{numeric(1)} version of the data. Default \code{NULL}.}
 
 \item{version}{\code{character(1)} version of the data. Default \code{NULL}.}
-
-\item{report_level}{\code{character(1)} level of reporting for the statistics.
-Default \code{all}.}
 }
 \value{
 A \code{data.frame()} with the requested statistics.
@@ -66,9 +66,9 @@ pip_data(c("ZAF", "ZMB"))
 Other poverty and inequality statistics: 
 \code{\link{pip_aux}()},
 \code{\link{pip_citation}()},
+\code{\link{pip_group}()},
 \code{\link{pip_health_check}()},
 \code{\link{pip_info}()},
-\code{\link{pip_summary}()},
 \code{\link{pip_valid_params}()},
 \code{\link{pip_versions}()}
 }

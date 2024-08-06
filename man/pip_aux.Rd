@@ -22,23 +22,34 @@ Default \code{NULL}.}
 \item{version}{\code{character(1)} version of the data. Default \code{NULL}.}
 }
 \value{
-A \code{character()} with the requested tables.
+A \code{character()} with the available tables or a \code{data.frame()} containing the
+table data.
 }
 \description{
 Return auxiliary data tables
 }
 \examples{
 \donttest{
+# get a list of available tables
 pip_aux()
+
+# get countries
+pip_aux("countries")
+
+# get GDP
+pip_aux("gdp")
+
+# get CPI
+pip_aux("cpi")
 }
 }
 \seealso{
 Other poverty and inequality statistics: 
 \code{\link{pip_citation}()},
 \code{\link{pip_data}()},
+\code{\link{pip_group}()},
 \code{\link{pip_health_check}()},
 \code{\link{pip_info}()},
-\code{\link{pip_summary}()},
 \code{\link{pip_valid_params}()},
 \code{\link{pip_versions}()}
 }

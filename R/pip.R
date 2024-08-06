@@ -5,12 +5,12 @@
 #' @param year `character()` | `numeric()` year(s) for which statistics are to be computed,
 #'   specified as YYYY. Default `NULL`.
 #' @param povline `numeric(1)` poverty line to be used to compute poverty mesures.
-#'   Poverty lines are only accepted up to 3 decimals. Default `NULL`.
+#'   Poverty lines are only accepted up to 3 decimals. Default `2.15`.
 #' @param popshare `numeric(1)` proportion of the population living below the poverty
 #'   line. Will be ignored if povline is specified. Default `NULL`.
 #' @param fill_gaps `logical(1)` whether to fill gaps in the data. Default `FALSE`.
 #' @param welfare_type `character(1)` type of welfare measure to be used. Default `all`.
-#' @param report_level `character(1)` level of reporting for the statistics.
+#' @param reporting_level `character(1)` level of reporting for the statistics.
 #'   Default `all`.
 #' @param additional_ind `logical(1)` whether to include additional indicators.
 #'   Default `FALSE`.
@@ -28,7 +28,7 @@
 #' }
 pip_data <- function(country = NULL,
                      year = NULL,
-                     povline = NULL,
+                     povline = 2.15,
                      popshare = NULL,
                      fill_gaps = FALSE,
                      welfare_type = c("all", "consumption", "income"),
@@ -76,25 +76,26 @@ pip_data <- function(country = NULL,
 #' Return aggregation of PIP statistics
 #'
 #' @inheritParams pip_data
+#' @param group_by `character()` variables to group by. Default `NULL`.
 #' @returns A `data.frame()` with the requested statistics.
 #' @family poverty and inequality statistics
 #' @export
 #' @examples
 #' \donttest{
-#' pip_summary(c("ZAF", "ZMB"))
+#' pip_group(c("ZAF", "ZMB"))
 #' }
-pip_summary <- function(country = NULL,
-                        year = NULL,
-                        povline = NULL,
-                        popshare = NULL,
-                        group_by = NULL,
-                        fill_gaps = FALSE,
-                        welfare_type = c("all", "consumption", "income"),
-                        reporting_level = c("all", "national", "rural", "urban"),
-                        additional_ind = FALSE,
-                        release_version = NULL,
-                        ppp_version = NULL,
-                        version = NULL) {
+pip_group <- function(country = NULL,
+                      year = NULL,
+                      povline = 2.15,
+                      popshare = NULL,
+                      group_by = NULL,
+                      fill_gaps = FALSE,
+                      welfare_type = c("all", "consumption", "income"),
+                      reporting_level = c("all", "national", "rural", "urban"),
+                      additional_ind = FALSE,
+                      release_version = NULL,
+                      ppp_version = NULL,
+                      version = NULL) {
   welfare_type <- match.arg(welfare_type)
   reporting_level <- match.arg(reporting_level)
   if (!is.null(year)) {
@@ -105,8 +106,9 @@ pip_summary <- function(country = NULL,
   }
   stopifnot(
     is.null(country) || is_character(country) && all(nchar(country) == 3L),
-    is_null(year) || is_character(year) && all(grepl("[0-9]{4}", year)),
+    is.null(year) || is_character(year) && all(grepl("[0-9]{4}", year)),
     is_bool(fill_gaps),
+    is_string_or_null(group_by),
     is_string_or_null(release_version), grepl("[0-9]{8}", release_version),
     is_bool(additional_ind),
     is_string_or_null(ppp_version), grepl("[0-9]{4}", ppp_version),
@@ -187,12 +189,23 @@ pip_citation <- function(release_version = NULL,
 #'
 #' @param table `character(1)` table to be returned. Default `NULL`.
 #' @inheritParams pip_data
-#' @returns A `character()` with the requested tables.
+#' @returns A `character()` with the available tables or a `data.frame()` containing the
+#'   table data.
 #' @family poverty and inequality statistics
 #' @export
 #' @examples
 #' \donttest{
+#' # get a list of available tables
 #' pip_aux()
+#'
+#' # get countries
+#' pip_aux("countries")
+#'
+#' # get GDP
+#' pip_aux("gdp")
+#'
+#' # get CPI
+#' pip_aux("cpi")
 #' }
 pip_aux <- function(table = NULL,
                     release_version = NULL,
@@ -202,19 +215,33 @@ pip_aux <- function(table = NULL,
     ppp_version <- as.character(ppp_version)
   }
   stopifnot(
+    is_string_or_null(table),
     is_string_or_null(release_version), grepl("[0-9]{8}", release_version),
     is_string_or_null(ppp_version), grepl("[0-9]{4}", ppp_version),
     is_string_or_null(version)
   )
-  res <- pip(
-    resource = "aux",
-    table = table,
-    release_version = release_version,
-    ppp_version = ppp_version,
-    version = version,
-    format = "json"
-  )
-  map_chr(res, "tables")
+  if (is.null(table)) {
+    res <- pip(
+      resource = "aux",
+      table = table,
+      release_version = release_version,
+      ppp_version = ppp_version,
+      version = version,
+      format = "json"
+    )
+    map_chr(res, "tables")
+  } else {
+    res <- pip(
+      resource = "aux",
+      table = table,
+      release_version = release_version,
+      ppp_version = ppp_version,
+      version = version,
+      format = "csv"
+    )
+    res <- clean_strings(res)
+    as_tibble(res)
+  }
 }
 
 #' Return valid query parameters
@@ -229,7 +256,7 @@ pip_aux <- function(table = NULL,
 #' \donttest{
 #' pip_valid_params()
 #' }
-pip_valid_params <- function(endpoint = c("all", "aux", "pip", "pip-grp", "pip-info", "valid-params"),
+pip_valid_params <- function(endpoint = c("all", "aux", "pip", "pip-grp", "pip-info", "valid-params"), # nolint
                              release_version = NULL,
                              ppp_version = NULL,
                              version = NULL) {
@@ -283,11 +310,14 @@ pip_health_check <- function() {
 }
 
 pip_error_body <- function(resp) {
-  body <- resp_body_json(resp)
-  msg <- body$error[[1L]]
-  details <- body$details$msg[[1L]]
-  details <- gsub("\\s+", " ", details)
-  c(msg, details)
+  content_type <- resp_content_type(resp)
+  if (identical(content_type, "application/json")) {
+    body <- resp_body_json(resp)
+    msg <- body$error[[1L]]
+    details <- body$details$msg[[1L]]
+    details <- gsub("\\s+", " ", details)
+    c(msg, details)
+  }
 }
 
 pip <- function(resource, ..., format = c("json", "csv", "xml", "rds")) {
