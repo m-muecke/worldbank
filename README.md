@@ -14,12 +14,14 @@ status](https://www.r-pkg.org/badges/version/worldbank)](https://CRAN.R-project.
 
 ## Overview
 
-The goal of worldbank is to provide a simple interface to the [World
-Bank Indicators API
-v2](https://datahelpdesk.worldbank.org/knowledgebase/articles/889392-about-the-indicators-api-documentation).
-The main difference to other packages is that it’s a modern
-implementation using the [httr2](https://httr2.r-lib.org) package and
-supports all available endpoints and parameters.
+**worlbank** provides a simple interface to the [World Bank Indicators
+API
+v2](https://datahelpdesk.worldbank.org/knowledgebase/articles/889392-about-the-indicators-api-documentation)
+and to the [Worldbank Poverty and Inequality Platform (PIP)
+API](https://pip.worldbank.org/api). The main difference to other
+packages is that it’s a modern implementation using the
+[httr2](https://httr2.r-lib.org) package and supports all available
+endpoints and parameters.
 
 The `worldbank` package provides a set of functions to interact with
 various endpoints of the World Bank Indicators API. Each function is
