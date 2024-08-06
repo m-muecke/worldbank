@@ -76,16 +76,17 @@ Default <code>NULL</code>.</p></dd>
 </dl></div>
     <div class="section level2">
     <h2 id="value">Value<a class="anchor" aria-label="anchor" href="#value"></a></h2>
-    <p>A <code><a href="https://rdrr.io/r/base/character.html" class="external-link">character()</a></code> with the requested tables.</p>
+    <p>A <code><a href="https://rdrr.io/r/base/character.html" class="external-link">character()</a></code> with the available tables or a <code><a href="https://rdrr.io/r/base/data.frame.html" class="external-link">data.frame()</a></code> containing the
+table data.</p>
     </div>
     <div class="section level2">
     <h2 id="see-also">See also<a class="anchor" aria-label="anchor" href="#see-also"></a></h2>
     <div class="dont-index"><p>Other poverty and inequality statistics:
 <code><a href="pip_citation.html">pip_citation</a>()</code>,
 <code><a href="pip_data.html">pip_data</a>()</code>,
+<code><a href="pip_group.html">pip_group</a>()</code>,
 <code><a href="pip_health_check.html">pip_health_check</a>()</code>,
 <code><a href="pip_info.html">pip_info</a>()</code>,
-<code><a href="pip_summary.html">pip_summary</a>()</code>,
 <code><a href="pip_valid_params.html">pip_valid_params</a>()</code>,
 <code><a href="pip_versions.html">pip_versions</a>()</code></p></div>
     </div>
@@ -93,6 +94,7 @@ Default <code>NULL</code>.</p></dd>
     <div class="section level2">
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
     <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="co"># \donttest{</span></span></span>
+<span class="r-in"><span><span class="co"># get a list of available tables</span></span></span>
 <span class="r-in"><span><span class="fu">pip_aux</span><span class="op">(</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>  [1] "aux_versions"           "countries"              "country_coverage"      </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>  [4] "country_list"           "cpi"                    "decomposition"         </span>
@@ -102,6 +104,58 @@ Default <code>NULL</code>.</p></dd>
 <span class="r-out co"><span class="r-pr">#&gt;</span> [16] "pop"                    "pop_region"             "poverty_lines"         </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> [19] "ppp"                    "region_coverage"        "regions"               </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> [22] "spr_lnp"                "spr_svy"                "survey_means"          </span>
+<span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="co"># get countries</span></span></span>
+<span class="r-in"><span><span class="fu">pip_aux</span><span class="op">(</span><span class="st">"countries"</span><span class="op">)</span></span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># A tibble: 169 × 8</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    country_code country_name   africa_split africa_split_code region region_code</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>        <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>          <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>        <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>             <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>  <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>      </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 1</span> AGO          Angola         Eastern and… AFE               Sub-S… SSA        </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 2</span> ALB          Albania        <span style="color: #BB0000;">NA</span>           <span style="color: #BB0000;">NA</span>                Europ… ECA        </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 3</span> ARE          United Arab E… <span style="color: #BB0000;">NA</span>           <span style="color: #BB0000;">NA</span>                Other… OHI        </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 4</span> ARG          Argentina      <span style="color: #BB0000;">NA</span>           <span style="color: #BB0000;">NA</span>                Latin… LAC        </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 5</span> ARM          Armenia        <span style="color: #BB0000;">NA</span>           <span style="color: #BB0000;">NA</span>                Europ… ECA        </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 6</span> AUS          Australia      <span style="color: #BB0000;">NA</span>           <span style="color: #BB0000;">NA</span>                Other… OHI        </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 7</span> AUT          Austria        <span style="color: #BB0000;">NA</span>           <span style="color: #BB0000;">NA</span>                Other… OHI        </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 8</span> AZE          Azerbaijan     <span style="color: #BB0000;">NA</span>           <span style="color: #BB0000;">NA</span>                Europ… ECA        </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 9</span> BDI          Burundi        Eastern and… AFE               Sub-S… SSA        </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">10</span> BEL          Belgium        <span style="color: #BB0000;">NA</span>           <span style="color: #BB0000;">NA</span>                Other… OHI        </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># ℹ 159 more rows</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># ℹ 2 more variables: world &lt;chr&gt;, world_code &lt;chr&gt;</span></span>
+<span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="co"># get GDP</span></span></span>
+<span class="r-in"><span><span class="fu">pip_aux</span><span class="op">(</span><span class="st">"gdp"</span><span class="op">)</span></span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># A tibble: 10,340 × 4</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    country_code data_level  year  value</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>        <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>      <span style="color: #949494; font-style: italic;">&lt;int&gt;</span>  <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 1</span> ABW          national    <span style="text-decoration: underline;">1</span>977    <span style="color: #BB0000;">NA</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 2</span> ABW          national    <span style="text-decoration: underline;">1</span>978    <span style="color: #BB0000;">NA</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 3</span> ABW          national    <span style="text-decoration: underline;">1</span>979    <span style="color: #BB0000;">NA</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 4</span> ABW          national    <span style="text-decoration: underline;">1</span>980    <span style="color: #BB0000;">NA</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 5</span> ABW          national    <span style="text-decoration: underline;">1</span>981    <span style="color: #BB0000;">NA</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 6</span> ABW          national    <span style="text-decoration: underline;">1</span>982    <span style="color: #BB0000;">NA</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 7</span> ABW          national    <span style="text-decoration: underline;">1</span>983    <span style="color: #BB0000;">NA</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 8</span> ABW          national    <span style="text-decoration: underline;">1</span>984    <span style="color: #BB0000;">NA</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 9</span> ABW          national    <span style="text-decoration: underline;">1</span>985    <span style="color: #BB0000;">NA</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">10</span> ABW          national    <span style="text-decoration: underline;">1</span>986 <span style="text-decoration: underline;">16</span>112.</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># ℹ 10,330 more rows</span></span>
+<span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="co"># get CPI</span></span></span>
+<span class="r-in"><span><span class="fu">pip_aux</span><span class="op">(</span><span class="st">"cpi"</span><span class="op">)</span></span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># A tibble: 8,037 × 4</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    country_code data_level  year value</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>        <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>      <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 1</span> AGO          national    <span style="text-decoration: underline;">1</span>977    <span style="color: #BB0000;">NA</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 2</span> AGO          national    <span style="text-decoration: underline;">1</span>978    <span style="color: #BB0000;">NA</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 3</span> AGO          national    <span style="text-decoration: underline;">1</span>979    <span style="color: #BB0000;">NA</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 4</span> AGO          national    <span style="text-decoration: underline;">1</span>980    <span style="color: #BB0000;">NA</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 5</span> AGO          national    <span style="text-decoration: underline;">1</span>981    <span style="color: #BB0000;">NA</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 6</span> AGO          national    <span style="text-decoration: underline;">1</span>982    <span style="color: #BB0000;">NA</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 7</span> AGO          national    <span style="text-decoration: underline;">1</span>983    <span style="color: #BB0000;">NA</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 8</span> AGO          national    <span style="text-decoration: underline;">1</span>984    <span style="color: #BB0000;">NA</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 9</span> AGO          national    <span style="text-decoration: underline;">1</span>985    <span style="color: #BB0000;">NA</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">10</span> AGO          national    <span style="text-decoration: underline;">1</span>986    <span style="color: #BB0000;">NA</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># ℹ 8,027 more rows</span></span>
 <span class="r-in"><span><span class="co"># }</span></span></span>
 </code></pre></div>
     </div>
