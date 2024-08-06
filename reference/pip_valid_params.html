@@ -53,8 +53,67 @@
 <span><span class="op">)</span></span></code></pre></div>
     </div>
 
+    <div class="section level2">
+    <h2 id="arguments">Arguments<a class="anchor" aria-label="anchor" href="#arguments"></a></h2>
 
-  </main></div>
+
+<dl><dt id="arg-endpoint">endpoint<a class="anchor" aria-label="anchor" href="#arg-endpoint"></a></dt>
+<dd><p><code>character(1)</code> endpoint for which valid parameters are to be
+returned. Default <code>all</code>.</p></dd>
+
+
+<dt id="arg-release-version">release_version<a class="anchor" aria-label="anchor" href="#arg-release-version"></a></dt>
+<dd><p><code>character(1)</code> version of the data release in YYYYMMDD format.
+Default <code>NULL</code>.</p></dd>
+
+
+<dt id="arg-ppp-version">ppp_version<a class="anchor" aria-label="anchor" href="#arg-ppp-version"></a></dt>
+<dd><p><code>character(1)</code> | <code>numeric(1)</code> version of the data. Default <code>NULL</code>.</p></dd>
+
+
+<dt id="arg-version">version<a class="anchor" aria-label="anchor" href="#arg-version"></a></dt>
+<dd><p><code>character(1)</code> version of the data. Default <code>NULL</code>.</p></dd>
+
+</dl></div>
+    <div class="section level2">
+    <h2 id="value">Value<a class="anchor" aria-label="anchor" href="#value"></a></h2>
+    <p>A <code><a href="https://rdrr.io/r/base/data.frame.html" class="external-link">data.frame()</a></code> with the valid parameters.</p>
+    </div>
+    <div class="section level2">
+    <h2 id="see-also">See also<a class="anchor" aria-label="anchor" href="#see-also"></a></h2>
+    <div class="dont-index"><p>Other poverty and inequality statistics:
+<code><a href="pip_aux.html">pip_aux</a>()</code>,
+<code><a href="pip_citation.html">pip_citation</a>()</code>,
+<code><a href="pip_data.html">pip_data</a>()</code>,
+<code><a href="pip_health_check.html">pip_health_check</a>()</code>,
+<code><a href="pip_info.html">pip_info</a>()</code>,
+<code><a href="pip_summary.html">pip_summary</a>()</code>,
+<code><a href="pip_versions.html">pip_versions</a>()</code></p></div>
+    </div>
+
+    <div class="section level2">
+    <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="co"># \donttest{</span></span></span>
+<span class="r-in"><span><span class="fu">pip_valid_params</span><span class="op">(</span><span class="op">)</span></span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># A tibble: 327 × 4</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    names   values boundaries types    </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>  <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>      <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>    </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 1</span> country ALL    <span style="color: #BB0000;">NA</span>         character</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 2</span> country AFE    <span style="color: #BB0000;">NA</span>         character</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 3</span> country AFW    <span style="color: #BB0000;">NA</span>         character</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 4</span> country AGO    <span style="color: #BB0000;">NA</span>         character</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 5</span> country ALB    <span style="color: #BB0000;">NA</span>         character</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 6</span> country ARE    <span style="color: #BB0000;">NA</span>         character</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 7</span> country ARG    <span style="color: #BB0000;">NA</span>         character</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 8</span> country ARM    <span style="color: #BB0000;">NA</span>         character</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 9</span> country AUS    <span style="color: #BB0000;">NA</span>         character</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">10</span> country AUT    <span style="color: #BB0000;">NA</span>         character</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># ℹ 317 more rows</span></span>
+<span class="r-in"><span><span class="co"># }</span></span></span>
+</code></pre></div>
+    </div>
+  </main><aside class="col-md-3"><nav id="toc" aria-label="Table of contents"><h2>On this page</h2>
+    </nav></aside></div>
 
 
     <footer><div class="pkgdown-footer-left">

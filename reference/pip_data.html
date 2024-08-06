@@ -64,7 +64,110 @@
     <h2 id="source">Source<a class="anchor" aria-label="anchor" href="#source"></a></h2>
     <p><a href="https://pip.worldbank.org/api" class="external-link">https://pip.worldbank.org/api</a></p>
     </div>
+    <div class="section level2">
+    <h2 id="arguments">Arguments<a class="anchor" aria-label="anchor" href="#arguments"></a></h2>
 
+
+<dl><dt id="arg-country">country<a class="anchor" aria-label="anchor" href="#arg-country"></a></dt>
+<dd><p><code><a href="https://rdrr.io/r/base/character.html" class="external-link">character()</a></code> countries for which statistics are to be computed,
+specified as ISO3 codes. Default <code>NULL</code>.</p></dd>
+
+
+<dt id="arg-year">year<a class="anchor" aria-label="anchor" href="#arg-year"></a></dt>
+<dd><p><code><a href="https://rdrr.io/r/base/character.html" class="external-link">character()</a></code> | <code><a href="https://rdrr.io/r/base/numeric.html" class="external-link">numeric()</a></code> year(s) for which statistics are to be computed,
+specified as YYYY. Default <code>NULL</code>.</p></dd>
+
+
+<dt id="arg-povline">povline<a class="anchor" aria-label="anchor" href="#arg-povline"></a></dt>
+<dd><p><code>numeric(1)</code> poverty line to be used to compute poverty mesures.
+Poverty lines are only accepted up to 3 decimals. Default <code>NULL</code>.</p></dd>
+
+
+<dt id="arg-popshare">popshare<a class="anchor" aria-label="anchor" href="#arg-popshare"></a></dt>
+<dd><p><code>numeric(1)</code> proportion of the population living below the poverty
+line. Will be ignored if povline is specified. Default <code>NULL</code>.</p></dd>
+
+
+<dt id="arg-fill-gaps">fill_gaps<a class="anchor" aria-label="anchor" href="#arg-fill-gaps"></a></dt>
+<dd><p><code>logical(1)</code> whether to fill gaps in the data. Default <code>FALSE</code>.</p></dd>
+
+
+<dt id="arg-welfare-type">welfare_type<a class="anchor" aria-label="anchor" href="#arg-welfare-type"></a></dt>
+<dd><p><code>character(1)</code> type of welfare measure to be used. Default <code>all</code>.</p></dd>
+
+
+<dt id="arg-additional-ind">additional_ind<a class="anchor" aria-label="anchor" href="#arg-additional-ind"></a></dt>
+<dd><p><code>logical(1)</code> whether to include additional indicators.
+Default <code>FALSE</code>.</p></dd>
+
+
+<dt id="arg-release-version">release_version<a class="anchor" aria-label="anchor" href="#arg-release-version"></a></dt>
+<dd><p><code>character(1)</code> version of the data release in YYYYMMDD format.
+Default <code>NULL</code>.</p></dd>
+
+
+<dt id="arg-ppp-version">ppp_version<a class="anchor" aria-label="anchor" href="#arg-ppp-version"></a></dt>
+<dd><p><code>character(1)</code> | <code>numeric(1)</code> version of the data. Default <code>NULL</code>.</p></dd>
+
+
+<dt id="arg-version">version<a class="anchor" aria-label="anchor" href="#arg-version"></a></dt>
+<dd><p><code>character(1)</code> version of the data. Default <code>NULL</code>.</p></dd>
+
+
+<dt id="arg-report-level">report_level<a class="anchor" aria-label="anchor" href="#arg-report-level"></a></dt>
+<dd><p><code>character(1)</code> level of reporting for the statistics.
+Default <code>all</code>.</p></dd>
+
+</dl></div>
+    <div class="section level2">
+    <h2 id="value">Value<a class="anchor" aria-label="anchor" href="#value"></a></h2>
+    <p>A <code><a href="https://rdrr.io/r/base/data.frame.html" class="external-link">data.frame()</a></code> with the requested statistics.</p>
+    </div>
+    <div class="section level2">
+    <h2 id="see-also">See also<a class="anchor" aria-label="anchor" href="#see-also"></a></h2>
+    <div class="dont-index"><p>Other poverty and inequality statistics:
+<code><a href="pip_aux.html">pip_aux</a>()</code>,
+<code><a href="pip_citation.html">pip_citation</a>()</code>,
+<code><a href="pip_health_check.html">pip_health_check</a>()</code>,
+<code><a href="pip_info.html">pip_info</a>()</code>,
+<code><a href="pip_summary.html">pip_summary</a>()</code>,
+<code><a href="pip_valid_params.html">pip_valid_params</a>()</code>,
+<code><a href="pip_versions.html">pip_versions</a>()</code></p></div>
+    </div>
+
+    <div class="section level2">
+    <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="co"># \donttest{</span></span></span>
+<span class="r-in"><span><span class="fu">pip_data</span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"ZAF"</span>, <span class="st">"ZMB"</span><span class="op">)</span><span class="op">)</span></span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># A tibble: 16 × 42</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    region_name        region_code country_name country_code reporting_year</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>              <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>       <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>        <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>                 <span style="color: #949494; font-style: italic;">&lt;int&gt;</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 1</span> Sub-Saharan Africa SSA         South Africa ZAF                    <span style="text-decoration: underline;">1</span>993</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 2</span> Sub-Saharan Africa SSA         South Africa ZAF                    <span style="text-decoration: underline;">2</span>000</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 3</span> Sub-Saharan Africa SSA         South Africa ZAF                    <span style="text-decoration: underline;">2</span>005</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 4</span> Sub-Saharan Africa SSA         South Africa ZAF                    <span style="text-decoration: underline;">2</span>008</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 5</span> Sub-Saharan Africa SSA         South Africa ZAF                    <span style="text-decoration: underline;">2</span>010</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 6</span> Sub-Saharan Africa SSA         South Africa ZAF                    <span style="text-decoration: underline;">2</span>014</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 7</span> Sub-Saharan Africa SSA         Zambia       ZMB                    <span style="text-decoration: underline;">1</span>991</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 8</span> Sub-Saharan Africa SSA         Zambia       ZMB                    <span style="text-decoration: underline;">1</span>993</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 9</span> Sub-Saharan Africa SSA         Zambia       ZMB                    <span style="text-decoration: underline;">1</span>996</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">10</span> Sub-Saharan Africa SSA         Zambia       ZMB                    <span style="text-decoration: underline;">1</span>998</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">11</span> Sub-Saharan Africa SSA         Zambia       ZMB                    <span style="text-decoration: underline;">2</span>002</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">12</span> Sub-Saharan Africa SSA         Zambia       ZMB                    <span style="text-decoration: underline;">2</span>004</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">13</span> Sub-Saharan Africa SSA         Zambia       ZMB                    <span style="text-decoration: underline;">2</span>006</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">14</span> Sub-Saharan Africa SSA         Zambia       ZMB                    <span style="text-decoration: underline;">2</span>010</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">15</span> Sub-Saharan Africa SSA         Zambia       ZMB                    <span style="text-decoration: underline;">2</span>015</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">16</span> Sub-Saharan Africa SSA         Zambia       ZMB                    <span style="text-decoration: underline;">2</span>022</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># ℹ 37 more variables: reporting_level &lt;chr&gt;, survey_acronym &lt;chr&gt;,</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;">#   survey_coverage &lt;chr&gt;, survey_year &lt;dbl&gt;, welfare_type &lt;chr&gt;,</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;">#   survey_comparability &lt;int&gt;, comparable_spell &lt;chr&gt;, poverty_line &lt;dbl&gt;,</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;">#   headcount &lt;dbl&gt;, poverty_gap &lt;dbl&gt;, poverty_severity &lt;dbl&gt;, watts &lt;dbl&gt;,</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;">#   mean &lt;dbl&gt;, median &lt;dbl&gt;, mld &lt;dbl&gt;, gini &lt;dbl&gt;, polarization &lt;dbl&gt;,</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;">#   decile1 &lt;dbl&gt;, decile2 &lt;dbl&gt;, decile3 &lt;dbl&gt;, decile4 &lt;dbl&gt;, decile5 &lt;dbl&gt;,</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;">#   decile6 &lt;dbl&gt;, decile7 &lt;dbl&gt;, decile8 &lt;dbl&gt;, decile9 &lt;dbl&gt;, …</span></span>
+<span class="r-in"><span><span class="co"># }</span></span></span>
+</code></pre></div>
+    </div>
   </main><aside class="col-md-3"><nav id="toc" aria-label="Table of contents"><h2>On this page</h2>
     </nav></aside></div>
 
