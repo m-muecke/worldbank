@@ -3,6 +3,9 @@
 \name{pip_info}
 \alias{pip_info}
 \title{Return information about the API}
+\source{
+\url{https://pip.worldbank.org/api}
+}
 \usage{
 pip_info()
 }

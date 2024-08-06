@@ -3,6 +3,9 @@
 \name{pip_citation}
 \alias{pip_citation}
 \title{Return citation for a given version}
+\source{
+\url{https://pip.worldbank.org/api}
+}
 \usage{
 pip_citation(release_version = NULL, ppp_version = NULL, version = NULL)
 }

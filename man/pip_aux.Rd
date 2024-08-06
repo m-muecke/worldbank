@@ -3,6 +3,9 @@
 \name{pip_aux}
 \alias{pip_aux}
 \title{Return auxiliary data tables}
+\source{
+\url{https://pip.worldbank.org/api}
+}
 \usage{
 pip_aux(
   table = NULL,

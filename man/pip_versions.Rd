@@ -3,6 +3,9 @@
 \name{pip_versions}
 \alias{pip_versions}
 \title{Return the available data versions}
+\source{
+\url{https://pip.worldbank.org/api}
+}
 \usage{
 pip_versions()
 }

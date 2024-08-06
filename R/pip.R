@@ -78,6 +78,7 @@ pip_data <- function(country = NULL,
 #' @inheritParams pip_data
 #' @param group_by `character()` variables to group by. Default `NULL`.
 #' @returns A `data.frame()` with the requested statistics.
+#' @inherit pip_data source
 #' @family poverty and inequality statistics
 #' @export
 #' @examples
@@ -137,6 +138,7 @@ pip_group <- function(country = NULL,
 #' Return the available data versions
 #'
 #' @returns A `data.frame()` with the available versions.
+#' @inherit pip_data source
 #' @family poverty and inequality statistics
 #' @export
 #' @examples
@@ -152,6 +154,7 @@ pip_versions <- function() {
 #'
 #' @inheritParams pip_data
 #' @returns A `data.frame()` with the citation.
+#' @inherit pip_data source
 #' @family poverty and inequality statistics
 #' @export
 #' @examples
@@ -191,6 +194,7 @@ pip_citation <- function(release_version = NULL,
 #' @inheritParams pip_data
 #' @returns A `character()` with the available tables or a `data.frame()` containing the
 #'   table data.
+#' @inherit pip_data source
 #' @family poverty and inequality statistics
 #' @export
 #' @examples
@@ -250,6 +254,7 @@ pip_aux <- function(table = NULL,
 #'   returned. Default `all`.
 #' @inheritParams pip_data
 #' @returns A `data.frame()` with the valid parameters.
+#' @inherit pip_data source
 #' @family poverty and inequality statistics
 #' @export
 #' @examples
@@ -285,6 +290,7 @@ pip_valid_params <- function(endpoint = c("all", "aux", "pip", "pip-grp", "pip-i
 #' Return information about the API
 #'
 #' @returns A `data.frame()` with the API information.
+#' @inherit pip_data source
 #' @family poverty and inequality statistics
 #' @export
 #' @examples
@@ -297,7 +303,8 @@ pip_info <- function() {
 
 #' Determine if the API is running and listening as expected
 #'
-#' @returns A `character()` with the health check message.
+#' @returns A `character(1)` with the health check message.
+#' @inherit pip_data source
 #' @family poverty and inequality statistics
 #' @export
 #' @examples

@@ -3,6 +3,9 @@
 \name{pip_valid_params}
 \alias{pip_valid_params}
 \title{Return valid query parameters}
+\source{
+\url{https://pip.worldbank.org/api}
+}
 \usage{
 pip_valid_params(
   endpoint = c("all", "aux", "pip", "pip-grp", "pip-info", "valid-params"),

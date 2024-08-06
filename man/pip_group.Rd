@@ -3,6 +3,9 @@
 \name{pip_group}
 \alias{pip_group}
 \title{Return aggregation of PIP statistics}
+\source{
+\url{https://pip.worldbank.org/api}
+}
 \usage{
 pip_group(
   country = NULL,

@@ -3,11 +3,14 @@
 \name{pip_health_check}
 \alias{pip_health_check}
 \title{Determine if the API is running and listening as expected}
+\source{
+\url{https://pip.worldbank.org/api}
+}
 \usage{
 pip_health_check()
 }
 \value{
-A \code{character()} with the health check message.
+A \code{character(1)} with the health check message.
 }
 \description{
 Determine if the API is running and listening as expected
