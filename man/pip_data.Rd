@@ -25,8 +25,8 @@ pip_data(
 \item{country}{\code{character()} countries for which statistics are to be computed,
 specified as ISO3 codes. Default \code{NULL}.}
 
-\item{year}{\code{character()} | \code{numeric()} year(s) for which statistics are to be computed,
-specified as YYYY. Default \code{NULL}.}
+\item{year}{\code{character()} | \code{numeric()} year(s) for which statistics are to be
+computed, specified as YYYY. Default \code{NULL}.}
 
 \item{povline}{\code{numeric(1)} poverty line to be used to compute poverty mesures.
 Poverty lines are only accepted up to 3 decimals. Default \code{2.15}.}

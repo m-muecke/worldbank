@@ -2,8 +2,8 @@
 #'
 #' @param country `character()` countries for which statistics are to be computed,
 #'   specified as ISO3 codes. Default `NULL`.
-#' @param year `character()` | `numeric()` year(s) for which statistics are to be computed,
-#'   specified as YYYY. Default `NULL`.
+#' @param year `character()` | `numeric()` year(s) for which statistics are to be
+#'   computed, specified as YYYY. Default `NULL`.
 #' @param povline `numeric(1)` poverty line to be used to compute poverty mesures.
 #'   Poverty lines are only accepted up to 3 decimals. Default `2.15`.
 #' @param popshare `numeric(1)` proportion of the population living below the poverty
@@ -76,7 +76,6 @@ pip_data <- function(country = NULL,
 #' Return aggregation of PIP statistics
 #'
 #' @inheritParams pip_data
-#' @param group_by `character()` variables to group by. Default `NULL`.
 #' @returns A `data.frame()` with the requested statistics.
 #' @inherit pip_data source
 #' @family poverty and inequality statistics
@@ -190,8 +189,8 @@ pip_citation <- function(release_version = NULL,
 
 #' Return auxiliary data tables
 #'
-#' @param table `character(1)` table to be returned. Default `NULL`.
 #' @inheritParams pip_data
+#' @param table `character(1)` table to be returned. Default `NULL`.
 #' @returns A `character()` with the available tables or a `data.frame()` containing the
 #'   table data.
 #' @inherit pip_data source
@@ -250,9 +249,9 @@ pip_aux <- function(table = NULL,
 
 #' Return valid query parameters
 #'
+#' @inheritParams pip_data
 #' @param endpoint `character(1)` endpoint for which valid parameters are to be
 #'   returned. Default `all`.
-#' @inheritParams pip_data
 #' @returns A `data.frame()` with the valid parameters.
 #' @inherit pip_data source
 #' @family poverty and inequality statistics
@@ -283,7 +282,6 @@ pip_valid_params <- function(endpoint = c("all", "aux", "pip", "pip-grp", "pip-i
     format = "csv"
   )
   res <- clean_strings(res)
-  names(res) <- sub("^param_", "", names(res))
   as_tibble(res)
 }
 

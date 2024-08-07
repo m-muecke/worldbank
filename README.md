@@ -17,7 +17,7 @@ status](https://www.r-pkg.org/badges/version/worldbank)](https://CRAN.R-project.
 **worlbank** provides a simple interface to the [World Bank Indicators
 API
 v2](https://datahelpdesk.worldbank.org/knowledgebase/articles/889392-about-the-indicators-api-documentation)
-and to the [Worldbank Poverty and Inequality Platform (PIP)
+and to the [World Bank Poverty and Inequality Platform (PIP)
 API](https://pip.worldbank.org/api). The main difference to other
 packages is that it’s a modern implementation using the
 [httr2](https://httr2.r-lib.org) package and supports all available

@@ -4,7 +4,7 @@
 \name{worldbank-package}
 \alias{worldbank}
 \alias{worldbank-package}
-\title{worldbank: Client for the 'World Bank Indicators API'}
+\title{worldbank: Client for World Banks's 'Indicators' and 'Poverty and Inequality Platform (PIP)' APIs}
 \description{
 Download and search data from the 'World Bank Indicators API', which provides access to nearly 16,000 time series indicators. See \url{https://datahelpdesk.worldbank.org/knowledgebase/articles/889392-about-the-indicators-api-documentation} for further details about the API.
 }

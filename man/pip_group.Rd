@@ -26,16 +26,14 @@ pip_group(
 \item{country}{\code{character()} countries for which statistics are to be computed,
 specified as ISO3 codes. Default \code{NULL}.}
 
-\item{year}{\code{character()} | \code{numeric()} year(s) for which statistics are to be computed,
-specified as YYYY. Default \code{NULL}.}
+\item{year}{\code{character()} | \code{numeric()} year(s) for which statistics are to be
+computed, specified as YYYY. Default \code{NULL}.}
 
 \item{povline}{\code{numeric(1)} poverty line to be used to compute poverty mesures.
 Poverty lines are only accepted up to 3 decimals. Default \code{2.15}.}
 
 \item{popshare}{\code{numeric(1)} proportion of the population living below the poverty
 line. Will be ignored if povline is specified. Default \code{NULL}.}
-
-\item{group_by}{\code{character()} variables to group by. Default \code{NULL}.}
 
 \item{fill_gaps}{\code{logical(1)} whether to fill gaps in the data. Default \code{FALSE}.}
 
