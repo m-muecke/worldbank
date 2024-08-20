@@ -440,7 +440,7 @@ wb_error_body <- function(resp) {
 
 worldbank <- function(resource, ..., lang = NULL, per_page = 32500L) {
   stopifnot(is_string_or_null(lang), nchar(lang) == 2L)
-  body <- request("http://api.worldbank.org/v2") |>
+  body <- request("https://api.worldbank.org/v2") |>
     req_user_agent("worldbank (https://m-muecke.github.io/worldbank)") |>
     req_url_path_append(lang, resource) |>
     req_url_query(..., format = "json", per_page = per_page) |>
@@ -451,7 +451,7 @@ worldbank <- function(resource, ..., lang = NULL, per_page = 32500L) {
 }
 
 worldbank_iter <- function(resource, resp_data, ..., per_page = 32500L) {
-  req <- request("http://api.worldbank.org/v2") |>
+  req <- request("https://api.worldbank.org/v2") |>
     req_user_agent("worldbank (https://m-muecke.github.io/worldbank)") |>
     req_url_path_append(resource) |>
     req_url_query(..., format = "json", per_page = per_page) |>
