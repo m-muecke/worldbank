@@ -10,12 +10,16 @@ is_character_or_null <- function(x) {
   is.null(x) || is_character(x)
 }
 
-is_string <- function(x) {
-  is.character(x) && length(x) == 1L && !is.na(x)
+is_string <- function(x, pattern = NULL, ...) {
+  ok <- is.character(x) && length(x) == 1L && !is.na(x)
+  if (ok && !is.null(pattern)) {
+    ok <- grepl(pattern, x, ...)
+  }
+  ok
 }
 
-is_string_or_null <- function(x) {
-  is.null(x) || is_string(x)
+is_string_or_null <- function(x, pattern = NULL, ...) {
+  is.null(x) || is_string(x, pattern, ...)
 }
 
 is_count <- function(x) {

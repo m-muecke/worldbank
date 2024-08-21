@@ -49,9 +49,9 @@ pip_data <- function(country = NULL,
     is.null(country) || is_character(country) && all(nchar(country) == 3L),
     is.null(year) || is_character(year) && all(grepl("[0-9]{4}", year)),
     is_bool(fill_gaps),
-    is_string_or_null(release_version), grepl("[0-9]{8}", release_version),
+    is_string_or_null(release_version, "[0-9]{8}"),
     is_bool(additional_ind),
-    is_string_or_null(ppp_version), grepl("[0-9]{4}", ppp_version),
+    is_string_or_null(ppp_version, "[0-9]{4}"),
     is_string_or_null(version)
   )
   res <- pip(
@@ -109,9 +109,9 @@ pip_group <- function(country = NULL,
     is.null(year) || is_character(year) && all(grepl("[0-9]{4}", year)),
     is_bool(fill_gaps),
     is_string_or_null(group_by),
-    is_string_or_null(release_version), grepl("[0-9]{8}", release_version),
+    is_string_or_null(release_version, "[0-9]{8}"),
     is_bool(additional_ind),
-    is_string_or_null(ppp_version), grepl("[0-9]{4}", ppp_version),
+    is_string_or_null(ppp_version, "[0-9]{4}"),
     is_string_or_null(version)
   )
   res <- pip(
@@ -167,8 +167,8 @@ pip_citation <- function(release_version = NULL,
     ppp_version <- as.character(ppp_version)
   }
   stopifnot(
-    is_string_or_null(release_version), grepl("[0-9]{8}", release_version),
-    is_string_or_null(ppp_version), grepl("[0-9]{4}", ppp_version),
+    is_string_or_null(release_version, "[0-9]{8}"),
+    is_string_or_null(ppp_version, "[0-9]{4}"),
     is_string_or_null(version)
   )
   res <- pip(
@@ -219,8 +219,8 @@ pip_aux <- function(table = NULL,
   }
   stopifnot(
     is_string_or_null(table),
-    is_string_or_null(release_version), grepl("[0-9]{8}", release_version),
-    is_string_or_null(ppp_version), grepl("[0-9]{4}", ppp_version),
+    is_string_or_null(release_version, "[0-9]{8}"),
+    is_string_or_null(ppp_version, "[0-9]{4}"),
     is_string_or_null(version)
   )
   if (is.null(table)) {
@@ -268,8 +268,8 @@ pip_valid_params <- function(endpoint = c("all", "aux", "pip", "pip-grp", "pip-i
     ppp_version <- as.character(ppp_version)
   }
   stopifnot(
-    is_string_or_null(release_version), grepl("[0-9]{8}", release_version),
-    is_string_or_null(ppp_version), grepl("[0-9]{4}", ppp_version),
+    is_string_or_null(release_version, "[0-9]{8}"),
+    is_string_or_null(ppp_version, "[0-9]{4}"),
     is_string_or_null(version)
   )
   endpoint <- match.arg(endpoint)
