@@ -76,19 +76,21 @@ pip_data <- function(country = NULL,
 #' Return aggregation of PIP statistics
 #'
 #' @inheritParams pip_data
+#' @param group_by `character(1)` aggregate results by pre-defined sub-groups.
+#'   Default `"wb"`.
 #' @returns A `data.frame()` with the requested statistics.
 #' @inherit pip_data source
 #' @family poverty and inequality statistics
 #' @export
 #' @examples
 #' \donttest{
-#' pip_group(c("ZAF", "ZMB"))
+#' pip_group(c("AFE", "LAC"))
 #' }
 pip_group <- function(country = NULL,
                       year = NULL,
                       povline = 2.15,
                       popshare = NULL,
-                      group_by = NULL,
+                      group_by = c("wb", "none"),
                       fill_gaps = FALSE,
                       welfare_type = c("all", "consumption", "income"),
                       reporting_level = c("all", "national", "rural", "urban"),
@@ -96,6 +98,7 @@ pip_group <- function(country = NULL,
                       release_version = NULL,
                       ppp_version = NULL,
                       version = NULL) {
+  group_by <- match.arg(group_by)
   welfare_type <- match.arg(welfare_type)
   reporting_level <- match.arg(reporting_level)
   if (!is.null(year)) {
@@ -108,7 +111,6 @@ pip_group <- function(country = NULL,
     is.null(country) || is_character(country) && all(nchar(country) == 3L),
     is.null(year) || is_character(year) && all(grepl("[0-9]{4}", year)),
     is_bool(fill_gaps),
-    is_string_or_null(group_by),
     is_string_or_null(release_version, "[0-9]{8}"),
     is_bool(additional_ind),
     is_string_or_null(ppp_version, "[0-9]{4}"),

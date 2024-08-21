@@ -12,7 +12,7 @@ pip_group(
   year = NULL,
   povline = 2.15,
   popshare = NULL,
-  group_by = NULL,
+  group_by = c("wb", "none"),
   fill_gaps = FALSE,
   welfare_type = c("all", "consumption", "income"),
   reporting_level = c("all", "national", "rural", "urban"),
@@ -34,6 +34,9 @@ Poverty lines are only accepted up to 3 decimals. Default \code{2.15}.}
 
 \item{popshare}{\code{numeric(1)} proportion of the population living below the poverty
 line. Will be ignored if povline is specified. Default \code{NULL}.}
+
+\item{group_by}{\code{character(1)} aggregate results by pre-defined sub-groups.
+Default \code{"wb"}.}
 
 \item{fill_gaps}{\code{logical(1)} whether to fill gaps in the data. Default \code{FALSE}.}
 
@@ -60,7 +63,7 @@ Return aggregation of PIP statistics
 }
 \examples{
 \donttest{
-pip_group(c("ZAF", "ZMB"))
+pip_group(c("AFE", "LAC"))
 }
 }
 \seealso{
