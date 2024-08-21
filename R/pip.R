@@ -9,9 +9,10 @@
 #' @param popshare `numeric(1)` proportion of the population living below the poverty
 #'   line. Will be ignored if povline is specified. Default `NULL`.
 #' @param fill_gaps `logical(1)` whether to fill gaps in the data. Default `FALSE`.
-#' @param welfare_type `character(1)` type of welfare measure to be used. Default `all`.
+#' @param welfare_type `character(1)` type of welfare measure to be used.
+#'   Default `"all"`.
 #' @param reporting_level `character(1)` level of reporting for the statistics.
-#'   Default `all`.
+#'   Default `"all"`.
 #' @param additional_ind `logical(1)` whether to include additional indicators.
 #'   Default `FALSE`.
 #' @param release_version `character(1)` version of the data release in YYYYMMDD format.
@@ -253,7 +254,7 @@ pip_aux <- function(table = NULL,
 #'
 #' @inheritParams pip_data
 #' @param endpoint `character(1)` endpoint for which valid parameters are to be
-#'   returned. Default `all`.
+#'   returned. Default `"all"`.
 #' @returns A `data.frame()` with the valid parameters.
 #' @inherit pip_data source
 #' @family poverty and inequality statistics

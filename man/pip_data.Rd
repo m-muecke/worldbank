@@ -36,10 +36,11 @@ line. Will be ignored if povline is specified. Default \code{NULL}.}
 
 \item{fill_gaps}{\code{logical(1)} whether to fill gaps in the data. Default \code{FALSE}.}
 
-\item{welfare_type}{\code{character(1)} type of welfare measure to be used. Default \code{all}.}
+\item{welfare_type}{\code{character(1)} type of welfare measure to be used.
+Default \code{"all"}.}
 
 \item{reporting_level}{\code{character(1)} level of reporting for the statistics.
-Default \code{all}.}
+Default \code{"all"}.}
 
 \item{additional_ind}{\code{logical(1)} whether to include additional indicators.
 Default \code{FALSE}.}

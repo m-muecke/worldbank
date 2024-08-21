@@ -16,7 +16,7 @@ pip_valid_params(
 }
 \arguments{
 \item{endpoint}{\code{character(1)} endpoint for which valid parameters are to be
-returned. Default \code{all}.}
+returned. Default \code{"all"}.}
 
 \item{release_version}{\code{character(1)} version of the data release in YYYYMMDD format.
 Default \code{NULL}.}
