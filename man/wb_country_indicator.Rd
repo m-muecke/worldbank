@@ -4,7 +4,7 @@
 \alias{wb_country_indicator}
 \title{World Bank country indicator data}
 \source{
-\url{http://api.worldbank.org/v2/country/{country}/indicator/{indicator}}
+\url{https://api.worldbank.org/v2/country/{country}/indicator/{indicator}}
 }
 \usage{
 wb_country_indicator(

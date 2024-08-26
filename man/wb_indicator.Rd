@@ -4,7 +4,7 @@
 \alias{wb_indicator}
 \title{World Bank indicator data}
 \source{
-\url{http://api.worldbank.org/v2/indicator}
+\url{https://api.worldbank.org/v2/indicator}
 }
 \usage{
 wb_indicator(indicator = NULL, lang = "en")

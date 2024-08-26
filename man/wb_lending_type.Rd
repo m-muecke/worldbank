@@ -4,7 +4,7 @@
 \alias{wb_lending_type}
 \title{World Bank lending type data}
 \source{
-\url{http://api.worldbank.org/v2/lendingTypes}
+\url{https://api.worldbank.org/v2/lendingTypes}
 }
 \usage{
 wb_lending_type(type = NULL, lang = "en")

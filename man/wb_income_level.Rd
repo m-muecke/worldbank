@@ -4,7 +4,7 @@
 \alias{wb_income_level}
 \title{World Bank income level data}
 \source{
-\url{http://api.worldbank.org/v2/incomeLevels}
+\url{https://api.worldbank.org/v2/incomeLevels}
 }
 \usage{
 wb_income_level(income = NULL, lang = "en")

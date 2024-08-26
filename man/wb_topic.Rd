@@ -4,7 +4,7 @@
 \alias{wb_topic}
 \title{World Bank topic data}
 \source{
-\url{http://api.worldbank.org/v2/topics}
+\url{https://api.worldbank.org/v2/topics}
 }
 \usage{
 wb_topic(topic = NULL, lang = "en")

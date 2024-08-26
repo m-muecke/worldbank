@@ -4,7 +4,7 @@
 \alias{wb_source}
 \title{World Bank source data}
 \source{
-\url{http://api.worldbank.org/v2/sources}
+\url{https://api.worldbank.org/v2/sources}
 }
 \usage{
 wb_source(source = NULL, lang = "en")

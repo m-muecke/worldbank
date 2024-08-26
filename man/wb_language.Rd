@@ -4,7 +4,7 @@
 \alias{wb_language}
 \title{World Bank available languages}
 \source{
-\url{http://api.worldbank.org/v2/languages}
+\url{https://api.worldbank.org/v2/languages}
 }
 \usage{
 wb_language()
