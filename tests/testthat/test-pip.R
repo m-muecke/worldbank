@@ -33,8 +33,8 @@ test_that("pip_citation basic checks", {
   skip_on_cran()
   skip_on_ci()
 
-  expect_s3_class(res, "data.frame")
   res <- pip_citation()
+  expect_s3_class(res, "data.frame")
   expect_identical(dim(res), c(1L, 3L))
 })
 
