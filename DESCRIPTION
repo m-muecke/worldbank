@@ -17,7 +17,7 @@ BugReports: https://github.com/m-muecke/worldbank/issues
 Depends:
     R (>= 4.1.0)
 Imports:
-    httr2
+    httr2 (>= 1.0.0)
 Suggests:
     ggplot2,
     scales,
