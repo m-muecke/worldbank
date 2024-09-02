@@ -27,3 +27,8 @@ reference:
     - pip_valid_params
     - pip_info
     - pip_health_check
+
+  - subtitle: Finances One Data
+  - contents:
+    - fone_dataset
+    - fone_view
