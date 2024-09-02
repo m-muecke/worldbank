@@ -1,7 +1,7 @@
 #' Return Finance One Dataset Data
 #'
 #' @param dataset_id `character(1)` id of the associated dataset.
-#' @param resoure_id `character(1)` id of the associated resource.
+#' @param resource_id `character(1)` id of the associated resource.
 #' @param ... Additional arguments passed to the request.
 #' @returns A `data.frame()` with the requested dataset.
 #' @source <https://financesone.worldbank.org/data>
