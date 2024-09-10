@@ -14,7 +14,7 @@ fone_dataset(dataset_id, resource_id, ...)
 
 \item{resource_id}{\code{character(1)} id of the associated resource.}
 
-\item{...}{Additional arguments passed to the request.}
+\item{...}{additional arguments passed to the request.}
 }
 \value{
 A \code{data.frame()} with the requested dataset.

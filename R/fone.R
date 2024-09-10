@@ -2,7 +2,7 @@
 #'
 #' @param dataset_id `character(1)` id of the associated dataset.
 #' @param resource_id `character(1)` id of the associated resource.
-#' @param ... Additional arguments passed to the request.
+#' @param ... additional arguments passed to the request.
 #' @returns A `data.frame()` with the requested dataset.
 #' @source <https://financesone.worldbank.org/data>
 #' @family Finances One
@@ -21,7 +21,7 @@ fone_dataset <- function(dataset_id, resource_id, ...) {
 #' Return Finance One View Data
 #'
 #' @param view_id `character(1)` id of the view.
-#' @param ... Additional arguments passed to the request.
+#' @param ... additional arguments passed to the request.
 #' @returns A `data.frame()` with the requested view.
 #' @source <https://financesone.worldbank.org/data>
 #' @family Finances One
@@ -45,5 +45,30 @@ fone <- function(resource, ...) {
 
   body <- resp_body_string(resp)
   res <- utils::read.csv(textConnection(body, encoding = "UTF-8"))
+  as_tibble(res)
+}
+
+fone_iter <- function(resource, ...) {
+  req <- request("https://datacatalogapi.worldbank.org/dexapps/fone/api") |>
+    req_user_agent("worldbank (https://m-muecke.github.io/worldbank)") |>
+    req_error(body = \(resp) resp_body_string(resp)) |>
+    req_url_path_append(resource) |>
+    req_url_query(top = 1000L, type = "csv", ...)
+
+  resps <- req_perform_iterative(req,
+    next_req = iterate_with_offset("skip",
+      start = 0L,
+      offset = 1000L,
+      resp_complete = \(resp) length(resp$body) == 0L
+    ),
+    max_reqs = Inf
+  )
+
+  res <- resps_data(resps, \(resp) {
+    if (length(resp$body) > 0L) {
+      body <- resp_body_string(resp)
+      utils::read.csv(textConnection(body, encoding = "UTF-8"))
+    }
+  })
   as_tibble(res)
 }
