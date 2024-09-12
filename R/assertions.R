@@ -27,6 +27,10 @@ is_count <- function(x) {
     as.integer(x) == x && x > 0L
 }
 
+is_count_or_null <- function(x) {
+  is.null(x) || is_count(x)
+}
+
 is_valid_date <- function(x) {
   if (is.null(x)) {
     return(TRUE)

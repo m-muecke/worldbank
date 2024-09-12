@@ -2,12 +2,15 @@
 % Please edit documentation in R/fone.R
 \name{fone_dataset}
 \alias{fone_dataset}
-\title{Return Finance One Dataset Data}
+\alias{fone_view}
+\title{Return Finance One API Data}
 \source{
 \url{https://financesone.worldbank.org/data}
 }
 \usage{
-fone_dataset(dataset_id, resource_id, ...)
+fone_dataset(dataset_id, resource_id, ..., limit = NULL)
+
+fone_view(view_id, ..., limit = NULL)
 }
 \arguments{
 \item{dataset_id}{\code{character(1)} id of the associated dataset.}
@@ -15,20 +18,21 @@ fone_dataset(dataset_id, resource_id, ...)
 \item{resource_id}{\code{character(1)} id of the associated resource.}
 
 \item{...}{additional arguments passed to the request.}
+
+\item{view_id}{\code{character(1)} id of the view.}
+
+\item{`integer(1)`}{the maximum number of rows to return. Default is \code{NULL}.
+If \code{NULL}, all rows are returned.}
 }
 \value{
 A \code{data.frame()} with the requested dataset.
 }
 \description{
-Return Finance One Dataset Data
+Return Finance One API Data
 }
 \examples{
 \dontrun{
-fone_dataset(dataset_id = "DS00005", resource_id = "RS00005")
+fone_dataset(dataset_id = "DS00047", resource_id = "RS00005")
+fone_view(view_id = "DS01538")
 }
 }
-\seealso{
-Other Finances One: 
-\code{\link{fone_view}()}
-}
-\concept{Finances One}
