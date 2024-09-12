@@ -19,10 +19,10 @@ fone_view(view_id, ..., limit = NULL)
 
 \item{...}{additional arguments passed to the request.}
 
-\item{view_id}{\code{character(1)} id of the view.}
-
-\item{`integer(1)`}{the maximum number of rows to return. Default is \code{NULL}.
+\item{limit}{\code{integer(1)} the maximum number of rows to return. Default is \code{NULL}.
 If \code{NULL}, all rows are returned.}
+
+\item{view_id}{\code{character(1)} id of the view.}
 }
 \value{
 A \code{data.frame()} with the requested dataset.

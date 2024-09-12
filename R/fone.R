@@ -4,7 +4,7 @@
 #' @param resource_id `character(1)` id of the associated resource.
 #' @param view_id `character(1)` id of the view.
 #' @param ... additional arguments passed to the request.
-#' @param `integer(1)` the maximum number of rows to return. Default is `NULL`.
+#' @param limit `integer(1)` the maximum number of rows to return. Default is `NULL`.
 #'   If `NULL`, all rows are returned.
 #' @returns A `data.frame()` with the requested dataset.
 #' @source <https://financesone.worldbank.org/data>
