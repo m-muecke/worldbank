@@ -1,4 +1,4 @@
-#' Return Finance One API Data
+#' Return Finances One API Data
 #'
 #' @param dataset_id `character(1)` id of the associated dataset.
 #' @param resource_id `character(1)` id of the associated resource.

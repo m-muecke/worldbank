@@ -22,6 +22,7 @@ APIs:
   v2](https://datahelpdesk.worldbank.org/knowledgebase/articles/889392-about-the-indicators-api-documentation)
 - [Poverty and Inequality Platform (PIP)
   API](https://pip.worldbank.org/api).
+- [Finances One API](https://financesone.worldbank.org)
 
 The main difference to other packages is that it’s a modern
 implementation using the [httr2](https://httr2.r-lib.org) package and

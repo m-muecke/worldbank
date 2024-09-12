@@ -1,5 +1,7 @@
 # worldbank (development version)
 
+- Add support for Finances One API data
+
 # worldbank 0.3.0
 
 - Moved to HTTPS for all API calls

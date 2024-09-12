@@ -3,7 +3,7 @@
 \name{fone_dataset}
 \alias{fone_dataset}
 \alias{fone_view}
-\title{Return Finance One API Data}
+\title{Return Finances One API Data}
 \source{
 \url{https://financesone.worldbank.org/data}
 }
@@ -28,7 +28,7 @@ If \code{NULL}, all rows are returned.}
 A \code{data.frame()} with the requested dataset.
 }
 \description{
-Return Finance One API Data
+Return Finances One API Data
 }
 \examples{
 \dontrun{
