@@ -53,7 +53,7 @@ fone <- function(resource, ..., limit = NULL) {
     max_reqs = max_reqs
   )
 
-  res <- resps_data(resps, \(resp) {
+  res <- resps_data(resps, function(resp) {
     if (length(resp$body) > 0L) {
       body <- resp_body_string(resp)
       utils::read.csv(textConnection(body, encoding = "UTF-8"))
