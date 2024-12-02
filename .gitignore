@@ -1,6 +1,3 @@
-# MacOS
-.DS_Store
-
 # History files
 .Rhistory
 .Rapp.history
@@ -56,3 +53,6 @@ rsconnect/
 # CRAN
 CRAN-RELEASE
 CRAN-SUBMISSION
+
+# MacOS
+.DS_Store
