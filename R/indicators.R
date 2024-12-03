@@ -378,8 +378,8 @@ wb_country_indicator <- function(indicator = "NY.GDP.MKTP.CD",
   )
   has_start_date <- !is.null(start_date)
   has_end_date <- !is.null(end_date)
-  if (has_start_date && has_end_date) {
-    stopifnot(start_date <= end_date)
+  if (has_start_date && has_end_date && start_date > end_date) {
+    stop("`start_date` must be earlier than `end_date`.", call. = FALSE)
   }
   indicator <- toupper(indicator)
   country <- tolower(format_param(country))
