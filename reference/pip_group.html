@@ -146,23 +146,273 @@ Default <code>NULL</code>.</p></dd>
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
     <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="co"># \donttest{</span></span></span>
 <span class="r-in"><span><span class="fu">pip_group</span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"AFE"</span>, <span class="st">"LAC"</span><span class="op">)</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># A tibble: 88 × 14</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    region_name     region_code reporting_year poverty_line headcount poverty_gap</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>           <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>                <span style="color: #949494; font-style: italic;">&lt;int&gt;</span>        <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span>     <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span>       <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 1</span> Eastern and So… AFE                   <span style="text-decoration: underline;">1</span>981         2.15     0.520       0.221</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 2</span> Eastern and So… AFE                   <span style="text-decoration: underline;">1</span>982         2.15     0.524       0.225</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 3</span> Eastern and So… AFE                   <span style="text-decoration: underline;">1</span>983         2.15     0.529       0.229</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 4</span> Eastern and So… AFE                   <span style="text-decoration: underline;">1</span>984         2.15     0.539       0.235</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 5</span> Eastern and So… AFE                   <span style="text-decoration: underline;">1</span>985         2.15     0.547       0.240</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 6</span> Eastern and So… AFE                   <span style="text-decoration: underline;">1</span>986         2.15     0.540       0.235</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 7</span> Eastern and So… AFE                   <span style="text-decoration: underline;">1</span>987         2.15     0.533       0.230</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 8</span> Eastern and So… AFE                   <span style="text-decoration: underline;">1</span>988         2.15     0.533       0.229</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 9</span> Eastern and So… AFE                   <span style="text-decoration: underline;">1</span>989         2.15     0.533       0.230</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">10</span> Eastern and So… AFE                   <span style="text-decoration: underline;">1</span>990         2.15     0.542       0.236</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># ℹ 78 more rows</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># ℹ 8 more variables: poverty_severity &lt;dbl&gt;, watts &lt;dbl&gt;, mean &lt;dbl&gt;,</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;">#   spr &lt;dbl&gt;, pg &lt;dbl&gt;, estimate_type &lt;chr&gt;, reporting_pop &lt;int&gt;,</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;">#   pop_in_poverty &lt;int&gt;</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                    region_name region_code reporting_year poverty_line</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1  Eastern and Southern Africa         AFE           1981         2.15</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2  Eastern and Southern Africa         AFE           1982         2.15</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 3  Eastern and Southern Africa         AFE           1983         2.15</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 4  Eastern and Southern Africa         AFE           1984         2.15</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 5  Eastern and Southern Africa         AFE           1985         2.15</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 6  Eastern and Southern Africa         AFE           1986         2.15</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 7  Eastern and Southern Africa         AFE           1987         2.15</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 8  Eastern and Southern Africa         AFE           1988         2.15</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 9  Eastern and Southern Africa         AFE           1989         2.15</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 10 Eastern and Southern Africa         AFE           1990         2.15</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 11 Eastern and Southern Africa         AFE           1991         2.15</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 12 Eastern and Southern Africa         AFE           1992         2.15</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 13 Eastern and Southern Africa         AFE           1993         2.15</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 14 Eastern and Southern Africa         AFE           1994         2.15</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 15 Eastern and Southern Africa         AFE           1995         2.15</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 16 Eastern and Southern Africa         AFE           1996         2.15</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 17 Eastern and Southern Africa         AFE           1997         2.15</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 18 Eastern and Southern Africa         AFE           1998         2.15</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 19 Eastern and Southern Africa         AFE           1999         2.15</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 20 Eastern and Southern Africa         AFE           2000         2.15</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 21 Eastern and Southern Africa         AFE           2001         2.15</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 22 Eastern and Southern Africa         AFE           2002         2.15</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 23 Eastern and Southern Africa         AFE           2003         2.15</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 24 Eastern and Southern Africa         AFE           2004         2.15</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 25 Eastern and Southern Africa         AFE           2005         2.15</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 26 Eastern and Southern Africa         AFE           2006         2.15</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 27 Eastern and Southern Africa         AFE           2007         2.15</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 28 Eastern and Southern Africa         AFE           2008         2.15</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 29 Eastern and Southern Africa         AFE           2009         2.15</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 30 Eastern and Southern Africa         AFE           2010         2.15</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 31 Eastern and Southern Africa         AFE           2011         2.15</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 32 Eastern and Southern Africa         AFE           2012         2.15</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 33 Eastern and Southern Africa         AFE           2013         2.15</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 34 Eastern and Southern Africa         AFE           2014         2.15</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 35 Eastern and Southern Africa         AFE           2015         2.15</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 36 Eastern and Southern Africa         AFE           2016         2.15</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 37 Eastern and Southern Africa         AFE           2017         2.15</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 38 Eastern and Southern Africa         AFE           2018         2.15</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 39 Eastern and Southern Africa         AFE           2019         2.15</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 40 Eastern and Southern Africa         AFE           2020         2.15</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 41 Eastern and Southern Africa         AFE           2021         2.15</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 42 Eastern and Southern Africa         AFE           2022         2.15</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 43 Eastern and Southern Africa         AFE           2023         2.15</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 44 Eastern and Southern Africa         AFE           2024         2.15</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 45   Latin America &amp; Caribbean         LAC           1981         2.15</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 46   Latin America &amp; Caribbean         LAC           1982         2.15</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 47   Latin America &amp; Caribbean         LAC           1983         2.15</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 48   Latin America &amp; Caribbean         LAC           1984         2.15</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 49   Latin America &amp; Caribbean         LAC           1985         2.15</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 50   Latin America &amp; Caribbean         LAC           1986         2.15</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 51   Latin America &amp; Caribbean         LAC           1987         2.15</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 52   Latin America &amp; Caribbean         LAC           1988         2.15</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 53   Latin America &amp; Caribbean         LAC           1989         2.15</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 54   Latin America &amp; Caribbean         LAC           1990         2.15</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 55   Latin America &amp; Caribbean         LAC           1991         2.15</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 56   Latin America &amp; Caribbean         LAC           1992         2.15</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 57   Latin America &amp; Caribbean         LAC           1993         2.15</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 58   Latin America &amp; Caribbean         LAC           1994         2.15</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 59   Latin America &amp; Caribbean         LAC           1995         2.15</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 60   Latin America &amp; Caribbean         LAC           1996         2.15</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 61   Latin America &amp; Caribbean         LAC           1997         2.15</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 62   Latin America &amp; Caribbean         LAC           1998         2.15</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 63   Latin America &amp; Caribbean         LAC           1999         2.15</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 64   Latin America &amp; Caribbean         LAC           2000         2.15</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 65   Latin America &amp; Caribbean         LAC           2001         2.15</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 66   Latin America &amp; Caribbean         LAC           2002         2.15</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 67   Latin America &amp; Caribbean         LAC           2003         2.15</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 68   Latin America &amp; Caribbean         LAC           2004         2.15</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 69   Latin America &amp; Caribbean         LAC           2005         2.15</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 70   Latin America &amp; Caribbean         LAC           2006         2.15</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 71   Latin America &amp; Caribbean         LAC           2007         2.15</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 72   Latin America &amp; Caribbean         LAC           2008         2.15</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 73   Latin America &amp; Caribbean         LAC           2009         2.15</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 74   Latin America &amp; Caribbean         LAC           2010         2.15</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 75   Latin America &amp; Caribbean         LAC           2011         2.15</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 76   Latin America &amp; Caribbean         LAC           2012         2.15</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 77   Latin America &amp; Caribbean         LAC           2013         2.15</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 78   Latin America &amp; Caribbean         LAC           2014         2.15</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 79   Latin America &amp; Caribbean         LAC           2015         2.15</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 80   Latin America &amp; Caribbean         LAC           2016         2.15</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 81   Latin America &amp; Caribbean         LAC           2017         2.15</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 82   Latin America &amp; Caribbean         LAC           2018         2.15</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 83   Latin America &amp; Caribbean         LAC           2019         2.15</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 84   Latin America &amp; Caribbean         LAC           2020         2.15</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 85   Latin America &amp; Caribbean         LAC           2021         2.15</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 86   Latin America &amp; Caribbean         LAC           2022         2.15</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 87   Latin America &amp; Caribbean         LAC           2023         2.15</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 88   Latin America &amp; Caribbean         LAC           2024         2.15</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>     headcount poverty_gap poverty_severity      watts      mean       spr</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1  0.52042173  0.22145107      0.121232649 0.33957677  4.085327 0.5700932</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2  0.52417828  0.22483539      0.123868925 0.34644512  4.028695 0.5733427</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 3  0.52928522  0.22905639      0.127260166 0.35558007  3.964915 0.5768001</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 4  0.53927568  0.23535043      0.131499006 0.36688860  3.926850 0.5858181</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 5  0.54694571  0.23964151      0.134208174 0.37400224  3.877052 0.5915602</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 6  0.54034352  0.23513088      0.131350631 0.36686290  3.895628 0.5853431</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 7  0.53319316  0.23004308      0.127628558 0.35685027  3.934224 0.5798456</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 8  0.53284088  0.22933481      0.126815533 0.35454416  3.974020 0.5801866</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 9  0.53283896  0.22995403      0.127291040 0.35550979  3.977213 0.5815721</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 10 0.54239941  0.23577147      0.131215859 0.36566024  3.931667 0.5900156</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 11 0.55671196  0.24719575      0.139216950 0.38592500  3.847879 0.6043492</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 12 0.57003650  0.25650403      0.145739347 0.40266179  3.724149 0.6158708</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 13 0.58122807  0.26454632      0.151688858 0.41769267  3.491393 0.6239320</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 14 0.58315503  0.27040272      0.157285347 0.43141284  3.421670 0.6283633</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 15 0.57528312  0.26433827      0.153055595 0.42057142  3.490963 0.6216174</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 16 0.56613057  0.25780068      0.148685357 0.40922108  3.545529 0.6137924</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 17 0.56454623  0.25750221      0.149062185 0.41015425  3.534950 0.6135666</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 18 0.56614116  0.25805142      0.149524662 0.41155216  3.478845 0.6136200</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 19 0.56582138  0.25689050      0.149127911 0.41090174  3.410451 0.6120694</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 20 0.56347155  0.25826060      0.151602036 0.41710218  3.363552 0.6092108</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 21 0.55892350  0.25642538      0.150690514 0.41486240  3.348124 0.6071520</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 22 0.56558260  0.25549684      0.148339521 0.41029864  3.367293 0.6091019</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 23 0.55602064  0.24710728      0.141994536 0.39432390  3.395684 0.6013874</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 24 0.52267077  0.22905574      0.131480356 0.36568327  3.603913 0.5808657</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 25 0.50180003  0.21764736      0.124581954 0.34666750  3.788435 0.5676808</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 26 0.48307618  0.20589358      0.116335575 0.32460811  4.025001 0.5552813</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 27 0.47036883  0.19627459      0.108925681 0.30516479  4.081810 0.5453522</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 28 0.45817473  0.18738110      0.102283095 0.28791496  4.162859 0.5358695</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 29 0.45557385  0.18716427      0.102679810 0.28876609  4.154114 0.5347910</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 30 0.44182388  0.17788270      0.095984092 0.27131998  4.273283 0.5257280</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 31 0.42888467  0.17043534      0.091079721 0.25854403  4.327999 0.5169638</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 32 0.42234115  0.16507801      0.087197358 0.24883242  4.340530 0.5112084</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 33 0.41666791  0.16161648      0.084880397 0.24283539  4.345158 0.5056806</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 34 0.41517009  0.16114689      0.084555212 0.24195514  4.333647 0.5040999</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 35 0.41717603  0.16243540      0.085407534 0.24411205  4.334538 0.5055987</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 36 0.42219561  0.16644491      0.088110003 0.25109520  4.287088 0.5122029</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 37 0.42570975  0.16967664      0.090374436 0.25688863  4.243821 0.5147017</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 38 0.42768033  0.17160822      0.091834262 0.26051164  4.228021 0.5165798</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 39 0.43057071  0.17406708      0.093674805 0.26512554  4.194865 0.5196898</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 40 0.44483690  0.18313494      0.099856073 0.28127755  4.037298 0.5300654</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 41 0.44201728  0.18042287      0.097933841 0.27639067  4.090530 0.5282600</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 42 0.43564416  0.17654130      0.095309777 0.26949035  4.137958 0.5235408</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 43 0.43656253  0.17571544      0.094288275 0.26722379  4.134745 0.5225224</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 44 0.43202200  0.17325426      0.092680427 0.26297182  4.169551 0.5192633</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 45 0.15426281  0.06075173      0.034296708 0.09845181 11.392318 0.3461155</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 46 0.16095783  0.06316340      0.035550782 0.10207802 11.288492 0.3496525</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 47 0.18854723  0.07546656      0.042416560 0.12148403 10.549771 0.3622461</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 48 0.18539977  0.07321435      0.041044525 0.11794518 10.634717 0.3600224</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 49 0.17096596  0.06746239      0.037954783 0.10918646 10.681912 0.3547927</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 50 0.12309215  0.04796514      0.027632203 0.07973834 12.984206 0.3335003</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 51 0.14956258  0.06032829      0.034740751 0.09950539 11.804424 0.3449471</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 52 0.15636525  0.06540966      0.038526704 0.10949663 11.577002 0.3458400</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 53 0.15107115  0.06341696      0.037485789 0.10663945 11.774448 0.3434999</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 54 0.16337908  0.06739312      0.038751932 0.11022108 10.761888 0.3483173</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 55 0.15811359  0.06539902      0.037999876 0.10791474 10.569231 0.3436979</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 56 0.15698416  0.06540431      0.038633176 0.10965758 10.282580 0.3438162</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 57 0.15586462  0.06491909      0.038216808 0.10874018 10.957760 0.3487820</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 58 0.14373238  0.05950045      0.035011192 0.09998471 11.564685 0.3436203</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 59 0.14009261  0.05675806      0.033085805 0.09496772 11.717588 0.3418871</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 60 0.15258795  0.06444647      0.038587980 0.10959461 11.567060 0.3500257</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 61 0.15075908  0.06345480      0.037738799 0.10713106 11.836561 0.3494407</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 62 0.14850272  0.06263290      0.037120586 0.10558612 12.070296 0.3462925</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 63 0.15072675  0.06369786      0.037972667 0.10812510 11.663267 0.3490795</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 64 0.13804455  0.05881394      0.035558580 0.10103444 12.261285 0.3429185</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 65 0.13522697  0.05627495      0.033058511 0.09387620 12.277620 0.3415265</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 66 0.12638988  0.04957483      0.027802863 0.07987898 12.129367 0.3398352</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 67 0.12269236  0.04863414      0.027543687 0.07893418 12.217583 0.3343499</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 68 0.11309916  0.04385638      0.024513308 0.07056207 12.467335 0.3285014</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 69 0.10739447  0.04247138      0.024074663 0.06890393 13.170503 0.3242921</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 70 0.08867487  0.03452433      0.019264622 0.05532033 14.133665 0.3128169</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 71 0.07737145  0.02858589      0.015541230 0.04516322 14.670393 0.3075808</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 72 0.07029680  0.02561234      0.013762016 0.04017642 15.172531 0.3019620</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 73 0.06697408  0.02411384      0.012795997 0.03754876 15.169317 0.2977936</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 74 0.05917654  0.02146382      0.011425771 0.03350919 15.698356 0.2902426</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 75 0.05461969  0.01989509      0.010682103 0.03122029 16.363998 0.2847596</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 76 0.05114976  0.01811118      0.009498010 0.02802705 17.007472 0.2840545</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 77 0.04569449  0.01562915      0.008063751 0.02408157 17.447175 0.2787070</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 78 0.04305877  0.01436470      0.007386953 0.02225551 17.449786 0.2747969</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 79 0.04057603  0.01316207      0.006482270 0.01971841 17.833192 0.2716442</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 80 0.04272208  0.01454127      0.007339602 0.02193864 17.990470 0.2731433</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 81 0.04282839  0.01481901      0.007499327 0.02239082 18.138172 0.2705302</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 82 0.04216765  0.01464635      0.007436368 0.02211492 18.322534 0.2687468</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 83 0.04212441  0.01484472      0.007624193 0.02261073 18.491548 0.2704784</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 84 0.03832641  0.01347266      0.007163600 0.02122357 17.334242 0.2569180</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 85 0.04527383  0.01563816      0.007888892 0.02352361 17.553555 0.2683400</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 86 0.03452317  0.01182472      0.006109263 0.01822085 18.650365 0.2580919</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 87 0.03366245  0.01160463      0.005983934 0.01785932 18.892560 0.2571488</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 88 0.03320501  0.01148274      0.005929857 0.01767704 19.101763 0.2566346</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>           pg estimate_type reporting_pop pop_in_poverty</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1  16.151030    projection     237937461      123827826</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2  16.396791    projection     245386717      128626387</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 3  16.726398    projection     252779730      133792576</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 4  17.073111    projection     260209149      140324465</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 5  17.280111    projection     267938123      146547607</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 6  17.105689    projection     276035920      149154221</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 7  16.781690    projection     284490394      151688333</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 8  16.666803    projection     292795186      156013245</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 9  16.682828    projection     301124880      160451068</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 10 16.990876    projection     309890664      168084512</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 11 17.577463    projection     318544083      177337302</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 12 18.081326    projection     326933522      186364040</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 13 18.595493        actual     335625136      195074749</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 14 19.070827        actual     344418362      200849301</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 15 18.747040        actual     353466601      203343371</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 16 18.426600        actual     362985802      205497359</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 17 18.512141    projection     372352230      210210049</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 18 18.598413        actual     381715600      216104912</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 19 18.688617        actual     391486231      221511279</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 20 19.009456        actual     401600588      226290505</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 21 18.966391        actual     412001885      230277537</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 22 18.804301        actual     422741118      239095020</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 23 18.350533        actual     433807484      241205913</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 24 17.541169        actual     445281555      232735653</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 25 16.951238        actual     457153837      229399807</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 26 16.137597        actual     469508516      226808381</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 27 15.445212        actual     482406426      226908947</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 28 14.860466        actual     495748900      227139620</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 29 14.915066        actual     509410477      232074094</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 30 14.353748        actual     523459657      231276976</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 31 13.970329        actual     537792950      230651150</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 32 13.700673        actual     552530654      233356431</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 33 13.526172        actual     567892149      236622436</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 34 13.492912        actual     583651101      242314481</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 35 13.538399        actual     600008424      250309132</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 36 13.743005        actual     616377605      260231919</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 37 13.921226        actual     632746570      269366387</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 38 14.031678        actual     649757148      277888349</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 39 14.175303        actual     667242986      287295283</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 40 14.699852    projection     685112979      304763532</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 41 14.549529    projection     702977106      310728028</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 42 14.316541    projection     720859132      314038073</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 43 14.233021       nowcast     739112053      322668629</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 44 14.083995       nowcast     757862662      327413345</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 45  7.568222        actual     365416179       56370127</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 46  7.708577        actual     373239378       60075800</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 47  8.500510        actual     381194012       71873077</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 48  8.404782        actual     389186556       72155096</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 49  8.050931        actual     397166929       67902025</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 50  6.846616        actual     405131151       49868464</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 51  7.566093        actual     413096830       61783829</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 52  7.814283        actual     421110516       65847052</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 53  7.713681        actual     429142880       64831107</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 54  8.012427        actual     437302121       71446019</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 55  7.735284        actual     445514444       70441889</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 56  8.049022        actual     453637904       71213966</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 57  8.049528        actual     461724664       71966538</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 58  7.634014        actual     469797636       67525133</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 59  7.521938        actual     477823621       66939561</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 60  8.074639        actual     485741920       74118363</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 61  7.892366        actual     493590213       74413208</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 62  7.780602        actual     501370524       74454886</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 63  7.984178        actual     509049294       76727348</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 64  7.637043        actual     516600237       71313849</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 65  7.283194        actual     523993100       70857998</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 66  6.779740        actual     531224874       67141449</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 67  6.715905        actual     538249810       66039140</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 68  6.351000        actual     545156477       61656739</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 69  6.153334        actual     551989221       59280591</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 70  5.480834        actual     558674880       49540423</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 71  5.036921        actual     565230562       43732706</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 72  4.777241        actual     571652830       40185365</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 73  4.657479        actual     578012032       38711824</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 74  4.401692        actual     584154099       34568220</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 75  4.224403        actual     590822133       32270520</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 76  4.055448        actual     597484757       30561199</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 77  3.860116        actual     604017566       27600273</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 78  3.793331        actual     610469668       26286070</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 79  3.602018        actual     616863630       25029874</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 80  3.659271        actual     623198184       26624323</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 81  3.628146        actual     629400315       26956204</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 82  3.594427        actual     635357588       26791535</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 83  3.573639        actual     641020331       27002603</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 84  3.614891        actual     646169112       24765345</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 85  3.667315        actual     650633048       29456653</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 86  3.357298        actual     655002821       22612773</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 87  3.278143       nowcast     659727136       22208033</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 88  3.246569       nowcast     664678352       22070650</span>
 <span class="r-in"><span><span class="co"># }</span></span></span>
 </code></pre></div>
     </div>

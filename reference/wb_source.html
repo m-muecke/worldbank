@@ -111,21 +111,216 @@ If <code>NULL</code>, all sources are returned.</p></dd>
     <div class="section level2">
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
     <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="fu">wb_source</span><span class="op">(</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># A tibble: 69 × 9</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>       id last_updated name             code  description url   data_availability</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> <span style="color: #949494; font-style: italic;">&lt;date&gt;</span>       <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>            <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>       <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> <span style="color: #949494; font-style: italic;">&lt;lgl&gt;</span>            </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 1</span>     1 2021-08-18   Doing Business   DBS   <span style="color: #BB0000;">NA</span>          <span style="color: #BB0000;">NA</span>    TRUE             </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 2</span>     2 2024-11-13   World Developme… WDI   <span style="color: #BB0000;">NA</span>          <span style="color: #BB0000;">NA</span>    TRUE             </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 3</span>     3 2024-11-05   Worldwide Gover… WGI   <span style="color: #BB0000;">NA</span>          <span style="color: #BB0000;">NA</span>    TRUE             </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 4</span>     5 2016-03-21   Subnational Mal… SNM   <span style="color: #BB0000;">NA</span>          <span style="color: #BB0000;">NA</span>    TRUE             </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 5</span>     6 2024-02-29   International D… IDS   <span style="color: #BB0000;">NA</span>          <span style="color: #BB0000;">NA</span>    TRUE             </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 6</span>    11 2013-02-22   Africa Developm… ADI   <span style="color: #BB0000;">NA</span>          <span style="color: #BB0000;">NA</span>    TRUE             </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 7</span>    12 2024-06-25   Education Stati… EDS   <span style="color: #BB0000;">NA</span>          <span style="color: #BB0000;">NA</span>    TRUE             </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 8</span>    13 2022-03-25   Enterprise Surv… ESY   <span style="color: #BB0000;">NA</span>          <span style="color: #BB0000;">NA</span>    TRUE             </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 9</span>    14 2024-09-24   Gender Statisti… GDS   <span style="color: #BB0000;">NA</span>          <span style="color: #BB0000;">NA</span>    TRUE             </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">10</span>    15 2024-11-20   Global Economic… GEM   <span style="color: #BB0000;">NA</span>          <span style="color: #BB0000;">NA</span>    TRUE             </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># ℹ 59 more rows</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># ℹ 2 more variables: metadata_availability &lt;lgl&gt;, concepts &lt;int&gt;</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    id last_updated</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1   1   2021-08-18</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2   2   2024-11-13</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 3   3   2024-11-05</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 4   5   2016-03-21</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 5   6   2024-12-03</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 6  11   2013-02-22</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 7  12   2024-06-25</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 8  13   2022-03-25</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 9  14   2024-09-24</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 10 15   2024-12-04</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 11 16   2024-07-01</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 12 18   2021-07-23</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 13 19   2018-09-19</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 14 20   2024-11-19</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 15 22   2024-10-31</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 16 23   2024-10-31</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 17 25   2024-11-13</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 18 27   2024-06-11</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 19 28   2024-03-28</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 20 29   2024-02-13</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 21 30   2016-03-31</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 22 31   2024-06-28</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 23 32   2022-09-23</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 24 33   2019-02-27</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 25 34   2013-04-12</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 26 35   2018-06-30</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 27 37   2016-04-06</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 28 38   2015-04-27</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 29 39   2022-12-13</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 30 40   2024-07-01</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 31 41   2015-05-22</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 32 43   2023-06-08</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 33 45   2022-08-11</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 34 46   2022-07-22</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 35 50   2017-09-21</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 36 54   2024-11-11</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 37 57   2023-08-10</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 38 58   2019-04-25</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 39 59   2024-10-08</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 40 60   2018-04-19</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 41 61   2019-04-25</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 42 62   2020-08-24</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 43 63   2020-09-21</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 44 64   2022-09-20</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 45 65   2019-11-06</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 46 66   2024-03-26</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 47 67   2024-12-04</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 48 68   2024-12-04</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 49 69   2019-06-27</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 50 70   2024-11-30</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 51 71   2021-09-10</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 52 73   2019-06-27</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 53 75   2024-04-16</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 54 76   2020-12-07</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 55 77   2020-12-07</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 56 78   2020-10-21</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 57 79   2024-07-30</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 58 80   2020-07-25</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 59 81   2024-12-03</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 60 82   2021-03-24</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 61 83   2024-11-11</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 62 84   2024-10-03</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 63 85   2024-04-29</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 64 86   2023-05-22</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 65 87   2022-10-07</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 66 88   2024-07-24</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 67 89   2024-12-05</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 68 90   2024-08-04</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 69 91   2024-08-19</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                                                                    name code</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1                                                        Doing Business  DBS</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2                                          World Development Indicators  WDI</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 3                                       Worldwide Governance Indicators  WGI</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 4                                     Subnational Malnutrition Database  SNM</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 5                                         International Debt Statistics  IDS</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 6                                         Africa Development Indicators  ADI</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 7                                                  Education Statistics  EDS</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 8                                                    Enterprise Surveys  ESY</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 9                                                     Gender Statistics  GDS</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 10                                              Global Economic Monitor  GEM</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 11                           Health Nutrition and Population Statistics  HNP</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 12                                       IDA Results Measurement System  IDA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 13                                         Millennium Development Goals  MDG</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 14                                         Quarterly Public Sector Debt  PSD</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 15                              Quarterly External Debt Statistics SDDS  QDS</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 16                              Quarterly External Debt Statistics GDDS  QDG</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 17                                                                 Jobs  JOB</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 18                                            Global Economic Prospects  GEP</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 19                                           Global Financial Inclusion  FDX</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 20  The Atlas of Social Protection: Indicators of Resilience and Equity  GSP</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 21        Exporter Dynamics Database – Indicators at Country-Year Level  ED1</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 22                          Country Policy and Institutional Assessment  CPI</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 23                                         Global Financial Development  GFD</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 24                                   G20 Financial Inclusion Indicators  G2F</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 25                                     Global Partnership for Education  GPE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 26                                           Sustainable Energy for All  SE4</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 27                                                       LAC Equity Lab  LEL</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 28                                                  Subnational Poverty  SNP</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 29        Health Nutrition and Population Statistics by Wealth Quintile  HNQ</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 30                                 Population estimates and projections  HPP</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 31                 Country Partnership Strategy for India (FY2013 - 17)  CPS</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 32                                                 Adjusted Net Savings  WAT</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 33                  Indonesia Database for Policy and Economic Research  IDD</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 34                                        Sustainable Development Goals  SDG</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 35                                               Subnational Population  SNT</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 36                                              Joint External Debt Hub  JED</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 37                                                WDI Database Archives  WDA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 38                                            Universal Health Coverage  UHC</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 39                                                      Wealth Accounts  WAC</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 40                                                     Economic Fitness  EFT</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 41                                              PPPs Regulatory Quality  PRQ</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 42                          International Comparison Program (ICP) 2011  ICP</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 43                                                  Human Capital Index  HCI</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 44                                     Worldwide Bureaucracy Indicators  WBI</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 45                    Health Equity and Financial Protection Indicators  HPI</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 46                                          Logistics Performance Index  LPI</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 47                                                            PEFA 2011  PF1</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 48                                                            PEFA 2016  PF6</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 49            Global Financial Inclusion and Consumer Protection Survey  RFA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 50                                                   Economic Fitness 2  EF2</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 51                          International Comparison Program (ICP) 2005  IC5</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 52 Global Financial Inclusion and Consumer Protection Survey (Internal)  RFI</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 53                        Environment, Social and Governance (ESG) Data  ESG</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 54                      Remittance Prices Worldwide (Sending Countries)  RWS</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 55                    Remittance Prices Worldwide (Receiving Countries)  RWR</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 56                                                             ICP 2017  IC7</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 57                                                           PEFA_GRPFM  GRP</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 58                           Gender Disaggregated Labor Database (GDLD)  GDL</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 59                                  International Debt Statistics: DSSI  DSI</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 60                                            Global Public Procurement  GPP</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 61                             Statistical Performance Indicators (SPI)  SPI</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 62                                                     Education Policy  EDP</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 63                                                        PEFA_2021_SNG  SNG</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 64                               Global Jobs Indicators Database (JOIN)  JON</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 65                        Country Climate and Development Report (CCDR)  CCD</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 66                                            Food Prices for Nutrition  FPN</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 67                           Identification for Development (ID4D) Data  ID4</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 68                                                             ICP 2021  IC2</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 69                                                           PEFA_CRPFM  CRP</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    description  url data_availability metadata_availability concepts</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1         &lt;NA&gt; &lt;NA&gt;              TRUE                  TRUE        3</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2         &lt;NA&gt; &lt;NA&gt;              TRUE                  TRUE        3</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 3         &lt;NA&gt; &lt;NA&gt;              TRUE                  TRUE        3</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 4         &lt;NA&gt; &lt;NA&gt;              TRUE                  TRUE        3</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 5         &lt;NA&gt; &lt;NA&gt;              TRUE                  TRUE        4</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 6         &lt;NA&gt; &lt;NA&gt;              TRUE                  TRUE        3</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 7         &lt;NA&gt; &lt;NA&gt;              TRUE                  TRUE        3</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 8         &lt;NA&gt; &lt;NA&gt;              TRUE                  TRUE        3</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 9         &lt;NA&gt; &lt;NA&gt;              TRUE                  TRUE        3</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 10        &lt;NA&gt; &lt;NA&gt;              TRUE                  TRUE        3</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 11        &lt;NA&gt; &lt;NA&gt;              TRUE                  TRUE        3</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 12        &lt;NA&gt; &lt;NA&gt;              TRUE                  TRUE        3</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 13        &lt;NA&gt; &lt;NA&gt;              TRUE                  TRUE        3</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 14        &lt;NA&gt; &lt;NA&gt;              TRUE                  TRUE        3</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 15        &lt;NA&gt; &lt;NA&gt;              TRUE                  TRUE        3</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 16        &lt;NA&gt; &lt;NA&gt;              TRUE                  TRUE        3</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 17        &lt;NA&gt; &lt;NA&gt;              TRUE                  TRUE        3</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 18        &lt;NA&gt; &lt;NA&gt;              TRUE                 FALSE        3</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 19        &lt;NA&gt; &lt;NA&gt;              TRUE                  TRUE        3</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 20        &lt;NA&gt; &lt;NA&gt;              TRUE                  TRUE        3</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 21        &lt;NA&gt; &lt;NA&gt;              TRUE                 FALSE        3</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 22        &lt;NA&gt; &lt;NA&gt;              TRUE                  TRUE        3</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 23        &lt;NA&gt; &lt;NA&gt;              TRUE                 FALSE        3</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 24        &lt;NA&gt; &lt;NA&gt;              TRUE                  TRUE        3</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 25        &lt;NA&gt; &lt;NA&gt;              TRUE                  TRUE        3</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 26        &lt;NA&gt; &lt;NA&gt;              TRUE                  TRUE        3</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 27        &lt;NA&gt; &lt;NA&gt;              TRUE                  TRUE        3</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 28        &lt;NA&gt; &lt;NA&gt;              TRUE                 FALSE        3</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 29        &lt;NA&gt; &lt;NA&gt;              TRUE                  TRUE        3</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 30        &lt;NA&gt; &lt;NA&gt;              TRUE                  TRUE        3</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 31        &lt;NA&gt; &lt;NA&gt;              TRUE                 FALSE        3</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 32        &lt;NA&gt; &lt;NA&gt;              TRUE                 FALSE        3</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 33        &lt;NA&gt; &lt;NA&gt;              TRUE                 FALSE        3</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 34        &lt;NA&gt; &lt;NA&gt;              TRUE                 FALSE        3</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 35        &lt;NA&gt; &lt;NA&gt;              TRUE                 FALSE        3</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 36        &lt;NA&gt; &lt;NA&gt;              TRUE                 FALSE        3</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 37        &lt;NA&gt; &lt;NA&gt;              TRUE                  TRUE        4</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 38        &lt;NA&gt; &lt;NA&gt;              TRUE                  TRUE        3</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 39        &lt;NA&gt; &lt;NA&gt;              TRUE                  TRUE        3</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 40        &lt;NA&gt; &lt;NA&gt;              TRUE                  TRUE        3</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 41        &lt;NA&gt; &lt;NA&gt;              TRUE                  TRUE        3</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 42        &lt;NA&gt; &lt;NA&gt;             FALSE                  TRUE        4</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 43        &lt;NA&gt; &lt;NA&gt;              TRUE                  TRUE        3</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 44        &lt;NA&gt; &lt;NA&gt;              TRUE                 FALSE        3</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 45        &lt;NA&gt; &lt;NA&gt;              TRUE                  TRUE        3</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 46        &lt;NA&gt; &lt;NA&gt;              TRUE                  TRUE        3</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 47        &lt;NA&gt; &lt;NA&gt;              TRUE                  TRUE        4</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 48        &lt;NA&gt; &lt;NA&gt;              TRUE                  TRUE        4</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 49        &lt;NA&gt; &lt;NA&gt;              TRUE                  TRUE        3</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 50        &lt;NA&gt; &lt;NA&gt;              TRUE                  TRUE        3</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 51        &lt;NA&gt; &lt;NA&gt;              TRUE                 FALSE        4</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 52        &lt;NA&gt; &lt;NA&gt;              TRUE                  TRUE        3</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 53        &lt;NA&gt; &lt;NA&gt;              TRUE                  TRUE        3</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 54        &lt;NA&gt; &lt;NA&gt;              TRUE                 FALSE        3</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 55        &lt;NA&gt; &lt;NA&gt;              TRUE                 FALSE        3</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 56        &lt;NA&gt; &lt;NA&gt;              TRUE                  TRUE        4</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 57        &lt;NA&gt; &lt;NA&gt;              TRUE                  TRUE        4</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 58        &lt;NA&gt; &lt;NA&gt;              TRUE                 FALSE        4</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 59        &lt;NA&gt; &lt;NA&gt;              TRUE                 FALSE        4</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 60        &lt;NA&gt; &lt;NA&gt;              TRUE                 FALSE        3</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 61        &lt;NA&gt; &lt;NA&gt;              TRUE                  TRUE        3</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 62        &lt;NA&gt; &lt;NA&gt;              TRUE                  TRUE        3</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 63        &lt;NA&gt; &lt;NA&gt;              TRUE                 FALSE        4</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 64        &lt;NA&gt; &lt;NA&gt;              TRUE                  TRUE        3</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 65        &lt;NA&gt; &lt;NA&gt;              TRUE                  TRUE        3</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 66        &lt;NA&gt; &lt;NA&gt;              TRUE                  TRUE        4</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 67        &lt;NA&gt; &lt;NA&gt;              TRUE                  TRUE        3</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 68        &lt;NA&gt; &lt;NA&gt;              TRUE                  TRUE        4</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 69        &lt;NA&gt; &lt;NA&gt;              TRUE                  TRUE        4</span>
 </code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc" aria-label="Table of contents"><h2>On this page</h2>
