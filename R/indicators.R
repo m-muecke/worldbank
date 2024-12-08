@@ -21,7 +21,7 @@ wb_language <- function() {
     check.names = FALSE
   )
   res <- clean_strings(res)
-  as_tibble(res)
+  res
 }
 
 #' World Bank lending type data
@@ -54,7 +54,7 @@ wb_lending_type <- function(type = NULL, lang = "en") {
     check.names = FALSE
   )
   res <- clean_strings(res)
-  as_tibble(res)
+  res
 }
 
 #' World Bank income level data
@@ -87,7 +87,7 @@ wb_income_level <- function(income = NULL, lang = "en") {
     check.names = FALSE
   )
   res <- clean_strings(res)
-  as_tibble(res)
+  res
 }
 
 #' World Bank source data
@@ -132,7 +132,7 @@ wb_source <- function(source = NULL, lang = "en") {
     check.names = FALSE
   )
   res <- clean_strings(res)
-  as_tibble(res)
+  res
 }
 
 #' World Bank topic data
@@ -165,7 +165,7 @@ wb_topic <- function(topic = NULL, lang = "en") {
     check.names = FALSE
   )
   res <- clean_strings(res)
-  as_tibble(res)
+  res
 }
 
 #' World Bank region data
@@ -203,7 +203,7 @@ wb_region <- function(region = NULL, lang = "en") {
     check.names = FALSE
   )
   res <- clean_strings(res)
-  as_tibble(res)
+  res
 }
 
 #' World Bank country data
@@ -269,7 +269,7 @@ wb_country <- function(country = NULL, lang = "en") {
     check.names = FALSE
   )
   res <- clean_strings(res)
-  as_tibble(res)
+  res
 }
 
 #' World Bank indicator data
@@ -326,7 +326,7 @@ wb_indicator <- function(indicator = NULL, lang = "en") {
     check.names = FALSE
   )
   res <- clean_strings(res)
-  as_tibble(res)
+  res
 }
 
 #' World Bank country indicator data
@@ -412,7 +412,7 @@ wb_country_indicator <- function(indicator = "NY.GDP.MKTP.CD",
     }
     res <- clean_strings(res)
   }
-  as_tibble(res)
+  res
 }
 
 is_wb_error <- function(resp) {

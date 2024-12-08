@@ -1,5 +1,7 @@
 # worldbank (development version)
 
+* Removed conditional returning of tibble and instead always returning a
+  data table now. This assures type stability across all functions.
 - Add support for Finances One API data
 
 # worldbank 0.3.0

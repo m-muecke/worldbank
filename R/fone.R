@@ -59,5 +59,5 @@ fone <- function(resource, ..., limit = NULL) {
       utils::read.csv(textConnection(body, encoding = "UTF-8"))
     }
   })
-  as_tibble(res)
+  res
 }

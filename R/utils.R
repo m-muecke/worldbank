@@ -2,15 +2,6 @@
   if (is.null(x)) y else x
 }
 
-as_tibble <- function(x) {
-  if (getOption("worldbank.use_tibble", TRUE) &&
-    requireNamespace("tibble", quietly = TRUE)) {
-    tibble::as_tibble(x)
-  } else {
-    x
-  }
-}
-
 clean_strings <- function(data) {
   data[] <- lapply(data, \(x) if (is.character(x)) na_if_empty(trimws(x)) else x)
   data

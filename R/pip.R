@@ -71,7 +71,7 @@ pip_data <- function(country = NULL,
     format = "csv",
     .multi = "comma"
   )
-  as_tibble(res)
+  res
 }
 
 #' Return aggregation of PIP statistics
@@ -134,7 +134,7 @@ pip_group <- function(country = NULL,
     format = "csv",
     .multi = "comma"
   )
-  as_tibble(res)
+  res
 }
 
 #' Return the available data versions
@@ -149,7 +149,7 @@ pip_group <- function(country = NULL,
 #' }
 pip_versions <- function() {
   res <- pip("versions", format = "csv")
-  as_tibble(res)
+  res
 }
 
 #' Return citation for a given version
@@ -187,7 +187,7 @@ pip_citation <- function(release_version = NULL,
     date_accessed = res$date_accessed[[1L]],
     check.names = FALSE
   )
-  as_tibble(res)
+  res
 }
 
 #' Return auxiliary data tables
@@ -246,7 +246,7 @@ pip_aux <- function(table = NULL,
       format = "csv"
     )
     res <- clean_strings(res)
-    as_tibble(res)
+    res
   }
 }
 
@@ -285,7 +285,7 @@ pip_valid_params <- function(endpoint = c("all", "aux", "pip", "pip-grp", "pip-i
     format = "csv"
   )
   res <- clean_strings(res)
-  as_tibble(res)
+  res
 }
 
 #' Return information about the API
