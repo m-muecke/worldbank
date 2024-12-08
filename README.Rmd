@@ -11,6 +11,7 @@ knitr::opts_chunk$set(
   fig.path = "man/figures/README-",
   out.width = "100%"
 )
+options(str = strOptions(strict.width = "cut"))
 ```
 
 # worldbank
@@ -73,7 +74,7 @@ wb_country(c("US", "DE"))
 
 # or fetch all (default)
 country <- wb_country()
-str(country, strict.width = "cut")
+str(country)
 
 
 # search for specific indicator
@@ -82,11 +83,11 @@ ind <- subset(
   ind,
   grepl("GDP", id, fixed = TRUE) & source_value == "World Development Indicators"
 )
-str(ind, strict.width = "cut")
+str(ind)
 
 # fetch indicator data for specific or all countries (default)
 gdp <- wb_country_indicator("NY.GDP.MKTP.CD", c("US", "DE", "FR", "CH", "JP"))
-str(gdp, strict.width = "cut")
+str(gdp)
 ```
 
 ```{r plotting, message = FALSE, echo = FALSE, dpi = 300}

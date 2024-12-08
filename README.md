@@ -100,7 +100,7 @@ wb_country(c("US", "DE"))
 
 # or fetch all (default)
 country <- wb_country()
-str(country, strict.width = "cut")
+str(country)
 #> 'data.frame':    296 obs. of  18 variables:
 #>  $ country_id        : chr  "ABW" "AFE" "AFG" "AFR" ...
 #>  $ country_code      : chr  "AW" "ZH" "AF" "A9" ...
@@ -128,7 +128,7 @@ ind <- subset(
   ind,
   grepl("GDP", id, fixed = TRUE) & source_value == "World Development Indicators"
 )
-str(ind, strict.width = "cut")
+str(ind)
 #> 'data.frame':    37 obs. of  9 variables:
 #>  $ id                 : chr  "EG.GDP.PUSE.KO.PP" "EG.GDP.PUSE.KO.PP.KD" "EN.G"..
 #>  $ name               : chr  "GDP per unit of energy use (PPP $ per kg of oil"..
@@ -142,7 +142,7 @@ str(ind, strict.width = "cut")
 
 # fetch indicator data for specific or all countries (default)
 gdp <- wb_country_indicator("NY.GDP.MKTP.CD", c("US", "DE", "FR", "CH", "JP"))
-str(gdp, strict.width = "cut")
+str(gdp)
 #> 'data.frame':    320 obs. of  10 variables:
 #>  $ date          : int  2023 2022 2021 2020 2019 2018 2017 2016 2015 2014 ...
 #>  $ indicator_id  : chr  "NY.GDP.MKTP.CD" "NY.GDP.MKTP.CD" "NY.GDP.MKTP.CD" "N"..
