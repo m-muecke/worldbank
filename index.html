@@ -127,42 +127,6 @@
 <span></span>
 <span><span class="co"># or fetch all (default)</span></span>
 <span><span class="va">country</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/wb_country.html">wb_country</a></span><span class="op">(</span><span class="op">)</span></span>
-<span><span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="va">country</span><span class="op">)</span></span>
-<span><span class="co">#&gt;   country_id country_code                country_name region_id region_code</span></span>
-<span><span class="co">#&gt; 1        ABW           AW                       Aruba       LCN          ZJ</span></span>
-<span><span class="co">#&gt; 2        AFE           ZH Africa Eastern and Southern        NA          NA</span></span>
-<span><span class="co">#&gt; 3        AFG           AF                 Afghanistan       SAS          8S</span></span>
-<span><span class="co">#&gt; 4        AFR           A9                      Africa        NA          NA</span></span>
-<span><span class="co">#&gt; 5        AFW           ZI  Africa Western and Central        NA          NA</span></span>
-<span><span class="co">#&gt; 6        AGO           AO                      Angola       SSF          ZG</span></span>
-<span><span class="co">#&gt;                region_value admin_region_id admin_region_code</span></span>
-<span><span class="co">#&gt; 1 Latin America &amp; Caribbean            &lt;NA&gt;              &lt;NA&gt;</span></span>
-<span><span class="co">#&gt; 2                Aggregates            &lt;NA&gt;              &lt;NA&gt;</span></span>
-<span><span class="co">#&gt; 3                South Asia             SAS                8S</span></span>
-<span><span class="co">#&gt; 4                Aggregates            &lt;NA&gt;              &lt;NA&gt;</span></span>
-<span><span class="co">#&gt; 5                Aggregates            &lt;NA&gt;              &lt;NA&gt;</span></span>
-<span><span class="co">#&gt; 6        Sub-Saharan Africa             SSA                ZF</span></span>
-<span><span class="co">#&gt;                           admin_region_value income_level_id income_level_code</span></span>
-<span><span class="co">#&gt; 1                                       &lt;NA&gt;             HIC                XD</span></span>
-<span><span class="co">#&gt; 2                                       &lt;NA&gt;              NA                NA</span></span>
-<span><span class="co">#&gt; 3                                 South Asia             LIC                XM</span></span>
-<span><span class="co">#&gt; 4                                       &lt;NA&gt;              NA                NA</span></span>
-<span><span class="co">#&gt; 5                                       &lt;NA&gt;              NA                NA</span></span>
-<span><span class="co">#&gt; 6 Sub-Saharan Africa (excluding high income)             LMC                XN</span></span>
-<span><span class="co">#&gt;    income_level_value lending_type_id lending_type_code lending_type_value</span></span>
-<span><span class="co">#&gt; 1         High income             LNX                XX     Not classified</span></span>
-<span><span class="co">#&gt; 2          Aggregates            &lt;NA&gt;              &lt;NA&gt;         Aggregates</span></span>
-<span><span class="co">#&gt; 3          Low income             IDX                XI                IDA</span></span>
-<span><span class="co">#&gt; 4          Aggregates            &lt;NA&gt;              &lt;NA&gt;         Aggregates</span></span>
-<span><span class="co">#&gt; 5          Aggregates            &lt;NA&gt;              &lt;NA&gt;         Aggregates</span></span>
-<span><span class="co">#&gt; 6 Lower middle income             IBD                XF               IBRD</span></span>
-<span><span class="co">#&gt;   capital_city longitude latitude</span></span>
-<span><span class="co">#&gt; 1   Oranjestad  -70.0167 12.51670</span></span>
-<span><span class="co">#&gt; 2         &lt;NA&gt;        NA       NA</span></span>
-<span><span class="co">#&gt; 3        Kabul   69.1761 34.52280</span></span>
-<span><span class="co">#&gt; 4         &lt;NA&gt;        NA       NA</span></span>
-<span><span class="co">#&gt; 5         &lt;NA&gt;        NA       NA</span></span>
-<span><span class="co">#&gt; 6       Luanda   13.2420 -8.81155</span></span>
 <span></span>
 <span><span class="co"># search for specific indicator</span></span>
 <span><span class="va">ind</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/wb_indicator.html">wb_indicator</a></span><span class="op">(</span><span class="op">)</span></span>
@@ -170,67 +134,9 @@
 <span>  <span class="va">ind</span>,</span>
 <span>  <span class="fu"><a href="https://rdrr.io/r/base/grep.html" class="external-link">grepl</a></span><span class="op">(</span><span class="st">"GDP"</span>, <span class="va">id</span>, fixed <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span> <span class="op">&amp;</span> <span class="va">source_value</span> <span class="op">==</span> <span class="st">"World Development Indicators"</span></span>
 <span><span class="op">)</span></span>
-<span><span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="va">ind</span><span class="op">)</span></span>
-<span><span class="co">#&gt;                            id</span></span>
-<span><span class="co">#&gt; 6243        EG.GDP.PUSE.KO.PP</span></span>
-<span><span class="co">#&gt; 6244     EG.GDP.PUSE.KO.PP.KD</span></span>
-<span><span class="co">#&gt; 6365     EN.GHG.CO2.RT.GDP.KD</span></span>
-<span><span class="co">#&gt; 6366  EN.GHG.CO2.RT.GDP.PP.KD</span></span>
-<span><span class="co">#&gt; 6453        ER.GDP.FWTL.M3.KD</span></span>
-<span><span class="co">#&gt; 12472       NY.GDP.COAL.RT.ZS</span></span>
-<span><span class="co">#&gt;                                                                                                   name</span></span>
-<span><span class="co">#&gt; 6243                                       GDP per unit of energy use (PPP $ per kg of oil equivalent)</span></span>
-<span><span class="co">#&gt; 6244                         GDP per unit of energy use (constant 2021 PPP $ per kg of oil equivalent)</span></span>
-<span><span class="co">#&gt; 6365                                    Carbon intensity of GDP (kg CO2e per constant 2015 US$ of GDP)</span></span>
-<span><span class="co">#&gt; 6366                                           Carbon intensity of GDP (kg CO2e per 2021 PPP $ of GDP)</span></span>
-<span><span class="co">#&gt; 6453  Water productivity, total (constant 2015 US$ GDP per cubic meter of total freshwater withdrawal)</span></span>
-<span><span class="co">#&gt; 12472                                                                            Coal rents (% of GDP)</span></span>
-<span><span class="co">#&gt;       unit source_id                 source_value</span></span>
-<span><span class="co">#&gt; 6243  &lt;NA&gt;         2 World Development Indicators</span></span>
-<span><span class="co">#&gt; 6244  &lt;NA&gt;         2 World Development Indicators</span></span>
-<span><span class="co">#&gt; 6365  &lt;NA&gt;         2 World Development Indicators</span></span>
-<span><span class="co">#&gt; 6366  &lt;NA&gt;         2 World Development Indicators</span></span>
-<span><span class="co">#&gt; 6453  &lt;NA&gt;         2 World Development Indicators</span></span>
-<span><span class="co">#&gt; 12472 &lt;NA&gt;         2 World Development Indicators</span></span>
-<span><span class="co">#&gt;                                                                                                                                                                                                                                                                                                                                           source_note</span></span>
-<span><span class="co">#&gt; 6243  GDP per unit of energy use is the PPP GDP per kilogram of oil equivalent of energy use. PPP GDP is gross domestic product converted to current international dollars using purchasing power parity rates based on the 2017 ICP round. An international dollar has the same purchasing power over GDP as a U.S. dollar has in the United States.</span></span>
-<span><span class="co">#&gt; 6244                        GDP per unit of energy use is the PPP GDP per kilogram of oil equivalent of energy use. PPP GDP is gross domestic product converted to 2021 constant international dollars using purchasing power parity rates. An international dollar has the same purchasing power over GDP as a U.S. dollar has in the United States.</span></span>
-<span><span class="co">#&gt; 6365                                                                                                                                    Annual emissions of carbon dioxide (CO2), one of the six Kyoto greenhouse gases (GHG), from the agriculture, energy, waste, and industrial sectors, excluding LULUCF divided by the GDP in constant 2021 US$.</span></span>
-<span><span class="co">#&gt; 6366                                                                                                                                           Annual emissions of carbon dioxide (CO2), one of the six Kyoto greenhouse gases (GHG), from the agriculture, energy, waste, and industrial sectors, excluding LULUCF divided by the GDP in 2021 PPP $.</span></span>
-<span><span class="co">#&gt; 6453                                                                                                                                                                                                                                             Water productivity is calculated as GDP in constant prices divided by annual total water withdrawal.</span></span>
-<span><span class="co">#&gt; 12472                                                                                                                                                                                                      Coal rents are the difference between the value of both hard and soft coal production at world prices and their total costs of production.</span></span>
-<span><span class="co">#&gt;                                                                                                                                                                                                                                                                                                                                                                   source_organization</span></span>
-<span><span class="co">#&gt; 6243                                                                                                                                                                                                                                                                  IEA Statistics © OECD/IEA 2014 (https://www.iea.org/data-and-statistics), subject to https://www.iea.org/terms/</span></span>
-<span><span class="co">#&gt; 6244                                                                                                                                                                                                                                                                  IEA Statistics © OECD/IEA 2014 (https://www.iea.org/data-and-statistics), subject to https://www.iea.org/terms/</span></span>
-<span><span class="co">#&gt; 6365  EDGAR (Emissions Database for Global Atmospheric Research) Community GHG Database, a collaboration between the European Commission, Joint Research Centre (JRC), the International Energy Agency (IEA), and comprising IEA-EDGAR CO2, EDGAR CH4, EDGAR N2O, EDGAR F-GASES version 8.0, (2023) European Commission, JRC (Datasets). https://edgar.jrc.ec.europa.eu/dataset_ghg80</span></span>
-<span><span class="co">#&gt; 6366  EDGAR (Emissions Database for Global Atmospheric Research) Community GHG Database, a collaboration between the European Commission, Joint Research Centre (JRC), the International Energy Agency (IEA), and comprising IEA-EDGAR CO2, EDGAR CH4, EDGAR N2O, EDGAR F-GASES version 8.0, (2023) European Commission, JRC (Datasets). https://edgar.jrc.ec.europa.eu/dataset_ghg80</span></span>
-<span><span class="co">#&gt; 6453                                                                                                                                                                                                                                                                                         Food and Agriculture Organization, AQUASTAT data, and World Bank and OECD GDP estimates.</span></span>
-<span><span class="co">#&gt; 12472                                                                                                                                                                                                                                                           World Bank staff estimates based on sources and methods described in the World Bank's The Changing Wealth of Nations.</span></span>
-<span><span class="co">#&gt;       topic_id     topic_value</span></span>
-<span><span class="co">#&gt; 6243         5 Energy &amp; Mining</span></span>
-<span><span class="co">#&gt; 6244         5 Energy &amp; Mining</span></span>
-<span><span class="co">#&gt; 6365         6     Environment</span></span>
-<span><span class="co">#&gt; 6366         6     Environment</span></span>
-<span><span class="co">#&gt; 6453         6     Environment</span></span>
-<span><span class="co">#&gt; 12472        6     Environment</span></span>
 <span></span>
 <span><span class="co"># fetch indicator data for specific or all countries (default)</span></span>
-<span><span class="va">gdp</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/wb_country_indicator.html">wb_country_indicator</a></span><span class="op">(</span><span class="st">"NY.GDP.MKTP.CD"</span>, <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"US"</span>, <span class="st">"DE"</span>, <span class="st">"FR"</span>, <span class="st">"CH"</span>, <span class="st">"JP"</span><span class="op">)</span><span class="op">)</span></span>
-<span><span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="va">gdp</span><span class="op">)</span></span>
-<span><span class="co">#&gt;   date   indicator_id    indicator_name country_id country_name country_code</span></span>
-<span><span class="co">#&gt; 1 2023 NY.GDP.MKTP.CD GDP (current US$)         CH  Switzerland          CHE</span></span>
-<span><span class="co">#&gt; 2 2022 NY.GDP.MKTP.CD GDP (current US$)         CH  Switzerland          CHE</span></span>
-<span><span class="co">#&gt; 3 2021 NY.GDP.MKTP.CD GDP (current US$)         CH  Switzerland          CHE</span></span>
-<span><span class="co">#&gt; 4 2020 NY.GDP.MKTP.CD GDP (current US$)         CH  Switzerland          CHE</span></span>
-<span><span class="co">#&gt; 5 2019 NY.GDP.MKTP.CD GDP (current US$)         CH  Switzerland          CHE</span></span>
-<span><span class="co">#&gt; 6 2018 NY.GDP.MKTP.CD GDP (current US$)         CH  Switzerland          CHE</span></span>
-<span><span class="co">#&gt;          value unit obs_status decimal</span></span>
-<span><span class="co">#&gt; 1 884940402230 &lt;NA&gt;       &lt;NA&gt;       0</span></span>
-<span><span class="co">#&gt; 2 818426550206 &lt;NA&gt;       &lt;NA&gt;       0</span></span>
-<span><span class="co">#&gt; 3 813408787222 &lt;NA&gt;       &lt;NA&gt;       0</span></span>
-<span><span class="co">#&gt; 4 741999406006 &lt;NA&gt;       &lt;NA&gt;       0</span></span>
-<span><span class="co">#&gt; 5 721369112727 &lt;NA&gt;       &lt;NA&gt;       0</span></span>
-<span><span class="co">#&gt; 6 725568717468 &lt;NA&gt;       &lt;NA&gt;       0</span></span></code></pre></div>
+<span><span class="va">gdp</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/wb_country_indicator.html">wb_country_indicator</a></span><span class="op">(</span><span class="st">"NY.GDP.MKTP.CD"</span>, <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"US"</span>, <span class="st">"DE"</span>, <span class="st">"FR"</span>, <span class="st">"CH"</span>, <span class="st">"JP"</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
 <p><img src="reference/figures/README-plotting-1.png" width="100%"></p>
 </div>
 <div class="section level2">
