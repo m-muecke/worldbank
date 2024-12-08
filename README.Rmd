@@ -109,7 +109,7 @@ ggplot(gdp, aes(x = date, y = value, color = country_name)) +
   scale_y_continuous(
     labels = scales::label_currency(scale_cut = scales::cut_short_scale())
   ) +
-  labs(title = "GDP (current US$)", color = "Country")
+  labs(title = "GDP in Current U.S. Dollars", color = "Country")
 ```
 
 ## Related work
