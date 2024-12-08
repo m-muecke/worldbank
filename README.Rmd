@@ -93,12 +93,13 @@ str(gdp)
 ```{r plotting, message = FALSE, echo = FALSE, dpi = 300}
 library(ggplot2)
 
-ggplot(gdp, aes(x = date, y = value, color = country_name)) +
+subset(gdp, date >= 1980) |>
+  ggplot(aes(x = date, y = value, color = country_name)) +
   geom_line() +
   theme_minimal() +
   theme(
     legend.title = element_blank(),
-    legend.position = "top",
+    legend.position = "bottom",
     plot.title = element_text(face = "bold"),
     panel.grid.major.y = element_line(color = "black", linewidth = 0.2),
     panel.grid.major.x = element_blank(),
