@@ -73,6 +73,7 @@ wb_country(c("US", "DE"))
 
 # or fetch all (default)
 country <- wb_country()
+str(country)
 
 # search for specific indicator
 ind <- wb_indicator()
@@ -80,18 +81,21 @@ ind <- subset(
   ind,
   grepl("GDP", id, fixed = TRUE) & source_value == "World Development Indicators"
 )
+str(ind)
 
 # fetch indicator data for specific or all countries (default)
 gdp <- wb_country_indicator("NY.GDP.MKTP.CD", c("US", "DE", "FR", "CH", "JP"))
+str(gdp)
 ```
 
 ```{r plotting, message = FALSE, echo = FALSE, dpi = 300}
 library(ggplot2)
 
-ggplot(gdp, aes(x = date, y = value, color = country_code)) +
+ggplot(gdp, aes(x = date, y = value, color = country_name)) +
   geom_line() +
   theme_minimal() +
   theme(
+    legend.title = element_blank(),
     plot.title = element_text(face = "bold"),
     panel.grid.major.y = element_line(color = "black", linewidth = 0.2),
     panel.grid.major.x = element_blank(),
