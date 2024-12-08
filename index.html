@@ -127,7 +127,7 @@
 <span></span>
 <span><span class="co"># or fetch all (default)</span></span>
 <span><span class="va">country</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/wb_country.html">wb_country</a></span><span class="op">(</span><span class="op">)</span></span>
-<span><span class="fu"><a href="https://rdrr.io/r/utils/str.html" class="external-link">str</a></span><span class="op">(</span><span class="va">country</span>, strict.width <span class="op">=</span> <span class="st">"cut"</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/utils/str.html" class="external-link">str</a></span><span class="op">(</span><span class="va">country</span><span class="op">)</span></span>
 <span><span class="co">#&gt; 'data.frame':    296 obs. of  18 variables:</span></span>
 <span><span class="co">#&gt;  $ country_id        : chr  "ABW" "AFE" "AFG" "AFR" ...</span></span>
 <span><span class="co">#&gt;  $ country_code      : chr  "AW" "ZH" "AF" "A9" ...</span></span>
@@ -155,7 +155,7 @@
 <span>  <span class="va">ind</span>,</span>
 <span>  <span class="fu"><a href="https://rdrr.io/r/base/grep.html" class="external-link">grepl</a></span><span class="op">(</span><span class="st">"GDP"</span>, <span class="va">id</span>, fixed <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span> <span class="op">&amp;</span> <span class="va">source_value</span> <span class="op">==</span> <span class="st">"World Development Indicators"</span></span>
 <span><span class="op">)</span></span>
-<span><span class="fu"><a href="https://rdrr.io/r/utils/str.html" class="external-link">str</a></span><span class="op">(</span><span class="va">ind</span>, strict.width <span class="op">=</span> <span class="st">"cut"</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/utils/str.html" class="external-link">str</a></span><span class="op">(</span><span class="va">ind</span><span class="op">)</span></span>
 <span><span class="co">#&gt; 'data.frame':    37 obs. of  9 variables:</span></span>
 <span><span class="co">#&gt;  $ id                 : chr  "EG.GDP.PUSE.KO.PP" "EG.GDP.PUSE.KO.PP.KD" "EN.G"..</span></span>
 <span><span class="co">#&gt;  $ name               : chr  "GDP per unit of energy use (PPP $ per kg of oil"..</span></span>
@@ -169,7 +169,7 @@
 <span></span>
 <span><span class="co"># fetch indicator data for specific or all countries (default)</span></span>
 <span><span class="va">gdp</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/wb_country_indicator.html">wb_country_indicator</a></span><span class="op">(</span><span class="st">"NY.GDP.MKTP.CD"</span>, <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"US"</span>, <span class="st">"DE"</span>, <span class="st">"FR"</span>, <span class="st">"CH"</span>, <span class="st">"JP"</span><span class="op">)</span><span class="op">)</span></span>
-<span><span class="fu"><a href="https://rdrr.io/r/utils/str.html" class="external-link">str</a></span><span class="op">(</span><span class="va">gdp</span>, strict.width <span class="op">=</span> <span class="st">"cut"</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/utils/str.html" class="external-link">str</a></span><span class="op">(</span><span class="va">gdp</span><span class="op">)</span></span>
 <span><span class="co">#&gt; 'data.frame':    320 obs. of  10 variables:</span></span>
 <span><span class="co">#&gt;  $ date          : int  2023 2022 2021 2020 2019 2018 2017 2016 2015 2014 ...</span></span>
 <span><span class="co">#&gt;  $ indicator_id  : chr  "NY.GDP.MKTP.CD" "NY.GDP.MKTP.CD" "NY.GDP.MKTP.CD" "N"..</span></span>
