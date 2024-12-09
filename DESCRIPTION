@@ -20,6 +20,7 @@ Imports:
     httr2 (>= 1.0.4)
 Suggests:
     ggplot2,
+    readxl,
     scales,
     testthat (>= 3.2.0)
 Config/testthat/edition: 3
