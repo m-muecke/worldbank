@@ -1,4 +1,4 @@
-# worldbank (development version)
+# worldbank 0.4.0
 
 * Removed conditional returning of tibble and instead always returning a
   data table now. This assures type stability across all functions.
