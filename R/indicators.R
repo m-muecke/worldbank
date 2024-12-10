@@ -305,7 +305,7 @@ wb_indicator <- function(indicator = NULL, lang = "en") {
     id = map_chr(data, "id"),
     name = map_chr(data, "name"),
     unit = map_chr(data, "unit"),
-    source_id = map_chr(data, \(x) x$source$id),
+    source_id = map_chr(data, \(x) x$source$id) |> as.integer(),
     source_value = map_chr(data, \(x) x$source$value),
     source_note = map_chr(data, "sourceNote"),
     source_organization = map_chr(data, "sourceOrganization"),
@@ -315,7 +315,8 @@ wb_indicator <- function(indicator = NULL, lang = "en") {
       } else {
         NA_character_
       }
-    }),
+    }) |>
+      as.integer(),
     topic_value = map_chr(data, function(x) {
       if (length(x$topics) > 0L && length(x$topics[[1L]]) > 0L) {
         x$topics[[1L]]$value
@@ -373,8 +374,8 @@ wb_country_indicator <- function(indicator = "NY.GDP.MKTP.CD",
   stopifnot(
     is_string(indicator),
     is_character_or_null(country), nchar(country) %in% 2:3,
-    is_valid_date(start_date),
-    is_valid_date(end_date)
+    is_dateish_or_null(start_date),
+    is_dateish_or_null(end_date)
   )
   has_start_date <- !is.null(start_date)
   has_end_date <- !is.null(end_date)

@@ -31,10 +31,7 @@ is_count_or_null <- function(x) {
   is.null(x) || is_count(x)
 }
 
-is_valid_date <- function(x) {
-  if (is.null(x)) {
-    return(TRUE)
-  }
+is_dateish <- function(x) {
   if (length(x) != 1L) {
     return(FALSE)
   }
@@ -44,4 +41,8 @@ is_valid_date <- function(x) {
   } else {
     FALSE
   }
+}
+
+is_dateish_or_null <- function(x) {
+  is.null(x) || is_dateish(x)
 }

@@ -35,28 +35,28 @@ test_that("format_date works", {
   expect_identical(format_date("", "2025"), ":2025")
 })
 
-test_that("is_valid_date works", {
+test_that("is_dateish_or_null works", {
   # NULL input
-  expect_true(is_valid_date(NULL))
+  expect_true(is_dateish_or_null(NULL))
   # valid year
-  expect_true(is_valid_date(2024))
-  expect_true(is_valid_date("2024"))
+  expect_true(is_dateish_or_null(2024))
+  expect_true(is_dateish_or_null("2024"))
   # valid year with month
-  expect_true(is_valid_date("2024M01"))
-  expect_true(is_valid_date("2024M12"))
+  expect_true(is_dateish_or_null("2024M01"))
+  expect_true(is_dateish_or_null("2024M12"))
   # valid year with quarter
-  expect_true(is_valid_date("2024Q1"))
-  expect_true(is_valid_date("2024Q4"))
+  expect_true(is_dateish_or_null("2024Q1"))
+  expect_true(is_dateish_or_null("2024Q4"))
   # invalid lengths
-  expect_false(is_valid_date(c("2024", "2025")))
-  expect_false(is_valid_date(c("2024M01", "2024Q1")))
+  expect_false(is_dateish_or_null(c("2024", "2025")))
+  expect_false(is_dateish_or_null(c("2024M01", "2024Q1")))
   # invalid formats
-  expect_false(is_valid_date("202"))
-  expect_false(is_valid_date("2024M13"))
-  expect_false(is_valid_date("2024Q5"))
-  expect_false(is_valid_date("2024M00"))
-  expect_false(is_valid_date("2024X01"))
-  expect_false(is_valid_date("24M01"))
-  expect_false(is_valid_date("2024-Q1"))
-  expect_false(is_valid_date("2024/M01"))
+  expect_false(is_dateish_or_null("202"))
+  expect_false(is_dateish_or_null("2024M13"))
+  expect_false(is_dateish_or_null("2024Q5"))
+  expect_false(is_dateish_or_null("2024M00"))
+  expect_false(is_dateish_or_null("2024X01"))
+  expect_false(is_dateish_or_null("24M01"))
+  expect_false(is_dateish_or_null("2024-Q1"))
+  expect_false(is_dateish_or_null("2024/M01"))
 })
