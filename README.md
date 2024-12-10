@@ -14,7 +14,7 @@ status](https://www.r-pkg.org/badges/version/worldbank)](https://CRAN.R-project.
 
 ## Overview
 
-**worlbank** provides a simple interface to the following [World
+worlbank provides a simple interface to the following [World
 Bank](https://datahelpdesk.worldbank.org/knowledgebase/articles/889386-developer-information-overview)
 APIs:
 
@@ -28,7 +28,7 @@ The main difference to other packages is that it’s a modern
 implementation using the [httr2](https://httr2.r-lib.org) package and
 supports all available endpoints and parameters.
 
-The `worldbank` package provides a set of functions to interact with
+The worldbank package provides a set of functions to interact with
 various endpoints of the World Bank Indicators API. Each function is
 designed to retrieve specific types of data, making it easier to access
 and analyze World Bank datasets. Below is an overview of the available
@@ -133,11 +133,11 @@ str(ind)
 #>  $ id                 : chr  "EG.GDP.PUSE.KO.PP" "EG.GDP.PUSE.KO.PP.KD" "EN.G"..
 #>  $ name               : chr  "GDP per unit of energy use (PPP $ per kg of oil"..
 #>  $ unit               : chr  NA NA NA NA ...
-#>  $ source_id          : chr  "2" "2" "2" "2" ...
+#>  $ source_id          : int  2 2 2 2 2 2 2 2 2 2 ...
 #>  $ source_value       : chr  "World Development Indicators" "World Developmen"..
 #>  $ source_note        : chr  "GDP per unit of energy use is the PPP GDP per k"..
 #>  $ source_organization: chr  "IEA Statistics © OECD/IEA 2014 (https://www.iea"..
-#>  $ topic_id           : chr  "5" "5" "6" "6" ...
+#>  $ topic_id           : int  5 5 6 6 6 6 3 7 3 7 ...
 #>  $ topic_value        : chr  "Energy & Mining" "Energy & Mining" "Environment"..
 
 # fetch indicator data for specific or all countries (default)
