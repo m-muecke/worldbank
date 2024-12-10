@@ -40,7 +40,7 @@ fone <- function(resource, ..., limit = NULL) {
 
   req <- request("https://datacatalogapi.worldbank.org/dexapps/fone/api") |>
     req_user_agent("worldbank (https://m-muecke.github.io/worldbank)") |>
-    req_error(body = \(resp) resp_body_string(resp)) |>
+    req_error(body = \(resp) resp_body_string(resp, "UTF-8")) |>
     req_url_path_append(resource) |>
     req_url_query(top = limit, type = "csv", ...)
 
@@ -55,7 +55,7 @@ fone <- function(resource, ..., limit = NULL) {
 
   res <- resps_data(resps, function(resp) {
     if (length(resp$body) > 0L) {
-      body <- resp_body_string(resp)
+      body <- resp_body_string(resp, "UTF-8")
       utils::read.csv(textConnection(body, encoding = "UTF-8"))
     }
   })

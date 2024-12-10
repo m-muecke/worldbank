@@ -339,7 +339,7 @@ pip <- function(resource, ..., format = c("json", "csv", "xml", "rds")) {
   body <- switch(format,
     json = resp_body_json(resp),
     csv = {
-      body <- resp_body_string(resp)
+      body <- resp_body_string(resp, "UTF-8")
       utils::read.csv(textConnection(body, encoding = "UTF-8"))
     },
     xml = resp_body_xml(resp),
