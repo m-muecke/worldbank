@@ -62,7 +62,7 @@
 <div class="section level2">
 <h2 id="overview">Overview<a class="anchor" aria-label="anchor" href="#overview"></a>
 </h2>
-<p><strong>worlbank</strong> provides a simple interface to the following <a href="https://datahelpdesk.worldbank.org/knowledgebase/articles/889386-developer-information-overview" class="external-link">World Bank</a> APIs:</p>
+<p>worlbank provides a simple interface to the following <a href="https://datahelpdesk.worldbank.org/knowledgebase/articles/889386-developer-information-overview" class="external-link">World Bank</a> APIs:</p>
 <ul>
 <li><a href="https://datahelpdesk.worldbank.org/knowledgebase/articles/889392-about-the-indicators-api-documentation" class="external-link">Indicators API v2</a></li>
 <li>
@@ -70,7 +70,7 @@
 <li><a href="https://financesone.worldbank.org" class="external-link">Finances One API</a></li>
 </ul>
 <p>The main difference to other packages is that it’s a modern implementation using the <a href="https://httr2.r-lib.org" class="external-link">httr2</a> package and supports all available endpoints and parameters.</p>
-<p>The <code>worldbank</code> package provides a set of functions to interact with various endpoints of the World Bank Indicators API. Each function is designed to retrieve specific types of data, making it easier to access and analyze World Bank datasets. Below is an overview of the available endpoints and their corresponding functions in the package:</p>
+<p>The worldbank package provides a set of functions to interact with various endpoints of the World Bank Indicators API. Each function is designed to retrieve specific types of data, making it easier to access and analyze World Bank datasets. Below is an overview of the available endpoints and their corresponding functions in the package:</p>
 <ul>
 <li>
 <strong>Languages</strong> (<code>wb_language</code>): Retrieves a list of all languages supported by the World Bank API. Useful for obtaining language-specific data.</li>
@@ -160,11 +160,11 @@
 <span><span class="co">#&gt;  $ id                 : chr  "EG.GDP.PUSE.KO.PP" "EG.GDP.PUSE.KO.PP.KD" "EN.G"..</span></span>
 <span><span class="co">#&gt;  $ name               : chr  "GDP per unit of energy use (PPP $ per kg of oil"..</span></span>
 <span><span class="co">#&gt;  $ unit               : chr  NA NA NA NA ...</span></span>
-<span><span class="co">#&gt;  $ source_id          : chr  "2" "2" "2" "2" ...</span></span>
+<span><span class="co">#&gt;  $ source_id          : int  2 2 2 2 2 2 2 2 2 2 ...</span></span>
 <span><span class="co">#&gt;  $ source_value       : chr  "World Development Indicators" "World Developmen"..</span></span>
 <span><span class="co">#&gt;  $ source_note        : chr  "GDP per unit of energy use is the PPP GDP per k"..</span></span>
 <span><span class="co">#&gt;  $ source_organization: chr  "IEA Statistics © OECD/IEA 2014 (https://www.iea"..</span></span>
-<span><span class="co">#&gt;  $ topic_id           : chr  "5" "5" "6" "6" ...</span></span>
+<span><span class="co">#&gt;  $ topic_id           : int  5 5 6 6 6 6 3 7 3 7 ...</span></span>
 <span><span class="co">#&gt;  $ topic_value        : chr  "Energy &amp; Mining" "Energy &amp; Mining" "Environment"..</span></span>
 <span></span>
 <span><span class="co"># fetch indicator data for specific or all countries (default)</span></span>
