@@ -10,10 +10,10 @@
 wb_lending_type(type = NULL, lang = "en")
 }
 \arguments{
-\item{type}{\code{character()} lending type to query. Default \code{NULL}.
+\item{type}{(\code{character()}) lending type to query. Default \code{NULL}.
 If \code{NULL}, all types are returned.}
 
-\item{lang}{\code{character(1)} language to query. Default \code{"en"}.}
+\item{lang}{(\code{character(1)}) language to query. Default \code{"en"}.}
 }
 \value{
 A \code{data.frame()} with the available lending types. The columns are:

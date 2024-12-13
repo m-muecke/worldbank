@@ -10,12 +10,13 @@
 pip_citation(release_version = NULL, ppp_version = NULL, version = NULL)
 }
 \arguments{
-\item{release_version}{\code{character(1)} version of the data release in YYYYMMDD format.
+\item{release_version}{(\code{character(1)}) version of the data release in YYYYMMDD
+format. Default \code{NULL}.}
+
+\item{ppp_version}{(\code{character(1)} | \code{numeric(1)}) version of the data.
 Default \code{NULL}.}
 
-\item{ppp_version}{\code{character(1)} | \code{numeric(1)} version of the data. Default \code{NULL}.}
-
-\item{version}{\code{character(1)} version of the data. Default \code{NULL}.}
+\item{version}{(\code{character(1)}) version of the data. Default \code{NULL}.}
 }
 \value{
 A \code{data.frame()} with the citation.

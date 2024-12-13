@@ -15,15 +15,16 @@ pip_valid_params(
 )
 }
 \arguments{
-\item{endpoint}{\code{character(1)} endpoint for which valid parameters are to be
+\item{endpoint}{(\code{character(1)}) endpoint for which valid parameters are to be
 returned. Default \code{"all"}.}
 
-\item{release_version}{\code{character(1)} version of the data release in YYYYMMDD format.
+\item{release_version}{(\code{character(1)}) version of the data release in YYYYMMDD
+format. Default \code{NULL}.}
+
+\item{ppp_version}{(\code{character(1)} | \code{numeric(1)}) version of the data.
 Default \code{NULL}.}
 
-\item{ppp_version}{\code{character(1)} | \code{numeric(1)} version of the data. Default \code{NULL}.}
-
-\item{version}{\code{character(1)} version of the data. Default \code{NULL}.}
+\item{version}{(\code{character(1)}) version of the data. Default \code{NULL}.}
 }
 \value{
 A \code{data.frame()} with the valid parameters.

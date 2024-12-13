@@ -10,10 +10,10 @@
 wb_income_level(income = NULL, lang = "en")
 }
 \arguments{
-\item{income}{\code{character()} income level to query. Default \code{NULL}.
+\item{income}{(\code{character()}) income level to query. Default \code{NULL}.
 If \code{NULL}, all levels are returned.}
 
-\item{lang}{\code{character(1)} language to query. Default \code{"en"}.}
+\item{lang}{(\code{character(1)}) language to query. Default \code{"en"}.}
 }
 \value{
 A \code{data.frame()} with the available income levels. The columns are:

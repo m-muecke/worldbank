@@ -10,10 +10,10 @@
 wb_indicator(indicator = NULL, lang = "en")
 }
 \arguments{
-\item{indicator}{\code{character(1)} indicator to query. Default \code{NULL}.
+\item{indicator}{(\code{character(1)}) indicator to query. Default \code{NULL}.
 If \code{NULL}, all indicators are returned.}
 
-\item{lang}{\code{character(1)} language to query. Default \code{"en"}.}
+\item{lang}{(\code{character(1)}) language to query. Default \code{"en"}.}
 }
 \value{
 A \code{data.frame()} with the available indicators. The columns are:

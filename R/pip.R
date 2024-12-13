@@ -1,24 +1,25 @@
 #' Return main poverty and inequality statistics
 #'
-#' @param country `character()` countries for which statistics are to be computed,
+#' @param country (`character()`) countries for which statistics are to be computed,
 #'   specified as ISO3 codes. Default `NULL`.
-#' @param year `character()` | `numeric()` year(s) for which statistics are to be
+#' @param year (`character()` | `numeric()`) year(s) for which statistics are to be
 #'   computed, specified as YYYY. Default `NULL`.
-#' @param povline `numeric(1)` poverty line to be used to compute poverty mesures.
+#' @param povline (`numeric(1)`) poverty line to be used to compute poverty mesures.
 #'   Poverty lines are only accepted up to 3 decimals. Default `2.15`.
-#' @param popshare `numeric(1)` proportion of the population living below the poverty
+#' @param popshare (`numeric(1)`) proportion of the population living below the poverty
 #'   line. Will be ignored if povline is specified. Default `NULL`.
-#' @param fill_gaps `logical(1)` whether to fill gaps in the data. Default `FALSE`.
-#' @param welfare_type `character(1)` type of welfare measure to be used.
+#' @param fill_gaps (`logical(1)`) whether to fill gaps in the data. Default `FALSE`.
+#' @param welfare_type (`character(1)`) type of welfare measure to be used.
 #'   Default `"all"`.
-#' @param reporting_level `character(1)` level of reporting for the statistics.
+#' @param reporting_level (`character(1)`) level of reporting for the statistics.
 #'   Default `"all"`.
-#' @param additional_ind `logical(1)` whether to include additional indicators.
+#' @param additional_ind (`logical(1)`) whether to include additional indicators.
 #'   Default `FALSE`.
-#' @param release_version `character(1)` version of the data release in YYYYMMDD format.
+#' @param release_version (`character(1)`) version of the data release in YYYYMMDD
+#'   format. Default `NULL`.
+#' @param ppp_version (`character(1)` | `numeric(1)`) version of the data.
 #'   Default `NULL`.
-#' @param ppp_version `character(1)` | `numeric(1)` version of the data. Default `NULL`.
-#' @param version `character(1)` version of the data. Default `NULL`.
+#' @param version (`character(1)`) version of the data. Default `NULL`.
 #' @returns A `data.frame()` with the requested statistics.
 #' @source <https://pip.worldbank.org/api>
 #' @family poverty and inequality statistics
@@ -77,7 +78,7 @@ pip_data <- function(country = NULL,
 #' Return aggregation of PIP statistics
 #'
 #' @inheritParams pip_data
-#' @param group_by `character(1)` aggregate results by pre-defined sub-groups.
+#' @param group_by (`character(1)`) aggregate results by pre-defined sub-groups.
 #'   Default `"wb"`.
 #' @returns A `data.frame()` with the requested statistics.
 #' @inherit pip_data source
@@ -193,7 +194,7 @@ pip_citation <- function(release_version = NULL,
 #' Return auxiliary data tables
 #'
 #' @inheritParams pip_data
-#' @param table `character(1)` table to be returned. Default `NULL`.
+#' @param table (`character(1)`) table to be returned. Default `NULL`.
 #' @returns A `character()` with the available tables or a `data.frame()` containing the
 #'   table data.
 #' @inherit pip_data source
@@ -253,7 +254,7 @@ pip_aux <- function(table = NULL,
 #' Return valid query parameters
 #'
 #' @inheritParams pip_data
-#' @param endpoint `character(1)` endpoint for which valid parameters are to be
+#' @param endpoint (`character(1)`) endpoint for which valid parameters are to be
 #'   returned. Default `"all"`.
 #' @returns A `data.frame()` with the valid parameters.
 #' @inherit pip_data source
