@@ -33,20 +33,6 @@ worlbank provides a simple interface to the following [World Bank](https://datah
 The main difference to other packages is that it's a modern implementation using the [httr2](https://httr2.r-lib.org) package
 and supports all available endpoints and parameters.
 
-The worldbank package provides a set of functions to interact with various endpoints of the World Bank Indicators API.
-Each function is designed to retrieve specific types of data, making it easier to access and analyze World Bank datasets.
-Below is an overview of the available endpoints and their corresponding functions in the package:
-
-- **Languages** (`wb_language`): Retrieves a list of all languages supported by the World Bank API. Useful for obtaining language-specific data.
-- **Lending Types** (`wb_lending_type`): Fetches information about different lending types as recognized by the World Bank.
-- **Income Levels** (`wb_income_level`): Allows users to access data about various income levels defined by the World Bank.
-- **Sources** (`wb_source`): Provides details about the different data sources available within the World Bank’s datasets.
-- **Topics** (`wb_topic`): Lists all topics covered by the World Bank API, helping users to narrow down their data search to specific areas of interest.
-- **Regions** (`wb_region`): Offers information on different geographical regions as categorized by the World Bank.
-- **Countries** (`wb_country`): Enables access to detailed data about individual countries, including socio-economic and developmental indicators.
-- **Country Indicators** (`wb_country_indicator`): Specific to retrieving indicators for a particular country or countries, allowing for more targeted data analysis.
-- **Indicators** (`wb_indicator`): This endpoint gives users access to a wide array of indicators used by the World Bank in its data analysis and reports.
-
 ## Installation
 
 You can install the released version of **worldbank** from [CRAN](https://CRAN.R-project.org) with:
