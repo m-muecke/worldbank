@@ -240,8 +240,10 @@ wb_region <- function(region = NULL, lang = "en") {
 #' wb_country()
 wb_country <- function(country = NULL, lang = "en") {
   stopifnot(
-    is_character_or_null(country), nchar(country) %in% 2:3,
-    is_string(lang), nchar(lang) == 2L
+    is_character_or_null(country),
+    nchar(country) %in% 2:3,
+    is_string(lang),
+    nchar(lang) == 2L
   )
   country <- tolower(format_param(country))
 
@@ -460,8 +462,7 @@ worldbank_iter <- function(resource, resp_data, ..., per_page = 32500L) {
 
   data <- req |>
     req_perform_iterative(
-      next_req = iterate_with_offset(
-        "page",
+      next_req = iterate_with_offset("page",
         resp_pages = \(resp) as.numeric(resp_body_json(resp)[[1]]$pages)
       ),
       max_reqs = Inf

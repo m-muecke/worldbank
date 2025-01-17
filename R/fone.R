@@ -17,7 +17,9 @@
 #' }
 fone_dataset <- function(dataset_id, resource_id, ..., limit = NULL) {
   stopifnot(
-    is_string(dataset_id), is_string(resource_id), is_count_or_null(limit)
+    is_string(dataset_id),
+    is_string(resource_id),
+    is_count_or_null(limit)
   )
   fone(
     resource = "apiservice",
