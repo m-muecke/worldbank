@@ -27,7 +27,7 @@ If \code{NULL}, all countries are returned.}
 Default \code{NULL}. Supported formats:
 \itemize{
 \item YYYY for yearly data (e.g. \code{2020} or \code{"2020"})
-\item YYYYQ[1-4] for quarterly data (e.g. "2020Q1")
+\item YYYYQ[1-4] for quarterly data (e.g. \code{"2020Q1"})
 \item YYYYM[1-12] for monthly data (e.g. \code{"2020M02"})
 }}
 

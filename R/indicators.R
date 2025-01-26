@@ -345,7 +345,7 @@ wb_indicator <- function(indicator = NULL, lang = "en") {
 #' @param start_date (`character(1)` | `integer(1)`) start date to query.
 #'   Default `NULL`. Supported formats:
 #'   * YYYY for yearly data (e.g. `2020` or `"2020"`)
-#'   * YYYYQ\[1-4\] for quarterly data (e.g. "2020Q1")
+#'   * YYYYQ\[1-4\] for quarterly data (e.g. `"2020Q1"`)
 #'   * YYYYM\[1-12\] for monthly data (e.g. `"2020M02"`)
 #' @param end_date (`character(1)` | `integer(1)`) end date to query, in the same format
 #'   as start_date. Default `NULL`.
