@@ -189,7 +189,8 @@ wb_topic <- function(topic = NULL, lang = "en") {
 wb_region <- function(region = NULL, lang = "en") {
   stopifnot(
     is_character_or_null(region),
-    is_string(lang), nchar(lang) == 2L
+    is_string(lang),
+    nchar(lang) == 2L
   )
   region <- format_param(region)
 
@@ -375,7 +376,8 @@ wb_country_indicator <- function(indicator = "NY.GDP.MKTP.CD",
                                  end_date = NULL) {
   stopifnot(
     is_string(indicator),
-    is_character_or_null(country), nchar(country) %in% 2:3,
+    is_character_or_null(country),
+    nchar(country) %in% 2:3,
     is_dateish_or_null(start_date),
     is_dateish_or_null(end_date)
   )

@@ -43,7 +43,7 @@ map_lgl <- function(.x, .f, ...) {
 format_param <- function(x) {
   x <- x %||% "all"
   if (length(x) > 1L) {
-    x <- paste(x, collapse = ";")
+    x <- paste0(x, collapse = ";")
   }
   x
 }
