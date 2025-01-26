@@ -13,7 +13,7 @@
 #' @examples
 #' wb_language()
 wb_language <- function() {
-  data <- worldbank("languages")
+  data <- worldbank(resource = "languages")
   res <- data.frame(
     code = map_chr(data, "code"),
     name = map_chr(data, "name"),
@@ -46,7 +46,7 @@ wb_lending_type <- function(type = NULL, lang = "en") {
   type <- format_param(type)
 
   resource <- sprintf("lendingType/%s", type)
-  data <- worldbank(resource, lang = lang)
+  data <- worldbank(resource = resource, lang = lang)
   res <- data.frame(
     id = map_chr(data, "id"),
     iso2code = map_chr(data, "iso2code"),
@@ -79,7 +79,7 @@ wb_income_level <- function(income = NULL, lang = "en") {
   income <- format_param(income)
 
   resource <- sprintf("incomeLevel/%s", income)
-  data <- worldbank(resource, lang = lang)
+  data <- worldbank(resource = resource, lang = lang)
   res <- data.frame(
     id = map_chr(data, "id"),
     iso2code = map_chr(data, "iso2code"),
@@ -118,7 +118,7 @@ wb_source <- function(source = NULL, lang = "en") {
   source <- format_param(source)
 
   resource <- sprintf("source/%s", source)
-  data <- worldbank(resource, lang = lang)
+  data <- worldbank(resource = resource, lang = lang)
   res <- data.frame(
     id = map_chr(data, "id") |> as.integer(),
     last_updated = map_chr(data, "lastupdated") |> as.Date(),
@@ -157,7 +157,7 @@ wb_topic <- function(topic = NULL, lang = "en") {
   topic <- format_param(topic)
 
   resource <- sprintf("topic/%s", topic)
-  data <- worldbank(resource, lang = lang)
+  data <- worldbank(resource = resource, lang = lang)
   res <- data.frame(
     id = map_chr(data, "id") |> as.integer(),
     value = map_chr(data, "value"),
@@ -195,7 +195,7 @@ wb_region <- function(region = NULL, lang = "en") {
   region <- format_param(region)
 
   resource <- sprintf("%s/region/%s", lang, region)
-  data <- worldbank(resource)
+  data <- worldbank(resource = resource)
   res <- data.frame(
     id = map_chr(data, "id") |> na_if_empty() |> as.integer(),
     code = map_chr(data, "code"),
@@ -249,7 +249,7 @@ wb_country <- function(country = NULL, lang = "en") {
   country <- tolower(format_param(country))
 
   resource <- sprintf("%s/country/%s", lang, country)
-  data <- worldbank(resource)
+  data <- worldbank(resource = resource)
   res <- data.frame(
     country_id = map_chr(data, "id"),
     country_code = map_chr(data, "iso2Code"),
@@ -303,7 +303,7 @@ wb_indicator <- function(indicator = NULL, lang = "en") {
   indicator <- indicator %||% "all"
 
   resource <- sprintf("indicator/%s", indicator)
-  data <- worldbank(resource, lang = lang)
+  data <- worldbank(resource = resource, lang = lang)
   res <- data.frame(
     id = map_chr(data, "id"),
     name = map_chr(data, "name"),
@@ -338,8 +338,8 @@ wb_indicator <- function(indicator = NULL, lang = "en") {
 #' @description
 #' List all country indicators supported by the World Bank API.
 #'
-#' @param indicator (`character(1)`) indicator to query.
-#' @param country (`character()`) country to query. Default `NULL`.
+#' @param indicator (`character()`) indicators to query.
+#' @param country (`character()`) countries to query. Default `NULL`.
 #'   If `NULL`, all countries are returned.
 #' @param lang (`character(1)`) language to query. Default `"en"`.
 #' @param start_date (`character(1)` | `integer(1)`) start date to query.
@@ -375,7 +375,7 @@ wb_country_indicator <- function(indicator = "NY.GDP.MKTP.CD",
                                  start_date = NULL,
                                  end_date = NULL) {
   stopifnot(
-    is_string(indicator),
+    is_character(indicator),
     is_character_or_null(country),
     nchar(country) %in% 2:3,
     is_dateish_or_null(start_date),
@@ -391,32 +391,36 @@ wb_country_indicator <- function(indicator = "NY.GDP.MKTP.CD",
   date <- format_date(start_date, end_date)
 
   resource <- sprintf("country/%s/indicator/%s", country, indicator)
-  data <- worldbank(resource, lang = lang, date = date)
-  res <- map(data, function(x) {
-    if (is.null(x$value) || is.null(x$date)) {
-      return()
-    }
-    data.frame(
-      date = x$date,
-      indicator_id = x$indicator$id,
-      indicator_name = x$indicator$value,
-      country_id = x$country$id,
-      country_name = x$country$value,
-      country_code = x$countryiso3code,
-      value = x$value,
-      unit = x$unit,
-      obs_status = x$obs_status,
-      decimal = x$decimal,
-      check.names = FALSE
-    )
-  })
+  res <- worldbank_seq(resource, lang = lang) |>
+    map(function(data) {
+      res <- map(data, function(x) {
+        if (is.null(x$value) || is.null(x$date)) {
+          return()
+        }
+        data.frame(
+          date = x$date,
+          indicator_id = x$indicator$id,
+          indicator_name = x$indicator$value,
+          country_id = x$country$id,
+          country_name = x$country$value,
+          country_code = x$countryiso3code,
+          value = x$value,
+          unit = x$unit,
+          obs_status = x$obs_status,
+          decimal = x$decimal,
+          check.names = FALSE
+        )
+      })
+      do.call(rbind, res)
+    })
   res <- do.call(rbind, res)
-  if (nrow(res) > 0L) {
-    if (nchar(res[1L, "date"]) == 4L) {
-      res$date <- as.integer(res$date)
-    }
-    res <- clean_strings(res)
+  if (nrow(res) == 0L) {
+    return(res)
   }
+  if (nchar(res[1L, "date"]) == 4L) {
+    res$date <- as.integer(res$date)
+  }
+  res <- clean_strings(res)
   res
 }
 
@@ -455,20 +459,16 @@ worldbank <- function(resource, ..., lang = NULL, per_page = 32500L) {
   body[[2L]]
 }
 
-worldbank_iter <- function(resource, resp_data, ..., per_page = 32500L) {
+worldbank_seq <- function(resource, resp_data, ..., lang = NULL, per_page = 32500L) {
+  stopifnot(is_string_or_null(lang), nchar(lang) == 2L)
   req <- request("https://api.worldbank.org/v2") |>
     req_user_agent("worldbank (https://m-muecke.github.io/worldbank)") |>
-    req_url_path_append(resource) |>
     req_url_query(..., format = "json", per_page = per_page) |>
     req_error(is_error = is_wb_error, body = wb_error_body)
 
-  data <- req |>
-    req_perform_iterative(
-      next_req = iterate_with_offset("page",
-        resp_pages = \(resp) as.numeric(resp_body_json(resp)[[1]]$pages)
-      ),
-      max_reqs = Inf
-    ) |>
-    resps_data(resp_data)
-  data
+  res <- resource |>
+    map(\(x) req_url_path_append(req, lang, x)) |>
+    req_perform_sequential() |>
+    map(\(x) resp_body_json(x)[[2L]])
+  res
 }

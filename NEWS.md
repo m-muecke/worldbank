@@ -1,5 +1,8 @@
 # worldbank (development version)
 
+* `wb_country_indicator()` now allows for multiple indicators to be
+  requested at once.
+
 # worldbank 0.4.0
 
 * Removed conditional return of tibble and now always return a

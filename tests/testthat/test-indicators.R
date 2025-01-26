@@ -115,7 +115,9 @@ test_that("wb_indicator", {
 
 test_that("wb_country_indicator", {
   local_mocked_bindings(
-    worldbank = function(...) readRDS(test_path("fixtures", "wb-country-indicator.rds"))
+    worldbank_seq = function(...) {
+      list(readRDS(test_path("fixtures", "wb-country-indicator.rds")))
+    }
   )
   actual <- wb_country_indicator()
   expect_s3_class(actual, "data.frame")
