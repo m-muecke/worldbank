@@ -1,4 +1,4 @@
-# worldbank (development version)
+# worldbank 0.5.0
 
 * `wb_country_indicator()` now allows for multiple indicators to be
   requested at once.
