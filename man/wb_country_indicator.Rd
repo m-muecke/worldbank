@@ -57,7 +57,7 @@ head(ind)
 ind <- wb_country_indicator(
   indicator = c("NY.GDP.MKTP.CD", "FP.CPI.TOTL.ZG"),
   country = c("US", "DE", "FR", "CH", "JP"),
-  start_date = "2012M01", end_date = "2012M08"
+  start_date = 2015, end_date = 2023
 )
 head(ind)
 }
