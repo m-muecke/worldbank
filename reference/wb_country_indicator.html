@@ -126,369 +126,42 @@ The columns are:</p>
 
     <div class="section level2">
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="fu">wb_country_indicator</span><span class="op">(</span><span class="st">"NY.GDP.MKTP.CD"</span>, <span class="st">"US"</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    date   indicator_id    indicator_name country_id  country_name country_code</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 1  2023 NY.GDP.MKTP.CD GDP (current US$)         US United States          USA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2  2022 NY.GDP.MKTP.CD GDP (current US$)         US United States          USA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 3  2021 NY.GDP.MKTP.CD GDP (current US$)         US United States          USA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 4  2020 NY.GDP.MKTP.CD GDP (current US$)         US United States          USA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 5  2019 NY.GDP.MKTP.CD GDP (current US$)         US United States          USA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 6  2018 NY.GDP.MKTP.CD GDP (current US$)         US United States          USA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 7  2017 NY.GDP.MKTP.CD GDP (current US$)         US United States          USA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 8  2016 NY.GDP.MKTP.CD GDP (current US$)         US United States          USA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 9  2015 NY.GDP.MKTP.CD GDP (current US$)         US United States          USA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 10 2014 NY.GDP.MKTP.CD GDP (current US$)         US United States          USA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 11 2013 NY.GDP.MKTP.CD GDP (current US$)         US United States          USA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 12 2012 NY.GDP.MKTP.CD GDP (current US$)         US United States          USA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 13 2011 NY.GDP.MKTP.CD GDP (current US$)         US United States          USA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 14 2010 NY.GDP.MKTP.CD GDP (current US$)         US United States          USA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 15 2009 NY.GDP.MKTP.CD GDP (current US$)         US United States          USA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 16 2008 NY.GDP.MKTP.CD GDP (current US$)         US United States          USA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 17 2007 NY.GDP.MKTP.CD GDP (current US$)         US United States          USA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 18 2006 NY.GDP.MKTP.CD GDP (current US$)         US United States          USA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 19 2005 NY.GDP.MKTP.CD GDP (current US$)         US United States          USA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 20 2004 NY.GDP.MKTP.CD GDP (current US$)         US United States          USA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 21 2003 NY.GDP.MKTP.CD GDP (current US$)         US United States          USA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 22 2002 NY.GDP.MKTP.CD GDP (current US$)         US United States          USA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 23 2001 NY.GDP.MKTP.CD GDP (current US$)         US United States          USA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 24 2000 NY.GDP.MKTP.CD GDP (current US$)         US United States          USA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 25 1999 NY.GDP.MKTP.CD GDP (current US$)         US United States          USA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 26 1998 NY.GDP.MKTP.CD GDP (current US$)         US United States          USA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 27 1997 NY.GDP.MKTP.CD GDP (current US$)         US United States          USA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 28 1996 NY.GDP.MKTP.CD GDP (current US$)         US United States          USA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 29 1995 NY.GDP.MKTP.CD GDP (current US$)         US United States          USA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 30 1994 NY.GDP.MKTP.CD GDP (current US$)         US United States          USA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 31 1993 NY.GDP.MKTP.CD GDP (current US$)         US United States          USA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 32 1992 NY.GDP.MKTP.CD GDP (current US$)         US United States          USA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 33 1991 NY.GDP.MKTP.CD GDP (current US$)         US United States          USA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 34 1990 NY.GDP.MKTP.CD GDP (current US$)         US United States          USA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 35 1989 NY.GDP.MKTP.CD GDP (current US$)         US United States          USA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 36 1988 NY.GDP.MKTP.CD GDP (current US$)         US United States          USA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 37 1987 NY.GDP.MKTP.CD GDP (current US$)         US United States          USA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 38 1986 NY.GDP.MKTP.CD GDP (current US$)         US United States          USA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 39 1985 NY.GDP.MKTP.CD GDP (current US$)         US United States          USA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 40 1984 NY.GDP.MKTP.CD GDP (current US$)         US United States          USA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 41 1983 NY.GDP.MKTP.CD GDP (current US$)         US United States          USA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 42 1982 NY.GDP.MKTP.CD GDP (current US$)         US United States          USA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 43 1981 NY.GDP.MKTP.CD GDP (current US$)         US United States          USA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 44 1980 NY.GDP.MKTP.CD GDP (current US$)         US United States          USA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 45 1979 NY.GDP.MKTP.CD GDP (current US$)         US United States          USA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 46 1978 NY.GDP.MKTP.CD GDP (current US$)         US United States          USA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 47 1977 NY.GDP.MKTP.CD GDP (current US$)         US United States          USA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 48 1976 NY.GDP.MKTP.CD GDP (current US$)         US United States          USA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 49 1975 NY.GDP.MKTP.CD GDP (current US$)         US United States          USA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 50 1974 NY.GDP.MKTP.CD GDP (current US$)         US United States          USA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 51 1973 NY.GDP.MKTP.CD GDP (current US$)         US United States          USA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 52 1972 NY.GDP.MKTP.CD GDP (current US$)         US United States          USA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 53 1971 NY.GDP.MKTP.CD GDP (current US$)         US United States          USA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 54 1970 NY.GDP.MKTP.CD GDP (current US$)         US United States          USA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 55 1969 NY.GDP.MKTP.CD GDP (current US$)         US United States          USA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 56 1968 NY.GDP.MKTP.CD GDP (current US$)         US United States          USA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 57 1967 NY.GDP.MKTP.CD GDP (current US$)         US United States          USA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 58 1966 NY.GDP.MKTP.CD GDP (current US$)         US United States          USA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 59 1965 NY.GDP.MKTP.CD GDP (current US$)         US United States          USA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 60 1964 NY.GDP.MKTP.CD GDP (current US$)         US United States          USA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 61 1963 NY.GDP.MKTP.CD GDP (current US$)         US United States          USA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 62 1962 NY.GDP.MKTP.CD GDP (current US$)         US United States          USA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 63 1961 NY.GDP.MKTP.CD GDP (current US$)         US United States          USA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 64 1960 NY.GDP.MKTP.CD GDP (current US$)         US United States          USA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>           value unit obs_status decimal</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 1  2.772071e+13 &lt;NA&gt;       &lt;NA&gt;       0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2  2.600689e+13 &lt;NA&gt;       &lt;NA&gt;       0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 3  2.368117e+13 &lt;NA&gt;       &lt;NA&gt;       0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 4  2.135410e+13 &lt;NA&gt;       &lt;NA&gt;       0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 5  2.153998e+13 &lt;NA&gt;       &lt;NA&gt;       0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 6  2.065652e+13 &lt;NA&gt;       &lt;NA&gt;       0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 7  1.961210e+13 &lt;NA&gt;       &lt;NA&gt;       0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 8  1.880491e+13 &lt;NA&gt;       &lt;NA&gt;       0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 9  1.829502e+13 &lt;NA&gt;       &lt;NA&gt;       0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 10 1.760814e+13 &lt;NA&gt;       &lt;NA&gt;       0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 11 1.688068e+13 &lt;NA&gt;       &lt;NA&gt;       0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 12 1.625397e+13 &lt;NA&gt;       &lt;NA&gt;       0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 13 1.559973e+13 &lt;NA&gt;       &lt;NA&gt;       0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 14 1.504897e+13 &lt;NA&gt;       &lt;NA&gt;       0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 15 1.447807e+13 &lt;NA&gt;       &lt;NA&gt;       0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 16 1.476986e+13 &lt;NA&gt;       &lt;NA&gt;       0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 17 1.447423e+13 &lt;NA&gt;       &lt;NA&gt;       0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 18 1.381558e+13 &lt;NA&gt;       &lt;NA&gt;       0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 19 1.303920e+13 &lt;NA&gt;       &lt;NA&gt;       0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 20 1.221720e+13 &lt;NA&gt;       &lt;NA&gt;       0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 21 1.145645e+13 &lt;NA&gt;       &lt;NA&gt;       0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 22 1.092911e+13 &lt;NA&gt;       &lt;NA&gt;       0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 23 1.058193e+13 &lt;NA&gt;       &lt;NA&gt;       0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 24 1.025095e+13 &lt;NA&gt;       &lt;NA&gt;       0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 25 9.631172e+12 &lt;NA&gt;       &lt;NA&gt;       0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 26 9.062817e+12 &lt;NA&gt;       &lt;NA&gt;       0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 27 8.577552e+12 &lt;NA&gt;       &lt;NA&gt;       0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 28 8.073122e+12 &lt;NA&gt;       &lt;NA&gt;       0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 29 7.639749e+12 &lt;NA&gt;       &lt;NA&gt;       0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 30 7.287236e+12 &lt;NA&gt;       &lt;NA&gt;       0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 31 6.858559e+12 &lt;NA&gt;       &lt;NA&gt;       0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 32 6.520327e+12 &lt;NA&gt;       &lt;NA&gt;       0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 33 6.158129e+12 &lt;NA&gt;       &lt;NA&gt;       0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 34 5.963144e+12 &lt;NA&gt;       &lt;NA&gt;       0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 35 5.641580e+12 &lt;NA&gt;       &lt;NA&gt;       0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 36 5.236438e+12 &lt;NA&gt;       &lt;NA&gt;       0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 37 4.855215e+12 &lt;NA&gt;       &lt;NA&gt;       0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 38 4.579631e+12 &lt;NA&gt;       &lt;NA&gt;       0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 39 4.338979e+12 &lt;NA&gt;       &lt;NA&gt;       0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 40 4.037613e+12 &lt;NA&gt;       &lt;NA&gt;       0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 41 3.634038e+12 &lt;NA&gt;       &lt;NA&gt;       0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 42 3.343789e+12 &lt;NA&gt;       &lt;NA&gt;       0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 43 3.207041e+12 &lt;NA&gt;       &lt;NA&gt;       0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 44 2.857307e+12 &lt;NA&gt;       &lt;NA&gt;       0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 45 2.627333e+12 &lt;NA&gt;       &lt;NA&gt;       0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 46 2.351599e+12 &lt;NA&gt;       &lt;NA&gt;       0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 47 2.081826e+12 &lt;NA&gt;       &lt;NA&gt;       0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 48 1.873412e+12 &lt;NA&gt;       &lt;NA&gt;       0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 49 1.684904e+12 &lt;NA&gt;       &lt;NA&gt;       0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 50 1.545243e+12 &lt;NA&gt;       &lt;NA&gt;       0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 51 1.425376e+12 &lt;NA&gt;       &lt;NA&gt;       0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 52 1.279110e+12 &lt;NA&gt;       &lt;NA&gt;       0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 53 1.164850e+12 &lt;NA&gt;       &lt;NA&gt;       0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 54 1.073303e+12 &lt;NA&gt;       &lt;NA&gt;       0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 55 1.017438e+12 &lt;NA&gt;       &lt;NA&gt;       0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 56 9.402250e+11 &lt;NA&gt;       &lt;NA&gt;       0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 57 8.596200e+11 &lt;NA&gt;       &lt;NA&gt;       0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 58 8.130328e+11 &lt;NA&gt;       &lt;NA&gt;       0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 59 7.419049e+11 &lt;NA&gt;       &lt;NA&gt;       0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 60 6.841446e+11 &lt;NA&gt;       &lt;NA&gt;       0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 61 6.370586e+11 &lt;NA&gt;       &lt;NA&gt;       0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 62 6.036394e+11 &lt;NA&gt;       &lt;NA&gt;       0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 63 5.619403e+11 &lt;NA&gt;       &lt;NA&gt;       0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 64 5.419886e+11 &lt;NA&gt;       &lt;NA&gt;       0</span>
-<span class="r-in"><span><span class="fu">wb_country_indicator</span><span class="op">(</span></span></span>
-<span class="r-in"><span>  <span class="st">"DPANUSSPB"</span>, <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"CHN"</span>, <span class="st">"BRA"</span><span class="op">)</span>,</span></span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="va">ind</span> <span class="op">&lt;-</span> <span class="fu">wb_country_indicator</span><span class="op">(</span><span class="st">"NY.GDP.MKTP.CD"</span>, <span class="st">"US"</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="va">ind</span><span class="op">)</span></span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   date   indicator_id    indicator_name country_id  country_name country_code</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1 2023 NY.GDP.MKTP.CD GDP (current US$)         US United States          USA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2 2022 NY.GDP.MKTP.CD GDP (current US$)         US United States          USA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 3 2021 NY.GDP.MKTP.CD GDP (current US$)         US United States          USA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 4 2020 NY.GDP.MKTP.CD GDP (current US$)         US United States          USA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 5 2019 NY.GDP.MKTP.CD GDP (current US$)         US United States          USA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 6 2018 NY.GDP.MKTP.CD GDP (current US$)         US United States          USA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>          value unit obs_status decimal</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1 2.772071e+13 &lt;NA&gt;       &lt;NA&gt;       0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2 2.600689e+13 &lt;NA&gt;       &lt;NA&gt;       0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 3 2.368117e+13 &lt;NA&gt;       &lt;NA&gt;       0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 4 2.135410e+13 &lt;NA&gt;       &lt;NA&gt;       0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 5 2.153998e+13 &lt;NA&gt;       &lt;NA&gt;       0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 6 2.065652e+13 &lt;NA&gt;       &lt;NA&gt;       0</span>
+<span class="r-in"><span><span class="va">ind</span> <span class="op">&lt;-</span> <span class="fu">wb_country_indicator</span><span class="op">(</span></span></span>
+<span class="r-in"><span>  indicator <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"NY.GDP.MKTP.CD"</span>, <span class="st">"DPANUSSPB"</span><span class="op">)</span>,</span></span>
+<span class="r-in"><span>  country <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"US"</span>, <span class="st">"DE"</span>, <span class="st">"FR"</span>, <span class="st">"CH"</span>, <span class="st">"JP"</span><span class="op">)</span>,</span></span>
 <span class="r-in"><span>  start_date <span class="op">=</span> <span class="st">"2012M01"</span>, end_date <span class="op">=</span> <span class="st">"2012M08"</span></span></span>
 <span class="r-in"><span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    date indicator_id</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 1  2025    DPANUSSPB</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2  2024    DPANUSSPB</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 3  2023    DPANUSSPB</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 4  2022    DPANUSSPB</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 5  2021    DPANUSSPB</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 6  2020    DPANUSSPB</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 7  2019    DPANUSSPB</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 8  2018    DPANUSSPB</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 9  2017    DPANUSSPB</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 10 2016    DPANUSSPB</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 11 2015    DPANUSSPB</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 12 2014    DPANUSSPB</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 13 2013    DPANUSSPB</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 14 2012    DPANUSSPB</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 15 2011    DPANUSSPB</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 16 2010    DPANUSSPB</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 17 2009    DPANUSSPB</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 18 2008    DPANUSSPB</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 19 2007    DPANUSSPB</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 20 2006    DPANUSSPB</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 21 2005    DPANUSSPB</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 22 2004    DPANUSSPB</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 23 2003    DPANUSSPB</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 24 2002    DPANUSSPB</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 25 2001    DPANUSSPB</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 26 2000    DPANUSSPB</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 27 1999    DPANUSSPB</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 28 1998    DPANUSSPB</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 29 1997    DPANUSSPB</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 30 1996    DPANUSSPB</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 31 1995    DPANUSSPB</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 32 1994    DPANUSSPB</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 33 1993    DPANUSSPB</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 34 1992    DPANUSSPB</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 35 1991    DPANUSSPB</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 36 1990    DPANUSSPB</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 37 2025    DPANUSSPB</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 38 2024    DPANUSSPB</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 39 2023    DPANUSSPB</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 40 2022    DPANUSSPB</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 41 2021    DPANUSSPB</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 42 2020    DPANUSSPB</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 43 2019    DPANUSSPB</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 44 2018    DPANUSSPB</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 45 2017    DPANUSSPB</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 46 2016    DPANUSSPB</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 47 2015    DPANUSSPB</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 48 2014    DPANUSSPB</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 49 2013    DPANUSSPB</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 50 2012    DPANUSSPB</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 51 2011    DPANUSSPB</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 52 2010    DPANUSSPB</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 53 2009    DPANUSSPB</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 54 2008    DPANUSSPB</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 55 2007    DPANUSSPB</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 56 2006    DPANUSSPB</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 57 2005    DPANUSSPB</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 58 2004    DPANUSSPB</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 59 2003    DPANUSSPB</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 60 2002    DPANUSSPB</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 61 2001    DPANUSSPB</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 62 2000    DPANUSSPB</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 63 1999    DPANUSSPB</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 64 1998    DPANUSSPB</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 65 1997    DPANUSSPB</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 66 1996    DPANUSSPB</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 67 1995    DPANUSSPB</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 68 1994    DPANUSSPB</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 69 1993    DPANUSSPB</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 70 1992    DPANUSSPB</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 71 1991    DPANUSSPB</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 72 1990    DPANUSSPB</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 73 1989    DPANUSSPB</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 74 1988    DPANUSSPB</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 75 1987    DPANUSSPB</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                                                        indicator_name</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 1  Exchange rate, new LCU per USD extended backward, period average,,</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2  Exchange rate, new LCU per USD extended backward, period average,,</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 3  Exchange rate, new LCU per USD extended backward, period average,,</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 4  Exchange rate, new LCU per USD extended backward, period average,,</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 5  Exchange rate, new LCU per USD extended backward, period average,,</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 6  Exchange rate, new LCU per USD extended backward, period average,,</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 7  Exchange rate, new LCU per USD extended backward, period average,,</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 8  Exchange rate, new LCU per USD extended backward, period average,,</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 9  Exchange rate, new LCU per USD extended backward, period average,,</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 10 Exchange rate, new LCU per USD extended backward, period average,,</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 11 Exchange rate, new LCU per USD extended backward, period average,,</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 12 Exchange rate, new LCU per USD extended backward, period average,,</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 13 Exchange rate, new LCU per USD extended backward, period average,,</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 14 Exchange rate, new LCU per USD extended backward, period average,,</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 15 Exchange rate, new LCU per USD extended backward, period average,,</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 16 Exchange rate, new LCU per USD extended backward, period average,,</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 17 Exchange rate, new LCU per USD extended backward, period average,,</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 18 Exchange rate, new LCU per USD extended backward, period average,,</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 19 Exchange rate, new LCU per USD extended backward, period average,,</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 20 Exchange rate, new LCU per USD extended backward, period average,,</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 21 Exchange rate, new LCU per USD extended backward, period average,,</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 22 Exchange rate, new LCU per USD extended backward, period average,,</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 23 Exchange rate, new LCU per USD extended backward, period average,,</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 24 Exchange rate, new LCU per USD extended backward, period average,,</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 25 Exchange rate, new LCU per USD extended backward, period average,,</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 26 Exchange rate, new LCU per USD extended backward, period average,,</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 27 Exchange rate, new LCU per USD extended backward, period average,,</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 28 Exchange rate, new LCU per USD extended backward, period average,,</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 29 Exchange rate, new LCU per USD extended backward, period average,,</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 30 Exchange rate, new LCU per USD extended backward, period average,,</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 31 Exchange rate, new LCU per USD extended backward, period average,,</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 32 Exchange rate, new LCU per USD extended backward, period average,,</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 33 Exchange rate, new LCU per USD extended backward, period average,,</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 34 Exchange rate, new LCU per USD extended backward, period average,,</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 35 Exchange rate, new LCU per USD extended backward, period average,,</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 36 Exchange rate, new LCU per USD extended backward, period average,,</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 37 Exchange rate, new LCU per USD extended backward, period average,,</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 38 Exchange rate, new LCU per USD extended backward, period average,,</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 39 Exchange rate, new LCU per USD extended backward, period average,,</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 40 Exchange rate, new LCU per USD extended backward, period average,,</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 41 Exchange rate, new LCU per USD extended backward, period average,,</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 42 Exchange rate, new LCU per USD extended backward, period average,,</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 43 Exchange rate, new LCU per USD extended backward, period average,,</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 44 Exchange rate, new LCU per USD extended backward, period average,,</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 45 Exchange rate, new LCU per USD extended backward, period average,,</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 46 Exchange rate, new LCU per USD extended backward, period average,,</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 47 Exchange rate, new LCU per USD extended backward, period average,,</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 48 Exchange rate, new LCU per USD extended backward, period average,,</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 49 Exchange rate, new LCU per USD extended backward, period average,,</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 50 Exchange rate, new LCU per USD extended backward, period average,,</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 51 Exchange rate, new LCU per USD extended backward, period average,,</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 52 Exchange rate, new LCU per USD extended backward, period average,,</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 53 Exchange rate, new LCU per USD extended backward, period average,,</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 54 Exchange rate, new LCU per USD extended backward, period average,,</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 55 Exchange rate, new LCU per USD extended backward, period average,,</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 56 Exchange rate, new LCU per USD extended backward, period average,,</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 57 Exchange rate, new LCU per USD extended backward, period average,,</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 58 Exchange rate, new LCU per USD extended backward, period average,,</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 59 Exchange rate, new LCU per USD extended backward, period average,,</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 60 Exchange rate, new LCU per USD extended backward, period average,,</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 61 Exchange rate, new LCU per USD extended backward, period average,,</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 62 Exchange rate, new LCU per USD extended backward, period average,,</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 63 Exchange rate, new LCU per USD extended backward, period average,,</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 64 Exchange rate, new LCU per USD extended backward, period average,,</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 65 Exchange rate, new LCU per USD extended backward, period average,,</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 66 Exchange rate, new LCU per USD extended backward, period average,,</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 67 Exchange rate, new LCU per USD extended backward, period average,,</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 68 Exchange rate, new LCU per USD extended backward, period average,,</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 69 Exchange rate, new LCU per USD extended backward, period average,,</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 70 Exchange rate, new LCU per USD extended backward, period average,,</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 71 Exchange rate, new LCU per USD extended backward, period average,,</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 72 Exchange rate, new LCU per USD extended backward, period average,,</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 73 Exchange rate, new LCU per USD extended backward, period average,,</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 74 Exchange rate, new LCU per USD extended backward, period average,,</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 75 Exchange rate, new LCU per USD extended backward, period average,,</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    country_id country_name country_code       value unit obs_status decimal</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 1         BRA       Brazil         &lt;NA&gt; 6.079468750 &lt;NA&gt;       &lt;NA&gt;       0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2         BRA       Brazil         &lt;NA&gt; 5.392557392 &lt;NA&gt;       &lt;NA&gt;       0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 3         BRA       Brazil         &lt;NA&gt; 4.994074475 &lt;NA&gt;       &lt;NA&gt;       0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 4         BRA       Brazil         &lt;NA&gt; 5.165223848 &lt;NA&gt;       &lt;NA&gt;       0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 5         BRA       Brazil         &lt;NA&gt; 5.396087280 &lt;NA&gt;       &lt;NA&gt;       0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 6         BRA       Brazil         &lt;NA&gt; 5.157586594 &lt;NA&gt;       &lt;NA&gt;       0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 7         BRA       Brazil         &lt;NA&gt; 3.944611075 &lt;NA&gt;       &lt;NA&gt;       0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 8         BRA       Brazil         &lt;NA&gt; 3.654127300 &lt;NA&gt;       &lt;NA&gt;       0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 9         BRA       Brazil         &lt;NA&gt; 3.190255448 &lt;NA&gt;       &lt;NA&gt;       0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 10        BRA       Brazil         &lt;NA&gt; 3.486714603 &lt;NA&gt;       &lt;NA&gt;       0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 11        BRA       Brazil         &lt;NA&gt; 3.331694320 &lt;NA&gt;       &lt;NA&gt;       0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 12        BRA       Brazil         &lt;NA&gt; 2.354272770 &lt;NA&gt;       &lt;NA&gt;       0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 13        BRA       Brazil         &lt;NA&gt; 2.158732053 &lt;NA&gt;       &lt;NA&gt;       0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 14        BRA       Brazil         &lt;NA&gt; 1.954158795 &lt;NA&gt;       &lt;NA&gt;       0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 15        BRA       Brazil         &lt;NA&gt; 1.674466152 &lt;NA&gt;       &lt;NA&gt;       0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 16        BRA       Brazil         &lt;NA&gt; 1.760206488 &lt;NA&gt;       &lt;NA&gt;       0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 17        BRA       Brazil         &lt;NA&gt; 1.999489729 &lt;NA&gt;       &lt;NA&gt;       0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 18        BRA       Brazil         &lt;NA&gt; 1.836026973 &lt;NA&gt;       &lt;NA&gt;       0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 19        BRA       Brazil         &lt;NA&gt; 1.947450509 &lt;NA&gt;       &lt;NA&gt;       0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 20        BRA       Brazil         &lt;NA&gt; 2.175136433 &lt;NA&gt;       &lt;NA&gt;       0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 21        BRA       Brazil         &lt;NA&gt; 2.435280782 &lt;NA&gt;       &lt;NA&gt;       0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 22        BRA       Brazil         &lt;NA&gt; 2.926277840 &lt;NA&gt;       &lt;NA&gt;       0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 23        BRA       Brazil         &lt;NA&gt; 3.077288540 &lt;NA&gt;       &lt;NA&gt;       0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 24        BRA       Brazil         &lt;NA&gt; 2.921882492 &lt;NA&gt;       &lt;NA&gt;       0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 25        BRA       Brazil         &lt;NA&gt; 2.350970797 &lt;NA&gt;       &lt;NA&gt;       0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 26        BRA       Brazil         &lt;NA&gt; 1.829968786 &lt;NA&gt;       &lt;NA&gt;       0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 27        BRA       Brazil         &lt;NA&gt; 1.814313261 &lt;NA&gt;       &lt;NA&gt;       0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 28        BRA       Brazil         &lt;NA&gt; 1.160159280 &lt;NA&gt;       &lt;NA&gt;       0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 29        BRA       Brazil         &lt;NA&gt; 1.077677409 &lt;NA&gt;       &lt;NA&gt;       0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 30        BRA       Brazil         &lt;NA&gt; 1.004733893 &lt;NA&gt;       &lt;NA&gt;       0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 31        BRA       Brazil         &lt;NA&gt; 0.916864239 &lt;NA&gt;       &lt;NA&gt;       0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 32        BRA       Brazil         &lt;NA&gt; 0.638294927 &lt;NA&gt;       &lt;NA&gt;       0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 33        BRA       Brazil         &lt;NA&gt; 0.032091361 &lt;NA&gt;       &lt;NA&gt;       0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 34        BRA       Brazil         &lt;NA&gt; 0.001787298 &lt;NA&gt;       &lt;NA&gt;       0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 35        BRA       Brazil         &lt;NA&gt; 0.000350000 &lt;NA&gt;       &lt;NA&gt;       0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 36        BRA       Brazil         &lt;NA&gt; 0.000200000 &lt;NA&gt;       &lt;NA&gt;       0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 37        CHN        China         &lt;NA&gt; 7.316764706 &lt;NA&gt;       &lt;NA&gt;       0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 38        CHN        China         &lt;NA&gt; 7.197247540 &lt;NA&gt;       &lt;NA&gt;       0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 39        CHN        China         &lt;NA&gt; 7.080443704 &lt;NA&gt;       &lt;NA&gt;       0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 40        CHN        China         &lt;NA&gt; 6.729639518 &lt;NA&gt;       &lt;NA&gt;       0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 41        CHN        China         &lt;NA&gt; 6.449797254 &lt;NA&gt;       &lt;NA&gt;       0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 42        CHN        China         &lt;NA&gt; 6.902117964 &lt;NA&gt;       &lt;NA&gt;       0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 43        CHN        China         &lt;NA&gt; 6.909922683 &lt;NA&gt;       &lt;NA&gt;       0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 44        CHN        China         &lt;NA&gt; 6.613852907 &lt;NA&gt;       &lt;NA&gt;       0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 45        CHN        China         &lt;NA&gt; 6.757446433 &lt;NA&gt;       &lt;NA&gt;       0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 46        CHN        China         &lt;NA&gt; 6.645067075 &lt;NA&gt;       &lt;NA&gt;       0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 47        CHN        China         &lt;NA&gt; 6.285358703 &lt;NA&gt;       &lt;NA&gt;       0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 48        CHN        China         &lt;NA&gt; 6.161507718 &lt;NA&gt;       &lt;NA&gt;       0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 49        CHN        China         &lt;NA&gt; 6.148686634 &lt;NA&gt;       &lt;NA&gt;       0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 50        CHN        China         &lt;NA&gt; 6.308628988 &lt;NA&gt;       &lt;NA&gt;       0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 51        CHN        China         &lt;NA&gt; 6.464558612 &lt;NA&gt;       &lt;NA&gt;       0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 52        CHN        China         &lt;NA&gt; 6.769090446 &lt;NA&gt;       &lt;NA&gt;       0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 53        CHN        China         &lt;NA&gt; 6.831505565 &lt;NA&gt;       &lt;NA&gt;       0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 54        CHN        China         &lt;NA&gt; 6.950109677 &lt;NA&gt;       &lt;NA&gt;       0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 55        CHN        China         &lt;NA&gt; 7.606216150 &lt;NA&gt;       &lt;NA&gt;       0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 56        CHN        China         &lt;NA&gt; 7.972375478 &lt;NA&gt;       &lt;NA&gt;       0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 57        CHN        China         &lt;NA&gt; 8.193666329 &lt;NA&gt;       &lt;NA&gt;       0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 58        CHN        China         &lt;NA&gt; 8.276925333 &lt;NA&gt;       &lt;NA&gt;       0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 59        CHN        China         &lt;NA&gt; 8.277098414 &lt;NA&gt;       &lt;NA&gt;       0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 60        CHN        China         &lt;NA&gt; 8.277018989 &lt;NA&gt;       &lt;NA&gt;       0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 61        CHN        China         &lt;NA&gt; 8.277149155 &lt;NA&gt;       &lt;NA&gt;       0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 62        CHN        China         &lt;NA&gt; 8.278492082 &lt;NA&gt;       &lt;NA&gt;       0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 63        CHN        China         &lt;NA&gt; 8.278342026 &lt;NA&gt;       &lt;NA&gt;       0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 64        CHN        China         &lt;NA&gt; 8.279089770 &lt;NA&gt;       &lt;NA&gt;       0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 65        CHN        China         &lt;NA&gt; 8.289856415 &lt;NA&gt;       &lt;NA&gt;       0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 66        CHN        China         &lt;NA&gt; 8.314231090 &lt;NA&gt;       &lt;NA&gt;       0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 67        CHN        China         &lt;NA&gt; 8.351316282 &lt;NA&gt;       &lt;NA&gt;       0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 68        CHN        China         &lt;NA&gt; 8.610021425 &lt;NA&gt;       &lt;NA&gt;       0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 69        CHN        China         &lt;NA&gt; 5.789434775 &lt;NA&gt;       &lt;NA&gt;       0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 70        CHN        China         &lt;NA&gt; 5.528120069 &lt;NA&gt;       &lt;NA&gt;       0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 71        CHN        China         &lt;NA&gt; 5.334966938 &lt;NA&gt;       &lt;NA&gt;       0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 72        CHN        China         &lt;NA&gt; 4.794740368 &lt;NA&gt;       &lt;NA&gt;       0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 73        CHN        China         &lt;NA&gt; 3.770805375 &lt;NA&gt;       &lt;NA&gt;       0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 74        CHN        China         &lt;NA&gt; 3.731000000 &lt;NA&gt;       &lt;NA&gt;       0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 75        CHN        China         &lt;NA&gt; 3.731000000 &lt;NA&gt;       &lt;NA&gt;       0</span>
+<span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="va">ind</span><span class="op">)</span></span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   date   indicator_id    indicator_name country_id country_name country_code</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1 2023 NY.GDP.MKTP.CD GDP (current US$)         CH  Switzerland          CHE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2 2022 NY.GDP.MKTP.CD GDP (current US$)         CH  Switzerland          CHE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 3 2021 NY.GDP.MKTP.CD GDP (current US$)         CH  Switzerland          CHE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 4 2020 NY.GDP.MKTP.CD GDP (current US$)         CH  Switzerland          CHE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 5 2019 NY.GDP.MKTP.CD GDP (current US$)         CH  Switzerland          CHE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 6 2018 NY.GDP.MKTP.CD GDP (current US$)         CH  Switzerland          CHE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>          value unit obs_status decimal</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1 884940402230 &lt;NA&gt;       &lt;NA&gt;       0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2 818426550206 &lt;NA&gt;       &lt;NA&gt;       0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 3 813408787222 &lt;NA&gt;       &lt;NA&gt;       0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 4 741999406006 &lt;NA&gt;       &lt;NA&gt;       0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 5 721369112727 &lt;NA&gt;       &lt;NA&gt;       0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 6 725568717468 &lt;NA&gt;       &lt;NA&gt;       0</span>
 </code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc" aria-label="Table of contents"><h2>On this page</h2>
