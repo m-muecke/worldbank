@@ -52,9 +52,12 @@ The columns are:
 List all country indicators supported by the World Bank API.
 }
 \examples{
-wb_country_indicator("NY.GDP.MKTP.CD", "US")
-wb_country_indicator(
-  "DPANUSSPB", c("CHN", "BRA"),
+ind <- wb_country_indicator("NY.GDP.MKTP.CD", "US")
+head(ind)
+ind <- wb_country_indicator(
+  indicator = c("NY.GDP.MKTP.CD", "DPANUSSPB"),
+  country = c("US", "DE", "FR", "CH", "JP"),
   start_date = "2012M01", end_date = "2012M08"
 )
+head(ind)
 }

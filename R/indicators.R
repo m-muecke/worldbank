@@ -364,11 +364,14 @@ wb_indicator <- function(indicator = NULL, lang = "en") {
 #' @source <https://api.worldbank.org/v2/country/{country}/indicator/{indicator}>
 #' @export
 #' @examples
-#' wb_country_indicator("NY.GDP.MKTP.CD", "US")
-#' wb_country_indicator(
-#'   "DPANUSSPB", c("CHN", "BRA"),
+#' ind <- wb_country_indicator("NY.GDP.MKTP.CD", "US")
+#' head(ind)
+#' ind <- wb_country_indicator(
+#'   indicator = c("NY.GDP.MKTP.CD", "DPANUSSPB"),
+#'   country = c("US", "DE", "FR", "CH", "JP"),
 #'   start_date = "2012M01", end_date = "2012M08"
 #' )
+#' head(ind)
 wb_country_indicator <- function(indicator = "NY.GDP.MKTP.CD",
                                  country = NULL,
                                  lang = "en",
