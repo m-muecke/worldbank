@@ -367,7 +367,7 @@ wb_indicator <- function(indicator = NULL, lang = "en") {
 #' ind <- wb_country_indicator("NY.GDP.MKTP.CD", "US")
 #' head(ind)
 #' ind <- wb_country_indicator(
-#'   indicator = c("NY.GDP.MKTP.CD", "DPANUSSPB"),
+#'   indicator = c("NY.GDP.MKTP.CD", "FP.CPI.TOTL.ZG"),
 #'   country = c("US", "DE", "FR", "CH", "JP"),
 #'   start_date = "2012M01", end_date = "2012M08"
 #' )
@@ -394,29 +394,14 @@ wb_country_indicator <- function(indicator = "NY.GDP.MKTP.CD",
   date <- format_date(start_date, end_date)
 
   resource <- sprintf("country/%s/indicator/%s", country, indicator)
-  res <- worldbank_seq(resource, lang = lang) |>
-    map(function(data) {
-      res <- map(data, function(x) {
-        if (is.null(x$value) || is.null(x$date)) {
-          return()
-        }
-        data.frame(
-          date = x$date,
-          indicator_id = x$indicator$id,
-          indicator_name = x$indicator$value,
-          country_id = x$country$id,
-          country_name = x$country$value,
-          country_code = x$countryiso3code,
-          value = x$value,
-          unit = x$unit,
-          obs_status = x$obs_status,
-          decimal = x$decimal,
-          check.names = FALSE
-        )
-      })
-      do.call(rbind, res)
-    })
-  res <- do.call(rbind, res)
+  if (length(resource) == 1L) {
+    res <- worldbank(resource = resource, lang = lang, date = date)
+    res <- parse_country_indicator(res)
+  } else {
+    res <- worldbank_seq(resource = resource, lang = lang, date = date)
+    res <- map(res, parse_country_indicator)
+    res <- do.call(rbind, res)
+  }
   if (nrow(res) == 0L) {
     return(res)
   }
@@ -425,6 +410,28 @@ wb_country_indicator <- function(indicator = "NY.GDP.MKTP.CD",
   }
   res <- clean_strings(res)
   res
+}
+
+parse_country_indicator <- function(data) {
+  res <- map(data, function(x) {
+    if (is.null(x$value) || is.null(x$date)) {
+      return()
+    }
+    data.frame(
+      date = x$date,
+      indicator_id = x$indicator$id,
+      indicator_name = x$indicator$value,
+      country_id = x$country$id,
+      country_name = x$country$value,
+      country_code = x$countryiso3code,
+      value = x$value,
+      unit = x$unit,
+      obs_status = x$obs_status,
+      decimal = x$decimal,
+      check.names = FALSE
+    )
+  })
+  do.call(rbind, res)
 }
 
 is_wb_error <- function(resp) {
