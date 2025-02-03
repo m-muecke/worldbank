@@ -2,12 +2,21 @@
 % Please edit documentation in R/indicators.R
 \name{wb_country_indicator}
 \alias{wb_country_indicator}
+\alias{wb_data}
 \title{World Bank country indicator data}
 \source{
 \url{https://api.worldbank.org/v2/country/{country}/indicator/{indicator}}
 }
 \usage{
 wb_country_indicator(
+  indicator = "NY.GDP.MKTP.CD",
+  country = NULL,
+  lang = "en",
+  start_date = NULL,
+  end_date = NULL
+)
+
+wb_data(
   indicator = "NY.GDP.MKTP.CD",
   country = NULL,
   lang = "en",

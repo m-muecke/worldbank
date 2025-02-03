@@ -412,6 +412,10 @@ wb_country_indicator <- function(indicator = "NY.GDP.MKTP.CD",
   res
 }
 
+#' @rdname wb_country_indicator
+#' @export
+wb_data <- wb_country_indicator
+
 parse_country_indicator <- function(data) {
   res <- map(data, function(x) {
     if (is.null(x$value) || is.null(x$date)) {
