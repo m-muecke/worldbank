@@ -111,7 +111,7 @@ str(ind)
 #>  $ topic_value        : chr  "Energy & Mining" "Energy & Mining" "Environment"..
 
 # fetch indicator data for specific or all countries (default)
-gdp <- wb_country_indicator("NY.GDP.MKTP.CD", c("US", "DE", "FR", "CH", "JP"))
+gdp <- wb_data("NY.GDP.MKTP.CD", c("US", "DE", "FR", "CH", "JP"))
 str(gdp)
 #> 'data.frame':    320 obs. of  10 variables:
 #>  $ date          : int  2023 2022 2021 2020 2019 2018 2017 2016 2015 2014 ...
