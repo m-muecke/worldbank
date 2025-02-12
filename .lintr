@@ -4,9 +4,9 @@ linters: all_linters(
     todo_comment_linter = NULL,
     implicit_integer_linter = NULL,
     nonportable_path_linter = NULL,
-    extraction_operator_linter = NULL,
     paste_linter = NULL,
-    strings_as_factors_linter = NULL
+    strings_as_factors_linter = NULL,
+    object_overwrite_linter = NULL
   )
 exclusions: list(
     "tests/testthat.R"
