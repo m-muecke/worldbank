@@ -29,17 +29,18 @@
 #' pip_data(c("ZAF", "ZMB"))
 #' }
 pip_data <- function(
-    country = NULL,
-    year = NULL,
-    povline = 2.15,
-    popshare = NULL,
-    fill_gaps = FALSE,
-    welfare_type = c("all", "consumption", "income"),
-    reporting_level = c("all", "national", "rural", "urban"),
-    additional_ind = FALSE,
-    release_version = NULL,
-    ppp_version = NULL,
-    version = NULL) {
+  country = NULL,
+  year = NULL,
+  povline = 2.15,
+  popshare = NULL,
+  fill_gaps = FALSE,
+  welfare_type = c("all", "consumption", "income"),
+  reporting_level = c("all", "national", "rural", "urban"),
+  additional_ind = FALSE,
+  release_version = NULL,
+  ppp_version = NULL,
+  version = NULL
+) {
   welfare_type <- match.arg(welfare_type)
   reporting_level <- match.arg(reporting_level)
   if (!is.null(year)) {
@@ -90,18 +91,19 @@ pip_data <- function(
 #' pip_group(c("AFE", "LAC"))
 #' }
 pip_group <- function(
-    country = NULL,
-    year = NULL,
-    povline = 2.15,
-    popshare = NULL,
-    group_by = c("wb", "none"),
-    fill_gaps = FALSE,
-    welfare_type = c("all", "consumption", "income"),
-    reporting_level = c("all", "national", "rural", "urban"),
-    additional_ind = FALSE,
-    release_version = NULL,
-    ppp_version = NULL,
-    version = NULL) {
+  country = NULL,
+  year = NULL,
+  povline = 2.15,
+  popshare = NULL,
+  group_by = c("wb", "none"),
+  fill_gaps = FALSE,
+  welfare_type = c("all", "consumption", "income"),
+  reporting_level = c("all", "national", "rural", "urban"),
+  additional_ind = FALSE,
+  release_version = NULL,
+  ppp_version = NULL,
+  version = NULL
+) {
   group_by <- match.arg(group_by)
   welfare_type <- match.arg(welfare_type)
   reporting_level <- match.arg(reporting_level)
@@ -167,9 +169,10 @@ pip_versions <- function() {
 #' pip_citation()
 #' }
 pip_citation <- function(
-    release_version = NULL,
-    ppp_version = NULL,
-    version = NULL) {
+  release_version = NULL,
+  ppp_version = NULL,
+  version = NULL
+) {
   if (!is.null(ppp_version)) {
     ppp_version <- as.character(ppp_version)
   }
@@ -218,10 +221,11 @@ pip_citation <- function(
 #' pip_aux("cpi")
 #' }
 pip_aux <- function(
-    table = NULL,
-    release_version = NULL,
-    ppp_version = NULL,
-    version = NULL) {
+  table = NULL,
+  release_version = NULL,
+  ppp_version = NULL,
+  version = NULL
+) {
   if (!is.null(ppp_version)) {
     ppp_version <- as.character(ppp_version)
   }
@@ -269,10 +273,11 @@ pip_aux <- function(
 #' pip_valid_params()
 #' }
 pip_valid_params <- function(
-    endpoint = c("all", "aux", "pip", "pip-grp", "pip-info", "valid-params"), # nolint
-    release_version = NULL,
-    ppp_version = NULL,
-    version = NULL) {
+  endpoint = c("all", "aux", "pip", "pip-grp", "pip-info", "valid-params"), # nolint
+  release_version = NULL,
+  ppp_version = NULL,
+  version = NULL
+) {
   if (!is.null(ppp_version)) {
     ppp_version <- as.character(ppp_version)
   }
