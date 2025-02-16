@@ -372,11 +372,12 @@ wb_indicator <- function(indicator = NULL, lang = "en") {
 #'   start_date = 2015, end_date = 2023
 #' )
 #' head(ind)
-wb_country_indicator <- function(indicator = "NY.GDP.MKTP.CD",
-                                 country = NULL,
-                                 lang = "en",
-                                 start_date = NULL,
-                                 end_date = NULL) {
+wb_country_indicator <- function(
+    indicator = "NY.GDP.MKTP.CD",
+    country = NULL,
+    lang = "en",
+    start_date = NULL,
+    end_date = NULL) {
   stopifnot(
     is_character(indicator),
     is_character_or_null(country),
