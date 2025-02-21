@@ -21,5 +21,4 @@ repos:
       - id: no-debug-statement
       - id: parsable-R
       - id: readme-rmd-rendered
-      - id: style-files
       - id: use-tidy-description
