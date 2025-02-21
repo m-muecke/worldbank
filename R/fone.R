@@ -46,16 +46,16 @@ fone <- function(resource, ..., limit = NULL) {
     req_url_path_append(resource) |>
     req_url_query(top = limit, type = "csv", ...)
 
-  resps <- req |>
-    req_perform_iterative(
-      next_req = iterate_with_offset(
-        "skip",
-        start = 0L,
-        offset = 1000L,
-        resp_complete = \(resp) length(resp$body) == 0L
-      ),
-      max_reqs = max_reqs
-    )
+  resps <- req_perform_iterative(
+    req,
+    next_req = iterate_with_offset(
+      "skip",
+      start = 0L,
+      offset = 1000L,
+      resp_complete = \(resp) length(resp$body) == 0L
+    ),
+    max_reqs = max_reqs
+  )
 
   res <- resps_data(resps, function(resp) {
     if (length(resp$body) > 0L) {
