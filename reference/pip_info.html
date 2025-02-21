@@ -72,7 +72,258 @@
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
     <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="co"># \donttest{</span></span></span>
 <span class="r-in"><span><span class="fu">pip_info</span><span class="op">(</span><span class="op">)</span></span></span>
-<span class="r-err co"><span class="r-pr">#&gt;</span> <span class="error">Error in req_perform(req_url_query(req_error(req_url_path_append(req_user_agent(request("https://api.worldbank.org/pip/v1"),     "worldbank (https://m-muecke.github.io/worldbank)"), resource),     body = pip_error_body), format = format, ...)):</span> HTTP 502 Bad Gateway.</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $available_data_versions</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $available_data_versions[[1]]</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "20240627_2017_01_02_PROD"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $available_data_versions[[2]]</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "20240627_2011_02_02_PROD"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $available_data_versions[[3]]</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "20240326_2017_01_02_PROD"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $available_data_versions[[4]]</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "20240326_2011_02_02_PROD"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $available_data_versions[[5]]</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "20230919_2017_01_02_PROD"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $available_data_versions[[6]]</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "20230919_2011_02_02_PROD"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $available_data_versions[[7]]</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "20230328_2017_01_02_PROD"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $available_data_versions[[8]]</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "20230328_2011_02_02_PROD"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $available_data_versions[[9]]</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "20220909_2017_01_02_PROD"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $available_data_versions[[10]]</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "20220909_2011_02_02_PROD"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $pip_packages</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $pip_packages$pipapi</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $pip_packages$pipapi$pkg_version</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $pip_packages$pipapi$pkg_version[[1]]</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "1.3.11.9000"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $pip_packages$pipapi$pkg_hash</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $pip_packages$pipapi$pkg_hash[[1]]</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "8dfe898468855ec45852397d86ad27a9b7727c28"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $pip_packages$wbpip</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $pip_packages$wbpip$pkg_version</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $pip_packages$wbpip$pkg_version[[1]]</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "0.1.4"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $pip_packages$wbpip$pkg_hash</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $pip_packages$wbpip$pkg_hash[[1]]</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "80bcd3151f16c3e113086d5f27d778a8262b4adf"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $other_packages</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $other_packages[[1]]</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "arrow_17.0.0.1"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $other_packages[[2]]</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "assertthat_0.2.1"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $other_packages[[3]]</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "bit_4.5.0"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $other_packages[[4]]</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "bit64_4.5.2"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $other_packages[[5]]</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "cachem_1.1.0"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $other_packages[[6]]</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "cli_3.6.3"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $other_packages[[7]]</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "codetools_0.2-19"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $other_packages[[8]]</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "collapse_2.0.18"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $other_packages[[9]]</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "compiler_4.3.2"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $other_packages[[10]]</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "crayon_1.5.3"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $other_packages[[11]]</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "data.table_1.16.2"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $other_packages[[12]]</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "digest_0.6.37"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $other_packages[[13]]</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "dplyr_1.1.4"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $other_packages[[14]]</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "ellipsis_0.3.2"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $other_packages[[15]]</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "fansi_1.0.6"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $other_packages[[16]]</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "fastmap_1.2.0"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $other_packages[[17]]</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "fs_1.6.5"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $other_packages[[18]]</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "fst_0.9.8"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $other_packages[[19]]</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "future_1.34.0"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $other_packages[[20]]</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "generics_0.1.3"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $other_packages[[21]]</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "globals_0.16.3"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $other_packages[[22]]</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "glue_1.8.0"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $other_packages[[23]]</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "hms_1.1.3"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $other_packages[[24]]</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "httpuv_1.6.15"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $other_packages[[25]]</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "jsonlite_1.8.9"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $other_packages[[26]]</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "later_1.4.0"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $other_packages[[27]]</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "lifecycle_1.0.4"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $other_packages[[28]]</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "listenv_0.9.1"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $other_packages[[29]]</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "magrittr_2.0.3"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $other_packages[[30]]</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "MASS_7.3-60"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $other_packages[[31]]</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "memoise_2.0.1"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $other_packages[[32]]</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "parallel_4.3.2"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $other_packages[[33]]</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "parallelly_1.39.0"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $other_packages[[34]]</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "pillar_1.9.0"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $other_packages[[35]]</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "pkgconfig_2.0.3"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $other_packages[[36]]</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "promises_1.3.1"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $other_packages[[37]]</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "purrr_1.0.2"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $other_packages[[38]]</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "qs_0.27.2"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $other_packages[[39]]</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "R6_2.5.1"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $other_packages[[40]]</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "RApiSerialize_0.1.4"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $other_packages[[41]]</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "rappdirs_0.3.3"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $other_packages[[42]]</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "Rcpp_1.0.13-1"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $other_packages[[43]]</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "RcppParallel_5.1.9"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $other_packages[[44]]</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "readr_2.1.5"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $other_packages[[45]]</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "rlang_1.1.4"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $other_packages[[46]]</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "stringfish_0.16.0"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $other_packages[[47]]</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "stringi_1.8.4"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $other_packages[[48]]</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "swagger_5.17.14.1"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $other_packages[[49]]</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "tibble_3.2.1"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $other_packages[[50]]</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "tidyselect_1.2.1"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $other_packages[[51]]</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "tools_4.3.2"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $other_packages[[52]]</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "triebeard_0.4.1"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $other_packages[[53]]</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "tzdb_0.4.0"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $other_packages[[54]]</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "urltools_1.7.3"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $other_packages[[55]]</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "utf8_1.2.4"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $other_packages[[56]]</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "vctrs_0.6.5"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $other_packages[[57]]</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "vroom_1.6.5"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $other_packages[[58]]</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "webutils_1.2.2"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $other_packages[[59]]</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "yaml_2.3.10"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $r_version</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $r_version[[1]]</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "R version 4.3.2 (2023-10-31)"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $server_os</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $server_os[[1]]</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "Red Hat Enterprise Linux 8.10 (Ootpa)"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $server_time</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $server_time[[1]]</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "2025-02-21 17:22:46"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-in"><span><span class="co"># }</span></span></span>
 </code></pre></div>
     </div>
