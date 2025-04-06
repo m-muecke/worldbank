@@ -1,12 +1,15 @@
 linters: all_linters(
     line_length_linter = line_length_linter(88L),
-    object_usage_linter = NULL,
     todo_comment_linter = NULL,
     implicit_integer_linter = NULL,
     nonportable_path_linter = NULL,
     paste_linter = NULL,
     strings_as_factors_linter = NULL,
-    object_overwrite_linter = NULL
+    object_overwrite_linter = NULL,
+    undesirable_function_linter(fun = modify_defaults(
+      defaults = default_undesirable_functions,
+      source = NULL
+    ))
   )
 exclusions: list(
     "tests/testthat.R"
