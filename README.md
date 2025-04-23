@@ -106,7 +106,7 @@ str(ind)
 #>  $ source_id          : int  2 2 2 2 2 2 2 2 2 2 ...
 #>  $ source_value       : chr  "World Development Indicators" "World Developmen"..
 #>  $ source_note        : chr  "GDP per unit of energy use is the PPP GDP per k"..
-#>  $ source_organization: chr  "IEA Statistics © OECD/IEA 2014 (https://www.iea"..
+#>  $ source_organization: chr  "IEA Energy Statistics Data Browser, https://www"..
 #>  $ topic_id           : int  5 5 6 6 6 6 3 7 3 7 ...
 #>  $ topic_value        : chr  "Energy & Mining" "Energy & Mining" "Environment"..
 
