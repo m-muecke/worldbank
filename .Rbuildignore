@@ -8,6 +8,7 @@
 ^Meta$
 ^README\.Rmd$
 ^README\.html$
+^[\.]?air\.toml$
 ^\.Renviron$
 ^\.Rproj\.user$
 ^\.ccache$
@@ -22,7 +23,6 @@
 ^\.pre-commit-config\.yaml$
 ^\.vscode$
 ^_pkgdown\.yml$
-^air\.toml$
 ^attic$
 ^codecov\.yml$
 ^compose\.ya?ml$
