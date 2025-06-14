@@ -254,8 +254,7 @@ pip_aux <- function(
       version = version,
       format = "csv"
     )
-    res <- clean_strings(res)
-    res
+    clean_strings(res)
   }
 }
 
@@ -295,8 +294,7 @@ pip_valid_params <- function(
     version = version,
     format = "csv"
   )
-  res <- clean_strings(res)
-  res
+  clean_strings(res)
 }
 
 #' Return information about the API
