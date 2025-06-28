@@ -6,29 +6,29 @@ template:
 
 reference:
   - subtitle: Worldbank Indicators Data
-  - contents:
-    - wb_language
-    - wb_lending_type
-    - wb_income_level
-    - wb_source
-    - wb_topic
-    - wb_region
-    - wb_country
-    - wb_indicator
-    - wb_country_indicator
+    contents:
+      - wb_language
+      - wb_lending_type
+      - wb_income_level
+      - wb_source
+      - wb_topic
+      - wb_region
+      - wb_country
+      - wb_indicator
+      - wb_country_indicator
 
   - subtitle: Poverty and Inequality Platform (PIP) Data
-  - contents:
-    - pip_data
-    - pip_group
-    - pip_versions
-    - pip_citation
-    - pip_aux
-    - pip_valid_params
-    - pip_info
-    - pip_health_check
+    contents:
+      - pip_data
+      - pip_group
+      - pip_versions
+      - pip_citation
+      - pip_aux
+      - pip_valid_params
+      - pip_info
+      - pip_health_check
 
   - subtitle: Finances One Data
-  - contents:
-    - fone_dataset
-    - fone_view
+    contents:
+      - fone_dataset
+      - fone_view
