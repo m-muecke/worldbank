@@ -1,16 +1,21 @@
-is_bool <- function(x) {
+is_bool <- function(x, null_ok = FALSE) {
+  if (null_ok && is.null(x)) {
+    return(TRUE)
+  }
   is.logical(x) && length(x) == 1L
 }
 
-is_character <- function(x) {
+is_character <- function(x, null_ok = FALSE) {
+  if (null_ok && is.null(x)) {
+    return(TRUE)
+  }
   is.character(x) && !anyNA(x) && length(x) > 0L
 }
 
-is_character_or_null <- function(x) {
-  is.null(x) || is_character(x)
-}
-
-is_string <- function(x, pattern = NULL, ...) {
+is_string <- function(x, ..., pattern = NULL, null_ok = FALSE) {
+  if (null_ok && is.null(x)) {
+    return(TRUE)
+  }
   ok <- is.character(x) && length(x) == 1L && !is.na(x)
   if (ok && !is.null(pattern)) {
     ok <- grepl(pattern, x, ...)
@@ -18,19 +23,17 @@ is_string <- function(x, pattern = NULL, ...) {
   ok
 }
 
-is_string_or_null <- function(x, pattern = NULL, ...) {
-  is.null(x) || is_string(x, pattern, ...)
-}
-
-is_count <- function(x) {
+is_count <- function(x, null_ok = FALSE) {
+  if (null_ok && is.null(x)) {
+    return(TRUE)
+  }
   is.numeric(x) && length(x) == 1L && !is.na(x) && as.integer(x) == x && x > 0L
 }
 
-is_count_or_null <- function(x) {
-  is.null(x) || is_count(x)
-}
-
-is_dateish <- function(x) {
+is_dateish <- function(x, null_ok = FALSE) {
+  if (null_ok && is.null(x)) {
+    return(null_ok)
+  }
   if (length(x) != 1L) {
     return(FALSE)
   }
@@ -40,8 +43,4 @@ is_dateish <- function(x) {
   } else {
     FALSE
   }
-}
-
-is_dateish_or_null <- function(x) {
-  is.null(x) || is_dateish(x)
 }

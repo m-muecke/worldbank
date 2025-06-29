@@ -19,7 +19,7 @@ fone_dataset <- function(dataset_id, resource_id, ..., limit = NULL) {
   stopifnot(
     is_string(dataset_id),
     is_string(resource_id),
-    is_count_or_null(limit)
+    is_count(limit, null_ok = TRUE)
   )
   fone(
     resource = "apiservice",
@@ -33,7 +33,7 @@ fone_dataset <- function(dataset_id, resource_id, ..., limit = NULL) {
 #' @rdname fone
 #' @export
 fone_view <- function(view_id, ..., limit = NULL) {
-  stopifnot(is_string(view_id), is_count_or_null(limit))
+  stopifnot(is_string(view_id), is_count(limit, null_ok = TRUE))
   fone(resource = "view", viewId = view_id, ..., limit = limit)
 }
 

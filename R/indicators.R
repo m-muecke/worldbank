@@ -41,7 +41,7 @@ wb_language <- function() {
 #' @examples
 #' wb_lending_type()
 wb_lending_type <- function(type = NULL, lang = "en") {
-  stopifnot(is_character_or_null(type), nchar(type) == 3L)
+  stopifnot(is_character(type, null_ok = TRUE), nchar(type) == 3L)
   type <- format_param(type)
 
   resource <- sprintf("lendingType/%s", type)
@@ -73,7 +73,7 @@ wb_lending_type <- function(type = NULL, lang = "en") {
 #' @examples
 #' wb_income_level()
 wb_income_level <- function(income = NULL, lang = "en") {
-  stopifnot(is_character_or_null(income), nchar(income) == 3L)
+  stopifnot(is_character(income, null_ok = TRUE), nchar(income) == 3L)
   income <- format_param(income)
 
   resource <- sprintf("incomeLevel/%s", income)
@@ -111,7 +111,7 @@ wb_income_level <- function(income = NULL, lang = "en") {
 #' @examples
 #' wb_source()
 wb_source <- function(source = NULL, lang = "en") {
-  stopifnot(is_character_or_null(source))
+  stopifnot(is_character(source, null_ok = TRUE))
   source <- format_param(source)
 
   resource <- sprintf("source/%s", source)
@@ -149,7 +149,7 @@ wb_source <- function(source = NULL, lang = "en") {
 #' @examples
 #' wb_topic()
 wb_topic <- function(topic = NULL, lang = "en") {
-  stopifnot(is_character_or_null(topic))
+  stopifnot(is_character(topic, null_ok = TRUE))
   topic <- format_param(topic)
 
   resource <- sprintf("topic/%s", topic)
@@ -183,7 +183,7 @@ wb_topic <- function(topic = NULL, lang = "en") {
 #' wb_region()
 wb_region <- function(region = NULL, lang = "en") {
   stopifnot(
-    is_character_or_null(region),
+    is_character(region, null_ok = TRUE),
     is_string(lang),
     nchar(lang) == 2L
   )
@@ -235,7 +235,7 @@ wb_region <- function(region = NULL, lang = "en") {
 #' wb_country()
 wb_country <- function(country = NULL, lang = "en") {
   stopifnot(
-    is_character_or_null(country),
+    is_character(country, null_ok = TRUE),
     nchar(country) %in% 2:3,
     is_string(lang),
     nchar(lang) == 2L
@@ -292,7 +292,7 @@ wb_country <- function(country = NULL, lang = "en") {
 #' @examples
 #' wb_indicator("NY.GDP.MKTP.CD")
 wb_indicator <- function(indicator = NULL, lang = "en") {
-  stopifnot(is_string_or_null(indicator))
+  stopifnot(is_string(indicator, null_ok = TRUE))
   indicator <- indicator %||% "all"
 
   resource <- sprintf("indicator/%s", indicator)
@@ -374,10 +374,10 @@ wb_country_indicator <- function(
 ) {
   stopifnot(
     is_character(indicator),
-    is_character_or_null(country),
+    is_character(country, null_ok = TRUE),
     nchar(country) %in% 2:3,
-    is_dateish_or_null(start_date),
-    is_dateish_or_null(end_date)
+    is_dateish(start_date, null_ok = TRUE),
+    is_dateish(end_date, null_ok = TRUE)
   )
   has_start_date <- !is.null(start_date)
   has_end_date <- !is.null(end_date)
@@ -456,7 +456,7 @@ wb_error_body <- function(resp) {
 }
 
 worldbank <- function(resource, ..., lang = NULL, per_page = 32500L) {
-  stopifnot(is_string_or_null(lang), nchar(lang) == 2L)
+  stopifnot(is_string(lang, null_ok = TRUE), nchar(lang) == 2L)
   body <- request("https://api.worldbank.org/v2") |>
     req_user_agent("worldbank (https://m-muecke.github.io/worldbank)") |>
     req_url_path_append(lang, resource) |>
@@ -468,7 +468,7 @@ worldbank <- function(resource, ..., lang = NULL, per_page = 32500L) {
 }
 
 worldbank_seq <- function(resource, resp_data, ..., lang = NULL, per_page = 32500L) {
-  stopifnot(is_string_or_null(lang), nchar(lang) == 2L)
+  stopifnot(is_string(lang, null_ok = TRUE), nchar(lang) == 2L)
   req <- request("https://api.worldbank.org/v2") |>
     req_user_agent("worldbank (https://m-muecke.github.io/worldbank)") |>
     req_url_query(..., format = "json", per_page = per_page) |>

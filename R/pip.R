@@ -53,10 +53,10 @@ pip_data <- function(
     is.null(country) || is_character(country) && all(nchar(country) == 3L),
     is.null(year) || is_character(year) && all(grepl("[0-9]{4}", year)),
     is_bool(fill_gaps),
-    is_string_or_null(release_version, "[0-9]{8}"),
+    is_string(release_version, pattern = "[0-9]{8}", null_ok = TRUE),
     is_bool(additional_ind),
-    is_string_or_null(ppp_version, "[0-9]{4}"),
-    is_string_or_null(version)
+    is_string(ppp_version, pattern = "[0-9]{4}", null_ok = TRUE),
+    is_string(version, null_ok = TRUE)
   )
   res <- pip(
     resource = "pip",
@@ -117,10 +117,10 @@ pip_group <- function(
     is.null(country) || is_character(country) && all(nchar(country) == 3L),
     is.null(year) || is_character(year) && all(grepl("[0-9]{4}", year)),
     is_bool(fill_gaps),
-    is_string_or_null(release_version, "[0-9]{8}"),
+    is_string(release_version, pattern = "[0-9]{8}", null_ok = TRUE),
     is_bool(additional_ind),
-    is_string_or_null(ppp_version, "[0-9]{4}"),
-    is_string_or_null(version)
+    is_string(ppp_version, pattern = "[0-9]{4}", null_ok = TRUE),
+    is_string(version, null_ok = TRUE)
   )
   res <- pip(
     resource = "pip-grp",
@@ -177,9 +177,9 @@ pip_citation <- function(
     ppp_version <- as.character(ppp_version)
   }
   stopifnot(
-    is_string_or_null(release_version, "[0-9]{8}"),
-    is_string_or_null(ppp_version, "[0-9]{4}"),
-    is_string_or_null(version)
+    is_string(release_version, pattern = "[0-9]{8}", null_ok = TRUE),
+    is_string(ppp_version, pattern = "[0-9]{4}", null_ok = TRUE),
+    is_string(version, null_ok = TRUE)
   )
   res <- pip(
     resource = "citation",
@@ -230,10 +230,10 @@ pip_aux <- function(
     ppp_version <- as.character(ppp_version)
   }
   stopifnot(
-    is_string_or_null(table),
-    is_string_or_null(release_version, "[0-9]{8}"),
-    is_string_or_null(ppp_version, "[0-9]{4}"),
-    is_string_or_null(version)
+    is_string(table, null_ok = TRUE),
+    is_string(release_version, pattern = "[0-9]{8}", null_ok = TRUE),
+    is_string(ppp_version, pattern = "[0-9]{4}", null_ok = TRUE),
+    is_string(version, null_ok = TRUE)
   )
   if (is.null(table)) {
     res <- pip(
@@ -281,9 +281,9 @@ pip_valid_params <- function(
     ppp_version <- as.character(ppp_version)
   }
   stopifnot(
-    is_string_or_null(release_version, "[0-9]{8}"),
-    is_string_or_null(ppp_version, "[0-9]{4}"),
-    is_string_or_null(version)
+    is_string(release_version, pattern = "[0-9]{8}", null_ok = TRUE),
+    is_string(ppp_version, pattern = "[0-9]{4}", null_ok = TRUE),
+    is_string(version, null_ok = TRUE)
   )
   endpoint <- match.arg(endpoint)
   res <- pip(
