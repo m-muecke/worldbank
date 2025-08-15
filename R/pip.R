@@ -329,9 +329,9 @@ pip_health_check <- function() {
 pip_error_body <- function(resp) {
   content_type <- resp_content_type(resp)
   if (identical(content_type, "application/json")) {
-    body <- resp_body_json(resp)
-    msg <- body$error[[1L]]
-    details <- body$details$msg[[1L]]
+    json <- resp_body_json(resp)
+    msg <- json$error[[1L]]
+    details <- json$details$msg[[1L]]
     details <- gsub("\\s+", " ", details)
     c(msg, details)
   }

@@ -437,8 +437,8 @@ is_wb_error <- function(resp) {
   if (status >= 400L) {
     return(TRUE)
   }
-  body <- resp_body_json(resp)
-  if (length(body) == 1L && length(body[[1L]]$message) == 1L) {
+  json <- resp_body_json(resp)
+  if (length(json) == 1L && length(json[[1L]]$message) == 1L) {
     return(TRUE)
   }
   FALSE
@@ -447,8 +447,8 @@ is_wb_error <- function(resp) {
 wb_error_body <- function(resp) {
   content_type <- resp_content_type(resp)
   if (identical(content_type, "application/json")) {
-    body <- resp_body_json(resp)
-    msg <- body[[1L]]$message[[1L]]
+    json <- resp_body_json(resp)
+    msg <- json[[1L]]$message[[1L]]
     error_code <- paste("Error code:", msg$id)
     docs <- "Read more at <https://datahelpdesk.worldbank.org/knowledgebase/articles/898620-api-error-codes>" # nolint
     c(error_code, msg$value, docs)
