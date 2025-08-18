@@ -10,10 +10,11 @@
 wb_region(region = NULL, lang = "en")
 }
 \arguments{
-\item{region}{(\code{character()}) region to query. Default \code{NULL}.
-If \code{NULL}, all regions are returned}
+\item{region}{(\code{character()})\cr
+Region to query. Default \code{NULL}. If \code{NULL}, all regions are returned}
 
-\item{lang}{(\code{character(1)}) language to query. Default \code{"en"}.}
+\item{lang}{(\code{character(1)})\cr
+Language to query. Default \code{"en"}.}
 }
 \value{
 A \code{data.frame()} with the available regions. The columns are:

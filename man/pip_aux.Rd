@@ -15,15 +15,17 @@ pip_aux(
 )
 }
 \arguments{
-\item{table}{(\code{character(1)}) table to be returned. Default \code{NULL}.}
+\item{table}{(\code{character(1)})\cr
+Table to be returned. Default \code{NULL}.}
 
-\item{release_version}{(\code{character(1)}) version of the data release in YYYYMMDD
-format. Default \code{NULL}.}
+\item{release_version}{(\code{character(1)})\cr
+Version of the data release in YYYYMMDD format. Default \code{NULL}.}
 
-\item{ppp_version}{(\code{character(1)} | \code{numeric(1)}) version of the data.
-Default \code{NULL}.}
+\item{ppp_version}{(\code{character(1)} | \code{numeric(1)})\cr
+Version of the data. Default \code{NULL}.}
 
-\item{version}{(\code{character(1)}) version of the data. Default \code{NULL}.}
+\item{version}{(\code{character(1)})\cr
+Version of the data. Default \code{NULL}.}
 }
 \value{
 A \code{character()} with the available tables or a \code{data.frame()} containing the

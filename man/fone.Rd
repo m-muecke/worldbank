@@ -13,16 +13,21 @@ fone_dataset(dataset_id, resource_id, ..., limit = NULL)
 fone_view(view_id, ..., limit = NULL)
 }
 \arguments{
-\item{dataset_id}{(\code{character(1)}) id of the associated dataset.}
+\item{dataset_id}{(\code{character(1)})\cr
+The id of the associated dataset.}
 
-\item{resource_id}{(\code{character(1)}) id of the associated resource.}
+\item{resource_id}{(\code{character(1)})\cr
+Id of the associated resource.}
 
-\item{...}{(\code{any}) additional arguments passed to the request.}
+\item{...}{(\code{any})\cr
+Additional arguments passed to the request.}
 
-\item{limit}{(\code{integer(1)}) the maximum number of rows to return. Default is \code{NULL}.
+\item{limit}{(\code{integer(1)})\cr
+The maximum number of rows to return. Default is \code{NULL}.
 If \code{NULL}, all rows are returned.}
 
-\item{view_id}{(\code{character(1)}) id of the view.}
+\item{view_id}{(\code{character(1)})\cr
+The Id of the view.}
 }
 \value{
 A \code{data.frame()} with the requested dataset.
