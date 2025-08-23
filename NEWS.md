@@ -1,5 +1,7 @@
 # worldbank (development version)
 
+* Documentation improvements.
+
 # worldbank 0.6.0
 
 * `wb_data()` has been added as an alias for `wb_country_indicator()`
