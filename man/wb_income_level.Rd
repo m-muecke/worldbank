@@ -10,7 +10,7 @@
 wb_income_level(income = NULL, lang = "en")
 }
 \arguments{
-\item{income}{(\code{character()})\cr
+\item{income}{(\code{NULL} | \code{character()})\cr
 Income level to query. Default \code{NULL}. If \code{NULL}, all levels are returned.}
 
 \item{lang}{(\code{character(1)})\cr

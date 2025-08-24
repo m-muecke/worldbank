@@ -28,13 +28,13 @@ wb_data(
 \item{indicator}{(\code{character()})\cr
 Indicators to query.}
 
-\item{country}{(\code{character()})\cr
+\item{country}{(\code{NULL} | \code{character()})\cr
 Countries to query. Default \code{NULL}. If \code{NULL}, all countries are returned.}
 
 \item{lang}{(\code{character(1)})\cr
 Language to query. Default \code{"en"}.}
 
-\item{start_date}{(\code{character(1)} | \code{integer(1)})\cr
+\item{start_date}{(\code{NULL} | \code{character(1)} | \code{integer(1)})\cr
 Start date to query. Default \code{NULL}. Supported formats:
 \itemize{
 \item YYYY for yearly data (e.g. \code{2020} or \code{"2020"})
@@ -42,7 +42,7 @@ Start date to query. Default \code{NULL}. Supported formats:
 \item YYYYM[1-12] for monthly data (e.g. \code{"2020M02"})
 }}
 
-\item{end_date}{(\code{character(1)} | \code{integer(1)})\cr
+\item{end_date}{(\code{NULL} | \code{character(1)} | \code{integer(1)})\cr
 End date to query, in the same format as start_date. Default \code{NULL}.}
 }
 \value{

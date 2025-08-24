@@ -15,21 +15,20 @@ pip_aux(
 )
 }
 \arguments{
-\item{table}{(\code{character(1)})\cr
+\item{table}{(\code{NULL} | \code{character(1)})\cr
 Table to be returned. Default \code{NULL}.}
 
-\item{release_version}{(\code{character(1)})\cr
+\item{release_version}{(\code{NULL} | \code{character(1)})\cr
 Version of the data release in YYYYMMDD format. Default \code{NULL}.}
 
-\item{ppp_version}{(\code{character(1)} | \code{numeric(1)})\cr
+\item{ppp_version}{(\code{NULL} | \code{character(1)} | \code{numeric(1)})\cr
 Version of the data. Default \code{NULL}.}
 
-\item{version}{(\code{character(1)})\cr
+\item{version}{(\code{NULL} | \code{character(1)})\cr
 Version of the data. Default \code{NULL}.}
 }
 \value{
-A \code{character()} with the available tables or a \code{data.frame()} containing the
-table data.
+A \code{character()} with the available tables or a \code{data.frame()} containing the table data.
 }
 \description{
 Return auxiliary data tables

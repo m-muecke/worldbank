@@ -1,13 +1,13 @@
 #' Return main poverty and inequality statistics
 #'
-#' @param country (`character()`)\cr
+#' @param country (`NULL` | `character()`)\cr
 #'   Countries for which statistics are to be computed, specified as ISO3 codes. Default `NULL`.
-#' @param year (`character()` | `numeric()`)\cr
+#' @param year (`NULL` | `character()` | `numeric()`)\cr
 #'   Years for which statistics are to be computed, specified as YYYY. Default `NULL`.
 #' @param povline (`numeric(1)`)\cr
 #'   Poverty line to be used to compute poverty mesures. Poverty lines are only accepted up to 3
 #'   decimals. Default `2.15`.
-#' @param popshare (`numeric(1)`)\cr
+#' @param popshare (`NULL` | `numeric(1)`)\cr
 #'   Proportion of the population living below the poverty line. Will be ignored if povline is
 #'   specified. Default `NULL`.
 #' @param fill_gaps (`logical(1)`)\cr
@@ -18,11 +18,11 @@
 #'   level of reporting for the statistics. Default `"all"`.
 #' @param additional_ind (`logical(1)`)\cr
 #'   Whether to include additional indicators. Default `FALSE`.
-#' @param release_version (`character(1)`)\cr
+#' @param release_version (`NULL` | `character(1)`)\cr
 #'   Version of the data release in YYYYMMDD format. Default `NULL`.
-#' @param ppp_version (`character(1)` | `numeric(1)`)\cr
+#' @param ppp_version (`NULL` | `character(1)` | `numeric(1)`)\cr
 #'   Version of the data. Default `NULL`.
-#' @param version (`character(1)`)\cr
+#' @param version (`NULL` | `character(1)`)\cr
 #'   Version of the data. Default `NULL`.
 #' @returns A `data.frame()` with the requested statistics.
 #' @source <https://pip.worldbank.org/api>
@@ -203,11 +203,10 @@ pip_citation <- function(
 
 #' Return auxiliary data tables
 #'
-#' @inheritParams pip_data
-#' @param table (`character(1)`)\cr
+#' @param table (`NULL` | `character(1)`)\cr
 #'   Table to be returned. Default `NULL`.
-#' @returns A `character()` with the available tables or a `data.frame()` containing the
-#'   table data.
+#' @inheritParams pip_data
+#' @returns A `character()` with the available tables or a `data.frame()` containing the table data.
 #' @inherit pip_data source
 #' @family poverty and inequality statistics
 #' @export

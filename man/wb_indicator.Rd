@@ -10,7 +10,7 @@
 wb_indicator(indicator = NULL, lang = "en")
 }
 \arguments{
-\item{indicator}{(\code{character(1)})\cr
+\item{indicator}{(\code{NULL} | \code{character(1)})\cr
 Indicator to query. Default \code{NULL}. If \code{NULL}, all indicators are returned.}
 
 \item{lang}{(\code{character(1)})\cr

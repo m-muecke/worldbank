@@ -10,7 +10,7 @@
 wb_topic(topic = NULL, lang = "en")
 }
 \arguments{
-\item{topic}{(\code{character()})\cr
+\item{topic}{(\code{NULL} | \code{character()})\cr
 Topic to query. Default \code{NULL}. If \code{NULL}, all topics are returned.}
 
 \item{lang}{(\code{character(1)})\cr

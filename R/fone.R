@@ -8,7 +8,7 @@
 #'   The Id of the view.
 #' @param ... (`any`)\cr
 #'   Additional arguments passed to the request.
-#' @param limit (`integer(1)`)\cr
+#' @param limit (`NULL` | `integer(1)`)\cr
 #'   The maximum number of rows to return. Default is `NULL`.
 #'   If `NULL`, all rows are returned.
 #' @returns A `data.frame()` with the requested dataset.

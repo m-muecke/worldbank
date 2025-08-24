@@ -22,17 +22,17 @@ pip_data(
 )
 }
 \arguments{
-\item{country}{(\code{character()})\cr
+\item{country}{(\code{NULL} | \code{character()})\cr
 Countries for which statistics are to be computed, specified as ISO3 codes. Default \code{NULL}.}
 
-\item{year}{(\code{character()} | \code{numeric()})\cr
+\item{year}{(\code{NULL} | \code{character()} | \code{numeric()})\cr
 Years for which statistics are to be computed, specified as YYYY. Default \code{NULL}.}
 
 \item{povline}{(\code{numeric(1)})\cr
 Poverty line to be used to compute poverty mesures. Poverty lines are only accepted up to 3
 decimals. Default \code{2.15}.}
 
-\item{popshare}{(\code{numeric(1)})\cr
+\item{popshare}{(\code{NULL} | \code{numeric(1)})\cr
 Proportion of the population living below the poverty line. Will be ignored if povline is
 specified. Default \code{NULL}.}
 
@@ -48,13 +48,13 @@ level of reporting for the statistics. Default \code{"all"}.}
 \item{additional_ind}{(\code{logical(1)})\cr
 Whether to include additional indicators. Default \code{FALSE}.}
 
-\item{release_version}{(\code{character(1)})\cr
+\item{release_version}{(\code{NULL} | \code{character(1)})\cr
 Version of the data release in YYYYMMDD format. Default \code{NULL}.}
 
-\item{ppp_version}{(\code{character(1)} | \code{numeric(1)})\cr
+\item{ppp_version}{(\code{NULL} | \code{character(1)} | \code{numeric(1)})\cr
 Version of the data. Default \code{NULL}.}
 
-\item{version}{(\code{character(1)})\cr
+\item{version}{(\code{NULL} | \code{character(1)})\cr
 Version of the data. Default \code{NULL}.}
 }
 \value{

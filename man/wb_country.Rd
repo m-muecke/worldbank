@@ -10,7 +10,7 @@
 wb_country(country = NULL, lang = "en")
 }
 \arguments{
-\item{country}{(\code{character()})\cr
+\item{country}{(\code{NULL} | \code{character()})\cr
 Country to query. Default \code{NULL}. If \code{NULL}, all countries are returned.}
 
 \item{lang}{(\code{character(1)})\cr

@@ -10,7 +10,7 @@
 wb_source(source = NULL, lang = "en")
 }
 \arguments{
-\item{source}{(\code{character()})\cr
+\item{source}{(\code{NULL} | \code{character()})\cr
 Source to query. Default \code{NULL}. If \code{NULL}, all sources are returned.}
 
 \item{lang}{(\code{character(1)})\cr

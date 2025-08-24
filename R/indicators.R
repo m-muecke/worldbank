@@ -26,7 +26,7 @@ wb_language <- function() {
 #'
 #' List all lending types supported by the World Bank API.
 #'
-#' @param type (`character()`)\cr
+#' @param type (`NULL` | `character()`)\cr
 #'   lending type to query. Default `NULL`. If `NULL`, all types are returned.
 #' @param lang (`character(1)`)\cr
 #'   Language to query. Default `"en"`.
@@ -58,7 +58,7 @@ wb_lending_type <- function(type = NULL, lang = "en") {
 #'
 #' List all income levels supported by the World Bank API.
 #'
-#' @param income (`character()`)\cr
+#' @param income (`NULL` | `character()`)\cr
 #'   Income level to query. Default `NULL`. If `NULL`, all levels are returned.
 #' @param lang (`character(1)`)\cr
 #'   Language to query. Default `"en"`.
@@ -90,7 +90,7 @@ wb_income_level <- function(income = NULL, lang = "en") {
 #'
 #' List all sources supported by the World Bank API.
 #'
-#' @param source (`character()`)\cr
+#' @param source (`NULL` | `character()`)\cr
 #'   Source to query. Default `NULL`. If `NULL`, all sources are returned.
 #' @param lang (`character(1)`)\cr
 #'   Language to query. Default `"en"`.
@@ -134,7 +134,7 @@ wb_source <- function(source = NULL, lang = "en") {
 #'
 #' List all topics supported by the World Bank API.
 #'
-#' @param topic (`character()`)\cr
+#' @param topic (`NULL` | `character()`)\cr
 #'   Topic to query. Default `NULL`. If `NULL`, all topics are returned.
 #' @param lang (`character(1)`)\cr
 #'   Language to query. Default `"en"`.
@@ -166,7 +166,7 @@ wb_topic <- function(topic = NULL, lang = "en") {
 #'
 #' List all regions supported by the World Bank API.
 #'
-#' @param region (`character()`)\cr
+#' @param region (`NULL` | `character()`)\cr
 #'   Region to query. Default `NULL`. If `NULL`, all regions are returned
 #' @param lang (`character(1)`)\cr
 #'   Language to query. Default `"en"`.
@@ -204,7 +204,7 @@ wb_region <- function(region = NULL, lang = "en") {
 #'
 #' List all countries supported by the World Bank API.
 #'
-#' @param country (`character()`)\cr
+#' @param country (`NULL` | `character()`)\cr
 #'   Country to query. Default `NULL`. If `NULL`, all countries are returned.
 #' @param lang (`character(1)`)\cr
 #'   Language to query. Default `"en"`.
@@ -271,7 +271,7 @@ wb_country <- function(country = NULL, lang = "en") {
 #'
 #' List all indicators supported by the World Bank API.
 #'
-#' @param indicator (`character(1)`)\cr
+#' @param indicator (`NULL` | `character(1)`)\cr
 #'   Indicator to query. Default `NULL`. If `NULL`, all indicators are returned.
 #' @param lang (`character(1)`)\cr
 #'   Language to query. Default `"en"`.
@@ -331,16 +331,16 @@ wb_indicator <- function(indicator = NULL, lang = "en") {
 #'
 #' @param indicator (`character()`)\cr
 #'   Indicators to query.
-#' @param country (`character()`)\cr
+#' @param country (`NULL` | `character()`)\cr
 #'   Countries to query. Default `NULL`. If `NULL`, all countries are returned.
 #' @param lang (`character(1)`)\cr
 #'   Language to query. Default `"en"`.
-#' @param start_date (`character(1)` | `integer(1)`)\cr
+#' @param start_date (`NULL` | `character(1)` | `integer(1)`)\cr
 #'   Start date to query. Default `NULL`. Supported formats:
 #'   * YYYY for yearly data (e.g. `2020` or `"2020"`)
 #'   * YYYYQ\[1-4\] for quarterly data (e.g. `"2020Q1"`)
 #'   * YYYYM\[1-12\] for monthly data (e.g. `"2020M02"`)
-#' @param end_date (`character(1)` | `integer(1)`)\cr
+#' @param end_date (`NULL` | `character(1)` | `integer(1)`)\cr
 #'   End date to query, in the same format as start_date. Default `NULL`.
 #' @returns A `data.frame()` with the available country indicators.
 #'   The columns are:

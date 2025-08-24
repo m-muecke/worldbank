@@ -22,7 +22,7 @@ Id of the associated resource.}
 \item{...}{(\code{any})\cr
 Additional arguments passed to the request.}
 
-\item{limit}{(\code{integer(1)})\cr
+\item{limit}{(\code{NULL} | \code{integer(1)})\cr
 The maximum number of rows to return. Default is \code{NULL}.
 If \code{NULL}, all rows are returned.}
 
