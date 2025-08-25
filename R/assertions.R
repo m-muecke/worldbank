@@ -32,7 +32,7 @@ is_count <- function(x, null_ok = FALSE) {
 
 is_dateish <- function(x, null_ok = FALSE) {
   if (null_ok && is.null(x)) {
-    return(null_ok)
+    return(TRUE)
   }
   if (length(x) != 1L) {
     return(FALSE)
