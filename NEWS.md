@@ -1,4 +1,4 @@
-# worldbank (development version)
+# worldbank 0.6.1
 
 * Documentation improvements.
 
