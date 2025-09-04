@@ -93,7 +93,6 @@ str(country)
 #>  $ longitude         : num  -70 NA 69.2 NA NA ...
 #>  $ latitude          : num  12.5 NA 34.5 NA NA ...
 
-
 # search for specific indicator
 ind <- wb_indicator()
 ind <- subset(

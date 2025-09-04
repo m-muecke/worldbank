@@ -69,7 +69,6 @@ wb_country(c("US", "DE"))
 country <- wb_country()
 str(country)
 
-
 # search for specific indicator
 ind <- wb_indicator()
 ind <- subset(
