@@ -34,9 +34,11 @@ A \code{data.frame()} with the valid parameters.
 Return valid query parameters
 }
 \examples{
+\dontshow{if (httr2::is_online()) withAutoprint(\{ # examplesIf}
 \donttest{
 pip_valid_params()
 }
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Other poverty and inequality statistics: 

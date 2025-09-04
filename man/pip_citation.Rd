@@ -26,9 +26,11 @@ A \code{data.frame()} with the citation.
 Return citation for a given version
 }
 \examples{
+\dontshow{if (httr2::is_online()) withAutoprint(\{ # examplesIf}
 \donttest{
 pip_citation()
 }
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Other poverty and inequality statistics: 

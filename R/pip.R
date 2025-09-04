@@ -28,7 +28,7 @@
 #' @source <https://pip.worldbank.org/api>
 #' @family poverty and inequality statistics
 #' @export
-#' @examples
+#' @examplesIf httr2::is_online()
 #' \donttest{
 #' pip_data(c("ZAF", "ZMB"))
 #' }
@@ -90,7 +90,7 @@ pip_data <- function(
 #' @inherit pip_data source
 #' @family poverty and inequality statistics
 #' @export
-#' @examples
+#' @examplesIf httr2::is_online()
 #' \donttest{
 #' pip_group(c("AFE", "LAC"))
 #' }
@@ -152,7 +152,7 @@ pip_group <- function(
 #' @inherit pip_data source
 #' @family poverty and inequality statistics
 #' @export
-#' @examples
+#' @examplesIf httr2::is_online()
 #' \donttest{
 #' pip_versions()
 #' }
@@ -168,7 +168,7 @@ pip_versions <- function() {
 #' @inherit pip_data source
 #' @family poverty and inequality statistics
 #' @export
-#' @examples
+#' @examplesIf httr2::is_online()
 #' \donttest{
 #' pip_citation()
 #' }
@@ -210,7 +210,7 @@ pip_citation <- function(
 #' @inherit pip_data source
 #' @family poverty and inequality statistics
 #' @export
-#' @examples
+#' @examplesIf httr2::is_online()
 #' \donttest{
 #' # get a list of available tables
 #' pip_aux()
@@ -271,7 +271,7 @@ pip_aux <- function(
 #' @inherit pip_data source
 #' @family poverty and inequality statistics
 #' @export
-#' @examples
+#' @examplesIf httr2::is_online()
 #' \donttest{
 #' pip_valid_params()
 #' }
@@ -307,7 +307,7 @@ pip_valid_params <- function(
 #' @inherit pip_data source
 #' @family poverty and inequality statistics
 #' @export
-#' @examples
+#' @examplesIf httr2::is_online()
 #' \donttest{
 #' pip_info()
 #' }
@@ -321,7 +321,7 @@ pip_info <- function() {
 #' @inherit pip_data source
 #' @family poverty and inequality statistics
 #' @export
-#' @examples
+#' @examplesIf httr2::is_online()
 #' \donttest{
 #' pip_health_check()
 #' }

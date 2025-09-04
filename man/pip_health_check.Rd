@@ -16,9 +16,11 @@ A \code{character(1)} with the health check message.
 Determine if the API is running and listening as expected
 }
 \examples{
+\dontshow{if (httr2::is_online()) withAutoprint(\{ # examplesIf}
 \donttest{
 pip_health_check()
 }
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Other poverty and inequality statistics: 

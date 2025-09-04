@@ -34,6 +34,7 @@ A \code{character()} with the available tables or a \code{data.frame()} containi
 Return auxiliary data tables
 }
 \examples{
+\dontshow{if (httr2::is_online()) withAutoprint(\{ # examplesIf}
 \donttest{
 # get a list of available tables
 pip_aux()
@@ -47,6 +48,7 @@ pip_aux("gdp")
 # get CPI
 pip_aux("cpi")
 }
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Other poverty and inequality statistics: 

@@ -26,7 +26,9 @@ A \code{data.frame()} with the available lending types. The columns are:
 List all lending types supported by the World Bank API.
 }
 \examples{
+\dontshow{if (httr2::is_online()) withAutoprint(\{ # examplesIf}
 wb_lending_type()
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Other indicators data: 

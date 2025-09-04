@@ -68,9 +68,11 @@ A \code{data.frame()} with the requested statistics.
 Return aggregation of PIP statistics
 }
 \examples{
+\dontshow{if (httr2::is_online()) withAutoprint(\{ # examplesIf}
 \donttest{
 pip_group(c("AFE", "LAC"))
 }
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Other poverty and inequality statistics: 

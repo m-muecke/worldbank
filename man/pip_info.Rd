@@ -16,9 +16,11 @@ A \code{data.frame()} with the API information.
 Return information about the API
 }
 \examples{
+\dontshow{if (httr2::is_online()) withAutoprint(\{ # examplesIf}
 \donttest{
 pip_info()
 }
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Other poverty and inequality statistics: 
