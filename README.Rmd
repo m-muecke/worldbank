@@ -15,7 +15,7 @@ knitr::opts_chunk$set(
 options(str = strOptions(strict.width = "cut"))
 ```
 
-# worlddbank
+# worldbank
 
 <!-- badges: start -->
 [![Lifecycle: experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
@@ -26,7 +26,7 @@ options(str = strOptions(strict.width = "cut"))
 
 ## Overview
 
-worlbank provides a simple interface to the following [World Bank](https://datahelpdesk.worldbank.org/knowledgebase/articles/889386-developer-information-overview) APIs:
+worldbank provides a simple interface to the following [World Bank](https://datahelpdesk.worldbank.org/knowledgebase/articles/889386-developer-information-overview) APIs:
 
 - [Indicators API v2](https://datahelpdesk.worldbank.org/knowledgebase/articles/889392-about-the-indicators-api-documentation)
 - [Poverty and Inequality Platform (PIP) API](https://pip.worldbank.org/api).

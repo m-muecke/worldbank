@@ -1,7 +1,7 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# worlddbank
+# worldbank
 
 <!-- badges: start -->
 
@@ -16,7 +16,7 @@ version](https://m-muecke.r-universe.dev/worldbank/badges/version)](https://m-mu
 
 ## Overview
 
-worlbank provides a simple interface to the following [World
+worldbank provides a simple interface to the following [World
 Bank](https://datahelpdesk.worldbank.org/knowledgebase/articles/889386-developer-information-overview)
 APIs:
 
