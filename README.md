@@ -128,6 +128,30 @@ str(gdp)
 #>  $ decimal       : int  0 0 0 0 0 0 0 0 0 0 ...
 ```
 
+``` r
+library(ggplot2)
+
+# plot the indicator data
+subset(gdp, date >= 1980) |>
+  ggplot(aes(x = date, y = value, color = country_name)) +
+  geom_line() +
+  theme_minimal() +
+  theme(
+    legend.title = element_blank(),
+    legend.position = "bottom",
+    plot.title = element_text(face = "bold"),
+    panel.grid.major.y = element_line(color = "black", linewidth = 0.2),
+    panel.grid.major.x = element_blank(),
+    panel.grid.minor = element_blank(),
+    axis.text = element_text(color = "black"),
+    axis.title = element_blank()
+  ) +
+  scale_y_continuous(
+    labels = scales::label_currency(scale_cut = scales::cut_short_scale())
+  ) +
+  labs(title = "GDP in Current U.S. Dollars", color = "Country")
+```
+
 <img src="man/figures/README-plotting-1.png" width="100%" />
 
 ## Related work

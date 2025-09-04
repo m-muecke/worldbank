@@ -84,10 +84,10 @@ str(gdp)
 ```{r}
 #| label: plotting
 #| message: false
-#| echo: false
 #| dpi: 300
 library(ggplot2)
 
+# plot the indicator data
 subset(gdp, date >= 1980) |>
   ggplot(aes(x = date, y = value, color = country_name)) +
   geom_line() +
