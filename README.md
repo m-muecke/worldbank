@@ -126,12 +126,10 @@ str(gdp)
 #>  $ unit          : chr  NA NA NA NA ...
 #>  $ obs_status    : chr  NA NA NA NA ...
 #>  $ decimal       : int  0 0 0 0 0 0 0 0 0 0 ...
-```
-
-``` r
-library(ggplot2)
 
 # plot the indicator data
+library(ggplot2)
+
 subset(gdp, date >= 1980) |>
   ggplot(aes(x = date, y = value, color = country_name)) +
   geom_line() +
@@ -152,7 +150,7 @@ subset(gdp, date >= 1980) |>
   labs(title = "GDP in Current U.S. Dollars", color = "Country")
 ```
 
-<img src="man/figures/README-plotting-1.png" width="100%" />
+<img src="man/figures/README-demo-1.png" width="100%" />
 
 ## Related work
 

@@ -58,6 +58,8 @@ worldbank functions are prefixed with `wb_` and follow the naming convention of 
 
 ```{r}
 #| label: demo
+#| message: false
+#| dpi: 300
 library(worldbank)
 
 # filter by specific country
@@ -79,15 +81,10 @@ str(ind)
 # fetch indicator data for specific or all countries (default)
 gdp <- wb_data("NY.GDP.MKTP.CD", c("US", "DE", "FR", "CH", "JP"))
 str(gdp)
-```
-
-```{r}
-#| label: plotting
-#| message: false
-#| dpi: 300
-library(ggplot2)
 
 # plot the indicator data
+library(ggplot2)
+
 subset(gdp, date >= 1980) |>
   ggplot(aes(x = date, y = value, color = country_name)) +
   geom_line() +
