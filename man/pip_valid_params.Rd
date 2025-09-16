@@ -36,7 +36,8 @@ Return valid query parameters
 \examples{
 \dontshow{if (httr2::is_online()) withAutoprint(\{ # examplesIf}
 \donttest{
-pip_valid_params()
+params <- pip_valid_params()
+head(params)
 }
 \dontshow{\}) # examplesIf}
 }

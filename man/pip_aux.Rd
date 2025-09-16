@@ -40,13 +40,16 @@ Return auxiliary data tables
 pip_aux()
 
 # get countries
-pip_aux("countries")
+aux <- pip_aux("countries")
+head(aux)
 
 # get GDP
-pip_aux("gdp")
+aux <- pip_aux("gdp")
+head(aux)
 
 # get CPI
-pip_aux("cpi")
+aux <- pip_aux("cpi")
+head(aux)
 }
 \dontshow{\}) # examplesIf}
 }

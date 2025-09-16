@@ -33,7 +33,8 @@ List all sources supported by the World Bank API.
 }
 \examples{
 \dontshow{if (httr2::is_online()) withAutoprint(\{ # examplesIf}
-wb_source()
+src <- wb_source()
+head(src)
 \dontshow{\}) # examplesIf}
 }
 \seealso{

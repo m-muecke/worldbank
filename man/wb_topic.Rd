@@ -27,7 +27,8 @@ List all topics supported by the World Bank API.
 }
 \examples{
 \dontshow{if (httr2::is_online()) withAutoprint(\{ # examplesIf}
-wb_topic()
+topic <- wb_topic()
+head(topic)
 \dontshow{\}) # examplesIf}
 }
 \seealso{

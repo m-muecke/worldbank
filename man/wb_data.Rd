@@ -64,8 +64,11 @@ List all country indicators supported by the World Bank API.
 }
 \examples{
 \dontshow{if (httr2::is_online()) withAutoprint(\{ # examplesIf}
+# single indicator for a single country (all available years)
 ind <- wb_data("NY.GDP.MKTP.CD", "US")
 head(ind)
+
+# multiple indicators for multiple countries (2015-2023)
 ind <- wb_data(
   indicator = c("NY.GDP.MKTP.CD", "FP.CPI.TOTL.ZG"),
   country = c("US", "DE", "FR", "CH", "JP"),

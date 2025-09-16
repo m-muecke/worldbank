@@ -30,7 +30,8 @@
 #' @export
 #' @examplesIf httr2::is_online()
 #' \donttest{
-#' pip_data(c("ZAF", "ZMB"))
+#' data <- pip_data(c("ZAF", "ZMB"))
+#' head(data)
 #' }
 pip_data <- function(
   country = NULL,
@@ -92,7 +93,8 @@ pip_data <- function(
 #' @export
 #' @examplesIf httr2::is_online()
 #' \donttest{
-#' pip_group(c("AFE", "LAC"))
+#' grp <- pip_group(c("AFE", "LAC"))
+#' head(grp)
 #' }
 pip_group <- function(
   country = NULL,
@@ -154,7 +156,8 @@ pip_group <- function(
 #' @export
 #' @examplesIf httr2::is_online()
 #' \donttest{
-#' pip_versions()
+#' vers <- pip_versions()
+#' head(vers)
 #' }
 pip_versions <- function() {
   res <- pip("versions", format = "csv")
@@ -216,13 +219,16 @@ pip_citation <- function(
 #' pip_aux()
 #'
 #' # get countries
-#' pip_aux("countries")
+#' aux <- pip_aux("countries")
+#' head(aux)
 #'
 #' # get GDP
-#' pip_aux("gdp")
+#' aux <- pip_aux("gdp")
+#' head(aux)
 #'
 #' # get CPI
-#' pip_aux("cpi")
+#' aux <- pip_aux("cpi")
+#' head(aux)
 #' }
 pip_aux <- function(
   table = NULL,
@@ -273,7 +279,8 @@ pip_aux <- function(
 #' @export
 #' @examplesIf httr2::is_online()
 #' \donttest{
-#' pip_valid_params()
+#' params <- pip_valid_params()
+#' head(params)
 #' }
 pip_valid_params <- function(
   endpoint = c("all", "aux", "pip", "pip-grp", "pip-info", "valid-params"), # nolint

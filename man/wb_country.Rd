@@ -42,7 +42,8 @@ List all countries supported by the World Bank API.
 }
 \examples{
 \dontshow{if (httr2::is_online()) withAutoprint(\{ # examplesIf}
-wb_country()
+country <- wb_country()
+head(country)
 \dontshow{\}) # examplesIf}
 }
 \seealso{

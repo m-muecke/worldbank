@@ -70,7 +70,8 @@ Return aggregation of PIP statistics
 \examples{
 \dontshow{if (httr2::is_online()) withAutoprint(\{ # examplesIf}
 \donttest{
-pip_group(c("AFE", "LAC"))
+grp <- pip_group(c("AFE", "LAC"))
+head(grp)
 }
 \dontshow{\}) # examplesIf}
 }

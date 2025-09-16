@@ -17,8 +17,13 @@
 #' @rdname fone
 #' @examples
 #' \dontrun{
-#' fone_dataset(dataset_id = "DS00047", resource_id = "RS00005")
-#' fone_view(view_id = "DS01538")
+#' # get dataset data
+#' dataset <- fone_dataset(dataset_id = "DS00047", resource_id = "RS00005")
+#' head(dataset)
+#'
+#' # get view data
+#' view <- fone_view(view_id = "DS01538")
+#' head(view)
 #' }
 fone_dataset <- function(dataset_id, resource_id, ..., limit = NULL) {
   stopifnot(
@@ -26,13 +31,14 @@ fone_dataset <- function(dataset_id, resource_id, ..., limit = NULL) {
     is_string(resource_id),
     is_count(limit, null_ok = TRUE)
   )
-  fone(
+  res <- fone(
     resource = "apiservice",
     datasetId = dataset_id,
     resourceId = resource_id,
     ...,
     limit = limit
   )
+  clean_strings(res)
 }
 
 #' @rdname fone

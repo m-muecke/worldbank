@@ -3,7 +3,12 @@
 }
 
 clean_strings <- function(data) {
-  data[] <- lapply(data, \(x) if (is.character(x)) na_if_empty(trimws(x)) else x)
+  for (i in seq_along(data)) {
+    x <- data[[i]]
+    if (is.character(x)) {
+      data[[i]] <- na_if_empty(trimws(x))
+    }
+  }
   data
 }
 

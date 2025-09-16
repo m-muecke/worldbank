@@ -37,7 +37,12 @@ Return Finances One API Data
 }
 \examples{
 \dontrun{
-fone_dataset(dataset_id = "DS00047", resource_id = "RS00005")
-fone_view(view_id = "DS01538")
+# get dataset data
+dataset <- fone_dataset(dataset_id = "DS00047", resource_id = "RS00005")
+head(dataset)
+
+# get view data
+view <- fone_view(view_id = "DS01538")
+head(view)
 }
 }
