@@ -16,7 +16,7 @@ A \code{data.frame()} with the API information.
 Return information about the API
 }
 \examples{
-\dontshow{if (httr2::is_online()) withAutoprint(\{ # examplesIf}
+\dontshow{if (httr2::is_online()) (if (getRversion() >= "3.4") withAutoprint else force)(\{ # examplesIf}
 \donttest{
 pip_info()
 }
