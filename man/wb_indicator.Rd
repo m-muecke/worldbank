@@ -32,7 +32,7 @@ A \code{data.frame()} with the available indicators. The columns are:
 List all indicators supported by the World Bank API.
 }
 \examples{
-\dontshow{if (httr2::is_online()) withAutoprint(\{ # examplesIf}
+\dontshow{if (httr2::is_online()) (if (getRversion() >= "3.4") withAutoprint else force)(\{ # examplesIf}
 wb_indicator("NY.GDP.MKTP.CD")
 \dontshow{\}) # examplesIf}
 }

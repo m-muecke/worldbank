@@ -19,7 +19,7 @@ A \code{data.frame()} with the available languages. The columns are:
 List all languages supported by the World Bank API.
 }
 \examples{
-\dontshow{if (httr2::is_online()) withAutoprint(\{ # examplesIf}
+\dontshow{if (httr2::is_online()) (if (getRversion() >= "3.4") withAutoprint else force)(\{ # examplesIf}
 wb_language()
 \dontshow{\}) # examplesIf}
 }

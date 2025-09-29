@@ -64,7 +64,7 @@ A \code{data.frame()} with the requested statistics.
 Return main poverty and inequality statistics
 }
 \examples{
-\dontshow{if (httr2::is_online()) withAutoprint(\{ # examplesIf}
+\dontshow{if (httr2::is_online()) (if (getRversion() >= "3.4") withAutoprint else force)(\{ # examplesIf}
 \donttest{
 data <- pip_data(c("ZAF", "ZMB"))
 head(data)

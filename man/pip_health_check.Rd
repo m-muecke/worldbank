@@ -16,7 +16,7 @@ A \code{character(1)} with the health check message.
 Determine if the API is running and listening as expected
 }
 \examples{
-\dontshow{if (httr2::is_online()) withAutoprint(\{ # examplesIf}
+\dontshow{if (httr2::is_online()) (if (getRversion() >= "3.4") withAutoprint else force)(\{ # examplesIf}
 \donttest{
 pip_health_check()
 }

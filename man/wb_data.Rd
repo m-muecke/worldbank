@@ -63,7 +63,7 @@ The columns are:
 List all country indicators supported by the World Bank API.
 }
 \examples{
-\dontshow{if (httr2::is_online()) withAutoprint(\{ # examplesIf}
+\dontshow{if (httr2::is_online()) (if (getRversion() >= "3.4") withAutoprint else force)(\{ # examplesIf}
 # single indicator for a single country (all available years)
 ind <- wb_data("NY.GDP.MKTP.CD", "US")
 head(ind)
