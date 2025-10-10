@@ -152,27 +152,27 @@ Version of the data. Default <code>NULL</code>.</p></dd>
     <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="co"># \donttest{</span></span></span>
 <span class="r-in"><span><span class="va">grp</span> <span class="op">&lt;-</span> <span class="fu">pip_group</span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"AFE"</span>, <span class="st">"LAC"</span><span class="op">)</span><span class="op">)</span></span></span>
 <span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="va">grp</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                   region_name region_code reporting_year reporting_pop</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 1 Eastern and Southern Africa         AFE           1981     238043099</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2 Eastern and Southern Africa         AFE           1982     245822010</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 3 Eastern and Southern Africa         AFE           1983     253644643</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 4 Eastern and Southern Africa         AFE           1984     261458202</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 5 Eastern and Southern Africa         AFE           1985     269450407</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 6 Eastern and Southern Africa         AFE           1986     277621771</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   poverty_line headcount poverty_gap poverty_severity     watts     mean</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 1         2.15 0.4334075   0.1719340       0.09085693 0.2585860 4.749965</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2         2.15 0.4382125   0.1755735       0.09347570 0.2654330 4.686368</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 3         2.15 0.4449174   0.1804650       0.09713139 0.2751745 4.607832</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 4         2.15 0.4542198   0.1854066       0.10015009 0.2836250 4.551052</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 5         2.15 0.4628249   0.1897055       0.10265539 0.2903940 4.481283</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 6         2.15 0.4562020   0.1866324       0.10107654 0.2861349 4.506459</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   pop_in_poverty       spr       pg estimate_type</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 1      103169662 0.6065094 15.32568    projection</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2      107722286 0.6093514 15.58490    projection</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 3      112850912 0.6137755 15.95051    projection</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 4      118759502 0.6218635 16.25541    projection</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 5      124708352 0.6277353 16.48575    projection</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 6      126651611 0.6229176 16.36742    projection</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   region_code                 region_name reporting_year poverty_line</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1         AFE Eastern and Southern Africa           1981         2.15</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2         AFE Eastern and Southern Africa           1982         2.15</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 3         AFE Eastern and Southern Africa           1983         2.15</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 4         AFE Eastern and Southern Africa           1984         2.15</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 5         AFE Eastern and Southern Africa           1985         2.15</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 6         AFE Eastern and Southern Africa           1986         2.15</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   reporting_pop headcount poverty_gap poverty_severity     watts     mean</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1     238043099 0.4492083   0.1803997       0.09601325 0.2722807 4.619360</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2     245822010 0.4529343   0.1833830       0.09819924 0.2779890 4.564284</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 3     253644643 0.4610710   0.1896440       0.10284057 0.2899867 4.484208</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 4     261458202 0.4703555   0.1946693       0.10592007 0.2984553 4.428993</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 5     269450407 0.4784858   0.1985664       0.10813684 0.3044911 4.361782</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 6     277621771 0.4719630   0.1955368       0.10656889 0.3002257 4.387970</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>         spr       pg pop_in_poverty estimate_type</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1 0.6201860 16.38193      106930938    projection</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2 0.6222819 16.60451      111341217    projection</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 3 0.6273366 17.05600      116948178    projection</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 4 0.6352423 17.39656      122978305    projection</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 5 0.6408700 17.62245      128928190    projection</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 6 0.6360868 17.47769      131027214    projection</span>
 <span class="r-in"><span><span class="co"># }</span></span></span>
 </code></pre></div>
     </div>

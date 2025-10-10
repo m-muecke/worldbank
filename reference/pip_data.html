@@ -147,12 +147,12 @@ Version of the data. Default <code>NULL</code>.</p></dd>
 <span class="r-in"><span><span class="va">data</span> <span class="op">&lt;-</span> <span class="fu">pip_data</span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"ZAF"</span>, <span class="st">"ZMB"</span><span class="op">)</span><span class="op">)</span></span></span>
 <span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="va">data</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>          region_name region_code country_name country_code reporting_year</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 1 Sub-Saharan Africa         SSA South Africa          ZAF           1993</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2 Sub-Saharan Africa         SSA South Africa          ZAF           2000</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 3 Sub-Saharan Africa         SSA South Africa          ZAF           2005</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 4 Sub-Saharan Africa         SSA South Africa          ZAF           2008</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 5 Sub-Saharan Africa         SSA South Africa          ZAF           2010</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 6 Sub-Saharan Africa         SSA South Africa          ZAF           2014</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1 Sub-Saharan Africa         SSF South Africa          ZAF           1993</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2 Sub-Saharan Africa         SSF South Africa          ZAF           2000</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 3 Sub-Saharan Africa         SSF South Africa          ZAF           2005</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 4 Sub-Saharan Africa         SSF South Africa          ZAF           2008</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 5 Sub-Saharan Africa         SSF South Africa          ZAF           2010</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 6 Sub-Saharan Africa         SSF South Africa          ZAF           2014</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   reporting_level survey_acronym survey_coverage survey_year welfare_type</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 1        national           KIDS        national     1993.00  consumption</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 2        national           HIES        national     2000.75  consumption</span>
@@ -161,33 +161,33 @@ Version of the data. Default <code>NULL</code>.</p></dd>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 5        national            IES        national     2010.00  consumption</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 6        national            LCS        national     2014.83  consumption</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   survey_comparability comparable_spell poverty_line headcount poverty_gap</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 1                    0             1993         2.15 0.3273500  0.11491448</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2                    2             2000         2.15 0.3602300  0.13788884</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 3                    3      2005 - 2014         2.15 0.2738977  0.08866815</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 4                    3      2005 - 2014         2.15 0.1784118  0.05158000</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 5                    3      2005 - 2014         2.15 0.1736065  0.05210588</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 6                    3      2005 - 2014         2.15 0.1983516  0.06567713</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1                    0             1993         2.15 0.3277900  0.11517318</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2                    2             2000         2.15 0.3606700  0.13815964</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 3                    3      2005 - 2014         2.15 0.2743531  0.08889369</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 4                    3      2005 - 2014         2.15 0.1781907  0.05156310</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 5                    3      2005 - 2014         2.15 0.1734140  0.05208539</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 6                    3      2005 - 2014         2.15 0.1981366  0.06556677</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   poverty_severity      watts      mean   median       mld      gini</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 1       0.05071058 0.15409808  7.683054 3.511334 0.6366259 0.5933394</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2       0.06619755 0.19199955  6.563024 3.189002 0.5999924 0.5776966</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 3       0.04015528 0.12285010  9.755512 3.624245 0.7781536 0.6476189</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 4       0.02152328 0.06903565 12.303904 4.862677 0.7351245 0.6300900</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 5       0.02242921 0.07096926 12.981507 5.088423 0.7526440 0.6338256</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 6       0.03093106 0.09252674 12.214114 4.861294 0.7502294 0.6302572</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1       0.05086701 0.15449681  7.673708 3.507063 0.6366259 0.5933394</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2       0.06637223 0.19243840  6.555038 3.185121 0.5999924 0.5776966</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 3       0.04027338 0.12318308  9.743641 3.619834 0.7781528 0.6476188</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 4       0.02151527 0.06901188 12.305543 4.863325 0.7351245 0.6300900</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 5       0.02241920 0.07094004 12.983699 5.089282 0.7526441 0.6338256</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 6       0.03087331 0.09236196 12.224286 4.865342 0.7502296 0.6302572</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   polarization     decile1    decile2    decile3    decile4    decile5</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 1    0.7147437 0.012500158 0.01696966 0.02260853 0.02990889 0.03968160</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 2    0.6770340 0.012816826 0.01782763 0.02403983 0.03193381 0.04229243</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 3    0.7549428 0.009988367 0.01586569 0.02091390 0.02623093 0.03312265</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 3    0.7549428 0.009988388 0.01586569 0.02091390 0.02623093 0.03312265</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 4    0.7609605 0.010057582 0.01602856 0.02129058 0.02735578 0.03503969</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 5    0.7837881 0.009384293 0.01530752 0.02053135 0.02663764 0.03442381</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 6    0.7876801 0.008574058 0.01507192 0.02074483 0.02708842 0.03505580</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 5    0.7837881 0.009384292 0.01530752 0.02053135 0.02663764 0.03442381</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 6    0.7876801 0.008574053 0.01507192 0.02074483 0.02708842 0.03505580</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>      decile6    decile7    decile8   decile9  decile10       cpi      ppp</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 1 0.05336964 0.07383648 0.10780574 0.1767219 0.4665975 0.2135547 7.524514</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2 0.05649406 0.07724597 0.11084411 0.1772000 0.4493053 0.3639944 7.524514</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 3 0.04201133 0.05651407 0.08522587 0.1679377 0.5421895 0.4452543 7.524514</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 4 0.04551465 0.06298532 0.09485078 0.1743129 0.5125641 0.5474131 7.524514</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 5 0.04529464 0.06279666 0.09618902 0.1768472 0.5125879 0.6110209 7.524514</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 6 0.04650064 0.06531549 0.09957486 0.1771185 0.5049555 0.7607006 7.524514</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1 0.05336964 0.07383648 0.10780574 0.1767219 0.4665975 0.2138148 7.524514</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2 0.05649406 0.07724597 0.11084411 0.1772000 0.4493053 0.3644379 7.524514</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 3 0.04201133 0.05651407 0.08522587 0.1679377 0.5421895 0.4457968 7.524514</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 4 0.04551465 0.06298532 0.09485078 0.1743129 0.5125641 0.5473402 7.524514</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 5 0.04529464 0.06279666 0.09618902 0.1768472 0.5125879 0.6109178 7.524514</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 6 0.04650064 0.06531549 0.09957486 0.1771185 0.5049555 0.7600676 7.524514</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   reporting_pop reporting_gdp reporting_pce is_interpolated distribution_type</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 1      43297156      4193.598      2372.839           FALSE             group</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 2      47465030      4700.876      2790.873           FALSE             group</span>
@@ -196,12 +196,12 @@ Version of the data. Default <code>NULL</code>.</p></dd>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 5      52344051      5953.945      3758.295           FALSE             micro</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 6      56531658      6155.006      3887.509           FALSE             micro</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   estimation_type   spl       spr        pg estimate_type</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 1          survey 3.056 0.4522100 10.713024            NA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2          survey 3.000 0.4786800 11.991457            NA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 3          survey 3.112 0.4359328 10.127501            NA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 4          survey 3.731 0.3929107  7.772644            NA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 5          survey 3.844 0.3938811  7.727838            NA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 6          survey 3.731 0.3995142  8.395812            NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1          survey 3.054 0.4524100 10.726072            NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2          survey 3.000 0.4791000 12.006065            NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 3          survey 3.110 0.4365479 10.139765            NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 4          survey 3.732 0.3929530  7.771608            NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 5          survey 3.845 0.3939435  7.726541            NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 6          survey 3.733 0.3992801  8.388849            NA</span>
 <span class="r-in"><span><span class="co"># }</span></span></span>
 </code></pre></div>
     </div>

@@ -115,20 +115,41 @@ Version of the data. Default <code>NULL</code>.</p></dd>
 <span class="r-in"><span><span class="co"># get countries</span></span></span>
 <span class="r-in"><span><span class="va">aux</span> <span class="op">&lt;-</span> <span class="fu">pip_aux</span><span class="op">(</span><span class="st">"countries"</span><span class="op">)</span></span></span>
 <span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="va">aux</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   country_code         country_name                africa_split</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 1          AGO               Angola Eastern and Southern Africa</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2          ALB              Albania                        &lt;NA&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 3          ARE United Arab Emirates                        &lt;NA&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 4          ARG            Argentina                        &lt;NA&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 5          ARM              Armenia                        &lt;NA&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 6          AUS            Australia                        &lt;NA&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   africa_split_code                      region region_code world world_code</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 1               AFE          Sub-Saharan Africa         SSA World        WLD</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2              &lt;NA&gt;       Europe &amp; Central Asia         ECA World        WLD</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 3              &lt;NA&gt; Other High Income Countries         OHI World        WLD</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 4              &lt;NA&gt;   Latin America &amp; Caribbean         LAC World        WLD</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 5              &lt;NA&gt;       Europe &amp; Central Asia         ECA World        WLD</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 6              &lt;NA&gt; Other High Income Countries         OHI World        WLD</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   country_code          country_name</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1          CIV         Côte d'Ivoire</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2          STP São Tomé and Príncipe</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 3          TUR               Türkiye</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 4          AGO                Angola</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 5          ALB               Albania</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 6          ARE  United Arab Emirates</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                                              region region_code</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1                                Sub-Saharan Africa         SSF</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2                                Sub-Saharan Africa         SSF</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 3                             Europe &amp; Central Asia         ECS</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 4                                Sub-Saharan Africa         SSF</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 5                             Europe &amp; Central Asia         ECS</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 6 Middle East, North Africa, Afghanistan &amp; Pakistan         MEA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                  africa_split africa_split_code         fcv fcv_code</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1  Western and Central Africa               AFW Not-fragile     FCVN</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2 Eastern and Southern Africa               AFE     Fragile     FCVY</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 3                        &lt;NA&gt;              &lt;NA&gt; Not-fragile     FCVN</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 4 Eastern and Southern Africa               AFE Not-fragile     FCVN</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 5                        &lt;NA&gt;              &lt;NA&gt; Not-fragile     FCVN</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 6                        &lt;NA&gt;              &lt;NA&gt; Not-fragile     FCVN</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                 ida ida_code            incgroup incgroup_code</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1             Blend     BLND Lower middle income          LMIC</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2               IDA      IDA Lower middle income          LMIC</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 3              IBRD     IBRD Upper middle income          UMIC</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 4              IBRD     IBRD Lower middle income          LMIC</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 5              IBRD     IBRD Upper middle income          UMIC</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 6 Rest of the world     REST         High income           HIC</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                     regionpcn regionpcn_code world world_code</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1          Sub-Saharan Africa            SSA World        WLD</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2          Sub-Saharan Africa            SSA World        WLD</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 3       Europe &amp; Central Asia            ECA World        WLD</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 4          Sub-Saharan Africa            SSA World        WLD</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 5       Europe &amp; Central Asia            ECA World        WLD</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 6 Other High Income Countries            OHI World        WLD</span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co"># get GDP</span></span></span>
 <span class="r-in"><span><span class="va">aux</span> <span class="op">&lt;-</span> <span class="fu">pip_aux</span><span class="op">(</span><span class="st">"gdp"</span><span class="op">)</span></span></span>
