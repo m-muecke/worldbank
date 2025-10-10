@@ -55,7 +55,8 @@ fone <- function(resource, ..., limit = NULL) {
     req_user_agent("worldbank (https://m-muecke.github.io/worldbank)") |>
     req_error(body = \(resp) resp_body_string(resp, "UTF-8")) |>
     req_url_path_append(resource) |>
-    req_url_query(top = limit, type = "csv", ...)
+    req_url_query(top = limit, type = "csv", ...) |>
+    req_wb_cache()
 
   resps <- req_perform_iterative(
     req,
