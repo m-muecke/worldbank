@@ -32,7 +32,7 @@ A \code{data.frame()} with the available sources. The columns are:
 List all sources supported by the World Bank API.
 }
 \examples{
-\dontshow{if (httr2::is_online()) (if (getRversion() >= "3.4") withAutoprint else force)(\{ # examplesIf}
+\dontshow{if (httr2::is_online()) withAutoprint(\{ # examplesIf}
 src <- wb_source()
 head(src)
 \dontshow{\}) # examplesIf}

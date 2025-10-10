@@ -1,5 +1,6 @@
 #' @keywords internal
 #' @importFrom httr2 iterate_with_offset
+#' @importFrom httr2 req_cache
 #' @importFrom httr2 req_error
 #' @importFrom httr2 req_perform
 #' @importFrom httr2 req_perform_iterative

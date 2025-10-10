@@ -16,7 +16,7 @@ A \code{data.frame()} with the available versions.
 Return the available data versions
 }
 \examples{
-\dontshow{if (httr2::is_online()) (if (getRversion() >= "3.4") withAutoprint else force)(\{ # examplesIf}
+\dontshow{if (httr2::is_online()) withAutoprint(\{ # examplesIf}
 \donttest{
 vers <- pip_versions()
 head(vers)

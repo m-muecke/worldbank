@@ -34,7 +34,7 @@ A \code{character()} with the available tables or a \code{data.frame()} containi
 Return auxiliary data tables
 }
 \examples{
-\dontshow{if (httr2::is_online()) (if (getRversion() >= "3.4") withAutoprint else force)(\{ # examplesIf}
+\dontshow{if (httr2::is_online()) withAutoprint(\{ # examplesIf}
 \donttest{
 # get a list of available tables
 pip_aux()

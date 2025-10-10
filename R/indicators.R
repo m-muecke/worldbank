@@ -464,14 +464,24 @@ wb_error_body <- function(resp) {
 
 worldbank <- function(resource, ..., lang = NULL, per_page = 32500L) {
   stopifnot(is_string(lang, null_ok = TRUE), nchar(lang) == 2L)
-  body <- request("https://api.worldbank.org/v2") |>
+  req <- request("https://api.worldbank.org/v2") |>
     req_user_agent("worldbank (https://m-muecke.github.io/worldbank)") |>
     req_url_path_append(lang, resource) |>
     req_url_query(..., format = "json", per_page = per_page) |>
-    req_error(is_error = is_wb_error, body = wb_error_body) |>
+    req_error(is_error = is_wb_error, body = wb_error_body)
+
+  if (isTRUE(getOption("worldbank.cache", FALSE))) {
+    req <- req_cache(
+      req,
+      path = file.path(tools::R_user_dir("worldbank", "cache"), "httr2"),
+      max_age = 86400 # 1 day
+    )
+  }
+
+  json <- req |>
     req_perform() |>
     resp_body_json()
-  body[[2L]]
+  json[[2L]]
 }
 
 worldbank_seq <- function(resource, resp_data, ..., lang = NULL, per_page = 32500L) {
@@ -481,9 +491,16 @@ worldbank_seq <- function(resource, resp_data, ..., lang = NULL, per_page = 3250
     req_url_query(..., format = "json", per_page = per_page) |>
     req_error(is_error = is_wb_error, body = wb_error_body)
 
-  res <- resource |>
+  if (isTRUE(getOption("worldbank.cache", FALSE))) {
+    req <- req_cache(
+      req,
+      path = file.path(tools::R_user_dir("worldbank", "cache"), "httr2"),
+      max_age = 86400 # 1 day
+    )
+  }
+
+  resource |>
     map(\(x) req_url_path_append(req, lang, x)) |>
     req_perform_sequential() |>
     map(\(x) resp_body_json(x)[[2L]])
-  res
 }

@@ -68,7 +68,7 @@ A \code{data.frame()} with the requested statistics.
 Return aggregation of PIP statistics
 }
 \examples{
-\dontshow{if (httr2::is_online()) (if (getRversion() >= "3.4") withAutoprint else force)(\{ # examplesIf}
+\dontshow{if (httr2::is_online()) withAutoprint(\{ # examplesIf}
 \donttest{
 grp <- pip_group(c("AFE", "LAC"))
 head(grp)

@@ -34,7 +34,7 @@ A \code{data.frame()} with the valid parameters.
 Return valid query parameters
 }
 \examples{
-\dontshow{if (httr2::is_online()) (if (getRversion() >= "3.4") withAutoprint else force)(\{ # examplesIf}
+\dontshow{if (httr2::is_online()) withAutoprint(\{ # examplesIf}
 \donttest{
 params <- pip_valid_params()
 head(params)

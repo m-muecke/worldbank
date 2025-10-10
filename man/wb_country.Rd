@@ -41,7 +41,7 @@ A \code{data.frame()} with the available countries. The columns are:
 List all countries supported by the World Bank API.
 }
 \examples{
-\dontshow{if (httr2::is_online()) (if (getRversion() >= "3.4") withAutoprint else force)(\{ # examplesIf}
+\dontshow{if (httr2::is_online()) withAutoprint(\{ # examplesIf}
 country <- wb_country()
 head(country)
 \dontshow{\}) # examplesIf}
