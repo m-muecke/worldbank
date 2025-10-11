@@ -1,5 +1,10 @@
 # worldbank (development version)
 
+* Added optional request caching to improve performance for repeated queries.
+  Enable with `options(worldbank.cache = TRUE)`. Cache duration can be customized
+  with `worldbank.cache_max_age` (default: 86400 seconds). New functions
+  `wb_cache_delete()` and `wb_cache_dir()` help manage the cache.
+
 # worldbank 0.6.1
 
 * Documentation improvements.

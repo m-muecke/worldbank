@@ -488,14 +488,3 @@ wb_error_body <- function(resp) {
     c(error_code, msg$value, docs)
   }
 }
-
-req_wb_cache <- function(req) {
-  if (isTRUE(getOption("worldbank.cache", FALSE))) {
-    req <- req_cache(
-      req,
-      path = file.path(tools::R_user_dir("worldbank", "cache"), "httr2"),
-      max_age = getOption("worldbank.cache_max_age", 86400) # 1 day,
-    )
-  }
-  req
-}
