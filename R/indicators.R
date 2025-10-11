@@ -494,7 +494,7 @@ req_wb_cache <- function(req) {
     req <- req_cache(
       req,
       path = file.path(tools::R_user_dir("worldbank", "cache"), "httr2"),
-      max_age = 86400 # 1 day
+      max_age = getOption("worldbank.cache_max_age", 86400) # 1 day,
     )
   }
   req
