@@ -32,3 +32,8 @@ reference:
     contents:
       - fone_dataset
       - fone_view
+
+  - subtitle: Cache Management
+    contents:
+      - wb_cache_dir
+      - wb_cache_delete
