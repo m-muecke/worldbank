@@ -1,21 +1,35 @@
-#' Get the worldbank cache directory path
+#' Get or manage the worldbank API cache
 #'
-#' @export
+#' `wb_cache_dir()` returns the path where cached API responses are stored.
+#' `wb_cache_delete()` clears all cached responses.
+#'
+#' @details
+#' The cache is only used when enabled with `options(worldbank.cache = TRUE)`.
+#' Cached responses are stored for 1 day by default, but this can be customized with
+#' `options(worldbank.cache_max_age = seconds)`.
+#'
+#' @name cache
 #' @examples
 #' \dontrun{
+#' # enable caching
+#' options(worldbank.cache = TRUE)
+#'
+#' # view cache location
 #' wb_cache_dir()
+#'
+#' # clear the cache
+#' wb_cache_delete()
 #' }
+NULL
+
+#' @rdname cache
+#' @export
 wb_cache_dir <- function() {
   file.path(tools::R_user_dir("worldbank", "cache"), "httr2")
 }
 
-#' Clear the worldbank API cache
-#'
+#' @rdname cache
 #' @export
-#' @examples
-#' \dontrun{
-#' wb_cache_delete()
-#' }
 wb_cache_delete <- function() {
   cache_dir <- wb_cache_dir()
   if (dir.exists(cache_dir)) {
