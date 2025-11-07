@@ -1,4 +1,4 @@
-# worldbank (development version)
+# worldbank 0.7.0
 
 * Added optional request caching to improve performance for repeated queries.
   Enable with `options(worldbank.cache = TRUE)`. Cache duration can be customized
