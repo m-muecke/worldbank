@@ -51,8 +51,8 @@ Other poverty and inequality statistics:
 # \donttest{
 pip_citation()
 #>                                                                                                                                      citation
-#> 1 World Bank (2025), Poverty and Inequality Platform (version 20250930_2021_01_02_PROD) [data set]. pip.worldbank.org. Accessed on 2025-11-12
+#> 1 World Bank (2025), Poverty and Inequality Platform (version 20250930_2021_01_02_PROD) [data set]. pip.worldbank.org. Accessed on 2025-11-13
 #>                    version date_accessed
-#> 1 20250930_2021_01_02_PROD    2025-11-12
+#> 1 20250930_2021_01_02_PROD    2025-11-13
 # }
 ```
