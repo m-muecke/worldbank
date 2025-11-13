@@ -35,7 +35,7 @@ test_that("pip_citation basic checks", {
 
   res <- pip_citation()
   expect_s3_class(res, "data.frame")
-  expect_identical(dim(res), c(1L, 3L))
+  expect_shape(res, dim = c(1L, 3L))
 })
 
 test_that("pip_aux basic checks", {

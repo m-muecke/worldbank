@@ -8,9 +8,9 @@ test_that("wb_language", {
   )
   actual <- wb_language()
   expect_s3_class(actual, "data.frame")
-  expect_identical(dim(actual), c(23L, 3L))
-  expect_true(all(map_lgl(actual, is.character)))
-  expect_true(all(map_lgl(actual, \(x) all(nzchar(x)))))
+  expect_shape(actual, dim = c(23L, 3L))
+  expect_all_true(map_lgl(actual, is.character))
+  expect_all_true(map_lgl(actual, \(x) all(nzchar(x))))
   expect_false(any(map_lgl(actual, has_ws)))
 })
 
@@ -20,9 +20,9 @@ test_that("wb_lending_type", {
   )
   actual <- wb_lending_type()
   expect_s3_class(actual, "data.frame")
-  expect_identical(dim(actual), c(4L, 3L))
-  expect_true(all(map_lgl(actual, is.character)))
-  expect_true(all(map_lgl(actual, \(x) all(nzchar(x)))))
+  expect_shape(actual, dim = c(4L, 3L))
+  expect_all_true(map_lgl(actual, is.character))
+  expect_all_true(map_lgl(actual, \(x) all(nzchar(x))))
   expect_false(any(map_lgl(actual, has_ws)))
 })
 
@@ -32,9 +32,9 @@ test_that("wb_income_level", {
   )
   actual <- wb_income_level()
   expect_s3_class(actual, "data.frame")
-  expect_identical(dim(actual), c(7L, 3L))
-  expect_true(all(map_lgl(actual, is.character)))
-  expect_true(all(map_lgl(actual, \(x) all(nzchar(x)))))
+  expect_shape(actual, dim = c(7L, 3L))
+  expect_all_true(map_lgl(actual, is.character))
+  expect_all_true(map_lgl(actual, \(x) all(nzchar(x))))
   expect_false(any(map_lgl(actual, has_ws)))
 })
 
@@ -44,10 +44,10 @@ test_that("wb_source", {
   )
   actual <- wb_source()
   expect_s3_class(actual, "data.frame")
-  expect_identical(dim(actual), c(69L, 9L))
+  expect_shape(actual, dim = c(69L, 9L))
   for (x in actual) {
     if (is.character(x)) {
-      expect_true(all(nzchar(x)))
+      expect_all_true(nzchar(x))
       expect_false(has_ws(x))
     }
   }
@@ -59,10 +59,10 @@ test_that("wb_topic", {
   )
   actual <- wb_topic()
   expect_s3_class(actual, "data.frame")
-  expect_identical(dim(actual), c(21L, 3L))
+  expect_shape(actual, dim = c(21L, 3L))
   for (x in actual) {
     if (is.character(x)) {
-      expect_true(all(nzchar(x)))
+      expect_all_true(nzchar(x))
       expect_false(has_ws(x))
     }
   }
@@ -74,10 +74,10 @@ test_that("wb_region", {
   )
   actual <- wb_region()
   expect_s3_class(actual, "data.frame")
-  expect_identical(dim(actual), c(44L, 4L))
+  expect_shape(actual, dim = c(44L, 4L))
   for (x in actual) {
     if (is.character(x)) {
-      expect_true(all(nzchar(x)))
+      expect_all_true(nzchar(x))
       expect_false(has_ws(x))
     }
   }
@@ -89,10 +89,10 @@ test_that("wb_country", {
   )
   actual <- wb_country()
   expect_s3_class(actual, "data.frame")
-  expect_identical(dim(actual), c(296L, 18L))
+  expect_shape(actual, dim = c(296L, 18L))
   for (x in actual) {
     if (is.character(x)) {
-      expect_true(all(nzchar(x)))
+      expect_all_true(nzchar(x))
       expect_false(has_ws(x))
     }
   }
@@ -104,10 +104,10 @@ test_that("wb_indicator", {
   )
   actual <- wb_indicator()
   expect_s3_class(actual, "data.frame")
-  expect_identical(dim(actual), c(100L, 9L))
+  expect_shape(actual, dim = c(100L, 9L))
   for (x in actual) {
     if (is.character(x)) {
-      expect_true(all(nzchar(x)))
+      expect_all_true(nzchar(x))
       expect_false(has_ws(x))
     }
   }
@@ -119,10 +119,10 @@ test_that("wb_country_indicator", {
   )
   actual <- wb_country_indicator()
   expect_s3_class(actual, "data.frame")
-  expect_identical(dim(actual), c(63L, 10L))
+  expect_shape(actual, dim = c(63L, 10L))
   for (x in actual) {
     if (is.character(x)) {
-      expect_true(all(nzchar(x)))
+      expect_all_true(nzchar(x))
       expect_false(has_ws(x))
     }
   }
