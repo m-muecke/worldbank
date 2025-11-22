@@ -2,6 +2,8 @@
 
 ## worldbank (development version)
 
+- Don’t cache queries in tests to comply with CRAN
+
 ## worldbank 0.7.0
 
 CRAN release: 2025-11-10
