@@ -266,5 +266,6 @@ test_that("error parsing works", {
   skip_if_offline()
   skip_on_cran()
   skip_on_ci()
+
   expect_snapshot(wb_indicator("something.wrong"), error = TRUE)
 })
