@@ -132,19 +132,20 @@ ind <- wb_data(
   country = c("US", "DE", "FR", "CH", "JP"),
   start_date = 2015, end_date = 2023
 )
+#> Error in req_perform(reqs[[i]], path = paths[[i]]): HTTP 502 Bad Gateway.
 head(ind)
-#>   date   indicator_id    indicator_name country_id country_name country_code
-#> 1 2023 NY.GDP.MKTP.CD GDP (current US$)         CH  Switzerland          CHE
-#> 2 2022 NY.GDP.MKTP.CD GDP (current US$)         CH  Switzerland          CHE
-#> 3 2021 NY.GDP.MKTP.CD GDP (current US$)         CH  Switzerland          CHE
-#> 4 2020 NY.GDP.MKTP.CD GDP (current US$)         CH  Switzerland          CHE
-#> 5 2019 NY.GDP.MKTP.CD GDP (current US$)         CH  Switzerland          CHE
-#> 6 2018 NY.GDP.MKTP.CD GDP (current US$)         CH  Switzerland          CHE
+#>   date   indicator_id    indicator_name country_id  country_name country_code
+#> 1 2024 NY.GDP.MKTP.CD GDP (current US$)         US United States          USA
+#> 2 2023 NY.GDP.MKTP.CD GDP (current US$)         US United States          USA
+#> 3 2022 NY.GDP.MKTP.CD GDP (current US$)         US United States          USA
+#> 4 2021 NY.GDP.MKTP.CD GDP (current US$)         US United States          USA
+#> 5 2020 NY.GDP.MKTP.CD GDP (current US$)         US United States          USA
+#> 6 2019 NY.GDP.MKTP.CD GDP (current US$)         US United States          USA
 #>          value unit obs_status decimal
-#> 1 894424821645 <NA>       <NA>       0
-#> 2 828508926958 <NA>       <NA>       0
-#> 3 815309330987 <NA>       <NA>       0
-#> 4 741999406006 <NA>       <NA>       0
-#> 5 721369112727 <NA>       <NA>       0
-#> 6 725568717468 <NA>       <NA>       0
+#> 1 2.918489e+13 <NA>       <NA>       0
+#> 2 2.772071e+13 <NA>       <NA>       0
+#> 3 2.600689e+13 <NA>       <NA>       0
+#> 4 2.368117e+13 <NA>       <NA>       0
+#> 5 2.135410e+13 <NA>       <NA>       0
+#> 6 2.153998e+13 <NA>       <NA>       0
 ```
