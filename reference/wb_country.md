@@ -116,6 +116,7 @@ Other indicators data:
 ## Examples
 
 ``` r
+# \donttest{
 country <- wb_country()
 head(country)
 #>   country_id country_code                country_name region_id region_code
@@ -160,4 +161,5 @@ head(country)
 #> 4              <NA>         Aggregates         <NA>        NA       NA
 #> 5              <NA>         Aggregates         <NA>        NA       NA
 #> 6                XF               IBRD       Luanda   13.2420 -8.81155
+# }
 ```

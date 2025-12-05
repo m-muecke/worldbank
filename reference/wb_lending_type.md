@@ -56,10 +56,12 @@ Other indicators data:
 ## Examples
 
 ``` r
+# \donttest{
 wb_lending_type()
 #>    id iso2code          value
 #> 1 IBD       XF           IBRD
 #> 2 IDB       XH          Blend
 #> 3 IDX       XI            IDA
 #> 4 LNX       XX Not classified
+# }
 ```

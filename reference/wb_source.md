@@ -79,6 +79,7 @@ Other indicators data:
 ## Examples
 
 ``` r
+# \donttest{
 src <- wb_source()
 head(src)
 #>   id last_updated                              name code description  url
@@ -95,4 +96,5 @@ head(src)
 #> 4              TRUE                  TRUE        3
 #> 5              TRUE                  TRUE        4
 #> 6              TRUE                  TRUE        3
+# }
 ```

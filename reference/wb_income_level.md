@@ -56,6 +56,7 @@ Other indicators data:
 ## Examples
 
 ``` r
+# \donttest{
 wb_income_level()
 #>    id iso2code               value
 #> 1 HIC       XD         High income
@@ -65,4 +66,5 @@ wb_income_level()
 #> 5 LMY       XO Low & middle income
 #> 6 MIC       XP       Middle income
 #> 7 UMC       XT Upper middle income
+# }
 ```

@@ -108,6 +108,7 @@ available country indicators. The columns are:
 ## Examples
 
 ``` r
+# \donttest{
 # single indicator for a single country (all available years)
 ind <- wb_data("NY.GDP.MKTP.CD", "US")
 head(ind)
@@ -132,6 +133,8 @@ ind <- wb_data(
   country = c("US", "DE", "FR", "CH", "JP"),
   start_date = 2015, end_date = 2023
 )
+#> iterating ■■■■■■■■■■■■■■■■                  50% | ETA: 22s
+#> iterating ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■  100% | ETA:  0s
 head(ind)
 #>   date   indicator_id    indicator_name country_id country_name country_code
 #> 1 2023 NY.GDP.MKTP.CD GDP (current US$)         CH  Switzerland          CHE
@@ -147,4 +150,5 @@ head(ind)
 #> 4 741999406006 <NA>       <NA>       0
 #> 5 721369112727 <NA>       <NA>       0
 #> 6 725568717468 <NA>       <NA>       0
+# }
 ```

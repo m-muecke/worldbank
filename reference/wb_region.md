@@ -59,6 +59,7 @@ Other indicators data:
 ## Examples
 
 ``` r
+# \donttest{
 region <- wb_region()
 head(region)
 #>   id code iso2code                                           name
@@ -68,4 +69,5 @@ head(region)
 #> 4 NA  ARB       1A                                     Arab World
 #> 5 NA  CAA       C9        Sub-Saharan Africa (IFC classification)
 #> 6 NA  CEA       C4 East Asia and the Pacific (IFC classification)
+# }
 ```

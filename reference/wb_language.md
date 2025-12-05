@@ -43,6 +43,7 @@ Other indicators data:
 ## Examples
 
 ``` r
+# \donttest{
 wb_language()
 #>    code       name      native_form
 #> 1    en    English          English
@@ -68,4 +69,5 @@ wb_language()
 #> 21   tr    Turkish           Tϋrkçe
 #> 22   uk  Ukrainian       Українська
 #> 23   vi Vietnamese       Tiếng Việt
+# }
 ```

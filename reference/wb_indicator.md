@@ -80,6 +80,7 @@ Other indicators data:
 ## Examples
 
 ``` r
+# \donttest{
 wb_indicator("NY.GDP.MKTP.CD")
 #>               id              name unit source_id                 source_value
 #> 1 NY.GDP.MKTP.CD GDP (current US$) <NA>         2 World Development Indicators
@@ -89,4 +90,5 @@ wb_indicator("NY.GDP.MKTP.CD")
 #> 1 Country official statistics, National Statistical Organizations and/or Central Banks;\nNational Accounts data files, Organisation for Economic Co-operation and Development (OECD);\nStaff estimates, World Bank (WB)
 #>   topic_id      topic_value
 #> 1        3 Economy & Growth
+# }
 ```
