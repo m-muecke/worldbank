@@ -27,7 +27,9 @@ List all income levels supported by the World Bank API.
 }
 \examples{
 \dontshow{if (httr2::is_online()) withAutoprint(\{ # examplesIf}
+\donttest{
 wb_income_level()
+}
 \dontshow{\}) # examplesIf}
 }
 \seealso{

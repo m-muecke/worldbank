@@ -64,6 +64,7 @@ List all country indicators supported by the World Bank API.
 }
 \examples{
 \dontshow{if (httr2::is_online()) withAutoprint(\{ # examplesIf}
+\donttest{
 # single indicator for a single country (all available years)
 ind <- wb_data("NY.GDP.MKTP.CD", "US")
 head(ind)
@@ -75,5 +76,6 @@ ind <- wb_data(
   start_date = 2015, end_date = 2023
 )
 head(ind)
+}
 \dontshow{\}) # examplesIf}
 }

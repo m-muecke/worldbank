@@ -28,8 +28,10 @@ List all regions supported by the World Bank API.
 }
 \examples{
 \dontshow{if (httr2::is_online()) withAutoprint(\{ # examplesIf}
+\donttest{
 region <- wb_region()
 head(region)
+}
 \dontshow{\}) # examplesIf}
 }
 \seealso{

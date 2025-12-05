@@ -27,7 +27,9 @@ List all lending types supported by the World Bank API.
 }
 \examples{
 \dontshow{if (httr2::is_online()) withAutoprint(\{ # examplesIf}
+\donttest{
 wb_lending_type()
+}
 \dontshow{\}) # examplesIf}
 }
 \seealso{

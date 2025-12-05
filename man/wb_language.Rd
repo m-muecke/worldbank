@@ -20,7 +20,9 @@ List all languages supported by the World Bank API.
 }
 \examples{
 \dontshow{if (httr2::is_online()) withAutoprint(\{ # examplesIf}
+\donttest{
 wb_language()
+}
 \dontshow{\}) # examplesIf}
 }
 \seealso{

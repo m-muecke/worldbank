@@ -10,7 +10,9 @@
 #' @family indicators data
 #' @export
 #' @examplesIf httr2::is_online()
+#' \donttest{
 #' wb_language()
+#' }
 wb_language <- function() {
   data <- worldbank(resource = "languages")
   res <- data.frame(
@@ -38,7 +40,9 @@ wb_language <- function() {
 #' @family indicators data
 #' @export
 #' @examplesIf httr2::is_online()
+#' \donttest{
 #' wb_lending_type()
+#' }
 wb_lending_type <- function(type = NULL, lang = "en") {
   stopifnot(is_character(type, null_ok = TRUE), nchar(type) == 3L)
   type <- format_param(type)
@@ -70,7 +74,9 @@ wb_lending_type <- function(type = NULL, lang = "en") {
 #' @family indicators data
 #' @export
 #' @examplesIf httr2::is_online()
+#' \donttest{
 #' wb_income_level()
+#' }
 wb_income_level <- function(income = NULL, lang = "en") {
   stopifnot(is_character(income, null_ok = TRUE), nchar(income) == 3L)
   income <- format_param(income)
@@ -108,8 +114,10 @@ wb_income_level <- function(income = NULL, lang = "en") {
 #' @family indicators data
 #' @export
 #' @examplesIf httr2::is_online()
+#' \donttest{
 #' src <- wb_source()
 #' head(src)
+#' }
 wb_source <- function(source = NULL, lang = "en") {
   stopifnot(is_character(source, null_ok = TRUE))
   source <- format_param(source)
@@ -147,8 +155,10 @@ wb_source <- function(source = NULL, lang = "en") {
 #' @family indicators data
 #' @export
 #' @examplesIf httr2::is_online()
+#' \donttest{
 #' topic <- wb_topic()
 #' head(topic)
+#' }
 wb_topic <- function(topic = NULL, lang = "en") {
   stopifnot(is_character(topic, null_ok = TRUE))
   topic <- format_param(topic)
@@ -181,8 +191,10 @@ wb_topic <- function(topic = NULL, lang = "en") {
 #' @family indicators data
 #' @export
 #' @examplesIf httr2::is_online()
+#' \donttest{
 #' region <- wb_region()
 #' head(region)
+#' }
 wb_region <- function(region = NULL, lang = "en") {
   stopifnot(
     is_character(region, null_ok = TRUE),
@@ -234,8 +246,10 @@ wb_region <- function(region = NULL, lang = "en") {
 #' @family indicators data
 #' @export
 #' @examplesIf httr2::is_online()
+#' \donttest{
 #' country <- wb_country()
 #' head(country)
+#' }
 wb_country <- function(country = NULL, lang = "en") {
   stopifnot(
     is_character(country, null_ok = TRUE),
@@ -293,7 +307,9 @@ wb_country <- function(country = NULL, lang = "en") {
 #' @family indicators data
 #' @export
 #' @examplesIf httr2::is_online()
+#' \donttest{
 #' wb_indicator("NY.GDP.MKTP.CD")
+#' }
 wb_indicator <- function(indicator = NULL, lang = "en") {
   stopifnot(is_string(indicator, null_ok = TRUE))
   indicator <- indicator %||% "all"
@@ -361,6 +377,7 @@ wb_indicator <- function(indicator = NULL, lang = "en") {
 #' @source <https://api.worldbank.org/v2/country/{country}/indicator/{indicator}>
 #' @export
 #' @examplesIf httr2::is_online()
+#' \donttest{
 #' # single indicator for a single country (all available years)
 #' ind <- wb_data("NY.GDP.MKTP.CD", "US")
 #' head(ind)
@@ -372,6 +389,7 @@ wb_indicator <- function(indicator = NULL, lang = "en") {
 #'   start_date = 2015, end_date = 2023
 #' )
 #' head(ind)
+#' }
 wb_data <- function(
   indicator = "NY.GDP.MKTP.CD",
   country = NULL,

@@ -33,7 +33,9 @@ List all indicators supported by the World Bank API.
 }
 \examples{
 \dontshow{if (httr2::is_online()) withAutoprint(\{ # examplesIf}
+\donttest{
 wb_indicator("NY.GDP.MKTP.CD")
+}
 \dontshow{\}) # examplesIf}
 }
 \seealso{
