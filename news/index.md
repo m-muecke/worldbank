@@ -1,6 +1,6 @@
 # Changelog
 
-## worldbank (development version)
+## worldbank 0.7.1
 
 - Don’t cache queries in tests to comply with CRAN
 

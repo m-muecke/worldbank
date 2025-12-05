@@ -133,8 +133,6 @@ ind <- wb_data(
   country = c("US", "DE", "FR", "CH", "JP"),
   start_date = 2015, end_date = 2023
 )
-#> iterating ■■■■■■■■■■■■■■■■                  50% | ETA: 22s
-#> iterating ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■  100% | ETA:  0s
 head(ind)
 #>   date   indicator_id    indicator_name country_id country_name country_code
 #> 1 2023 NY.GDP.MKTP.CD GDP (current US$)         CH  Switzerland          CHE
