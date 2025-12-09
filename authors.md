@@ -8,7 +8,7 @@
 ## Citation
 
 Source:
-[`DESCRIPTION`](https://github.com/m-muecke/worldbank/blob/main/DESCRIPTION)
+[`DESCRIPTION`](https://github.com/m-muecke/worldbank/blob/v0.7.1/DESCRIPTION)
 
 Mücke M (2025). *worldbank: Client for World Banks's 'Indicators' and
 'Poverty and Inequality Platform (PIP)' APIs*. R package version 0.7.1,
