@@ -81,12 +81,12 @@ pip_info()
 #> $pip_packages$pipapi
 #> $pip_packages$pipapi$pkg_version
 #> $pip_packages$pipapi$pkg_version[[1]]
-#> [1] "1.4.1.9018"
+#> [1] "1.4.1.9020"
 #> 
 #> 
 #> $pip_packages$pipapi$pkg_hash
 #> $pip_packages$pipapi$pkg_hash[[1]]
-#> [1] "e8ba3efa0070ed06a0eab0270d654156705a59d1"
+#> [1] "8cca00490466e15f402ffd1793618dae23ca1dec"
 #> 
 #> 
 #> 
@@ -105,7 +105,7 @@ pip_info()
 #> 
 #> $other_packages
 #> $other_packages[[1]]
-#> [1] "arrow_21.0.0.1"
+#> [1] "arrow_22.0.0"
 #> 
 #> $other_packages[[2]]
 #> [1] "assertthat_0.2.1"
@@ -123,7 +123,7 @@ pip_info()
 #> [1] "cli_3.6.5"
 #> 
 #> $other_packages[[7]]
-#> [1] "collapse_2.1.3"
+#> [1] "collapse_2.1.5"
 #> 
 #> $other_packages[[8]]
 #> [1] "compiler_4.3.2"
@@ -141,7 +141,7 @@ pip_info()
 #> [1] "dplyr_1.1.4"
 #> 
 #> $other_packages[[13]]
-#> [1] "duckdb_1.4.0"
+#> [1] "duckdb_1.4.3"
 #> 
 #> $other_packages[[14]]
 #> [1] "fastmap_1.2.0"
@@ -159,13 +159,13 @@ pip_info()
 #> [1] "glue_1.8.0"
 #> 
 #> $other_packages[[19]]
-#> [1] "hms_1.1.3"
+#> [1] "hms_1.1.4"
 #> 
 #> $other_packages[[20]]
 #> [1] "httpuv_1.6.16"
 #> 
 #> $other_packages[[21]]
-#> [1] "joyn_0.2.4"
+#> [1] "joyn_0.3.0"
 #> 
 #> $other_packages[[22]]
 #> [1] "jsonlite_2.0.0"
@@ -186,91 +186,94 @@ pip_info()
 #> [1] "memoise_2.0.1"
 #> 
 #> $other_packages[[28]]
-#> [1] "parallel_4.3.2"
+#> [1] "otel_0.2.0"
 #> 
 #> $other_packages[[29]]
-#> [1] "pillar_1.11.1"
+#> [1] "parallel_4.3.2"
 #> 
 #> $other_packages[[30]]
-#> [1] "pkgconfig_2.0.3"
+#> [1] "pillar_1.11.1"
 #> 
 #> $other_packages[[31]]
-#> [1] "promises_1.3.3"
+#> [1] "pkgconfig_2.0.3"
 #> 
 #> $other_packages[[32]]
-#> [1] "purrr_1.1.0"
+#> [1] "promises_1.5.0"
 #> 
 #> $other_packages[[33]]
-#> [1] "qs_0.27.3"
+#> [1] "purrr_1.2.0"
 #> 
 #> $other_packages[[34]]
-#> [1] "R.methodsS3_1.8.2"
+#> [1] "qs_0.27.3"
 #> 
 #> $other_packages[[35]]
-#> [1] "R.oo_1.27.1"
+#> [1] "R.methodsS3_1.8.2"
 #> 
 #> $other_packages[[36]]
-#> [1] "R.utils_2.13.0"
+#> [1] "R.oo_1.27.1"
 #> 
 #> $other_packages[[37]]
-#> [1] "R6_2.6.1"
+#> [1] "R.utils_2.13.0"
 #> 
 #> $other_packages[[38]]
-#> [1] "RApiSerialize_0.1.4"
+#> [1] "R6_2.6.1"
 #> 
 #> $other_packages[[39]]
-#> [1] "rappdirs_0.3.3"
+#> [1] "RApiSerialize_0.1.4"
 #> 
 #> $other_packages[[40]]
-#> [1] "Rcpp_1.1.0"
+#> [1] "rappdirs_0.3.3"
 #> 
 #> $other_packages[[41]]
-#> [1] "RcppParallel_5.1.11-1"
+#> [1] "Rcpp_1.1.0"
 #> 
 #> $other_packages[[42]]
-#> [1] "readr_2.1.5"
+#> [1] "RcppParallel_5.1.11-1"
 #> 
 #> $other_packages[[43]]
-#> [1] "rlang_1.1.6"
+#> [1] "readr_2.1.6"
 #> 
 #> $other_packages[[44]]
-#> [1] "stringfish_0.17.0"
+#> [1] "rlang_1.1.6"
 #> 
 #> $other_packages[[45]]
-#> [1] "stringi_1.8.7"
+#> [1] "stringfish_0.17.0"
 #> 
 #> $other_packages[[46]]
-#> [1] "swagger_5.17.14.1"
+#> [1] "stringi_1.8.7"
 #> 
 #> $other_packages[[47]]
-#> [1] "tibble_3.3.0"
+#> [1] "swagger_5.17.14.1"
 #> 
 #> $other_packages[[48]]
-#> [1] "tidyselect_1.2.1"
+#> [1] "tibble_3.3.0"
 #> 
 #> $other_packages[[49]]
-#> [1] "tools_4.3.2"
+#> [1] "tidyselect_1.2.1"
 #> 
 #> $other_packages[[50]]
-#> [1] "triebeard_0.4.1"
+#> [1] "tools_4.3.2"
 #> 
 #> $other_packages[[51]]
-#> [1] "tzdb_0.5.0"
+#> [1] "triebeard_0.4.1"
 #> 
 #> $other_packages[[52]]
-#> [1] "urltools_1.7.3.1"
+#> [1] "tzdb_0.5.0"
 #> 
 #> $other_packages[[53]]
-#> [1] "vctrs_0.6.5"
+#> [1] "urltools_1.7.3.1"
 #> 
 #> $other_packages[[54]]
-#> [1] "vroom_1.6.6"
+#> [1] "vctrs_0.6.5"
 #> 
 #> $other_packages[[55]]
-#> [1] "webutils_1.2.2"
+#> [1] "vroom_1.6.7"
 #> 
 #> $other_packages[[56]]
-#> [1] "yaml_2.3.10"
+#> [1] "webutils_1.2.2"
+#> 
+#> $other_packages[[57]]
+#> [1] "yaml_2.3.12"
 #> 
 #> 
 #> $r_version
@@ -285,7 +288,7 @@ pip_info()
 #> 
 #> $server_time
 #> $server_time[[1]]
-#> [1] "2025-12-09 21:09:37"
+#> [1] "2025-12-15 20:17:13"
 #> 
 #> 
 # }
