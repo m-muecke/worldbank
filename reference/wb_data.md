@@ -120,12 +120,12 @@ head(ind)
 #> 5 2020 NY.GDP.MKTP.CD GDP (current US$)         US United States          USA
 #> 6 2019 NY.GDP.MKTP.CD GDP (current US$)         US United States          USA
 #>          value unit obs_status decimal
-#> 1 2.918489e+13 <NA>       <NA>       0
-#> 2 2.772071e+13 <NA>       <NA>       0
-#> 3 2.600689e+13 <NA>       <NA>       0
-#> 4 2.368117e+13 <NA>       <NA>       0
-#> 5 2.135410e+13 <NA>       <NA>       0
-#> 6 2.153998e+13 <NA>       <NA>       0
+#> 1 2.875096e+13 <NA>       <NA>       0
+#> 2 2.729217e+13 <NA>       <NA>       0
+#> 3 2.560485e+13 <NA>       <NA>       0
+#> 4 2.331508e+13 <NA>       <NA>       0
+#> 5 2.106047e+13 <NA>       <NA>       0
+#> 6 2.138098e+13 <NA>       <NA>       0
 
 # multiple indicators for multiple countries (2015-2023)
 ind <- wb_data(
