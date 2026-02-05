@@ -1,5 +1,5 @@
 Package: worldbank
-Title: Client for World Banks's 'Indicators' and 'Poverty and Inequality
+Title: Client for World Bank's 'Indicators' and 'Poverty and Inequality
     Platform (PIP)' APIs
 Version: 0.7.1.9000
 Authors@R:

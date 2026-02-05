@@ -38,9 +38,5 @@ is_dateish <- function(x, null_ok = FALSE) {
     return(FALSE)
   }
   x <- as.character(x)
-  if (grepl("^\\d{4}(M(0[1-9]|1[0-2])|Q[1-4])?$", x)) {
-    TRUE
-  } else {
-    FALSE
-  }
+  grepl("^\\d{4}(M(0[1-9]|1[0-2])|Q[1-4])?$", x)
 }

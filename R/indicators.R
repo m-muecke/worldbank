@@ -470,7 +470,7 @@ worldbank <- function(resource, ..., lang = NULL, per_page = 32500L) {
   json[[2L]]
 }
 
-worldbank_seq <- function(resource, resp_data, ..., lang = NULL, per_page = 32500L) {
+worldbank_seq <- function(resource, ..., lang = NULL, per_page = 32500L) {
   stopifnot(is_string(lang, null_ok = TRUE), nchar(lang) == 2L)
   req <- request("https://api.worldbank.org/v2") |>
     req_user_agent("worldbank (https://m-muecke.github.io/worldbank)") |>
