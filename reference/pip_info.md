@@ -105,7 +105,7 @@ pip_info()
 #> 
 #> $other_packages
 #> $other_packages[[1]]
-#> [1] "arrow_22.0.0"
+#> [1] "arrow_22.0.0.1"
 #> 
 #> $other_packages[[2]]
 #> [1] "assertthat_0.2.1"
@@ -123,7 +123,7 @@ pip_info()
 #> [1] "cli_3.6.5"
 #> 
 #> $other_packages[[7]]
-#> [1] "collapse_2.1.5"
+#> [1] "collapse_2.1.6"
 #> 
 #> $other_packages[[8]]
 #> [1] "compiler_4.3.2"
@@ -132,7 +132,7 @@ pip_info()
 #> [1] "crayon_1.5.3"
 #> 
 #> $other_packages[[10]]
-#> [1] "data.table_1.17.8"
+#> [1] "data.table_1.18.0"
 #> 
 #> $other_packages[[11]]
 #> [1] "DBI_1.2.3"
@@ -171,10 +171,10 @@ pip_info()
 #> [1] "jsonlite_2.0.0"
 #> 
 #> $other_packages[[23]]
-#> [1] "later_1.4.4"
+#> [1] "later_1.4.5"
 #> 
 #> $other_packages[[24]]
-#> [1] "lifecycle_1.0.4"
+#> [1] "lifecycle_1.0.5"
 #> 
 #> $other_packages[[25]]
 #> [1] "magrittr_2.0.4"
@@ -201,7 +201,7 @@ pip_info()
 #> [1] "promises_1.5.0"
 #> 
 #> $other_packages[[33]]
-#> [1] "purrr_1.2.0"
+#> [1] "purrr_1.2.1"
 #> 
 #> $other_packages[[34]]
 #> [1] "qs_0.27.3"
@@ -225,7 +225,7 @@ pip_info()
 #> [1] "rappdirs_0.3.3"
 #> 
 #> $other_packages[[41]]
-#> [1] "Rcpp_1.1.0"
+#> [1] "Rcpp_1.1.1"
 #> 
 #> $other_packages[[42]]
 #> [1] "RcppParallel_5.1.11-1"
@@ -234,7 +234,7 @@ pip_info()
 #> [1] "readr_2.1.6"
 #> 
 #> $other_packages[[44]]
-#> [1] "rlang_1.1.6"
+#> [1] "rlang_1.1.7"
 #> 
 #> $other_packages[[45]]
 #> [1] "stringfish_0.17.0"
@@ -246,7 +246,7 @@ pip_info()
 #> [1] "swagger_5.17.14.1"
 #> 
 #> $other_packages[[48]]
-#> [1] "tibble_3.3.0"
+#> [1] "tibble_3.3.1"
 #> 
 #> $other_packages[[49]]
 #> [1] "tidyselect_1.2.1"
@@ -288,7 +288,7 @@ pip_info()
 #> 
 #> $server_time
 #> $server_time[[1]]
-#> [1] "2026-01-16 15:10:47"
+#> [1] "2026-02-05 21:32:34"
 #> 
 #> 
 # }

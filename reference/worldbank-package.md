@@ -1,4 +1,4 @@
-# worldbank: Client for World Banks's 'Indicators' and 'Poverty and Inequality Platform (PIP)' APIs
+# worldbank: Client for World Bank's 'Indicators' and 'Poverty and Inequality Platform (PIP)' APIs
 
 Download and search data from the 'World Bank Indicators API', which
 provides access to nearly 16,000 time series indicators. See

@@ -10,12 +10,12 @@
 Source:
 [`DESCRIPTION`](https://github.com/m-muecke/worldbank/blob/main/DESCRIPTION)
 
-Mücke M (2026). *worldbank: Client for World Banks's 'Indicators' and
+Mücke M (2026). *worldbank: Client for World Bank's 'Indicators' and
 'Poverty and Inequality Platform (PIP)' APIs*. R package version
 0.7.1.9000, <https://m-muecke.github.io/worldbank/>.
 
     @Manual{,
-      title = {worldbank: Client for World Banks's 'Indicators' and 'Poverty and Inequality Platform (PIP)' APIs},
+      title = {worldbank: Client for World Bank's 'Indicators' and 'Poverty and Inequality Platform (PIP)' APIs},
       author = {Maximilian Mücke},
       year = {2026},
       note = {R package version 0.7.1.9000},
