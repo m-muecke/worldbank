@@ -11,7 +11,7 @@ wb_region(region = NULL, lang = "en")
 }
 \arguments{
 \item{region}{(\code{NULL} | \code{character()})\cr
-Region to query. Default \code{NULL}. If \code{NULL}, all regions are returned}
+Region to query. Default \code{NULL}. If \code{NULL}, all regions are returned.}
 
 \item{lang}{(\code{character(1)})\cr
 Language to query. Default \code{"en"}.}

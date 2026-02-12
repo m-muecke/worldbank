@@ -15,6 +15,7 @@ reference:
       - wb_region
       - wb_country
       - wb_indicator
+      - wb_data
       - wb_country_indicator
 
   - subtitle: Poverty and Inequality Platform (PIP) Data

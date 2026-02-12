@@ -30,7 +30,7 @@ Countries for which statistics are to be computed, specified as ISO3 codes. Defa
 Years for which statistics are to be computed, specified as YYYY. Default \code{NULL}.}
 
 \item{povline}{(\code{numeric(1)})\cr
-Poverty line to be used to compute poverty mesures. Poverty lines are only accepted up to 3
+Poverty line to be used to compute poverty measures. Poverty lines are only accepted up to 3
 decimals. Default \code{2.15}.}
 
 \item{popshare}{(\code{NULL} | \code{numeric(1)})\cr

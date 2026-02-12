@@ -5,7 +5,7 @@
 #' @param year (`NULL` | `character()` | `numeric()`)\cr
 #'   Years for which statistics are to be computed, specified as YYYY. Default `NULL`.
 #' @param povline (`numeric(1)`)\cr
-#'   Poverty line to be used to compute poverty mesures. Poverty lines are only accepted up to 3
+#'   Poverty line to be used to compute poverty measures. Poverty lines are only accepted up to 3
 #'   decimals. Default `2.15`.
 #' @param popshare (`NULL` | `numeric(1)`)\cr
 #'   Proportion of the population living below the poverty line. Will be ignored if povline is

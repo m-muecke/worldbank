@@ -179,7 +179,7 @@ wb_topic <- function(topic = NULL, lang = "en") {
 #' List all regions supported by the World Bank API.
 #'
 #' @param region (`NULL` | `character()`)\cr
-#'   Region to query. Default `NULL`. If `NULL`, all regions are returned
+#'   Region to query. Default `NULL`. If `NULL`, all regions are returned.
 #' @param lang (`character(1)`)\cr
 #'   Language to query. Default `"en"`.
 #' @returns A `data.frame()` with the available regions. The columns are:
