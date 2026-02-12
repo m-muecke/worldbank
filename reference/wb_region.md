@@ -17,7 +17,7 @@ wb_region(region = NULL, lang = "en")
 - region:
 
   (`NULL` \| [`character()`](https://rdrr.io/r/base/character.html))  
-  Region to query. Default `NULL`. If `NULL`, all regions are returned
+  Region to query. Default `NULL`. If `NULL`, all regions are returned.
 
 - lang:
 

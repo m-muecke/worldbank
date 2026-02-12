@@ -43,7 +43,7 @@ pip_group(
 - povline:
 
   (`numeric(1)`)  
-  Poverty line to be used to compute poverty mesures. Poverty lines are
+  Poverty line to be used to compute poverty measures. Poverty lines are
   only accepted up to 3 decimals. Default `2.15`.
 
 - popshare:
