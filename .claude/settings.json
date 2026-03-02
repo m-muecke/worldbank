@@ -1,6 +1,6 @@
 {
+  "$schema": "https://json.schemastore.org/claude-code-settings.json",
   "permissions": {
-    "$schema": "https://json.schemastore.org/claude-code-settings.json",
     "defaultMode": "acceptEdits",
     "allow": [
       "Bash(air:*)",
@@ -18,7 +18,6 @@
       "Bash(rm:*)",
       "Bash(Rscript:*)",
       "Bash(sed:*)",
-      "Skill(*)",
       "WebFetch(domain:cran.r-project.org)",
       "WebFetch(domain:github.com)",
       "WebFetch(domain:raw.githubusercontent.com)"
