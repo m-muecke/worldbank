@@ -20,31 +20,6 @@ to_logical <- function(x) {
   x == "Y"
 }
 
-map <- function(.x, .f, ...) {
-  if (is.function(.f)) {
-    lapply(.x, .f, ...)
-  } else {
-    lapply(.x, `[[`, .f, ...)
-  }
-}
-
-map_mold <- function(.x, .f, .value, ...) {
-  out <- if (is.function(.f)) {
-    vapply(.x, .f, FUN.VALUE = .value, USE.NAMES = FALSE, ...)
-  } else {
-    vapply(.x, `[[`, .f, FUN.VALUE = .value, USE.NAMES = FALSE, ...)
-  }
-  stats::setNames(out, names(.x))
-}
-
-map_chr <- function(.x, .f, ...) {
-  map_mold(.x, .f, NA_character_, ...)
-}
-
-map_lgl <- function(.x, .f, ...) {
-  map_mold(.x, .f, NA, ...)
-}
-
 format_param <- function(x) {
   x <- x %||% "all"
   if (length(x) > 1L) {
