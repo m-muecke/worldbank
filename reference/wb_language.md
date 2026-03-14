@@ -17,17 +17,11 @@ wb_language()
 A [`data.frame()`](https://rdrr.io/r/base/data.frame.html) with the
 available languages. The columns are:
 
-- code:
+- `code`: The language code.
 
-  The language code.
+- `name`: The language name.
 
-- name:
-
-  The language name.
-
-- native_form:
-
-  The native form of the language name.
+- `native_form`: The native form of the language name.
 
 ## See also
 

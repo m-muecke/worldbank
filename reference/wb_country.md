@@ -30,77 +30,41 @@ wb_country(country = NULL, lang = "en")
 A [`data.frame()`](https://rdrr.io/r/base/data.frame.html) with the
 available countries. The columns are:
 
-- country_id:
+- `country_id`: The country ID.
 
-  The country ID.
+- `country_code`: The country code.
 
-- country_code:
+- `country_name`: The country name.
 
-  The country code.
+- `region_id`: The region ID.
 
-- country_name:
+- `region_code`: The region code.
 
-  The country name.
+- `region_value`: The region value.
 
-- region_id:
+- `admin_region_id`: The admin region ID.
 
-  The region ID.
+- `admin_region_code`: The admin region code.
 
-- region_code:
+- `admin_region_value`: The admin region value.
 
-  The region code.
+- `income_level_id`: The income level ID.
 
-- region_value:
+- `income_level_code`: The income level code.
 
-  The region value.
+- `income_level_value`: The income level value.
 
-- admin_region_id:
+- `lending_type_id`: The lending type ID.
 
-  The admin region ID.
+- `lending_type_code`: The lending type code.
 
-- admin_region_code:
+- `lending_type_value`: The lending type value.
 
-  The admin region code.
+- `capital_city`: The capital city.
 
-- admin_region_value:
+- `longitude`: The longitude.
 
-  The admin region value.
-
-- income_level_id:
-
-  The income level ID.
-
-- income_level_code:
-
-  The income level code.
-
-- income_level_value:
-
-  The income level value.
-
-- lending_type_id:
-
-  The lending type ID.
-
-- lending_type_code:
-
-  The lending type code.
-
-- lending_type_value:
-
-  The lending type value.
-
-- capital_city:
-
-  The capital city.
-
-- longitude:
-
-  The longitude.
-
-- latitude:
-
-  The latitude.
+- `latitude`: The latitude.
 
 ## See also
 

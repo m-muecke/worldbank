@@ -29,21 +29,13 @@ wb_region(region = NULL, lang = "en")
 A [`data.frame()`](https://rdrr.io/r/base/data.frame.html) with the
 available regions. The columns are:
 
-- id:
+- `id`: The region ID.
 
-  The region ID.
+- `code`: The region code.
 
-- code:
+- `iso2code`: The ISO 2 code of the region.
 
-  The region code.
-
-- iso2code:
-
-  The ISO 2 code of the region.
-
-- name:
-
-  The region name.
+- `name`: The region name.
 
 ## See also
 

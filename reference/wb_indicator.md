@@ -30,41 +30,23 @@ wb_indicator(indicator = NULL, lang = "en")
 A [`data.frame()`](https://rdrr.io/r/base/data.frame.html) with the
 available indicators. The columns are:
 
-- id:
+- `id`: The indicator ID.
 
-  The indicator ID.
+- `name`: The indicator name.
 
-- name:
+- `unit`: The indicator unit.
 
-  The indicator name.
+- `source_id`: The source ID.
 
-- unit:
+- `source_value`: The source value.
 
-  The indicator unit.
+- `source_note`: The source note.
 
-- source_id:
+- `source_organization`: The source organization.
 
-  The source ID.
+- `topic_id`: The topic ID.
 
-- source_value:
-
-  The source value.
-
-- source_note:
-
-  The source note.
-
-- source_organization:
-
-  The source organization.
-
-- topic_id:
-
-  The topic ID.
-
-- topic_value:
-
-  The topic value.
+- `topic_value`: The topic value.
 
 ## See also
 

@@ -6,6 +6,9 @@
   replaces
   [`wb_cache_delete()`](https://m-muecke.github.io/worldbank/reference/cache.md),
   which is now deprecated.
+- [`wb_project()`](https://m-muecke.github.io/worldbank/reference/wb_project.md)
+  queries World Bank project data with support for filtering by country,
+  status, region, date range, and free-text search.
 
 ## worldbank 0.7.1
 

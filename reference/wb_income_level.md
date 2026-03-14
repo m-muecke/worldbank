@@ -30,17 +30,11 @@ wb_income_level(income = NULL, lang = "en")
 A [`data.frame()`](https://rdrr.io/r/base/data.frame.html) with the
 available income levels. The columns are:
 
-- id:
+- `id`: The income level ID.
 
-  The income level ID.
+- `iso2code`: The ISO 2 code of the income level.
 
-- iso2code:
-
-  The ISO 2 code of the income level.
-
-- value:
-
-  The income level value.
+- `value`: The income level value.
 
 ## See also
 

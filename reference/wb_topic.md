@@ -29,17 +29,11 @@ wb_topic(topic = NULL, lang = "en")
 A [`data.frame()`](https://rdrr.io/r/base/data.frame.html) with the
 available topics. The columns are:
 
-- id:
+- `id`: The topic ID.
 
-  The topic ID.
+- `value`: The topic value.
 
-- value:
-
-  The topic value.
-
-- source_note:
-
-  The source note.
+- `source_note`: The source note.
 
 ## See also
 

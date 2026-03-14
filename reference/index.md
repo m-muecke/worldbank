@@ -47,6 +47,11 @@
   [`fone_view()`](https://m-muecke.github.io/worldbank/reference/fone.md)
   : Return Finances One API Data
 
+### Projects Data
+
+- [`wb_project()`](https://m-muecke.github.io/worldbank/reference/wb_project.md)
+  : World Bank project data
+
 ### Cache Management
 
 - [`wb_cache_dir()`](https://m-muecke.github.io/worldbank/reference/cache.md)

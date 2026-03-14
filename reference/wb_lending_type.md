@@ -30,17 +30,11 @@ wb_lending_type(type = NULL, lang = "en")
 A [`data.frame()`](https://rdrr.io/r/base/data.frame.html) with the
 available lending types. The columns are:
 
-- id:
+- `id`: The lending type ID.
 
-  The lending type ID.
+- `iso2code`: The ISO 2 code of the lending type.
 
-- iso2code:
-
-  The ISO 2 code of the lending type.
-
-- value:
-
-  The lending type value.
+- `value`: The lending type value.
 
 ## See also
 

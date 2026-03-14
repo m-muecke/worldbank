@@ -65,45 +65,25 @@ wb_country_indicator(
 A [`data.frame()`](https://rdrr.io/r/base/data.frame.html) with the
 available country indicators. The columns are:
 
-- date:
+- `date`: The date
 
-  The date
+- `indicator_id`: The indicator ID.
 
-- indicator_id:
+- `indicator_name`: The indicator name.
 
-  The indicator ID.
+- `country_id`: The country ID.
 
-- indicator_name:
+- `country_name`: The country name.
 
-  The indicator name.
+- `country_code`: The country code.
 
-- country_id:
+- `value`: The indicator value.
 
-  The country ID.
+- `unit`: The indicator unit.
 
-- country_name:
+- `obs_status`: The observation status.
 
-  The country name.
-
-- country_code:
-
-  The country code.
-
-- value:
-
-  The indicator value.
-
-- unit:
-
-  The indicator unit.
-
-- obs_status:
-
-  The observation status.
-
-- decimal:
-
-  The decimal.
+- `decimal`: The decimal.
 
 ## Examples
 

@@ -29,41 +29,23 @@ wb_source(source = NULL, lang = "en")
 A [`data.frame()`](https://rdrr.io/r/base/data.frame.html) with the
 available sources. The columns are:
 
-- id:
+- `id`: The source ID.
 
-  The source ID.
+- `last_updated`: The date the source was last updated.
 
-- last_updated:
+- `name`: The source name.
 
-  The date the source was last updated.
+- `code`: The source code.
 
-- name:
+- `description`: The source description.
 
-  The source name.
+- `url`: The source URL.
 
-- code:
+- `data_availability`: Whether the source has data available.
 
-  The source code.
+- `metadata_availability`: Whether the source has metadata available.
 
-- description:
-
-  The source description.
-
-- url:
-
-  The source URL.
-
-- data_availability:
-
-  Whether the source has data available.
-
-- metadata_availability:
-
-  Whether the source has metadata available.
-
-- concepts:
-
-  The concepts associated with the source.
+- `concepts`: The concepts associated with the source.
 
 ## See also
 
