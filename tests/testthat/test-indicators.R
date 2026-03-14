@@ -1,7 +1,3 @@
-has_ws <- function(x) {
-  any(!is.na(x) & (startsWith(x, " ") | endsWith(x, " ")))
-}
-
 test_that("wb_language", {
   local_mocked_bindings(
     worldbank = function(...) readRDS(test_path("fixtures", "wb-language.rds"))

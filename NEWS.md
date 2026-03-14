@@ -1,6 +1,7 @@
 # worldbank (development version)
 
 * `wb_cache_clear()` replaces `wb_cache_delete()`, which is now deprecated.
+* `wb_project()` queries World Bank project data with support for filtering by country, status, region, date range, and free-text search.
 
 # worldbank 0.7.1
 

@@ -1,0 +1,157 @@
+#' World Bank project data
+#'
+#' Query World Bank project data from the Projects API.
+#'
+#' @param id (`NULL` | `character(1)`)\cr
+#'   Project ID to query, e.g. `"P163868"`. Default `NULL`.
+#'   If provided, other filters are ignored.
+#' @param country (`NULL` | `character()`)\cr
+#'   ISO country code(s) to filter by, e.g. `"BR"` or `c("BR", "IN")`. Default `NULL`.
+#' @param status (`NULL` | `character(1)`)\cr
+#'   Project status to filter by. One of `"Active"`, `"Closed"`, `"Dropped"`, or `"Pipeline"`.
+#'   Default `NULL`.
+#' @param region (`NULL` | `character(1)`)\cr
+#'   Region name to filter by, e.g. `"South Asia"`. Default `NULL`.
+#' @param search (`NULL` | `character(1)`)\cr
+#'   Free-text search term. Default `NULL`.
+#' @param start_date (`NULL` | `character(1)`)\cr
+#'   Board approval start date in `"YYYY-MM-DD"` format. Default `NULL`.
+#' @param end_date (`NULL` | `character(1)`)\cr
+#'   Board approval end date in `"YYYY-MM-DD"` format. Default `NULL`.
+#' @returns A `data.frame()` with World Bank project data. The columns are:
+#'   \item{id}{The project ID.}
+#'   \item{project_name}{The project name.}
+#'   \item{status}{The project status.}
+#'   \item{approval_date}{The board approval date.}
+#'   \item{closing_date}{The closing date.}
+#'   \item{country_code}{The ISO country code.}
+#'   \item{country}{The country name.}
+#'   \item{region}{The region name.}
+#'   \item{total_commitment}{The total commitment amount in millions USD.}
+#'   \item{ibrd_commitment}{The IBRD commitment amount in millions USD.}
+#'   \item{ida_commitment}{The IDA commitment amount in millions USD.}
+#'   \item{lending_instrument}{The lending instrument type.}
+#'   \item{borrower}{The borrower name.}
+#'   \item{implementing_agency}{The implementing agency name.}
+#'   \item{url}{The project URL.}
+#' @source <https://search.worldbank.org/api/v2/projects>
+#' @family projects data
+#' @export
+#' @examplesIf httr2::is_online()
+#' \donttest{
+#' # active projects in Brazil related to education
+#' wb_project(country = "BR", status = "Active", search = "education")
+#'
+#' # look up a specific project
+#' wb_project(id = "P163868")
+#' }
+wb_project <- function(
+  id = NULL,
+  country = NULL,
+  status = NULL,
+  region = NULL,
+  search = NULL,
+  start_date = NULL,
+  end_date = NULL
+) {
+  stopifnot(
+    is_string(id, null_ok = TRUE),
+    is_character(country, null_ok = TRUE),
+    is_string(status, null_ok = TRUE),
+    is_string(region, null_ok = TRUE),
+    is_string(search, null_ok = TRUE),
+    is_string(start_date, null_ok = TRUE, pattern = "^\\d{4}-\\d{2}-\\d{2}$"),
+    is_string(end_date, null_ok = TRUE, pattern = "^\\d{4}-\\d{2}-\\d{2}$")
+  )
+
+  if (!is.null(id)) {
+    data <- wb_projects_api(id = id)
+  } else {
+    country_param <- if (!is.null(country)) paste0(country, collapse = ";") else NULL
+    data <- wb_projects_api(
+      countrycode_exact = country_param,
+      status = status,
+      regionname = region,
+      qterm = search,
+      strdate = start_date,
+      enddate = end_date
+    )
+  }
+  parse_projects(data)
+}
+
+wb_projects_api <- function(..., per_page = 1000L) {
+  json <- request("https://search.worldbank.org/api/v2/projects") |>
+    req_user_agent("worldbank (https://m-muecke.github.io/worldbank)") |>
+    req_url_query(..., format = "json", rows = per_page) |>
+    req_wb_cache() |>
+    req_perform() |>
+    resp_body_json()
+
+  total <- as.integer(json$total)
+  projects <- json$projects
+  if (total <= per_page) {
+    return(projects)
+  }
+
+  offsets <- seq(per_page, total - 1L, by = per_page)
+  reqs <- map(offsets, function(os) {
+    request("https://search.worldbank.org/api/v2/projects") |>
+      req_user_agent("worldbank (https://m-muecke.github.io/worldbank)") |>
+      req_url_query(..., format = "json", rows = per_page, os = os) |>
+      req_wb_cache()
+  })
+  resps <- req_perform_sequential(reqs)
+  for (resp in resps) {
+    more <- resp_body_json(resp)$projects
+    projects <- c(projects, more)
+  }
+  projects
+}
+
+parse_projects <- function(data) {
+  if (length(data) == 0L) {
+    return(data.frame(
+      id = character(),
+      project_name = character(),
+      status = character(),
+      approval_date = as.Date(character()),
+      closing_date = as.Date(character()),
+      country_code = character(),
+      country = character(),
+      region = character(),
+      total_commitment = numeric(),
+      ibrd_commitment = numeric(),
+      ida_commitment = numeric(),
+      lending_instrument = character(),
+      borrower = character(),
+      implementing_agency = character(),
+      url = character(),
+      check.names = FALSE
+    ))
+  }
+  res <- data.frame(
+    id = map_chr(data, \(x) x$id %||% NA_character_),
+    project_name = map_chr(data, \(x) x$project_name %||% NA_character_),
+    status = map_chr(data, \(x) x$status %||% NA_character_),
+    approval_date = map_chr(data, \(x) x$boardapprovaldate %||% NA_character_),
+    closing_date = map_chr(data, \(x) x$closingdate %||% NA_character_),
+    country_code = map_chr(data, function(x) {
+      cc <- x$countrycode
+      if (is.null(cc)) NA_character_ else paste0(cc, collapse = ";")
+    }),
+    country = map_chr(data, \(x) x$countryshortname %||% NA_character_),
+    region = map_chr(data, \(x) x$regionname %||% NA_character_),
+    total_commitment = map_dbl(data, \(x) as.numeric(x$curr_total_commitment %||% NA)),
+    ibrd_commitment = map_dbl(data, \(x) as.numeric(x$curr_ibrd_commitment %||% NA)),
+    ida_commitment = map_dbl(data, \(x) as.numeric(x$curr_ida_commitment %||% NA)),
+    lending_instrument = map_chr(data, \(x) x$lendinginstr %||% NA_character_),
+    borrower = map_chr(data, \(x) x$borrower %||% NA_character_),
+    implementing_agency = map_chr(data, \(x) x$impagency %||% NA_character_),
+    url = map_chr(data, \(x) x$url %||% NA_character_),
+    check.names = FALSE
+  )
+  res$approval_date <- as.Date(sub("T.*", "", res$approval_date))
+  res$closing_date <- as.Date(res$closing_date, format = "%m/%d/%Y")
+  clean_strings(res)
+}

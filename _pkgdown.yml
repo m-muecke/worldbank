@@ -34,6 +34,10 @@ reference:
       - fone_dataset
       - fone_view
 
+  - subtitle: Projects Data
+    contents:
+      - wb_project
+
   - subtitle: Cache Management
     contents:
       - wb_cache_dir
