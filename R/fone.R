@@ -52,7 +52,7 @@ fone <- function(resource, ..., limit = NULL) {
   max_reqs <- if (!is.null(limit)) ceiling(limit / 1000L) else Inf
 
   req <- request("https://datacatalogapi.worldbank.org/dexapps/fone/api") |>
-    req_user_agent("worldbank (https://m-muecke.github.io/worldbank)") |>
+    req_user_agent(wb_user_agent()) |>
     req_error(body = \(resp) resp_body_string(resp, "UTF-8")) |>
     req_url_path_append(resource) |>
     req_url_query(top = limit, type = "csv", ...) |>

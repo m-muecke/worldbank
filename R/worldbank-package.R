@@ -17,3 +17,7 @@
 #' @importFrom httr2 resp_status
 #' @importFrom httr2 resps_data
 "_PACKAGE"
+
+wb_user_agent <- function() {
+  sprintf("worldbank/%s", utils::packageVersion("worldbank"))
+}

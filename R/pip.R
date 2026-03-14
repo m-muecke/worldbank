@@ -351,7 +351,7 @@ pip_error_body <- function(resp) {
 pip <- function(resource, ..., format = c("json", "csv", "xml", "rds")) {
   format <- match.arg(format)
   resp <- request("https://api.worldbank.org/pip/v1") |>
-    req_user_agent("worldbank (https://m-muecke.github.io/worldbank)") |>
+    req_user_agent(wb_user_agent()) |>
     req_url_path_append(resource) |>
     req_error(body = pip_error_body) |>
     req_url_query(format = format, ...) |>

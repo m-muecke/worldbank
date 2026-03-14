@@ -82,7 +82,7 @@ wb_project <- function(
 
 wb_projects_api <- function(..., per_page = 1000L) {
   req <- request("https://search.worldbank.org/api/v2/projects") |>
-    req_user_agent("worldbank (https://m-muecke.github.io/worldbank)") |>
+    req_user_agent(wb_user_agent()) |>
     req_url_query(..., format = "json", rows = per_page) |>
     req_wb_cache()
 
