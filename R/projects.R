@@ -101,26 +101,6 @@ wb_projects_api <- function(..., per_page = 1000L) {
 }
 
 parse_projects <- function(data) {
-  if (length(data) == 0L) {
-    return(data.frame(
-      id = character(),
-      project_name = character(),
-      status = character(),
-      approval_date = as.Date(character()),
-      closing_date = as.Date(character()),
-      country_code = character(),
-      country = character(),
-      region = character(),
-      total_commitment = numeric(),
-      ibrd_commitment = numeric(),
-      ida_commitment = numeric(),
-      lending_instrument = character(),
-      borrower = character(),
-      implementing_agency = character(),
-      url = character(),
-      check.names = FALSE
-    ))
-  }
   res <- data.frame(
     id = map_chr(data, \(x) x$id %||% NA_character_),
     project_name = map_chr(data, \(x) x$project_name %||% NA_character_),

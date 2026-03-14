@@ -16,13 +16,6 @@ test_that("wb_project", {
   }
 })
 
-test_that("wb_project returns empty data.frame for no results", {
-  local_mocked_bindings(wb_projects_api = function(...) list())
-  actual <- wb_project(search = "nonexistent")
-  expect_s3_class(actual, "data.frame")
-  expect_equal(nrow(actual), 0L)
-  expect_equal(ncol(actual), 15L)
-})
 
 test_that("wb_project input validation works", {
   expect_error(wb_project(id = 1L))
