@@ -1,5 +1,7 @@
 # worldbank (development version)
 
+* `wb_cache_clear()` replaces `wb_cache_delete()`, which is now deprecated.
+
 # worldbank 0.7.1
 
 * Don't cache queries in tests to comply with CRAN

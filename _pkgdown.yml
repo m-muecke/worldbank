@@ -37,4 +37,4 @@ reference:
   - subtitle: Cache Management
     contents:
       - wb_cache_dir
-      - wb_cache_delete
+      - wb_cache_clear

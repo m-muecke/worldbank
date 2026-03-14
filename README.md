@@ -147,7 +147,7 @@ subset(gdp, date >= 1980) |>
   labs(title = "GDP in Current U.S. Dollars", color = "Country")
 ```
 
-<img src="man/figures/README-demo-1.png" width="100%" />
+<img src="man/figures/README-demo-1.png" alt="" width="100%" />
 
 ## Related work
 

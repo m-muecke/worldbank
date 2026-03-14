@@ -3,16 +3,19 @@
 \name{cache}
 \alias{cache}
 \alias{wb_cache_dir}
+\alias{wb_cache_clear}
 \alias{wb_cache_delete}
 \title{Get or manage the worldbank API cache}
 \usage{
 wb_cache_dir()
 
+wb_cache_clear()
+
 wb_cache_delete()
 }
 \description{
 \code{wb_cache_dir()} returns the path where cached API responses are stored.
-\code{wb_cache_delete()} clears all cached responses.
+\code{wb_cache_clear()} clears all cached responses.
 }
 \details{
 The cache is only used when enabled with \code{options(worldbank.cache = TRUE)}.
@@ -28,6 +31,6 @@ options(worldbank.cache = TRUE)
 wb_cache_dir()
 
 # clear the cache
-wb_cache_delete()
+wb_cache_clear()
 }
 }

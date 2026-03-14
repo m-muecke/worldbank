@@ -1,7 +1,7 @@
 #' Get or manage the worldbank API cache
 #'
 #' `wb_cache_dir()` returns the path where cached API responses are stored.
-#' `wb_cache_delete()` clears all cached responses.
+#' `wb_cache_clear()` clears all cached responses.
 #'
 #' @details
 #' The cache is only used when enabled with `options(worldbank.cache = TRUE)`.
@@ -18,7 +18,7 @@
 #' wb_cache_dir()
 #'
 #' # clear the cache
-#' wb_cache_delete()
+#' wb_cache_clear()
 #' }
 NULL
 
@@ -30,11 +30,18 @@ wb_cache_dir <- function() {
 
 #' @rdname cache
 #' @export
-wb_cache_delete <- function() {
+wb_cache_clear <- function() {
   cache_dir <- wb_cache_dir()
   if (dir.exists(cache_dir)) {
     unlink(dir(cache_dir, full.names = TRUE))
   }
+}
+
+#' @rdname cache
+#' @export
+wb_cache_delete <- function() {
+  .Deprecated("wb_cache_clear")
+  wb_cache_clear()
 }
 
 req_wb_cache <- function(req) {
