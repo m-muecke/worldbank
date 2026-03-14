@@ -125,15 +125,15 @@ wb_source <- function(source = NULL, lang = "en") {
   resource <- sprintf("source/%s", source)
   data <- worldbank(resource = resource, lang = lang)
   res <- data.frame(
-    id = data |> map_chr("id") |> as.integer(),
-    last_updated = data |> map_chr("lastupdated") |> as.Date(),
+    id = as.integer(map_chr(data, "id")),
+    last_updated = as.Date(map_chr(data, "lastupdated")),
     name = map_chr(data, "name"),
     code = map_chr(data, "code"),
     description = map_chr(data, "description"),
     url = map_chr(data, "url"),
-    data_availability = data |> map_chr("dataavailability") |> to_logical(),
-    metadata_availability = data |> map_chr("metadataavailability") |> to_logical(),
-    concepts = data |> map_chr("concepts") |> as.integer(),
+    data_availability = to_logical(map_chr(data, "dataavailability")),
+    metadata_availability = to_logical(map_chr(data, "metadataavailability")),
+    concepts = as.integer(map_chr(data, "concepts")),
     check.names = FALSE
   )
   clean_strings(res)
@@ -166,7 +166,7 @@ wb_topic <- function(topic = NULL, lang = "en") {
   resource <- sprintf("topic/%s", topic)
   data <- worldbank(resource = resource, lang = lang)
   res <- data.frame(
-    id = map_chr(data, "id") |> as.integer(),
+    id = as.integer(map_chr(data, "id")),
     value = map_chr(data, "value"),
     source_note = map_chr(data, "sourceNote"),
     check.names = FALSE
@@ -206,7 +206,7 @@ wb_region <- function(region = NULL, lang = "en") {
   resource <- sprintf("%s/region/%s", lang, region)
   data <- worldbank(resource = resource)
   res <- data.frame(
-    id = data |> map_chr("id") |> na_if_empty() |> as.integer(),
+    id = as.integer(na_if_empty(map_chr(data, "id"))),
     code = map_chr(data, "code"),
     iso2code = map_chr(data, "iso2code"),
     name = map_chr(data, "name"),
@@ -278,8 +278,8 @@ wb_country <- function(country = NULL, lang = "en") {
     lending_type_code = map_chr(data, \(x) x$lendingType$iso2code),
     lending_type_value = map_chr(data, \(x) x$lendingType$value),
     capital_city = map_chr(data, "capitalCity"),
-    longitude = data |> map_chr("longitude") |> na_if_empty() |> as.numeric(),
-    latitude = data |> map_chr("latitude") |> na_if_empty() |> as.numeric(),
+    longitude = as.numeric(na_if_empty(map_chr(data, "longitude"))),
+    latitude = as.numeric(na_if_empty(map_chr(data, "latitude"))),
     check.names = FALSE
   )
   clean_strings(res)
@@ -320,19 +320,17 @@ wb_indicator <- function(indicator = NULL, lang = "en") {
     id = map_chr(data, "id"),
     name = map_chr(data, "name"),
     unit = map_chr(data, "unit"),
-    source_id = data |> map_chr(\(x) x$source$id) |> as.integer(),
+    source_id = as.integer(map_chr(data, \(x) x$source$id)),
     source_value = map_chr(data, \(x) x$source$value),
     source_note = map_chr(data, "sourceNote"),
     source_organization = map_chr(data, "sourceOrganization"),
-    topic_id = data |> # nolint
-      map_chr(function(x) {
-        if (length(x$topics) > 0L && length(x$topics[[1L]]) > 0L) {
-          x$topics[[1L]]$id
-        } else {
-          NA_character_
-        }
-      }) |>
-      as.integer(),
+    topic_id = as.integer(map_chr(data, function(x) {
+      if (length(x$topics) > 0L && length(x$topics[[1L]]) > 0L) {
+        x$topics[[1L]]$id
+      } else {
+        NA_character_
+      }
+    })),
     topic_value = map_chr(data, function(x) {
       if (length(x$topics) > 0L && length(x$topics[[1L]]) > 0L) {
         x$topics[[1L]]$value
