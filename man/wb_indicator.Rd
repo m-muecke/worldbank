@@ -18,15 +18,17 @@ Language to query. Default \code{"en"}.}
 }
 \value{
 A \code{data.frame()} with the available indicators. The columns are:
-\item{id}{The indicator ID.}
-\item{name}{The indicator name.}
-\item{unit}{The indicator unit.}
-\item{source_id}{The source ID.}
-\item{source_value}{The source value.}
-\item{source_note}{The source note.}
-\item{source_organization}{The source organization.}
-\item{topic_id}{The topic ID.}
-\item{topic_value}{The topic value.}
+\itemize{
+\item \code{id}: The indicator ID.
+\item \code{name}: The indicator name.
+\item \code{unit}: The indicator unit.
+\item \code{source_id}: The source ID.
+\item \code{source_value}: The source value.
+\item \code{source_note}: The source note.
+\item \code{source_organization}: The source organization.
+\item \code{topic_id}: The topic ID.
+\item \code{topic_value}: The topic value.
+}
 }
 \description{
 List all indicators supported by the World Bank API.

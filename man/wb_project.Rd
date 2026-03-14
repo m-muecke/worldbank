@@ -43,21 +43,23 @@ Board approval end date in \code{"YYYY-MM-DD"} format. Default \code{NULL}.}
 }
 \value{
 A \code{data.frame()} with World Bank project data. The columns are:
-\item{id}{The project ID.}
-\item{project_name}{The project name.}
-\item{status}{The project status.}
-\item{approval_date}{The board approval date.}
-\item{closing_date}{The closing date.}
-\item{country_code}{The ISO country code.}
-\item{country}{The country name.}
-\item{region}{The region name.}
-\item{total_commitment}{The total commitment amount in millions USD.}
-\item{ibrd_commitment}{The IBRD commitment amount in millions USD.}
-\item{ida_commitment}{The IDA commitment amount in millions USD.}
-\item{lending_instrument}{The lending instrument type.}
-\item{borrower}{The borrower name.}
-\item{implementing_agency}{The implementing agency name.}
-\item{url}{The project URL.}
+\itemize{
+\item \code{id}: The project ID.
+\item \code{project_name}: The project name.
+\item \code{status}: The project status.
+\item \code{approval_date}: The board approval date.
+\item \code{closing_date}: The closing date.
+\item \code{country_code}: The ISO country code.
+\item \code{country}: The country name.
+\item \code{region}: The region name.
+\item \code{total_commitment}: The total commitment amount in millions USD.
+\item \code{ibrd_commitment}: The IBRD commitment amount in millions USD.
+\item \code{ida_commitment}: The IDA commitment amount in millions USD.
+\item \code{lending_instrument}: The lending instrument type.
+\item \code{borrower}: The borrower name.
+\item \code{implementing_agency}: The implementing agency name.
+\item \code{url}: The project URL.
+}
 }
 \description{
 Query World Bank project data from the Projects API.

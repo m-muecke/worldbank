@@ -48,16 +48,18 @@ End date to query, in the same format as start_date. Default \code{NULL}.}
 \value{
 A \code{data.frame()} with the available country indicators.
 The columns are:
-\item{date}{The date}
-\item{indicator_id}{The indicator ID.}
-\item{indicator_name}{The indicator name.}
-\item{country_id}{The country ID.}
-\item{country_name}{The country name.}
-\item{country_code}{The country code.}
-\item{value}{The indicator value.}
-\item{unit}{The indicator unit.}
-\item{obs_status}{The observation status.}
-\item{decimal}{The decimal.}
+\itemize{
+\item \code{date}: The date
+\item \code{indicator_id}: The indicator ID.
+\item \code{indicator_name}: The indicator name.
+\item \code{country_id}: The country ID.
+\item \code{country_name}: The country name.
+\item \code{country_code}: The country code.
+\item \code{value}: The indicator value.
+\item \code{unit}: The indicator unit.
+\item \code{obs_status}: The observation status.
+\item \code{decimal}: The decimal.
+}
 }
 \description{
 List all country indicators supported by the World Bank API.

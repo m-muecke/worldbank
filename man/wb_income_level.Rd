@@ -18,9 +18,11 @@ Language to query. Default \code{"en"}.}
 }
 \value{
 A \code{data.frame()} with the available income levels. The columns are:
-\item{id}{The income level ID.}
-\item{iso2code}{The ISO 2 code of the income level.}
-\item{value}{The income level value.}
+\itemize{
+\item \code{id}: The income level ID.
+\item \code{iso2code}: The ISO 2 code of the income level.
+\item \code{value}: The income level value.
+}
 }
 \description{
 List all income levels supported by the World Bank API.

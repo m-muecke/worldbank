@@ -18,15 +18,17 @@ Language to query. Default \code{"en"}.}
 }
 \value{
 A \code{data.frame()} with the available sources. The columns are:
-\item{id}{The source ID.}
-\item{last_updated}{The date the source was last updated.}
-\item{name}{The source name.}
-\item{code}{The source code.}
-\item{description}{The source description.}
-\item{url}{The source URL.}
-\item{data_availability}{Whether the source has data available.}
-\item{metadata_availability}{Whether the source has metadata available.}
-\item{concepts}{The concepts associated with the source.}
+\itemize{
+\item \code{id}: The source ID.
+\item \code{last_updated}: The date the source was last updated.
+\item \code{name}: The source name.
+\item \code{code}: The source code.
+\item \code{description}: The source description.
+\item \code{url}: The source URL.
+\item \code{data_availability}: Whether the source has data available.
+\item \code{metadata_availability}: Whether the source has metadata available.
+\item \code{concepts}: The concepts associated with the source.
+}
 }
 \description{
 List all sources supported by the World Bank API.

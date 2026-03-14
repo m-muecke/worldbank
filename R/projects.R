@@ -19,21 +19,21 @@
 #' @param end_date (`NULL` | `character(1)`)\cr
 #'   Board approval end date in `"YYYY-MM-DD"` format. Default `NULL`.
 #' @returns A `data.frame()` with World Bank project data. The columns are:
-#'   \item{id}{The project ID.}
-#'   \item{project_name}{The project name.}
-#'   \item{status}{The project status.}
-#'   \item{approval_date}{The board approval date.}
-#'   \item{closing_date}{The closing date.}
-#'   \item{country_code}{The ISO country code.}
-#'   \item{country}{The country name.}
-#'   \item{region}{The region name.}
-#'   \item{total_commitment}{The total commitment amount in millions USD.}
-#'   \item{ibrd_commitment}{The IBRD commitment amount in millions USD.}
-#'   \item{ida_commitment}{The IDA commitment amount in millions USD.}
-#'   \item{lending_instrument}{The lending instrument type.}
-#'   \item{borrower}{The borrower name.}
-#'   \item{implementing_agency}{The implementing agency name.}
-#'   \item{url}{The project URL.}
+#' * `id`: The project ID.
+#' * `project_name`: The project name.
+#' * `status`: The project status.
+#' * `approval_date`: The board approval date.
+#' * `closing_date`: The closing date.
+#' * `country_code`: The ISO country code.
+#' * `country`: The country name.
+#' * `region`: The region name.
+#' * `total_commitment`: The total commitment amount in millions USD.
+#' * `ibrd_commitment`: The IBRD commitment amount in millions USD.
+#' * `ida_commitment`: The IDA commitment amount in millions USD.
+#' * `lending_instrument`: The lending instrument type.
+#' * `borrower`: The borrower name.
+#' * `implementing_agency`: The implementing agency name.
+#' * `url`: The project URL.
 #' @source <https://search.worldbank.org/api/v2/projects>
 #' @family projects data
 #' @export

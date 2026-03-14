@@ -11,9 +11,11 @@ wb_language()
 }
 \value{
 A \code{data.frame()} with the available languages. The columns are:
-\item{code}{The language code.}
-\item{name}{The language name.}
-\item{native_form}{The native form of the language name.}
+\itemize{
+\item \code{code}: The language code.
+\item \code{name}: The language name.
+\item \code{native_form}: The native form of the language name.
+}
 }
 \description{
 List all languages supported by the World Bank API.

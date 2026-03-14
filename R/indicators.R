@@ -3,9 +3,9 @@
 #' List all languages supported by the World Bank API.
 #'
 #' @returns A `data.frame()` with the available languages. The columns are:
-#'   \item{code}{The language code.}
-#'   \item{name}{The language name.}
-#'   \item{native_form}{The native form of the language name.}
+#' * `code`: The language code.
+#' * `name`: The language name.
+#' * `native_form`: The native form of the language name.
 #' @source <https://api.worldbank.org/v2/languages>
 #' @family indicators data
 #' @export
@@ -33,9 +33,9 @@ wb_language <- function() {
 #' @param lang (`character(1)`)\cr
 #'   Language to query. Default `"en"`.
 #' @returns A `data.frame()` with the available lending types. The columns are:
-#'   \item{id}{The lending type ID.}
-#'   \item{iso2code}{The ISO 2 code of the lending type.}
-#'   \item{value}{The lending type value.}
+#' * `id`: The lending type ID.
+#' * `iso2code`: The ISO 2 code of the lending type.
+#' * `value`: The lending type value.
 #' @source <https://api.worldbank.org/v2/lendingTypes>
 #' @family indicators data
 #' @export
@@ -67,9 +67,9 @@ wb_lending_type <- function(type = NULL, lang = "en") {
 #' @param lang (`character(1)`)\cr
 #'   Language to query. Default `"en"`.
 #' @returns A `data.frame()` with the available income levels. The columns are:
-#'   \item{id}{The income level ID.}
-#'   \item{iso2code}{The ISO 2 code of the income level.}
-#'   \item{value}{The income level value.}
+#' * `id`: The income level ID.
+#' * `iso2code`: The ISO 2 code of the income level.
+#' * `value`: The income level value.
 #' @source <https://api.worldbank.org/v2/incomeLevels>
 #' @family indicators data
 #' @export
@@ -101,15 +101,15 @@ wb_income_level <- function(income = NULL, lang = "en") {
 #' @param lang (`character(1)`)\cr
 #'   Language to query. Default `"en"`.
 #' @returns A `data.frame()` with the available sources. The columns are:
-#'   \item{id}{The source ID.}
-#'   \item{last_updated}{The date the source was last updated.}
-#'   \item{name}{The source name.}
-#'   \item{code}{The source code.}
-#'   \item{description}{The source description.}
-#'   \item{url}{The source URL.}
-#'   \item{data_availability}{Whether the source has data available.}
-#'   \item{metadata_availability}{Whether the source has metadata available.}
-#'   \item{concepts}{The concepts associated with the source.}
+#' * `id`: The source ID.
+#' * `last_updated`: The date the source was last updated.
+#' * `name`: The source name.
+#' * `code`: The source code.
+#' * `description`: The source description.
+#' * `url`: The source URL.
+#' * `data_availability`: Whether the source has data available.
+#' * `metadata_availability`: Whether the source has metadata available.
+#' * `concepts`: The concepts associated with the source.
 #' @source <https://api.worldbank.org/v2/sources>
 #' @family indicators data
 #' @export
@@ -148,9 +148,9 @@ wb_source <- function(source = NULL, lang = "en") {
 #' @param lang (`character(1)`)\cr
 #'   Language to query. Default `"en"`.
 #' @returns A `data.frame()` with the available topics. The columns are:
-#'   \item{id}{The topic ID.}
-#'   \item{value}{The topic value.}
-#'   \item{source_note}{The source note.}
+#' * `id`: The topic ID.
+#' * `value`: The topic value.
+#' * `source_note`: The source note.
 #' @source <https://api.worldbank.org/v2/topics>
 #' @family indicators data
 #' @export
@@ -183,10 +183,10 @@ wb_topic <- function(topic = NULL, lang = "en") {
 #' @param lang (`character(1)`)\cr
 #'   Language to query. Default `"en"`.
 #' @returns A `data.frame()` with the available regions. The columns are:
-#'   \item{id}{The region ID.}
-#'   \item{code}{The region code.}
-#'   \item{iso2code}{The ISO 2 code of the region.}
-#'   \item{name}{The region name.}
+#' * `id`: The region ID.
+#' * `code`: The region code.
+#' * `iso2code`: The ISO 2 code of the region.
+#' * `name`: The region name.
 #' @source <https://api.worldbank.org/v2/region>
 #' @family indicators data
 #' @export
@@ -224,24 +224,24 @@ wb_region <- function(region = NULL, lang = "en") {
 #' @param lang (`character(1)`)\cr
 #'   Language to query. Default `"en"`.
 #' @returns A `data.frame()` with the available countries. The columns are:
-#'   \item{country_id}{The country ID.}
-#'   \item{country_code}{The country code.}
-#'   \item{country_name}{The country name.}
-#'   \item{region_id}{The region ID.}
-#'   \item{region_code}{The region code.}
-#'   \item{region_value}{The region value.}
-#'   \item{admin_region_id}{The admin region ID.}
-#'   \item{admin_region_code}{The admin region code.}
-#'   \item{admin_region_value}{The admin region value.}
-#'   \item{income_level_id}{The income level ID.}
-#'   \item{income_level_code}{The income level code.}
-#'   \item{income_level_value}{The income level value.}
-#'   \item{lending_type_id}{The lending type ID.}
-#'   \item{lending_type_code}{The lending type code.}
-#'   \item{lending_type_value}{The lending type value.}
-#'   \item{capital_city}{The capital city.}
-#'   \item{longitude}{The longitude.}
-#'   \item{latitude}{The latitude.}
+#' * `country_id`: The country ID.
+#' * `country_code`: The country code.
+#' * `country_name`: The country name.
+#' * `region_id`: The region ID.
+#' * `region_code`: The region code.
+#' * `region_value`: The region value.
+#' * `admin_region_id`: The admin region ID.
+#' * `admin_region_code`: The admin region code.
+#' * `admin_region_value`: The admin region value.
+#' * `income_level_id`: The income level ID.
+#' * `income_level_code`: The income level code.
+#' * `income_level_value`: The income level value.
+#' * `lending_type_id`: The lending type ID.
+#' * `lending_type_code`: The lending type code.
+#' * `lending_type_value`: The lending type value.
+#' * `capital_city`: The capital city.
+#' * `longitude`: The longitude.
+#' * `latitude`: The latitude.
 #' @source <https://api.worldbank.org/v2/country>
 #' @family indicators data
 #' @export
@@ -294,15 +294,15 @@ wb_country <- function(country = NULL, lang = "en") {
 #' @param lang (`character(1)`)\cr
 #'   Language to query. Default `"en"`.
 #' @returns A `data.frame()` with the available indicators. The columns are:
-#'   \item{id}{The indicator ID.}
-#'   \item{name}{The indicator name.}
-#'   \item{unit}{The indicator unit.}
-#'   \item{source_id}{The source ID.}
-#'   \item{source_value}{The source value.}
-#'   \item{source_note}{The source note.}
-#'   \item{source_organization}{The source organization.}
-#'   \item{topic_id}{The topic ID.}
-#'   \item{topic_value}{The topic value.}
+#' * `id`: The indicator ID.
+#' * `name`: The indicator name.
+#' * `unit`: The indicator unit.
+#' * `source_id`: The source ID.
+#' * `source_value`: The source value.
+#' * `source_note`: The source note.
+#' * `source_organization`: The source organization.
+#' * `topic_id`: The topic ID.
+#' * `topic_value`: The topic value.
 #' @source <https://api.worldbank.org/v2/indicator>
 #' @family indicators data
 #' @export
@@ -364,16 +364,16 @@ wb_indicator <- function(indicator = NULL, lang = "en") {
 #'   End date to query, in the same format as start_date. Default `NULL`.
 #' @returns A `data.frame()` with the available country indicators.
 #'   The columns are:
-#'   \item{date}{The date}
-#'   \item{indicator_id}{The indicator ID.}
-#'   \item{indicator_name}{The indicator name.}
-#'   \item{country_id}{The country ID.}
-#'   \item{country_name}{The country name.}
-#'   \item{country_code}{The country code.}
-#'   \item{value}{The indicator value.}
-#'   \item{unit}{The indicator unit.}
-#'   \item{obs_status}{The observation status.}
-#'   \item{decimal}{The decimal.}
+#' * `date`: The date
+#' * `indicator_id`: The indicator ID.
+#' * `indicator_name`: The indicator name.
+#' * `country_id`: The country ID.
+#' * `country_name`: The country name.
+#' * `country_code`: The country code.
+#' * `value`: The indicator value.
+#' * `unit`: The indicator unit.
+#' * `obs_status`: The observation status.
+#' * `decimal`: The decimal.
 #' @source <https://api.worldbank.org/v2/country/{country}/indicator/{indicator}>
 #' @export
 #' @examplesIf httr2::is_online()

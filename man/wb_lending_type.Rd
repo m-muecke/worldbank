@@ -18,9 +18,11 @@ Language to query. Default \code{"en"}.}
 }
 \value{
 A \code{data.frame()} with the available lending types. The columns are:
-\item{id}{The lending type ID.}
-\item{iso2code}{The ISO 2 code of the lending type.}
-\item{value}{The lending type value.}
+\itemize{
+\item \code{id}: The lending type ID.
+\item \code{iso2code}: The ISO 2 code of the lending type.
+\item \code{value}: The lending type value.
+}
 }
 \description{
 List all lending types supported by the World Bank API.

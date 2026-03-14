@@ -18,9 +18,11 @@ Language to query. Default \code{"en"}.}
 }
 \value{
 A \code{data.frame()} with the available topics. The columns are:
-\item{id}{The topic ID.}
-\item{value}{The topic value.}
-\item{source_note}{The source note.}
+\itemize{
+\item \code{id}: The topic ID.
+\item \code{value}: The topic value.
+\item \code{source_note}: The source note.
+}
 }
 \description{
 List all topics supported by the World Bank API.
