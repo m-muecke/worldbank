@@ -81,32 +81,23 @@ wb_project <- function(
 }
 
 wb_projects_api <- function(..., per_page = 1000L) {
-  json <- request("https://search.worldbank.org/api/v2/projects") |>
+  req <- request("https://search.worldbank.org/api/v2/projects") |>
     req_user_agent("worldbank (https://m-muecke.github.io/worldbank)") |>
     req_url_query(..., format = "json", rows = per_page) |>
-    req_wb_cache() |>
-    req_perform() |>
-    resp_body_json()
+    req_wb_cache()
 
-  total <- as.integer(json$total)
-  projects <- json$projects
-  if (total <= per_page) {
-    return(projects)
-  }
+  resps <- req_perform_iterative(
+    req,
+    next_req = iterate_with_offset(
+      "os",
+      start = 0L,
+      offset = per_page,
+      resp_complete = \(resp) length(resp_body_json(resp)$projects) == 0L
+    ),
+    max_reqs = Inf
+  )
 
-  offsets <- seq(per_page, total - 1L, by = per_page)
-  reqs <- map(offsets, function(os) {
-    request("https://search.worldbank.org/api/v2/projects") |>
-      req_user_agent("worldbank (https://m-muecke.github.io/worldbank)") |>
-      req_url_query(..., format = "json", rows = per_page, os = os) |>
-      req_wb_cache()
-  })
-  resps <- req_perform_sequential(reqs)
-  for (resp in resps) {
-    more <- resp_body_json(resp)$projects
-    projects <- c(projects, more)
-  }
-  projects
+  resps_data(resps, \(resp) resp_body_json(resp)$projects)
 }
 
 parse_projects <- function(data) {
@@ -142,9 +133,9 @@ parse_projects <- function(data) {
     }),
     country = map_chr(data, \(x) x$countryshortname %||% NA_character_),
     region = map_chr(data, \(x) x$regionname %||% NA_character_),
-    total_commitment = map_dbl(data, \(x) as.numeric(x$curr_total_commitment %||% NA)),
-    ibrd_commitment = map_dbl(data, \(x) as.numeric(x$curr_ibrd_commitment %||% NA)),
-    ida_commitment = map_dbl(data, \(x) as.numeric(x$curr_ida_commitment %||% NA)),
+    total_commitment = as.numeric(map_chr(data, \(x) x$curr_total_commitment %||% NA_character_)),
+    ibrd_commitment = as.numeric(map_chr(data, \(x) x$curr_ibrd_commitment %||% NA_character_)),
+    ida_commitment = as.numeric(map_chr(data, \(x) x$curr_ida_commitment %||% NA_character_)),
     lending_instrument = map_chr(data, \(x) x$lendinginstr %||% NA_character_),
     borrower = map_chr(data, \(x) x$borrower %||% NA_character_),
     implementing_agency = map_chr(data, \(x) x$impagency %||% NA_character_),
