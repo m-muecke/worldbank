@@ -2,6 +2,11 @@
 
 ## worldbank (development version)
 
+- [`wb_cache_clear()`](https://m-muecke.github.io/worldbank/reference/cache.md)
+  replaces
+  [`wb_cache_delete()`](https://m-muecke.github.io/worldbank/reference/cache.md),
+  which is now deprecated.
+
 ## worldbank 0.7.1
 
 CRAN release: 2025-12-06

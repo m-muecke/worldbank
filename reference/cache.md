@@ -1,12 +1,14 @@
 # Get or manage the worldbank API cache
 
 `wb_cache_dir()` returns the path where cached API responses are stored.
-`wb_cache_delete()` clears all cached responses.
+`wb_cache_clear()` clears all cached responses.
 
 ## Usage
 
 ``` r
 wb_cache_dir()
+
+wb_cache_clear()
 
 wb_cache_delete()
 ```
@@ -29,6 +31,6 @@ options(worldbank.cache = TRUE)
 wb_cache_dir()
 
 # clear the cache
-wb_cache_delete()
+wb_cache_clear()
 } # }
 ```

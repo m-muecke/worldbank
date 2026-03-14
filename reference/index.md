@@ -50,5 +50,6 @@
 ### Cache Management
 
 - [`wb_cache_dir()`](https://m-muecke.github.io/worldbank/reference/cache.md)
+  [`wb_cache_clear()`](https://m-muecke.github.io/worldbank/reference/cache.md)
   [`wb_cache_delete()`](https://m-muecke.github.io/worldbank/reference/cache.md)
   : Get or manage the worldbank API cache
