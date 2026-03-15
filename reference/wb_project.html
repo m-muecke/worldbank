@@ -125,11 +125,127 @@ Board approval end date in <code>"YYYY-MM-DD"</code> format. Default <code>NULL<
     <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="co"># \donttest{</span></span></span>
 <span class="r-in"><span><span class="co"># active projects in Brazil related to education</span></span></span>
 <span class="r-in"><span><span class="fu">wb_project</span><span class="op">(</span>country <span class="op">=</span> <span class="st">"BR"</span>, status <span class="op">=</span> <span class="st">"Active"</span>, search <span class="op">=</span> <span class="st">"education"</span><span class="op">)</span></span></span>
-<span class="r-err co"><span class="r-pr">#&gt;</span> <span class="error">Error in req_perform(req, path = get_path(i), mock = mock):</span> HTTP 500 Internal Server Error.</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>              id</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> P163868 P163868</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> P178993 P178993</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> P178563 P178563</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> P172605 P172605</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> P179088 P179088</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> P177070 P177070</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> P179046 P179046</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> P178663 P178663</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> P073882 P073882</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> P179365 P179365</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> P153012 P153012</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> P172497 P172497</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                                                                   project_name</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> P163868                  Support to Upper Secondary Reform in Brazil Operation</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> P178993     Mato Grosso Resilient, Inclusive, and Sustainable Learning Project</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> P178563            RECOVERING LEARNING LOSSES FROM COVID-19 PANDEMIC IN BRAZIL</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> P172605               Salvador Social Multi-Sector Service Delivery Project II</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> P179088               Progestão Tocantins: Public Sector Management Efficiency</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> P177070                 Progestão Alagoas: Public Sector Management Efficiency</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> P179046                    Progestão Acre: Public Sector Management Efficiency</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> P178663                   Progestão Piauí: Public Sector Management Efficiency</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> P073882                         RF 2nd Amazon Fire Prevention and Mobilization</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> P179365 Brazil: Support to New Bolsa Familia Conditional Cash Transfer Program</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> P153012                        Fortaleza Sustainable Urban Development Project</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> P172497                 Sustainable Multiple Use Landscape Consortia in Brazil</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>         status approval_date closing_date country_code country</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> P163868 Active    2017-12-14   2024-12-31           BR  Brazil</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> P178993 Active    2023-10-26   2028-12-31           BR  Brazil</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> P178563 Active    2022-05-12   2027-12-31           BR  Brazil</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> P172605 Active    2020-09-22   2025-12-30           BR  Brazil</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> P179088 Active    2023-07-24   2028-12-29           BR  Brazil</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> P177070 Active    2022-07-21   2028-03-31           BR  Brazil</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> P179046 Active    2023-07-24   2028-12-29           BR  Brazil</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> P178663 Active    2023-10-03   2029-06-29           BR  Brazil</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> P073882 Active          &lt;NA&gt;   2004-09-30           BR  Brazil</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> P179365 Active    2023-12-06   2026-04-30           BR  Brazil</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> P153012 Active    2017-04-28   2025-03-31           BR  Brazil</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> P172497 Active          &lt;NA&gt;   2027-11-30           BR  Brazil</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                              region total_commitment ibrd_commitment</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> P163868 Latin America and Caribbean        250.00000           250.0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> P178993 Latin America and Caribbean        100.00000           100.0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> P178563 Latin America and Caribbean        250.00000           250.0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> P172605 Latin America and Caribbean        125.00000           125.0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> P179088 Latin America and Caribbean         50.00000            50.0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> P177070 Latin America and Caribbean         40.00000            40.0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> P179046 Latin America and Caribbean         40.00000            40.0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> P178663 Latin America and Caribbean         50.00000            50.0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> P073882 Latin America and Caribbean          1.10000             0.0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> P179365 Latin America and Caribbean        300.00000           300.0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> P153012 Latin America and Caribbean         73.30000            73.3</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> P172497 Latin America and Caribbean         24.57798             0.0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>         ida_commitment            lending_instrument</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> P163868              0 Program-for-Results Financing</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> P178993              0  Investment Project Financing</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> P178563              0 Program-for-Results Financing</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> P172605              0  Investment Project Financing</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> P179088              0  Investment Project Financing</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> P177070              0  Investment Project Financing</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> P179046              0  Investment Project Financing</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> P178663              0  Investment Project Financing</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> P073882              0                          &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> P179365              0  Investment Project Financing</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> P153012              0  Investment Project Financing</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> P172497              0  Investment Project Financing</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                                                                          borrower</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> P163868                              Ministry of Economy (Minist�rio da Economia)</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> P178993                                                      STATE OF MATO GROSSO</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> P178563                                         THE FEDERATIVE REPUBLIC OF BRAZIL</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> P172605                                                  Municipality of Salvador</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> P179088                                    State Secretariat of Planning (SEPLAN)</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> P177070 State of Alagoas, with the guarantee of the Federative Republic of Brazil</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> P179046                                                             State of Acre</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> P178663                                                            State of Piaui</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> P073882                                                                      &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> P179365                                             Federative Republic of Brazil</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> P153012                                                 Municipality of Fortaleza</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> P172497                                                                      IICA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                                                                                               implementing_agency</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> P163868                                                            Ministry of Education (Minist�rio da Educa��o)</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> P178993                                                                    SECRETARIAT OF EDUCATION - MATO GROSSO</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> P178563                                                                                     MINISTRY OF EDUCATION</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> P172605                                                                                                Casa Civil</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> P179088                                                                                                       UGP</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> P177070                                                                 Secretariat of Finance - State of Alagoas</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> P179046                                                                             State Secretariat of Planning</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> P178663                                                                           Secretariat of Finance of Piaui</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> P073882                                                                                                      &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> P179365                                                                                   Ministry of Citizenship</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> P153012 Secretaria Municipal de Urbanismo e Meio Ambiente (SEUMA), Secretaria Municipal de Infraestrutura (SEINF)</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> P172497             Minist�rio do Meio Ambiente (MMA), Minist�rio da Agricultura, Pecu�ria e Abastecimento (MAPA)</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                                                                                  url</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> P163868 https://projects.worldbank.org/en/projects-operations/project-detail/P163868</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> P178993 https://projects.worldbank.org/en/projects-operations/project-detail/P178993</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> P178563 https://projects.worldbank.org/en/projects-operations/project-detail/P178563</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> P172605 https://projects.worldbank.org/en/projects-operations/project-detail/P172605</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> P179088 https://projects.worldbank.org/en/projects-operations/project-detail/P179088</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> P177070 https://projects.worldbank.org/en/projects-operations/project-detail/P177070</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> P179046 https://projects.worldbank.org/en/projects-operations/project-detail/P179046</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> P178663 https://projects.worldbank.org/en/projects-operations/project-detail/P178663</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> P073882 https://projects.worldbank.org/en/projects-operations/project-detail/P073882</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> P179365 https://projects.worldbank.org/en/projects-operations/project-detail/P179365</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> P153012 https://projects.worldbank.org/en/projects-operations/project-detail/P153012</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> P172497 https://projects.worldbank.org/en/projects-operations/project-detail/P172497</span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co"># look up a specific project</span></span></span>
 <span class="r-in"><span><span class="fu">wb_project</span><span class="op">(</span>id <span class="op">=</span> <span class="st">"P163868"</span><span class="op">)</span></span></span>
-<span class="r-err co"><span class="r-pr">#&gt;</span> <span class="error">Error in req_perform(req, path = get_path(i), mock = mock):</span> HTTP 500 Internal Server Error.</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>              id                                          project_name status</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> P163868 P163868 Support to Upper Secondary Reform in Brazil Operation Active</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>         approval_date closing_date country_code country</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> P163868    2017-12-14   2024-12-31           BR  Brazil</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                              region total_commitment ibrd_commitment</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> P163868 Latin America and Caribbean              250             250</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>         ida_commitment            lending_instrument</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> P163868              0 Program-for-Results Financing</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                                             borrower</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> P163868 Ministry of Economy (Minist�rio da Economia)</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                                    implementing_agency</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> P163868 Ministry of Education (Minist�rio da Educa��o)</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                                                                                  url</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> P163868 https://projects.worldbank.org/en/projects-operations/project-detail/P163868</span>
 <span class="r-in"><span><span class="co"># }</span></span></span>
 </code></pre></div>
     </div>
