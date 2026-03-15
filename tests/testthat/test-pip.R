@@ -8,6 +8,10 @@ test_that("pip_data basic checks", {
   expect_gt(nrow(res), 0L)
 })
 
+test_that("pip_data nowcast requires fill_gaps", {
+  expect_error(pip_data(nowcast = TRUE), "fill_gaps")
+})
+
 test_that("pip_cp basic checks", {
   skip_if_offline()
   skip_on_cran()

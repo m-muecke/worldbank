@@ -12,6 +12,8 @@
 #'   specified. Default `NULL`.
 #' @param fill_gaps (`logical(1)`)\cr
 #'   Whether to fill gaps in the data. Default `FALSE`.
+#' @param nowcast (`logical(1)`)\cr
+#'   Whether to include nowcast estimates. Requires `fill_gaps = TRUE`. Default `FALSE`.
 #' @param welfare_type (`character(1)`)\cr
 #'   Type of welfare measure to be used. Default `"all"`.
 #' @param reporting_level (`character(1)`)\cr
@@ -39,6 +41,7 @@ pip_data <- function(
   povline = 2.15,
   popshare = NULL,
   fill_gaps = FALSE,
+  nowcast = FALSE,
   welfare_type = c("all", "consumption", "income"),
   reporting_level = c("all", "national", "rural", "urban"),
   additional_ind = FALSE,
@@ -58,11 +61,15 @@ pip_data <- function(
     is.null(country) || is_character(country) && all(nchar(country) == 3L),
     is.null(year) || is_character(year) && all(grepl("[0-9]{4}", year)),
     is_flag(fill_gaps),
+    is_flag(nowcast),
     is_string(release_version, pattern = "[0-9]{8}", null_ok = TRUE),
     is_flag(additional_ind),
     is_string(ppp_version, pattern = "[0-9]{4}", null_ok = TRUE),
     is_string(version, null_ok = TRUE)
   )
+  if (nowcast && !fill_gaps) {
+    stop("`nowcast = TRUE` requires `fill_gaps = TRUE`.", call. = FALSE)
+  }
   res <- pip(
     resource = "pip",
     country = country,
@@ -70,6 +77,7 @@ pip_data <- function(
     povline = povline,
     popshare = popshare,
     fill_gaps = fill_gaps,
+    nowcast = nowcast,
     welfare_type = welfare_type,
     reporting_level = reporting_level,
     additional_ind = additional_ind,

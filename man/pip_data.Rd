@@ -13,6 +13,7 @@ pip_data(
   povline = 2.15,
   popshare = NULL,
   fill_gaps = FALSE,
+  nowcast = FALSE,
   welfare_type = c("all", "consumption", "income"),
   reporting_level = c("all", "national", "rural", "urban"),
   additional_ind = FALSE,
@@ -38,6 +39,9 @@ specified. Default \code{NULL}.}
 
 \item{fill_gaps}{(\code{logical(1)})\cr
 Whether to fill gaps in the data. Default \code{FALSE}.}
+
+\item{nowcast}{(\code{logical(1)})\cr
+Whether to include nowcast estimates. Requires \code{fill_gaps = TRUE}. Default \code{FALSE}.}
 
 \item{welfare_type}{(\code{character(1)})\cr
 Type of welfare measure to be used. Default \code{"all"}.}
