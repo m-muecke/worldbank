@@ -1,15 +1,14 @@
 Package: worldbank
-Title: Client for World Bank's 'Indicators' and 'Poverty and Inequality
-    Platform (PIP)' APIs
+Title: Client for the 'World Bank' APIs
 Version: 0.7.1.9000
 Authors@R:
     person("Maximilian", "Mücke", , "muecke.maximilian@gmail.com", role = c("aut", "cre"),
            comment = c(ORCID = "0009-0000-9432-9795"))
-Description: Download and search data from the 'World Bank Indicators
-    API', which provides access to nearly 16,000 time series indicators.
-    See
-    <https://datahelpdesk.worldbank.org/knowledgebase/articles/889392-about-the-indicators-api-documentation>
-    for further details about the API.
+Description: Download and search data from the 'World Bank' APIs,
+    including the 'Indicators' API, the 'Poverty and Inequality Platform
+    (PIP)' API, the 'Finances One' API, and the 'Projects' API. See
+    <https://datahelpdesk.worldbank.org/knowledgebase/articles/889386-developer-information-overview>
+    for further details.
 License: MIT + file LICENSE
 URL: https://m-muecke.github.io/worldbank/,
     https://github.com/m-muecke/worldbank
