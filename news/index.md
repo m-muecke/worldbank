@@ -2,13 +2,20 @@
 
 ## worldbank (development version)
 
+- [`wb_data()`](https://m-muecke.github.io/worldbank/reference/wb_data.md)
+  gains `mrv` and `gapfill` parameters to query the most recent values
+  and forward-fill missing data.
+- [`wb_project()`](https://m-muecke.github.io/worldbank/reference/wb_project.md)
+  queries World Bank project data with support for filtering by country,
+  status, region, date range, and free-text search.
+- [`pip_cp()`](https://m-muecke.github.io/worldbank/reference/pip_cp.md)
+  returns country profile data from the PIP API.
+- [`pip_data()`](https://m-muecke.github.io/worldbank/reference/pip_data.md)
+  gains a `nowcast` parameter to include nowcast estimates.
 - [`wb_cache_clear()`](https://m-muecke.github.io/worldbank/reference/cache.md)
   replaces
   [`wb_cache_delete()`](https://m-muecke.github.io/worldbank/reference/cache.md),
   which is now deprecated.
-- [`wb_project()`](https://m-muecke.github.io/worldbank/reference/wb_project.md)
-  queries World Bank project data with support for filtering by country,
-  status, region, date range, and free-text search.
 
 ## worldbank 0.7.1
 
