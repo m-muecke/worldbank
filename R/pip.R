@@ -59,7 +59,7 @@ pip_data <- function(
   }
   stopifnot(
     is_character(country, null_ok = TRUE, n_chars = 3L),
-    is.null(year) || is_character(year) && all(grepl("[0-9]{4}", year)),
+    is_character(year, n_chars = 4L, pattern = "[0-9]{4}", null_ok = TRUE),
     is_flag(fill_gaps),
     is_flag(nowcast),
     is_string(release_version, pattern = "[0-9]{8}", null_ok = TRUE),
@@ -171,7 +171,7 @@ pip_group <- function(
   }
   stopifnot(
     is_character(country, null_ok = TRUE, n_chars = 3L),
-    is.null(year) || is_character(year) && all(grepl("[0-9]{4}", year)),
+    is_character(year, n_chars = 4L, pattern = "[0-9]{4}", null_ok = TRUE),
     is_flag(fill_gaps),
     is_string(release_version, pattern = "[0-9]{8}", null_ok = TRUE),
     is_flag(additional_ind),
