@@ -258,6 +258,14 @@ test_that("wb_country_indicator input validation works", {
   expect_error(wb_country_indicator(lang = 1L))
 })
 
+test_that("wb_data mrv and gapfill validation works", {
+  expect_error(wb_data(mrv = 3, start_date = 2020), "mrv")
+  expect_error(wb_data(mrv = 3, end_date = 2020), "mrv")
+  expect_error(wb_data(gapfill = TRUE), "gapfill")
+  expect_error(wb_data(mrv = -1))
+  expect_error(wb_data(mrv = "a"))
+})
+
 test_that("error parsing works", {
   skip_if_offline()
   skip_on_cran()

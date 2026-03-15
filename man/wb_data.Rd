@@ -13,7 +13,9 @@ wb_data(
   country = NULL,
   lang = "en",
   start_date = NULL,
-  end_date = NULL
+  end_date = NULL,
+  mrv = NULL,
+  gapfill = FALSE
 )
 
 wb_country_indicator(
@@ -21,7 +23,9 @@ wb_country_indicator(
   country = NULL,
   lang = "en",
   start_date = NULL,
-  end_date = NULL
+  end_date = NULL,
+  mrv = NULL,
+  gapfill = FALSE
 )
 }
 \arguments{
@@ -44,6 +48,13 @@ Start date to query. Default \code{NULL}. Supported formats:
 
 \item{end_date}{(\code{NULL} | \code{character(1)} | \code{integer(1)})\cr
 End date to query, in the same format as start_date. Default \code{NULL}.}
+
+\item{mrv}{(\code{NULL} | \code{integer(1)})\cr
+Most recent values to return. An alternative to \code{start_date}/\code{end_date}. Default \code{NULL}.}
+
+\item{gapfill}{(\code{logical(1)})\cr
+Whether to fill missing values by carrying forward the last available value. Only used when
+\code{mrv} is set. Default \code{FALSE}.}
 }
 \value{
 A \code{data.frame()} with the available country indicators.

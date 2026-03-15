@@ -360,6 +360,11 @@ wb_indicator <- function(indicator = NULL, lang = "en") {
 #'   * YYYYM\[1-12\] for monthly data (e.g. `"2020M02"`)
 #' @param end_date (`NULL` | `character(1)` | `integer(1)`)\cr
 #'   End date to query, in the same format as start_date. Default `NULL`.
+#' @param mrv (`NULL` | `integer(1)`)\cr
+#'   Most recent values to return. An alternative to `start_date`/`end_date`. Default `NULL`.
+#' @param gapfill (`logical(1)`)\cr
+#'   Whether to fill missing values by carrying forward the last available value. Only used when
+#'   `mrv` is set. Default `FALSE`.
 #' @returns A `data.frame()` with the available country indicators.
 #'   The columns are:
 #' * `date`: The date
@@ -393,30 +398,47 @@ wb_data <- function(
   country = NULL,
   lang = "en",
   start_date = NULL,
-  end_date = NULL
+  end_date = NULL,
+  mrv = NULL,
+  gapfill = FALSE
 ) {
   stopifnot(
     is_character(indicator),
     is_character(country, null_ok = TRUE),
     nchar(country) %in% 2:3,
     is_dateish(start_date, null_ok = TRUE),
-    is_dateish(end_date, null_ok = TRUE)
+    is_dateish(end_date, null_ok = TRUE),
+    is_count(mrv, null_ok = TRUE),
+    is_flag(gapfill)
   )
   has_start_date <- !is.null(start_date)
   has_end_date <- !is.null(end_date)
   if (has_start_date && has_end_date && start_date > end_date) {
     stop("`start_date` must be earlier than `end_date`.", call. = FALSE)
   }
+  if (!is.null(mrv) && (has_start_date || has_end_date)) {
+    stop("`mrv` cannot be used together with `start_date`/`end_date`.", call. = FALSE)
+  }
+  if (gapfill && is.null(mrv)) {
+    stop("`gapfill = TRUE` requires `mrv` to be set.", call. = FALSE)
+  }
   indicator <- toupper(indicator)
   country <- tolower(format_param(country))
   date <- format_date(start_date, end_date)
+  gapfill <- if (gapfill) "Y" else NULL
 
   resource <- sprintf("country/%s/indicator/%s", country, indicator)
   if (length(resource) == 1L) {
-    res <- worldbank(resource = resource, lang = lang, date = date)
+    res <- worldbank(resource = resource, lang = lang, date = date, mrv = mrv, gapfill = gapfill)
     res <- parse_country_indicator(res)
   } else {
-    res <- worldbank_seq(resource = resource, lang = lang, date = date)
+    res <- worldbank_seq(
+      resource = resource,
+      lang = lang,
+      date = date,
+      mrv = mrv,
+      gapfill = gapfill
+    )
     res <- map(res, parse_country_indicator)
     res <- do.call(rbind, res)
   }
