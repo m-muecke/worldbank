@@ -1,6 +1,6 @@
 test_that("wb_project", {
   local_mocked_bindings(
-    wb_projects_api = function(...) readRDS(test_path("fixtures", "wb-project.rds"))
+    projects = function(...) readRDS(test_path("fixtures", "wb-project.rds"))
   )
   actual <- wb_project(country = "BR", status = "Active")
   expect_s3_class(actual, "data.frame")

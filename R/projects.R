@@ -65,10 +65,10 @@ wb_project <- function(
   )
 
   if (!is.null(id)) {
-    data <- wb_projects_api(id = id)
+    data <- projects(id = id)
   } else {
     country_param <- if (!is.null(country)) paste0(country, collapse = ";") else NULL
-    data <- wb_projects_api(
+    data <- projects(
       countrycode_exact = country_param,
       status = status,
       regionname = region,
@@ -80,7 +80,7 @@ wb_project <- function(
   parse_projects(data)
 }
 
-wb_projects_api <- function(..., per_page = 1000L) {
+projects <- function(..., per_page = 1000L) {
   req <- request("https://search.worldbank.org/api/v2/projects") |>
     req_user_agent(wb_user_agent()) |>
     req_url_query(..., format = "json", rows = per_page) |>
