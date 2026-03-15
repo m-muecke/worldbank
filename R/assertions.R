@@ -5,18 +5,25 @@ is_flag <- function(x, null_ok = FALSE) {
   is.logical(x) && length(x) == 1L && !is.na(x)
 }
 
-is_character <- function(x, null_ok = FALSE) {
+is_character <- function(x, null_ok = FALSE, n_chars = NULL) {
   if (null_ok && is.null(x)) {
     return(TRUE)
   }
-  is.character(x) && !anyNA(x) && length(x) > 0L
+  ok <- is.character(x) && !anyNA(x) && length(x) > 0L
+  if (ok && !is.null(n_chars)) {
+    ok <- all(nchar(x) %in% n_chars)
+  }
+  ok
 }
 
-is_string <- function(x, ..., pattern = NULL, null_ok = FALSE) {
+is_string <- function(x, ..., pattern = NULL, null_ok = FALSE, n_chars = NULL) {
   if (null_ok && is.null(x)) {
     return(TRUE)
   }
   ok <- is.character(x) && length(x) == 1L && !is.na(x)
+  if (ok && !is.null(n_chars)) {
+    ok <- nchar(x) %in% n_chars
+  }
   if (ok && !is.null(pattern)) {
     ok <- grepl(pattern, x, ...)
   }

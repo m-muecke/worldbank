@@ -58,7 +58,7 @@ pip_data <- function(
     ppp_version <- as.character(ppp_version)
   }
   stopifnot(
-    is.null(country) || is_character(country) && all(nchar(country) == 3L),
+    is_character(country, null_ok = TRUE, n_chars = 3L),
     is.null(year) || is_character(year) && all(grepl("[0-9]{4}", year)),
     is_flag(fill_gaps),
     is_flag(nowcast),
@@ -114,7 +114,7 @@ pip_cp <- function(
     ppp_version <- as.character(ppp_version)
   }
   stopifnot(
-    is.null(country) || is_character(country) && all(nchar(country) == 3L),
+    is_character(country, null_ok = TRUE, n_chars = 3L),
     is_string(release_version, pattern = "[0-9]{8}", null_ok = TRUE),
     is_string(ppp_version, pattern = "[0-9]{4}", null_ok = TRUE),
     is_string(version, null_ok = TRUE)
@@ -170,7 +170,7 @@ pip_group <- function(
     ppp_version <- as.character(ppp_version)
   }
   stopifnot(
-    is.null(country) || is_character(country) && all(nchar(country) == 3L),
+    is_character(country, null_ok = TRUE, n_chars = 3L),
     is.null(year) || is_character(year) && all(grepl("[0-9]{4}", year)),
     is_flag(fill_gaps),
     is_string(release_version, pattern = "[0-9]{8}", null_ok = TRUE),

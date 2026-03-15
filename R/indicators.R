@@ -44,7 +44,7 @@ wb_language <- function() {
 #' wb_lending_type()
 #' }
 wb_lending_type <- function(type = NULL, lang = "en") {
-  stopifnot(is_character(type, null_ok = TRUE), nchar(type) == 3L)
+  stopifnot(is_character(type, null_ok = TRUE, n_chars = 3L))
   type <- format_param(type)
 
   resource <- sprintf("lendingType/%s", type)
@@ -78,7 +78,7 @@ wb_lending_type <- function(type = NULL, lang = "en") {
 #' wb_income_level()
 #' }
 wb_income_level <- function(income = NULL, lang = "en") {
-  stopifnot(is_character(income, null_ok = TRUE), nchar(income) == 3L)
+  stopifnot(is_character(income, null_ok = TRUE, n_chars = 3L))
   income <- format_param(income)
 
   resource <- sprintf("incomeLevel/%s", income)
@@ -198,8 +198,7 @@ wb_topic <- function(topic = NULL, lang = "en") {
 wb_region <- function(region = NULL, lang = "en") {
   stopifnot(
     is_character(region, null_ok = TRUE),
-    is_string(lang),
-    nchar(lang) == 2L
+    is_string(lang, n_chars = 2L)
   )
   region <- format_param(region)
 
@@ -252,10 +251,8 @@ wb_region <- function(region = NULL, lang = "en") {
 #' }
 wb_country <- function(country = NULL, lang = "en") {
   stopifnot(
-    is_character(country, null_ok = TRUE),
-    nchar(country) %in% 2:3,
-    is_string(lang),
-    nchar(lang) == 2L
+    is_character(country, null_ok = TRUE, n_chars = 2:3),
+    is_string(lang, n_chars = 2L)
   )
   country <- tolower(format_param(country))
 
@@ -404,8 +401,7 @@ wb_data <- function(
 ) {
   stopifnot(
     is_character(indicator),
-    is_character(country, null_ok = TRUE),
-    nchar(country) %in% 2:3,
+    is_character(country, null_ok = TRUE, n_chars = 2:3),
     is_dateish(start_date, null_ok = TRUE),
     is_dateish(end_date, null_ok = TRUE),
     is_count(mrv, null_ok = TRUE),
@@ -478,7 +474,7 @@ parse_country_indicator <- function(data) {
 }
 
 worldbank <- function(resource, ..., lang = NULL, per_page = 32500L) {
-  stopifnot(is_string(lang, null_ok = TRUE), nchar(lang) == 2L)
+  stopifnot(is_string(lang, null_ok = TRUE, n_chars = 2L))
   json <- request("https://api.worldbank.org/v2") |>
     req_user_agent(wb_user_agent()) |>
     req_url_path_append(lang, resource) |>
@@ -491,7 +487,7 @@ worldbank <- function(resource, ..., lang = NULL, per_page = 32500L) {
 }
 
 worldbank_seq <- function(resource, ..., lang = NULL, per_page = 32500L) {
-  stopifnot(is_string(lang, null_ok = TRUE), nchar(lang) == 2L)
+  stopifnot(is_string(lang, null_ok = TRUE, n_chars = 2L))
   req <- request("https://api.worldbank.org/v2") |>
     req_user_agent(wb_user_agent()) |>
     req_url_query(..., format = "json", per_page = per_page) |>
