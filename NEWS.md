@@ -1,7 +1,10 @@
 # worldbank (development version)
 
-* `wb_cache_clear()` replaces `wb_cache_delete()`, which is now deprecated.
+* `wb_data()` gains `mrv` and `gapfill` parameters to query the most recent values and forward-fill missing data.
 * `wb_project()` queries World Bank project data with support for filtering by country, status, region, date range, and free-text search.
+* `pip_cp()` returns country profile data from the PIP API.
+* `pip_data()` gains a `nowcast` parameter to include nowcast estimates.
+* `wb_cache_clear()` replaces `wb_cache_delete()`, which is now deprecated.
 
 # worldbank 0.7.1
 
