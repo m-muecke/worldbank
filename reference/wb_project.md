@@ -208,19 +208,6 @@ wb_project(country = "BR", status = "Active", search = "education")
 
 # look up a specific project
 wb_project(id = "P163868")
-#>              id                                          project_name status
-#> P163868 P163868 Support to Upper Secondary Reform in Brazil Operation Active
-#>         approval_date closing_date country_code country
-#> P163868    2017-12-14   2024-12-31           BR  Brazil
-#>                              region total_commitment ibrd_commitment
-#> P163868 Latin America and Caribbean              250             250
-#>         ida_commitment            lending_instrument
-#> P163868              0 Program-for-Results Financing
-#>                                             borrower
-#> P163868 Ministry of Economy (Minist�rio da Economia)
-#>                                    implementing_agency
-#> P163868 Ministry of Education (Minist�rio da Educa��o)
-#>                                                                                  url
-#> P163868 https://projects.worldbank.org/en/projects-operations/project-detail/P163868
+#> Error in req_perform(req, path = get_path(i), mock = mock): HTTP 500 Internal Server Error.
 # }
 ```

@@ -10,7 +10,9 @@ wb_data(
   country = NULL,
   lang = "en",
   start_date = NULL,
-  end_date = NULL
+  end_date = NULL,
+  mrv = NULL,
+  gapfill = FALSE
 )
 
 wb_country_indicator(
@@ -18,7 +20,9 @@ wb_country_indicator(
   country = NULL,
   lang = "en",
   start_date = NULL,
-  end_date = NULL
+  end_date = NULL,
+  mrv = NULL,
+  gapfill = FALSE
 )
 ```
 
@@ -59,6 +63,18 @@ wb_country_indicator(
 
   (`NULL` \| `character(1)` \| `integer(1)`)  
   End date to query, in the same format as start_date. Default `NULL`.
+
+- mrv:
+
+  (`NULL` \| `integer(1)`)  
+  Most recent values to return. An alternative to
+  `start_date`/`end_date`. Default `NULL`.
+
+- gapfill:
+
+  (`logical(1)`)  
+  Whether to fill missing values by carrying forward the last available
+  value. Only used when `mrv` is set. Default `FALSE`.
 
 ## Value
 
