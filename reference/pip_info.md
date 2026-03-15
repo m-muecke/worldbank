@@ -22,6 +22,7 @@ information.
 Other poverty and inequality statistics:
 [`pip_aux()`](https://m-muecke.github.io/worldbank/reference/pip_aux.md),
 [`pip_citation()`](https://m-muecke.github.io/worldbank/reference/pip_citation.md),
+[`pip_cp()`](https://m-muecke.github.io/worldbank/reference/pip_cp.md),
 [`pip_data()`](https://m-muecke.github.io/worldbank/reference/pip_data.md),
 [`pip_group()`](https://m-muecke.github.io/worldbank/reference/pip_group.md),
 [`pip_health_check()`](https://m-muecke.github.io/worldbank/reference/pip_health_check.md),
@@ -282,7 +283,7 @@ pip_info()
 #> 
 #> $server_time
 #> $server_time[[1]]
-#> [1] "2026-03-15 10:21:39"
+#> [1] "2026-03-15 11:08:45"
 #> 
 #> 
 # }

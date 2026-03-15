@@ -21,6 +21,7 @@ A `character(1)` with the health check message.
 Other poverty and inequality statistics:
 [`pip_aux()`](https://m-muecke.github.io/worldbank/reference/pip_aux.md),
 [`pip_citation()`](https://m-muecke.github.io/worldbank/reference/pip_citation.md),
+[`pip_cp()`](https://m-muecke.github.io/worldbank/reference/pip_cp.md),
 [`pip_data()`](https://m-muecke.github.io/worldbank/reference/pip_data.md),
 [`pip_group()`](https://m-muecke.github.io/worldbank/reference/pip_group.md),
 [`pip_info()`](https://m-muecke.github.io/worldbank/reference/pip_info.md),

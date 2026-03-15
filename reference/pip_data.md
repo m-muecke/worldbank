@@ -11,6 +11,7 @@ pip_data(
   povline = 2.15,
   popshare = NULL,
   fill_gaps = FALSE,
+  nowcast = FALSE,
   welfare_type = c("all", "consumption", "income"),
   reporting_level = c("all", "national", "rural", "urban"),
   additional_ind = FALSE,
@@ -56,6 +57,12 @@ pip_data(
   (`logical(1)`)  
   Whether to fill gaps in the data. Default `FALSE`.
 
+- nowcast:
+
+  (`logical(1)`)  
+  Whether to include nowcast estimates. Requires `fill_gaps = TRUE`.
+  Default `FALSE`.
+
 - welfare_type:
 
   (`character(1)`)  
@@ -96,6 +103,7 @@ requested statistics.
 Other poverty and inequality statistics:
 [`pip_aux()`](https://m-muecke.github.io/worldbank/reference/pip_aux.md),
 [`pip_citation()`](https://m-muecke.github.io/worldbank/reference/pip_citation.md),
+[`pip_cp()`](https://m-muecke.github.io/worldbank/reference/pip_cp.md),
 [`pip_group()`](https://m-muecke.github.io/worldbank/reference/pip_group.md),
 [`pip_health_check()`](https://m-muecke.github.io/worldbank/reference/pip_health_check.md),
 [`pip_info()`](https://m-muecke.github.io/worldbank/reference/pip_info.md),

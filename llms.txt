@@ -177,6 +177,8 @@ subset(gdp, date >= 1980) |>
 
 - [`pip_data()`](https://m-muecke.github.io/worldbank/reference/pip_data.md)
   : Return main poverty and inequality statistics
+- [`pip_cp()`](https://m-muecke.github.io/worldbank/reference/pip_cp.md)
+  : Return country profile data
 - [`pip_group()`](https://m-muecke.github.io/worldbank/reference/pip_group.md)
   : Return aggregation of PIP statistics
 - [`pip_versions()`](https://m-muecke.github.io/worldbank/reference/pip_versions.md)
