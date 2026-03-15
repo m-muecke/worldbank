@@ -405,6 +405,7 @@ pip <- function(resource, ..., format = c("json", "csv", "xml", "rds")) {
     req_url_path_append(resource) |>
     req_error(body = pip_error_body) |>
     req_url_query(format = format, ...) |>
+    req_wb_retry() |>
     req_wb_cache() |>
     req_perform()
 

@@ -4,6 +4,7 @@
 #' @importFrom httr2 req_error
 #' @importFrom httr2 req_perform
 #' @importFrom httr2 req_perform_iterative
+#' @importFrom httr2 req_retry
 #' @importFrom httr2 req_perform_sequential
 #' @importFrom httr2 req_url_path_append
 #' @importFrom httr2 req_url_query
@@ -17,7 +18,3 @@
 #' @importFrom httr2 resp_status
 #' @importFrom httr2 resps_data
 "_PACKAGE"
-
-wb_user_agent <- function() {
-  sprintf("worldbank/%s", utils::packageVersion("worldbank"))
-}

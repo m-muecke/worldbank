@@ -480,6 +480,7 @@ worldbank <- function(resource, ..., lang = NULL, per_page = 32500L) {
     req_url_path_append(lang, resource) |>
     req_url_query(..., format = "json", per_page = per_page) |>
     req_error(is_error = is_wb_error, body = wb_error_body) |>
+    req_wb_retry() |>
     req_wb_cache() |>
     req_perform() |>
     resp_body_json()
@@ -492,6 +493,7 @@ worldbank_seq <- function(resource, ..., lang = NULL, per_page = 32500L) {
     req_user_agent(wb_user_agent()) |>
     req_url_query(..., format = "json", per_page = per_page) |>
     req_error(is_error = is_wb_error, body = wb_error_body) |>
+    req_wb_retry() |>
     req_wb_cache()
 
   resource |>
