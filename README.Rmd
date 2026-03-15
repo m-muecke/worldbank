@@ -28,7 +28,7 @@ options(str = strOptions(strict.width = "cut"))
 worldbank provides a simple interface to the following [World Bank](https://datahelpdesk.worldbank.org/knowledgebase/articles/889386-developer-information-overview) APIs:
 
 - [Indicators API v2](https://datahelpdesk.worldbank.org/knowledgebase/articles/889392-about-the-indicators-api-documentation)
-- [Poverty and Inequality Platform (PIP) API](https://pip.worldbank.org/api).
+- [Poverty and Inequality Platform (PIP) API](https://pip.worldbank.org/api)
 - [Finances One API](https://financesone.worldbank.org)
 - [Projects API v2](https://search.worldbank.org/api/v2/projects)
 

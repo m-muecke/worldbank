@@ -21,7 +21,7 @@ APIs:
 - [Indicators API
   v2](https://datahelpdesk.worldbank.org/knowledgebase/articles/889392-about-the-indicators-api-documentation)
 - [Poverty and Inequality Platform (PIP)
-  API](https://pip.worldbank.org/api).
+  API](https://pip.worldbank.org/api)
 - [Finances One API](https://financesone.worldbank.org)
 - [Projects API v2](https://search.worldbank.org/api/v2/projects)
 
