@@ -1,4 +1,4 @@
-# worldbank (development version)
+# worldbank 0.8.0
 
 * `wb_data()` gains `mrv` and `gapfill` parameters to query the most recent values and forward-fill missing data.
 * `wb_project()` queries World Bank project data with support for filtering by country, status, region, date range, and free-text search.
