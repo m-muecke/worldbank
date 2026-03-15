@@ -5,7 +5,7 @@ is_flag <- function(x, null_ok = FALSE) {
   is.logical(x) && length(x) == 1L && !is.na(x)
 }
 
-is_character <- function(x, null_ok = FALSE, n_chars = NULL) {
+is_character <- function(x, n_chars = NULL, null_ok = FALSE) {
   if (null_ok && is.null(x)) {
     return(TRUE)
   }
@@ -16,7 +16,7 @@ is_character <- function(x, null_ok = FALSE, n_chars = NULL) {
   ok
 }
 
-is_string <- function(x, ..., pattern = NULL, null_ok = FALSE, n_chars = NULL) {
+is_string <- function(x, ..., n_chars = NULL, pattern = NULL, null_ok = FALSE) {
   if (null_ok && is.null(x)) {
     return(TRUE)
   }
