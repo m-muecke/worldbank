@@ -43,3 +43,4 @@ reference:
     contents:
       - wb_cache_dir
       - wb_cache_clear
+      - wb_cache_delete
