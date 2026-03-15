@@ -8,6 +8,16 @@ test_that("pip_data basic checks", {
   expect_gt(nrow(res), 0L)
 })
 
+test_that("pip_cp basic checks", {
+  skip_if_offline()
+  skip_on_cran()
+  skip_on_ci()
+
+  res <- pip_cp("ZAF")
+  expect_s3_class(res, "data.frame")
+  expect_gt(nrow(res), 0L)
+})
+
 test_that("pip_group basic checks", {
   skip_if_offline()
   skip_on_cran()

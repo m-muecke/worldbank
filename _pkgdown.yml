@@ -21,6 +21,7 @@ reference:
   - subtitle: Poverty and Inequality Platform (PIP) Data
     contents:
       - pip_data
+      - pip_cp
       - pip_group
       - pip_versions
       - pip_citation

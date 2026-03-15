@@ -35,6 +35,7 @@ pip_citation()
 \seealso{
 Other poverty and inequality statistics: 
 \code{\link{pip_aux}()},
+\code{\link{pip_cp}()},
 \code{\link{pip_data}()},
 \code{\link{pip_group}()},
 \code{\link{pip_health_check}()},

@@ -82,6 +82,48 @@ pip_data <- function(
   res
 }
 
+#' Return country profile data
+#'
+#' @inheritParams pip_data
+#' @returns A `data.frame()` with country profile statistics including headcount ratios, inequality
+#'   measures, and demographic breakdowns.
+#' @inherit pip_data source
+#' @family poverty and inequality statistics
+#' @export
+#' @examplesIf httr2::is_online()
+#' \donttest{
+#' cp <- pip_cp("ZAF")
+#' head(cp)
+#' }
+pip_cp <- function(
+  country = NULL,
+  povline = 2.15,
+  release_version = NULL,
+  ppp_version = NULL,
+  version = NULL
+) {
+  if (!is.null(ppp_version)) {
+    ppp_version <- as.character(ppp_version)
+  }
+  stopifnot(
+    is.null(country) || is_character(country) && all(nchar(country) == 3L),
+    is_string(release_version, pattern = "[0-9]{8}", null_ok = TRUE),
+    is_string(ppp_version, pattern = "[0-9]{4}", null_ok = TRUE),
+    is_string(version, null_ok = TRUE)
+  )
+  res <- pip(
+    resource = "cp-download",
+    country = country,
+    povline = povline,
+    release_version = release_version,
+    ppp_version = ppp_version,
+    version = version,
+    format = "csv",
+    .multi = "comma"
+  )
+  res
+}
+
 #' Return aggregation of PIP statistics
 #'
 #' @inheritParams pip_data

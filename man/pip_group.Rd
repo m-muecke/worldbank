@@ -79,6 +79,7 @@ head(grp)
 Other poverty and inequality statistics: 
 \code{\link{pip_aux}()},
 \code{\link{pip_citation}()},
+\code{\link{pip_cp}()},
 \code{\link{pip_data}()},
 \code{\link{pip_health_check}()},
 \code{\link{pip_info}()},
