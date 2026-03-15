@@ -5,7 +5,7 @@ test_that("wb_project", {
   actual <- wb_project(country = "BR", status = "Active")
   expect_s3_class(actual, "data.frame")
   expect_shape(actual, dim = c(3L, 15L))
-  expect_type(actual$total_commitment, "numeric")
+  expect_type(actual$total_commitment, "double")
   expect_s3_class(actual$approval_date, "Date")
   expect_s3_class(actual$closing_date, "Date")
   for (x in actual) {

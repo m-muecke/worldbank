@@ -18,6 +18,7 @@ Depends:
     R (>= 4.1.0)
 Imports:
     httr2 (>= 1.1.0),
+    stats,
     tools
 Suggests:
     ggplot2,

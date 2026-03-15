@@ -12,7 +12,7 @@ map_mold <- function(.x, .f, .value, ...) {
   } else {
     vapply(.x, `[[`, .f, FUN.VALUE = .value, USE.NAMES = FALSE, ...)
   }
-  setNames(out, names(.x))
+  stats::setNames(out, names(.x))
 }
 
 map_lgl <- function(.x, .f, ...) {
