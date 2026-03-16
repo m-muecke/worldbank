@@ -1,6 +1,8 @@
 # Changelog
 
-## worldbank (development version)
+## worldbank 0.8.0
+
+CRAN release: 2026-03-15
 
 - [`wb_data()`](https://m-muecke.github.io/worldbank/reference/wb_data.md)
   gains `mrv` and `gapfill` parameters to query the most recent values

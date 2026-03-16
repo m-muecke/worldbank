@@ -11,12 +11,12 @@ Source:
 [`DESCRIPTION`](https://github.com/m-muecke/worldbank/blob/main/DESCRIPTION)
 
 Mücke M (2026). *worldbank: Client for the 'World Bank' APIs*. R package
-version 0.7.1.9000, <https://m-muecke.github.io/worldbank/>.
+version 0.8.0, <https://m-muecke.github.io/worldbank/>.
 
     @Manual{,
       title = {worldbank: Client for the 'World Bank' APIs},
       author = {Maximilian Mücke},
       year = {2026},
-      note = {R package version 0.7.1.9000},
+      note = {R package version 0.8.0},
       url = {https://m-muecke.github.io/worldbank/},
     }
