@@ -67,7 +67,7 @@ head(src)
 #>   id last_updated                              name code description  url
 #> 1  1   2021-08-18                    Doing Business  DBS        <NA> <NA>
 #> 2  2   2026-02-24      World Development Indicators  WDI        <NA> <NA>
-#> 3  3   2024-11-05   Worldwide Governance Indicators  WGI        <NA> <NA>
+#> 3  3   2026-03-18   Worldwide Governance Indicators  WGI        <NA> <NA>
 #> 4  5   2016-03-21 Subnational Malnutrition Database  SNM        <NA> <NA>
 #> 5  6   2025-12-03     International Debt Statistics  IDS        <NA> <NA>
 #> 6 11   2013-02-22     Africa Development Indicators  ADI        <NA> <NA>

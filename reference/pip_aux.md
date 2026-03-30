@@ -64,15 +64,15 @@ Other poverty and inequality statistics:
 # \donttest{
 # get a list of available tables
 pip_aux()
-#>  [1] "aux_versions"           "countries"              "country_coverage"      
-#>  [4] "country_list"           "cpi"                    "decomposition"         
-#>  [7] "dictionary"             "framework"              "gdp"                   
-#> [10] "incgrp_coverage"        "indicators"             "interpolated_means"    
-#> [13] "metaregion"             "missing_data"           "national_poverty_lines"
-#> [16] "pce"                    "pg_lnp"                 "pg_svy"                
-#> [19] "pop"                    "pop_region"             "poverty_lines"         
-#> [22] "ppp"                    "region_coverage"        "regions"               
-#> [25] "spr_lnp"                "spr_svy"                "survey_means"          
+#>  [1] "aux_versions"       "countries"          "country_coverage"  
+#>  [4] "country_list"       "cpi"                "decomposition"     
+#>  [7] "dictionary"         "framework"          "gdp"               
+#> [10] "incgrp_coverage"    "indicators"         "interpolated_means"
+#> [13] "metaregion"         "missing_data"       "pce"               
+#> [16] "pg_lnp"             "pg_svy"             "pop"               
+#> [19] "pop_region"         "poverty_lines"      "ppp"               
+#> [22] "region_coverage"    "regions"            "spr_lnp"           
+#> [25] "spr_svy"            "survey_means"      
 
 # get countries
 aux <- pip_aux("countries")

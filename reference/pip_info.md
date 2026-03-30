@@ -36,45 +36,51 @@ Other poverty and inequality statistics:
 pip_info()
 #> $available_data_versions
 #> $available_data_versions[[1]]
-#> [1] "20250930_2021_01_02_PROD"
+#> [1] "20260324_2021_01_02_PROD"
 #> 
 #> $available_data_versions[[2]]
-#> [1] "20250930_2017_01_02_PROD"
+#> [1] "20260324_2017_01_02_PROD"
 #> 
 #> $available_data_versions[[3]]
-#> [1] "20250401_2021_01_02_PROD"
+#> [1] "20250930_2021_01_02_PROD"
 #> 
 #> $available_data_versions[[4]]
-#> [1] "20250401_2017_01_02_PROD"
+#> [1] "20250930_2017_01_02_PROD"
 #> 
 #> $available_data_versions[[5]]
-#> [1] "20240627_2017_01_02_PROD"
+#> [1] "20250401_2021_01_02_PROD"
 #> 
 #> $available_data_versions[[6]]
-#> [1] "20240627_2011_02_02_PROD"
+#> [1] "20250401_2017_01_02_PROD"
 #> 
 #> $available_data_versions[[7]]
-#> [1] "20240326_2017_01_02_PROD"
+#> [1] "20240627_2017_01_02_PROD"
 #> 
 #> $available_data_versions[[8]]
-#> [1] "20240326_2011_02_02_PROD"
+#> [1] "20240627_2011_02_02_PROD"
 #> 
 #> $available_data_versions[[9]]
-#> [1] "20230919_2017_01_02_PROD"
+#> [1] "20240326_2017_01_02_PROD"
 #> 
 #> $available_data_versions[[10]]
-#> [1] "20230919_2011_02_02_PROD"
+#> [1] "20240326_2011_02_02_PROD"
 #> 
 #> $available_data_versions[[11]]
-#> [1] "20230328_2017_01_02_PROD"
+#> [1] "20230919_2017_01_02_PROD"
 #> 
 #> $available_data_versions[[12]]
-#> [1] "20230328_2011_02_02_PROD"
+#> [1] "20230919_2011_02_02_PROD"
 #> 
 #> $available_data_versions[[13]]
-#> [1] "20220909_2017_01_02_PROD"
+#> [1] "20230328_2017_01_02_PROD"
 #> 
 #> $available_data_versions[[14]]
+#> [1] "20230328_2011_02_02_PROD"
+#> 
+#> $available_data_versions[[15]]
+#> [1] "20220909_2017_01_02_PROD"
+#> 
+#> $available_data_versions[[16]]
 #> [1] "20220909_2011_02_02_PROD"
 #> 
 #> 
@@ -82,12 +88,12 @@ pip_info()
 #> $pip_packages$pipapi
 #> $pip_packages$pipapi$pkg_version
 #> $pip_packages$pipapi$pkg_version[[1]]
-#> [1] "1.4.2.9000"
+#> [1] "1.5.3"
 #> 
 #> 
 #> $pip_packages$pipapi$pkg_hash
 #> $pip_packages$pipapi$pkg_hash[[1]]
-#> [1] "defa4b45e948e6d2627ffb1b84d751972bb043c5"
+#> [1] "305863a4122bedd412865ba7f80b27bd8539d9d6"
 #> 
 #> 
 #> 
@@ -136,144 +142,132 @@ pip_info()
 #> [1] "data.table_1.18.2.1"
 #> 
 #> $other_packages[[11]]
-#> [1] "DBI_1.2.3"
+#> [1] "DBI_1.3.0"
 #> 
 #> $other_packages[[12]]
-#> [1] "dplyr_1.2.0"
-#> 
-#> $other_packages[[13]]
 #> [1] "duckdb_1.4.3"
 #> 
-#> $other_packages[[14]]
+#> $other_packages[[13]]
 #> [1] "fastmap_1.2.0"
 #> 
-#> $other_packages[[15]]
-#> [1] "fs_1.6.6"
+#> $other_packages[[14]]
+#> [1] "fs_2.0.1"
 #> 
-#> $other_packages[[16]]
+#> $other_packages[[15]]
 #> [1] "fst_0.9.8"
 #> 
-#> $other_packages[[17]]
-#> [1] "generics_0.1.4"
-#> 
-#> $other_packages[[18]]
+#> $other_packages[[16]]
 #> [1] "glue_1.8.0"
 #> 
-#> $other_packages[[19]]
+#> $other_packages[[17]]
 #> [1] "hms_1.1.4"
 #> 
-#> $other_packages[[20]]
-#> [1] "httpuv_1.6.16"
+#> $other_packages[[18]]
+#> [1] "httpuv_1.6.17"
 #> 
-#> $other_packages[[21]]
+#> $other_packages[[19]]
 #> [1] "joyn_0.3.0"
 #> 
-#> $other_packages[[22]]
+#> $other_packages[[20]]
 #> [1] "jsonlite_2.0.0"
 #> 
-#> $other_packages[[23]]
-#> [1] "later_1.4.5"
+#> $other_packages[[21]]
+#> [1] "later_1.4.8"
 #> 
-#> $other_packages[[24]]
+#> $other_packages[[22]]
 #> [1] "lifecycle_1.0.5"
 #> 
-#> $other_packages[[25]]
+#> $other_packages[[23]]
 #> [1] "magrittr_2.0.4"
 #> 
-#> $other_packages[[26]]
-#> [1] "MASS_7.3-60"
-#> 
-#> $other_packages[[27]]
+#> $other_packages[[24]]
 #> [1] "memoise_2.0.1"
 #> 
-#> $other_packages[[28]]
+#> $other_packages[[25]]
 #> [1] "otel_0.2.0"
 #> 
-#> $other_packages[[29]]
+#> $other_packages[[26]]
 #> [1] "parallel_4.3.2"
 #> 
-#> $other_packages[[30]]
+#> $other_packages[[27]]
 #> [1] "pillar_1.11.1"
 #> 
-#> $other_packages[[31]]
+#> $other_packages[[28]]
 #> [1] "pkgconfig_2.0.3"
 #> 
-#> $other_packages[[32]]
+#> $other_packages[[29]]
 #> [1] "promises_1.5.0"
 #> 
-#> $other_packages[[33]]
+#> $other_packages[[30]]
 #> [1] "purrr_1.2.1"
 #> 
-#> $other_packages[[34]]
-#> [1] "qs_0.27.3"
+#> $other_packages[[31]]
+#> [1] "qs2_0.1.7"
 #> 
-#> $other_packages[[35]]
+#> $other_packages[[32]]
 #> [1] "R.methodsS3_1.8.2"
 #> 
-#> $other_packages[[36]]
+#> $other_packages[[33]]
 #> [1] "R.oo_1.27.1"
 #> 
-#> $other_packages[[37]]
+#> $other_packages[[34]]
 #> [1] "R.utils_2.13.0"
 #> 
-#> $other_packages[[38]]
+#> $other_packages[[35]]
 #> [1] "R6_2.6.1"
 #> 
-#> $other_packages[[39]]
-#> [1] "RApiSerialize_0.1.4"
-#> 
-#> $other_packages[[40]]
+#> $other_packages[[36]]
 #> [1] "rappdirs_0.3.4"
 #> 
-#> $other_packages[[41]]
+#> $other_packages[[37]]
 #> [1] "Rcpp_1.1.1"
 #> 
-#> $other_packages[[42]]
-#> [1] "RcppParallel_5.1.11-1"
+#> $other_packages[[38]]
+#> [1] "RcppParallel_5.1.11-2"
 #> 
-#> $other_packages[[43]]
-#> [1] "readr_2.1.6"
+#> $other_packages[[39]]
+#> [1] "readr_2.2.0"
 #> 
-#> $other_packages[[44]]
+#> $other_packages[[40]]
 #> [1] "rlang_1.1.7"
 #> 
-#> $other_packages[[45]]
+#> $other_packages[[41]]
 #> [1] "stringfish_0.18.0"
 #> 
-#> $other_packages[[46]]
+#> $other_packages[[42]]
 #> [1] "stringi_1.8.7"
 #> 
-#> $other_packages[[47]]
+#> $other_packages[[43]]
 #> [1] "swagger_5.17.14.1"
 #> 
-#> $other_packages[[48]]
+#> $other_packages[[44]]
 #> [1] "tibble_3.3.1"
 #> 
-#> $other_packages[[49]]
+#> $other_packages[[45]]
 #> [1] "tidyselect_1.2.1"
 #> 
-#> $other_packages[[50]]
+#> $other_packages[[46]]
 #> [1] "tools_4.3.2"
 #> 
-#> $other_packages[[51]]
+#> $other_packages[[47]]
 #> [1] "triebeard_0.4.1"
 #> 
-#> $other_packages[[52]]
+#> $other_packages[[48]]
 #> [1] "tzdb_0.5.0"
 #> 
-#> $other_packages[[53]]
+#> $other_packages[[49]]
 #> [1] "urltools_1.7.3.1"
 #> 
-#> $other_packages[[54]]
-#> [1] "vctrs_0.7.1"
+#> $other_packages[[50]]
+#> [1] "vctrs_0.7.2"
 #> 
-#> $other_packages[[55]]
+#> $other_packages[[51]]
 #> [1] "vroom_1.7.0"
 #> 
-#> $other_packages[[56]]
+#> $other_packages[[52]]
 #> [1] "webutils_1.2.2"
 #> 
-#> $other_packages[[57]]
+#> $other_packages[[53]]
 #> [1] "yaml_2.3.12"
 #> 
 #> 
@@ -289,7 +283,7 @@ pip_info()
 #> 
 #> $server_time
 #> $server_time[[1]]
-#> [1] "2026-03-16 08:40:05"
+#> [1] "2026-03-30 15:39:39"
 #> 
 #> 
 # }

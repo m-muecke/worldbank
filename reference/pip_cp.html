@@ -111,13 +111,13 @@ measures, and demographic breakdowns.</p>
     <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="co"># \donttest{</span></span></span>
 <span class="r-in"><span><span class="va">cp</span> <span class="op">&lt;-</span> <span class="fu">pip_cp</span><span class="op">(</span><span class="st">"ZAF"</span><span class="op">)</span></span></span>
 <span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="va">cp</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   country_code reporting_year poverty_line headcount    gini.x welfare_time</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 1          ZAF           1993           NA        NA        NA      1993.00</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2          ZAF           2000           NA        NA        NA      2000.75</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 3          ZAF           2005           NA        NA        NA      2005.00</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 4          ZAF           2008           NA        NA        NA      2008.67</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 5          ZAF           2010           NA        NA        NA      2010.00</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 6          ZAF           2014         2.15 0.1981366 0.6302572      2014.83</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   country_code reporting_year poverty_line headcount gini.x welfare_time</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1          ZAF           1993           NA        NA     NA      1993.00</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2          ZAF           2000           NA        NA     NA      2000.75</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 3          ZAF           2005           NA        NA     NA      2005.00</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 4          ZAF           2008           NA        NA     NA      2008.67</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 5          ZAF           2010           NA        NA     NA      2010.00</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 6          ZAF           2014           NA        NA     NA      2014.83</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   survey_coverage is_interpolated survey_acronym survey_comparability</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 1               N           FALSE           KIDS                    0</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 2               N           FALSE           HIES                    2</span>
@@ -128,80 +128,80 @@ measures, and demographic breakdowns.</p>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   comparable_spell welfare_type headcount_ipl headcount_lmicpl headcount_umicpl</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 1             1993         CONS     0.4540300        0.5670900        0.7588900</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 2             2000         CONS     0.4869700        0.6004500        0.7901000</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 3      2005 - 2014         CONS     0.4303764        0.5695617        0.7595399</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 4      2005 - 2014         CONS     0.3120983        0.4493806        0.6760894</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 5      2005 - 2014         CONS     0.3040549        0.4362340        0.6642118</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 6      2005 - 2014         CONS     0.3200362        0.4533112        0.6677979</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 3      2005 - 2022         CONS     0.4163192        0.5570654        0.7530689</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 4      2005 - 2022         CONS     0.3795021        0.5095397        0.7114064</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 5      2005 - 2022         CONS     0.2878022        0.4221426        0.6571829</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 6      2005 - 2022         CONS     0.2877533        0.4265898        0.6628935</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   headcount_national headcount_national_footnote    gini.y     theil</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 1                 NA                          NA 0.5933394        NA</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 2                 NA                          NA 0.5776966        NA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 3              0.666                           1 0.6476209 0.8674991</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 4              0.621                           1 0.6300900 0.7911583</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 5              0.532                           1 0.6338269 0.7907242</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 6              0.555                           1 0.6302580 0.7790964</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 3              0.575                           1 0.6500114 0.8784750</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 4              0.557                           1 0.6251807 0.7625942</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 5              0.458                           1 0.6087324 0.7083613</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 6              0.467                           1 0.5963911 0.6757182</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   share_b40_female share_t60_female share_b40_male share_t60_male</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 1               NA               NA             NA             NA</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 2               NA               NA             NA             NA</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 3               NA               NA             NA             NA</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 4               NA               NA             NA             NA</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 5               NA               NA             NA             NA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 6        0.4169467        0.5830532      0.3822711      0.6177289</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 6        0.4167145        0.5832855       0.382385       0.617615</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   share_b40_rural share_t60_rural share_b40_urban share_t60_urban</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 1              NA              NA              NA              NA</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 2              NA              NA              NA              NA</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 3              NA              NA              NA              NA</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 4              NA              NA              NA              NA</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 5              NA              NA              NA              NA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 6       0.6543594       0.3456406       0.2538252       0.7461749</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 6       0.6664004       0.3335996       0.2586327       0.7413673</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   share_b40agecat_0_14 share_t60agecat_0_14 share_b40agecat_15_64</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 1                   NA                   NA                    NA</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 2                   NA                   NA                    NA</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 3                   NA                   NA                    NA</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 4                   NA                   NA                    NA</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 5                   NA                   NA                    NA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 6            0.5139337            0.4860663             0.3545554</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 6            0.5182659            0.4817341             0.3543191</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   share_t60agecat_15_64 share_b40agecat_65p share_t60agecat_65p</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 1                    NA                  NA                  NA</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 2                    NA                  NA                  NA</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 3                    NA                  NA                  NA</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 4                    NA                  NA                  NA</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 5                    NA                  NA                  NA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 6             0.6454446           0.3012934           0.6987066</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 6             0.6456809           0.3171975           0.6828025</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   share_b40edu_noedu share_t60edu_noedu share_b40edu_pri share_t60edu_pri</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 1                 NA                 NA               NA               NA</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 2                 NA                 NA               NA               NA</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 3                 NA                 NA               NA               NA</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 4                 NA                 NA               NA               NA</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 5                 NA                 NA               NA               NA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 6           0.616284           0.383716         0.545761         0.454239</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 6          0.6286923          0.3713077        0.5526696        0.4473303</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   share_b40edu_sec share_t60edu_sec share_b40edu_ter share_t60edu_ter datatype</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 1               NA               NA               NA               NA       NA</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 2               NA               NA               NA               NA       NA</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 3               NA               NA               NA               NA       NA</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 4               NA               NA               NA               NA       NA</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 5               NA               NA               NA               NA       NA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 6        0.3552169        0.6447831        0.0555131        0.9444869        1</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 6        0.3573225        0.6426775         0.053892         0.946108        1</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   display_cp mpm_education_attainment mpm_education_enrollment mpm_electricity</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 1         NA                       NA                       NA              NA</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 2         NA                       NA                       NA              NA</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 3         NA                       NA                       NA              NA</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 4         NA                       NA                       NA              NA</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 5         NA                       NA                       NA              NA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 6          1                0.0220896                0.0233865       0.0409385</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 6          1                0.0232594                0.0215872       0.0411189</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   mpm_sanitation mpm_water mpm_monetary mpm_headcount mpm_venn1 mpm_venn2</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 1             NA        NA           NA            NA        NA        NA</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 2             NA        NA           NA            NA        NA        NA</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 3             NA        NA           NA            NA        NA        NA</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 4             NA        NA           NA            NA        NA        NA</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 5             NA        NA           NA            NA        NA        NA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 6      0.3517148 0.1036116    0.3122781     0.3200449 0.0120041 0.1660777</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 6      0.3494727 0.0943263    0.2790575     0.2879641 0.0106208 0.1499087</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   mpm_venn3 mpm_venn4 mpm_venn5 mpm_venn6 mpm_venn7 mpm_venn8</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 1        NA        NA        NA        NA        NA        NA</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 2        NA        NA        NA        NA        NA        NA</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 3        NA        NA        NA        NA        NA        NA</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 4        NA        NA        NA        NA        NA        NA</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 5        NA        NA        NA        NA        NA        NA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 6 0.0083156  0.003853 0.1258807   6.5e-05 0.0038489 0.6799551</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 6 0.0076529 0.0044233 0.1108751 0.0001096 0.0043737 0.7120358</span>
 <span class="r-in"><span><span class="co"># }</span></span></span>
 </code></pre></div>
     </div>
