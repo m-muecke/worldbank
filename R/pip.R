@@ -17,7 +17,7 @@
 #' @param welfare_type (`character(1)`)\cr
 #'   Type of welfare measure to be used. Default `"all"`.
 #' @param reporting_level (`character(1)`)\cr
-#'   level of reporting for the statistics. Default `"all"`.
+#'   Level of reporting for the statistics. Default `"all"`.
 #' @param additional_ind (`logical(1)`)\cr
 #'   Whether to include additional indicators. Default `FALSE`.
 #' @param release_version (`NULL` | `character(1)`)\cr

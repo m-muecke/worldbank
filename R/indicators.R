@@ -29,7 +29,7 @@ wb_language <- function() {
 #' List all lending types supported by the World Bank API.
 #'
 #' @param type (`NULL` | `character()`)\cr
-#'   lending type to query. Default `NULL`. If `NULL`, all types are returned.
+#'   Lending type to query. Default `NULL`. If `NULL`, all types are returned.
 #' @param lang (`character(1)`)\cr
 #'   Language to query. Default `"en"`.
 #' @returns A `data.frame()` with the available lending types. The columns are:

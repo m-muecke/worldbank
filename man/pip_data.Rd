@@ -47,7 +47,7 @@ Whether to include nowcast estimates. Requires \code{fill_gaps = TRUE}. Default 
 Type of welfare measure to be used. Default \code{"all"}.}
 
 \item{reporting_level}{(\code{character(1)})\cr
-level of reporting for the statistics. Default \code{"all"}.}
+Level of reporting for the statistics. Default \code{"all"}.}
 
 \item{additional_ind}{(\code{logical(1)})\cr
 Whether to include additional indicators. Default \code{FALSE}.}

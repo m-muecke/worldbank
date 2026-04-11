@@ -11,7 +11,7 @@ wb_lending_type(type = NULL, lang = "en")
 }
 \arguments{
 \item{type}{(\code{NULL} | \code{character()})\cr
-lending type to query. Default \code{NULL}. If \code{NULL}, all types are returned.}
+Lending type to query. Default \code{NULL}. If \code{NULL}, all types are returned.}
 
 \item{lang}{(\code{character(1)})\cr
 Language to query. Default \code{"en"}.}
