@@ -82,48 +82,11 @@ Other indicators data:
 ``` r
 # \donttest{
 country <- wb_country()
+#> Error in req_perform(req_wb_cache(req_wb_retry(req_error(req_url_query(req_url_path_append(req_user_agent(request("https://api.worldbank.org/v2"),     wb_user_agent()), lang, resource), ..., format = "json",     per_page = per_page), is_error = is_wb_error, body = wb_error_body)))): Failed to perform HTTP request.
+#> Caused by error in `curl::curl_fetch_memory()`:
+#> ! Failure when receiving data from the peer [api.worldbank.org]:
+#> Recv failure: Connection reset by peer
 head(country)
-#>   country_id country_code                country_name region_id region_code
-#> 1        ABW           AW                       Aruba       LCN          ZJ
-#> 2        AFE           ZH Africa Eastern and Southern        NA          NA
-#> 3        AFG           AF                 Afghanistan       MEA          ZQ
-#> 4        AFR           A9                      Africa        NA          NA
-#> 5        AFW           ZI  Africa Western and Central        NA          NA
-#> 6        AGO           AO                      Angola       SSF          ZG
-#>                                        region_value admin_region_id
-#> 1                         Latin America & Caribbean            <NA>
-#> 2                                        Aggregates            <NA>
-#> 3 Middle East, North Africa, Afghanistan & Pakistan             MNA
-#> 4                                        Aggregates            <NA>
-#> 5                                        Aggregates            <NA>
-#> 6                                Sub-Saharan Africa             SSA
-#>   admin_region_code
-#> 1              <NA>
-#> 2              <NA>
-#> 3                XQ
-#> 4              <NA>
-#> 5              <NA>
-#> 6                ZF
-#>                                                          admin_region_value
-#> 1                                                                      <NA>
-#> 2                                                                      <NA>
-#> 3 Middle East, North Africa, Afghanistan & Pakistan (excluding high income)
-#> 4                                                                      <NA>
-#> 5                                                                      <NA>
-#> 6                                Sub-Saharan Africa (excluding high income)
-#>   income_level_id income_level_code  income_level_value lending_type_id
-#> 1             HIC                XD         High income             LNX
-#> 2              NA                NA          Aggregates            <NA>
-#> 3             LIC                XM          Low income             IDX
-#> 4              NA                NA          Aggregates            <NA>
-#> 5              NA                NA          Aggregates            <NA>
-#> 6             LMC                XN Lower middle income             IBD
-#>   lending_type_code lending_type_value capital_city longitude latitude
-#> 1                XX     Not classified   Oranjestad  -70.0167 12.51670
-#> 2              <NA>         Aggregates         <NA>        NA       NA
-#> 3                XI                IDA        Kabul   69.1761 34.52280
-#> 4              <NA>         Aggregates         <NA>        NA       NA
-#> 5              <NA>         Aggregates         <NA>        NA       NA
-#> 6                XF               IBRD       Luanda   13.2420 -8.81155
+#> Error: object 'country' not found
 # }
 ```

@@ -178,7 +178,7 @@ pip_info()
 #> [1] "lifecycle_1.0.5"
 #> 
 #> $other_packages[[23]]
-#> [1] "magrittr_2.0.4"
+#> [1] "magrittr_2.0.5"
 #> 
 #> $other_packages[[24]]
 #> [1] "memoise_2.0.1"
@@ -229,7 +229,7 @@ pip_info()
 #> [1] "readr_2.2.0"
 #> 
 #> $other_packages[[40]]
-#> [1] "rlang_1.1.7"
+#> [1] "rlang_1.2.0"
 #> 
 #> $other_packages[[41]]
 #> [1] "stringfish_0.18.0"
@@ -238,7 +238,7 @@ pip_info()
 #> [1] "stringi_1.8.7"
 #> 
 #> $other_packages[[43]]
-#> [1] "swagger_5.17.14.1"
+#> [1] "swagger_5.32.1"
 #> 
 #> $other_packages[[44]]
 #> [1] "tibble_3.3.1"
@@ -262,7 +262,7 @@ pip_info()
 #> [1] "vctrs_0.7.2"
 #> 
 #> $other_packages[[51]]
-#> [1] "vroom_1.7.0"
+#> [1] "vroom_1.7.1"
 #> 
 #> $other_packages[[52]]
 #> [1] "webutils_1.2.2"
@@ -283,7 +283,7 @@ pip_info()
 #> 
 #> $server_time
 #> $server_time[[1]]
-#> [1] "2026-03-30 15:39:39"
+#> [1] "2026-04-11 10:51:55"
 #> 
 #> 
 # }

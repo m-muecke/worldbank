@@ -39,29 +39,6 @@ Other indicators data:
 ``` r
 # \donttest{
 wb_language()
-#>    code       name      native_form
-#> 1    en    English          English
-#> 2    es    Spanish          Español
-#> 3    fr     French         Français
-#> 4    ar     Arabic             عربي
-#> 5    zh    Chinese             中文
-#> 6    bg  Bulgarian        Български
-#> 7    de     German          Deutsch
-#> 8    hi      Hindi             हिंदी
-#> 9    id Indonesian Bahasa indonesia
-#> 10   ja   Japanese           日本語
-#> 11   km      Khmer             ខ្មែរ
-#> 12   ko     Korean           한국어
-#> 13   mk Macedonian       Македонски
-#> 14   mn  Mongolian       Монгол хэл
-#> 15   pl     Polish           polski
-#> 16   pt Portuguese        português
-#> 17   ro   Romanian           Română
-#> 18   ru    Russian          Pyccĸий
-#> 19   sq   Albanian            shqip
-#> 20   th       Thai          ภาษาไทย
-#> 21   tr    Turkish           Tϋrkçe
-#> 22   uk  Ukrainian       Українська
-#> 23   vi Vietnamese       Tiếng Việt
+#> Error in req_perform(req_wb_cache(req_wb_retry(req_error(req_url_query(req_url_path_append(req_user_agent(request("https://api.worldbank.org/v2"),     wb_user_agent()), lang, resource), ..., format = "json",     per_page = per_page), is_error = is_wb_error, body = wb_error_body)))): HTTP 502 Bad Gateway.
 # }
 ```

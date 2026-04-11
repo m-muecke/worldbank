@@ -53,13 +53,8 @@ Other indicators data:
 ``` r
 # \donttest{
 region <- wb_region()
+#> Error in req_perform(req_wb_cache(req_wb_retry(req_error(req_url_query(req_url_path_append(req_user_agent(request("https://api.worldbank.org/v2"),     wb_user_agent()), lang, resource), ..., format = "json",     per_page = per_page), is_error = is_wb_error, body = wb_error_body)))): HTTP 502 Bad Gateway.
 head(region)
-#>   id code iso2code                                           name
-#> 1 NA  AFE       ZH                    Africa Eastern and Southern
-#> 2 NA  AFR       A9                                         Africa
-#> 3 NA  AFW       ZI                     Africa Western and Central
-#> 4 NA  ARB       1A                                     Arab World
-#> 5 NA  CAA       C9        Sub-Saharan Africa (IFC classification)
-#> 6 NA  CEA       C4 East Asia and the Pacific (IFC classification)
+#> Error: object 'region' not found
 # }
 ```

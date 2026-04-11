@@ -17,7 +17,7 @@ wb_lending_type(type = NULL, lang = "en")
 - type:
 
   (`NULL` \| [`character()`](https://rdrr.io/r/base/character.html))  
-  lending type to query. Default `NULL`. If `NULL`, all types are
+  Lending type to query. Default `NULL`. If `NULL`, all types are
   returned.
 
 - lang:
@@ -52,10 +52,6 @@ Other indicators data:
 ``` r
 # \donttest{
 wb_lending_type()
-#>    id iso2code          value
-#> 1 IBD       XF           IBRD
-#> 2 IDB       XH          Blend
-#> 3 IDX       XI            IDA
-#> 4 LNX       XX Not classified
+#> Error in req_perform(req_wb_cache(req_wb_retry(req_error(req_url_query(req_url_path_append(req_user_agent(request("https://api.worldbank.org/v2"),     wb_user_agent()), lang, resource), ..., format = "json",     per_page = per_page), is_error = is_wb_error, body = wb_error_body)))): HTTP 502 Bad Gateway.
 # }
 ```

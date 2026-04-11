@@ -71,7 +71,7 @@ pip_data(
 - reporting_level:
 
   (`character(1)`)  
-  level of reporting for the statistics. Default `"all"`.
+  Level of reporting for the statistics. Default `"all"`.
 
 - additional_ind:
 
