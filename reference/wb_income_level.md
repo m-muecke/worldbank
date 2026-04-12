@@ -40,6 +40,7 @@ available income levels. The columns are:
 
 Other indicators data:
 [`wb_country()`](https://m-muecke.github.io/worldbank/reference/wb_country.md),
+[`wb_data()`](https://m-muecke.github.io/worldbank/reference/wb_data.md),
 [`wb_indicator()`](https://m-muecke.github.io/worldbank/reference/wb_indicator.md),
 [`wb_language()`](https://m-muecke.github.io/worldbank/reference/wb_language.md),
 [`wb_lending_type()`](https://m-muecke.github.io/worldbank/reference/wb_lending_type.md),

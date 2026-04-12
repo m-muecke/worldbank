@@ -1,6 +1,6 @@
 # Package index
 
-### Worldbank Indicators Data
+### World Bank Indicators Data
 
 - [`wb_language()`](https://m-muecke.github.io/worldbank/reference/wb_language.md)
   : World Bank available languages

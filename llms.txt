@@ -151,7 +151,7 @@ subset(gdp, date >= 1980) |>
 
 # Package index
 
-### Worldbank Indicators Data
+### World Bank Indicators Data
 
 - [`wb_language()`](https://m-muecke.github.io/worldbank/reference/wb_language.md)
   : World Bank available languages

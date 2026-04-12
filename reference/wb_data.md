@@ -101,6 +101,18 @@ available country indicators. The columns are:
 
 - `decimal`: The decimal.
 
+## See also
+
+Other indicators data:
+[`wb_country()`](https://m-muecke.github.io/worldbank/reference/wb_country.md),
+[`wb_income_level()`](https://m-muecke.github.io/worldbank/reference/wb_income_level.md),
+[`wb_indicator()`](https://m-muecke.github.io/worldbank/reference/wb_indicator.md),
+[`wb_language()`](https://m-muecke.github.io/worldbank/reference/wb_language.md),
+[`wb_lending_type()`](https://m-muecke.github.io/worldbank/reference/wb_lending_type.md),
+[`wb_region()`](https://m-muecke.github.io/worldbank/reference/wb_region.md),
+[`wb_source()`](https://m-muecke.github.io/worldbank/reference/wb_source.md),
+[`wb_topic()`](https://m-muecke.github.io/worldbank/reference/wb_topic.md)
+
 ## Examples
 
 ``` r

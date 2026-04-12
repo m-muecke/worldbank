@@ -50,7 +50,7 @@ pip_group(
 
   (`NULL` \| `numeric(1)`)  
   Proportion of the population living below the poverty line. Will be
-  ignored if povline is specified. Default `NULL`.
+  ignored if `povline` is specified. Default `NULL`.
 
 - group_by:
 

@@ -27,6 +27,7 @@ available languages. The columns are:
 
 Other indicators data:
 [`wb_country()`](https://m-muecke.github.io/worldbank/reference/wb_country.md),
+[`wb_data()`](https://m-muecke.github.io/worldbank/reference/wb_data.md),
 [`wb_income_level()`](https://m-muecke.github.io/worldbank/reference/wb_income_level.md),
 [`wb_indicator()`](https://m-muecke.github.io/worldbank/reference/wb_indicator.md),
 [`wb_lending_type()`](https://m-muecke.github.io/worldbank/reference/wb_lending_type.md),
