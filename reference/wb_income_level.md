@@ -52,6 +52,13 @@ Other indicators data:
 ``` r
 # \donttest{
 wb_income_level()
-#> Error in req_perform(req_wb_cache(req_wb_retry(req_error(req_url_query(req_url_path_append(req_user_agent(request("https://api.worldbank.org/v2"),     wb_user_agent()), lang, resource), ..., format = "json",     per_page = per_page), is_error = is_wb_error, body = wb_error_body)))): HTTP 502 Bad Gateway.
+#>    id iso2code               value
+#> 1 HIC       XD         High income
+#> 2 INX       XY      Not classified
+#> 3 LIC       XM          Low income
+#> 4 LMC       XN Lower middle income
+#> 5 LMY       XO Low & middle income
+#> 6 MIC       XP       Middle income
+#> 7 UMC       XT Upper middle income
 # }
 ```

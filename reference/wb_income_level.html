@@ -88,7 +88,14 @@ Language to query. Default <code>"en"</code>.</p></dd>
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
     <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="co"># \donttest{</span></span></span>
 <span class="r-in"><span><span class="fu">wb_income_level</span><span class="op">(</span><span class="op">)</span></span></span>
-<span class="r-err co"><span class="r-pr">#&gt;</span> <span class="error">Error in req_perform(req_wb_cache(req_wb_retry(req_error(req_url_query(req_url_path_append(req_user_agent(request("https://api.worldbank.org/v2"),     wb_user_agent()), lang, resource), ..., format = "json",     per_page = per_page), is_error = is_wb_error, body = wb_error_body)))):</span> HTTP 502 Bad Gateway.</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    id iso2code               value</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1 HIC       XD         High income</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2 INX       XY      Not classified</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 3 LIC       XM          Low income</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 4 LMC       XN Lower middle income</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 5 LMY       XO Low &amp; middle income</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 6 MIC       XP       Middle income</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 7 UMC       XT Upper middle income</span>
 <span class="r-in"><span><span class="co"># }</span></span></span>
 </code></pre></div>
     </div>

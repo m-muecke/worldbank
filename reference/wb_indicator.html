@@ -94,7 +94,14 @@ Language to query. Default <code>"en"</code>.</p></dd>
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
     <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="co"># \donttest{</span></span></span>
 <span class="r-in"><span><span class="fu">wb_indicator</span><span class="op">(</span><span class="st">"NY.GDP.MKTP.CD"</span><span class="op">)</span></span></span>
-<span class="r-err co"><span class="r-pr">#&gt;</span> <span class="error">Error in req_perform(req_wb_cache(req_wb_retry(req_error(req_url_query(req_url_path_append(req_user_agent(request("https://api.worldbank.org/v2"),     wb_user_agent()), lang, resource), ..., format = "json",     per_page = per_page), is_error = is_wb_error, body = wb_error_body)))):</span> HTTP 502 Bad Gateway.</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>               id              name unit source_id                 source_value</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1 NY.GDP.MKTP.CD GDP (current US$) &lt;NA&gt;         2 World Development Indicators</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                                                                                                                                                                                                                                                                                                                                                                                                                                                                 source_note</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1 Gross domestic product is the total income earned through the production of goods and services in an economic territory during an accounting period. It can be measured in three different ways: using either the expenditure approach, the income approach, or the production approach. This indicator is expressed in current prices, meaning no adjustment has been made to account for price changes over time. This indicator is expressed in United States dollars.</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                                                                                                                                                                                                     source_organization</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1 Country official statistics, National Statistical Organizations and/or Central Banks;\nNational Accounts data files, Organisation for Economic Co-operation and Development (OECD);\nStaff estimates, World Bank (WB)</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   topic_id      topic_value</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1        3 Economy &amp; Growth</span>
 <span class="r-in"><span><span class="co"># }</span></span></span>
 </code></pre></div>
     </div>

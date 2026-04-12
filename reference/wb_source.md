@@ -63,8 +63,20 @@ Other indicators data:
 ``` r
 # \donttest{
 src <- wb_source()
-#> Error in req_perform(req_wb_cache(req_wb_retry(req_error(req_url_query(req_url_path_append(req_user_agent(request("https://api.worldbank.org/v2"),     wb_user_agent()), lang, resource), ..., format = "json",     per_page = per_page), is_error = is_wb_error, body = wb_error_body)))): HTTP 502 Bad Gateway.
 head(src)
-#> Error: object 'src' not found
+#>   id last_updated                              name code description  url
+#> 1  1   2021-08-18                    Doing Business  DBS        <NA> <NA>
+#> 2  2   2026-04-08      World Development Indicators  WDI        <NA> <NA>
+#> 3  3   2026-03-18   Worldwide Governance Indicators  WGI        <NA> <NA>
+#> 4  5   2016-03-21 Subnational Malnutrition Database  SNM        <NA> <NA>
+#> 5  6   2025-12-03     International Debt Statistics  IDS        <NA> <NA>
+#> 6 11   2013-02-22     Africa Development Indicators  ADI        <NA> <NA>
+#>   data_availability metadata_availability concepts
+#> 1              TRUE                  TRUE        3
+#> 2              TRUE                  TRUE        3
+#> 3              TRUE                  TRUE        3
+#> 4              TRUE                  TRUE        3
+#> 5              TRUE                  TRUE        4
+#> 6              TRUE                  TRUE        3
 # }
 ```
