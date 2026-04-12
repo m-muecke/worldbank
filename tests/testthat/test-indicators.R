@@ -220,9 +220,7 @@ test_that("wb_country input validation works", {
 })
 
 test_that("wb_indicator input validation works", {
-  # country should be a character vector with 2/3 letters or NULL
-  expect_error(wb_indicator("a"))
-  expect_error(wb_indicator("abcd"))
+  # indicator should be a string or NULL
   expect_error(wb_indicator(c("ab", "abcd")))
   expect_error(wb_indicator(character()))
   expect_error(wb_indicator(NA))

@@ -8,7 +8,7 @@
 #'   Poverty line to be used to compute poverty measures. Poverty lines are only accepted up to 3
 #'   decimals. Default `2.15`.
 #' @param popshare (`NULL` | `numeric(1)`)\cr
-#'   Proportion of the population living below the poverty line. Will be ignored if povline is
+#'   Proportion of the population living below the poverty line. Will be ignored if `povline` is
 #'   specified. Default `NULL`.
 #' @param fill_gaps (`logical(1)`)\cr
 #'   Whether to fill gaps in the data. Default `FALSE`.

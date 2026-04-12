@@ -34,7 +34,7 @@ Poverty line to be used to compute poverty measures. Poverty lines are only acce
 decimals. Default \code{2.15}.}
 
 \item{popshare}{(\code{NULL} | \code{numeric(1)})\cr
-Proportion of the population living below the poverty line. Will be ignored if povline is
+Proportion of the population living below the poverty line. Will be ignored if \code{povline} is
 specified. Default \code{NULL}.}
 
 \item{group_by}{(\code{character(1)})\cr

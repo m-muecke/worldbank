@@ -30,6 +30,7 @@ wb_language()
 \seealso{
 Other indicators data: 
 \code{\link{wb_country}()},
+\code{\link{wb_data}()},
 \code{\link{wb_income_level}()},
 \code{\link{wb_indicator}()},
 \code{\link{wb_lending_type}()},

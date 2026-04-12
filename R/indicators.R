@@ -375,6 +375,7 @@ wb_indicator <- function(indicator = NULL, lang = "en") {
 #' * `obs_status`: The observation status.
 #' * `decimal`: The decimal.
 #' @source <https://api.worldbank.org/v2/country/{country}/indicator/{indicator}>
+#' @family indicators data
 #' @export
 #' @examplesIf httr2::is_online()
 #' \donttest{

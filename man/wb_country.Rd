@@ -52,6 +52,7 @@ head(country)
 }
 \seealso{
 Other indicators data: 
+\code{\link{wb_data}()},
 \code{\link{wb_income_level}()},
 \code{\link{wb_indicator}()},
 \code{\link{wb_language}()},
