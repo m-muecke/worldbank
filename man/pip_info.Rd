@@ -10,7 +10,7 @@
 pip_info()
 }
 \value{
-A \code{data.frame()} with the API information.
+A \code{list()} with the API information.
 }
 \description{
 Return information about the API

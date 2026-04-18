@@ -360,7 +360,7 @@ pip_valid_params <- function(
 
 #' Return information about the API
 #'
-#' @returns A `data.frame()` with the API information.
+#' @returns A `list()` with the API information.
 #' @inherit pip_data source
 #' @family poverty and inequality statistics
 #' @export
