@@ -321,20 +321,8 @@ wb_indicator <- function(indicator = NULL, lang = "en") {
     source_value = map_chr(data, \(x) x$source$value),
     source_note = map_chr(data, "sourceNote"),
     source_organization = map_chr(data, "sourceOrganization"),
-    topic_id = as.integer(map_chr(data, function(x) {
-      if (length(x$topics) > 0L && length(x$topics[[1L]]) > 0L) {
-        x$topics[[1L]]$id
-      } else {
-        NA_character_
-      }
-    })),
-    topic_value = map_chr(data, function(x) {
-      if (length(x$topics) > 0L && length(x$topics[[1L]]) > 0L) {
-        x$topics[[1L]]$value
-      } else {
-        NA_character_
-      }
-    }),
+    topic_id = as.integer(map_chr(data, \(x) x$topics[1L][[1L]]$id %||% NA_character_)),
+    topic_value = map_chr(data, \(x) x$topics[1L][[1L]]$value %||% NA_character_),
     check.names = FALSE
   )
   clean_strings(res)
