@@ -1,15 +1,15 @@
-#' Return Finances One API Data
+#' Return Finances One API data
 #'
 #' @param dataset_id (`character(1)`)\cr
-#'   The id of the associated dataset.
+#'   The ID of the associated dataset.
 #' @param resource_id (`character(1)`)\cr
-#'   Id of the associated resource.
+#'   The ID of the associated resource.
 #' @param view_id (`character(1)`)\cr
-#'   The Id of the view.
+#'   The ID of the view.
 #' @param ... (`any`)\cr
 #'   Additional arguments passed to the request.
 #' @param limit (`NULL` | `integer(1)`)\cr
-#'   The maximum number of rows to return. Default is `NULL`.
+#'   The maximum number of rows to return. Default `NULL`.
 #'   If `NULL`, all rows are returned.
 #' @returns A `data.frame()` with the requested dataset.
 #' @source <https://financesone.worldbank.org/data>

@@ -1,5 +1,7 @@
 # worldbank (development version)
 
+* Documentation improvements.
+
 # worldbank 0.8.0
 
 * `wb_data()` gains `mrv` and `gapfill` parameters to query the most recent values and forward-fill missing data.

@@ -3,7 +3,7 @@
 \name{fone_dataset}
 \alias{fone_dataset}
 \alias{fone_view}
-\title{Return Finances One API Data}
+\title{Return Finances One API data}
 \source{
 \url{https://financesone.worldbank.org/data}
 }
@@ -14,26 +14,26 @@ fone_view(view_id, ..., limit = NULL)
 }
 \arguments{
 \item{dataset_id}{(\code{character(1)})\cr
-The id of the associated dataset.}
+The ID of the associated dataset.}
 
 \item{resource_id}{(\code{character(1)})\cr
-Id of the associated resource.}
+The ID of the associated resource.}
 
 \item{...}{(\code{any})\cr
 Additional arguments passed to the request.}
 
 \item{limit}{(\code{NULL} | \code{integer(1)})\cr
-The maximum number of rows to return. Default is \code{NULL}.
+The maximum number of rows to return. Default \code{NULL}.
 If \code{NULL}, all rows are returned.}
 
 \item{view_id}{(\code{character(1)})\cr
-The Id of the view.}
+The ID of the view.}
 }
 \value{
 A \code{data.frame()} with the requested dataset.
 }
 \description{
-Return Finances One API Data
+Return Finances One API data
 }
 \examples{
 \dontrun{
