@@ -45,6 +45,7 @@ Other indicators data:
 [`wb_language()`](https://m-muecke.github.io/worldbank/reference/wb_language.md),
 [`wb_lending_type()`](https://m-muecke.github.io/worldbank/reference/wb_lending_type.md),
 [`wb_region()`](https://m-muecke.github.io/worldbank/reference/wb_region.md),
+[`wb_search()`](https://m-muecke.github.io/worldbank/reference/wb_search.md),
 [`wb_source()`](https://m-muecke.github.io/worldbank/reference/wb_source.md),
 [`wb_topic()`](https://m-muecke.github.io/worldbank/reference/wb_topic.md)
 

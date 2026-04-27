@@ -110,6 +110,7 @@ Other indicators data:
 [`wb_language()`](https://m-muecke.github.io/worldbank/reference/wb_language.md),
 [`wb_lending_type()`](https://m-muecke.github.io/worldbank/reference/wb_lending_type.md),
 [`wb_region()`](https://m-muecke.github.io/worldbank/reference/wb_region.md),
+[`wb_search()`](https://m-muecke.github.io/worldbank/reference/wb_search.md),
 [`wb_source()`](https://m-muecke.github.io/worldbank/reference/wb_source.md),
 [`wb_topic()`](https://m-muecke.github.io/worldbank/reference/wb_topic.md)
 
@@ -141,8 +142,6 @@ ind <- wb_data(
   country = c("US", "DE", "FR", "CH", "JP"),
   start_date = 2015, end_date = 2023
 )
-#> iterating ■■■■■■■■■■■■■■■■                  50% | ETA:  9s
-#> iterating ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■  100% | ETA:  0s
 head(ind)
 #>   date   indicator_id    indicator_name country_id country_name country_code
 #> 1 2023 NY.GDP.MKTP.CD GDP (current US$)         CH  Switzerland          CHE

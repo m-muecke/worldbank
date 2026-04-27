@@ -18,6 +18,8 @@
   : World Bank country data
 - [`wb_indicator()`](https://m-muecke.github.io/worldbank/reference/wb_indicator.md)
   : World Bank indicator data
+- [`wb_search()`](https://m-muecke.github.io/worldbank/reference/wb_search.md)
+  : Search World Bank indicators
 - [`wb_data()`](https://m-muecke.github.io/worldbank/reference/wb_data.md)
   [`wb_country_indicator()`](https://m-muecke.github.io/worldbank/reference/wb_data.md)
   : World Bank country indicator data
