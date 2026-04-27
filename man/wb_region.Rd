@@ -38,6 +38,7 @@ head(region)
 }
 \seealso{
 Other indicators data: 
+\code{\link{wb_bulk}()},
 \code{\link{wb_country}()},
 \code{\link{wb_data}()},
 \code{\link{wb_income_level}()},

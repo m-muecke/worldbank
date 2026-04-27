@@ -94,6 +94,7 @@ head(ind)
 }
 \seealso{
 Other indicators data: 
+\code{\link{wb_bulk}()},
 \code{\link{wb_country}()},
 \code{\link{wb_income_level}()},
 \code{\link{wb_indicator}()},

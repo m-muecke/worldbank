@@ -16,6 +16,12 @@ na_if_empty <- function(x) {
   replace(x, !nzchar(x), NA_character_)
 }
 
+to_snake_case <- function(x) {
+  x <- gsub("((?<=[a-z0-9])[A-Z]|(?!^)[A-Z](?=[a-z]))", "_\\1", x, perl = TRUE)
+  x <- tolower(gsub("[^[:alnum:]]+", "_", x))
+  gsub("^_+|_+$", "", x)
+}
+
 to_logical <- function(x) {
   x == "Y"
 }

@@ -1,3 +1,20 @@
+test_that("to_snake_case", {
+  expect_identical(to_snake_case("Country Name"), "country_name")
+  expect_identical(to_snake_case("Country.Code"), "country_code")
+  expect_identical(to_snake_case("CountryCode"), "country_code")
+  expect_identical(to_snake_case("SeriesCode"), "series_code")
+  expect_identical(to_snake_case("X2.alpha.code"), "x2_alpha_code")
+  expect_identical(to_snake_case("WB-2 code"), "wb_2_code")
+  expect_identical(to_snake_case("DESCRIPTION"), "description")
+  expect_identical(to_snake_case("GDPGrowth"), "gdp_growth")
+  expect_identical(to_snake_case("IMFData"), "imf_data")
+  expect_identical(to_snake_case("__leading_trailing__"), "leading_trailing")
+  expect_identical(
+    to_snake_case(c("CountryCode", "SeriesCode", "DESCRIPTION")),
+    c("country_code", "series_code", "description")
+  )
+})
+
 test_that("clean_strings", {
   data <- data.frame(
     a = c("  hello  ", " world", " ", "", "!"),

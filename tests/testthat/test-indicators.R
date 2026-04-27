@@ -263,6 +263,43 @@ test_that("wb_search filters indicators by pattern", {
   )
 })
 
+test_that("wdi_pivot_long pivots wide WDI data to long format", {
+  wide <- data.frame(
+    country_name = c("Germany", "United States"),
+    country_code = c("DEU", "USA"),
+    indicator_name = c("GDP (current US$)", "GDP (current US$)"),
+    indicator_code = c("NY.GDP.MKTP.CD", "NY.GDP.MKTP.CD"),
+    x1960 = c(NA, 543300000000),
+    x1961 = c(NA, 563300000000),
+    x1962 = c(NA, 605100000000),
+    x = NA,
+    check.names = FALSE
+  )
+
+  long <- wdi_pivot_long(wide)
+  expect_s3_class(long, "data.frame")
+  expect_identical(
+    names(long),
+    c("country_name", "country_code", "indicator_name", "indicator_code", "year", "value")
+  )
+  expect_identical(nrow(long), 6L)
+  expect_identical(long$year, rep(1960:1962, each = 2L))
+  expect_identical(long$country_code, rep(c("DEU", "USA"), times = 3L))
+  expect_identical(
+    long$value,
+    c(NA, 543300000000, NA, 563300000000, NA, 605100000000)
+  )
+  expect_false("X" %in% names(long))
+})
+
+test_that("wb_bulk input validation works", {
+  expect_error(wb_bulk(timeout = -1))
+  expect_error(wb_bulk(timeout = "a"))
+  expect_error(wb_bulk(timeout = NA))
+  expect_error(wb_bulk(timeout = c(1, 2)))
+  expect_error(wb_bulk(timeout = NULL))
+})
+
 test_that("wb_search input validation works", {
   catalog <- readRDS(test_path("fixtures", "wb-indicator.rds"))
   local_mocked_bindings(
