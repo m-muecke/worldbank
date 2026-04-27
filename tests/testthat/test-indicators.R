@@ -234,6 +234,49 @@ test_that("wb_indicator input validation works", {
   expect_error(wb_indicator(lang = 1L))
 })
 
+test_that("wb_search filters indicators by pattern", {
+  indicators <- readRDS(test_path("fixtures", "wb-indicator.rds"))
+  local_mocked_bindings(
+    worldbank = function(...) indicators
+  )
+
+  catalog <- wb_indicator()
+
+  actual <- wb_search("HCount")
+  expect_s3_class(actual, "data.frame")
+  expect_identical(names(actual), names(catalog))
+  expect_true(nrow(actual) > 0L)
+  hit <- grepl("HCount", catalog$id, ignore.case = TRUE) |
+    grepl("HCount", catalog$name, ignore.case = TRUE) |
+    grepl("HCount", catalog$source_note, ignore.case = TRUE)
+  expect_identical(nrow(actual), sum(hit, na.rm = TRUE))
+
+  expect_identical(nrow(wb_search("zzz_no_match_zzz")), 0L)
+
+  expect_true(
+    nrow(wb_search("hcount")) >= nrow(wb_search("hcount", ignore.case = FALSE))
+  )
+
+  expect_identical(
+    wb_search("HCount", catalog = catalog),
+    wb_search("HCount")
+  )
+})
+
+test_that("wb_search input validation works", {
+  catalog <- readRDS(test_path("fixtures", "wb-indicator.rds"))
+  local_mocked_bindings(
+    worldbank = function(...) catalog
+  )
+  expect_error(wb_search(NULL))
+  expect_error(wb_search(c("a", "b")))
+  expect_error(wb_search(NA))
+  expect_error(wb_search(1L))
+  expect_error(wb_search("GDP", fields = character()))
+  expect_error(wb_search("GDP", fields = "not_a_column"), "not_a_column")
+  expect_error(wb_search("GDP", catalog = list()))
+})
+
 test_that("wb_country_indicator input validation works", {
   # indicator should be a string
   expect_error(wb_country_indicator(indicator = NULL))

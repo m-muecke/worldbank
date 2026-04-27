@@ -44,6 +44,7 @@ Other indicators data:
 \code{\link{wb_indicator}()},
 \code{\link{wb_language}()},
 \code{\link{wb_lending_type}()},
+\code{\link{wb_search}()},
 \code{\link{wb_source}()},
 \code{\link{wb_topic}()}
 }

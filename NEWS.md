@@ -1,5 +1,6 @@
 # worldbank (development version)
 
+* `wb_search()` searches the indicator catalog for a regular expression pattern across one or more fields.
 * Documentation improvements.
 
 # worldbank 0.8.0

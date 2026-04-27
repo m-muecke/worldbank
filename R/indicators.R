@@ -328,6 +328,64 @@ wb_indicator <- function(indicator = NULL, lang = "en") {
   clean_strings(res)
 }
 
+#' Search World Bank indicators
+#'
+#' Search the indicator catalog returned by [wb_indicator()] for a regular expression
+#' pattern across one or more text fields. By default the match is case insensitive.
+#'
+#' @param pattern (`character(1)`)\cr
+#'   Regular expression to match.
+#' @param fields (`character()`)\cr
+#'   Columns of the indicator catalog to search. Default `c("id", "name", "source_note")`.
+#' @param catalog (`NULL` | `data.frame()`)\cr
+#'   Optional pre-fetched indicator catalog. If `NULL` (default), [wb_indicator()] is called.
+#' @param lang (`character(1)`)\cr
+#'   Language to query. Only used when `catalog` is `NULL`. Default `"en"`.
+#' @param ... Additional arguments passed to [grepl()].
+#' @returns A `data.frame()` with the matching rows of the indicator catalog.
+#' @source <https://api.worldbank.org/v2/indicator>
+#' @family indicators data
+#' @export
+#' @examplesIf httr2::is_online()
+#' \donttest{
+#' # search for indicators related to GDP
+#' wb_search("GDP")
+#'
+#' # restrict the search to the indicator name
+#' wb_search("unemployment", fields = "name")
+#'
+#' # case-sensitive fixed-string match
+#' wb_search("GDP", ignore.case = FALSE, fixed = TRUE)
+#' }
+wb_search <- function(
+  pattern,
+  fields = c("id", "name", "source_note"),
+  catalog = NULL,
+  lang = "en",
+  ...
+) {
+  stopifnot(
+    is_string(pattern),
+    is_character(fields),
+    is.null(catalog) || is.data.frame(catalog)
+  )
+  catalog <- catalog %||% wb_indicator(lang = lang)
+  missing_fields <- setdiff(fields, names(catalog))
+  if (length(missing_fields) > 0L) {
+    stop(
+      sprintf("`fields` not found in catalog: %s.", toString(missing_fields)),
+      call. = FALSE
+    )
+  }
+  args <- utils::modifyList(list(ignore.case = TRUE), list(...))
+  hit <- lapply(fields, function(x) {
+    m <- do.call(grepl, c(list(pattern = pattern, x = catalog[[x]]), args))
+    m & !is.na(m)
+  })
+  hit <- Reduce(`|`, hit)
+  catalog[hit, , drop = FALSE]
+}
+
 #' World Bank country indicator data
 #'
 #' List all country indicators supported by the World Bank API.
