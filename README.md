@@ -92,23 +92,20 @@ str(country)
 #>  $ longitude         : num  -70 NA 69.2 NA NA ...
 #>  $ latitude          : num  12.5 NA 34.5 NA NA ...
 
-# search for specific indicator
-ind <- wb_indicator()
-ind <- subset(
-  ind,
-  grepl("GDP", id, fixed = TRUE) & source_value == "World Development Indicators"
-)
+# search for indicators by keyword across id, name, and description
+ind <- wb_search("GDP")
+ind <- subset(ind, source_value == "World Development Indicators")
 str(ind)
-#> 'data.frame':    37 obs. of  9 variables:
-#>  $ id                 : chr  "EG.GDP.PUSE.KO.PP" "EG.GDP.PUSE.KO.PP.KD" "EN.G"..
-#>  $ name               : chr  "GDP per unit of energy use (PPP $ per kg of oil"..
+#> 'data.frame':    103 obs. of  9 variables:
+#>  $ id                 : chr  "BG.GSR.NFSV.GD.ZS" "BM.KLT.DINV.WD.GD.ZS" "BN.C"..
+#>  $ name               : chr  "Trade in services (% of GDP)" "Foreign direct i"..
 #>  $ unit               : chr  NA NA NA NA ...
 #>  $ source_id          : int  2 2 2 2 2 2 2 2 2 2 ...
 #>  $ source_value       : chr  "World Development Indicators" "World Developmen"..
-#>  $ source_note        : chr  "GDP per unit of energy use is the PPP GDP per k"..
-#>  $ source_organization: chr  "IEA Energy Statistics Data Browser, Internation"..
-#>  $ topic_id           : int  5 5 6 6 6 6 3 7 3 7 ...
-#>  $ topic_value        : chr  "Energy & Mining" "Energy & Mining" "Environment"..
+#>  $ source_note        : chr  "Total trade in services includes services provi"..
+#>  $ source_organization: chr  "Balance of Payments Statistics Yearbook and dat"..
+#>  $ topic_id           : int  3 3 3 3 3 7 7 5 5 5 ...
+#>  $ topic_value        : chr  "Economy & Growth" "Economy & Growth" "Economy &"..
 
 # fetch indicator data for specific or all countries (default)
 gdp <- wb_data("NY.GDP.MKTP.CD", c("US", "DE", "FR", "CH", "JP"))

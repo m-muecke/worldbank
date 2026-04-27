@@ -69,12 +69,9 @@ wb_country(c("US", "DE"))
 country <- wb_country()
 str(country)
 
-# search for specific indicator
-ind <- wb_indicator()
-ind <- subset(
-  ind,
-  grepl("GDP", id, fixed = TRUE) & source_value == "World Development Indicators"
-)
+# search for indicators by keyword across id, name, and description
+ind <- wb_search("GDP")
+ind <- subset(ind, source_value == "World Development Indicators")
 str(ind)
 
 # fetch indicator data for specific or all countries (default)
