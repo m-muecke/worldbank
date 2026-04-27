@@ -47,7 +47,7 @@
 
 - [`fone_dataset()`](https://m-muecke.github.io/worldbank/reference/fone.md)
   [`fone_view()`](https://m-muecke.github.io/worldbank/reference/fone.md)
-  : Return Finances One API Data
+  : Return Finances One API data
 
 ### Projects Data
 

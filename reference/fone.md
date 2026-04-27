@@ -1,6 +1,6 @@
-# Return Finances One API Data
+# Return Finances One API data
 
-Return Finances One API Data
+Return Finances One API data
 
 ## Usage
 
@@ -19,12 +19,12 @@ fone_view(view_id, ..., limit = NULL)
 - dataset_id:
 
   (`character(1)`)  
-  The id of the associated dataset.
+  The ID of the associated dataset.
 
 - resource_id:
 
   (`character(1)`)  
-  Id of the associated resource.
+  The ID of the associated resource.
 
 - ...:
 
@@ -34,13 +34,13 @@ fone_view(view_id, ..., limit = NULL)
 - limit:
 
   (`NULL` \| `integer(1)`)  
-  The maximum number of rows to return. Default is `NULL`. If `NULL`,
-  all rows are returned.
+  The maximum number of rows to return. Default `NULL`. If `NULL`, all
+  rows are returned.
 
 - view_id:
 
   (`character(1)`)  
-  The Id of the view.
+  The ID of the view.
 
 ## Value
 
