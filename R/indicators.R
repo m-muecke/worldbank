@@ -435,11 +435,10 @@ wb_bulk <- function(timeout = 600L) {
     df
   }
 
+  # disambiguate the 2-letter ISO/WB codes from `country_code` (3-letter ISO).
   country <- read_csv("WDICountry.csv")
-  nm <- names(country)
-  nm[nm == "x2_alpha_code"] <- "iso2_code"
-  nm[nm == "wb_2_code"] <- "wb_iso2_code"
-  names(country) <- nm
+  names(country)[names(country) == "x2_alpha_code"] <- "iso2_code"
+  names(country)[names(country) == "wb_2_code"] <- "wb_iso2_code"
 
   list(
     data = wdi_pivot_long(read_csv("WDICSV.csv")),
