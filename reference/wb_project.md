@@ -112,8 +112,8 @@ wb_project(country = "BR", status = "Active", search = "education")
 #> P178663 P178663
 #> P073882 P073882
 #> P179365 P179365
-#> P153012 P153012
 #> P172497 P172497
+#> P153012 P153012
 #>                                                                   project_name
 #> P163868                  Support to Upper Secondary Reform in Brazil Operation
 #> P178993     Mato Grosso Resilient, Inclusive, and Sustainable Learning Project
@@ -125,8 +125,8 @@ wb_project(country = "BR", status = "Active", search = "education")
 #> P178663                   Progestão Piauí: Public Sector Management Efficiency
 #> P073882                         RF 2nd Amazon Fire Prevention and Mobilization
 #> P179365 Brazil: Support to New Bolsa Familia Conditional Cash Transfer Program
-#> P153012                        Fortaleza Sustainable Urban Development Project
 #> P172497                 Sustainable Multiple Use Landscape Consortia in Brazil
+#> P153012                        Fortaleza Sustainable Urban Development Project
 #>         status approval_date closing_date country_code country
 #> P163868 Active    2017-12-14   2024-12-31           BR  Brazil
 #> P178993 Active    2023-10-26   2028-12-31           BR  Brazil
@@ -138,8 +138,8 @@ wb_project(country = "BR", status = "Active", search = "education")
 #> P178663 Active    2023-10-03   2029-06-29           BR  Brazil
 #> P073882 Active          <NA>   2004-09-30           BR  Brazil
 #> P179365 Active    2023-12-06   2026-04-30           BR  Brazil
-#> P153012 Active    2017-04-28   2025-03-31           BR  Brazil
 #> P172497 Active          <NA>   2027-11-30           BR  Brazil
+#> P153012 Active    2017-04-28   2025-03-31           BR  Brazil
 #>                              region total_commitment ibrd_commitment
 #> P163868 Latin America and Caribbean        250.00000           250.0
 #> P178993 Latin America and Caribbean        100.00000           100.0
@@ -151,8 +151,8 @@ wb_project(country = "BR", status = "Active", search = "education")
 #> P178663 Latin America and Caribbean         50.00000            50.0
 #> P073882 Latin America and Caribbean          1.10000             0.0
 #> P179365 Latin America and Caribbean        300.00000           300.0
-#> P153012 Latin America and Caribbean         73.30000            73.3
 #> P172497 Latin America and Caribbean         24.57798             0.0
+#> P153012 Latin America and Caribbean         73.30000            73.3
 #>         ida_commitment            lending_instrument
 #> P163868              0 Program-for-Results Financing
 #> P178993              0  Investment Project Financing
@@ -164,8 +164,8 @@ wb_project(country = "BR", status = "Active", search = "education")
 #> P178663              0  Investment Project Financing
 #> P073882              0                          <NA>
 #> P179365              0  Investment Project Financing
-#> P153012              0  Investment Project Financing
 #> P172497              0  Investment Project Financing
+#> P153012              0  Investment Project Financing
 #>                                                                          borrower
 #> P163868                              Ministry of Economy (Minist�rio da Economia)
 #> P178993                                                      STATE OF MATO GROSSO
@@ -177,8 +177,8 @@ wb_project(country = "BR", status = "Active", search = "education")
 #> P178663                                                            State of Piaui
 #> P073882                                                                      <NA>
 #> P179365                                             Federative Republic of Brazil
-#> P153012                                                 Municipality of Fortaleza
 #> P172497                                                                      IICA
+#> P153012                                                 Municipality of Fortaleza
 #>                                                                                               implementing_agency
 #> P163868                                                            Ministry of Education (Minist�rio da Educa��o)
 #> P178993                                                                    SECRETARIAT OF EDUCATION - MATO GROSSO
@@ -190,8 +190,8 @@ wb_project(country = "BR", status = "Active", search = "education")
 #> P178663                                                                           Secretariat of Finance of Piaui
 #> P073882                                                                                                      <NA>
 #> P179365                                                                                   Ministry of Citizenship
-#> P153012 Secretaria Municipal de Urbanismo e Meio Ambiente (SEUMA), Secretaria Municipal de Infraestrutura (SEINF)
 #> P172497             Minist�rio do Meio Ambiente (MMA), Minist�rio da Agricultura, Pecu�ria e Abastecimento (MAPA)
+#> P153012 Secretaria Municipal de Urbanismo e Meio Ambiente (SEUMA), Secretaria Municipal de Infraestrutura (SEINF)
 #>                                                                                  url
 #> P163868 https://projects.worldbank.org/en/projects-operations/project-detail/P163868
 #> P178993 https://projects.worldbank.org/en/projects-operations/project-detail/P178993
@@ -203,8 +203,8 @@ wb_project(country = "BR", status = "Active", search = "education")
 #> P178663 https://projects.worldbank.org/en/projects-operations/project-detail/P178663
 #> P073882 https://projects.worldbank.org/en/projects-operations/project-detail/P073882
 #> P179365 https://projects.worldbank.org/en/projects-operations/project-detail/P179365
-#> P153012 https://projects.worldbank.org/en/projects-operations/project-detail/P153012
 #> P172497 https://projects.worldbank.org/en/projects-operations/project-detail/P172497
+#> P153012 https://projects.worldbank.org/en/projects-operations/project-detail/P153012
 
 # look up a specific project
 wb_project(id = "P163868")

@@ -51,6 +51,7 @@ available indicators. The columns are:
 ## See also
 
 Other indicators data:
+[`wb_bulk()`](https://m-muecke.github.io/worldbank/reference/wb_bulk.md),
 [`wb_country()`](https://m-muecke.github.io/worldbank/reference/wb_country.md),
 [`wb_data()`](https://m-muecke.github.io/worldbank/reference/wb_data.md),
 [`wb_income_level()`](https://m-muecke.github.io/worldbank/reference/wb_income_level.md),

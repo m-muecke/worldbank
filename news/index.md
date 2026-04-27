@@ -2,6 +2,10 @@
 
 ## worldbank (development version)
 
+- [`wb_bulk()`](https://m-muecke.github.io/worldbank/reference/wb_bulk.md)
+  downloads the entire World Development Indicators dataset as a zip and
+  returns its six CSVs as a list of data frames, including footnote and
+  series-time metadata not exposed by the API.
 - [`wb_search()`](https://m-muecke.github.io/worldbank/reference/wb_search.md)
   searches the indicator catalog for a regular expression pattern across
   one or more fields.

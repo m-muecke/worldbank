@@ -23,6 +23,8 @@
 - [`wb_data()`](https://m-muecke.github.io/worldbank/reference/wb_data.md)
   [`wb_country_indicator()`](https://m-muecke.github.io/worldbank/reference/wb_data.md)
   : World Bank country indicator data
+- [`wb_bulk()`](https://m-muecke.github.io/worldbank/reference/wb_bulk.md)
+  : World Bank WDI bulk download
 
 ### Poverty and Inequality Platform (PIP) Data
 
