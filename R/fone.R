@@ -51,13 +51,10 @@ fone_view <- function(view_id, ..., limit = NULL) {
 fone <- function(resource, ..., limit = NULL) {
   max_reqs <- if (!is.null(limit)) ceiling(limit / 1000L) else Inf
 
-  req <- request("https://datacatalogapi.worldbank.org/dexapps/fone/api") |>
-    req_user_agent(wb_user_agent()) |>
+  req <- wb_request("https://datacatalogapi.worldbank.org/dexapps/fone/api") |>
     req_error(body = \(resp) resp_body_string(resp, "UTF-8")) |>
     req_url_path_append(resource) |>
-    req_url_query(top = limit, type = "csv", ...) |>
-    req_wb_retry() |>
-    req_wb_cache()
+    req_url_query(top = limit, type = "csv", ...)
 
   resps <- req_perform_iterative(
     req,

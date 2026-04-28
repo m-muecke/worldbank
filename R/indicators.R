@@ -421,11 +421,8 @@ wb_bulk <- function(timeout = 600L) {
   dir.create(td)
   tf <- file.path(td, "WDI_CSV.zip")
 
-  request("https://databank.worldbank.org/data/download/WDI_CSV.zip") |>
-    req_user_agent(wb_user_agent()) |>
+  wb_request("https://databank.worldbank.org/data/download/WDI_CSV.zip") |>
     req_timeout(timeout) |>
-    req_wb_retry() |>
-    req_wb_cache() |>
     req_perform(path = tf)
 
   utils::unzip(tf, exdir = td)
@@ -604,13 +601,10 @@ wdi_pivot_long <- function(data) {
 
 worldbank <- function(resource, ..., lang = NULL, per_page = 32500L) {
   stopifnot(is_string(lang, null_ok = TRUE, n_chars = 2L))
-  json <- request("https://api.worldbank.org/v2") |>
-    req_user_agent(wb_user_agent()) |>
+  json <- wb_request("https://api.worldbank.org/v2") |>
     req_url_path_append(lang, resource) |>
     req_url_query(..., format = "json", per_page = per_page) |>
     req_error(is_error = is_wb_error, body = wb_error_body) |>
-    req_wb_retry() |>
-    req_wb_cache() |>
     req_perform() |>
     resp_body_json()
   json[[2L]]
@@ -618,12 +612,9 @@ worldbank <- function(resource, ..., lang = NULL, per_page = 32500L) {
 
 worldbank_seq <- function(resource, ..., lang = NULL, per_page = 32500L) {
   stopifnot(is_string(lang, null_ok = TRUE, n_chars = 2L))
-  req <- request("https://api.worldbank.org/v2") |>
-    req_user_agent(wb_user_agent()) |>
+  req <- wb_request("https://api.worldbank.org/v2") |>
     req_url_query(..., format = "json", per_page = per_page) |>
-    req_error(is_error = is_wb_error, body = wb_error_body) |>
-    req_wb_retry() |>
-    req_wb_cache()
+    req_error(is_error = is_wb_error, body = wb_error_body)
 
   resource |>
     map(\(x) req_url_path_append(req, lang, x)) |>

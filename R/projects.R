@@ -81,11 +81,8 @@ wb_project <- function(
 }
 
 projects <- function(..., per_page = 1000L) {
-  req <- request("https://search.worldbank.org/api/v2/projects") |>
-    req_user_agent(wb_user_agent()) |>
-    req_url_query(..., format = "json", rows = per_page) |>
-    req_wb_retry() |>
-    req_wb_cache()
+  req <- wb_request("https://search.worldbank.org/api/v2/projects") |>
+    req_url_query(..., format = "json", rows = per_page)
 
   resps <- req_perform_iterative(
     req,
