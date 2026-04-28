@@ -450,23 +450,6 @@ wb_bulk <- function(timeout = 600L) {
   )
 }
 
-wdi_pivot_long <- function(data) {
-  data$x <- NULL
-  year_cols <- grep("^x[0-9]+$", names(data), value = TRUE)
-  years <- as.integer(sub("^x", "", year_cols))
-  n_years <- length(years)
-  n_rows <- nrow(data)
-  data.frame(
-    country_name = rep(data$country_name, n_years),
-    country_code = rep(data$country_code, n_years),
-    indicator_name = rep(data$indicator_name, n_years),
-    indicator_code = rep(data$indicator_code, n_years),
-    year = rep(years, each = n_rows),
-    value = unlist(data[, year_cols], use.names = FALSE),
-    check.names = FALSE
-  )
-}
-
 #' World Bank country indicator data
 #'
 #' List all country indicators supported by the World Bank API.
@@ -599,6 +582,23 @@ parse_country_indicator <- function(data) {
     )
   })
   do.call(rbind, res)
+}
+
+wdi_pivot_long <- function(data) {
+  data$x <- NULL
+  year_cols <- grep("^x[0-9]+$", names(data), value = TRUE)
+  years <- as.integer(sub("^x", "", year_cols))
+  n_years <- length(years)
+  n_rows <- nrow(data)
+  data.frame(
+    country_name = rep(data$country_name, n_years),
+    country_code = rep(data$country_code, n_years),
+    indicator_name = rep(data$indicator_name, n_years),
+    indicator_code = rep(data$indicator_code, n_years),
+    year = rep(years, each = n_rows),
+    value = unlist(data[, year_cols], use.names = FALSE),
+    check.names = FALSE
+  )
 }
 
 worldbank <- function(resource, ..., lang = NULL, per_page = 32500L) {
