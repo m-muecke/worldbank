@@ -425,6 +425,7 @@ wb_bulk <- function(timeout = 600L) {
     req_user_agent(wb_user_agent()) |>
     req_timeout(timeout) |>
     req_wb_retry() |>
+    req_wb_cache() |>
     req_perform(path = tf)
 
   utils::unzip(tf, exdir = td)
