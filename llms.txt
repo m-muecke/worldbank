@@ -23,12 +23,14 @@ You can install the released version of **worldbank** from
 [CRAN](https://CRAN.R-project.org) with:
 
 ``` r
+
 install.packages("worldbank")
 ```
 
 And the development version from [GitHub](https://github.com/) with:
 
 ``` r
+
 # install.packages("pak")
 pak::pak("m-muecke/worldbank")
 ```
@@ -40,6 +42,7 @@ convention of the [World Bank API
 v2](https://datahelpdesk.worldbank.org/knowledgebase/articles/889392-about-the-indicators-api-documentation).
 
 ``` r
+
 library(worldbank)
 
 # filter by specific country
