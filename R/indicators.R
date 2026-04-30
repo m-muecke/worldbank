@@ -341,7 +341,9 @@ wb_indicator <- function(indicator = NULL, lang = "en") {
 #'   Optional pre-fetched indicator catalog. If `NULL` (default), [wb_indicator()] is called.
 #' @param lang (`character(1)`)\cr
 #'   Language to query. Only used when `catalog` is `NULL`. Default `"en"`.
-#' @param ... Additional arguments passed to [grepl()].
+#' @param ignore.case (`logical(1)`)\cr
+#'   Whether the match should be case insensitive. Default `TRUE`.
+#' @param ... Additional arguments passed to [grepl()], such as `fixed` or `perl`.
 #' @returns A `data.frame()` with the matching rows of the indicator catalog.
 #' @source <https://api.worldbank.org/v2/indicator>
 #' @family indicators data
@@ -362,12 +364,14 @@ wb_search <- function(
   fields = c("id", "name", "source_note"),
   catalog = NULL,
   lang = "en",
+  ignore.case = TRUE,
   ...
 ) {
   stopifnot(
     is_string(pattern),
     is_character(fields),
-    is.null(catalog) || is.data.frame(catalog)
+    is.null(catalog) || is.data.frame(catalog),
+    is_flag(ignore.case)
   )
   catalog <- catalog %||% wb_indicator(lang = lang)
   missing_fields <- setdiff(fields, names(catalog))
@@ -377,9 +381,8 @@ wb_search <- function(
       call. = FALSE
     )
   }
-  args <- utils::modifyList(list(ignore.case = TRUE), list(...))
   hit <- lapply(fields, function(x) {
-    m <- do.call(grepl, c(list(pattern = pattern, x = catalog[[x]]), args))
+    m <- grepl(pattern, catalog[[x]], ignore.case = ignore.case, ...)
     m & !is.na(m)
   })
   hit <- Reduce(`|`, hit)

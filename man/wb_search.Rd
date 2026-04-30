@@ -12,6 +12,7 @@ wb_search(
   fields = c("id", "name", "source_note"),
   catalog = NULL,
   lang = "en",
+  ignore.case = TRUE,
   ...
 )
 }
@@ -28,7 +29,10 @@ Optional pre-fetched indicator catalog. If \code{NULL} (default), \code{\link[=w
 \item{lang}{(\code{character(1)})\cr
 Language to query. Only used when \code{catalog} is \code{NULL}. Default \code{"en"}.}
 
-\item{...}{Additional arguments passed to \code{\link[=grepl]{grepl()}}.}
+\item{ignore.case}{(\code{logical(1)})\cr
+Whether the match should be case insensitive. Default \code{TRUE}.}
+
+\item{...}{Additional arguments passed to \code{\link[=grepl]{grepl()}}, such as \code{fixed} or \code{perl}.}
 }
 \value{
 A \code{data.frame()} with the matching rows of the indicator catalog.
