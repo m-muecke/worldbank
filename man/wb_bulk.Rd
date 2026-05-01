@@ -14,7 +14,7 @@ wb_bulk(timeout = 600L)
 Maximum download time in seconds. Default \code{600}.}
 }
 \value{
-A named \code{list} of \code{data.frame()}s:
+A named \code{list()} of \code{data.frame()}s:
 \itemize{
 \item \code{data}: indicator values in long format with columns \code{country_name}, \code{country_code},
 \code{indicator_name}, \code{indicator_code}, \code{year}, \code{value}.

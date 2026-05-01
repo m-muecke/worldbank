@@ -259,7 +259,7 @@ pip_citation <- function(
 #' @param table (`NULL` | `character(1)`)\cr
 #'   Table to be returned. Default `NULL`.
 #' @inheritParams pip_data
-#' @returns A `character()` with the available tables or a `data.frame()` containing the table data.
+#' @returns A `character()` with the available tables, or a `data.frame()` with the table data.
 #' @inherit pip_data source
 #' @family poverty and inequality statistics
 #' @export

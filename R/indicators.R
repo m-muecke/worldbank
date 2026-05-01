@@ -401,7 +401,7 @@ wb_search <- function(
 #'
 #' @param timeout (`integer(1)`)\cr
 #'   Maximum download time in seconds. Default `600`.
-#' @returns A named `list` of `data.frame()`s:
+#' @returns A named `list()` of `data.frame()`s:
 #' * `data`: indicator values in long format with columns `country_name`, `country_code`,
 #'   `indicator_name`, `indicator_code`, `year`, `value`.
 #' * `country`: country metadata.

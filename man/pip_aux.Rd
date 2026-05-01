@@ -28,7 +28,7 @@ Version of the data. Default \code{NULL}.}
 Version of the data. Default \code{NULL}.}
 }
 \value{
-A \code{character()} with the available tables or a \code{data.frame()} containing the table data.
+A \code{character()} with the available tables, or a \code{data.frame()} with the table data.
 }
 \description{
 Return auxiliary data tables
