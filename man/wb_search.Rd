@@ -32,7 +32,8 @@ Language to query. Only used when \code{catalog} is \code{NULL}. Default \code{"
 \item{ignore.case}{(\code{logical(1)})\cr
 Whether the match should be case insensitive. Default \code{TRUE}.}
 
-\item{...}{Additional arguments passed to \code{\link[=grepl]{grepl()}}, such as \code{fixed} or \code{perl}.}
+\item{...}{(\code{any})\cr
+Additional arguments passed to \code{\link[=grepl]{grepl()}}.}
 }
 \value{
 A \code{data.frame()} with the matching rows of the indicator catalog.

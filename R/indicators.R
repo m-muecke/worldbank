@@ -343,7 +343,8 @@ wb_indicator <- function(indicator = NULL, lang = "en") {
 #'   Language to query. Only used when `catalog` is `NULL`. Default `"en"`.
 #' @param ignore.case (`logical(1)`)\cr
 #'   Whether the match should be case insensitive. Default `TRUE`.
-#' @param ... Additional arguments passed to [grepl()], such as `fixed` or `perl`.
+#' @param ... (`any`)\cr
+#'   Additional arguments passed to [grepl()].
 #' @returns A `data.frame()` with the matching rows of the indicator catalog.
 #' @source <https://api.worldbank.org/v2/indicator>
 #' @family indicators data
