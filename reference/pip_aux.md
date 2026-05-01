@@ -42,9 +42,9 @@ pip_aux(
 ## Value
 
 A [`character()`](https://rdrr.io/r/base/character.html) with the
-available tables or a
-[`data.frame()`](https://rdrr.io/r/base/data.frame.html) containing the
-table data.
+available tables, or a
+[`data.frame()`](https://rdrr.io/r/base/data.frame.html) with the table
+data.
 
 ## See also
 

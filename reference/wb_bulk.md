@@ -26,7 +26,7 @@ wb_bulk(timeout = 600L)
 
 ## Value
 
-A named `list` of
+A named [`list()`](https://rdrr.io/r/base/list.html) of
 [`data.frame()`](https://rdrr.io/r/base/data.frame.html)s:
 
 - `data`: indicator values in long format with columns `country_name`,
