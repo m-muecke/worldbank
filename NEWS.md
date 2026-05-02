@@ -18,9 +18,7 @@
 
 # worldbank 0.7.0
 
-* Added optional request caching to improve performance for repeated queries.
-  Enable with `options(worldbank.cache = TRUE)`. Cache duration can be customized
-  with `worldbank.cache_max_age` (default: 1 day).
+* Added optional request caching to improve performance for repeated queries. Enable with `options(worldbank.cache = TRUE)`. Cache duration can be customized with `worldbank.cache_max_age` (default: 1 day).
 * New functions `wb_cache_delete()` and `wb_cache_dir()` to manage the cache.
 
 # worldbank 0.6.1
@@ -33,13 +31,11 @@
 
 # worldbank 0.5.0
 
-* `wb_country_indicator()` now allows for multiple indicators to be
-  requested at once.
+* `wb_country_indicator()` now allows for multiple indicators to be requested at once.
 
 # worldbank 0.4.0
 
-* Removed conditional return of tibble and now always return a
-  data.frame instead. This ensures type stability across all functions.
+* Removed conditional return of tibble and now always return a data.frame instead. This ensures type stability across all functions.
 * Add support for Finances One API data.
 
 # worldbank 0.3.0
