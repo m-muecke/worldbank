@@ -41,16 +41,16 @@ wb_indicator("NY.GDP.MKTP.CD")
 \dontshow{\}) # examplesIf}
 }
 \seealso{
-Other indicators data: 
-\code{\link{wb_bulk}()},
-\code{\link{wb_country}()},
-\code{\link{wb_data}()},
-\code{\link{wb_income_level}()},
-\code{\link{wb_language}()},
-\code{\link{wb_lending_type}()},
-\code{\link{wb_region}()},
-\code{\link{wb_search}()},
-\code{\link{wb_source}()},
-\code{\link{wb_topic}()}
+Other indicators data:
+\code{\link[=wb_bulk]{wb_bulk()}},
+\code{\link[=wb_country]{wb_country()}},
+\code{\link[=wb_data]{wb_data()}},
+\code{\link[=wb_income_level]{wb_income_level()}},
+\code{\link[=wb_language]{wb_language()}},
+\code{\link[=wb_lending_type]{wb_lending_type()}},
+\code{\link[=wb_region]{wb_region()}},
+\code{\link[=wb_search]{wb_search()}},
+\code{\link[=wb_source]{wb_source()}},
+\code{\link[=wb_topic]{wb_topic()}}
 }
 \concept{indicators data}
