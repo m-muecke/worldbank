@@ -15,7 +15,7 @@ wb_bulk(timeout = 600L)
 
 ## Source
 
-<https://databank.worldbank.org/data/download/WDI_CSV.zip>
+<https://databankfiles.worldbank.org/public/ddpext_download/WDI_CSV.zip>
 
 ## Arguments
 

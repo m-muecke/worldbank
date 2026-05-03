@@ -1,6 +1,8 @@
 # Changelog
 
-## worldbank (development version)
+## worldbank 0.9.0
+
+CRAN release: 2026-05-03
 
 - [`wb_bulk()`](https://m-muecke.github.io/worldbank/reference/wb_bulk.md)
   downloads the entire World Development Indicators dataset as a zip and
