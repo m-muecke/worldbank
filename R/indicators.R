@@ -409,10 +409,10 @@ wb_search <- function(
 #' * `country_series`: country-series-specific notes.
 #' * `series_time`: series-year-specific notes.
 #' * `footnote`: footnotes per country, series, and year.
-#' @source <https://databank.worldbank.org/data/download/WDI_CSV.zip>
+#' @source <https://databankfiles.worldbank.org/public/ddpext_download/WDI_CSV.zip>
 #' @family indicators data
 #' @export
-#' @examplesIf httr2::is_online()
+#' @examples
 #' \dontrun{
 #' wdi <- wb_bulk()
 #' head(wdi$data)
@@ -425,7 +425,7 @@ wb_bulk <- function(timeout = 600L) {
   dir.create(td)
   tf <- file.path(td, "WDI_CSV.zip")
 
-  wb_request("https://databank.worldbank.org/data/download/WDI_CSV.zip") |>
+  wb_request("https://databankfiles.worldbank.org/public/ddpext_download/WDI_CSV.zip") |>
     req_timeout(timeout) |>
     req_perform(path = tf)
 

@@ -4,7 +4,7 @@
 \alias{wb_bulk}
 \title{World Bank WDI bulk download}
 \source{
-\url{https://databank.worldbank.org/data/download/WDI_CSV.zip}
+\url{https://databankfiles.worldbank.org/public/ddpext_download/WDI_CSV.zip}
 }
 \usage{
 wb_bulk(timeout = 600L)
@@ -35,12 +35,10 @@ that the API does not expose.
 The download is roughly 280 MB compressed and may take a minute or more.
 }
 \examples{
-\dontshow{if (httr2::is_online()) withAutoprint(\{ # examplesIf}
 \dontrun{
 wdi <- wb_bulk()
 head(wdi$data)
 }
-\dontshow{\}) # examplesIf}
 }
 \seealso{
 Other indicators data:
