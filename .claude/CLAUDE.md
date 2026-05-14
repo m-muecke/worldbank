@@ -2,41 +2,53 @@
 
 ### Key commands
 
-```
+```R
 # To run code
-Rscript -e "devtools::load_all(); code"
+devtools::load_all(); code
 
 # To run all tests
-Rscript -e "devtools::test()"
+devtools::test()
 
 # To run all tests for files starting with {name}
-Rscript -e "devtools::test(filter = '^{name}')"
+devtools::test(filter = '^{name}')
 
 # To run all tests for R/{name}.R
-Rscript -e "devtools::test_active_file('R/{name}.R')"
+devtools::test_active_file('R/{name}.R')
 
 # To run a single test "blah" for R/{name}.R
-Rscript -e "devtools::test_active_file('R/{name}.R', desc = 'blah')"
+devtools::test_active_file('R/{name}.R', desc = 'blah')
 
 # To redocument the package
-Rscript -e "devtools::document()"
+devtools::document()
 
 # To check pkgdown documentation
-Rscript -e "pkgdown::check_pkgdown()"
+pkgdown::check_pkgdown()
 
 # To check the package with R CMD check
-Rscript -e "devtools::check()"
+devtools::check()
+```
 
+You have two options to run R code:
+
+* `Rscript --no-environ  -e "code"`.
+
+  Without `--no-environ`, every R call fails with `"Fatal error: cannot create 'R_TempDir'"` because the sandbox blocks reads of `~/.Renviron`, which R reads during startup before creating `tempdir()`.
+
+* If the mcp-repl tool is available, you can use it instead. Note that its default sandbox blocks network requests.
+
+Other commands:
+
+```
 # To format code
 air format .
 ```
 
 ### Coding
 
-- Always run `air format .` after generating code
-- Use the base pipe operator (`|>`) not the magrittr pipe (`%>%`)
-- Don't use `_$x` or `_$[["x"]]` since this package must work on R 4.1.
-- Use `\() ...` for single-line anonymous functions. For all other cases, use `function() {...}`
+* Always run `air format .` after generating code
+* Use the base pipe operator (`|>`) not the magrittr pipe (`%>%`)
+* Don't use `_$x` or `_$[["x"]]` since this package must work on R 4.1.
+* Use `\() ...` for single-line anonymous functions. For all other cases, use `function() {...}`
 
 ### Testing
 
@@ -44,6 +56,10 @@ air format .
 - All new code should have an accompanying test.
 - If there are existing tests, place new tests next to similar existing tests.
 - Strive to keep your tests minimal with few comments.
+- Never put code in a `test-{name}.R` file outside of a `test_that()` block. Instead, use `tests/testthat/helper.R` or `tests/testthat/helper-{name}.R`.
+- Avoid `expect_true()` and `expect_false()` in favour of a specific expectation which will give a better failure message. A few expectations in newer releases that you might not know about are `expect_all_true()`, `expect_all_equal()`, and `expect_r6_class()`.
+- When testing errors and warnings, don't use `expect_error()` or `expect_warning()`. Instead, use `expect_snapshot(error = TRUE)` for errors and `expect_snapshot()` for warnings because these allow the user to review the full text of the output.
+- Avoid the `.package` argument to `local_mocked_bindings()`; this modifies the namespace of another package which is not good practice. Instead create a mockable version of the function in the current package. See `?local_mocked_bindings` for more details.
 
 ### Documentation
 
@@ -56,7 +72,11 @@ air format .
 
 ### `NEWS.md`
 
-- Every user-facing change should be given a bullet in `NEWS.md`. Do not add bullets for small documentation changes or internal refactorings.
+- Every user-facing change should be given a bullet in `NEWS.md`.
+- Changes that shouldn't get a bullet:
+    - Small documentation changes.
+    - Internal refactorings.
+    - Fixes to bugs introduced in the current dev version.
 - Each bullet should briefly describe the change to the end user and mention the related issue in parentheses.
 - A bullet can consist of multiple sentences but should not contain any new lines (i.e. DO NOT line wrap).
 - If the change is related to a function, put the name of the function early in the bullet.
@@ -80,4 +100,3 @@ Work paragraph by paragraph, always starting by making a TODO list that includes
 Fix spelling, grammar, and other minor problems without asking the user. Label any unclear, confusing, or ambiguous sentences with a FIXME comment.
 
 Only report what you have changed.
-
