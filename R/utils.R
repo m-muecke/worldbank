@@ -1,5 +1,9 @@
-`%||%` <- function(x, y) {
-  if (is.null(x)) y else x # nolint
+`%||%` <- function(lhs, rhs) {
+  if (is.null(lhs)) rhs else lhs # nolint
+}
+
+`%&&%` <- function(lhs, rhs) {
+  if (is.null(lhs)) NULL else rhs
 }
 
 clean_strings <- function(data) {

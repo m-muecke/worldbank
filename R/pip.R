@@ -51,12 +51,8 @@ pip_data <- function(
 ) {
   welfare_type <- match.arg(welfare_type)
   reporting_level <- match.arg(reporting_level)
-  if (!is.null(year)) {
-    year <- as.character(year)
-  }
-  if (!is.null(ppp_version)) {
-    ppp_version <- as.character(ppp_version)
-  }
+  year <- year %&&% as.character(year)
+  ppp_version <- ppp_version %&&% as.character(ppp_version)
   stopifnot(
     is_character(country, null_ok = TRUE, n_chars = 3L),
     is_character(year, n_chars = 4L, pattern = "[0-9]{4}", null_ok = TRUE),
@@ -110,9 +106,7 @@ pip_cp <- function(
   ppp_version = NULL,
   version = NULL
 ) {
-  if (!is.null(ppp_version)) {
-    ppp_version <- as.character(ppp_version)
-  }
+  ppp_version <- ppp_version %&&% as.character(ppp_version)
   stopifnot(
     is_character(country, null_ok = TRUE, n_chars = 3L),
     is_string(release_version, pattern = "[0-9]{8}", null_ok = TRUE),
@@ -163,12 +157,8 @@ pip_group <- function(
   group_by <- match.arg(group_by)
   welfare_type <- match.arg(welfare_type)
   reporting_level <- match.arg(reporting_level)
-  if (!is.null(year)) {
-    year <- as.character(year)
-  }
-  if (!is.null(ppp_version)) {
-    ppp_version <- as.character(ppp_version)
-  }
+  year <- year %&&% as.character(year)
+  ppp_version <- ppp_version %&&% as.character(ppp_version)
   stopifnot(
     is_character(country, null_ok = TRUE, n_chars = 3L),
     is_character(year, n_chars = 4L, pattern = "[0-9]{4}", null_ok = TRUE),
@@ -230,9 +220,7 @@ pip_citation <- function(
   ppp_version = NULL,
   version = NULL
 ) {
-  if (!is.null(ppp_version)) {
-    ppp_version <- as.character(ppp_version)
-  }
+  ppp_version <- ppp_version %&&% as.character(ppp_version)
   stopifnot(
     is_string(release_version, pattern = "[0-9]{8}", null_ok = TRUE),
     is_string(ppp_version, pattern = "[0-9]{4}", null_ok = TRUE),
@@ -286,9 +274,7 @@ pip_aux <- function(
   ppp_version = NULL,
   version = NULL
 ) {
-  if (!is.null(ppp_version)) {
-    ppp_version <- as.character(ppp_version)
-  }
+  ppp_version <- ppp_version %&&% as.character(ppp_version)
   stopifnot(
     is_string(table, null_ok = TRUE),
     is_string(release_version, pattern = "[0-9]{8}", null_ok = TRUE),
@@ -338,9 +324,7 @@ pip_valid_params <- function(
   ppp_version = NULL,
   version = NULL
 ) {
-  if (!is.null(ppp_version)) {
-    ppp_version <- as.character(ppp_version)
-  }
+  ppp_version <- ppp_version %&&% as.character(ppp_version)
   stopifnot(
     is_string(release_version, pattern = "[0-9]{8}", null_ok = TRUE),
     is_string(ppp_version, pattern = "[0-9]{4}", null_ok = TRUE),

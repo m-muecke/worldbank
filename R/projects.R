@@ -67,7 +67,7 @@ wb_project <- function(
   if (!is.null(id)) {
     data <- projects(id = id)
   } else {
-    country_param <- if (!is.null(country)) paste0(country, collapse = ";") else NULL
+    country_param <- country %&&% paste0(country, collapse = ";")
     data <- projects(
       countrycode_exact = country_param,
       status = status,
