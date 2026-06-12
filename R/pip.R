@@ -66,7 +66,7 @@ pip_data <- function(
   if (nowcast && !fill_gaps) {
     stop("`nowcast = TRUE` requires `fill_gaps = TRUE`.", call. = FALSE)
   }
-  res <- pip(
+  pip(
     resource = "pip",
     country = country,
     year = year,
@@ -83,7 +83,6 @@ pip_data <- function(
     format = "csv",
     .multi = "comma"
   )
-  res
 }
 
 #' Return country profile data
@@ -113,7 +112,7 @@ pip_cp <- function(
     is_string(ppp_version, pattern = "[0-9]{4}", null_ok = TRUE),
     is_string(version, null_ok = TRUE)
   )
-  res <- pip(
+  pip(
     resource = "cp-download",
     country = country,
     povline = povline,
@@ -123,7 +122,6 @@ pip_cp <- function(
     format = "csv",
     .multi = "comma"
   )
-  res
 }
 
 #' Return aggregation of PIP statistics
@@ -168,7 +166,7 @@ pip_group <- function(
     is_string(ppp_version, pattern = "[0-9]{4}", null_ok = TRUE),
     is_string(version, null_ok = TRUE)
   )
-  res <- pip(
+  pip(
     resource = "pip-grp",
     country = country,
     year = year,
@@ -185,7 +183,6 @@ pip_group <- function(
     format = "csv",
     .multi = "comma"
   )
-  res
 }
 
 #' Return the available data versions
@@ -200,8 +197,7 @@ pip_group <- function(
 #' head(vers)
 #' }
 pip_versions <- function() {
-  res <- pip("versions", format = "csv")
-  res
+  pip("versions", format = "csv")
 }
 
 #' Return citation for a given version
@@ -233,13 +229,12 @@ pip_citation <- function(
     version = version,
     format = "json"
   )
-  res <- data.frame(
+  data.frame(
     citation = res$citation[[1L]],
     version = res$version[[1L]],
     date_accessed = res$date_accessed[[1L]],
     check.names = FALSE
   )
-  res
 }
 
 #' Return auxiliary data tables
@@ -390,15 +385,11 @@ pip <- function(resource, ..., format = c("json", "csv", "xml", "rds")) {
     req_url_query(format = format, ...) |>
     req_perform()
 
-  body <- switch(
+  switch(
     format,
     json = resp_body_json(resp),
-    csv = {
-      body <- resp_body_string(resp, "UTF-8")
-      utils::read.csv(textConnection(body, encoding = "UTF-8"))
-    },
+    csv = resp_body_csv(resp),
     xml = resp_body_xml(resp),
     rds = resp_body_raw(resp)
   )
-  body
 }

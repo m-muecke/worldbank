@@ -62,16 +62,14 @@ fone <- function(resource, ..., limit = NULL) {
       "skip",
       start = 0L,
       offset = 1000L,
-      resp_complete = \(resp) length(resp$body) == 0L
+      resp_complete = \(resp) !resp_has_body(resp)
     ),
     max_reqs = max_reqs
   )
 
-  res <- resps_data(resps, function(resp) {
-    if (length(resp$body) > 0L) {
-      body <- resp_body_string(resp, "UTF-8")
-      utils::read.csv(textConnection(body, encoding = "UTF-8"))
+  resps_data(resps, function(resp) {
+    if (resp_has_body(resp)) {
+      resp_body_csv(resp)
     }
   })
-  res
 }

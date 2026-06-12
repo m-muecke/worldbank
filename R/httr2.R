@@ -12,3 +12,8 @@ wb_request <- function(url) {
     req_wb_retry() |>
     req_wb_cache()
 }
+
+resp_body_csv <- function(resp) {
+  body <- resp_body_string(resp, "UTF-8")
+  utils::read.csv(textConnection(body, encoding = "UTF-8"))
+}

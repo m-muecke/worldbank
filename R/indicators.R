@@ -309,7 +309,7 @@ wb_country <- function(country = NULL, lang = "en") {
 #' }
 wb_indicator <- function(indicator = NULL, lang = "en") {
   stopifnot(is_string(indicator, null_ok = TRUE))
-  indicator <- indicator %||% "all"
+  indicator <- format_param(indicator)
 
   resource <- sprintf("indicator/%s", indicator)
   data <- worldbank(resource = resource, lang = lang)
