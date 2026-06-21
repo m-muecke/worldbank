@@ -13,6 +13,12 @@ wb_cache_clear()
 
 wb_cache_delete()
 }
+\value{
+\code{wb_cache_dir()} returns a string with the path to the cache directory.
+
+\code{wb_cache_clear()} is called for its side effect of clearing the cached
+responses and returns \code{NULL} invisibly.
+}
 \description{
 \code{wb_cache_dir()} returns the path where cached API responses are stored.
 \code{wb_cache_clear()} clears all cached responses.
