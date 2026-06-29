@@ -8,7 +8,7 @@
 ## Citation
 
 Source:
-[`DESCRIPTION`](https://github.com/m-muecke/worldbank/blob/main/DESCRIPTION)
+[`DESCRIPTION`](https://github.com/m-muecke/worldbank/blob/v0.9.1/DESCRIPTION)
 
 Mücke M (2026). *worldbank: Client for the 'World Bank' APIs*. R package
 version 0.9.1, <https://m-muecke.github.io/worldbank/>.

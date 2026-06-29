@@ -2,6 +2,8 @@
 
 ## worldbank 0.9.1
 
+CRAN release: 2026-06-29
+
 - [`wb_data()`](https://m-muecke.github.io/worldbank/reference/wb_data.md)
   now returns an empty data frame instead of erroring when a query has
   no observations.
