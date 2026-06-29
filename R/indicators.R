@@ -377,10 +377,7 @@ wb_search <- function(
   catalog <- catalog %||% wb_indicator(lang = lang)
   missing_fields <- setdiff(fields, names(catalog))
   if (length(missing_fields) > 0L) {
-    stop(
-      sprintf("`fields` not found in catalog: %s.", toString(missing_fields)),
-      call. = FALSE
-    )
+    stop(sprintf("`fields` not found in catalog: %s.", toString(missing_fields)), call. = FALSE)
   }
   hit <- lapply(fields, function(x) {
     m <- grepl(pattern, catalog[[x]], ignore.case = ignore.case, ...)
@@ -565,25 +562,20 @@ wb_data <- function(
 wb_country_indicator <- wb_data
 
 parse_country_indicator <- function(data) {
-  res <- map(data, function(x) {
-    if (is.null(x$value) || is.null(x$date)) {
-      return()
-    }
-    data.frame(
-      date = x$date,
-      indicator_id = x$indicator$id,
-      indicator_name = x$indicator$value,
-      country_id = x$country$id,
-      country_name = x$country$value,
-      country_code = x$countryiso3code,
-      value = x$value,
-      unit = x$unit,
-      obs_status = x$obs_status,
-      decimal = x$decimal,
-      check.names = FALSE
-    )
-  })
-  do.call(rbind, res)
+  data <- Filter(\(x) !is.null(x$value) && !is.null(x$date), data)
+  data.frame(
+    date = map_chr(data, "date"),
+    indicator_id = map_chr(data, \(x) x$indicator$id),
+    indicator_name = map_chr(data, \(x) x$indicator$value),
+    country_id = map_chr(data, \(x) x$country$id),
+    country_name = map_chr(data, \(x) x$country$value),
+    country_code = map_chr(data, "countryiso3code"),
+    value = map_dbl(data, "value"),
+    unit = map_chr(data, "unit"),
+    obs_status = map_chr(data, "obs_status"),
+    decimal = map_int(data, "decimal"),
+    check.names = FALSE
+  )
 }
 
 wdi_pivot_long <- function(data) {

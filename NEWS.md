@@ -1,5 +1,7 @@
 # worldbank (development version)
 
+* `wb_data()` now returns an empty data frame instead of erroring when a query has no observations.
+
 # worldbank 0.9.0
 
 * `wb_bulk()` downloads the entire World Development Indicators dataset as a zip and returns its six CSVs as a list of data frames, including footnote and series-time metadata not exposed by the API.

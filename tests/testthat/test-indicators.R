@@ -336,6 +336,13 @@ test_that("wb_country_indicator input validation works", {
   expect_error(wb_country_indicator(lang = 1L))
 })
 
+test_that("wb_data returns an empty data.frame when there are no observations", {
+  local_mocked_bindings(worldbank = function(...) NULL)
+  actual <- wb_data("NY.GDP.MKTP.CD", "US")
+  expect_s3_class(actual, "data.frame")
+  expect_shape(actual, dim = c(0L, 10L))
+})
+
 test_that("wb_data mrv and gapfill validation works", {
   expect_error(wb_data(mrv = 3, start_date = 2020), "mrv")
   expect_error(wb_data(mrv = 3, end_date = 2020), "mrv")
