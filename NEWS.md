@@ -1,4 +1,4 @@
-# worldbank (development version)
+# worldbank 0.9.1
 
 * `wb_data()` now returns an empty data frame instead of erroring when a query has no observations.
 
