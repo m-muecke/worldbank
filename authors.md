@@ -8,15 +8,15 @@
 ## Citation
 
 Source:
-[`DESCRIPTION`](https://github.com/m-muecke/worldbank/blob/v0.9.1/DESCRIPTION)
+[`DESCRIPTION`](https://github.com/m-muecke/worldbank/blob/main/DESCRIPTION)
 
 Mücke M (2026). *worldbank: Client for the 'World Bank' APIs*. R package
-version 0.9.1, <https://m-muecke.github.io/worldbank/>.
+version 0.9.1.9000, <https://m-muecke.github.io/worldbank/>.
 
     @Manual{,
       title = {worldbank: Client for the 'World Bank' APIs},
       author = {Maximilian Mücke},
       year = {2026},
-      note = {R package version 0.9.1},
+      note = {R package version 0.9.1.9000},
       url = {https://m-muecke.github.io/worldbank/},
     }
