@@ -3,8 +3,7 @@
 ## worldbank (development version)
 
 - The PIP functions now require `release_version` and `ppp_version` to
-  be exactly 8 and 4 digits, instead of merely containing them, and both
-  accept the digits as a string or a number.
+  be exactly 8 and 4 digits, given as a string or a number.
 - [`pip_data()`](https://m-muecke.github.io/worldbank/reference/pip_data.md),
   [`pip_cp()`](https://m-muecke.github.io/worldbank/reference/pip_cp.md),
   and
