@@ -1,7 +1,9 @@
 # worldbank (development version)
 
-* `pip_data()`, `pip_cp()`, and `pip_group()` now reject `povline` and `popshare` values outside the ranges accepted by the API.
-* `wb_project()` now requires `status` to be lowercase, e.g. `"active"` instead of `"Active"`.
+* The PIP functions now require `release_version` and `ppp_version` to be exactly 8 and 4 digits, instead of merely containing them.
+* `pip_data()`, `pip_cp()`, and `pip_group()` now require `povline` and `popshare` to be numbers within the ranges accepted by the API.
+* `wb_data()` no longer returns `NA` dates when a query mixes annual and sub-annual indicators.
+* `wb_project()` now requires `status` to be one of `"active"`, `"closed"`, `"dropped"`, or `"pipeline"`.
 
 # worldbank 0.9.1
 
