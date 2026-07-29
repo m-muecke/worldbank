@@ -56,6 +56,8 @@ pip_data <- function(
   stopifnot(
     is_character(country, null_ok = TRUE, n_chars = 3L),
     is_character(year, n_chars = 4L, pattern = "[0-9]{4}", null_ok = TRUE),
+    is_number(povline, null_ok = TRUE),
+    is_number(popshare, null_ok = TRUE),
     is_flag(fill_gaps),
     is_flag(nowcast),
     is_string(release_version, pattern = "^[0-9]{8}$", null_ok = TRUE),
@@ -108,6 +110,7 @@ pip_cp <- function(
   ppp_version <- ppp_version %&&% as.character(ppp_version)
   stopifnot(
     is_character(country, null_ok = TRUE, n_chars = 3L),
+    is_number(povline, null_ok = TRUE),
     is_string(release_version, pattern = "^[0-9]{8}$", null_ok = TRUE),
     is_string(ppp_version, pattern = "^[0-9]{4}$", null_ok = TRUE),
     is_string(version, null_ok = TRUE)
@@ -160,6 +163,8 @@ pip_group <- function(
   stopifnot(
     is_character(country, null_ok = TRUE, n_chars = 3L),
     is_character(year, n_chars = 4L, pattern = "[0-9]{4}", null_ok = TRUE),
+    is_number(povline, null_ok = TRUE),
+    is_number(popshare, null_ok = TRUE),
     is_flag(fill_gaps),
     is_string(release_version, pattern = "^[0-9]{8}$", null_ok = TRUE),
     is_flag(additional_ind),

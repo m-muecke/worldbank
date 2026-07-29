@@ -40,6 +40,13 @@ is_count <- function(x, null_ok = FALSE) {
   is.numeric(x) && length(x) == 1L && is.finite(x) && as.integer(x) == x && x > 0L
 }
 
+is_number <- function(x, null_ok = FALSE) {
+  if (null_ok && is.null(x)) {
+    return(TRUE)
+  }
+  is.numeric(x) && length(x) == 1L && is.finite(x)
+}
+
 is_dateish <- function(x, null_ok = FALSE) {
   if (null_ok && is.null(x)) {
     return(TRUE)
