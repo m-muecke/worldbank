@@ -51,10 +51,10 @@ is_version <- function(x, n_digits, null_ok = FALSE) {
   if (null_ok && is.null(x)) {
     return(TRUE)
   }
-  if (length(x) != 1L || is.na(x) || !(is.character(x) || is.numeric(x))) {
-    return(FALSE)
+  if (is_number(x)) {
+    x <- as.character(x)
   }
-  grepl(sprintf("^[0-9]{%d}$", n_digits), as.character(x))
+  is_string(x, n_chars = n_digits, pattern = "^[0-9]+$")
 }
 
 is_dateish <- function(x, null_ok = FALSE) {
