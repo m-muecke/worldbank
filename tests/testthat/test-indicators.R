@@ -315,9 +315,8 @@ test_that("wb_search input validation works", {
 })
 
 test_that("wb_country_indicator input validation works", {
-  # indicator should be a string
+  # indicator should be a non-empty character vector
   expect_error(wb_country_indicator(indicator = NULL))
-  expect_error(wb_country_indicator(indicator = c("a", "b")))
   expect_error(wb_country_indicator(indicator = 1L))
   expect_error(wb_country_indicator(indicator = NA))
   # country should be a character vector with 2/3 letters or NULL
