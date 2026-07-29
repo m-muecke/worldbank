@@ -80,15 +80,16 @@ Years for which statistics are to be computed, specified as YYYY. Default <code>
 
 
 <dt id="arg-povline">povline<a class="anchor" aria-label="anchor" href="#arg-povline"></a></dt>
-<dd><p>(<code>numeric(1)</code>)<br>
-Poverty line to be used to compute poverty measures. Poverty lines are only accepted up to 3
-decimals. Default <code>2.15</code>.</p></dd>
+<dd><p>(<code>NULL</code> | <code>numeric(1)</code>)<br>
+Poverty line to be used to compute poverty measures, between <code>0</code> and <code>2700</code>. Poverty lines
+are only accepted up to 3 decimals. Default <code>2.15</code>.</p></dd>
 
 
 <dt id="arg-popshare">popshare<a class="anchor" aria-label="anchor" href="#arg-popshare"></a></dt>
 <dd><p>(<code>NULL</code> | <code>numeric(1)</code>)<br>
-Proportion of the population living below the poverty line. Will be ignored if <code>povline</code> is
-specified. Default <code>NULL</code>.</p></dd>
+Proportion of the population living below the poverty line, between <code>0</code> and <code>1</code>. Takes
+precedence over <code>povline</code>: if both are supplied, the poverty line is derived from <code>popshare</code>.
+Default <code>NULL</code>.</p></dd>
 
 
 <dt id="arg-fill-gaps">fill_gaps<a class="anchor" aria-label="anchor" href="#arg-fill-gaps"></a></dt>

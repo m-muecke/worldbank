@@ -42,15 +42,17 @@ pip_data(
 
 - povline:
 
-  (`numeric(1)`)  
-  Poverty line to be used to compute poverty measures. Poverty lines are
-  only accepted up to 3 decimals. Default `2.15`.
+  (`NULL` \| `numeric(1)`)  
+  Poverty line to be used to compute poverty measures, between `0` and
+  `2700`. Poverty lines are only accepted up to 3 decimals. Default
+  `2.15`.
 
 - popshare:
 
   (`NULL` \| `numeric(1)`)  
-  Proportion of the population living below the poverty line. Will be
-  ignored if `povline` is specified. Default `NULL`.
+  Proportion of the population living below the poverty line, between
+  `0` and `1`. Takes precedence over `povline`: if both are supplied,
+  the poverty line is derived from `popshare`. Default `NULL`.
 
 - fill_gaps:
 

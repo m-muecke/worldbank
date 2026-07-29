@@ -28,9 +28,10 @@ pip_cp(
 
 - povline:
 
-  (`numeric(1)`)  
-  Poverty line to be used to compute poverty measures. Poverty lines are
-  only accepted up to 3 decimals. Default `2.15`.
+  (`NULL` \| `numeric(1)`)  
+  Poverty line to be used to compute poverty measures, between `0` and
+  `2700`. Poverty lines are only accepted up to 3 decimals. Default
+  `2.15`.
 
 - release_version:
 

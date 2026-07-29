@@ -2,6 +2,16 @@
 
 ## worldbank (development version)
 
+- [`pip_data()`](https://m-muecke.github.io/worldbank/reference/pip_data.md),
+  [`pip_cp()`](https://m-muecke.github.io/worldbank/reference/pip_cp.md),
+  and
+  [`pip_group()`](https://m-muecke.github.io/worldbank/reference/pip_group.md)
+  now reject `povline` and `popshare` values outside the ranges accepted
+  by the API.
+- [`wb_project()`](https://m-muecke.github.io/worldbank/reference/wb_project.md)
+  now requires `status` to be lowercase, e.g. `"active"` instead of
+  `"Active"`.
+
 ## worldbank 0.9.1
 
 CRAN release: 2026-06-29
