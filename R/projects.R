@@ -58,6 +58,7 @@ wb_project <- function(
     is_string(id, null_ok = TRUE),
     is_character(country, null_ok = TRUE),
     is_string(status, null_ok = TRUE),
+    is.null(status) || status %in% c("Active", "Closed", "Dropped", "Pipeline"),
     is_string(region, null_ok = TRUE),
     is_string(search, null_ok = TRUE),
     is_string(start_date, null_ok = TRUE, pattern = "^\\d{4}-\\d{2}-\\d{2}$"),

@@ -24,6 +24,8 @@ test_that("wb_project input validation works", {
   expect_error(wb_project(country = NA))
   expect_error(wb_project(status = 1L))
   expect_error(wb_project(status = TRUE))
+  expect_error(wb_project(status = "Invalid"))
+  expect_error(wb_project(status = "Act"))
   expect_error(wb_project(region = 1L))
   expect_error(wb_project(search = 1L))
   expect_error(wb_project(start_date = "2024"))
