@@ -60,7 +60,7 @@ Whether to fill missing values by carrying forward the last available value. Onl
 A \code{data.frame()} with the available country indicators.
 The columns are:
 \itemize{
-\item \code{date}: The date
+\item \code{date}: The date. An integer if all observations are annual, otherwise a character vector.
 \item \code{indicator_id}: The indicator ID.
 \item \code{indicator_name}: The indicator name.
 \item \code{country_id}: The country ID.

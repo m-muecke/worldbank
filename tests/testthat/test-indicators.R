@@ -371,6 +371,8 @@ test_that("wb_data preserves mixed-frequency dates as character", {
 
   expect_identical(actual$date, c("2020", "2020Q1"))
   expect_identical(reversed$date, c("2020Q1", "2020"))
+  expect_identical(wb_data(c("annual", "annual"), "US")$date, c(2020L, 2020L))
+  expect_identical(wb_data(c("quarterly", "quarterly"), "US")$date, c("2020Q1", "2020Q1"))
 })
 
 test_that("wb_data mrv and gapfill validation works", {

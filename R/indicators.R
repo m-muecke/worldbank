@@ -473,7 +473,7 @@ wb_bulk <- function(timeout = 600L) {
 #'   `mrv` is set. Default `FALSE`.
 #' @returns A `data.frame()` with the available country indicators.
 #'   The columns are:
-#' * `date`: The date
+#' * `date`: The date. An integer if all observations are annual, otherwise a character vector.
 #' * `indicator_id`: The indicator ID.
 #' * `indicator_name`: The indicator name.
 #' * `country_id`: The country ID.
