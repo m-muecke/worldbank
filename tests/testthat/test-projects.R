@@ -2,7 +2,7 @@ test_that("wb_project", {
   local_mocked_bindings(
     projects = function(...) readRDS(test_path("fixtures", "wb-project.rds"))
   )
-  actual <- wb_project(country = "BR", status = "Active")
+  actual <- wb_project(country = "BR", status = "active")
   expect_s3_class(actual, "data.frame")
   expect_shape(actual, dim = c(3L, 15L))
   expect_type(actual$total_commitment, "double")
@@ -24,11 +24,32 @@ test_that("wb_project input validation works", {
   expect_error(wb_project(country = NA))
   expect_error(wb_project(status = 1L))
   expect_error(wb_project(status = TRUE))
-  expect_error(wb_project(status = "Invalid"))
-  expect_error(wb_project(status = "Act"))
   expect_error(wb_project(region = 1L))
   expect_error(wb_project(search = 1L))
   expect_error(wb_project(start_date = "2024"))
   expect_error(wb_project(start_date = "not-a-date"))
   expect_error(wb_project(end_date = "2024"))
+})
+
+test_that("wb_project forwards status", {
+  captured <- NULL
+  local_mocked_bindings(
+    projects = function(...) {
+      captured <<- list(...)$status
+      readRDS(test_path("fixtures", "wb-project.rds"))
+    }
+  )
+  for (status in c("active", "closed", "dropped", "pipeline")) {
+    wb_project(status = status)
+    expect_equal(captured, status)
+  }
+  wb_project()
+  expect_null(captured)
+})
+
+test_that("wb_project rejects unknown status", {
+  expect_snapshot(error = TRUE, {
+    wb_project(status = "Active")
+    wb_project(status = "invalid")
+  })
 })

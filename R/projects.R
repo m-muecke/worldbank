@@ -8,7 +8,7 @@
 #' @param country (`NULL` | `character()`)\cr
 #'   ISO country code(s) to filter by, e.g. `"BR"` or `c("BR", "IN")`. Default `NULL`.
 #' @param status (`NULL` | `character(1)`)\cr
-#'   Project status to filter by. One of `"Active"`, `"Closed"`, `"Dropped"`, or `"Pipeline"`.
+#'   Project status to filter by. One of `"active"`, `"closed"`, `"dropped"`, or `"pipeline"`.
 #'   Default `NULL`.
 #' @param region (`NULL` | `character(1)`)\cr
 #'   Region name to filter by, e.g. `"South Asia"`. Default `NULL`.
@@ -40,7 +40,7 @@
 #' @examplesIf httr2::is_online()
 #' \donttest{
 #' # active projects in Brazil related to education
-#' wb_project(country = "BR", status = "Active", search = "education")
+#' wb_project(country = "BR", status = "active", search = "education")
 #'
 #' # look up a specific project
 #' wb_project(id = "P163868")
@@ -58,7 +58,7 @@ wb_project <- function(
     is_string(id, null_ok = TRUE),
     is_character(country, null_ok = TRUE),
     is_string(status, null_ok = TRUE),
-    is.null(status) || status %in% c("Active", "Closed", "Dropped", "Pipeline"),
+    is.null(status) || status %in% c("active", "closed", "dropped", "pipeline"),
     is_string(region, null_ok = TRUE),
     is_string(search, null_ok = TRUE),
     is_string(start_date, null_ok = TRUE, pattern = "^\\d{4}-\\d{2}-\\d{2}$"),

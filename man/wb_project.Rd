@@ -26,7 +26,7 @@ If provided, other filters are ignored.}
 ISO country code(s) to filter by, e.g. \code{"BR"} or \code{c("BR", "IN")}. Default \code{NULL}.}
 
 \item{status}{(\code{NULL} | \code{character(1)})\cr
-Project status to filter by. One of \code{"Active"}, \code{"Closed"}, \code{"Dropped"}, or \code{"Pipeline"}.
+Project status to filter by. One of \code{"active"}, \code{"closed"}, \code{"dropped"}, or \code{"pipeline"}.
 Default \code{NULL}.}
 
 \item{region}{(\code{NULL} | \code{character(1)})\cr
@@ -68,7 +68,7 @@ Query World Bank project data from the Projects API.
 \dontshow{if (httr2::is_online()) withAutoprint(\{ # examplesIf}
 \donttest{
 # active projects in Brazil related to education
-wb_project(country = "BR", status = "Active", search = "education")
+wb_project(country = "BR", status = "active", search = "education")
 
 # look up a specific project
 wb_project(id = "P163868")
