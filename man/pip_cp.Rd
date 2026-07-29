@@ -23,11 +23,11 @@ Countries for which statistics are to be computed, specified as ISO3 codes. Defa
 Poverty line to be used to compute poverty measures, between \code{0} and \code{2700}. Poverty lines
 are only accepted up to 3 decimals. Default \code{2.15}.}
 
-\item{release_version}{(\code{NULL} | \code{character(1)})\cr
+\item{release_version}{(\code{NULL} | \code{character(1)} | \code{numeric(1)})\cr
 Version of the data release in YYYYMMDD format. Default \code{NULL}.}
 
 \item{ppp_version}{(\code{NULL} | \code{character(1)} | \code{numeric(1)})\cr
-Version of the data. Default \code{NULL}.}
+Version of the data in YYYY format. Default \code{NULL}.}
 
 \item{version}{(\code{NULL} | \code{character(1)})\cr
 Version of the data. Default \code{NULL}.}

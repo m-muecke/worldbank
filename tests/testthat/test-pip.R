@@ -34,6 +34,15 @@ test_that("PIP poverty inputs must be within the range accepted by the API", {
   })
 })
 
+test_that("PIP version inputs reject values that are not 8 or 4 digits", {
+  expect_snapshot(error = TRUE, {
+    pip_data(release_version = "v20260324")
+    pip_data(ppp_version = "2017a")
+    pip_cp(release_version = 2026)
+    pip_group(ppp_version = 20170101)
+  })
+})
+
 test_that("pip_cp basic checks", {
   skip_if_offline()
   skip_on_cran()

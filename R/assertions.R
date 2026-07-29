@@ -47,6 +47,16 @@ is_number <- function(x, lower = -Inf, upper = Inf, null_ok = FALSE) {
   is.numeric(x) && length(x) == 1L && is.finite(x) && x >= lower && x <= upper
 }
 
+is_version <- function(x, n_digits, null_ok = FALSE) {
+  if (null_ok && is.null(x)) {
+    return(TRUE)
+  }
+  if (length(x) != 1L || is.na(x) || !(is.character(x) || is.numeric(x))) {
+    return(FALSE)
+  }
+  grepl(sprintf("^[0-9]{%d}$", n_digits), as.character(x))
+}
+
 is_dateish <- function(x, null_ok = FALSE) {
   if (null_ok && is.null(x)) {
     return(TRUE)

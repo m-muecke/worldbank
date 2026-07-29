@@ -18,11 +18,11 @@ pip_aux(
 \item{table}{(\code{NULL} | \code{character(1)})\cr
 Table to be returned. Default \code{NULL}.}
 
-\item{release_version}{(\code{NULL} | \code{character(1)})\cr
+\item{release_version}{(\code{NULL} | \code{character(1)} | \code{numeric(1)})\cr
 Version of the data release in YYYYMMDD format. Default \code{NULL}.}
 
 \item{ppp_version}{(\code{NULL} | \code{character(1)} | \code{numeric(1)})\cr
-Version of the data. Default \code{NULL}.}
+Version of the data in YYYY format. Default \code{NULL}.}
 
 \item{version}{(\code{NULL} | \code{character(1)})\cr
 Version of the data. Default \code{NULL}.}

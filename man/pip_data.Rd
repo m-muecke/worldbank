@@ -53,11 +53,11 @@ Level of reporting for the statistics. Default \code{"all"}.}
 \item{additional_ind}{(\code{logical(1)})\cr
 Whether to include additional indicators. Default \code{FALSE}.}
 
-\item{release_version}{(\code{NULL} | \code{character(1)})\cr
+\item{release_version}{(\code{NULL} | \code{character(1)} | \code{numeric(1)})\cr
 Version of the data release in YYYYMMDD format. Default \code{NULL}.}
 
 \item{ppp_version}{(\code{NULL} | \code{character(1)} | \code{numeric(1)})\cr
-Version of the data. Default \code{NULL}.}
+Version of the data in YYYY format. Default \code{NULL}.}
 
 \item{version}{(\code{NULL} | \code{character(1)})\cr
 Version of the data. Default \code{NULL}.}
