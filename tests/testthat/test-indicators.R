@@ -116,6 +116,7 @@ test_that("wb_country_indicator", {
   actual <- wb_country_indicator()
   expect_s3_class(actual, "data.frame")
   expect_shape(actual, dim = c(63L, 10L))
+  expect_type(actual$date, "integer")
   for (x in actual) {
     if (is.character(x)) {
       expect_all_true(nzchar(x))
@@ -340,6 +341,36 @@ test_that("wb_data returns an empty data.frame when there are no observations", 
   actual <- wb_data("NY.GDP.MKTP.CD", "US")
   expect_s3_class(actual, "data.frame")
   expect_shape(actual, dim = c(0L, 10L))
+})
+
+test_that("wb_data preserves mixed-frequency dates as character", {
+  observation <- function(date, indicator) {
+    list(
+      date = date,
+      indicator = list(id = indicator, value = indicator),
+      country = list(id = "US", value = "United States"),
+      countryiso3code = "USA",
+      value = 1,
+      unit = "",
+      obs_status = "",
+      decimal = 0L
+    )
+  }
+  local_mocked_bindings(
+    worldbank_seq = function(resource, ...) {
+      lapply(resource, function(x) {
+        indicator <- sub(".*/", "", x)
+        date <- if (indicator == "ANNUAL") "2020" else "2020Q1"
+        list(observation(date, indicator))
+      })
+    }
+  )
+
+  actual <- wb_data(c("annual", "quarterly"), "US")
+  reversed <- wb_data(c("quarterly", "annual"), "US")
+
+  expect_identical(actual$date, c("2020", "2020Q1"))
+  expect_identical(reversed$date, c("2020Q1", "2020"))
 })
 
 test_that("wb_data mrv and gapfill validation works", {

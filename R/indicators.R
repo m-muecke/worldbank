@@ -551,7 +551,7 @@ wb_data <- function(
   if (nrow(res) == 0L) {
     return(res)
   }
-  if (nchar(res[1L, "date"]) == 4L) {
+  if (all(grepl("^\\d{4}$", res$date))) {
     res$date <- as.integer(res$date)
   }
   clean_strings(res)
