@@ -24,6 +24,16 @@ test_that("PIP poverty inputs require finite numeric scalars", {
   }
 })
 
+test_that("PIP poverty inputs must be within the range accepted by the API", {
+  expect_snapshot(error = TRUE, {
+    pip_data(povline = -1)
+    pip_data(povline = 2700.1)
+    pip_data(povline = NULL, popshare = 1.5)
+    pip_cp(povline = -1)
+    pip_group(povline = NULL, popshare = 50)
+  })
+})
+
 test_that("pip_cp basic checks", {
   skip_if_offline()
   skip_on_cran()

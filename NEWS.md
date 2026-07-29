@@ -1,5 +1,6 @@
 # worldbank (development version)
 
+* `pip_data()`, `pip_cp()`, and `pip_group()` now reject `povline` and `popshare` values outside the ranges accepted by the API.
 * `wb_project()` now requires `status` to be lowercase, e.g. `"active"` instead of `"Active"`.
 
 # worldbank 0.9.1

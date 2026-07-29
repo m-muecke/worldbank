@@ -4,12 +4,13 @@
 #'   Countries for which statistics are to be computed, specified as ISO3 codes. Default `NULL`.
 #' @param year (`NULL` | `character()` | `numeric()`)\cr
 #'   Years for which statistics are to be computed, specified as YYYY. Default `NULL`.
-#' @param povline (`numeric(1)`)\cr
-#'   Poverty line to be used to compute poverty measures. Poverty lines are only accepted up to 3
-#'   decimals. Default `2.15`.
+#' @param povline (`NULL` | `numeric(1)`)\cr
+#'   Poverty line to be used to compute poverty measures, between `0` and `2700`. Poverty lines
+#'   are only accepted up to 3 decimals. Default `2.15`.
 #' @param popshare (`NULL` | `numeric(1)`)\cr
-#'   Proportion of the population living below the poverty line. Will be ignored if `povline` is
-#'   specified. Default `NULL`.
+#'   Proportion of the population living below the poverty line, between `0` and `1`. Takes
+#'   precedence over `povline`: if both are supplied, the poverty line is derived from `popshare`.
+#'   Default `NULL`.
 #' @param fill_gaps (`logical(1)`)\cr
 #'   Whether to fill gaps in the data. Default `FALSE`.
 #' @param nowcast (`logical(1)`)\cr
@@ -56,8 +57,8 @@ pip_data <- function(
   stopifnot(
     is_character(country, null_ok = TRUE, n_chars = 3L),
     is_character(year, n_chars = 4L, pattern = "[0-9]{4}", null_ok = TRUE),
-    is_number(povline, null_ok = TRUE),
-    is_number(popshare, null_ok = TRUE),
+    is_number(povline, lower = 0, upper = 2700, null_ok = TRUE),
+    is_number(popshare, lower = 0, upper = 1, null_ok = TRUE),
     is_flag(fill_gaps),
     is_flag(nowcast),
     is_string(release_version, pattern = "^[0-9]{8}$", null_ok = TRUE),
@@ -110,7 +111,7 @@ pip_cp <- function(
   ppp_version <- ppp_version %&&% as.character(ppp_version)
   stopifnot(
     is_character(country, null_ok = TRUE, n_chars = 3L),
-    is_number(povline, null_ok = TRUE),
+    is_number(povline, lower = 0, upper = 2700, null_ok = TRUE),
     is_string(release_version, pattern = "^[0-9]{8}$", null_ok = TRUE),
     is_string(ppp_version, pattern = "^[0-9]{4}$", null_ok = TRUE),
     is_string(version, null_ok = TRUE)
@@ -163,8 +164,8 @@ pip_group <- function(
   stopifnot(
     is_character(country, null_ok = TRUE, n_chars = 3L),
     is_character(year, n_chars = 4L, pattern = "[0-9]{4}", null_ok = TRUE),
-    is_number(povline, null_ok = TRUE),
-    is_number(popshare, null_ok = TRUE),
+    is_number(povline, lower = 0, upper = 2700, null_ok = TRUE),
+    is_number(popshare, lower = 0, upper = 1, null_ok = TRUE),
     is_flag(fill_gaps),
     is_string(release_version, pattern = "^[0-9]{8}$", null_ok = TRUE),
     is_flag(additional_ind),

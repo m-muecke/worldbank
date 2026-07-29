@@ -29,13 +29,14 @@ Countries for which statistics are to be computed, specified as ISO3 codes. Defa
 \item{year}{(\code{NULL} | \code{character()} | \code{numeric()})\cr
 Years for which statistics are to be computed, specified as YYYY. Default \code{NULL}.}
 
-\item{povline}{(\code{numeric(1)})\cr
-Poverty line to be used to compute poverty measures. Poverty lines are only accepted up to 3
-decimals. Default \code{2.15}.}
+\item{povline}{(\code{NULL} | \code{numeric(1)})\cr
+Poverty line to be used to compute poverty measures, between \code{0} and \code{2700}. Poverty lines
+are only accepted up to 3 decimals. Default \code{2.15}.}
 
 \item{popshare}{(\code{NULL} | \code{numeric(1)})\cr
-Proportion of the population living below the poverty line. Will be ignored if \code{povline} is
-specified. Default \code{NULL}.}
+Proportion of the population living below the poverty line, between \code{0} and \code{1}. Takes
+precedence over \code{povline}: if both are supplied, the poverty line is derived from \code{popshare}.
+Default \code{NULL}.}
 
 \item{fill_gaps}{(\code{logical(1)})\cr
 Whether to fill gaps in the data. Default \code{FALSE}.}
