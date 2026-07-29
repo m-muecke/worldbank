@@ -35,13 +35,13 @@ pip_cp(
 
 - release_version:
 
-  (`NULL` \| `character(1)`)  
+  (`NULL` \| `character(1)` \| `numeric(1)`)  
   Version of the data release in YYYYMMDD format. Default `NULL`.
 
 - ppp_version:
 
   (`NULL` \| `character(1)` \| `numeric(1)`)  
-  Version of the data. Default `NULL`.
+  Version of the data in YYYY format. Default `NULL`.
 
 - version:
 

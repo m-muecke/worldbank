@@ -81,7 +81,8 @@ wb_country_indicator(
 A [`data.frame()`](https://rdrr.io/r/base/data.frame.html) with the
 available country indicators. The columns are:
 
-- `date`: The date
+- `date`: The date. An integer if all observations are annual, otherwise
+  a character vector.
 
 - `indicator_id`: The indicator ID.
 
