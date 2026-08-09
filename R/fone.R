@@ -49,27 +49,32 @@ fone_view <- function(view_id, ..., limit = NULL) {
 }
 
 fone <- function(resource, ..., limit = NULL) {
-  max_reqs <- if (!is.null(limit)) ceiling(limit / 1000L) else Inf
+  page_size <- min(limit %||% 1000L, 1000L)
+  max_reqs <- if (!is.null(limit)) ceiling(limit / page_size) else Inf
 
   req <- wb_request("https://datacatalogapi.worldbank.org/dexapps/fone/api") |>
     req_error(body = \(resp) resp_body_string(resp, "UTF-8")) |>
     req_url_path_append(resource) |>
-    req_url_query(top = limit, type = "csv", ...)
+    req_url_query(top = page_size, type = "csv", ...)
 
   resps <- req_perform_iterative(
     req,
     next_req = iterate_with_offset(
       "skip",
       start = 0L,
-      offset = 1000L,
+      offset = page_size,
       resp_complete = \(resp) !resp_has_body(resp)
     ),
     max_reqs = max_reqs
   )
 
-  resps_data(resps, function(resp) {
+  data <- resps_data(resps, function(resp) {
     if (resp_has_body(resp)) {
       resp_body_csv(resp)
     }
   })
+  if (!is.null(limit)) {
+    data <- utils::head(data, limit)
+  }
+  data
 }
