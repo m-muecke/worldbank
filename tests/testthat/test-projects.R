@@ -43,13 +43,17 @@ test_that("wb_project forwards status", {
     wb_project(status = status)
     expect_equal(captured, status)
   }
+  for (status in c("Active", "CLOSED", "Pipeline")) {
+    wb_project(status = status)
+    expect_equal(captured, tolower(status))
+  }
   wb_project()
   expect_null(captured)
 })
 
 test_that("wb_project rejects unknown status", {
   expect_snapshot(error = TRUE, {
-    wb_project(status = "Active")
     wb_project(status = "invalid")
+    wb_project(status = "act")
   })
 })
