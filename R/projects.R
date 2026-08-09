@@ -58,7 +58,7 @@ wb_project <- function(
     is_string(id, null_ok = TRUE),
     is_character(country, null_ok = TRUE),
     is_string(status, null_ok = TRUE),
-    is.null(status) || status %in% c("active", "closed", "dropped", "pipeline"),
+    is.null(status) || tolower(status) %in% c("active", "closed", "dropped", "pipeline"),
     is_string(region, null_ok = TRUE),
     is_string(search, null_ok = TRUE),
     is_string(start_date, null_ok = TRUE, pattern = "^\\d{4}-\\d{2}-\\d{2}$"),
@@ -69,6 +69,7 @@ wb_project <- function(
     data <- projects(id = id)
   } else {
     country_param <- country %&&% paste0(country, collapse = ";")
+    status <- status %&&% tolower(status)
     data <- projects(
       countrycode_exact = country_param,
       status = status,
