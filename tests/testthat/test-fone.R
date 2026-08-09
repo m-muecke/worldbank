@@ -27,11 +27,10 @@ test_that("fone_view basic checks", {
 })
 
 test_that("fone limit caps results across pages", {
-  requests <- new.env(parent = emptyenv())
-  requests$urls <- character()
+  urls <- character()
   page <- paste0("id\n", paste(seq_len(1000L), collapse = "\n"), "\n")
-  withr::local_options(httr2_mock = function(req) {
-    requests$urls <- c(requests$urls, req$url)
+  httr2::local_mocked_responses(function(req) {
+    urls <<- c(urls, req$url)
     httr2::response(
       status_code = 200L,
       url = req$url,
@@ -43,7 +42,7 @@ test_that("fone limit caps results across pages", {
   res <- fone_view("view-id", limit = 1500L)
 
   expect_shape(res, dim = c(1500L, 1L))
-  expect_length(requests$urls, 2L)
-  expect_match(requests$urls, "top=1000", all = TRUE, fixed = TRUE)
-  expect_match(requests$urls[[2L]], "skip=1000", fixed = TRUE)
+  expect_length(urls, 2L)
+  expect_match(urls, "top=1000", all = TRUE, fixed = TRUE)
+  expect_match(urls[[2L]], "skip=1000", fixed = TRUE)
 })
