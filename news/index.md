@@ -2,6 +2,11 @@
 
 ## worldbank (development version)
 
+- [`fone_dataset()`](https://m-muecke.github.io/worldbank/reference/fone.md)
+  and
+  [`fone_view()`](https://m-muecke.github.io/worldbank/reference/fone.md)
+  now return no more than the requested `limit` when pagination is
+  required.
 - The PIP functions now require `release_version` and `ppp_version` to
   be exactly 8 and 4 digits, given as a string or a number.
 - [`pip_data()`](https://m-muecke.github.io/worldbank/reference/pip_data.md),

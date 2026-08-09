@@ -51,9 +51,6 @@ Other poverty and inequality statistics:
 ``` r
 # \donttest{
 pip_citation()
-#>                                                                                                                                      citation
-#> 1 World Bank (2026), Poverty and Inequality Platform (version 20260324_2021_01_02_PROD) [data set]. pip.worldbank.org. Accessed on 2026-08-09
-#>                    version date_accessed
-#> 1 20260324_2021_01_02_PROD    2026-08-09
+#> Error in req_perform(req_url_query(req_error(req_url_path_append(wb_request("https://api.worldbank.org/pip/v1"),     resource), body = pip_error_body), format = format, ...)): HTTP 502 Bad Gateway.
 # }
 ```
