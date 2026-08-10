@@ -29,6 +29,9 @@
   querying, and must be two characters, since the Projects API matches
   them exactly.
 - [`wb_project()`](https://m-muecke.github.io/worldbank/reference/wb_project.md)
+  now accepts multiple values for `id`, `status`, and `region`,
+  returning the projects that match any of them.
+- [`wb_project()`](https://m-muecke.github.io/worldbank/reference/wb_project.md)
   now requires `status` to be one of `"active"`, `"closed"`,
   `"dropped"`, or `"pipeline"`.
 
