@@ -103,25 +103,76 @@ Version of the data. Default <code>NULL</code>.</p></dd>
     <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="co"># \donttest{</span></span></span>
 <span class="r-in"><span><span class="co"># get a list of available tables</span></span></span>
 <span class="r-in"><span><span class="fu">pip_aux</span><span class="op">(</span><span class="op">)</span></span></span>
-<span class="r-err co"><span class="r-pr">#&gt;</span> <span class="error">Error in req_perform(req_url_query(req_error(req_url_path_append(wb_request("https://api.worldbank.org/pip/v1"),     resource), body = pip_error_body), format = format, ...)):</span> HTTP 502 Bad Gateway.</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  [1] "aux_versions"       "countries"          "country_coverage"  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  [4] "country_list"       "cpi"                "decomposition"     </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  [7] "dictionary"         "framework"          "gdp"               </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [10] "incgrp_coverage"    "indicators"         "interpolated_means"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [13] "metaregion"         "missing_data"       "pce"               </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [16] "pg_lnp"             "pg_svy"             "pop"               </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [19] "pop_region"         "poverty_lines"      "ppp"               </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [22] "region_coverage"    "regions"            "spr_lnp"           </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [25] "spr_svy"            "survey_means"      </span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co"># get countries</span></span></span>
 <span class="r-in"><span><span class="va">aux</span> <span class="op">&lt;-</span> <span class="fu">pip_aux</span><span class="op">(</span><span class="st">"countries"</span><span class="op">)</span></span></span>
-<span class="r-err co"><span class="r-pr">#&gt;</span> <span class="error">Error in req_perform(req_url_query(req_error(req_url_path_append(wb_request("https://api.worldbank.org/pip/v1"),     resource), body = pip_error_body), format = format, ...)):</span> HTTP 502 Bad Gateway.</span>
 <span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="va">aux</span><span class="op">)</span></span></span>
-<span class="r-err co"><span class="r-pr">#&gt;</span> <span class="error">Error:</span> object 'aux' not found</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   country_code          country_name</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1          CIV         Côte d'Ivoire</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2          STP São Tomé and Príncipe</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 3          TUR               Türkiye</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 4          AGO                Angola</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 5          ALB               Albania</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 6          ARE  United Arab Emirates</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                                              region region_code</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1                                Sub-Saharan Africa         SSF</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2                                Sub-Saharan Africa         SSF</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 3                             Europe &amp; Central Asia         ECS</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 4                                Sub-Saharan Africa         SSF</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 5                             Europe &amp; Central Asia         ECS</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 6 Middle East, North Africa, Afghanistan &amp; Pakistan         MEA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                  africa_split africa_split_code         fcv fcv_code</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1  Western and Central Africa               AFW Not-fragile     FCVN</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2 Eastern and Southern Africa               AFE     Fragile     FCVY</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 3                        &lt;NA&gt;              &lt;NA&gt; Not-fragile     FCVN</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 4 Eastern and Southern Africa               AFE Not-fragile     FCVN</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 5                        &lt;NA&gt;              &lt;NA&gt; Not-fragile     FCVN</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 6                        &lt;NA&gt;              &lt;NA&gt; Not-fragile     FCVN</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                 ida ida_code            incgroup incgroup_code</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1             Blend     BLND Lower middle income          LMIC</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2               IDA      IDA Lower middle income          LMIC</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 3              IBRD     IBRD Upper middle income          UMIC</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 4              IBRD     IBRD Lower middle income          LMIC</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 5              IBRD     IBRD Upper middle income          UMIC</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 6 Rest of the world     REST         High income           HIC</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                     regionpcn regionpcn_code world world_code</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1          Sub-Saharan Africa            SSA World        WLD</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2          Sub-Saharan Africa            SSA World        WLD</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 3       Europe &amp; Central Asia            ECA World        WLD</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 4          Sub-Saharan Africa            SSA World        WLD</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 5       Europe &amp; Central Asia            ECA World        WLD</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 6 Other High Income Countries            OHI World        WLD</span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co"># get GDP</span></span></span>
 <span class="r-in"><span><span class="va">aux</span> <span class="op">&lt;-</span> <span class="fu">pip_aux</span><span class="op">(</span><span class="st">"gdp"</span><span class="op">)</span></span></span>
-<span class="r-err co"><span class="r-pr">#&gt;</span> <span class="error">Error in req_perform(req_url_query(req_error(req_url_path_append(wb_request("https://api.worldbank.org/pip/v1"),     resource), body = pip_error_body), format = format, ...)):</span> HTTP 502 Bad Gateway.</span>
 <span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="va">aux</span><span class="op">)</span></span></span>
-<span class="r-err co"><span class="r-pr">#&gt;</span> <span class="error">Error:</span> object 'aux' not found</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   country_code data_level year value</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1          ABW   national 1977    NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2          ABW   national 1978    NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 3          ABW   national 1979    NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 4          ABW   national 1980    NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 5          ABW   national 1981    NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 6          ABW   national 1982    NA</span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co"># get CPI</span></span></span>
 <span class="r-in"><span><span class="va">aux</span> <span class="op">&lt;-</span> <span class="fu">pip_aux</span><span class="op">(</span><span class="st">"cpi"</span><span class="op">)</span></span></span>
-<span class="r-err co"><span class="r-pr">#&gt;</span> <span class="error">Error in req_perform(req_url_query(req_error(req_url_path_append(wb_request("https://api.worldbank.org/pip/v1"),     resource), body = pip_error_body), format = format, ...)):</span> HTTP 502 Bad Gateway.</span>
 <span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="va">aux</span><span class="op">)</span></span></span>
-<span class="r-err co"><span class="r-pr">#&gt;</span> <span class="error">Error:</span> object 'aux' not found</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   country_code data_level year value</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1          AGO   national 1977    NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2          AGO   national 1978    NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 3          AGO   national 1979    NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 4          AGO   national 1980    NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 5          AGO   national 1981    NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 6          AGO   national 1982    NA</span>
 <span class="r-in"><span><span class="co"># }</span></span></span>
 </code></pre></div>
     </div>

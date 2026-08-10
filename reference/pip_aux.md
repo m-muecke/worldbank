@@ -64,24 +64,75 @@ Other poverty and inequality statistics:
 # \donttest{
 # get a list of available tables
 pip_aux()
-#> Error in req_perform(req_url_query(req_error(req_url_path_append(wb_request("https://api.worldbank.org/pip/v1"),     resource), body = pip_error_body), format = format, ...)): HTTP 502 Bad Gateway.
+#>  [1] "aux_versions"       "countries"          "country_coverage"  
+#>  [4] "country_list"       "cpi"                "decomposition"     
+#>  [7] "dictionary"         "framework"          "gdp"               
+#> [10] "incgrp_coverage"    "indicators"         "interpolated_means"
+#> [13] "metaregion"         "missing_data"       "pce"               
+#> [16] "pg_lnp"             "pg_svy"             "pop"               
+#> [19] "pop_region"         "poverty_lines"      "ppp"               
+#> [22] "region_coverage"    "regions"            "spr_lnp"           
+#> [25] "spr_svy"            "survey_means"      
 
 # get countries
 aux <- pip_aux("countries")
-#> Error in req_perform(req_url_query(req_error(req_url_path_append(wb_request("https://api.worldbank.org/pip/v1"),     resource), body = pip_error_body), format = format, ...)): HTTP 502 Bad Gateway.
 head(aux)
-#> Error: object 'aux' not found
+#>   country_code          country_name
+#> 1          CIV         Côte d'Ivoire
+#> 2          STP São Tomé and Príncipe
+#> 3          TUR               Türkiye
+#> 4          AGO                Angola
+#> 5          ALB               Albania
+#> 6          ARE  United Arab Emirates
+#>                                              region region_code
+#> 1                                Sub-Saharan Africa         SSF
+#> 2                                Sub-Saharan Africa         SSF
+#> 3                             Europe & Central Asia         ECS
+#> 4                                Sub-Saharan Africa         SSF
+#> 5                             Europe & Central Asia         ECS
+#> 6 Middle East, North Africa, Afghanistan & Pakistan         MEA
+#>                  africa_split africa_split_code         fcv fcv_code
+#> 1  Western and Central Africa               AFW Not-fragile     FCVN
+#> 2 Eastern and Southern Africa               AFE     Fragile     FCVY
+#> 3                        <NA>              <NA> Not-fragile     FCVN
+#> 4 Eastern and Southern Africa               AFE Not-fragile     FCVN
+#> 5                        <NA>              <NA> Not-fragile     FCVN
+#> 6                        <NA>              <NA> Not-fragile     FCVN
+#>                 ida ida_code            incgroup incgroup_code
+#> 1             Blend     BLND Lower middle income          LMIC
+#> 2               IDA      IDA Lower middle income          LMIC
+#> 3              IBRD     IBRD Upper middle income          UMIC
+#> 4              IBRD     IBRD Lower middle income          LMIC
+#> 5              IBRD     IBRD Upper middle income          UMIC
+#> 6 Rest of the world     REST         High income           HIC
+#>                     regionpcn regionpcn_code world world_code
+#> 1          Sub-Saharan Africa            SSA World        WLD
+#> 2          Sub-Saharan Africa            SSA World        WLD
+#> 3       Europe & Central Asia            ECA World        WLD
+#> 4          Sub-Saharan Africa            SSA World        WLD
+#> 5       Europe & Central Asia            ECA World        WLD
+#> 6 Other High Income Countries            OHI World        WLD
 
 # get GDP
 aux <- pip_aux("gdp")
-#> Error in req_perform(req_url_query(req_error(req_url_path_append(wb_request("https://api.worldbank.org/pip/v1"),     resource), body = pip_error_body), format = format, ...)): HTTP 502 Bad Gateway.
 head(aux)
-#> Error: object 'aux' not found
+#>   country_code data_level year value
+#> 1          ABW   national 1977    NA
+#> 2          ABW   national 1978    NA
+#> 3          ABW   national 1979    NA
+#> 4          ABW   national 1980    NA
+#> 5          ABW   national 1981    NA
+#> 6          ABW   national 1982    NA
 
 # get CPI
 aux <- pip_aux("cpi")
-#> Error in req_perform(req_url_query(req_error(req_url_path_append(wb_request("https://api.worldbank.org/pip/v1"),     resource), body = pip_error_body), format = format, ...)): HTTP 502 Bad Gateway.
 head(aux)
-#> Error: object 'aux' not found
+#>   country_code data_level year value
+#> 1          AGO   national 1977    NA
+#> 2          AGO   national 1978    NA
+#> 3          AGO   national 1979    NA
+#> 4          AGO   national 1980    NA
+#> 5          AGO   national 1981    NA
+#> 6          AGO   national 1982    NA
 # }
 ```

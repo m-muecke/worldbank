@@ -7,6 +7,11 @@
   [`fone_view()`](https://m-muecke.github.io/worldbank/reference/fone.md)
   now return no more than the requested `limit` when pagination is
   required.
+- [`fone_view()`](https://m-muecke.github.io/worldbank/reference/fone.md)
+  now trims whitespace and returns `NA` instead of `""` for empty
+  fields, matching
+  [`fone_dataset()`](https://m-muecke.github.io/worldbank/reference/fone.md)
+  and the rest of the package.
 - The PIP functions now require `release_version` and `ppp_version` to
   be exactly 8 and 4 digits, given as a string or a number.
 - [`pip_data()`](https://m-muecke.github.io/worldbank/reference/pip_data.md),
@@ -18,6 +23,11 @@
 - [`wb_data()`](https://m-muecke.github.io/worldbank/reference/wb_data.md)
   no longer returns `NA` dates when a query mixes annual and sub-annual
   indicators.
+- [`wb_project()`](https://m-muecke.github.io/worldbank/reference/wb_project.md)
+  now returns results when `country` holds more than one code, instead
+  of silently returning no rows. Codes are also upper-cased before
+  querying, and must be two characters, since the Projects API matches
+  them exactly.
 - [`wb_project()`](https://m-muecke.github.io/worldbank/reference/wb_project.md)
   now requires `status` to be one of `"active"`, `"closed"`,
   `"dropped"`, or `"pipeline"`.

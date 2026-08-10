@@ -42,11 +42,15 @@
 <h2 class="pkg-version" data-toc-text="development version" id="worldbank-development-version">worldbank (development version)<a class="anchor" aria-label="anchor" href="#worldbank-development-version"></a></h2>
 <ul><li>
 <code><a href="../reference/fone.html">fone_dataset()</a></code> and <code><a href="../reference/fone.html">fone_view()</a></code> now return no more than the requested <code>limit</code> when pagination is required.</li>
+<li>
+<code><a href="../reference/fone.html">fone_view()</a></code> now trims whitespace and returns <code>NA</code> instead of <code>""</code> for empty fields, matching <code><a href="../reference/fone.html">fone_dataset()</a></code> and the rest of the package.</li>
 <li>The PIP functions now require <code>release_version</code> and <code>ppp_version</code> to be exactly 8 and 4 digits, given as a string or a number.</li>
 <li>
 <code><a href="../reference/pip_data.html">pip_data()</a></code>, <code><a href="../reference/pip_cp.html">pip_cp()</a></code>, and <code><a href="../reference/pip_group.html">pip_group()</a></code> now require <code>povline</code> and <code>popshare</code> to be numbers within the ranges accepted by the API.</li>
 <li>
 <code><a href="../reference/wb_data.html">wb_data()</a></code> no longer returns <code>NA</code> dates when a query mixes annual and sub-annual indicators.</li>
+<li>
+<code><a href="../reference/wb_project.html">wb_project()</a></code> now returns results when <code>country</code> holds more than one code, instead of silently returning no rows. Codes are also upper-cased before querying, and must be two characters, since the Projects API matches them exactly.</li>
 <li>
 <code><a href="../reference/wb_project.html">wb_project()</a></code> now requires <code>status</code> to be one of <code>"active"</code>, <code>"closed"</code>, <code>"dropped"</code>, or <code>"pipeline"</code>.</li>
 </ul></div>

@@ -31,8 +31,10 @@ wb_project(
 - country:
 
   (`NULL` \| [`character()`](https://rdrr.io/r/base/character.html))  
-  ISO country code(s) to filter by, e.g. `"BR"` or `c("BR", "IN")`.
-  Default `NULL`.
+  Two-character World Bank country code(s) to filter by, e.g. `"BR"` or
+  `c("BR", "IN")`. Regional aggregates such as `"1W"` (World) or `"3A"`
+  (Africa) are also accepted. Matching is case insensitive, and projects
+  for any of the given codes are returned. Default `NULL`.
 
 - status:
 
@@ -111,8 +113,8 @@ wb_project(country = "BR", status = "active", search = "education")
 #> P179046 P179046
 #> P178663 P178663
 #> P179365 P179365
-#> P073882 P073882
 #> P153012 P153012
+#> P073882 P073882
 #> P172497 P172497
 #>                                                                   project_name
 #> P163868                  Support to Upper Secondary Reform in Brazil Operation
@@ -124,8 +126,8 @@ wb_project(country = "BR", status = "active", search = "education")
 #> P179046                    Progestão Acre: Public Sector Management Efficiency
 #> P178663                   Progestão Piauí: Public Sector Management Efficiency
 #> P179365 Brazil: Support to New Bolsa Familia Conditional Cash Transfer Program
-#> P073882                         RF 2nd Amazon Fire Prevention and Mobilization
 #> P153012                        Fortaleza Sustainable Urban Development Project
+#> P073882                         RF 2nd Amazon Fire Prevention and Mobilization
 #> P172497                 Sustainable Multiple Use Landscape Consortia in Brazil
 #>         status approval_date closing_date country_code country
 #> P163868 Active    2017-12-14   2024-12-31           BR  Brazil
@@ -137,8 +139,8 @@ wb_project(country = "BR", status = "active", search = "education")
 #> P179046 Active    2023-07-24   2028-12-29           BR  Brazil
 #> P178663 Active    2023-10-03   2029-06-29           BR  Brazil
 #> P179365 Active    2023-12-06   2026-04-30           BR  Brazil
-#> P073882 Active          <NA>   2004-09-30           BR  Brazil
 #> P153012 Active    2017-04-28   2025-03-31           BR  Brazil
+#> P073882 Active          <NA>   2004-09-30           BR  Brazil
 #> P172497 Active          <NA>   2027-11-30           BR  Brazil
 #>                              region total_commitment ibrd_commitment
 #> P163868 Latin America and Caribbean        250.00000           250.0
@@ -150,8 +152,8 @@ wb_project(country = "BR", status = "active", search = "education")
 #> P179046 Latin America and Caribbean         40.00000            40.0
 #> P178663 Latin America and Caribbean         50.00000            50.0
 #> P179365 Latin America and Caribbean        300.00000           300.0
-#> P073882 Latin America and Caribbean          1.10000             0.0
 #> P153012 Latin America and Caribbean         73.30000            73.3
+#> P073882 Latin America and Caribbean          1.10000             0.0
 #> P172497 Latin America and Caribbean         24.57798             0.0
 #>         ida_commitment            lending_instrument
 #> P163868              0 Program-for-Results Financing
@@ -163,8 +165,8 @@ wb_project(country = "BR", status = "active", search = "education")
 #> P179046              0  Investment Project Financing
 #> P178663              0  Investment Project Financing
 #> P179365              0  Investment Project Financing
-#> P073882              0                          <NA>
 #> P153012              0  Investment Project Financing
+#> P073882              0                          <NA>
 #> P172497              0  Investment Project Financing
 #>                                                                          borrower
 #> P163868                              Ministry of Economy (Minist�rio da Economia)
@@ -176,8 +178,8 @@ wb_project(country = "BR", status = "active", search = "education")
 #> P179046                                                             State of Acre
 #> P178663                                                            State of Piaui
 #> P179365                                             Federative Republic of Brazil
-#> P073882                                                                      <NA>
 #> P153012                                                 Municipality of Fortaleza
+#> P073882                                                                      <NA>
 #> P172497                                                                      IICA
 #>                                                                                               implementing_agency
 #> P163868                                                            Ministry of Education (Minist�rio da Educa��o)
@@ -189,8 +191,8 @@ wb_project(country = "BR", status = "active", search = "education")
 #> P179046                                                                             State Secretariat of Planning
 #> P178663                                                                           Secretariat of Finance of Piaui
 #> P179365                                                                                   Ministry of Citizenship
-#> P073882                                                                                                      <NA>
 #> P153012 Secretaria Municipal de Urbanismo e Meio Ambiente (SEUMA), Secretaria Municipal de Infraestrutura (SEINF)
+#> P073882                                                                                                      <NA>
 #> P172497             Minist�rio do Meio Ambiente (MMA), Minist�rio da Agricultura, Pecu�ria e Abastecimento (MAPA)
 #>                                                                                  url
 #> P163868 https://projects.worldbank.org/en/projects-operations/project-detail/P163868
@@ -202,8 +204,8 @@ wb_project(country = "BR", status = "active", search = "education")
 #> P179046 https://projects.worldbank.org/en/projects-operations/project-detail/P179046
 #> P178663 https://projects.worldbank.org/en/projects-operations/project-detail/P178663
 #> P179365 https://projects.worldbank.org/en/projects-operations/project-detail/P179365
-#> P073882 https://projects.worldbank.org/en/projects-operations/project-detail/P073882
 #> P153012 https://projects.worldbank.org/en/projects-operations/project-detail/P153012
+#> P073882 https://projects.worldbank.org/en/projects-operations/project-detail/P073882
 #> P172497 https://projects.worldbank.org/en/projects-operations/project-detail/P172497
 
 # look up a specific project
