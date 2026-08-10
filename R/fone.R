@@ -31,14 +31,13 @@ fone_dataset <- function(dataset_id, resource_id, ..., limit = NULL) {
     is_string(resource_id),
     is_count(limit, null_ok = TRUE)
   )
-  res <- fone(
+  fone(
     resource = "apiservice",
     datasetId = dataset_id,
     resourceId = resource_id,
     ...,
     limit = limit
   )
-  clean_strings(res)
 }
 
 #' @rdname fone
@@ -76,5 +75,5 @@ fone <- function(resource, ..., limit = NULL) {
   if (!is.null(limit)) {
     data <- utils::head(data, limit)
   }
-  data
+  clean_strings(data)
 }

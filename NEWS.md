@@ -1,6 +1,7 @@
 # worldbank (development version)
 
 * `fone_dataset()` and `fone_view()` now return no more than the requested `limit` when pagination is required.
+* `fone_view()` now trims whitespace and returns `NA` instead of `""` for empty fields, matching `fone_dataset()` and the rest of the package.
 * The PIP functions now require `release_version` and `ppp_version` to be exactly 8 and 4 digits, given as a string or a number.
 * `pip_data()`, `pip_cp()`, and `pip_group()` now require `povline` and `popshare` to be numbers within the ranges accepted by the API.
 * `wb_data()` no longer returns `NA` dates when a query mixes annual and sub-annual indicators.
