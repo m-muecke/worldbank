@@ -5,6 +5,7 @@
 * The PIP functions now require `release_version` and `ppp_version` to be exactly 8 and 4 digits, given as a string or a number.
 * `pip_data()`, `pip_cp()`, and `pip_group()` now require `povline` and `popshare` to be numbers within the ranges accepted by the API.
 * `wb_data()` no longer returns `NA` dates when a query mixes annual and sub-annual indicators.
+* `wb_project()` now returns results when `country` holds more than one code, instead of silently returning no rows. Codes are also upper-cased before querying, and must be two characters, since the Projects API matches them exactly.
 * `wb_project()` now requires `status` to be one of `"active"`, `"closed"`, `"dropped"`, or `"pipeline"`.
 
 # worldbank 0.9.1

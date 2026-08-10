@@ -6,7 +6,9 @@
 #'   Project ID to query, e.g. `"P163868"`. Default `NULL`.
 #'   If provided, other filters are ignored.
 #' @param country (`NULL` | `character()`)\cr
-#'   ISO country code(s) to filter by, e.g. `"BR"` or `c("BR", "IN")`. Default `NULL`.
+#'   Two-character World Bank country code(s) to filter by, e.g. `"BR"` or `c("BR", "IN")`.
+#'   Regional aggregates such as `"1W"` (World) or `"3A"` (Africa) are also accepted. Matching is
+#'   case insensitive, and projects for any of the given codes are returned. Default `NULL`.
 #' @param status (`NULL` | `character(1)`)\cr
 #'   Project status to filter by. One of `"active"`, `"closed"`, `"dropped"`, or `"pipeline"`.
 #'   Default `NULL`.
@@ -56,7 +58,7 @@ wb_project <- function(
 ) {
   stopifnot(
     is_string(id, null_ok = TRUE),
-    is_character(country, null_ok = TRUE),
+    is_character(country, null_ok = TRUE, n_chars = 2L),
     is_string(status, null_ok = TRUE),
     is.null(status) || tolower(status) %in% c("active", "closed", "dropped", "pipeline"),
     is_string(region, null_ok = TRUE),
@@ -68,7 +70,7 @@ wb_project <- function(
   if (!is.null(id)) {
     data <- projects(id = id)
   } else {
-    country_param <- country %&&% paste0(country, collapse = ";")
+    country_param <- country %&&% paste0(toupper(country), collapse = "^")
     status <- status %&&% tolower(status)
     data <- projects(
       countrycode_exact = country_param,

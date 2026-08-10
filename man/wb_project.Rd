@@ -23,7 +23,9 @@ Project ID to query, e.g. \code{"P163868"}. Default \code{NULL}.
 If provided, other filters are ignored.}
 
 \item{country}{(\code{NULL} | \code{character()})\cr
-ISO country code(s) to filter by, e.g. \code{"BR"} or \code{c("BR", "IN")}. Default \code{NULL}.}
+Two-character World Bank country code(s) to filter by, e.g. \code{"BR"} or \code{c("BR", "IN")}.
+Regional aggregates such as \code{"1W"} (World) or \code{"3A"} (Africa) are also accepted. Matching is
+case insensitive, and projects for any of the given codes are returned. Default \code{NULL}.}
 
 \item{status}{(\code{NULL} | \code{character(1)})\cr
 Project status to filter by. One of \code{"active"}, \code{"closed"}, \code{"dropped"}, or \code{"pipeline"}.

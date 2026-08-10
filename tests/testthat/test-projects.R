@@ -22,6 +22,9 @@ test_that("wb_project input validation works", {
   expect_error(wb_project(id = TRUE))
   expect_error(wb_project(country = 1L))
   expect_error(wb_project(country = NA))
+  expect_error(wb_project(country = "B"))
+  expect_error(wb_project(country = "BRA"))
+  expect_error(wb_project(country = c("BR", "IND")))
   expect_error(wb_project(status = 1L))
   expect_error(wb_project(status = TRUE))
   expect_error(wb_project(region = 1L))
@@ -47,6 +50,22 @@ test_that("wb_project forwards status", {
     wb_project(status = status)
     expect_equal(captured, tolower(status))
   }
+  wb_project()
+  expect_null(captured)
+})
+
+test_that("wb_project joins country codes the way the API expects", {
+  captured <- NULL
+  local_mocked_bindings(
+    projects = function(...) {
+      captured <<- list(...)$countrycode_exact
+      readRDS(test_path("fixtures", "wb-project.rds"))
+    }
+  )
+  wb_project(country = "br")
+  expect_equal(captured, "BR")
+  wb_project(country = c("BR", "in"))
+  expect_equal(captured, "BR^IN")
   wb_project()
   expect_null(captured)
 })
