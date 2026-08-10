@@ -2,18 +2,21 @@
 #'
 #' Query World Bank project data from the Projects API.
 #'
-#' @param id (`NULL` | `character(1)`)\cr
-#'   Project ID to query, e.g. `"P163868"`. Default `NULL`.
+#' @param id (`NULL` | `character()`)\cr
+#'   Project ID(s) to query, e.g. `"P163868"` or `c("P163868", "P180429")`. Default `NULL`.
 #'   If provided, other filters are ignored.
 #' @param country (`NULL` | `character()`)\cr
 #'   Two-character World Bank country code(s) to filter by, e.g. `"BR"` or `c("BR", "IN")`.
 #'   Regional aggregates such as `"1W"` (World) or `"3A"` (Africa) are also accepted. Matching is
 #'   case insensitive, and projects for any of the given codes are returned. Default `NULL`.
-#' @param status (`NULL` | `character(1)`)\cr
-#'   Project status to filter by. One of `"active"`, `"closed"`, `"dropped"`, or `"pipeline"`.
+#' @param status (`NULL` | `character()`)\cr
+#'   Project status(es) to filter by, each one of `"active"`, `"closed"`, `"dropped"`, or
+#'   `"pipeline"`. Projects with any of the given statuses are returned. Default `NULL`.
+#' @param region (`NULL` | `character()`)\cr
+#'   Region name(s) to filter by, e.g. `"South Asia"`. Matching is case insensitive and by
+#'   substring, so `"Africa"` also matches `"Eastern and Southern Africa"` and
+#'   `"Middle East and North Africa"`. Projects matching any of the given names are returned.
 #'   Default `NULL`.
-#' @param region (`NULL` | `character(1)`)\cr
-#'   Region name to filter by, e.g. `"South Asia"`. Default `NULL`.
 #' @param search (`NULL` | `character(1)`)\cr
 #'   Free-text search term. Default `NULL`.
 #' @param start_date (`NULL` | `character(1)`)\cr
@@ -44,8 +47,11 @@
 #' # active projects in Brazil related to education
 #' wb_project(country = "BR", status = "active", search = "education")
 #'
-#' # look up a specific project
-#' wb_project(id = "P163868")
+#' # active or pipeline projects across two countries
+#' wb_project(country = c("BR", "IN"), status = c("active", "pipeline"))
+#'
+#' # look up specific projects
+#' wb_project(id = c("P163868", "P180429"))
 #' }
 wb_project <- function(
   id = NULL,
@@ -57,31 +63,36 @@ wb_project <- function(
   end_date = NULL
 ) {
   stopifnot(
-    is_string(id, null_ok = TRUE),
+    is_character(id, null_ok = TRUE),
     is_character(country, null_ok = TRUE, n_chars = 2L),
-    is_string(status, null_ok = TRUE),
-    is.null(status) || tolower(status) %in% c("active", "closed", "dropped", "pipeline"),
-    is_string(region, null_ok = TRUE),
+    is_character(status, null_ok = TRUE),
+    is.null(status) || all(tolower(status) %in% c("active", "closed", "dropped", "pipeline")),
+    is_character(region, null_ok = TRUE),
     is_string(search, null_ok = TRUE),
     is_string(start_date, null_ok = TRUE, pattern = "^\\d{4}-\\d{2}-\\d{2}$"),
     is_string(end_date, null_ok = TRUE, pattern = "^\\d{4}-\\d{2}-\\d{2}$")
   )
 
   if (!is.null(id)) {
-    data <- projects(id = id)
+    data <- projects(id = collapse_or(id))
   } else {
-    country_param <- country %&&% paste0(toupper(country), collapse = "^")
-    status <- status %&&% tolower(status)
     data <- projects(
-      countrycode_exact = country_param,
-      status = status,
-      regionname = region,
+      countrycode_exact = collapse_or(toupper(country)),
+      status = collapse_or(tolower(status)),
+      regionname = collapse_or(region),
       qterm = search,
       strdate = start_date,
       enddate = end_date
     )
   }
   parse_projects(data)
+}
+
+collapse_or <- function(x) {
+  if (length(x) == 0L) {
+    return()
+  }
+  paste0(x, collapse = "^")
 }
 
 projects <- function(..., per_page = 1000L) {

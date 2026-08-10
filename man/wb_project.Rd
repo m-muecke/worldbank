@@ -18,8 +18,8 @@ wb_project(
 )
 }
 \arguments{
-\item{id}{(\code{NULL} | \code{character(1)})\cr
-Project ID to query, e.g. \code{"P163868"}. Default \code{NULL}.
+\item{id}{(\code{NULL} | \code{character()})\cr
+Project ID(s) to query, e.g. \code{"P163868"} or \code{c("P163868", "P180429")}. Default \code{NULL}.
 If provided, other filters are ignored.}
 
 \item{country}{(\code{NULL} | \code{character()})\cr
@@ -27,12 +27,15 @@ Two-character World Bank country code(s) to filter by, e.g. \code{"BR"} or \code
 Regional aggregates such as \code{"1W"} (World) or \code{"3A"} (Africa) are also accepted. Matching is
 case insensitive, and projects for any of the given codes are returned. Default \code{NULL}.}
 
-\item{status}{(\code{NULL} | \code{character(1)})\cr
-Project status to filter by. One of \code{"active"}, \code{"closed"}, \code{"dropped"}, or \code{"pipeline"}.
-Default \code{NULL}.}
+\item{status}{(\code{NULL} | \code{character()})\cr
+Project status(es) to filter by, each one of \code{"active"}, \code{"closed"}, \code{"dropped"}, or
+\code{"pipeline"}. Projects with any of the given statuses are returned. Default \code{NULL}.}
 
-\item{region}{(\code{NULL} | \code{character(1)})\cr
-Region name to filter by, e.g. \code{"South Asia"}. Default \code{NULL}.}
+\item{region}{(\code{NULL} | \code{character()})\cr
+Region name(s) to filter by, e.g. \code{"South Asia"}. Matching is case insensitive and by
+substring, so \code{"Africa"} also matches \code{"Eastern and Southern Africa"} and
+\code{"Middle East and North Africa"}. Projects matching any of the given names are returned.
+Default \code{NULL}.}
 
 \item{search}{(\code{NULL} | \code{character(1)})\cr
 Free-text search term. Default \code{NULL}.}
@@ -72,8 +75,11 @@ Query World Bank project data from the Projects API.
 # active projects in Brazil related to education
 wb_project(country = "BR", status = "active", search = "education")
 
-# look up a specific project
-wb_project(id = "P163868")
+# active or pipeline projects across two countries
+wb_project(country = c("BR", "IN"), status = c("active", "pipeline"))
+
+# look up specific projects
+wb_project(id = c("P163868", "P180429"))
 }
 \dontshow{\}) # examplesIf}
 }

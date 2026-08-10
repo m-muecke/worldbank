@@ -70,9 +70,29 @@ test_that("wb_project joins country codes the way the API expects", {
   expect_null(captured)
 })
 
+test_that("wb_project joins multi-value filters with the API separator", {
+  captured <- NULL
+  local_mocked_bindings(
+    projects = function(...) {
+      captured <<- list(...)
+      readRDS(test_path("fixtures", "wb-project.rds"))
+    }
+  )
+  wb_project(
+    status = c("Active", "pipeline"),
+    region = c("South Asia", "Africa")
+  )
+  expect_equal(captured$status, "active^pipeline")
+  expect_equal(captured$regionname, "South Asia^Africa")
+
+  wb_project(id = c("P163868", "P180429"))
+  expect_equal(captured$id, "P163868^P180429")
+})
+
 test_that("wb_project rejects unknown status", {
   expect_snapshot(error = TRUE, {
     wb_project(status = "invalid")
     wb_project(status = "act")
+    wb_project(status = c("active", "invalid"))
   })
 })
