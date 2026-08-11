@@ -428,14 +428,18 @@ wb_bulk <- function(timeout = 600L) {
 
   utils::unzip(tf, exdir = td)
 
-  read_csv <- function(name) {
-    df <- utils::read.csv(file.path(td, name), fileEncoding = "UTF-8-BOM")
-    names(df) <- to_snake_case(names(df))
-    df
+  read_csv <- function(name, na_strings = "NA") {
+    data <- utils::read.csv(
+      file.path(td, name),
+      fileEncoding = "UTF-8-BOM",
+      na.strings = na_strings
+    )
+    names(data) <- to_snake_case(names(data))
+    data
   }
 
-  # disambiguate the 2-letter ISO/WB codes from `country_code` (3-letter ISO).
-  country <- read_csv("WDICountry.csv")
+  # `NA` is Namibia's ISO-2 code, not a missing-value sentinel.
+  country <- read_csv("WDICountry.csv", na_strings = character())
   names(country)[names(country) == "x2_alpha_code"] <- "iso2_code"
   names(country)[names(country) == "wb_2_code"] <- "wb_iso2_code"
 
