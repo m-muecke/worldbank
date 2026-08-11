@@ -20,6 +20,10 @@
   [`pip_group()`](https://m-muecke.github.io/worldbank/reference/pip_group.md)
   now require `povline` and `popshare` to be numbers within the ranges
   accepted by the API.
+- [`wb_bulk()`](https://m-muecke.github.io/worldbank/reference/wb_bulk.md)
+  now keeps Namibia’s `"NA"` code in the `iso2_code` and `wb_iso2_code`
+  columns of the `country` table, instead of reading it as a missing
+  value.
 - [`wb_data()`](https://m-muecke.github.io/worldbank/reference/wb_data.md)
   no longer returns `NA` dates when a query mixes annual and sub-annual
   indicators.

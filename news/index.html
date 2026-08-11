@@ -48,6 +48,8 @@
 <li>
 <code><a href="../reference/pip_data.html">pip_data()</a></code>, <code><a href="../reference/pip_cp.html">pip_cp()</a></code>, and <code><a href="../reference/pip_group.html">pip_group()</a></code> now require <code>povline</code> and <code>popshare</code> to be numbers within the ranges accepted by the API.</li>
 <li>
+<code><a href="../reference/wb_bulk.html">wb_bulk()</a></code> now keeps Namibia’s <code>"NA"</code> code in the <code>iso2_code</code> and <code>wb_iso2_code</code> columns of the <code>country</code> table, instead of reading it as a missing value.</li>
+<li>
 <code><a href="../reference/wb_data.html">wb_data()</a></code> no longer returns <code>NA</code> dates when a query mixes annual and sub-annual indicators.</li>
 <li>
 <code><a href="../reference/wb_project.html">wb_project()</a></code> now returns results when <code>country</code> holds more than one code, instead of silently returning no rows. Codes are also upper-cased before querying, and must be two characters, since the Projects API matches them exactly.</li>
