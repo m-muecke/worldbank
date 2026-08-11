@@ -4,6 +4,7 @@
 * `fone_view()` now trims whitespace and returns `NA` instead of `""` for empty fields, matching `fone_dataset()` and the rest of the package.
 * The PIP functions now require `release_version` and `ppp_version` to be exactly 8 and 4 digits, given as a string or a number.
 * `pip_data()`, `pip_cp()`, and `pip_group()` now require `povline` and `popshare` to be numbers within the ranges accepted by the API.
+* `wb_bulk()` now keeps Namibia's `"NA"` code in the `iso2_code` and `wb_iso2_code` columns of the `country` table, instead of reading it as a missing value.
 * `wb_data()` no longer returns `NA` dates when a query mixes annual and sub-annual indicators.
 * `wb_project()` now returns results when `country` holds more than one code, instead of silently returning no rows. Codes are also upper-cased before querying, and must be two characters, since the Projects API matches them exactly.
 * `wb_project()` now accepts multiple values for `id`, `status`, and `region`, returning the projects that match any of them.
