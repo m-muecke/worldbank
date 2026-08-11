@@ -116,9 +116,9 @@ wb_project(country = "BR", status = "active", search = "education")
 #> P177070 P177070
 #> P179046 P179046
 #> P178663 P178663
-#> P073882 P073882
 #> P179365 P179365
 #> P153012 P153012
+#> P073882 P073882
 #> P172497 P172497
 #>                                                                   project_name
 #> P163868                  Support to Upper Secondary Reform in Brazil Operation
@@ -129,9 +129,9 @@ wb_project(country = "BR", status = "active", search = "education")
 #> P177070                 Progestão Alagoas: Public Sector Management Efficiency
 #> P179046                    Progestão Acre: Public Sector Management Efficiency
 #> P178663                   Progestão Piauí: Public Sector Management Efficiency
-#> P073882                         RF 2nd Amazon Fire Prevention and Mobilization
 #> P179365 Brazil: Support to New Bolsa Familia Conditional Cash Transfer Program
 #> P153012                        Fortaleza Sustainable Urban Development Project
+#> P073882                         RF 2nd Amazon Fire Prevention and Mobilization
 #> P172497                 Sustainable Multiple Use Landscape Consortia in Brazil
 #>         status approval_date closing_date country_code country
 #> P163868 Active    2017-12-14   2024-12-31           BR  Brazil
@@ -142,9 +142,9 @@ wb_project(country = "BR", status = "active", search = "education")
 #> P177070 Active    2022-07-21   2028-03-31           BR  Brazil
 #> P179046 Active    2023-07-24   2028-12-29           BR  Brazil
 #> P178663 Active    2023-10-03   2029-06-29           BR  Brazil
-#> P073882 Active          <NA>   2004-09-30           BR  Brazil
 #> P179365 Active    2023-12-06   2026-04-30           BR  Brazil
 #> P153012 Active    2017-04-28   2025-03-31           BR  Brazil
+#> P073882 Active          <NA>   2004-09-30           BR  Brazil
 #> P172497 Active          <NA>   2027-11-30           BR  Brazil
 #>                              region total_commitment ibrd_commitment
 #> P163868 Latin America and Caribbean        250.00000           250.0
@@ -155,9 +155,9 @@ wb_project(country = "BR", status = "active", search = "education")
 #> P177070 Latin America and Caribbean         40.00000            40.0
 #> P179046 Latin America and Caribbean         40.00000            40.0
 #> P178663 Latin America and Caribbean         50.00000            50.0
-#> P073882 Latin America and Caribbean          1.10000             0.0
 #> P179365 Latin America and Caribbean        300.00000           300.0
 #> P153012 Latin America and Caribbean         73.30000            73.3
+#> P073882 Latin America and Caribbean          1.10000             0.0
 #> P172497 Latin America and Caribbean         24.57798             0.0
 #>         ida_commitment            lending_instrument
 #> P163868              0 Program-for-Results Financing
@@ -168,9 +168,9 @@ wb_project(country = "BR", status = "active", search = "education")
 #> P177070              0  Investment Project Financing
 #> P179046              0  Investment Project Financing
 #> P178663              0  Investment Project Financing
-#> P073882              0                          <NA>
 #> P179365              0  Investment Project Financing
 #> P153012              0  Investment Project Financing
+#> P073882              0                          <NA>
 #> P172497              0  Investment Project Financing
 #>                                                                          borrower
 #> P163868                              Ministry of Economy (Minist�rio da Economia)
@@ -181,9 +181,9 @@ wb_project(country = "BR", status = "active", search = "education")
 #> P177070 State of Alagoas, with the guarantee of the Federative Republic of Brazil
 #> P179046                                                             State of Acre
 #> P178663                                                            State of Piaui
-#> P073882                                                                      <NA>
 #> P179365                                             Federative Republic of Brazil
 #> P153012                                                 Municipality of Fortaleza
+#> P073882                                                                      <NA>
 #> P172497                                                                      IICA
 #>                                                                                               implementing_agency
 #> P163868                                                            Ministry of Education (Minist�rio da Educa��o)
@@ -194,9 +194,9 @@ wb_project(country = "BR", status = "active", search = "education")
 #> P177070                                                                 Secretariat of Finance - State of Alagoas
 #> P179046                                                                             State Secretariat of Planning
 #> P178663                                                                           Secretariat of Finance of Piaui
-#> P073882                                                                                                      <NA>
 #> P179365                                                                                   Ministry of Citizenship
 #> P153012 Secretaria Municipal de Urbanismo e Meio Ambiente (SEUMA), Secretaria Municipal de Infraestrutura (SEINF)
+#> P073882                                                                                                      <NA>
 #> P172497             Minist�rio do Meio Ambiente (MMA), Minist�rio da Agricultura, Pecu�ria e Abastecimento (MAPA)
 #>                                                                                  url
 #> P163868 https://projects.worldbank.org/en/projects-operations/project-detail/P163868
@@ -207,9 +207,9 @@ wb_project(country = "BR", status = "active", search = "education")
 #> P177070 https://projects.worldbank.org/en/projects-operations/project-detail/P177070
 #> P179046 https://projects.worldbank.org/en/projects-operations/project-detail/P179046
 #> P178663 https://projects.worldbank.org/en/projects-operations/project-detail/P178663
-#> P073882 https://projects.worldbank.org/en/projects-operations/project-detail/P073882
 #> P179365 https://projects.worldbank.org/en/projects-operations/project-detail/P179365
 #> P153012 https://projects.worldbank.org/en/projects-operations/project-detail/P153012
+#> P073882 https://projects.worldbank.org/en/projects-operations/project-detail/P073882
 #> P172497 https://projects.worldbank.org/en/projects-operations/project-detail/P172497
 
 # active or pipeline projects across two countries
@@ -236,15 +236,15 @@ wb_project(country = c("BR", "IN"), status = c("active", "pipeline"))
 #> P177474 P177474
 #> P178581 P178581
 #> P175723 P175723
-#> P180634 P180634
 #> P179189 P179189
+#> P180634 P180634
 #> P179365 P179365
 #> P179182 P179182
 #> P178993 P178993
 #> P178567 P178567
 #> P178663 P178663
-#> P179046 P179046
 #> P179088 P179088
+#> P179046 P179046
 #> P176733 P176733
 #> P176032 P176032
 #> P179249 P179249
@@ -265,8 +265,8 @@ wb_project(country = c("BR", "IN"), status = c("active", "pipeline"))
 #> P175261 P175261
 #> P178339 P178339
 #> P177070 P177070
-#> P171750 P171750
 #> P178146 P178146
+#> P171750 P171750
 #> P175676 P175676
 #> P177915 P177915
 #> P174798 P174798
@@ -291,9 +291,9 @@ wb_project(country = c("BR", "IN"), status = c("active", "pipeline"))
 #> P170811 P170811
 #> P173704 P173704
 #> P168633 P168633
-#> P170645 P170645
 #> P172213 P172213
 #> P170873 P170873
+#> P170645 P170645
 #> P166020 P166020
 #> P168097 P168097
 #> P172605 P172605
@@ -345,60 +345,55 @@ wb_project(country = c("BR", "IN"), status = c("active", "pipeline"))
 #> P154990 P154990
 #> P096124 P096124
 #> P039027 P039027
-#> P108190 P108190
 #> P505866 P505866
 #> P507322 P507322
+#> P108190 P108190
 #> P500380 P500380
 #> P502493 P502493
 #> P110539 P110539
-#> P508840 P508840
-#> P500252 P500252
-#> P506955 P506955
-#> P507029 P507029
-#> P508202 P508202
-#> P508363 P508363
-#> P504126 P504126
-#> P507066 P507066
-#> P508221 P508221
 #> P180716 P180716
 #> P504276 P504276
 #> P500570 P500570
-#> P173090 P173090
-#> P505177 P505177
-#> P506272 P506272
-#> P506321 P506321
-#> P181608 P181608
-#> P508025 P508025
-#> P105370 P105370
 #> P500469 P500469
 #> P501071 P501071
+#> P105370 P105370
 #> P181511 P181511
-#> P180932 P180932
-#> P505235 P505235
-#> P507629 P507629
-#> P178053 P178053
-#> P500564 P500564
-#> P505590 P505590
-#> P506976 P506976
-#> P181767 P181767
-#> P506329 P506329
-#> P508489 P508489
+#> P507910 P507910
+#> P504899 P504899
+#> P500501 P500501
+#> P181020 P181020
+#> P180699 P180699
+#> P507340 P507340
+#> P114890 P114890
 #> P181244 P181244
 #> P502499 P502499
 #> P500151 P500151
 #> P508719 P508719
 #> P505563 P505563
 #> P507628 P507628
+#> P178053 P178053
+#> P500564 P500564
+#> P505590 P505590
+#> P180932 P180932
+#> P505235 P505235
+#> P507629 P507629
+#> P506976 P506976
+#> P181767 P181767
+#> P506329 P506329
+#> P508489 P508489
+#> P506272 P506272
+#> P506321 P506321
+#> P173090 P173090
+#> P505177 P505177
+#> P181608 P181608
+#> P508025 P508025
 #> P179349 P179349
 #> P504543 P504543
-#> P505914 P505914
 #> P509041 P509041
 #> P506142 P506142
+#> P505914 P505914
 #> P500614 P500614
 #> P506861 P506861
-#> P180699 P180699
-#> P507340 P507340
-#> P114890 P114890
 #> P500168 P500168
 #> P506320 P506320
 #> P500431 P500431
@@ -407,26 +402,31 @@ wb_project(country = c("BR", "IN"), status = c("active", "pipeline"))
 #> P503872 P503872
 #> P506340 P506340
 #> P507236 P507236
-#> P507910 P507910
-#> P504899 P504899
-#> P500501 P500501
-#> P181020 P181020
+#> P500252 P500252
+#> P508840 P508840
+#> P506955 P506955
+#> P504126 P504126
+#> P507066 P507066
+#> P508221 P508221
+#> P507029 P507029
+#> P508202 P508202
+#> P508363 P508363
 #> P114896 P114896
 #> P504253 P504253
 #> P502491 P502491
 #> P181524 P181524
-#> P073882 P073882
-#> P177159 P177159
 #> P171257 P171257
 #> P132620 P132620
 #> P122387 P122387
 #> P128921 P128921
 #> P158000 P158000
 #> P160018 P160018
+#> P073882 P073882
+#> P177159 P177159
 #> P172497 P172497
 #> P164602 P164602
-#> P152285 P152285
 #> P009585 P009585
+#> P152285 P152285
 #>                                                                                                            project_name
 #> P507508                                                                  Amaravati Integrated Urban Development Program
 #> P178253                           Uttar Pradesh Agriculture Growth and Rural Enterprise Ecosystem Strengthening Project
@@ -449,15 +449,15 @@ wb_project(country = c("BR", "IN"), status = c("active", "pipeline"))
 #> P177474                                                          Piauí Pillars of Growth and Social Inclusion Project 2
 #> P178581                                                                           Assam Resilient Rural Bridges Program
 #> P175723                                                           Mato Grosso Sustainable Development of Family Farming
-#> P180634                            Sikkim: Integrated Service Provision and Innovation for Reviving Economies Operation
 #> P179189                                                          Tamil Nadu Climate Resilient Urban Development Program
+#> P180634                            Sikkim: Integrated Service Provision and Innovation for Reviving Economies Operation
 #> P179365                                          Brazil: Support to New Bolsa Familia Conditional Cash Transfer Program
 #> P179182                                        Rio de Janeiro Fiscal Management and Sustainable Development Policy Loan
 #> P178993                                              Mato Grosso Resilient, Inclusive, and Sustainable Learning Project
 #> P178567                                                          Piauí Health and Social Protection Development Project
 #> P178663                                                            Progestão Piauí: Public Sector Management Efficiency
-#> P179046                                                             Progestão Acre: Public Sector Management Efficiency
 #> P179088                                                        Progestão Tocantins: Public Sector Management Efficiency
+#> P179046                                                             Progestão Acre: Public Sector Management Efficiency
 #> P176733                                                                IN: Manipur Infotech eNabled Development Project
 #> P176032                                                               Himachal Pradesh Power Sector Development Program
 #> P179249                                                      Chhattisgarh: Accelerated Learning for a Knowledge-Economy
@@ -478,8 +478,8 @@ wb_project(country = c("BR", "IN"), status = c("active", "pipeline"))
 #> P175261                                                            Punjab: Building Fiscal and Institutional Resilience
 #> P178339                                                      Progestão Mato Grosso: Public Sector Management Efficiency
 #> P177070                                                          Progestão Alagoas: Public Sector Management Efficiency
-#> P171750                                              Additional Financing: Rooftop Solar Program for Residential sector
 #> P178146                                                                India's Enhanced Health Service Delivery Program
+#> P171750                                              Additional Financing: Rooftop Solar Program for Residential sector
 #> P175676                             PHSPP: Transforming India’s Public Health Systems for Pandemic Preparedness Program
 #> P177915                                    GUJARAT OUTCOMES FOR ACCELERATED LEARNING (GOAL) - ADDITIONAL FINANCING (AF)
 #> P174798                                                                             Fisheries Sector Prosperity Project
@@ -504,9 +504,9 @@ wb_project(country = c("BR", "IN"), status = c("active", "pipeline"))
 #> P170811                                                                   Punjab Municipal Services Improvement Project
 #> P173704                                                                Gujarat Outcomes for Accelerated Learning (GOAL)
 #> P168633                                                                           Kerala Solid Waste Management Project
-#> P170645                                         Chhattisgarh Inclusive Rural and Accelerated Agriculture Growth Project
 #> P172213                                                            Nagaland: Enhancing Classroom Teaching and Resources
 #> P170873                            Second Dam Rehabilitation and Improvement Project - Additional Financing (DRIP-2 AF)
+#> P170645                                         Chhattisgarh Inclusive Rural and Accelerated Agriculture Growth Project
 #> P166020                                   West Bengal Inland Water Transport, Logistics and Spatial Development Project
 #> P168097                                                                          Meghalaya Integrated Transport Project
 #> P172605                                                        Salvador Social Multi-Sector Service Delivery Project II
@@ -558,60 +558,55 @@ wb_project(country = c("BR", "IN"), status = c("active", "pipeline"))
 #> P154990                                                                          Jhelum and Tawi Flood Recovery Project
 #> P096124                                                                      Vishnugad Pipalkoti Hydro Electric Project
 #> P039027                                                               RF Science Centers - Emergency Assistance Project
-#> P108190                                                            Subterranean Arsenic Removal: Experiment to Delivery
 #> P505866                                                                                                       BR PE DPL
 #> P507322                                                 Brazil Enhancing Productivity, Sustainability and Inclusion DPF
+#> P108190                                                            Subterranean Arsenic Removal: Experiment to Delivery
 #> P500380  India Supporting Socioeconomic Development and Livelihood Security among Particularly Vulnerable Tribal Groups
 #> P502493                                             Rio Grande do Norte: Sustainable Development and Governance Project
 #> P110539                                                                    India: FaL-G High Capacity Automation Plants
-#> P508840                                                                              Institutions MPA – Phase 1 (Assam)
-#> P500252                                                                                                             IPF
-#> P506955                                                                                                    PPP SP Rails
-#> P507029                                  Brazil Electromobility Multiphase Programmatic Approach – MPA Phase 2 Salvador
-#> P508202                        Amazon and Cerrado Bioeconomy, Forest Restoration, and Climate-Smart Agriculture Project
-#> P508363                                                                                                      BR Digital
-#> P504126                                                                                       Brazil: ASL Xingu project
-#> P507066                   Meghalaya Multisectoral Project for Adolescent Wellbeing, Empowerment and Resilience (MPOWER)
-#> P508221                                                                                                   SC Resilience
 #> P180716                                                                               Promoting Green Hydrogen in India
 #> P504276                                                                                                 SP Metro Line 2
 #> P500570                                                                  Sergipe Efficient Digital Acceleration project
-#> P173090                                         Second Amazona Fiscal and Environmental Sustainability Programmatic DPF
-#> P505177                                                            India - Enhancing Innovation among ICMR Institutions
-#> P506272                                                                 Karnataka Water Security and Resilience Program
-#> P506321                                                                                                   Bahia SIP DPL
-#> P181608                                                      Progestão Program - MPA Phase 1 State of Rio Grande do Sul
-#> P508025                                                                                                             SS3
-#> P105370                                                                          Allian Duhangan Hydro Electric Project
 #> P500469  Brazil Proactive, Safe and Resilient Road Asset Management Program - State of Espirito Santo Project - Phase 2
 #> P501071                                                          Rajasthan Highway Modernization Project (RHMP) Phase-2
+#> P105370                                                                          Allian Duhangan Hydro Electric Project
 #> P181511                                                   Expanding Clean Hydrogen in Brazil - Ceara Green Hydrogen Hub
-#> P180932                                                                Strengthening Coastal Resilience and the Economy
-#> P505235                BR State of Rio Grande do Sul Sustainable Recovery and Climate Resilient Development Policy Loan
-#> P507629                                                Brazil: Decarbonization of Energy-Intensive Value Chains Project
-#> P178053                                                                      Uttar Pradesh Clean Air Management Program
-#> P500564                                                      Punjab Outcomes-Acceleration In School Education Operation
-#> P505590                                                                                                    MS Pro-Roads
-#> P506976                                                                        West Bengal Health System Reform Program
-#> P181767                                                        Hybrid PPP - São Paulo Commuter Rail Lines 11, 12 and 13
-#> P506329                                                    Private-Delivered Metro Sao Paulo Line 4 Phase III Extension
-#> P508489                                                                                                         SRH P4R
+#> P507910                                                                        Skills: National ITI Upgradation Program
+#> P504899                                Strengthening Social Assistance Delivery System in the Municipality of São Paulo
+#> P500501                                        Electrification and Improvement of the São Paulo Urban Transport Program
+#> P181020                                                                      Gurugram Metro Huda to Cyber City, Haryana
+#> P180699                                                    Tamil Nadu Women Employment and Safety (TN WESAFE) Operation
+#> P507340                                                               Himachal Disaster Recovery and Resilience Project
+#> P114890                                                         Combining income and forest protection: açaí production
 #> P181244                                                                  India-West Bengal Health System Reform Program
 #> P502499                                                                            Surat Resilience Enhancement Project
 #> P500151                                                                                                   PForR Project
 #> P508719                                                                                                           AHEAD
 #> P505563                                                                                                        PoCRA-II
 #> P507628                                                             Energy Transition of the Northeast Region of Brazil
+#> P178053                                                                      Uttar Pradesh Clean Air Management Program
+#> P500564                                                      Punjab Outcomes-Acceleration In School Education Operation
+#> P505590                                                                                                    MS Pro-Roads
+#> P180932                                                                Strengthening Coastal Resilience and the Economy
+#> P505235                BR State of Rio Grande do Sul Sustainable Recovery and Climate Resilient Development Policy Loan
+#> P507629                                                Brazil: Decarbonization of Energy-Intensive Value Chains Project
+#> P506976                                                                        West Bengal Health System Reform Program
+#> P181767                                                        Hybrid PPP - São Paulo Commuter Rail Lines 11, 12 and 13
+#> P506329                                                    Private-Delivered Metro Sao Paulo Line 4 Phase III Extension
+#> P508489                                                                                                         SRH P4R
+#> P506272                                                                 Karnataka Water Security and Resilience Program
+#> P506321                                                                                                   Bahia SIP DPL
+#> P173090                                         Second Amazona Fiscal and Environmental Sustainability Programmatic DPF
+#> P505177                                                            India - Enhancing Innovation among ICMR Institutions
+#> P181608                                                      Progestão Program - MPA Phase 1 State of Rio Grande do Sul
+#> P508025                                                                                                             SS3
 #> P179349                                        Electric Vehicle Operations and Lending for a Vibrant Ecosystem (EVOLVE)
 #> P504543                                                    Brazil Electromobility and Energy Transition Finance Project
-#> P505914                                                          IN: Digital Empowerment and Services to Harness Growth
 #> P509041                                                                                                 Tocantins PRIDP
 #> P506142                                      Santa Catarina Rural Development Project for Sustainability and Innovation
+#> P505914                                                          IN: Digital Empowerment and Services to Harness Growth
 #> P500614                                                         BR State of Alagoas Sustainable Development Policy Loan
 #> P506861                                                                                                  AM Sustainable
-#> P180699                                                    Tamil Nadu Women Employment and Safety (TN WESAFE) Operation
-#> P507340                                                               Himachal Disaster Recovery and Resilience Project
-#> P114890                                                         Combining income and forest protection: açaí production
 #> P500168                                                                                                     IPF Regular
 #> P506320                                                         Accelerating the Energy Transition in the Amazon (AETA)
 #> P500431                                                     Agroecology and Sustainable Rural Development in Pernambuco
@@ -620,26 +615,31 @@ wb_project(country = c("BR", "IN"), status = c("active", "pipeline"))
 #> P503872                                                                       Kerala Health Systems Improvement Program
 #> P506340                                                                                                            MRDP
 #> P507236                                                                   Assam Governance and Service Delivery Program
-#> P507910                                                                        Skills: National ITI Upgradation Program
-#> P504899                                Strengthening Social Assistance Delivery System in the Municipality of São Paulo
-#> P500501                                        Electrification and Improvement of the São Paulo Urban Transport Program
-#> P181020                                                                      Gurugram Metro Huda to Cyber City, Haryana
+#> P500252                                                                                                             IPF
+#> P508840                                                                              Institutions MPA – Phase 1 (Assam)
+#> P506955                                                                                                    PPP SP Rails
+#> P504126                                                                                       Brazil: ASL Xingu project
+#> P507066                   Meghalaya Multisectoral Project for Adolescent Wellbeing, Empowerment and Resilience (MPOWER)
+#> P508221                                                                                                   SC Resilience
+#> P507029                                  Brazil Electromobility Multiphase Programmatic Approach – MPA Phase 2 Salvador
+#> P508202                        Amazon and Cerrado Bioeconomy, Forest Restoration, and Climate-Smart Agriculture Project
+#> P508363                                                                                                      BR Digital
 #> P114896                                                                       Collective Land Ownership Model for Women
 #> P504253 Brazil Proactive, Safe, and Resilient Road Asset Management Program - State of Santa Catarina Project - Phase 3
 #> P502491                                                           Haryana Clean Air and Sustainable Development Program
 #> P181524                              Second Dam Rehabilitation and Improvement Project - Additional Financing (DRIP -3)
-#> P073882                                                                  RF 2nd Amazon Fire Prevention and Mobilization
-#> P177159                                                       Monitoring and Evaluation capacity building in South Asia
 #> P171257                                                            Brazil Amazon Sustainable Landscapes Project Phase 2
 #> P132620                                                              Partial Risk Sharing Facility in Energy Efficiency
 #> P122387                                                                     DFID TF III Supervision and Fiduciary Costs
 #> P128921                                                              Partial Risk Sharing Facility in Energy Efficiency
 #> P158000                                                                           Amazon Sustainable Landscapes Project
 #> P160018                                                   Additional Financing for Grid-Connected Rooftop Solar Program
+#> P073882                                                                  RF 2nd Amazon Fire Prevention and Mobilization
+#> P177159                                                       Monitoring and Evaluation capacity building in South Asia
 #> P172497                                                          Sustainable Multiple Use Landscape Consortia in Brazil
 #> P164602                                                    Integrated Landscape Management in the Cerrado Biome Project
-#> P152285                                                                     Brazil Investment Plan Coordination Project
 #> P009585                                                                                                           ODS I
+#> P152285                                                                     Brazil Investment Plan Coordination Project
 #>           status approval_date closing_date country_code country
 #> P507508   Active    2024-12-19         <NA>           IN   India
 #> P178253   Active    2024-12-12   2030-09-30           IN   India
@@ -662,15 +662,15 @@ wb_project(country = c("BR", "IN"), status = c("active", "pipeline"))
 #> P177474   Active    2024-03-14   2029-07-31           BR  Brazil
 #> P178581   Active    2024-03-01   2030-06-28           IN   India
 #> P175723   Active    2024-02-05   2030-05-15           BR  Brazil
-#> P180634   Active    2023-12-21   2029-04-30           IN   India
 #> P179189   Active    2023-12-21   2030-12-31           IN   India
+#> P180634   Active    2023-12-21   2029-04-30           IN   India
 #> P179365   Active    2023-12-06   2026-04-30           BR  Brazil
 #> P179182   Active    2023-11-16   2024-12-31           BR  Brazil
 #> P178993   Active    2023-10-26   2028-12-31           BR  Brazil
 #> P178567   Active    2023-10-05   2029-06-30           BR  Brazil
 #> P178663   Active    2023-10-03   2029-06-29           BR  Brazil
-#> P179046   Active    2023-07-24   2028-12-29           BR  Brazil
 #> P179088   Active    2023-07-24   2028-12-29           BR  Brazil
+#> P179046   Active    2023-07-24   2028-12-29           BR  Brazil
 #> P176733   Active    2023-07-06   2028-09-30           IN   India
 #> P176032   Active    2023-06-27   2028-03-31           IN   India
 #> P179249   Active    2023-06-26   2028-09-29           IN   India
@@ -691,8 +691,8 @@ wb_project(country = c("BR", "IN"), status = c("active", "pipeline"))
 #> P175261   Active    2022-09-19   2027-06-30           IN   India
 #> P178339   Active    2022-08-23   2028-06-30           BR  Brazil
 #> P177070   Active    2022-07-21   2028-03-31           BR  Brazil
-#> P171750   Active    2022-06-28         <NA>           IN   India
 #> P178146   Active    2022-06-28   2027-06-30           IN   India
+#> P171750   Active    2022-06-28         <NA>           IN   India
 #> P175676   Active    2022-06-28   2027-12-31           IN   India
 #> P177915   Active    2022-06-21         <NA>           IN   India
 #> P174798   Active    2022-06-17   2027-06-30           IN   India
@@ -717,9 +717,9 @@ wb_project(country = c("BR", "IN"), status = c("active", "pipeline"))
 #> P170811   Active    2021-03-31   2026-09-30           IN   India
 #> P173704   Active    2021-03-24   2027-09-30           IN   India
 #> P168633   Active    2021-03-09   2027-06-30           IN   India
-#> P170645   Active    2020-12-15   2026-07-31           IN   India
 #> P172213   Active    2020-12-15   2026-06-30           IN   India
 #> P170873   Active    2020-12-15   2027-12-31           IN   India
+#> P170645   Active    2020-12-15   2026-07-31           IN   India
 #> P166020   Active    2020-11-30   2026-03-31           IN   India
 #> P168097   Active    2020-10-23   2026-10-31           IN   India
 #> P172605   Active    2020-09-22   2025-12-30           BR  Brazil
@@ -771,60 +771,55 @@ wb_project(country = c("BR", "IN"), status = c("active", "pipeline"))
 #> P154990   Active    2015-06-02   2024-12-31           IN   India
 #> P096124   Active    2011-06-30   2024-12-31           IN   India
 #> P039027   Active    1994-10-28         <NA>           BR  Brazil
-#> P108190 Pipeline          <NA>   2008-12-31           IN   India
 #> P505866 Pipeline          <NA>         <NA>           BR  Brazil
 #> P507322 Pipeline          <NA>         <NA>           BR  Brazil
+#> P108190 Pipeline          <NA>   2008-12-31           IN   India
 #> P500380 Pipeline          <NA>         <NA>           IN   India
 #> P502493 Pipeline          <NA>         <NA>           BR  Brazil
 #> P110539 Pipeline          <NA>         <NA>           IN   India
-#> P508840 Pipeline          <NA>         <NA>           IN   India
-#> P500252 Pipeline          <NA>         <NA>           IN   India
-#> P506955 Pipeline          <NA>         <NA>           BR  Brazil
-#> P507029 Pipeline          <NA>         <NA>           BR  Brazil
-#> P508202 Pipeline          <NA>         <NA>           BR  Brazil
-#> P508363 Pipeline          <NA>         <NA>           BR  Brazil
-#> P504126 Pipeline          <NA>         <NA>           BR  Brazil
-#> P507066 Pipeline          <NA>         <NA>           IN   India
-#> P508221 Pipeline          <NA>         <NA>           BR  Brazil
 #> P180716 Pipeline          <NA>         <NA>           IN   India
 #> P504276 Pipeline          <NA>         <NA>           BR  Brazil
 #> P500570 Pipeline          <NA>         <NA>           BR  Brazil
-#> P173090 Pipeline          <NA>         <NA>           BR  Brazil
-#> P505177 Pipeline          <NA>         <NA>           IN   India
-#> P506272 Pipeline          <NA>         <NA>           IN   India
-#> P506321 Pipeline          <NA>         <NA>           BR  Brazil
-#> P181608 Pipeline          <NA>         <NA>           BR  Brazil
-#> P508025 Pipeline          <NA>         <NA>           BR  Brazil
-#> P105370 Pipeline          <NA>   2018-05-04           IN   India
 #> P500469 Pipeline          <NA>         <NA>           BR  Brazil
 #> P501071 Pipeline          <NA>         <NA>           IN   India
+#> P105370 Pipeline          <NA>   2018-05-04           IN   India
 #> P181511 Pipeline          <NA>         <NA>           BR  Brazil
-#> P180932 Pipeline          <NA>         <NA>           IN   India
-#> P505235 Pipeline          <NA>         <NA>           BR  Brazil
-#> P507629 Pipeline          <NA>         <NA>           BR  Brazil
-#> P178053 Pipeline          <NA>         <NA>           IN   India
-#> P500564 Pipeline          <NA>         <NA>           IN   India
-#> P505590 Pipeline          <NA>         <NA>           BR  Brazil
-#> P506976 Pipeline          <NA>         <NA>           IN   India
-#> P181767 Pipeline          <NA>         <NA>           BR  Brazil
-#> P506329 Pipeline          <NA>         <NA>           BR  Brazil
-#> P508489 Pipeline          <NA>         <NA>           IN   India
+#> P507910 Pipeline          <NA>         <NA>           IN   India
+#> P504899 Pipeline          <NA>         <NA>           BR  Brazil
+#> P500501 Pipeline          <NA>         <NA>           BR  Brazil
+#> P181020 Pipeline          <NA>         <NA>           IN   India
+#> P180699 Pipeline          <NA>         <NA>           IN   India
+#> P507340 Pipeline          <NA>         <NA>           IN   India
+#> P114890 Pipeline          <NA>   2011-10-01           BR  Brazil
 #> P181244 Pipeline          <NA>         <NA>           IN   India
 #> P502499 Pipeline          <NA>         <NA>           IN   India
 #> P500151 Pipeline          <NA>         <NA>           IN   India
 #> P508719 Pipeline          <NA>         <NA>           IN   India
 #> P505563 Pipeline          <NA>         <NA>           IN   India
 #> P507628 Pipeline          <NA>         <NA>           BR  Brazil
+#> P178053 Pipeline          <NA>         <NA>           IN   India
+#> P500564 Pipeline          <NA>         <NA>           IN   India
+#> P505590 Pipeline          <NA>         <NA>           BR  Brazil
+#> P180932 Pipeline          <NA>         <NA>           IN   India
+#> P505235 Pipeline          <NA>         <NA>           BR  Brazil
+#> P507629 Pipeline          <NA>         <NA>           BR  Brazil
+#> P506976 Pipeline          <NA>         <NA>           IN   India
+#> P181767 Pipeline          <NA>         <NA>           BR  Brazil
+#> P506329 Pipeline          <NA>         <NA>           BR  Brazil
+#> P508489 Pipeline          <NA>         <NA>           IN   India
+#> P506272 Pipeline          <NA>         <NA>           IN   India
+#> P506321 Pipeline          <NA>         <NA>           BR  Brazil
+#> P173090 Pipeline          <NA>         <NA>           BR  Brazil
+#> P505177 Pipeline          <NA>         <NA>           IN   India
+#> P181608 Pipeline          <NA>         <NA>           BR  Brazil
+#> P508025 Pipeline          <NA>         <NA>           BR  Brazil
 #> P179349 Pipeline          <NA>         <NA>           IN   India
 #> P504543 Pipeline          <NA>         <NA>           BR  Brazil
-#> P505914 Pipeline          <NA>         <NA>           IN   India
 #> P509041 Pipeline          <NA>         <NA>           BR  Brazil
 #> P506142 Pipeline          <NA>         <NA>           BR  Brazil
+#> P505914 Pipeline          <NA>         <NA>           IN   India
 #> P500614 Pipeline          <NA>         <NA>           BR  Brazil
 #> P506861 Pipeline          <NA>         <NA>           BR  Brazil
-#> P180699 Pipeline          <NA>         <NA>           IN   India
-#> P507340 Pipeline          <NA>         <NA>           IN   India
-#> P114890 Pipeline          <NA>   2011-10-01           BR  Brazil
 #> P500168 Pipeline          <NA>         <NA>           IN   India
 #> P506320 Pipeline          <NA>         <NA>           BR  Brazil
 #> P500431 Pipeline          <NA>         <NA>           BR  Brazil
@@ -833,26 +828,31 @@ wb_project(country = c("BR", "IN"), status = c("active", "pipeline"))
 #> P503872 Pipeline          <NA>         <NA>           IN   India
 #> P506340 Pipeline          <NA>         <NA>           IN   India
 #> P507236 Pipeline          <NA>         <NA>           IN   India
-#> P507910 Pipeline          <NA>         <NA>           IN   India
-#> P504899 Pipeline          <NA>         <NA>           BR  Brazil
-#> P500501 Pipeline          <NA>         <NA>           BR  Brazil
-#> P181020 Pipeline          <NA>         <NA>           IN   India
+#> P500252 Pipeline          <NA>         <NA>           IN   India
+#> P508840 Pipeline          <NA>         <NA>           IN   India
+#> P506955 Pipeline          <NA>         <NA>           BR  Brazil
+#> P504126 Pipeline          <NA>         <NA>           BR  Brazil
+#> P507066 Pipeline          <NA>         <NA>           IN   India
+#> P508221 Pipeline          <NA>         <NA>           BR  Brazil
+#> P507029 Pipeline          <NA>         <NA>           BR  Brazil
+#> P508202 Pipeline          <NA>         <NA>           BR  Brazil
+#> P508363 Pipeline          <NA>         <NA>           BR  Brazil
 #> P114896 Pipeline          <NA>   2011-10-01           IN   India
 #> P504253 Pipeline          <NA>         <NA>           BR  Brazil
 #> P502491 Pipeline          <NA>         <NA>           IN   India
 #> P181524 Pipeline          <NA>         <NA>           IN   India
-#> P073882   Active          <NA>   2004-09-30           BR  Brazil
-#> P177159   Active          <NA>   2025-06-30           IN   India
 #> P171257   Active          <NA>         <NA>           BR  Brazil
 #> P132620   Active          <NA>   2025-03-31           IN   India
 #> P122387   Active          <NA>         <NA>           IN   India
 #> P128921   Active          <NA>   2025-03-31           IN   India
 #> P158000   Active          <NA>   2026-12-31           BR  Brazil
 #> P160018   Active          <NA>   2026-11-30           IN   India
+#> P073882   Active          <NA>   2004-09-30           BR  Brazil
+#> P177159   Active          <NA>   2025-06-30           IN   India
 #> P172497   Active          <NA>   2027-11-30           BR  Brazil
 #> P164602   Active          <NA>   2025-11-30           BR  Brazil
-#> P152285   Active          <NA>   2024-11-30           BR  Brazil
 #> P009585   Active          <NA>         <NA>           IN   India
+#> P152285   Active          <NA>   2024-11-30           BR  Brazil
 #>                              region total_commitment ibrd_commitment
 #> P507508                  South Asia         0.000000          0.0000
 #> P178253                  South Asia       325.100000        325.1000
@@ -875,15 +875,15 @@ wb_project(country = c("BR", "IN"), status = c("active", "pipeline"))
 #> P177474 Latin America and Caribbean        50.000000         50.0000
 #> P178581                  South Asia       452.000000        452.0000
 #> P175723 Latin America and Caribbean        80.000000         80.0000
-#> P180634                  South Asia       100.000000        100.0000
 #> P179189                  South Asia       300.000000        300.0000
+#> P180634                  South Asia       100.000000        100.0000
 #> P179365 Latin America and Caribbean       300.000000        300.0000
 #> P179182 Latin America and Caribbean       135.238245        135.2382
 #> P178993 Latin America and Caribbean       100.000000        100.0000
 #> P178567 Latin America and Caribbean        50.000000         50.0000
 #> P178663 Latin America and Caribbean        50.000000         50.0000
-#> P179046 Latin America and Caribbean        40.000000         40.0000
 #> P179088 Latin America and Caribbean        50.000000         50.0000
+#> P179046 Latin America and Caribbean        40.000000         40.0000
 #> P176733                  South Asia        46.000000         46.0000
 #> P176032                  South Asia       200.000000        200.0000
 #> P179249                  South Asia       300.000000        300.0000
@@ -904,8 +904,8 @@ wb_project(country = c("BR", "IN"), status = c("active", "pipeline"))
 #> P175261                  South Asia       150.000000        150.0000
 #> P178339 Latin America and Caribbean        40.000000         40.0000
 #> P177070 Latin America and Caribbean        40.000000         40.0000
-#> P171750                  South Asia       165.000000        150.0000
 #> P178146                  South Asia       500.000000        500.0000
+#> P171750                  South Asia       165.000000        150.0000
 #> P175676                  South Asia       500.000000        500.0000
 #> P177915                  South Asia       250.000000        250.0000
 #> P174798                  South Asia       200.000000        150.0000
@@ -930,9 +930,9 @@ wb_project(country = c("BR", "IN"), status = c("active", "pipeline"))
 #> P170811                  South Asia       210.000000        105.0000
 #> P173704                  South Asia       750.000000        500.0000
 #> P168633                  South Asia       210.000000        105.0000
-#> P170645                  South Asia       167.000000        100.0000
 #> P172213                  South Asia        68.000000         68.0000
 #> P170873                  South Asia       500.000000        250.0000
+#> P170645                  South Asia       167.000000        100.0000
 #> P166020                  South Asia       105.000000        105.0000
 #> P168097                  South Asia       120.000000        120.0000
 #> P172605 Latin America and Caribbean       125.000000        125.0000
@@ -984,60 +984,55 @@ wb_project(country = c("BR", "IN"), status = c("active", "pipeline"))
 #> P154990                  South Asia       250.000000          0.0000
 #> P096124                  South Asia       648.000000        648.0000
 #> P039027 Latin America and Caribbean         6.400000          0.0000
-#> P108190                  South Asia         0.000000          0.0000
 #> P505866 Latin America and Caribbean         0.000000          0.0000
 #> P507322 Latin America and Caribbean         0.000000          0.0000
+#> P108190                  South Asia         0.000000          0.0000
 #> P500380                  South Asia         0.000000          0.0000
 #> P502493 Latin America and Caribbean        45.000000          0.0000
 #> P110539                  South Asia         0.000000          0.0000
-#> P508840                  South Asia         0.000000          0.0000
-#> P500252                  South Asia         0.000000          0.0000
-#> P506955 Latin America and Caribbean         0.000000          0.0000
-#> P507029 Latin America and Caribbean         0.000000          0.0000
-#> P508202 Latin America and Caribbean         0.000000          0.0000
-#> P508363 Latin America and Caribbean         0.000000          0.0000
-#> P504126 Latin America and Caribbean         8.560000          0.0000
-#> P507066                  South Asia         0.000000          0.0000
-#> P508221 Latin America and Caribbean         0.000000          0.0000
 #> P180716                  South Asia      1000.000000       1000.0000
 #> P504276 Latin America and Caribbean       900.000000          0.0000
 #> P500570 Latin America and Caribbean        13.400000         13.4000
-#> P173090 Latin America and Caribbean       200.000000        200.0000
-#> P505177                  South Asia         1.000000          1.0000
-#> P506272                  South Asia         0.000000          0.0000
-#> P506321 Latin America and Caribbean         0.000000          0.0000
-#> P181608 Latin America and Caribbean        50.000000         50.0000
-#> P508025 Latin America and Caribbean         0.000000          0.0000
-#> P105370                  South Asia         0.000000          0.0000
 #> P500469 Latin America and Caribbean       162.400000          0.0000
 #> P501071                  South Asia       250.000000          0.0000
+#> P105370                  South Asia         0.000000          0.0000
 #> P181511 Latin America and Caribbean        90.000000         90.0000
-#> P180932                  South Asia       212.640000        212.6400
-#> P505235 Latin America and Caribbean         0.000000          0.0000
-#> P507629 Latin America and Caribbean         0.000000          0.0000
-#> P178053                  South Asia       350.000000        350.0000
-#> P500564                  South Asia       135.000000          0.0000
-#> P505590 Latin America and Caribbean       200.000000          0.0000
-#> P506976                  South Asia         0.000000          0.0000
-#> P181767 Latin America and Caribbean       100.000000        100.0000
-#> P506329 Latin America and Caribbean         0.000000          0.0000
-#> P508489                  South Asia         0.000000          0.0000
+#> P507910                  South Asia         0.000000          0.0000
+#> P504899 Latin America and Caribbean         0.000000          0.0000
+#> P500501 Latin America and Caribbean      2300.000000       2300.0000
+#> P181020                  South Asia       131.000000        131.0000
+#> P180699                  South Asia       150.000000        150.0000
+#> P507340                  South Asia         0.000000          0.0000
+#> P114890 Latin America and Caribbean         0.000000          0.0000
 #> P181244                  South Asia       315.000000        315.0000
 #> P502499                  South Asia       196.000000          0.0000
 #> P500151                  South Asia         0.000000          0.0000
 #> P508719                  South Asia         0.000000          0.0000
 #> P505563                  South Asia       490.000000          0.0000
 #> P507628 Latin America and Caribbean         0.000000          0.0000
+#> P178053                  South Asia       350.000000        350.0000
+#> P500564                  South Asia       135.000000          0.0000
+#> P505590 Latin America and Caribbean       200.000000          0.0000
+#> P180932                  South Asia       212.640000        212.6400
+#> P505235 Latin America and Caribbean         0.000000          0.0000
+#> P507629 Latin America and Caribbean         0.000000          0.0000
+#> P506976                  South Asia         0.000000          0.0000
+#> P181767 Latin America and Caribbean       100.000000        100.0000
+#> P506329 Latin America and Caribbean         0.000000          0.0000
+#> P508489                  South Asia         0.000000          0.0000
+#> P506272                  South Asia         0.000000          0.0000
+#> P506321 Latin America and Caribbean         0.000000          0.0000
+#> P173090 Latin America and Caribbean       200.000000        200.0000
+#> P505177                  South Asia         1.000000          1.0000
+#> P181608 Latin America and Caribbean        50.000000         50.0000
+#> P508025 Latin America and Caribbean         0.000000          0.0000
 #> P179349                  South Asia         0.000000          0.0000
 #> P504543 Latin America and Caribbean         0.000000          0.0000
-#> P505914                  South Asia      5400.000000          0.0000
 #> P509041 Latin America and Caribbean         0.000000          0.0000
 #> P506142 Latin America and Caribbean         0.000000          0.0000
+#> P505914                  South Asia      5400.000000          0.0000
 #> P500614 Latin America and Caribbean         0.000000          0.0000
 #> P506861 Latin America and Caribbean         0.000000          0.0000
-#> P180699                  South Asia       150.000000        150.0000
-#> P507340                  South Asia         0.000000          0.0000
-#> P114890 Latin America and Caribbean         0.000000          0.0000
 #> P500168                  South Asia         0.000000          0.0000
 #> P506320 Latin America and Caribbean         0.000000          0.0000
 #> P500431 Latin America and Caribbean        50.000000          0.0000
@@ -1046,26 +1041,31 @@ wb_project(country = c("BR", "IN"), status = c("active", "pipeline"))
 #> P503872                  South Asia       280.000000          0.0000
 #> P506340                  South Asia         0.000000          0.0000
 #> P507236                  South Asia         0.000000          0.0000
-#> P507910                  South Asia         0.000000          0.0000
-#> P504899 Latin America and Caribbean         0.000000          0.0000
-#> P500501 Latin America and Caribbean      2300.000000       2300.0000
-#> P181020                  South Asia       131.000000        131.0000
+#> P500252                  South Asia         0.000000          0.0000
+#> P508840                  South Asia         0.000000          0.0000
+#> P506955 Latin America and Caribbean         0.000000          0.0000
+#> P504126 Latin America and Caribbean         8.560000          0.0000
+#> P507066                  South Asia         0.000000          0.0000
+#> P508221 Latin America and Caribbean         0.000000          0.0000
+#> P507029 Latin America and Caribbean         0.000000          0.0000
+#> P508202 Latin America and Caribbean         0.000000          0.0000
+#> P508363 Latin America and Caribbean         0.000000          0.0000
 #> P114896                  South Asia         0.000000          0.0000
 #> P504253 Latin America and Caribbean       375.000000          0.0000
 #> P502491                  South Asia      2830.250000        128.0000
 #> P181524                  South Asia       420.000000        420.0000
-#> P073882 Latin America and Caribbean         1.100000          0.0000
-#> P177159                  South Asia         0.852516          0.0000
 #> P171257 Latin America and Caribbean        19.284404          0.0000
 #> P132620                  South Asia        25.000000          0.0000
 #> P122387                  South Asia         1.160000          0.0000
 #> P128921                  South Asia        18.000000          0.0000
 #> P158000 Latin America and Caribbean        60.330000          0.0000
 #> P160018                  South Asia        22.935780          0.0000
+#> P073882 Latin America and Caribbean         1.100000          0.0000
+#> P177159                  South Asia         0.852516          0.0000
 #> P172497 Latin America and Caribbean        24.577982          0.0000
 #> P164602 Latin America and Caribbean        21.000000          0.0000
-#> P152285 Latin America and Caribbean         1.000000          0.0000
 #> P009585                  South Asia         1.300000          0.0000
+#> P152285 Latin America and Caribbean         1.000000          0.0000
 #>         ida_commitment            lending_instrument
 #> P507508           0.00 Program-for-Results Financing
 #> P178253           0.00  Investment Project Financing
@@ -1088,15 +1088,15 @@ wb_project(country = c("BR", "IN"), status = c("active", "pipeline"))
 #> P177474           0.00  Investment Project Financing
 #> P178581           0.00 Program-for-Results Financing
 #> P175723           0.00  Investment Project Financing
-#> P180634           0.00 Program-for-Results Financing
 #> P179189           0.00 Program-for-Results Financing
+#> P180634           0.00 Program-for-Results Financing
 #> P179365           0.00  Investment Project Financing
 #> P179182           0.00    Development Policy Lending
 #> P178993           0.00  Investment Project Financing
 #> P178567           0.00  Investment Project Financing
 #> P178663           0.00  Investment Project Financing
-#> P179046           0.00  Investment Project Financing
 #> P179088           0.00  Investment Project Financing
+#> P179046           0.00  Investment Project Financing
 #> P176733           0.00  Investment Project Financing
 #> P176032           0.00 Program-for-Results Financing
 #> P179249           0.00 Program-for-Results Financing
@@ -1117,8 +1117,8 @@ wb_project(country = c("BR", "IN"), status = c("active", "pipeline"))
 #> P175261           0.00 Program-for-Results Financing
 #> P178339           0.00  Investment Project Financing
 #> P177070           0.00  Investment Project Financing
-#> P171750           0.00 Program-for-Results Financing
 #> P178146           0.00 Program-for-Results Financing
+#> P171750           0.00 Program-for-Results Financing
 #> P175676           0.00 Program-for-Results Financing
 #> P177915           0.00 Program-for-Results Financing
 #> P174798           0.00  Investment Project Financing
@@ -1143,9 +1143,9 @@ wb_project(country = c("BR", "IN"), status = c("active", "pipeline"))
 #> P170811           0.00  Investment Project Financing
 #> P173704           0.00 Program-for-Results Financing
 #> P168633           0.00  Investment Project Financing
-#> P170645           0.00  Investment Project Financing
 #> P172213           0.00  Investment Project Financing
 #> P170873           0.00  Investment Project Financing
+#> P170645           0.00  Investment Project Financing
 #> P166020           0.00  Investment Project Financing
 #> P168097           0.00  Investment Project Financing
 #> P172605           0.00  Investment Project Financing
@@ -1197,60 +1197,55 @@ wb_project(country = c("BR", "IN"), status = c("active", "pipeline"))
 #> P154990         250.00  Investment Project Financing
 #> P096124           0.00  Investment Project Financing
 #> P039027           0.00                          <NA>
-#> P108190           0.00      Specific Investment Loan
 #> P505866           0.00    Development Policy Lending
 #> P507322           0.00    Development Policy Lending
+#> P108190           0.00      Specific Investment Loan
 #> P500380           0.00  Investment Project Financing
 #> P502493          45.00  Investment Project Financing
 #> P110539           0.00                          <NA>
-#> P508840           0.00 Program-for-Results Financing
-#> P500252           0.00  Investment Project Financing
-#> P506955           0.00  Investment Project Financing
-#> P507029           0.00  Investment Project Financing
-#> P508202           0.00  Investment Project Financing
-#> P508363           0.00  Investment Project Financing
-#> P504126           8.56  Investment Project Financing
-#> P507066           0.00  Investment Project Financing
-#> P508221           0.00  Investment Project Financing
 #> P180716           0.00 Program-for-Results Financing
 #> P504276         900.00  Investment Project Financing
 #> P500570           0.00  Investment Project Financing
-#> P173090           0.00    Development Policy Lending
-#> P505177           0.00  Investment Project Financing
-#> P506272           0.00 Program-for-Results Financing
-#> P506321           0.00    Development Policy Lending
-#> P181608           0.00  Investment Project Financing
-#> P508025           0.00 Program-for-Results Financing
-#> P105370           0.00                          <NA>
 #> P500469         162.40  Investment Project Financing
 #> P501071         250.00  Investment Project Financing
+#> P105370           0.00                          <NA>
 #> P181511           0.00  Investment Project Financing
-#> P180932           0.00  Investment Project Financing
-#> P505235           0.00    Development Policy Lending
-#> P507629           0.00  Investment Project Financing
-#> P178053           0.00 Program-for-Results Financing
-#> P500564         135.00 Program-for-Results Financing
-#> P505590         200.00  Investment Project Financing
-#> P506976           0.00 Program-for-Results Financing
-#> P181767           0.00  Investment Project Financing
-#> P506329           0.00  Investment Project Financing
-#> P508489           0.00 Program-for-Results Financing
+#> P507910           0.00 Program-for-Results Financing
+#> P504899           0.00  Investment Project Financing
+#> P500501           0.00 Program-for-Results Financing
+#> P181020           0.00  Investment Project Financing
+#> P180699           0.00 Program-for-Results Financing
+#> P507340           0.00  Investment Project Financing
+#> P114890           0.00      Specific Investment Loan
 #> P181244           0.00 Program-for-Results Financing
 #> P502499         196.00  Investment Project Financing
 #> P500151           0.00 Program-for-Results Financing
 #> P508719           0.00 Program-for-Results Financing
 #> P505563         490.00  Investment Project Financing
 #> P507628           0.00  Investment Project Financing
+#> P178053           0.00 Program-for-Results Financing
+#> P500564         135.00 Program-for-Results Financing
+#> P505590         200.00  Investment Project Financing
+#> P180932           0.00  Investment Project Financing
+#> P505235           0.00    Development Policy Lending
+#> P507629           0.00  Investment Project Financing
+#> P506976           0.00 Program-for-Results Financing
+#> P181767           0.00  Investment Project Financing
+#> P506329           0.00  Investment Project Financing
+#> P508489           0.00 Program-for-Results Financing
+#> P506272           0.00 Program-for-Results Financing
+#> P506321           0.00    Development Policy Lending
+#> P173090           0.00    Development Policy Lending
+#> P505177           0.00  Investment Project Financing
+#> P181608           0.00  Investment Project Financing
+#> P508025           0.00 Program-for-Results Financing
 #> P179349           0.00  Investment Project Financing
 #> P504543           0.00  Investment Project Financing
-#> P505914        5400.00  Investment Project Financing
 #> P509041           0.00  Investment Project Financing
 #> P506142           0.00  Investment Project Financing
+#> P505914        5400.00  Investment Project Financing
 #> P500614           0.00    Development Policy Lending
 #> P506861           0.00    Development Policy Lending
-#> P180699           0.00 Program-for-Results Financing
-#> P507340           0.00  Investment Project Financing
-#> P114890           0.00      Specific Investment Loan
 #> P500168           0.00  Investment Project Financing
 #> P506320           0.00  Investment Project Financing
 #> P500431          50.00  Investment Project Financing
@@ -1259,26 +1254,31 @@ wb_project(country = c("BR", "IN"), status = c("active", "pipeline"))
 #> P503872         280.00 Program-for-Results Financing
 #> P506340           0.00  Investment Project Financing
 #> P507236           0.00  Investment Project Financing
-#> P507910           0.00 Program-for-Results Financing
-#> P504899           0.00  Investment Project Financing
-#> P500501           0.00 Program-for-Results Financing
-#> P181020           0.00  Investment Project Financing
+#> P500252           0.00  Investment Project Financing
+#> P508840           0.00 Program-for-Results Financing
+#> P506955           0.00  Investment Project Financing
+#> P504126           8.56  Investment Project Financing
+#> P507066           0.00  Investment Project Financing
+#> P508221           0.00  Investment Project Financing
+#> P507029           0.00  Investment Project Financing
+#> P508202           0.00  Investment Project Financing
+#> P508363           0.00  Investment Project Financing
 #> P114896           0.00      Specific Investment Loan
 #> P504253         375.00  Investment Project Financing
 #> P502491        2702.25 Program-for-Results Financing
 #> P181524           0.00  Investment Project Financing
-#> P073882           0.00                          <NA>
-#> P177159           0.00  Investment Project Financing
 #> P171257           0.00  Investment Project Financing
 #> P132620           0.00  Investment Project Financing
 #> P122387           0.00  Investment Project Financing
 #> P128921           0.00  Investment Project Financing
 #> P158000           0.00  Investment Project Financing
 #> P160018           0.00 Program-for-Results Financing
+#> P073882           0.00                          <NA>
+#> P177159           0.00  Investment Project Financing
 #> P172497           0.00  Investment Project Financing
 #> P164602           0.00  Investment Project Financing
-#> P152285           0.00  Investment Project Financing
 #> P009585           0.00      Specific Investment Loan
+#> P152285           0.00  Investment Project Financing
 #>                                                                                                                  borrower
 #> P507508                                                                                                              <NA>
 #> P178253                                                                                                              <NA>
@@ -1301,15 +1301,15 @@ wb_project(country = c("BR", "IN"), status = c("active", "pipeline"))
 #> P177474                                                                                                     State of Piau
 #> P178581                                                                                                             India
 #> P175723                                                                                              State of Mato Grosso
-#> P180634                                                                                                             India
 #> P179189                                                                                               Ministry of Finance
+#> P180634                                                                                                             India
 #> P179365                                                                                     Federative Republic of Brazil
 #> P179182                                                                                    Municipality of Rio de Janeiro
 #> P178993                                                                                              STATE OF MATO GROSSO
 #> P178567                                                                                                              <NA>
 #> P178663                                                                                                    State of Piaui
-#> P179046                                                                                                     State of Acre
 #> P179088                                                                            State Secretariat of Planning (SEPLAN)
+#> P179046                                                                                                     State of Acre
 #> P176733                                                                                                             India
 #> P176032                                                                                                             India
 #> P179249                                                                                                             India
@@ -1330,8 +1330,8 @@ wb_project(country = c("BR", "IN"), status = c("active", "pipeline"))
 #> P175261                                                                                                             India
 #> P178339                                                                                              State of Mato Grosso
 #> P177070                                         State of Alagoas, with the guarantee of the Federative Republic of Brazil
-#> P171750                                                                                               State Bank of India
 #> P178146                                                                                                             India
+#> P171750                                                                                               State Bank of India
 #> P175676                                                                                                             India
 #> P177915                                                                        Government of Gujarat, Ministry of Finance
 #> P174798                                                                                                             INDIA
@@ -1356,9 +1356,9 @@ wb_project(country = c("BR", "IN"), status = c("active", "pipeline"))
 #> P170811                                                                                                             India
 #> P173704                                                                                               Ministry of Finance
 #> P168633                                                                                                             India
-#> P170645                                                                                               Ministry of Finance
 #> P172213                                                                                                             India
 #> P170873                                                               Ministry of Finance, Department of Economic Affairs
+#> P170645                                                                                               Ministry of Finance
 #> P166020                                                                                                 Republic of India
 #> P168097                                                                                                             India
 #> P172605                                                                                          Municipality of Salvador
@@ -1410,60 +1410,55 @@ wb_project(country = c("BR", "IN"), status = c("active", "pipeline"))
 #> P154990                                                                                                             India
 #> P096124                                                                                                             India
 #> P039027                                                                                                              <NA>
-#> P108190                                                                                                              <NA>
 #> P505866                                                                                                              <NA>
 #> P507322                                                                                                              <NA>
+#> P108190                                                                                                              <NA>
 #> P500380                                                                                                              <NA>
 #> P502493                                                                                                              <NA>
 #> P110539                                                                                                              <NA>
-#> P508840                                                                                                              <NA>
-#> P500252                                                                                                              <NA>
-#> P506955                                                                                                              <NA>
-#> P507029                                                                                                              <NA>
-#> P508202                                                                                                              <NA>
-#> P508363                                                                                                              <NA>
-#> P504126                                                                                                              <NA>
-#> P507066                                                                                                              <NA>
-#> P508221                                                                                                              <NA>
 #> P180716                                                                                               Ministry of Finance
 #> P504276                                                                                                              <NA>
 #> P500570                                                                                                              <NA>
-#> P173090                                                                                                              <NA>
-#> P505177                                                                                                              <NA>
-#> P506272                                                                                                              <NA>
-#> P506321                                                                                                              <NA>
-#> P181608                                                                                                 State of Amazonas
-#> P508025                                                                                                              <NA>
-#> P105370                                                                                                              <NA>
 #> P500469                                                                                                              <NA>
 #> P501071                                                                                                              <NA>
+#> P105370                                                                                                              <NA>
 #> P181511                                                                     Complexo Industrial Portuario de Pecem (CIPP)
-#> P180932                                                                                                             India
-#> P505235                                                                                                              <NA>
-#> P507629                                                                                                              <NA>
-#> P178053                                                                                                 Republic of India
-#> P500564                                                                                                              <NA>
-#> P505590                                                                                                              <NA>
-#> P506976                                                                                                              <NA>
-#> P181767                                                                                                              <NA>
-#> P506329                                                                                                              <NA>
-#> P508489                                                                                                              <NA>
+#> P507910                                                                                                              <NA>
+#> P504899                                                                                                              <NA>
+#> P500501                                                                                                              <NA>
+#> P181020                                                                                               Government of India
+#> P180699                                                                                                             India
+#> P507340                                                                                                              <NA>
+#> P114890                                                                                                              <NA>
 #> P181244                                                                                               Ministry of Finance
 #> P502499                                                                                                              <NA>
 #> P500151                                                                                                              <NA>
 #> P508719                                                                                                              <NA>
 #> P505563                                                                                                              <NA>
 #> P507628                                                                                                              <NA>
+#> P178053                                                                                                 Republic of India
+#> P500564                                                                                                              <NA>
+#> P505590                                                                                                              <NA>
+#> P180932                                                                                                             India
+#> P505235                                                                                                              <NA>
+#> P507629                                                                                                              <NA>
+#> P506976                                                                                                              <NA>
+#> P181767                                                                                                              <NA>
+#> P506329                                                                                                              <NA>
+#> P508489                                                                                                              <NA>
+#> P506272                                                                                                              <NA>
+#> P506321                                                                                                              <NA>
+#> P173090                                                                                                              <NA>
+#> P505177                                                                                                              <NA>
+#> P181608                                                                                                 State of Amazonas
+#> P508025                                                                                                              <NA>
 #> P179349                                                                                                              <NA>
 #> P504543                                                                                                              <NA>
-#> P505914                                                                                                              <NA>
 #> P509041                                                                                                              <NA>
 #> P506142                                                                                                              <NA>
+#> P505914                                                                                                              <NA>
 #> P500614                                                                                                              <NA>
 #> P506861                                                                                                              <NA>
-#> P180699                                                                                                             India
-#> P507340                                                                                                              <NA>
-#> P114890                                                                                                              <NA>
 #> P500168                                                                                                              <NA>
 #> P506320                                                                                                              <NA>
 #> P500431                                                                                                              <NA>
@@ -1472,26 +1467,31 @@ wb_project(country = c("BR", "IN"), status = c("active", "pipeline"))
 #> P503872                                                                                                              <NA>
 #> P506340                                                                                                              <NA>
 #> P507236                                                                                                              <NA>
-#> P507910                                                                                                              <NA>
-#> P504899                                                                                                              <NA>
-#> P500501                                                                                                              <NA>
-#> P181020                                                                                               Government of India
+#> P500252                                                                                                              <NA>
+#> P508840                                                                                                              <NA>
+#> P506955                                                                                                              <NA>
+#> P504126                                                                                                              <NA>
+#> P507066                                                                                                              <NA>
+#> P508221                                                                                                              <NA>
+#> P507029                                                                                                              <NA>
+#> P508202                                                                                                              <NA>
+#> P508363                                                                                                              <NA>
 #> P114896                                                                                                              <NA>
 #> P504253                                                                                                              <NA>
 #> P502491                                                                                                              <NA>
 #> P181524                                                               Ministry of Finance, Department of Economic Affairs
-#> P073882                                                                                                              <NA>
-#> P177159                                                            Institute for Financial Management and Research (IFMR)
 #> P171257 Fundo Brasileiro de Biodiversidade - FUNBIO, Fundacao Getulio Vargas - FGV, Conservacao Internacional - CI Brazil
 #> P132620                                                                                        Government of India, India
 #> P122387                                                                                                              <NA>
 #> P128921                                                                                                              <NA>
 #> P158000 Fundo Brasileiro de Biodiversidade - FUNBIO, Conserva��o Internacional - CI Brazil, Funda��o Get�lio Vargas - FGV
 #> P160018                                                                                               State Bank of India
+#> P073882                                                                                                              <NA>
+#> P177159                                                            Institute for Financial Management and Research (IFMR)
 #> P172497                                                                                                              IICA
 #> P164602                                       Brazil - Deutsche Gesellschaft f�r Internationale Zusammenarbeit GmbH (GIZ)
-#> P152285                                                                                  Funda��o Pro-Natureza - FUNATURA
 #> P009585                                                                                                              <NA>
+#> P152285                                                                                  Funda��o Pro-Natureza - FUNATURA
 #>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              implementing_agency
 #> P507508                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
 #> P178253                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   Department of Agriculture, Government of Uttar Pradesh
@@ -1514,15 +1514,15 @@ wb_project(country = c("BR", "IN"), status = c("active", "pipeline"))
 #> P177474                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            Piau� State Secretariat for Planning (SEPLAN)
 #> P178581                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       Public Works Roads Department, Government of Assam
 #> P175723                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            State Secretary for Family Agriculture (SEAF)
-#> P180634                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                Planning and Development Department, Government of Sikkim
 #> P179189                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                Tamil Nadu Urban Infrastructure Financial Services Limited, Tamil Nadu Municipal Administration & Water Supply Department
+#> P180634                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                Planning and Development Department, Government of Sikkim
 #> P179365                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  Ministry of Citizenship
 #> P179182                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      Secretaria Municipal de Fazenda e Planejamento, Secretaria Municipal de Transportes
 #> P178993                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   SECRETARIAT OF EDUCATION - MATO GROSSO
 #> P178567                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      State Secretariat of Health (SESAPI), State Secretariat of Social Assistance, Labor and Human Rights (SASC), State Secretariat of Planning (SEPLAN)
 #> P178663                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          Secretariat of Finance of Piaui
-#> P179046                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            State Secretariat of Planning
 #> P179088                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      UGP
+#> P179046                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            State Secretariat of Planning
 #> P176733                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     Cyber Corporation of Manipur Limited
 #> P176032                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    Directorate of Energy, HimUrja, HPPCL (Himachal Pradesh Power Corporation Limited), HPSEBL (Himachal Pradesh State Electricity Board Limited), HPPTCL (Himachal Pradesh Power Transmission Corporation Limited), HPSLDC (Himachal Pradesh State Load Despatch Centre)
 #> P179249                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    State of Chhattisgarh
@@ -1543,8 +1543,8 @@ wb_project(country = c("BR", "IN"), status = c("active", "pipeline"))
 #> P175261                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              Department of Finance, Government of Punjab
 #> P178339                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     Secretariat of Finance - Mato Grosso
 #> P177070                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                Secretariat of Finance - State of Alagoas
-#> P171750                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      State Bank of India
 #> P178146                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          Department of Health and Family Welfare, Ministry of Health and Family Welfare, Government of India, Ministry of Health and Family Welfare, Government of India
+#> P171750                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      State Bank of India
 #> P175676                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    Ministry of Health and Family Welfare
 #> P177915                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              Education Department, Government of Gujarat
 #> P174798                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      Department of Fisheries, Ministry of Fisheries, Animal Husbandry and Dairying, National Fisheries Development Board
@@ -1569,9 +1569,9 @@ wb_project(country = c("BR", "IN"), status = c("active", "pipeline"))
 #> P170811                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      Ludhiana Municipal Corporation, Amritsar Municipal Corporation, Punjab Municipal Infrastructure Development Company
 #> P173704                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              Education Department, Government of Gujarat
 #> P168633                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   Local Self Government Department, Government of Kerala
-#> P170645                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 Chhattisgarh, Department of Agriculture Development and Farmer Welfare and Biotechnology
 #> P172213                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                Nagaland (Department of School Education)
 #> P170873 Uttarakhand Jal Vidyut Nigam Ltd., Kerala State Electricity Board (KSEB), Tamil Nadu Generation and Distribution Corporation Limited (TANGEDCO), Government of Gujarat, Water Resources Department, Government of Chhattisgarh, Water Resources Department, Government of Kerala, Water Resources Department, Government of West Bengal, Irrigation and Waterways Department, Government of Uttar Pradesh, Irrigation and Water Resources Department, Meghalaya Power Generation Corporation Ltd. (MePGCL), Government of Maharasthra, Water Resources Department, Government of Manipur, Water Resources Department, Central Water Commission (CWC), Ministry of Jal Shakti, Government of Rajasthan, Water Resources Department, Government of Odisha, Water Resources Department, Government of Tamil Nadu, Water Resources Department, Government of Madhya Pradesh, Water Resources Department, Government of Karnataka, Water Resources Department
+#> P170645                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 Chhattisgarh, Department of Agriculture Development and Farmer Welfare and Biotechnology
 #> P166020                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                Government of West Bengal
 #> P168097                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 Meghalaya Infrastructure Development Finance Corporation
 #> P172605                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               Casa Civil
@@ -1623,60 +1623,55 @@ wb_project(country = c("BR", "IN"), status = c("active", "pipeline"))
 #> P154990                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              Project Implementing Entity
 #> P096124                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               THDC (Tehri Hydro Development Corporation)
 #> P039027                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
-#> P108190                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
 #> P505866                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
 #> P507322                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
+#> P108190                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
 #> P500380                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
 #> P502493                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
 #> P110539                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
-#> P508840                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
-#> P500252                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
-#> P506955                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
-#> P507029                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
-#> P508202                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
-#> P508363                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
-#> P504126                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
-#> P507066                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
-#> P508221                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
 #> P180716                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     Ministry of New and Renewable Energy
 #> P504276                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
 #> P500570                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
-#> P173090                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
-#> P505177                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
-#> P506272                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
-#> P506321                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
-#> P181608                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                State Secretariat of Administration and Management (SEAD)
-#> P508025                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
-#> P105370                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
 #> P500469                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
 #> P501071                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
+#> P105370                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
 #> P181511                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   Complexo Industrial Portu�rio de Pec�m
-#> P180932                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        Government of Karnataka, Government of Tamil Nadu
-#> P505235                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
-#> P507629                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
-#> P178053                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           Department of Environment, Forests, and Climate Change, State of Uttar Pradesh
-#> P500564                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
-#> P505590                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
-#> P506976                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
-#> P181767                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
-#> P506329                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
-#> P508489                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
+#> P507910                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
+#> P504899                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
+#> P500501                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
+#> P181020                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 Haryana Mass Rapid Transport Corporation Limited (HMRTC)
+#> P180699                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            Social Welfare & Women Empowerment Department
+#> P507340                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
+#> P114890                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
 #> P181244                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                Government of West Bengal
 #> P502499                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
 #> P500151                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
 #> P508719                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
 #> P505563                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
 #> P507628                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
+#> P178053                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           Department of Environment, Forests, and Climate Change, State of Uttar Pradesh
+#> P500564                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
+#> P505590                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
+#> P180932                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        Government of Karnataka, Government of Tamil Nadu
+#> P505235                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
+#> P507629                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
+#> P506976                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
+#> P181767                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
+#> P506329                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
+#> P508489                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
+#> P506272                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
+#> P506321                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
+#> P173090                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
+#> P505177                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
+#> P181608                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                State Secretariat of Administration and Management (SEAD)
+#> P508025                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
 #> P179349                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
 #> P504543                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
-#> P505914                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
 #> P509041                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
 #> P506142                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
+#> P505914                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
 #> P500614                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
 #> P506861                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
-#> P180699                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            Social Welfare & Women Empowerment Department
-#> P507340                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
-#> P114890                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
 #> P500168                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
 #> P506320                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
 #> P500431                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
@@ -1685,26 +1680,31 @@ wb_project(country = c("BR", "IN"), status = c("active", "pipeline"))
 #> P503872                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
 #> P506340                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
 #> P507236                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
-#> P507910                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
-#> P504899                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
-#> P500501                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
-#> P181020                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 Haryana Mass Rapid Transport Corporation Limited (HMRTC)
+#> P500252                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
+#> P508840                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
+#> P506955                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
+#> P504126                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
+#> P507066                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
+#> P508221                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
+#> P507029                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
+#> P508202                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
+#> P508363                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
 #> P114896                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
 #> P504253                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
 #> P502491                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
 #> P181524 Uttarakhand Jal Vidyut Nigam Ltd., Kerala State Electricity Board (KSEB), Tamil Nadu Generation and Distribution Corporation Limited (TANGEDCO), Government of Gujarat, Water Resources Department, Government of Chhattisgarh, Water Resources Department, Government of Kerala, Water Resources Department, Government of West Bengal, Irrigation and Waterways Department, Government of Uttar Pradesh, Irrigation and Water Resources Department, Meghalaya Power Generation Corporation Ltd. (MePGCL), Government of Maharasthra, Water Resources Department, Government of Manipur, Water Resources Department, Central Water Commission (CWC), Ministry of Jal Shakti, Government of Rajasthan, Water Resources Department, Government of Odisha, Water Resources Department, Government of Tamil Nadu, Water Resources Department, Government of Madhya Pradesh, Water Resources Department, Government of Karnataka, Water Resources Department
-#> P073882                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
-#> P177159                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      Jameel Poverty Action Lab (J-PAL) South Asia at the Institute for Financial Management and Research
 #> P171257                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   Ministry of Environment - MMA, Funda��o Getulio Vargas
 #> P132620                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      Small Industries Development Bank of India, EESL Energy Efficiency Services Limited
 #> P122387                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
 #> P128921                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
 #> P158000                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                Funda��o Getulio Vargas, Ministry of Environment and Climate Change - MMA
 #> P160018                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      State Bank of India
+#> P073882                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
+#> P177159                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      Jameel Poverty Action Lab (J-PAL) South Asia at the Institute for Financial Management and Research
 #> P172497                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            Minist�rio do Meio Ambiente (MMA), Minist�rio da Agricultura, Pecu�ria e Abastecimento (MAPA)
 #> P164602                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        Ministry of Agriculture and  Livestock(MAPA), National Rural Learning Service, Ministry of Environment / Brazilian Forest Service
-#> P152285                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  Ministry of Environment
 #> P009585                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
+#> P152285                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  Ministry of Environment
 #>                                                                                  url
 #> P507508 https://projects.worldbank.org/en/projects-operations/project-detail/P507508
 #> P178253 https://projects.worldbank.org/en/projects-operations/project-detail/P178253
@@ -1727,15 +1727,15 @@ wb_project(country = c("BR", "IN"), status = c("active", "pipeline"))
 #> P177474 https://projects.worldbank.org/en/projects-operations/project-detail/P177474
 #> P178581 https://projects.worldbank.org/en/projects-operations/project-detail/P178581
 #> P175723 https://projects.worldbank.org/en/projects-operations/project-detail/P175723
-#> P180634 https://projects.worldbank.org/en/projects-operations/project-detail/P180634
 #> P179189 https://projects.worldbank.org/en/projects-operations/project-detail/P179189
+#> P180634 https://projects.worldbank.org/en/projects-operations/project-detail/P180634
 #> P179365 https://projects.worldbank.org/en/projects-operations/project-detail/P179365
 #> P179182 https://projects.worldbank.org/en/projects-operations/project-detail/P179182
 #> P178993 https://projects.worldbank.org/en/projects-operations/project-detail/P178993
 #> P178567 https://projects.worldbank.org/en/projects-operations/project-detail/P178567
 #> P178663 https://projects.worldbank.org/en/projects-operations/project-detail/P178663
-#> P179046 https://projects.worldbank.org/en/projects-operations/project-detail/P179046
 #> P179088 https://projects.worldbank.org/en/projects-operations/project-detail/P179088
+#> P179046 https://projects.worldbank.org/en/projects-operations/project-detail/P179046
 #> P176733 https://projects.worldbank.org/en/projects-operations/project-detail/P176733
 #> P176032 https://projects.worldbank.org/en/projects-operations/project-detail/P176032
 #> P179249 https://projects.worldbank.org/en/projects-operations/project-detail/P179249
@@ -1756,8 +1756,8 @@ wb_project(country = c("BR", "IN"), status = c("active", "pipeline"))
 #> P175261 https://projects.worldbank.org/en/projects-operations/project-detail/P175261
 #> P178339 https://projects.worldbank.org/en/projects-operations/project-detail/P178339
 #> P177070 https://projects.worldbank.org/en/projects-operations/project-detail/P177070
-#> P171750 https://projects.worldbank.org/en/projects-operations/project-detail/P171750
 #> P178146 https://projects.worldbank.org/en/projects-operations/project-detail/P178146
+#> P171750 https://projects.worldbank.org/en/projects-operations/project-detail/P171750
 #> P175676 https://projects.worldbank.org/en/projects-operations/project-detail/P175676
 #> P177915 https://projects.worldbank.org/en/projects-operations/project-detail/P177915
 #> P174798 https://projects.worldbank.org/en/projects-operations/project-detail/P174798
@@ -1782,9 +1782,9 @@ wb_project(country = c("BR", "IN"), status = c("active", "pipeline"))
 #> P170811 https://projects.worldbank.org/en/projects-operations/project-detail/P170811
 #> P173704 https://projects.worldbank.org/en/projects-operations/project-detail/P173704
 #> P168633 https://projects.worldbank.org/en/projects-operations/project-detail/P168633
-#> P170645 https://projects.worldbank.org/en/projects-operations/project-detail/P170645
 #> P172213 https://projects.worldbank.org/en/projects-operations/project-detail/P172213
 #> P170873 https://projects.worldbank.org/en/projects-operations/project-detail/P170873
+#> P170645 https://projects.worldbank.org/en/projects-operations/project-detail/P170645
 #> P166020 https://projects.worldbank.org/en/projects-operations/project-detail/P166020
 #> P168097 https://projects.worldbank.org/en/projects-operations/project-detail/P168097
 #> P172605 https://projects.worldbank.org/en/projects-operations/project-detail/P172605
@@ -1836,60 +1836,55 @@ wb_project(country = c("BR", "IN"), status = c("active", "pipeline"))
 #> P154990 https://projects.worldbank.org/en/projects-operations/project-detail/P154990
 #> P096124 https://projects.worldbank.org/en/projects-operations/project-detail/P096124
 #> P039027 https://projects.worldbank.org/en/projects-operations/project-detail/P039027
-#> P108190 https://projects.worldbank.org/en/projects-operations/project-detail/P108190
 #> P505866 https://projects.worldbank.org/en/projects-operations/project-detail/P505866
 #> P507322 https://projects.worldbank.org/en/projects-operations/project-detail/P507322
+#> P108190 https://projects.worldbank.org/en/projects-operations/project-detail/P108190
 #> P500380 https://projects.worldbank.org/en/projects-operations/project-detail/P500380
 #> P502493 https://projects.worldbank.org/en/projects-operations/project-detail/P502493
 #> P110539 https://projects.worldbank.org/en/projects-operations/project-detail/P110539
-#> P508840 https://projects.worldbank.org/en/projects-operations/project-detail/P508840
-#> P500252 https://projects.worldbank.org/en/projects-operations/project-detail/P500252
-#> P506955 https://projects.worldbank.org/en/projects-operations/project-detail/P506955
-#> P507029 https://projects.worldbank.org/en/projects-operations/project-detail/P507029
-#> P508202 https://projects.worldbank.org/en/projects-operations/project-detail/P508202
-#> P508363 https://projects.worldbank.org/en/projects-operations/project-detail/P508363
-#> P504126 https://projects.worldbank.org/en/projects-operations/project-detail/P504126
-#> P507066 https://projects.worldbank.org/en/projects-operations/project-detail/P507066
-#> P508221 https://projects.worldbank.org/en/projects-operations/project-detail/P508221
 #> P180716 https://projects.worldbank.org/en/projects-operations/project-detail/P180716
 #> P504276 https://projects.worldbank.org/en/projects-operations/project-detail/P504276
 #> P500570 https://projects.worldbank.org/en/projects-operations/project-detail/P500570
-#> P173090 https://projects.worldbank.org/en/projects-operations/project-detail/P173090
-#> P505177 https://projects.worldbank.org/en/projects-operations/project-detail/P505177
-#> P506272 https://projects.worldbank.org/en/projects-operations/project-detail/P506272
-#> P506321 https://projects.worldbank.org/en/projects-operations/project-detail/P506321
-#> P181608 https://projects.worldbank.org/en/projects-operations/project-detail/P181608
-#> P508025 https://projects.worldbank.org/en/projects-operations/project-detail/P508025
-#> P105370 https://projects.worldbank.org/en/projects-operations/project-detail/P105370
 #> P500469 https://projects.worldbank.org/en/projects-operations/project-detail/P500469
 #> P501071 https://projects.worldbank.org/en/projects-operations/project-detail/P501071
+#> P105370 https://projects.worldbank.org/en/projects-operations/project-detail/P105370
 #> P181511 https://projects.worldbank.org/en/projects-operations/project-detail/P181511
-#> P180932 https://projects.worldbank.org/en/projects-operations/project-detail/P180932
-#> P505235 https://projects.worldbank.org/en/projects-operations/project-detail/P505235
-#> P507629 https://projects.worldbank.org/en/projects-operations/project-detail/P507629
-#> P178053 https://projects.worldbank.org/en/projects-operations/project-detail/P178053
-#> P500564 https://projects.worldbank.org/en/projects-operations/project-detail/P500564
-#> P505590 https://projects.worldbank.org/en/projects-operations/project-detail/P505590
-#> P506976 https://projects.worldbank.org/en/projects-operations/project-detail/P506976
-#> P181767 https://projects.worldbank.org/en/projects-operations/project-detail/P181767
-#> P506329 https://projects.worldbank.org/en/projects-operations/project-detail/P506329
-#> P508489 https://projects.worldbank.org/en/projects-operations/project-detail/P508489
+#> P507910 https://projects.worldbank.org/en/projects-operations/project-detail/P507910
+#> P504899 https://projects.worldbank.org/en/projects-operations/project-detail/P504899
+#> P500501 https://projects.worldbank.org/en/projects-operations/project-detail/P500501
+#> P181020 https://projects.worldbank.org/en/projects-operations/project-detail/P181020
+#> P180699 https://projects.worldbank.org/en/projects-operations/project-detail/P180699
+#> P507340 https://projects.worldbank.org/en/projects-operations/project-detail/P507340
+#> P114890 https://projects.worldbank.org/en/projects-operations/project-detail/P114890
 #> P181244 https://projects.worldbank.org/en/projects-operations/project-detail/P181244
 #> P502499 https://projects.worldbank.org/en/projects-operations/project-detail/P502499
 #> P500151 https://projects.worldbank.org/en/projects-operations/project-detail/P500151
 #> P508719 https://projects.worldbank.org/en/projects-operations/project-detail/P508719
 #> P505563 https://projects.worldbank.org/en/projects-operations/project-detail/P505563
 #> P507628 https://projects.worldbank.org/en/projects-operations/project-detail/P507628
+#> P178053 https://projects.worldbank.org/en/projects-operations/project-detail/P178053
+#> P500564 https://projects.worldbank.org/en/projects-operations/project-detail/P500564
+#> P505590 https://projects.worldbank.org/en/projects-operations/project-detail/P505590
+#> P180932 https://projects.worldbank.org/en/projects-operations/project-detail/P180932
+#> P505235 https://projects.worldbank.org/en/projects-operations/project-detail/P505235
+#> P507629 https://projects.worldbank.org/en/projects-operations/project-detail/P507629
+#> P506976 https://projects.worldbank.org/en/projects-operations/project-detail/P506976
+#> P181767 https://projects.worldbank.org/en/projects-operations/project-detail/P181767
+#> P506329 https://projects.worldbank.org/en/projects-operations/project-detail/P506329
+#> P508489 https://projects.worldbank.org/en/projects-operations/project-detail/P508489
+#> P506272 https://projects.worldbank.org/en/projects-operations/project-detail/P506272
+#> P506321 https://projects.worldbank.org/en/projects-operations/project-detail/P506321
+#> P173090 https://projects.worldbank.org/en/projects-operations/project-detail/P173090
+#> P505177 https://projects.worldbank.org/en/projects-operations/project-detail/P505177
+#> P181608 https://projects.worldbank.org/en/projects-operations/project-detail/P181608
+#> P508025 https://projects.worldbank.org/en/projects-operations/project-detail/P508025
 #> P179349 https://projects.worldbank.org/en/projects-operations/project-detail/P179349
 #> P504543 https://projects.worldbank.org/en/projects-operations/project-detail/P504543
-#> P505914 https://projects.worldbank.org/en/projects-operations/project-detail/P505914
 #> P509041 https://projects.worldbank.org/en/projects-operations/project-detail/P509041
 #> P506142 https://projects.worldbank.org/en/projects-operations/project-detail/P506142
+#> P505914 https://projects.worldbank.org/en/projects-operations/project-detail/P505914
 #> P500614 https://projects.worldbank.org/en/projects-operations/project-detail/P500614
 #> P506861 https://projects.worldbank.org/en/projects-operations/project-detail/P506861
-#> P180699 https://projects.worldbank.org/en/projects-operations/project-detail/P180699
-#> P507340 https://projects.worldbank.org/en/projects-operations/project-detail/P507340
-#> P114890 https://projects.worldbank.org/en/projects-operations/project-detail/P114890
 #> P500168 https://projects.worldbank.org/en/projects-operations/project-detail/P500168
 #> P506320 https://projects.worldbank.org/en/projects-operations/project-detail/P506320
 #> P500431 https://projects.worldbank.org/en/projects-operations/project-detail/P500431
@@ -1898,26 +1893,31 @@ wb_project(country = c("BR", "IN"), status = c("active", "pipeline"))
 #> P503872 https://projects.worldbank.org/en/projects-operations/project-detail/P503872
 #> P506340 https://projects.worldbank.org/en/projects-operations/project-detail/P506340
 #> P507236 https://projects.worldbank.org/en/projects-operations/project-detail/P507236
-#> P507910 https://projects.worldbank.org/en/projects-operations/project-detail/P507910
-#> P504899 https://projects.worldbank.org/en/projects-operations/project-detail/P504899
-#> P500501 https://projects.worldbank.org/en/projects-operations/project-detail/P500501
-#> P181020 https://projects.worldbank.org/en/projects-operations/project-detail/P181020
+#> P500252 https://projects.worldbank.org/en/projects-operations/project-detail/P500252
+#> P508840 https://projects.worldbank.org/en/projects-operations/project-detail/P508840
+#> P506955 https://projects.worldbank.org/en/projects-operations/project-detail/P506955
+#> P504126 https://projects.worldbank.org/en/projects-operations/project-detail/P504126
+#> P507066 https://projects.worldbank.org/en/projects-operations/project-detail/P507066
+#> P508221 https://projects.worldbank.org/en/projects-operations/project-detail/P508221
+#> P507029 https://projects.worldbank.org/en/projects-operations/project-detail/P507029
+#> P508202 https://projects.worldbank.org/en/projects-operations/project-detail/P508202
+#> P508363 https://projects.worldbank.org/en/projects-operations/project-detail/P508363
 #> P114896 https://projects.worldbank.org/en/projects-operations/project-detail/P114896
 #> P504253 https://projects.worldbank.org/en/projects-operations/project-detail/P504253
 #> P502491 https://projects.worldbank.org/en/projects-operations/project-detail/P502491
 #> P181524 https://projects.worldbank.org/en/projects-operations/project-detail/P181524
-#> P073882 https://projects.worldbank.org/en/projects-operations/project-detail/P073882
-#> P177159 https://projects.worldbank.org/en/projects-operations/project-detail/P177159
 #> P171257 https://projects.worldbank.org/en/projects-operations/project-detail/P171257
 #> P132620 https://projects.worldbank.org/en/projects-operations/project-detail/P132620
 #> P122387 https://projects.worldbank.org/en/projects-operations/project-detail/P122387
 #> P128921 https://projects.worldbank.org/en/projects-operations/project-detail/P128921
 #> P158000 https://projects.worldbank.org/en/projects-operations/project-detail/P158000
 #> P160018 https://projects.worldbank.org/en/projects-operations/project-detail/P160018
+#> P073882 https://projects.worldbank.org/en/projects-operations/project-detail/P073882
+#> P177159 https://projects.worldbank.org/en/projects-operations/project-detail/P177159
 #> P172497 https://projects.worldbank.org/en/projects-operations/project-detail/P172497
 #> P164602 https://projects.worldbank.org/en/projects-operations/project-detail/P164602
-#> P152285 https://projects.worldbank.org/en/projects-operations/project-detail/P152285
 #> P009585 https://projects.worldbank.org/en/projects-operations/project-detail/P009585
+#> P152285 https://projects.worldbank.org/en/projects-operations/project-detail/P152285
 
 # look up specific projects
 wb_project(id = c("P163868", "P180429"))
