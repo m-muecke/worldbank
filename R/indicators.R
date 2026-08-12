@@ -475,6 +475,9 @@ wb_bulk <- function(timeout = 600L) {
 #' @param gapfill (`logical(1)`)\cr
 #'   Whether to fill missing values by carrying forward the last available value. Only used when
 #'   `mrv` is set. Default `FALSE`.
+#' @param footnote (`logical(1)`)\cr
+#'   Whether to return the footnotes published alongside the observations, such as uncertainty
+#'   bounds or the survey a figure was derived from. Default `FALSE`.
 #' @returns A `data.frame()` with the available country indicators.
 #'   The columns are:
 #' * `date`: The date. An integer if all observations are annual, otherwise a character vector.
@@ -487,6 +490,8 @@ wb_bulk <- function(timeout = 600L) {
 #' * `unit`: The indicator unit.
 #' * `obs_status`: The observation status.
 #' * `decimal`: The decimal.
+#' * `footnote`: The observation footnote, or `NA` if there is none. Only present when
+#'   `footnote = TRUE`.
 #' @source <https://api.worldbank.org/v2/country/{country}/indicator/{indicator}>
 #' @family indicators data
 #' @export
@@ -503,6 +508,10 @@ wb_bulk <- function(timeout = 600L) {
 #'   start_date = 2015, end_date = 2023
 #' )
 #' head(ind)
+#'
+#' # include the per-observation footnotes
+#' ind <- wb_data("SI.POV.DDAY", "ALB", footnote = TRUE)
+#' head(ind[c("date", "value", "footnote")])
 #' }
 wb_data <- function(
   indicator = "NY.GDP.MKTP.CD",
@@ -511,7 +520,8 @@ wb_data <- function(
   start_date = NULL,
   end_date = NULL,
   mrv = NULL,
-  gapfill = FALSE
+  gapfill = FALSE,
+  footnote = FALSE
 ) {
   stopifnot(
     is_character(indicator),
@@ -519,7 +529,8 @@ wb_data <- function(
     is_dateish(start_date, null_ok = TRUE),
     is_dateish(end_date, null_ok = TRUE),
     is_count(mrv, null_ok = TRUE),
-    is_flag(gapfill)
+    is_flag(gapfill),
+    is_flag(footnote)
   )
   has_start_date <- !is.null(start_date)
   has_end_date <- !is.null(end_date)
@@ -539,17 +550,25 @@ wb_data <- function(
 
   resource <- sprintf("country/%s/indicator/%s", country, indicator)
   if (length(resource) == 1L) {
-    res <- worldbank(resource = resource, lang = lang, date = date, mrv = mrv, gapfill = gapfill)
-    res <- parse_country_indicator(res)
+    res <- worldbank(
+      resource = resource,
+      lang = lang,
+      date = date,
+      mrv = mrv,
+      gapfill = gapfill,
+      footnote = if (footnote) "Y"
+    )
+    res <- parse_country_indicator(res, footnote = footnote)
   } else {
     res <- worldbank_seq(
       resource = resource,
       lang = lang,
       date = date,
       mrv = mrv,
-      gapfill = gapfill
+      gapfill = gapfill,
+      footnote = if (footnote) "Y"
     )
-    res <- map(res, parse_country_indicator)
+    res <- map(res, parse_country_indicator, footnote = footnote)
     res <- do.call(rbind, res)
   }
   if (nrow(res) == 0L) {
@@ -565,9 +584,9 @@ wb_data <- function(
 #' @export
 wb_country_indicator <- wb_data
 
-parse_country_indicator <- function(data) {
+parse_country_indicator <- function(data, footnote = FALSE) {
   data <- Filter(\(x) !is.null(x$value) && !is.null(x$date), data)
-  data.frame(
+  res <- data.frame(
     date = map_chr(data, "date"),
     indicator_id = map_chr(data, \(x) x$indicator$id),
     indicator_name = map_chr(data, \(x) x$indicator$value),
@@ -580,6 +599,10 @@ parse_country_indicator <- function(data) {
     decimal = map_int(data, "decimal"),
     check.names = FALSE
   )
+  if (footnote) {
+    res$footnote <- map_chr(data, \(x) x$footnote %||% NA_character_)
+  }
+  res
 }
 
 wdi_pivot_long <- function(data) {

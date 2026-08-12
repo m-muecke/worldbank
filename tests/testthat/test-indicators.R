@@ -375,12 +375,44 @@ test_that("wb_data preserves mixed-frequency dates as character", {
   expect_identical(wb_data(c("quarterly", "quarterly"), "US")$date, c("2020Q1", "2020Q1"))
 })
 
+test_that("wb_data returns footnotes only when asked", {
+  captured <- NULL
+  local_mocked_bindings(
+    worldbank = function(...) {
+      captured <<- list(...)$footnote
+      list(wb_observation(footnote = "Based on data from LSMS."), wb_observation())
+    }
+  )
+
+  expect_false("footnote" %in% names(wb_data("SI.POV.DDAY", "ALB")))
+  expect_null(captured)
+
+  actual <- wb_data("SI.POV.DDAY", "ALB", footnote = TRUE)
+  expect_identical(captured, "Y")
+  expect_identical(actual$footnote, c("Based on data from LSMS.", NA))
+})
+
+test_that("wb_data returns footnotes for multiple indicators", {
+  local_mocked_bindings(
+    worldbank_seq = function(resource, ...) {
+      lapply(resource, function(x) {
+        indicator <- sub(".*/", "", x)
+        list(wb_observation(indicator, footnote = paste("note for", indicator)))
+      })
+    }
+  )
+  actual <- wb_data(c("a", "b"), "ALB", footnote = TRUE)
+  expect_identical(actual$footnote, c("note for A", "note for B"))
+})
+
 test_that("wb_data mrv and gapfill validation works", {
   expect_error(wb_data(mrv = 3, start_date = 2020), "mrv")
   expect_error(wb_data(mrv = 3, end_date = 2020), "mrv")
   expect_error(wb_data(gapfill = TRUE), "gapfill")
   expect_error(wb_data(mrv = -1))
   expect_error(wb_data(mrv = "a"))
+  expect_error(wb_data(footnote = "yes"))
+  expect_error(wb_data(footnote = NA))
 })
 
 test_that("error parsing works", {

@@ -15,7 +15,8 @@ wb_data(
   start_date = NULL,
   end_date = NULL,
   mrv = NULL,
-  gapfill = FALSE
+  gapfill = FALSE,
+  footnote = FALSE
 )
 
 wb_country_indicator(
@@ -25,7 +26,8 @@ wb_country_indicator(
   start_date = NULL,
   end_date = NULL,
   mrv = NULL,
-  gapfill = FALSE
+  gapfill = FALSE,
+  footnote = FALSE
 )
 }
 \arguments{
@@ -55,6 +57,10 @@ Most recent values to return. An alternative to \code{start_date}/\code{end_date
 \item{gapfill}{(\code{logical(1)})\cr
 Whether to fill missing values by carrying forward the last available value. Only used when
 \code{mrv} is set. Default \code{FALSE}.}
+
+\item{footnote}{(\code{logical(1)})\cr
+Whether to return the footnotes published alongside the observations, such as uncertainty
+bounds or the survey a figure was derived from. Default \code{FALSE}.}
 }
 \value{
 A \code{data.frame()} with the available country indicators.
@@ -70,6 +76,8 @@ The columns are:
 \item \code{unit}: The indicator unit.
 \item \code{obs_status}: The observation status.
 \item \code{decimal}: The decimal.
+\item \code{footnote}: The observation footnote, or \code{NA} if there is none. Only present when
+\code{footnote = TRUE}.
 }
 }
 \description{
@@ -89,6 +97,10 @@ ind <- wb_data(
   start_date = 2015, end_date = 2023
 )
 head(ind)
+
+# include the per-observation footnotes
+ind <- wb_data("SI.POV.DDAY", "ALB", footnote = TRUE)
+head(ind[c("date", "value", "footnote")])
 }
 \dontshow{\}) # examplesIf}
 }
