@@ -7,6 +7,10 @@
   [`fone_view()`](https://m-muecke.github.io/worldbank/reference/fone.md)
   now return no more than the requested `limit` when pagination is
   required.
+- [`fone_dataset()`](https://m-muecke.github.io/worldbank/reference/fone.md),
+  [`fone_view()`](https://m-muecke.github.io/worldbank/reference/fone.md),
+  and the PIP functions now keep Namibia’s `"NA"` country code, instead
+  of reading it as a missing value.
 - [`fone_view()`](https://m-muecke.github.io/worldbank/reference/fone.md)
   now trims whitespace and returns `NA` instead of `""` for empty
   fields, matching
@@ -38,6 +42,9 @@
 - [`wb_project()`](https://m-muecke.github.io/worldbank/reference/wb_project.md)
   now requires `status` to be one of `"active"`, `"closed"`,
   `"dropped"`, or `"pipeline"`.
+- [`wb_project()`](https://m-muecke.github.io/worldbank/reference/wb_project.md)
+  now numbers the rows of the returned data frame, instead of naming
+  them after the project IDs already held in the `id` column.
 
 ## worldbank 0.9.1
 

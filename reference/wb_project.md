@@ -107,1840 +107,1837 @@ Bank project data. The columns are:
 # \donttest{
 # active projects in Brazil related to education
 wb_project(country = "BR", status = "active", search = "education")
-#>              id
-#> P163868 P163868
-#> P178993 P178993
-#> P178563 P178563
-#> P172605 P172605
-#> P179088 P179088
-#> P177070 P177070
-#> P179046 P179046
-#> P178663 P178663
-#> P073882 P073882
-#> P179365 P179365
-#> P172497 P172497
-#> P153012 P153012
-#>                                                                   project_name
-#> P163868                  Support to Upper Secondary Reform in Brazil Operation
-#> P178993     Mato Grosso Resilient, Inclusive, and Sustainable Learning Project
-#> P178563            RECOVERING LEARNING LOSSES FROM COVID-19 PANDEMIC IN BRAZIL
-#> P172605               Salvador Social Multi-Sector Service Delivery Project II
-#> P179088               Progestão Tocantins: Public Sector Management Efficiency
-#> P177070                 Progestão Alagoas: Public Sector Management Efficiency
-#> P179046                    Progestão Acre: Public Sector Management Efficiency
-#> P178663                   Progestão Piauí: Public Sector Management Efficiency
-#> P073882                         RF 2nd Amazon Fire Prevention and Mobilization
-#> P179365 Brazil: Support to New Bolsa Familia Conditional Cash Transfer Program
-#> P172497                 Sustainable Multiple Use Landscape Consortia in Brazil
-#> P153012                        Fortaleza Sustainable Urban Development Project
-#>         status approval_date closing_date country_code country
-#> P163868 Active    2017-12-14   2024-12-31           BR  Brazil
-#> P178993 Active    2023-10-26   2028-12-31           BR  Brazil
-#> P178563 Active    2022-05-12   2027-12-31           BR  Brazil
-#> P172605 Active    2020-09-22   2025-12-30           BR  Brazil
-#> P179088 Active    2023-07-24   2028-12-29           BR  Brazil
-#> P177070 Active    2022-07-21   2028-03-31           BR  Brazil
-#> P179046 Active    2023-07-24   2028-12-29           BR  Brazil
-#> P178663 Active    2023-10-03   2029-06-29           BR  Brazil
-#> P073882 Active          <NA>   2004-09-30           BR  Brazil
-#> P179365 Active    2023-12-06   2026-04-30           BR  Brazil
-#> P172497 Active          <NA>   2027-11-30           BR  Brazil
-#> P153012 Active    2017-04-28   2025-03-31           BR  Brazil
-#>                              region total_commitment ibrd_commitment
-#> P163868 Latin America and Caribbean        250.00000           250.0
-#> P178993 Latin America and Caribbean        100.00000           100.0
-#> P178563 Latin America and Caribbean        250.00000           250.0
-#> P172605 Latin America and Caribbean        125.00000           125.0
-#> P179088 Latin America and Caribbean         50.00000            50.0
-#> P177070 Latin America and Caribbean         40.00000            40.0
-#> P179046 Latin America and Caribbean         40.00000            40.0
-#> P178663 Latin America and Caribbean         50.00000            50.0
-#> P073882 Latin America and Caribbean          1.10000             0.0
-#> P179365 Latin America and Caribbean        300.00000           300.0
-#> P172497 Latin America and Caribbean         24.57798             0.0
-#> P153012 Latin America and Caribbean         73.30000            73.3
-#>         ida_commitment            lending_instrument
-#> P163868              0 Program-for-Results Financing
-#> P178993              0  Investment Project Financing
-#> P178563              0 Program-for-Results Financing
-#> P172605              0  Investment Project Financing
-#> P179088              0  Investment Project Financing
-#> P177070              0  Investment Project Financing
-#> P179046              0  Investment Project Financing
-#> P178663              0  Investment Project Financing
-#> P073882              0                          <NA>
-#> P179365              0  Investment Project Financing
-#> P172497              0  Investment Project Financing
-#> P153012              0  Investment Project Financing
-#>                                                                          borrower
-#> P163868                              Ministry of Economy (Minist�rio da Economia)
-#> P178993                                                      STATE OF MATO GROSSO
-#> P178563                                         THE FEDERATIVE REPUBLIC OF BRAZIL
-#> P172605                                                  Municipality of Salvador
-#> P179088                                    State Secretariat of Planning (SEPLAN)
-#> P177070 State of Alagoas, with the guarantee of the Federative Republic of Brazil
-#> P179046                                                             State of Acre
-#> P178663                                                            State of Piaui
-#> P073882                                                                      <NA>
-#> P179365                                             Federative Republic of Brazil
-#> P172497                                                                      IICA
-#> P153012                                                 Municipality of Fortaleza
-#>                                                                                               implementing_agency
-#> P163868                                                            Ministry of Education (Minist�rio da Educa��o)
-#> P178993                                                                    SECRETARIAT OF EDUCATION - MATO GROSSO
-#> P178563                                                                                     MINISTRY OF EDUCATION
-#> P172605                                                                                                Casa Civil
-#> P179088                                                                                                       UGP
-#> P177070                                                                 Secretariat of Finance - State of Alagoas
-#> P179046                                                                             State Secretariat of Planning
-#> P178663                                                                           Secretariat of Finance of Piaui
-#> P073882                                                                                                      <NA>
-#> P179365                                                                                   Ministry of Citizenship
-#> P172497             Minist�rio do Meio Ambiente (MMA), Minist�rio da Agricultura, Pecu�ria e Abastecimento (MAPA)
-#> P153012 Secretaria Municipal de Urbanismo e Meio Ambiente (SEUMA), Secretaria Municipal de Infraestrutura (SEINF)
-#>                                                                                  url
-#> P163868 https://projects.worldbank.org/en/projects-operations/project-detail/P163868
-#> P178993 https://projects.worldbank.org/en/projects-operations/project-detail/P178993
-#> P178563 https://projects.worldbank.org/en/projects-operations/project-detail/P178563
-#> P172605 https://projects.worldbank.org/en/projects-operations/project-detail/P172605
-#> P179088 https://projects.worldbank.org/en/projects-operations/project-detail/P179088
-#> P177070 https://projects.worldbank.org/en/projects-operations/project-detail/P177070
-#> P179046 https://projects.worldbank.org/en/projects-operations/project-detail/P179046
-#> P178663 https://projects.worldbank.org/en/projects-operations/project-detail/P178663
-#> P073882 https://projects.worldbank.org/en/projects-operations/project-detail/P073882
-#> P179365 https://projects.worldbank.org/en/projects-operations/project-detail/P179365
-#> P172497 https://projects.worldbank.org/en/projects-operations/project-detail/P172497
-#> P153012 https://projects.worldbank.org/en/projects-operations/project-detail/P153012
+#>         id
+#> 1  P163868
+#> 2  P178993
+#> 3  P178563
+#> 4  P172605
+#> 5  P179088
+#> 6  P177070
+#> 7  P179046
+#> 8  P178663
+#> 9  P179365
+#> 10 P073882
+#> 11 P153012
+#> 12 P172497
+#>                                                              project_name
+#> 1                   Support to Upper Secondary Reform in Brazil Operation
+#> 2      Mato Grosso Resilient, Inclusive, and Sustainable Learning Project
+#> 3             RECOVERING LEARNING LOSSES FROM COVID-19 PANDEMIC IN BRAZIL
+#> 4                Salvador Social Multi-Sector Service Delivery Project II
+#> 5                Progestão Tocantins: Public Sector Management Efficiency
+#> 6                  Progestão Alagoas: Public Sector Management Efficiency
+#> 7                     Progestão Acre: Public Sector Management Efficiency
+#> 8                    Progestão Piauí: Public Sector Management Efficiency
+#> 9  Brazil: Support to New Bolsa Familia Conditional Cash Transfer Program
+#> 10                         RF 2nd Amazon Fire Prevention and Mobilization
+#> 11                        Fortaleza Sustainable Urban Development Project
+#> 12                 Sustainable Multiple Use Landscape Consortia in Brazil
+#>    status approval_date closing_date country_code country
+#> 1  Active    2017-12-14   2024-12-31           BR  Brazil
+#> 2  Active    2023-10-26   2028-12-31           BR  Brazil
+#> 3  Active    2022-05-12   2027-12-31           BR  Brazil
+#> 4  Active    2020-09-22   2025-12-30           BR  Brazil
+#> 5  Active    2023-07-24   2028-12-29           BR  Brazil
+#> 6  Active    2022-07-21   2028-03-31           BR  Brazil
+#> 7  Active    2023-07-24   2028-12-29           BR  Brazil
+#> 8  Active    2023-10-03   2029-06-29           BR  Brazil
+#> 9  Active    2023-12-06   2026-04-30           BR  Brazil
+#> 10 Active          <NA>   2004-09-30           BR  Brazil
+#> 11 Active    2017-04-28   2025-03-31           BR  Brazil
+#> 12 Active          <NA>   2027-11-30           BR  Brazil
+#>                         region total_commitment ibrd_commitment ida_commitment
+#> 1  Latin America and Caribbean        250.00000           250.0              0
+#> 2  Latin America and Caribbean        100.00000           100.0              0
+#> 3  Latin America and Caribbean        250.00000           250.0              0
+#> 4  Latin America and Caribbean        125.00000           125.0              0
+#> 5  Latin America and Caribbean         50.00000            50.0              0
+#> 6  Latin America and Caribbean         40.00000            40.0              0
+#> 7  Latin America and Caribbean         40.00000            40.0              0
+#> 8  Latin America and Caribbean         50.00000            50.0              0
+#> 9  Latin America and Caribbean        300.00000           300.0              0
+#> 10 Latin America and Caribbean          1.10000             0.0              0
+#> 11 Latin America and Caribbean         73.30000            73.3              0
+#> 12 Latin America and Caribbean         24.57798             0.0              0
+#>               lending_instrument
+#> 1  Program-for-Results Financing
+#> 2   Investment Project Financing
+#> 3  Program-for-Results Financing
+#> 4   Investment Project Financing
+#> 5   Investment Project Financing
+#> 6   Investment Project Financing
+#> 7   Investment Project Financing
+#> 8   Investment Project Financing
+#> 9   Investment Project Financing
+#> 10                          <NA>
+#> 11  Investment Project Financing
+#> 12  Investment Project Financing
+#>                                                                     borrower
+#> 1                               Ministry of Economy (Minist�rio da Economia)
+#> 2                                                       STATE OF MATO GROSSO
+#> 3                                          THE FEDERATIVE REPUBLIC OF BRAZIL
+#> 4                                                   Municipality of Salvador
+#> 5                                     State Secretariat of Planning (SEPLAN)
+#> 6  State of Alagoas, with the guarantee of the Federative Republic of Brazil
+#> 7                                                              State of Acre
+#> 8                                                             State of Piaui
+#> 9                                              Federative Republic of Brazil
+#> 10                                                                      <NA>
+#> 11                                                 Municipality of Fortaleza
+#> 12                                                                      IICA
+#>                                                                                          implementing_agency
+#> 1                                                             Ministry of Education (Minist�rio da Educa��o)
+#> 2                                                                     SECRETARIAT OF EDUCATION - MATO GROSSO
+#> 3                                                                                      MINISTRY OF EDUCATION
+#> 4                                                                                                 Casa Civil
+#> 5                                                                                                        UGP
+#> 6                                                                  Secretariat of Finance - State of Alagoas
+#> 7                                                                              State Secretariat of Planning
+#> 8                                                                            Secretariat of Finance of Piaui
+#> 9                                                                                    Ministry of Citizenship
+#> 10                                                                                                      <NA>
+#> 11 Secretaria Municipal de Urbanismo e Meio Ambiente (SEUMA), Secretaria Municipal de Infraestrutura (SEINF)
+#> 12             Minist�rio do Meio Ambiente (MMA), Minist�rio da Agricultura, Pecu�ria e Abastecimento (MAPA)
+#>                                                                             url
+#> 1  https://projects.worldbank.org/en/projects-operations/project-detail/P163868
+#> 2  https://projects.worldbank.org/en/projects-operations/project-detail/P178993
+#> 3  https://projects.worldbank.org/en/projects-operations/project-detail/P178563
+#> 4  https://projects.worldbank.org/en/projects-operations/project-detail/P172605
+#> 5  https://projects.worldbank.org/en/projects-operations/project-detail/P179088
+#> 6  https://projects.worldbank.org/en/projects-operations/project-detail/P177070
+#> 7  https://projects.worldbank.org/en/projects-operations/project-detail/P179046
+#> 8  https://projects.worldbank.org/en/projects-operations/project-detail/P178663
+#> 9  https://projects.worldbank.org/en/projects-operations/project-detail/P179365
+#> 10 https://projects.worldbank.org/en/projects-operations/project-detail/P073882
+#> 11 https://projects.worldbank.org/en/projects-operations/project-detail/P153012
+#> 12 https://projects.worldbank.org/en/projects-operations/project-detail/P172497
 
 # active or pipeline projects across two countries
 wb_project(country = c("BR", "IN"), status = c("active", "pipeline"))
-#>              id
-#> P507508 P507508
-#> P178253 P178253
-#> P181463 P181463
-#> P179935 P179935
-#> P180429 P180429
-#> P178254 P178254
-#> P180555 P180555
-#> P181501 P181501
-#> P181195 P181195
-#> P177965 P177965
-#> P180430 P180430
-#> P180462 P180462
-#> P174825 P174825
-#> P178557 P178557
-#> P179357 P179357
-#> P179749 P179749
-#> P500524 P500524
-#> P180497 P180497
-#> P177474 P177474
-#> P178581 P178581
-#> P175723 P175723
-#> P179189 P179189
-#> P180634 P180634
-#> P179365 P179365
-#> P179182 P179182
-#> P178993 P178993
-#> P178567 P178567
-#> P178663 P178663
-#> P179046 P179046
-#> P179088 P179088
-#> P176733 P176733
-#> P176032 P176032
-#> P179249 P179249
-#> P179337 P179337
-#> P178418 P178418
-#> P177917 P177917
-#> P177980 P177980
-#> P177876 P177876
-#> P178072 P178072
-#> P177671 P177671
-#> P176982 P176982
-#> P179039 P179039
-#> P175811 P175811
-#> P174593 P174593
-#> P178888 P178888
-#> P175728 P175728
-#> P178252 P178252
-#> P175261 P175261
-#> P178339 P178339
-#> P177070 P177070
-#> P178146 P178146
-#> P171750 P171750
-#> P175676 P175676
-#> P177915 P177915
-#> P174798 P174798
-#> P178729 P178729
-#> P176404 P176404
-#> P177856 P177856
-#> P178563 P178563
-#> P177632 P177632
-#> P168634 P168634
-#> P174067 P174067
-#> P174564 P174564
-#> P176107 P176107
-#> P172187 P172187
-#> P170590 P170590
-#> P174732 P174732
-#> P173589 P173589
-#> P175221 P175221
-#> P174778 P174778
-#> P173978 P173978
-#> P172226 P172226
-#> P173958 P173958
-#> P170811 P170811
-#> P173704 P173704
-#> P168633 P168633
-#> P172213 P172213
-#> P170873 P170873
-#> P170645 P170645
-#> P166020 P166020
-#> P168097 P168097
-#> P172605 P172605
-#> P169111 P169111
-#> P174312 P174312
-#> P166868 P166868
-#> P170850 P170850
-#> P168590 P168590
-#> P169140 P169140
-#> P167350 P167350
-#> P163328 P163328
-#> P170682 P170682
-#> P169134 P169134
-#> P165129 P165129
-#> P168310 P168310
-#> P157929 P157929
-#> P162679 P162679
-#> P163533 P163533
-#> P165055 P165055
-#> P167455 P167455
-#> P167581 P167581
-#> P160379 P160379
-#> P157141 P157141
-#> P167523 P167523
-#> P166923 P166923
-#> P165683 P165683
-#> P166578 P166578
-#> P165695 P165695
-#> P158502 P158502
-#> P160463 P160463
-#> P162086 P162086
-#> P158119 P158119
-#> P156869 P156869
-#> P158146 P158146
-#> P163868 P163868
-#> P158522 P158522
-#> P157702 P157702
-#> P147158 P147158
-#> P155617 P155617
-#> P156241 P156241
-#> P153012 P153012
-#> P148775 P148775
-#> P155303 P155303
-#> P152698 P152698
-#> P148531 P148531
-#> P155007 P155007
-#> P130544 P130544
-#> P127725 P127725
-#> P154990 P154990
-#> P096124 P096124
-#> P039027 P039027
-#> P108190 P108190
-#> P505866 P505866
-#> P507322 P507322
-#> P500380 P500380
-#> P502493 P502493
-#> P110539 P110539
-#> P500469 P500469
-#> P501071 P501071
-#> P105370 P105370
-#> P181511 P181511
-#> P500252 P500252
-#> P508840 P508840
-#> P506955 P506955
-#> P504126 P504126
-#> P507066 P507066
-#> P508221 P508221
-#> P507029 P507029
-#> P508202 P508202
-#> P508363 P508363
-#> P180716 P180716
-#> P504276 P504276
-#> P500570 P500570
-#> P507910 P507910
-#> P504899 P504899
-#> P500501 P500501
-#> P181020 P181020
-#> P114896 P114896
-#> P502491 P502491
-#> P504253 P504253
-#> P181524 P181524
-#> P181244 P181244
-#> P502499 P502499
-#> P500151 P500151
-#> P508719 P508719
-#> P505563 P505563
-#> P507628 P507628
-#> P180699 P180699
-#> P507340 P507340
-#> P114890 P114890
-#> P178053 P178053
-#> P500564 P500564
-#> P505590 P505590
-#> P180932 P180932
-#> P505235 P505235
-#> P507629 P507629
-#> P506976 P506976
-#> P181767 P181767
-#> P506329 P506329
-#> P508489 P508489
-#> P506272 P506272
-#> P506321 P506321
-#> P173090 P173090
-#> P505177 P505177
-#> P181608 P181608
-#> P508025 P508025
-#> P179349 P179349
-#> P504543 P504543
-#> P509041 P509041
-#> P506142 P506142
-#> P505914 P505914
-#> P500614 P500614
-#> P506861 P506861
-#> P500168 P500168
-#> P506320 P506320
-#> P500431 P500431
-#> P508453 P508453
-#> P504897 P504897
-#> P503872 P503872
-#> P506340 P506340
-#> P507236 P507236
-#> P132620 P132620
-#> P122387 P122387
-#> P171257 P171257
-#> P172497 P172497
-#> P164602 P164602
-#> P073882 P073882
-#> P177159 P177159
-#> P152285 P152285
-#> P009585 P009585
-#> P128921 P128921
-#> P158000 P158000
-#> P160018 P160018
-#>                                                                                                            project_name
-#> P507508                                                                  Amaravati Integrated Urban Development Program
-#> P178253                           Uttar Pradesh Agriculture Growth and Rural Enterprise Ecosystem Strengthening Project
-#> P181463                 Maharashtra Strengthening Institutional Capabilities in Districts for Enabling Growth Operation
-#> P179935                                                  Enhancing Landscape and Ecosystem Management (ELEMENT) Project
-#> P180429                                                                     Bahia Sustainable Rural Development Project
-#> P178254                                         Kerala Climate Resilient Agri- Value Chain Modernization (KERA) Project
-#> P180555                            Brazil Proactive, Safe, and Resilient Road Asset Management Program - State of Bahia
-#> P181501                 BR Enhancing Prosperity and Sustainability in the State of Sergipe Development Policy Financing
-#> P181195                                              Second Low-Carbon Energy Programmatic Development Policy Financing
-#> P177965 Development of Applied Knowledge and Skills for Human Development in Maharashtra  - (DAKSH) Maharashtra Program
-#> P180430                                                  Brazil: Pernambuco Rural Water and Sanitation Project (PROSAR)
-#> P180462                                                                     Espírito Santo Digital Acceleration Project
-#> P174825                                        West Bengal Boosting Logistics Efficiency and Trade Facilitation Program
-#> P178557                                         Integrated Sustainable Mobility Project in the Foz do Rio Itajaí Region
-#> P179357                                                          Uttarakhand Climate Responsive Rainfed Farming Project
-#> P179749                                                        Uttarakhand Disaster Preparedness and Resilience Project
-#> P500524                                                      Sustainable Human Development Project in the State of Pará
-#> P180497                                                           BR State of Ceará Sustainable Development Policy Loan
-#> P177474                                                          Piauí Pillars of Growth and Social Inclusion Project 2
-#> P178581                                                                           Assam Resilient Rural Bridges Program
-#> P175723                                                           Mato Grosso Sustainable Development of Family Farming
-#> P179189                                                          Tamil Nadu Climate Resilient Urban Development Program
-#> P180634                            Sikkim: Integrated Service Provision and Innovation for Reviving Economies Operation
-#> P179365                                          Brazil: Support to New Bolsa Familia Conditional Cash Transfer Program
-#> P179182                                        Rio de Janeiro Fiscal Management and Sustainable Development Policy Loan
-#> P178993                                              Mato Grosso Resilient, Inclusive, and Sustainable Learning Project
-#> P178567                                                          Piauí Health and Social Protection Development Project
-#> P178663                                                            Progestão Piauí: Public Sector Management Efficiency
-#> P179046                                                             Progestão Acre: Public Sector Management Efficiency
-#> P179088                                                        Progestão Tocantins: Public Sector Management Efficiency
-#> P176733                                                                IN: Manipur Infotech eNabled Development Project
-#> P176032                                                               Himachal Pradesh Power Sector Development Program
-#> P179249                                                      Chhattisgarh: Accelerated Learning for a Knowledge-Economy
-#> P179337                Assam State Secondary Healthcare Initiative for Service Delivery Transformation (ASSIST) Project
-#> P178418                                                      Tripura Rural Economic Growth and Service Delivery Project
-#> P177917                                     Multidisciplinary Education and Research Improvement in Technical Education
-#> P177980                                                               Additional Financing for Resilient Kerala Program
-#> P177876                                      West Bengal Accelerated Development of Minor Irrigation Project - Phase II
-#> P178072                                 Green, Resilient and Inclusive Regeneration of the Central Area of Porto Alegre
-#> P177671                                                    Animal Health System Support for One Health Program (AHSSOH)
-#> P176982                                                        Brazil: Espirito Santo Water Security Management Project
-#> P179039                                                                Karnataka Sustainable Rural Water Supply Program
-#> P175811                                                            Odisha State Capability and Resilient Growth Program
-#> P174593                                                                 Assam Integrated River Basin Management Program
-#> P178888                                                                                  Brazil Climate Finance Project
-#> P175728                                         Gujarat Resilient Cities Partnership: Ahmedabad City Resilience Project
-#> P178252                             Systems Reform Endeavours for Transformed Health Achievement in Gujarat (SRESTHA-G)
-#> P175261                                                            Punjab: Building Fiscal and Institutional Resilience
-#> P178339                                                      Progestão Mato Grosso: Public Sector Management Efficiency
-#> P177070                                                          Progestão Alagoas: Public Sector Management Efficiency
-#> P178146                                                                India's Enhanced Health Service Delivery Program
-#> P171750                                              Additional Financing: Rooftop Solar Program for Residential sector
-#> P175676                             PHSPP: Transforming India’s Public Health Systems for Pandemic Preparedness Program
-#> P177915                                    GUJARAT OUTCOMES FOR ACCELERATED LEARNING (GOAL) - ADDITIONAL FINANCING (AF)
-#> P174798                                                                             Fisheries Sector Prosperity Project
-#> P178729                                               Rio de Janeiro Adjustment and Sustainable Development Policy Loan
-#> P176404                  RIGHTS: Inclusion, Accessibility and Opportunities for Persons with Disabilities in Tamil Nadu
-#> P177856                                                                                          Rail Logistics Project
-#> P178563                                                     RECOVERING LEARNING LOSSES FROM COVID-19 PANDEMIC IN BRAZIL
-#> P177632                                                                      BR State of Goias Sustainable Recovery DPF
-#> P168634                                Parana Public Sector Modernization and Innovation for Service Delivery Operation
-#> P174067                                                                   Public Service Capability Enhancement Project
-#> P174564                                 West Bengal Building State Capability for Inclusive Social Protection Operation
-#> P176107                                       Additional Financing - Karnataka Urban Water Supply Modernization Project
-#> P172187                              Rejuvenating Watersheds for Agricultural Resilience through Innovative Development
-#> P170590                                                 West Bengal Electricity Distribution Grid Modernization Project
-#> P174732                          Shimla-Himachal Pradesh Water Supply and Sewerage Services Improvement Program (PforR)
-#> P173589                                                                  Meghalaya Health Systems Strengthening Project
-#> P175221                                                    Chennai City Partnership: Sustainable Urban Services Program
-#> P174778                                                                                    The Resilient Kerala Program
-#> P173978                                                                     Supporting Andhra's Learning Transformation
-#> P172226                                                                       Raising and Accelerating MSME Performance
-#> P173958                                                                    Mizoram Health Systems Strengthening Project
-#> P170811                                                                   Punjab Municipal Services Improvement Project
-#> P173704                                                                Gujarat Outcomes for Accelerated Learning (GOAL)
-#> P168633                                                                           Kerala Solid Waste Management Project
-#> P172213                                                            Nagaland: Enhancing Classroom Teaching and Resources
-#> P170873                            Second Dam Rehabilitation and Improvement Project - Additional Financing (DRIP-2 AF)
-#> P170645                                         Chhattisgarh Inclusive Rural and Accelerated Agriculture Growth Project
-#> P166020                                   West Bengal Inland Water Transport, Logistics and Spatial Development Project
-#> P168097                                                                          Meghalaya Integrated Transport Project
-#> P172605                                                        Salvador Social Multi-Sector Service Delivery Project II
-#> P169111                                                                       Second National Ganga River Basin Project
-#> P174312                                                                     Second National Ganga River Basin Guarantee
-#> P166868                                                         Strengthening Teaching-Learning  And Results for States
-#> P170850                                                             Energy and Mineral Sectors Strengthening Project II
-#> P168590                                                              Tamil Nadu Housing and Habitat Development Project
-#> P169140                                                                 São Paulo Aricanduva Bus Rapid Transit Corridor
-#> P167350                                                                        Green National Highways Corridor Project
-#> P163328                                                             Himachal Pradesh State Roads Transformation Project
-#> P170682                                                       Linha de Crédito para Resiliência Urbana no Sul do Brasil
-#> P169134                               Improving Mobility and Urban Inclusion in the Amazonas Corridor in Belo Horizonte
-#> P165129     Integrated Project for Source Sustainability and Climate Resilient Rain-fed Agriculture in Himachal Pradesh
-#> P168310                                            State of Maharashtra's Agribusiness and Rural Transformation Project
-#> P157929                                                                            Assam Inland Water Transport Project
-#> P162679                                                       West Bengal Major Irrigation and Flood Management Project
-#> P163533                                          Odisha Integrated Irrigation Project for Climate Resilient Agriculture
-#> P165055                                                                             Ceará Water Security and Governance
-#> P167455                                                Ceara Rural Sustainable Development and Competitiveness Phase II
-#> P167581                                                             Andhra Pradesh Health Systems Strengthening Project
-#> P160379                                                               Innovation in Solar Power and Hybrid Technologies
-#> P157141                                                                 Rajasthan State Highways Development Program II
-#> P167523                                                                     Program Towards Elimination of Tuberculosis
-#> P166923                                                   Uttarakhand Public Financial Management Strengthening Project
-#> P165683                                             Paraiba Improving Water Resources Management and Services Provision
-#> P166578                                             Chhattisgarh Public Financial Management and Accountability Program
-#> P165695            SABESP - IMPROVING WATER SERVICE ACCESS AND SECURITY IN THE METROPOLITAN REGION OF SÃO PAULO PROJECT
-#> P158502                                                                         Jharkhand Municipal Development Project
-#> P160463                                                   AP Integrated Irrigation & Agriculture Transformation Project
-#> P162086                                                                      Jharkhand Power System Improvement Project
-#> P158119                                           Atal Bhujal Yojana (Abhy)-National Groundwater Management Improvement
-#> P156869                                                          Strengthening Public Financial Management in Rajasthan
-#> P158146                                                           Uttarakhand Water Supply Program for Peri Urban Areas
-#> P163868                                                           Support to Upper Secondary Reform in Brazil Operation
-#> P158522                                                          Tamil Nadu Irrigated Agriculture Modernization Project
-#> P157702                                                                 Tamil Nadu Rural Transformation Project (TNRTP)
-#> P147158                                                                           Paraiba Sustainable Rural Development
-#> P155617                                                             Assam Agribusiness and Rural Transformation Project
-#> P156241                                                                             Innovate in India for Inclusiveness
-#> P153012                                                                 Fortaleza Sustainable Urban Development Project
-#> P148775                                     Capacity Augmentation of the National Waterway- 1 (JAL MARG VIKAS)  Project
-#> P155303                                                                        Madhya Pradesh Urban Development Project
-#> P152698                                                                                      National Hydrology Project
-#> P148531                                                                  Uttarakhand Health Systems Development Project
-#> P155007                                                                            Grid-Connected Rooftop Solar Program
-#> P130544                                                           IN Karnataka Urban Water Supply Modernization Project
-#> P127725                                                                            Bihar Kosi Basin Development Project
-#> P154990                                                                          Jhelum and Tawi Flood Recovery Project
-#> P096124                                                                      Vishnugad Pipalkoti Hydro Electric Project
-#> P039027                                                               RF Science Centers - Emergency Assistance Project
-#> P108190                                                            Subterranean Arsenic Removal: Experiment to Delivery
-#> P505866                                                                                                       BR PE DPL
-#> P507322                                                 Brazil Enhancing Productivity, Sustainability and Inclusion DPF
-#> P500380  India Supporting Socioeconomic Development and Livelihood Security among Particularly Vulnerable Tribal Groups
-#> P502493                                             Rio Grande do Norte: Sustainable Development and Governance Project
-#> P110539                                                                    India: FaL-G High Capacity Automation Plants
-#> P500469  Brazil Proactive, Safe and Resilient Road Asset Management Program - State of Espirito Santo Project - Phase 2
-#> P501071                                                          Rajasthan Highway Modernization Project (RHMP) Phase-2
-#> P105370                                                                          Allian Duhangan Hydro Electric Project
-#> P181511                                                   Expanding Clean Hydrogen in Brazil - Ceara Green Hydrogen Hub
-#> P500252                                                                                                             IPF
-#> P508840                                                                              Institutions MPA – Phase 1 (Assam)
-#> P506955                                                                                                    PPP SP Rails
-#> P504126                                                                                       Brazil: ASL Xingu project
-#> P507066                   Meghalaya Multisectoral Project for Adolescent Wellbeing, Empowerment and Resilience (MPOWER)
-#> P508221                                                                                                   SC Resilience
-#> P507029                                  Brazil Electromobility Multiphase Programmatic Approach – MPA Phase 2 Salvador
-#> P508202                        Amazon and Cerrado Bioeconomy, Forest Restoration, and Climate-Smart Agriculture Project
-#> P508363                                                                                                      BR Digital
-#> P180716                                                                               Promoting Green Hydrogen in India
-#> P504276                                                                                                 SP Metro Line 2
-#> P500570                                                                  Sergipe Efficient Digital Acceleration project
-#> P507910                                                                        Skills: National ITI Upgradation Program
-#> P504899                                Strengthening Social Assistance Delivery System in the Municipality of São Paulo
-#> P500501                                        Electrification and Improvement of the São Paulo Urban Transport Program
-#> P181020                                                                      Gurugram Metro Huda to Cyber City, Haryana
-#> P114896                                                                       Collective Land Ownership Model for Women
-#> P502491                                                           Haryana Clean Air and Sustainable Development Program
-#> P504253 Brazil Proactive, Safe, and Resilient Road Asset Management Program - State of Santa Catarina Project - Phase 3
-#> P181524                              Second Dam Rehabilitation and Improvement Project - Additional Financing (DRIP -3)
-#> P181244                                                                  India-West Bengal Health System Reform Program
-#> P502499                                                                            Surat Resilience Enhancement Project
-#> P500151                                                                                                   PForR Project
-#> P508719                                                                                                           AHEAD
-#> P505563                                                                                                        PoCRA-II
-#> P507628                                                             Energy Transition of the Northeast Region of Brazil
-#> P180699                                                    Tamil Nadu Women Employment and Safety (TN WESAFE) Operation
-#> P507340                                                               Himachal Disaster Recovery and Resilience Project
-#> P114890                                                         Combining income and forest protection: açaí production
-#> P178053                                                                      Uttar Pradesh Clean Air Management Program
-#> P500564                                                      Punjab Outcomes-Acceleration In School Education Operation
-#> P505590                                                                                                    MS Pro-Roads
-#> P180932                                                                Strengthening Coastal Resilience and the Economy
-#> P505235                BR State of Rio Grande do Sul Sustainable Recovery and Climate Resilient Development Policy Loan
-#> P507629                                                Brazil: Decarbonization of Energy-Intensive Value Chains Project
-#> P506976                                                                        West Bengal Health System Reform Program
-#> P181767                                                        Hybrid PPP - São Paulo Commuter Rail Lines 11, 12 and 13
-#> P506329                                                    Private-Delivered Metro Sao Paulo Line 4 Phase III Extension
-#> P508489                                                                                                         SRH P4R
-#> P506272                                                                 Karnataka Water Security and Resilience Program
-#> P506321                                                                                                   Bahia SIP DPL
-#> P173090                                         Second Amazona Fiscal and Environmental Sustainability Programmatic DPF
-#> P505177                                                            India - Enhancing Innovation among ICMR Institutions
-#> P181608                                                      Progestão Program - MPA Phase 1 State of Rio Grande do Sul
-#> P508025                                                                                                             SS3
-#> P179349                                        Electric Vehicle Operations and Lending for a Vibrant Ecosystem (EVOLVE)
-#> P504543                                                    Brazil Electromobility and Energy Transition Finance Project
-#> P509041                                                                                                 Tocantins PRIDP
-#> P506142                                      Santa Catarina Rural Development Project for Sustainability and Innovation
-#> P505914                                                          IN: Digital Empowerment and Services to Harness Growth
-#> P500614                                                         BR State of Alagoas Sustainable Development Policy Loan
-#> P506861                                                                                                  AM Sustainable
-#> P500168                                                                                                     IPF Regular
-#> P506320                                                         Accelerating the Energy Transition in the Amazon (AETA)
-#> P500431                                                     Agroecology and Sustainable Rural Development in Pernambuco
-#> P508453                                                                                                            MEGA
-#> P504897                                                                  Bahia Urban Socio-Productive Inclusion Project
-#> P503872                                                                       Kerala Health Systems Improvement Program
-#> P506340                                                                                                            MRDP
-#> P507236                                                                   Assam Governance and Service Delivery Program
-#> P132620                                                              Partial Risk Sharing Facility in Energy Efficiency
-#> P122387                                                                     DFID TF III Supervision and Fiduciary Costs
-#> P171257                                                            Brazil Amazon Sustainable Landscapes Project Phase 2
-#> P172497                                                          Sustainable Multiple Use Landscape Consortia in Brazil
-#> P164602                                                    Integrated Landscape Management in the Cerrado Biome Project
-#> P073882                                                                  RF 2nd Amazon Fire Prevention and Mobilization
-#> P177159                                                       Monitoring and Evaluation capacity building in South Asia
-#> P152285                                                                     Brazil Investment Plan Coordination Project
-#> P009585                                                                                                           ODS I
-#> P128921                                                              Partial Risk Sharing Facility in Energy Efficiency
-#> P158000                                                                           Amazon Sustainable Landscapes Project
-#> P160018                                                   Additional Financing for Grid-Connected Rooftop Solar Program
-#>           status approval_date closing_date country_code country
-#> P507508   Active    2024-12-19         <NA>           IN   India
-#> P178253   Active    2024-12-12   2030-09-30           IN   India
-#> P181463   Active    2024-12-03   2030-03-31           IN   India
-#> P179935   Active    2024-11-25   2030-06-30           IN   India
-#> P180429   Active    2024-11-07   2030-10-30           BR  Brazil
-#> P178254   Active    2024-10-31   2029-11-30           IN   India
-#> P180555   Active    2024-09-10   2032-11-30           BR  Brazil
-#> P181501   Active    2024-08-27   2026-12-31           BR  Brazil
-#> P181195   Active    2024-06-28   2026-06-30           IN   India
-#> P177965   Active    2024-05-22   2029-03-30           IN   India
-#> P180430   Active    2024-05-17   2032-07-14           BR  Brazil
-#> P180462   Active    2024-05-17   2029-06-30           BR  Brazil
-#> P174825   Active    2024-04-24   2028-06-30           IN   India
-#> P178557   Active    2024-04-12   2031-11-30           BR  Brazil
-#> P179357   Active    2024-04-01   2030-03-31           IN   India
-#> P179749   Active    2024-04-01   2029-06-30           IN   India
-#> P500524   Active    2024-03-28   2029-04-30           BR  Brazil
-#> P180497   Active    2024-03-28   2025-12-31           BR  Brazil
-#> P177474   Active    2024-03-14   2029-07-31           BR  Brazil
-#> P178581   Active    2024-03-01   2030-06-28           IN   India
-#> P175723   Active    2024-02-05   2030-05-15           BR  Brazil
-#> P179189   Active    2023-12-21   2030-12-31           IN   India
-#> P180634   Active    2023-12-21   2029-04-30           IN   India
-#> P179365   Active    2023-12-06   2026-04-30           BR  Brazil
-#> P179182   Active    2023-11-16   2024-12-31           BR  Brazil
-#> P178993   Active    2023-10-26   2028-12-31           BR  Brazil
-#> P178567   Active    2023-10-05   2029-06-30           BR  Brazil
-#> P178663   Active    2023-10-03   2029-06-29           BR  Brazil
-#> P179046   Active    2023-07-24   2028-12-29           BR  Brazil
-#> P179088   Active    2023-07-24   2028-12-29           BR  Brazil
-#> P176733   Active    2023-07-06   2028-09-30           IN   India
-#> P176032   Active    2023-06-27   2028-03-31           IN   India
-#> P179249   Active    2023-06-26   2028-09-29           IN   India
-#> P179337   Active    2023-06-26   2029-11-30           IN   India
-#> P178418   Active    2023-06-26   2029-06-30           IN   India
-#> P177917   Active    2023-06-23   2028-12-29           IN   India
-#> P177980   Active    2023-06-16         <NA>           IN   India
-#> P177876   Active    2023-06-09   2029-06-29           IN   India
-#> P178072   Active    2023-06-07   2028-12-29           BR  Brazil
-#> P177671   Active    2023-05-10   2027-11-30           IN   India
-#> P176982   Active    2023-05-09   2029-06-30           BR  Brazil
-#> P179039   Active    2023-03-28   2028-06-01           IN   India
-#> P175811   Active    2023-03-28   2028-04-26           IN   India
-#> P174593   Active    2023-03-24   2027-07-31           IN   India
-#> P178888   Active    2022-12-22   2028-04-30           BR  Brazil
-#> P175728   Active    2022-11-22   2028-12-31           IN   India
-#> P178252   Active    2022-09-21   2028-03-31           IN   India
-#> P175261   Active    2022-09-19   2027-06-30           IN   India
-#> P178339   Active    2022-08-23   2028-06-30           BR  Brazil
-#> P177070   Active    2022-07-21   2028-03-31           BR  Brazil
-#> P178146   Active    2022-06-28   2027-06-30           IN   India
-#> P171750   Active    2022-06-28         <NA>           IN   India
-#> P175676   Active    2022-06-28   2027-12-31           IN   India
-#> P177915   Active    2022-06-21         <NA>           IN   India
-#> P174798   Active    2022-06-17   2027-06-30           IN   India
-#> P178729   Active    2022-06-16   2024-12-31           BR  Brazil
-#> P176404   Active    2022-06-14   2028-06-30           IN   India
-#> P177856   Active    2022-06-10   2027-06-30           IN   India
-#> P178563   Active    2022-05-12   2027-12-31           BR  Brazil
-#> P177632   Active    2022-04-28   2024-12-31           BR  Brazil
-#> P168634   Active    2022-04-28   2027-10-31           BR  Brazil
-#> P174067   Active    2022-04-27   2027-03-31           IN   India
-#> P174564   Active    2022-01-19   2028-08-31           IN   India
-#> P176107   Active    2021-12-21         <NA>           IN   India
-#> P172187   Active    2021-12-10   2026-06-30           IN   India
-#> P170590   Active    2021-11-29   2026-11-30           IN   India
-#> P174732   Active    2021-11-05   2026-12-31           IN   India
-#> P173589   Active    2021-09-30   2027-03-31           IN   India
-#> P175221   Active    2021-09-30   2026-12-31           IN   India
-#> P174778   Active    2021-06-24   2028-06-30           IN   India
-#> P173978   Active    2021-06-17   2026-12-31           IN   India
-#> P172226   Active    2021-06-04   2026-09-30           IN   India
-#> P173958   Active    2021-03-31   2026-03-31           IN   India
-#> P170811   Active    2021-03-31   2026-09-30           IN   India
-#> P173704   Active    2021-03-24   2027-09-30           IN   India
-#> P168633   Active    2021-03-09   2027-06-30           IN   India
-#> P172213   Active    2020-12-15   2026-06-30           IN   India
-#> P170873   Active    2020-12-15   2027-12-31           IN   India
-#> P170645   Active    2020-12-15   2026-07-31           IN   India
-#> P166020   Active    2020-11-30   2026-03-31           IN   India
-#> P168097   Active    2020-10-23   2026-10-31           IN   India
-#> P172605   Active    2020-09-22   2025-12-30           BR  Brazil
-#> P169111   Active    2020-06-25   2026-12-31           IN   India
-#> P174312   Active    2020-06-25   2026-12-31           IN   India
-#> P166868   Active    2020-06-24   2025-12-31           IN   India
-#> P170850   Active    2020-05-22   2025-12-31           BR  Brazil
-#> P168590   Active    2020-05-18   2025-06-30           IN   India
-#> P169140   Active    2020-04-22   2026-06-30           BR  Brazil
-#> P167350   Active    2020-03-27   2025-03-18           IN   India
-#> P163328   Active    2020-03-27   2026-06-30           IN   India
-#> P170682   Active    2020-03-24   2026-06-30           BR  Brazil
-#> P169134   Active    2020-03-24   2028-09-30           BR  Brazil
-#> P165129   Active    2020-02-18   2025-03-31           IN   India
-#> P168310   Active    2019-12-17   2027-03-31           IN   India
-#> P157929   Active    2019-12-13   2025-12-31           IN   India
-#> P162679   Active    2019-12-10   2025-11-30           IN   India
-#> P163533   Active    2019-09-30   2025-12-31           IN   India
-#> P165055   Active    2019-08-08   2026-12-31           BR  Brazil
-#> P167455   Active    2019-07-18   2025-12-31           BR  Brazil
-#> P167581   Active    2019-05-15   2025-03-31           IN   India
-#> P160379   Active    2019-03-29   2025-12-31           IN   India
-#> P157141   Active    2019-03-29   2024-12-31           IN   India
-#> P167523   Active    2019-03-29   2025-03-31           IN   India
-#> P166923   Active    2019-03-07   2025-06-30           IN   India
-#> P165683   Active    2019-02-28   2026-06-30           BR  Brazil
-#> P166578   Active    2019-02-21   2025-03-31           IN   India
-#> P165695   Active    2018-12-18   2026-06-16           BR  Brazil
-#> P158502   Active    2018-12-12   2025-10-31           IN   India
-#> P160463   Active    2018-10-23   2025-10-31           IN   India
-#> P162086   Active    2018-10-01   2024-12-31           IN   India
-#> P158119   Active    2018-06-05   2025-09-28           IN   India
-#> P156869   Active    2018-05-01   2025-03-31           IN   India
-#> P158146   Active    2018-01-04   2025-06-30           IN   India
-#> P163868   Active    2017-12-14   2024-12-31           BR  Brazil
-#> P158522   Active    2017-12-01   2025-06-02           IN   India
-#> P157702   Active    2017-12-01   2025-06-30           IN   India
-#> P147158   Active    2017-10-20   2025-06-15           BR  Brazil
-#> P155617   Active    2017-08-31   2025-09-30           IN   India
-#> P156241   Active    2017-05-31   2025-06-23           IN   India
-#> P153012   Active    2017-04-28   2025-03-31           BR  Brazil
-#> P148775   Active    2017-04-12   2025-12-24           IN   India
-#> P155303   Active    2017-04-12   2024-12-30           IN   India
-#> P152698   Active    2017-03-15   2025-03-31           IN   India
-#> P148531   Active    2017-01-26   2024-12-31           IN   India
-#> P155007   Active    2016-05-13   2027-11-30           IN   India
-#> P130544   Active    2016-03-31   2026-06-30           IN   India
-#> P127725   Active    2015-12-08   2025-03-27           IN   India
-#> P154990   Active    2015-06-02   2024-12-31           IN   India
-#> P096124   Active    2011-06-30   2024-12-31           IN   India
-#> P039027   Active    1994-10-28         <NA>           BR  Brazil
-#> P108190 Pipeline          <NA>   2008-12-31           IN   India
-#> P505866 Pipeline          <NA>         <NA>           BR  Brazil
-#> P507322 Pipeline          <NA>         <NA>           BR  Brazil
-#> P500380 Pipeline          <NA>         <NA>           IN   India
-#> P502493 Pipeline          <NA>         <NA>           BR  Brazil
-#> P110539 Pipeline          <NA>         <NA>           IN   India
-#> P500469 Pipeline          <NA>         <NA>           BR  Brazil
-#> P501071 Pipeline          <NA>         <NA>           IN   India
-#> P105370 Pipeline          <NA>   2018-05-04           IN   India
-#> P181511 Pipeline          <NA>         <NA>           BR  Brazil
-#> P500252 Pipeline          <NA>         <NA>           IN   India
-#> P508840 Pipeline          <NA>         <NA>           IN   India
-#> P506955 Pipeline          <NA>         <NA>           BR  Brazil
-#> P504126 Pipeline          <NA>         <NA>           BR  Brazil
-#> P507066 Pipeline          <NA>         <NA>           IN   India
-#> P508221 Pipeline          <NA>         <NA>           BR  Brazil
-#> P507029 Pipeline          <NA>         <NA>           BR  Brazil
-#> P508202 Pipeline          <NA>         <NA>           BR  Brazil
-#> P508363 Pipeline          <NA>         <NA>           BR  Brazil
-#> P180716 Pipeline          <NA>         <NA>           IN   India
-#> P504276 Pipeline          <NA>         <NA>           BR  Brazil
-#> P500570 Pipeline          <NA>         <NA>           BR  Brazil
-#> P507910 Pipeline          <NA>         <NA>           IN   India
-#> P504899 Pipeline          <NA>         <NA>           BR  Brazil
-#> P500501 Pipeline          <NA>         <NA>           BR  Brazil
-#> P181020 Pipeline          <NA>         <NA>           IN   India
-#> P114896 Pipeline          <NA>   2011-10-01           IN   India
-#> P502491 Pipeline          <NA>         <NA>           IN   India
-#> P504253 Pipeline          <NA>         <NA>           BR  Brazil
-#> P181524 Pipeline          <NA>         <NA>           IN   India
-#> P181244 Pipeline          <NA>         <NA>           IN   India
-#> P502499 Pipeline          <NA>         <NA>           IN   India
-#> P500151 Pipeline          <NA>         <NA>           IN   India
-#> P508719 Pipeline          <NA>         <NA>           IN   India
-#> P505563 Pipeline          <NA>         <NA>           IN   India
-#> P507628 Pipeline          <NA>         <NA>           BR  Brazil
-#> P180699 Pipeline          <NA>         <NA>           IN   India
-#> P507340 Pipeline          <NA>         <NA>           IN   India
-#> P114890 Pipeline          <NA>   2011-10-01           BR  Brazil
-#> P178053 Pipeline          <NA>         <NA>           IN   India
-#> P500564 Pipeline          <NA>         <NA>           IN   India
-#> P505590 Pipeline          <NA>         <NA>           BR  Brazil
-#> P180932 Pipeline          <NA>         <NA>           IN   India
-#> P505235 Pipeline          <NA>         <NA>           BR  Brazil
-#> P507629 Pipeline          <NA>         <NA>           BR  Brazil
-#> P506976 Pipeline          <NA>         <NA>           IN   India
-#> P181767 Pipeline          <NA>         <NA>           BR  Brazil
-#> P506329 Pipeline          <NA>         <NA>           BR  Brazil
-#> P508489 Pipeline          <NA>         <NA>           IN   India
-#> P506272 Pipeline          <NA>         <NA>           IN   India
-#> P506321 Pipeline          <NA>         <NA>           BR  Brazil
-#> P173090 Pipeline          <NA>         <NA>           BR  Brazil
-#> P505177 Pipeline          <NA>         <NA>           IN   India
-#> P181608 Pipeline          <NA>         <NA>           BR  Brazil
-#> P508025 Pipeline          <NA>         <NA>           BR  Brazil
-#> P179349 Pipeline          <NA>         <NA>           IN   India
-#> P504543 Pipeline          <NA>         <NA>           BR  Brazil
-#> P509041 Pipeline          <NA>         <NA>           BR  Brazil
-#> P506142 Pipeline          <NA>         <NA>           BR  Brazil
-#> P505914 Pipeline          <NA>         <NA>           IN   India
-#> P500614 Pipeline          <NA>         <NA>           BR  Brazil
-#> P506861 Pipeline          <NA>         <NA>           BR  Brazil
-#> P500168 Pipeline          <NA>         <NA>           IN   India
-#> P506320 Pipeline          <NA>         <NA>           BR  Brazil
-#> P500431 Pipeline          <NA>         <NA>           BR  Brazil
-#> P508453 Pipeline          <NA>         <NA>           IN   India
-#> P504897 Pipeline          <NA>         <NA>           BR  Brazil
-#> P503872 Pipeline          <NA>         <NA>           IN   India
-#> P506340 Pipeline          <NA>         <NA>           IN   India
-#> P507236 Pipeline          <NA>         <NA>           IN   India
-#> P132620   Active          <NA>   2025-03-31           IN   India
-#> P122387   Active          <NA>         <NA>           IN   India
-#> P171257   Active          <NA>         <NA>           BR  Brazil
-#> P172497   Active          <NA>   2027-11-30           BR  Brazil
-#> P164602   Active          <NA>   2025-11-30           BR  Brazil
-#> P073882   Active          <NA>   2004-09-30           BR  Brazil
-#> P177159   Active          <NA>   2025-06-30           IN   India
-#> P152285   Active          <NA>   2024-11-30           BR  Brazil
-#> P009585   Active          <NA>         <NA>           IN   India
-#> P128921   Active          <NA>   2025-03-31           IN   India
-#> P158000   Active          <NA>   2026-12-31           BR  Brazil
-#> P160018   Active          <NA>   2026-11-30           IN   India
-#>                              region total_commitment ibrd_commitment
-#> P507508                  South Asia         0.000000          0.0000
-#> P178253                  South Asia       325.100000        325.1000
-#> P181463                  South Asia       188.280000        188.2800
-#> P179935                  South Asia       225.520000        225.5200
-#> P180429 Latin America and Caribbean       100.000000        100.0000
-#> P178254                  South Asia       200.000000        200.0000
-#> P180555 Latin America and Caribbean       150.000000        150.0000
-#> P181501 Latin America and Caribbean       110.000000        110.0000
-#> P181195                  South Asia      1500.000000       1468.5000
-#> P177965                  South Asia       195.000000        195.0000
-#> P180430 Latin America and Caribbean        90.000000         90.0000
-#> P180462 Latin America and Caribbean        61.220000         61.2200
-#> P174825                  South Asia       150.000000        150.0000
-#> P178557 Latin America and Caribbean        90.000000         90.0000
-#> P179357                  South Asia        96.200000         96.2000
-#> P179749                  South Asia       135.000000        135.0000
-#> P500524 Latin America and Caribbean       350.000000         70.0000
-#> P180497 Latin America and Caribbean       541.880000        541.8800
-#> P177474 Latin America and Caribbean        50.000000         50.0000
-#> P178581                  South Asia       452.000000        452.0000
-#> P175723 Latin America and Caribbean        80.000000         80.0000
-#> P179189                  South Asia       300.000000        300.0000
-#> P180634                  South Asia       100.000000        100.0000
-#> P179365 Latin America and Caribbean       300.000000        300.0000
-#> P179182 Latin America and Caribbean       135.238245        135.2382
-#> P178993 Latin America and Caribbean       100.000000        100.0000
-#> P178567 Latin America and Caribbean        50.000000         50.0000
-#> P178663 Latin America and Caribbean        50.000000         50.0000
-#> P179046 Latin America and Caribbean        40.000000         40.0000
-#> P179088 Latin America and Caribbean        50.000000         50.0000
-#> P176733                  South Asia        46.000000         46.0000
-#> P176032                  South Asia       200.000000        200.0000
-#> P179249                  South Asia       300.000000        300.0000
-#> P179337                  South Asia       251.030000        251.0300
-#> P178418                  South Asia       140.000000        140.0000
-#> P177917                  South Asia       255.500000        255.5000
-#> P177980                  South Asia       150.000000        150.0000
-#> P177876                  South Asia       148.000000        148.0000
-#> P178072 Latin America and Caribbean        84.550000         84.5500
-#> P177671                  South Asia        82.000000         82.0000
-#> P176982 Latin America and Caribbean        86.100000         86.1000
-#> P179039                  South Asia       363.000000        363.0000
-#> P175811                  South Asia       100.000000        100.0000
-#> P174593                  South Asia       108.000000        108.0000
-#> P178888 Latin America and Caribbean       500.000000        500.0000
-#> P175728                  South Asia       280.000000        280.0000
-#> P178252                  South Asia       350.000000        350.0000
-#> P175261                  South Asia       150.000000        150.0000
-#> P178339 Latin America and Caribbean        40.000000         40.0000
-#> P177070 Latin America and Caribbean        40.000000         40.0000
-#> P178146                  South Asia       500.000000        500.0000
-#> P171750                  South Asia       165.000000        150.0000
-#> P175676                  South Asia       500.000000        500.0000
-#> P177915                  South Asia       250.000000        250.0000
-#> P174798                  South Asia       200.000000        150.0000
-#> P178729 Latin America and Caribbean       135.238245        135.2382
-#> P176404                  South Asia       162.000000        162.0000
-#> P177856                  South Asia       245.000000        245.0000
-#> P178563 Latin America and Caribbean       250.000000        250.0000
-#> P177632 Latin America and Caribbean       500.000000        500.0000
-#> P168634 Latin America and Caribbean       130.000000        130.0000
-#> P174067                  South Asia        47.000000         47.0000
-#> P174564                  South Asia       125.000000        125.0000
-#> P176107                  South Asia       150.000000        150.0000
-#> P172187                  South Asia       115.000000        115.0000
-#> P170590                  South Asia       270.000000        135.0000
-#> P174732                  South Asia       160.000000        160.0000
-#> P173589                  South Asia        40.000000         40.0000
-#> P175221                  South Asia       300.000000        150.0000
-#> P174778                  South Asia       370.000000        125.0000
-#> P173978                  South Asia       250.000000        250.0000
-#> P172226                  South Asia       500.000000        500.0000
-#> P173958                  South Asia        32.000000         32.0000
-#> P170811                  South Asia       210.000000        105.0000
-#> P173704                  South Asia       750.000000        500.0000
-#> P168633                  South Asia       210.000000        105.0000
-#> P172213                  South Asia        68.000000         68.0000
-#> P170873                  South Asia       500.000000        250.0000
-#> P170645                  South Asia       167.000000        100.0000
-#> P166020                  South Asia       105.000000        105.0000
-#> P168097                  South Asia       120.000000        120.0000
-#> P172605 Latin America and Caribbean       125.000000        125.0000
-#> P169111                  South Asia       381.000000        381.0000
-#> P174312                  South Asia       381.000000        381.0000
-#> P166868                  South Asia       500.000000        500.0000
-#> P170850 Latin America and Caribbean        38.000000         38.0000
-#> P168590                  South Asia        50.000000         50.0000
-#> P169140 Latin America and Caribbean        97.000000         97.0000
-#> P167350                  South Asia       466.350000        466.3500
-#> P163328                  South Asia        82.000000         82.0000
-#> P170682 Latin America and Caribbean        98.800000         98.8000
-#> P169134 Latin America and Caribbean        80.000000         80.0000
-#> P165129                  South Asia        80.000000         80.0000
-#> P168310                  South Asia       210.000000        210.0000
-#> P157929                  South Asia        88.000000         88.0000
-#> P162679                  South Asia       290.000000        145.0000
-#> P163533                  South Asia       165.000000        165.0000
-#> P165055 Latin America and Caribbean       139.880000        139.8800
-#> P167455 Latin America and Caribbean       100.000000        100.0000
-#> P167581                  South Asia       328.000000        328.0000
-#> P160379                  South Asia       199.810000        150.0000
-#> P157141                  South Asia       250.000000        250.0000
-#> P167523                  South Asia       400.000000        400.0000
-#> P166923                  South Asia        31.580000         31.5800
-#> P165683 Latin America and Caribbean       126.886000        126.8860
-#> P166578                  South Asia        25.200000         25.2000
-#> P165695 Latin America and Caribbean       250.000000        250.0000
-#> P158502                  South Asia       122.000000        122.0000
-#> P160463                  South Asia       172.200000        172.2000
-#> P162086                  South Asia       310.000000        310.0000
-#> P158119                  South Asia       450.000000        450.0000
-#> P156869                  South Asia        21.700000         21.7000
-#> P158146                  South Asia       120.000000        120.0000
-#> P163868 Latin America and Caribbean       250.000000        250.0000
-#> P158522                  South Asia       318.000000        318.0000
-#> P157702                  South Asia       100.000000        100.0000
-#> P147158 Latin America and Caribbean        50.000000         50.0000
-#> P155617                  South Asia       200.000000        200.0000
-#> P156241                  South Asia       125.000000        125.0000
-#> P153012 Latin America and Caribbean        73.300000         73.3000
-#> P148775                  South Asia       375.000000        375.0000
-#> P155303                  South Asia       116.200000        116.2000
-#> P152698                  South Asia       175.000000        175.0000
-#> P148531                  South Asia       100.000000          0.0000
-#> P155007                  South Asia       648.000000        500.0000
-#> P130544                  South Asia       100.000000        100.0000
-#> P127725                  South Asia       250.000000          0.0000
-#> P154990                  South Asia       250.000000          0.0000
-#> P096124                  South Asia       648.000000        648.0000
-#> P039027 Latin America and Caribbean         6.400000          0.0000
-#> P108190                  South Asia         0.000000          0.0000
-#> P505866 Latin America and Caribbean         0.000000          0.0000
-#> P507322 Latin America and Caribbean         0.000000          0.0000
-#> P500380                  South Asia         0.000000          0.0000
-#> P502493 Latin America and Caribbean        45.000000          0.0000
-#> P110539                  South Asia         0.000000          0.0000
-#> P500469 Latin America and Caribbean       162.400000          0.0000
-#> P501071                  South Asia       250.000000          0.0000
-#> P105370                  South Asia         0.000000          0.0000
-#> P181511 Latin America and Caribbean        90.000000         90.0000
-#> P500252                  South Asia         0.000000          0.0000
-#> P508840                  South Asia         0.000000          0.0000
-#> P506955 Latin America and Caribbean         0.000000          0.0000
-#> P504126 Latin America and Caribbean         8.560000          0.0000
-#> P507066                  South Asia         0.000000          0.0000
-#> P508221 Latin America and Caribbean         0.000000          0.0000
-#> P507029 Latin America and Caribbean         0.000000          0.0000
-#> P508202 Latin America and Caribbean         0.000000          0.0000
-#> P508363 Latin America and Caribbean         0.000000          0.0000
-#> P180716                  South Asia      1000.000000       1000.0000
-#> P504276 Latin America and Caribbean       900.000000          0.0000
-#> P500570 Latin America and Caribbean        13.400000         13.4000
-#> P507910                  South Asia         0.000000          0.0000
-#> P504899 Latin America and Caribbean         0.000000          0.0000
-#> P500501 Latin America and Caribbean      2300.000000       2300.0000
-#> P181020                  South Asia       131.000000        131.0000
-#> P114896                  South Asia         0.000000          0.0000
-#> P502491                  South Asia      2830.250000        128.0000
-#> P504253 Latin America and Caribbean       375.000000          0.0000
-#> P181524                  South Asia       420.000000        420.0000
-#> P181244                  South Asia       315.000000        315.0000
-#> P502499                  South Asia       196.000000          0.0000
-#> P500151                  South Asia         0.000000          0.0000
-#> P508719                  South Asia         0.000000          0.0000
-#> P505563                  South Asia       490.000000          0.0000
-#> P507628 Latin America and Caribbean         0.000000          0.0000
-#> P180699                  South Asia       150.000000        150.0000
-#> P507340                  South Asia         0.000000          0.0000
-#> P114890 Latin America and Caribbean         0.000000          0.0000
-#> P178053                  South Asia       350.000000        350.0000
-#> P500564                  South Asia       135.000000          0.0000
-#> P505590 Latin America and Caribbean       200.000000          0.0000
-#> P180932                  South Asia       212.640000        212.6400
-#> P505235 Latin America and Caribbean         0.000000          0.0000
-#> P507629 Latin America and Caribbean         0.000000          0.0000
-#> P506976                  South Asia         0.000000          0.0000
-#> P181767 Latin America and Caribbean       100.000000        100.0000
-#> P506329 Latin America and Caribbean         0.000000          0.0000
-#> P508489                  South Asia         0.000000          0.0000
-#> P506272                  South Asia         0.000000          0.0000
-#> P506321 Latin America and Caribbean         0.000000          0.0000
-#> P173090 Latin America and Caribbean       200.000000        200.0000
-#> P505177                  South Asia         1.000000          1.0000
-#> P181608 Latin America and Caribbean        50.000000         50.0000
-#> P508025 Latin America and Caribbean         0.000000          0.0000
-#> P179349                  South Asia         0.000000          0.0000
-#> P504543 Latin America and Caribbean         0.000000          0.0000
-#> P509041 Latin America and Caribbean         0.000000          0.0000
-#> P506142 Latin America and Caribbean         0.000000          0.0000
-#> P505914                  South Asia      5400.000000          0.0000
-#> P500614 Latin America and Caribbean         0.000000          0.0000
-#> P506861 Latin America and Caribbean         0.000000          0.0000
-#> P500168                  South Asia         0.000000          0.0000
-#> P506320 Latin America and Caribbean         0.000000          0.0000
-#> P500431 Latin America and Caribbean        50.000000          0.0000
-#> P508453                  South Asia         0.000000          0.0000
-#> P504897 Latin America and Caribbean        30.000000          0.0000
-#> P503872                  South Asia       280.000000          0.0000
-#> P506340                  South Asia         0.000000          0.0000
-#> P507236                  South Asia         0.000000          0.0000
-#> P132620                  South Asia        25.000000          0.0000
-#> P122387                  South Asia         1.160000          0.0000
-#> P171257 Latin America and Caribbean        19.284404          0.0000
-#> P172497 Latin America and Caribbean        24.577982          0.0000
-#> P164602 Latin America and Caribbean        21.000000          0.0000
-#> P073882 Latin America and Caribbean         1.100000          0.0000
-#> P177159                  South Asia         0.852516          0.0000
-#> P152285 Latin America and Caribbean         1.000000          0.0000
-#> P009585                  South Asia         1.300000          0.0000
-#> P128921                  South Asia        18.000000          0.0000
-#> P158000 Latin America and Caribbean        60.330000          0.0000
-#> P160018                  South Asia        22.935780          0.0000
-#>         ida_commitment            lending_instrument
-#> P507508           0.00 Program-for-Results Financing
-#> P178253           0.00  Investment Project Financing
-#> P181463           0.00 Program-for-Results Financing
-#> P179935           0.00  Investment Project Financing
-#> P180429           0.00  Investment Project Financing
-#> P178254           0.00  Investment Project Financing
-#> P180555           0.00  Investment Project Financing
-#> P181501           0.00    Development Policy Lending
-#> P181195          31.50    Development Policy Lending
-#> P177965           0.00 Program-for-Results Financing
-#> P180430           0.00  Investment Project Financing
-#> P180462           0.00  Investment Project Financing
-#> P174825           0.00 Program-for-Results Financing
-#> P178557           0.00  Investment Project Financing
-#> P179357           0.00  Investment Project Financing
-#> P179749           0.00  Investment Project Financing
-#> P500524         280.00  Investment Project Financing
-#> P180497           0.00    Development Policy Lending
-#> P177474           0.00  Investment Project Financing
-#> P178581           0.00 Program-for-Results Financing
-#> P175723           0.00  Investment Project Financing
-#> P179189           0.00 Program-for-Results Financing
-#> P180634           0.00 Program-for-Results Financing
-#> P179365           0.00  Investment Project Financing
-#> P179182           0.00    Development Policy Lending
-#> P178993           0.00  Investment Project Financing
-#> P178567           0.00  Investment Project Financing
-#> P178663           0.00  Investment Project Financing
-#> P179046           0.00  Investment Project Financing
-#> P179088           0.00  Investment Project Financing
-#> P176733           0.00  Investment Project Financing
-#> P176032           0.00 Program-for-Results Financing
-#> P179249           0.00 Program-for-Results Financing
-#> P179337           0.00  Investment Project Financing
-#> P178418           0.00  Investment Project Financing
-#> P177917           0.00  Investment Project Financing
-#> P177980           0.00 Program-for-Results Financing
-#> P177876           0.00  Investment Project Financing
-#> P178072           0.00  Investment Project Financing
-#> P177671           0.00 Program-for-Results Financing
-#> P176982           0.00  Investment Project Financing
-#> P179039           0.00 Program-for-Results Financing
-#> P175811           0.00 Program-for-Results Financing
-#> P174593           0.00  Investment Project Financing
-#> P178888           0.00  Investment Project Financing
-#> P175728           0.00  Investment Project Financing
-#> P178252           0.00 Program-for-Results Financing
-#> P175261           0.00 Program-for-Results Financing
-#> P178339           0.00  Investment Project Financing
-#> P177070           0.00  Investment Project Financing
-#> P178146           0.00 Program-for-Results Financing
-#> P171750           0.00 Program-for-Results Financing
-#> P175676           0.00 Program-for-Results Financing
-#> P177915           0.00 Program-for-Results Financing
-#> P174798           0.00  Investment Project Financing
-#> P178729           0.00    Development Policy Lending
-#> P176404           0.00  Investment Project Financing
-#> P177856           0.00  Investment Project Financing
-#> P178563           0.00 Program-for-Results Financing
-#> P177632           0.00    Development Policy Lending
-#> P168634           0.00 Program-for-Results Financing
-#> P174067           0.00  Investment Project Financing
-#> P174564           0.00 Program-for-Results Financing
-#> P176107           0.00  Investment Project Financing
-#> P172187           0.00 Program-for-Results Financing
-#> P170590           0.00  Investment Project Financing
-#> P174732           0.00 Program-for-Results Financing
-#> P173589           0.00  Investment Project Financing
-#> P175221           0.00 Program-for-Results Financing
-#> P174778           0.00 Program-for-Results Financing
-#> P173978           0.00 Program-for-Results Financing
-#> P172226           0.00 Program-for-Results Financing
-#> P173958           0.00  Investment Project Financing
-#> P170811           0.00  Investment Project Financing
-#> P173704           0.00 Program-for-Results Financing
-#> P168633           0.00  Investment Project Financing
-#> P172213           0.00  Investment Project Financing
-#> P170873           0.00  Investment Project Financing
-#> P170645           0.00  Investment Project Financing
-#> P166020           0.00  Investment Project Financing
-#> P168097           0.00  Investment Project Financing
-#> P172605           0.00  Investment Project Financing
-#> P169111           0.00  Investment Project Financing
-#> P174312           0.00  Investment Project Financing
-#> P166868           0.00 Program-for-Results Financing
-#> P170850           0.00  Investment Project Financing
-#> P168590           0.00  Investment Project Financing
-#> P169140           0.00  Investment Project Financing
-#> P167350           0.00  Investment Project Financing
-#> P163328           0.00  Investment Project Financing
-#> P170682           0.00  Investment Project Financing
-#> P169134           0.00  Investment Project Financing
-#> P165129           0.00  Investment Project Financing
-#> P168310           0.00  Investment Project Financing
-#> P157929           0.00  Investment Project Financing
-#> P162679           0.00  Investment Project Financing
-#> P163533           0.00  Investment Project Financing
-#> P165055           0.00  Investment Project Financing
-#> P167455           0.00  Investment Project Financing
-#> P167581           0.00  Investment Project Financing
-#> P160379           0.00  Investment Project Financing
-#> P157141           0.00  Investment Project Financing
-#> P167523           0.00 Program-for-Results Financing
-#> P166923           0.00  Investment Project Financing
-#> P165683           0.00  Investment Project Financing
-#> P166578           0.00 Program-for-Results Financing
-#> P165695           0.00  Investment Project Financing
-#> P158502           0.00  Investment Project Financing
-#> P160463           0.00  Investment Project Financing
-#> P162086           0.00  Investment Project Financing
-#> P158119           0.00 Program-for-Results Financing
-#> P156869           0.00  Investment Project Financing
-#> P158146           0.00 Program-for-Results Financing
-#> P163868           0.00 Program-for-Results Financing
-#> P158522           0.00  Investment Project Financing
-#> P157702           0.00  Investment Project Financing
-#> P147158           0.00  Investment Project Financing
-#> P155617           0.00  Investment Project Financing
-#> P156241           0.00  Investment Project Financing
-#> P153012           0.00  Investment Project Financing
-#> P148775           0.00  Investment Project Financing
-#> P155303           0.00  Investment Project Financing
-#> P152698           0.00  Investment Project Financing
-#> P148531         100.00  Investment Project Financing
-#> P155007           0.00 Program-for-Results Financing
-#> P130544           0.00  Investment Project Financing
-#> P127725         250.00  Investment Project Financing
-#> P154990         250.00  Investment Project Financing
-#> P096124           0.00  Investment Project Financing
-#> P039027           0.00                          <NA>
-#> P108190           0.00      Specific Investment Loan
-#> P505866           0.00    Development Policy Lending
-#> P507322           0.00    Development Policy Lending
-#> P500380           0.00  Investment Project Financing
-#> P502493          45.00  Investment Project Financing
-#> P110539           0.00                          <NA>
-#> P500469         162.40  Investment Project Financing
-#> P501071         250.00  Investment Project Financing
-#> P105370           0.00                          <NA>
-#> P181511           0.00  Investment Project Financing
-#> P500252           0.00  Investment Project Financing
-#> P508840           0.00 Program-for-Results Financing
-#> P506955           0.00  Investment Project Financing
-#> P504126           8.56  Investment Project Financing
-#> P507066           0.00  Investment Project Financing
-#> P508221           0.00  Investment Project Financing
-#> P507029           0.00  Investment Project Financing
-#> P508202           0.00  Investment Project Financing
-#> P508363           0.00  Investment Project Financing
-#> P180716           0.00 Program-for-Results Financing
-#> P504276         900.00  Investment Project Financing
-#> P500570           0.00  Investment Project Financing
-#> P507910           0.00 Program-for-Results Financing
-#> P504899           0.00  Investment Project Financing
-#> P500501           0.00 Program-for-Results Financing
-#> P181020           0.00  Investment Project Financing
-#> P114896           0.00      Specific Investment Loan
-#> P502491        2702.25 Program-for-Results Financing
-#> P504253         375.00  Investment Project Financing
-#> P181524           0.00  Investment Project Financing
-#> P181244           0.00 Program-for-Results Financing
-#> P502499         196.00  Investment Project Financing
-#> P500151           0.00 Program-for-Results Financing
-#> P508719           0.00 Program-for-Results Financing
-#> P505563         490.00  Investment Project Financing
-#> P507628           0.00  Investment Project Financing
-#> P180699           0.00 Program-for-Results Financing
-#> P507340           0.00  Investment Project Financing
-#> P114890           0.00      Specific Investment Loan
-#> P178053           0.00 Program-for-Results Financing
-#> P500564         135.00 Program-for-Results Financing
-#> P505590         200.00  Investment Project Financing
-#> P180932           0.00  Investment Project Financing
-#> P505235           0.00    Development Policy Lending
-#> P507629           0.00  Investment Project Financing
-#> P506976           0.00 Program-for-Results Financing
-#> P181767           0.00  Investment Project Financing
-#> P506329           0.00  Investment Project Financing
-#> P508489           0.00 Program-for-Results Financing
-#> P506272           0.00 Program-for-Results Financing
-#> P506321           0.00    Development Policy Lending
-#> P173090           0.00    Development Policy Lending
-#> P505177           0.00  Investment Project Financing
-#> P181608           0.00  Investment Project Financing
-#> P508025           0.00 Program-for-Results Financing
-#> P179349           0.00  Investment Project Financing
-#> P504543           0.00  Investment Project Financing
-#> P509041           0.00  Investment Project Financing
-#> P506142           0.00  Investment Project Financing
-#> P505914        5400.00  Investment Project Financing
-#> P500614           0.00    Development Policy Lending
-#> P506861           0.00    Development Policy Lending
-#> P500168           0.00  Investment Project Financing
-#> P506320           0.00  Investment Project Financing
-#> P500431          50.00  Investment Project Financing
-#> P508453           0.00  Investment Project Financing
-#> P504897          30.00  Investment Project Financing
-#> P503872         280.00 Program-for-Results Financing
-#> P506340           0.00  Investment Project Financing
-#> P507236           0.00  Investment Project Financing
-#> P132620           0.00  Investment Project Financing
-#> P122387           0.00  Investment Project Financing
-#> P171257           0.00  Investment Project Financing
-#> P172497           0.00  Investment Project Financing
-#> P164602           0.00  Investment Project Financing
-#> P073882           0.00                          <NA>
-#> P177159           0.00  Investment Project Financing
-#> P152285           0.00  Investment Project Financing
-#> P009585           0.00      Specific Investment Loan
-#> P128921           0.00  Investment Project Financing
-#> P158000           0.00  Investment Project Financing
-#> P160018           0.00 Program-for-Results Financing
-#>                                                                                                                  borrower
-#> P507508                                                                                                              <NA>
-#> P178253                                                                                                              <NA>
-#> P181463                                                                                                             India
-#> P179935                                                                                                             India
-#> P180429                                                                                  Government of the State of Bahia
-#> P178254                                                                                                              <NA>
-#> P180555                                                                                                              <NA>
-#> P181501                                                                                                  State of Sergipe
-#> P181195                                                                                                             India
-#> P177965                                                                                                              <NA>
-#> P180430                                                                             Government of the State of Pernambuco
-#> P180462                                                                             Secretaria de Economia e Planejamento
-#> P174825                                                                                                             India
-#> P178557                                               CIM - AMFRI (Foz do Rio Itaja� Region Consortium of Municipalities)
-#> P179357                                                                                    Department of Economic Affairs
-#> P179749                                                                                               Government of India
-#> P500524                                                                                                              <NA>
-#> P180497                                                                                          State Government of Cear
-#> P177474                                                                                                     State of Piau
-#> P178581                                                                                                             India
-#> P175723                                                                                              State of Mato Grosso
-#> P179189                                                                                               Ministry of Finance
-#> P180634                                                                                                             India
-#> P179365                                                                                     Federative Republic of Brazil
-#> P179182                                                                                    Municipality of Rio de Janeiro
-#> P178993                                                                                              STATE OF MATO GROSSO
-#> P178567                                                                                                              <NA>
-#> P178663                                                                                                    State of Piaui
-#> P179046                                                                                                     State of Acre
-#> P179088                                                                            State Secretariat of Planning (SEPLAN)
-#> P176733                                                                                                             India
-#> P176032                                                                                                             India
-#> P179249                                                                                                             India
-#> P179337                                                                                                             India
-#> P178418                                                                                                             India
-#> P177917                                                                                                             India
-#> P177980                                                                                                             India
-#> P177876                                                                                                             India
-#> P178072                                                                                                              <NA>
-#> P177671                                                                                                             India
-#> P176982                                                                                           State of Espirito Santo
-#> P179039                                                                                                             India
-#> P175811                                                                                                             India
-#> P174593                                                                                                             India
-#> P178888                                                                                                   Banco do Brasil
-#> P175728                                                                                                             India
-#> P178252                                                                                                             India
-#> P175261                                                                                                             India
-#> P178339                                                                                              State of Mato Grosso
-#> P177070                                         State of Alagoas, with the guarantee of the Federative Republic of Brazil
-#> P178146                                                                                                             India
-#> P171750                                                                                               State Bank of India
-#> P175676                                                                                                             India
-#> P177915                                                                        Government of Gujarat, Ministry of Finance
-#> P174798                                                                                                             INDIA
-#> P178729                                                                                    Municipality of Rio de Janeiro
-#> P176404                                                                                                             India
-#> P177856                                                           Dedicated Freight Corridor Corporation of India Limited
-#> P178563                                                                                 THE FEDERATIVE REPUBLIC OF BRAZIL
-#> P177632                                                                                                    State of Goi�s
-#> P168634                                                                                                   State of Parana
-#> P174067                                                                                                             India
-#> P174564                                                                                                             India
-#> P176107                                                                                                             India
-#> P172187                                                                                                             India
-#> P170590                                                                                                             INDIA
-#> P174732                                                                                                             India
-#> P173589                                                                                                             India
-#> P175221                                                                                                             India
-#> P174778                                                                                                             India
-#> P173978                                                                                                             India
-#> P172226                                                                                                             India
-#> P173958                                                       India (Department of Economic Affairs, Government of India)
-#> P170811                                                                                                             India
-#> P173704                                                                                               Ministry of Finance
-#> P168633                                                                                                             India
-#> P172213                                                                                                             India
-#> P170873                                                               Ministry of Finance, Department of Economic Affairs
-#> P170645                                                                                               Ministry of Finance
-#> P166020                                                                                                 Republic of India
-#> P168097                                                                                                             India
-#> P172605                                                                                          Municipality of Salvador
-#> P169111                                                                                                             India
-#> P174312                                                                                                              <NA>
-#> P166868                                                                                                             India
-#> P170850                                                                                     Federative Republic of Brazil
-#> P168590                                                                                                             India
-#> P169140                                                                                         Municipality of S�o Paulo
-#> P167350                                                                                                             India
-#> P163328                                                                                                             India
-#> P170682                                                           Banco Regional de Desenvolvimento do Extremo Sul (BRDE)
-#> P169134                                                                                       Municipio de Belo Horizonte
-#> P165129                                                                                                 Republic of India
-#> P168310                                                                                                 Republic of India
-#> P157929                                                                                                             India
-#> P162679                                                                                                 Republic of India
-#> P163533                                                                                                 Republic of India
-#> P165055                                                                                                    State of Ceara
-#> P167455                                                                                                    State of Ceara
-#> P167581                                                                                                 Republic of India
-#> P160379                                                                                                             India
-#> P157141                                                                                                             India
-#> P167523                                                                                                 Republic of India
-#> P166923                                                                                                             India
-#> P165683                                                                                                              <NA>
-#> P166578                                                                                                             India
-#> P165695                                                                                                            SABESP
-#> P158502                                                                                                             India
-#> P160463                                                                                                 Republic of India
-#> P162086                                                                                               Government of India
-#> P158119                                          Department of Economic Affairs, Ministry of Finance, Government of India
-#> P156869                                                                                                             India
-#> P158146                                                                                                             India
-#> P163868                                                                      Ministry of Economy (Minist�rio da Economia)
-#> P158522                                                                                                             India
-#> P157702                                                                    Department of Economic Affairs, Govt. of India
-#> P147158                                                                                       State Government of Paraiba
-#> P155617                                                                                                 Republic of India
-#> P156241                                                                                                             India
-#> P153012                                                                                         Municipality of Fortaleza
-#> P148775                                                               Department of Economic Affairs, Government of India
-#> P155303                                                                                                             India
-#> P152698                                                               Ministry of Finance, Department of Economic Affairs
-#> P148531                                                                                                             India
-#> P155007                                                                                               State Bank of India
-#> P130544                                                                                                             India
-#> P127725                                                                                                             India
-#> P154990                                                                                                             India
-#> P096124                                                                                                             India
-#> P039027                                                                                                              <NA>
-#> P108190                                                                                                              <NA>
-#> P505866                                                                                                              <NA>
-#> P507322                                                                                                              <NA>
-#> P500380                                                                                                              <NA>
-#> P502493                                                                                                              <NA>
-#> P110539                                                                                                              <NA>
-#> P500469                                                                                                              <NA>
-#> P501071                                                                                                              <NA>
-#> P105370                                                                                                              <NA>
-#> P181511                                                                     Complexo Industrial Portuario de Pecem (CIPP)
-#> P500252                                                                                                              <NA>
-#> P508840                                                                                                              <NA>
-#> P506955                                                                                                              <NA>
-#> P504126                                                                                                              <NA>
-#> P507066                                                                                                              <NA>
-#> P508221                                                                                                              <NA>
-#> P507029                                                                                                              <NA>
-#> P508202                                                                                                              <NA>
-#> P508363                                                                                                              <NA>
-#> P180716                                                                                               Ministry of Finance
-#> P504276                                                                                                              <NA>
-#> P500570                                                                                                              <NA>
-#> P507910                                                                                                              <NA>
-#> P504899                                                                                                              <NA>
-#> P500501                                                                                                              <NA>
-#> P181020                                                                                               Government of India
-#> P114896                                                                                                              <NA>
-#> P502491                                                                                                              <NA>
-#> P504253                                                                                                              <NA>
-#> P181524                                                               Ministry of Finance, Department of Economic Affairs
-#> P181244                                                                                               Ministry of Finance
-#> P502499                                                                                                              <NA>
-#> P500151                                                                                                              <NA>
-#> P508719                                                                                                              <NA>
-#> P505563                                                                                                              <NA>
-#> P507628                                                                                                              <NA>
-#> P180699                                                                                                             India
-#> P507340                                                                                                              <NA>
-#> P114890                                                                                                              <NA>
-#> P178053                                                                                                 Republic of India
-#> P500564                                                                                                              <NA>
-#> P505590                                                                                                              <NA>
-#> P180932                                                                                                             India
-#> P505235                                                                                                              <NA>
-#> P507629                                                                                                              <NA>
-#> P506976                                                                                                              <NA>
-#> P181767                                                                                                              <NA>
-#> P506329                                                                                                              <NA>
-#> P508489                                                                                                              <NA>
-#> P506272                                                                                                              <NA>
-#> P506321                                                                                                              <NA>
-#> P173090                                                                                                              <NA>
-#> P505177                                                                                                              <NA>
-#> P181608                                                                                                 State of Amazonas
-#> P508025                                                                                                              <NA>
-#> P179349                                                                                                              <NA>
-#> P504543                                                                                                              <NA>
-#> P509041                                                                                                              <NA>
-#> P506142                                                                                                              <NA>
-#> P505914                                                                                                              <NA>
-#> P500614                                                                                                              <NA>
-#> P506861                                                                                                              <NA>
-#> P500168                                                                                                              <NA>
-#> P506320                                                                                                              <NA>
-#> P500431                                                                                                              <NA>
-#> P508453                                                                                                              <NA>
-#> P504897                                                                                                              <NA>
-#> P503872                                                                                                              <NA>
-#> P506340                                                                                                              <NA>
-#> P507236                                                                                                              <NA>
-#> P132620                                                                                        Government of India, India
-#> P122387                                                                                                              <NA>
-#> P171257 Fundo Brasileiro de Biodiversidade - FUNBIO, Fundacao Getulio Vargas - FGV, Conservacao Internacional - CI Brazil
-#> P172497                                                                                                              IICA
-#> P164602                                       Brazil - Deutsche Gesellschaft f�r Internationale Zusammenarbeit GmbH (GIZ)
-#> P073882                                                                                                              <NA>
-#> P177159                                                            Institute for Financial Management and Research (IFMR)
-#> P152285                                                                                  Funda��o Pro-Natureza - FUNATURA
-#> P009585                                                                                                              <NA>
-#> P128921                                                                                                              <NA>
-#> P158000 Fundo Brasileiro de Biodiversidade - FUNBIO, Conserva��o Internacional - CI Brazil, Funda��o Get�lio Vargas - FGV
-#> P160018                                                                                               State Bank of India
-#>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              implementing_agency
-#> P507508                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
-#> P178253                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   Department of Agriculture, Government of Uttar Pradesh
-#> P181463                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           Planning Department, Government of Maharashtra
-#> P179935                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           Government of Tripura, Government of Nagaland, Ministry of Development of North Eastern Region
-#> P180429                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       CAR - Companhia de Desenvolvimento e Acao Regional
-#> P178254                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               Ishita Roy
-#> P180555                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        Secretary of Infrastructure of the State of Bahia
-#> P181501                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            State Secretariate of Finance
-#> P181195                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     Ministry of New and Renewable Energy
-#> P177965                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
-#> P180430                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                Pernambuco Water and Climate Agency (Ag�ncia Pernambucana de �guas e Clima - APAC), Pernambuco Sanitation Company (Companhia Pernambucana de Saneamento - COMPESA), Secretariat of Water Resources and WSS (Secretaria de Recursos H�dricos e Saneamento)
-#> P180462                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            Secretaria de Estado da Ci�ncia, Tecnologia, Inova��o, Educa��o Profissional,
-#> P174825                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           West Bengal Department of Industries, Commerce and Enterprises
-#> P178557                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        Consorcio Intermunicipal Multifinalit�rio - AMFRI
-#> P179357                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         Watershed Management Directorate
-#> P179749                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               Uttarakhand State Disaster Management Authority, Government of Uttarakhand
-#> P500524                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
-#> P180497                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               State Secretary of Finance
-#> P177474                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            Piau� State Secretariat for Planning (SEPLAN)
-#> P178581                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       Public Works Roads Department, Government of Assam
-#> P175723                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            State Secretary for Family Agriculture (SEAF)
-#> P179189                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                Tamil Nadu Urban Infrastructure Financial Services Limited, Tamil Nadu Municipal Administration & Water Supply Department
-#> P180634                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                Planning and Development Department, Government of Sikkim
-#> P179365                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  Ministry of Citizenship
-#> P179182                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      Secretaria Municipal de Fazenda e Planejamento, Secretaria Municipal de Transportes
-#> P178993                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   SECRETARIAT OF EDUCATION - MATO GROSSO
-#> P178567                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      State Secretariat of Health (SESAPI), State Secretariat of Social Assistance, Labor and Human Rights (SASC), State Secretariat of Planning (SEPLAN)
-#> P178663                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          Secretariat of Finance of Piaui
-#> P179046                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            State Secretariat of Planning
-#> P179088                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      UGP
-#> P176733                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     Cyber Corporation of Manipur Limited
-#> P176032                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    Directorate of Energy, HimUrja, HPPCL (Himachal Pradesh Power Corporation Limited), HPSEBL (Himachal Pradesh State Electricity Board Limited), HPPTCL (Himachal Pradesh Power Transmission Corporation Limited), HPSLDC (Himachal Pradesh State Load Despatch Centre)
-#> P179249                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    State of Chhattisgarh
-#> P179337                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       Assam Health Infrastructure Development and Management Society (AHIDMS), Health and Family Welfare
-#> P178418                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      Department of Tribal Welfare, Government of Tripura
-#> P177917                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    Ministry of Education
-#> P177980                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     Government of Kerala
-#> P177876                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         DWRID, Government of West Bengal
-#> P178072                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
-#> P177671                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            Ministry of Fisheries, Animal Husbandry & Dairying, Department of Animal Husbandry & Dairying
-#> P176982                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               DER-ES - Buildings and Roads Department of Esp�rito Santo, CEPDEC - State Coordination for Protection and Civil Defense, SEAMA - State Secretariat for the Environment and Water Resources
-#> P179039                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             Rural Drinking Water and Sanitation Department, Government of Karnataka, Rural Development and Panchayat Department, Government of Karnataka
-#> P175811                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 Finance Department, Government of Odisha
-#> P174593                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           Flood and River Erosion Management Agency of Assam, Government of Assam, Water Resources Department, Assam State Disaster Management Authority
-#> P178888                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          Banco do Brasil
-#> P175728                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       Ahmedabad Municipal Corporation, Gujarat Urban Development Mission, Urban Development and Urban Housing Department
-#> P178252                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                Government of Gujarat through Health and Family Welfare Department (HFWD)
-#> P175261                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              Department of Finance, Government of Punjab
-#> P178339                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     Secretariat of Finance - Mato Grosso
-#> P177070                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                Secretariat of Finance - State of Alagoas
-#> P178146                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          Department of Health and Family Welfare, Ministry of Health and Family Welfare, Government of India, Ministry of Health and Family Welfare, Government of India
-#> P171750                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      State Bank of India
-#> P175676                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    Ministry of Health and Family Welfare
-#> P177915                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              Education Department, Government of Gujarat
-#> P174798                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      Department of Fisheries, Ministry of Fisheries, Animal Husbandry and Dairying, National Fisheries Development Board
-#> P178729                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 Secretaria Municipal de Fazenda e Planejamento, Secretaria de Transporte
-#> P176404                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         Department for the Welfare of Differently Abled Persons (DfWDAP)
-#> P177856                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  Dedicated Freight Corridor Corporation of India Limited
-#> P178563                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    MINISTRY OF EDUCATION
-#> P177632                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   State Secretariat of Agriculture and Livestock (SEAPA)
-#> P168634                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          Secretariat of Planning and Structured Projects
-#> P174067                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              Capacity Building Commission, Department of Personnel and Training, Ministry of Personnel, Public Grievances and Pensions, Karmayogi Bharat
-#> P174564                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      West Bengal Women & Child Development and Social Welfare Department, West Bengal Finance Department
-#> P176107                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                Karnataka Urban Infrastructure Development & Finance Corporation (KUIDFC)
-#> P172187                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   Karnataka Department of of Agriculture, Department of Land Resources, Odisha Department of Agriculture
-#> P170590                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               West Bengal State Electricity Distribution Company Limited
-#> P174732                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        Urban Development Department, Government of Himachal Pradesh, Shimla Jal Prabandhan Nigam Limited
-#> P173589                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         Department of Health and Family Welfare, Government of Meghalaya
-#> P175221                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      State of Tamil Nadu
-#> P174778                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     Government of Kerala
-#> P173978                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  State of Andhra Pradesh
-#> P172226                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          Ministry of Micro, Small and Medium Enterprises
-#> P173958                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              Health and Family Welfare Department, Government of Mizoram
-#> P170811                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      Ludhiana Municipal Corporation, Amritsar Municipal Corporation, Punjab Municipal Infrastructure Development Company
-#> P173704                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              Education Department, Government of Gujarat
-#> P168633                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   Local Self Government Department, Government of Kerala
-#> P172213                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                Nagaland (Department of School Education)
-#> P170873 Uttarakhand Jal Vidyut Nigam Ltd., Kerala State Electricity Board (KSEB), Tamil Nadu Generation and Distribution Corporation Limited (TANGEDCO), Government of Gujarat, Water Resources Department, Government of Chhattisgarh, Water Resources Department, Government of Kerala, Water Resources Department, Government of West Bengal, Irrigation and Waterways Department, Government of Uttar Pradesh, Irrigation and Water Resources Department, Meghalaya Power Generation Corporation Ltd. (MePGCL), Government of Maharasthra, Water Resources Department, Government of Manipur, Water Resources Department, Central Water Commission (CWC), Ministry of Jal Shakti, Government of Rajasthan, Water Resources Department, Government of Odisha, Water Resources Department, Government of Tamil Nadu, Water Resources Department, Government of Madhya Pradesh, Water Resources Department, Government of Karnataka, Water Resources Department
-#> P170645                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 Chhattisgarh, Department of Agriculture Development and Farmer Welfare and Biotechnology
-#> P166020                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                Government of West Bengal
-#> P168097                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 Meghalaya Infrastructure Development Finance Corporation
-#> P172605                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               Casa Civil
-#> P169111                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 National Mission for Clean Ganga, Ministry of Jal Shakti
-#> P174312                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
-#> P166868                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    Ministry of Education
-#> P170850                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            Minist�rio de Minas e Energia
-#> P168590                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         Tamil Nadu Urban and Habitat Development Board, Chennai Metropolitan Development Authority (CMDA), Tamil Nadu Infrastructure Fund Management Corporation Limited
-#> P169140                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             S�o Paulo Municipal Secretariat of Urban Infrastructure and Works, S�o Paulo Municipal Secretariat of Mobility and Transport
-#> P167350                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  Ministry of Road Transport and Highways
-#> P163328                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     Himachal Pradesh Road & Other Infrastructure Development Corporation
-#> P170682                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  Banco Regional de Desenvolvimento do Extremo Sul (BRDE)
-#> P169134                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              URBEL, SMPU, SMOBI, BHTRANS
-#> P165129                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     Department of Forest, Government of Himachal Pradesh
-#> P168310                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     Department of Agriculture, Government of Maharashtra
-#> P157929                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         Transport Dept., Govt. of Assam, Dispur, Guwahati (Assam), India
-#> P162679                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       Irrigation and Waterways Department of West Bengal
-#> P163533                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            Agricultural Promotion and Investment Corporation of Odisha Limited, Odisha Community Tank Development and Management Society,  Department of Water Resources
-#> P165055                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                Ceara Economic Research and Strategy Institute - IPECE, Ceara Water and Sanitation Utility - CAGECE, Secretariat of Water Resources - SRH
-#> P167455                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      Secretariat of Agrarian Development
-#> P167581                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                Department of Health, Medical and Family Welfare, Govt. of Andhra Pradesh
-#> P160379                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                Solar Energy Corporation of India Limited
-#> P157141                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         Rajasthan State Highway Authority (RSHA), The State of Rajasthan
-#> P167523                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    Ministry of Health and Family Welfare
-#> P166923                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            Finance Department, Government of Uttarakhand
-#> P165683                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              CAGEPA - State Water and Sanitation Company
-#> P166578                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           Finance Department, Government of Chhattisgarh
-#> P165695                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   SABESP
-#> P158502                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        Urban Development and Housing Department, Government of Jharkhand
-#> P160463                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             Government of Andhra Pradesh
-#> P162086                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   Jharkhand Urja Sancharan Nigam Ltd., Jharkhand Bijli Vitran Nigam Ltd.
-#> P158119                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      The Department of Water Resources, Ganga Rejuvenation and River Development, Ministry of Jal Shakti
-#> P156869                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     Department of Economic Affairs (MOF)
-#> P158146                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   Department of Drinking Water and Sanitation, Government of Uttarakhand
-#> P163868                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           Ministry of Education (Minist�rio da Educa��o)
-#> P158522                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                Water Resources Department, Public Works Department, GoTN
-#> P157702                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                Department of Rural Development & Panchayat Raj, Government of Tamil Nadu
-#> P147158                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                Projeto COOPERAR (SEAFDS)
-#> P155617                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 Assam Rural Infrastructure and Agricultural Services (ARIAS) Society, State Health Society, Government of Assam, Department of Health and Family Welfare
-#> P156241                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       Biotechnology Industry Research Assistance Council
-#> P153012                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                Secretaria Municipal de Urbanismo e Meio Ambiente (SEUMA), Secretaria Municipal de Infraestrutura (SEINF)
-#> P148775                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      Inland Waterways Authority of India
-#> P155303                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    Urban Development and Environment Department, Govt. of Madhya Pradesh
-#> P152698                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           Department of Water Resources, RD & GR, Ministry of Jal Shakti
-#> P148531                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               Department of Medical Health and Family Welfare, Government of Uttarakhand
-#> P155007                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      State Bank of India
-#> P130544                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                Karnataka Urban Infrastructure Development & Finance Corporation (KUIDFC)
-#> P127725                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 Water Resources Department (WRD), Rural Works Department (RWD), Bihar Aapada Punarwas Evam Punarnirman Society (BAPEPS), Bihar Rajya Pul Nirman Nigam Limited (BRPNNL), Animal and Fisheries Resources Department (AFRD)
-#> P154990                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              Project Implementing Entity
-#> P096124                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               THDC (Tehri Hydro Development Corporation)
-#> P039027                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
-#> P108190                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
-#> P505866                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
-#> P507322                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
-#> P500380                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
-#> P502493                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
-#> P110539                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
-#> P500469                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
-#> P501071                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
-#> P105370                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
-#> P181511                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   Complexo Industrial Portu�rio de Pec�m
-#> P500252                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
-#> P508840                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
-#> P506955                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
-#> P504126                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
-#> P507066                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
-#> P508221                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
-#> P507029                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
-#> P508202                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
-#> P508363                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
-#> P180716                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     Ministry of New and Renewable Energy
-#> P504276                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
-#> P500570                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
-#> P507910                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
-#> P504899                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
-#> P500501                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
-#> P181020                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 Haryana Mass Rapid Transport Corporation Limited (HMRTC)
-#> P114896                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
-#> P502491                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
-#> P504253                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
-#> P181524 Uttarakhand Jal Vidyut Nigam Ltd., Kerala State Electricity Board (KSEB), Tamil Nadu Generation and Distribution Corporation Limited (TANGEDCO), Government of Gujarat, Water Resources Department, Government of Chhattisgarh, Water Resources Department, Government of Kerala, Water Resources Department, Government of West Bengal, Irrigation and Waterways Department, Government of Uttar Pradesh, Irrigation and Water Resources Department, Meghalaya Power Generation Corporation Ltd. (MePGCL), Government of Maharasthra, Water Resources Department, Government of Manipur, Water Resources Department, Central Water Commission (CWC), Ministry of Jal Shakti, Government of Rajasthan, Water Resources Department, Government of Odisha, Water Resources Department, Government of Tamil Nadu, Water Resources Department, Government of Madhya Pradesh, Water Resources Department, Government of Karnataka, Water Resources Department
-#> P181244                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                Government of West Bengal
-#> P502499                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
-#> P500151                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
-#> P508719                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
-#> P505563                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
-#> P507628                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
-#> P180699                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            Social Welfare & Women Empowerment Department
-#> P507340                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
-#> P114890                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
-#> P178053                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           Department of Environment, Forests, and Climate Change, State of Uttar Pradesh
-#> P500564                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
-#> P505590                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
-#> P180932                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        Government of Karnataka, Government of Tamil Nadu
-#> P505235                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
-#> P507629                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
-#> P506976                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
-#> P181767                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
-#> P506329                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
-#> P508489                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
-#> P506272                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
-#> P506321                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
-#> P173090                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
-#> P505177                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
-#> P181608                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                State Secretariat of Administration and Management (SEAD)
-#> P508025                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
-#> P179349                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
-#> P504543                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
-#> P509041                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
-#> P506142                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
-#> P505914                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
-#> P500614                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
-#> P506861                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
-#> P500168                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
-#> P506320                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
-#> P500431                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
-#> P508453                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
-#> P504897                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
-#> P503872                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
-#> P506340                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
-#> P507236                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
-#> P132620                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      Small Industries Development Bank of India, EESL Energy Efficiency Services Limited
-#> P122387                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
-#> P171257                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   Ministry of Environment - MMA, Funda��o Getulio Vargas
-#> P172497                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            Minist�rio do Meio Ambiente (MMA), Minist�rio da Agricultura, Pecu�ria e Abastecimento (MAPA)
-#> P164602                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        Ministry of Agriculture and  Livestock(MAPA), National Rural Learning Service, Ministry of Environment / Brazilian Forest Service
-#> P073882                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
-#> P177159                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      Jameel Poverty Action Lab (J-PAL) South Asia at the Institute for Financial Management and Research
-#> P152285                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  Ministry of Environment
-#> P009585                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
-#> P128921                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
-#> P158000                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                Funda��o Getulio Vargas, Ministry of Environment and Climate Change - MMA
-#> P160018                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      State Bank of India
-#>                                                                                  url
-#> P507508 https://projects.worldbank.org/en/projects-operations/project-detail/P507508
-#> P178253 https://projects.worldbank.org/en/projects-operations/project-detail/P178253
-#> P181463 https://projects.worldbank.org/en/projects-operations/project-detail/P181463
-#> P179935 https://projects.worldbank.org/en/projects-operations/project-detail/P179935
-#> P180429 https://projects.worldbank.org/en/projects-operations/project-detail/P180429
-#> P178254 https://projects.worldbank.org/en/projects-operations/project-detail/P178254
-#> P180555 https://projects.worldbank.org/en/projects-operations/project-detail/P180555
-#> P181501 https://projects.worldbank.org/en/projects-operations/project-detail/P181501
-#> P181195 https://projects.worldbank.org/en/projects-operations/project-detail/P181195
-#> P177965 https://projects.worldbank.org/en/projects-operations/project-detail/P177965
-#> P180430 https://projects.worldbank.org/en/projects-operations/project-detail/P180430
-#> P180462 https://projects.worldbank.org/en/projects-operations/project-detail/P180462
-#> P174825 https://projects.worldbank.org/en/projects-operations/project-detail/P174825
-#> P178557 https://projects.worldbank.org/en/projects-operations/project-detail/P178557
-#> P179357 https://projects.worldbank.org/en/projects-operations/project-detail/P179357
-#> P179749 https://projects.worldbank.org/en/projects-operations/project-detail/P179749
-#> P500524 https://projects.worldbank.org/en/projects-operations/project-detail/P500524
-#> P180497 https://projects.worldbank.org/en/projects-operations/project-detail/P180497
-#> P177474 https://projects.worldbank.org/en/projects-operations/project-detail/P177474
-#> P178581 https://projects.worldbank.org/en/projects-operations/project-detail/P178581
-#> P175723 https://projects.worldbank.org/en/projects-operations/project-detail/P175723
-#> P179189 https://projects.worldbank.org/en/projects-operations/project-detail/P179189
-#> P180634 https://projects.worldbank.org/en/projects-operations/project-detail/P180634
-#> P179365 https://projects.worldbank.org/en/projects-operations/project-detail/P179365
-#> P179182 https://projects.worldbank.org/en/projects-operations/project-detail/P179182
-#> P178993 https://projects.worldbank.org/en/projects-operations/project-detail/P178993
-#> P178567 https://projects.worldbank.org/en/projects-operations/project-detail/P178567
-#> P178663 https://projects.worldbank.org/en/projects-operations/project-detail/P178663
-#> P179046 https://projects.worldbank.org/en/projects-operations/project-detail/P179046
-#> P179088 https://projects.worldbank.org/en/projects-operations/project-detail/P179088
-#> P176733 https://projects.worldbank.org/en/projects-operations/project-detail/P176733
-#> P176032 https://projects.worldbank.org/en/projects-operations/project-detail/P176032
-#> P179249 https://projects.worldbank.org/en/projects-operations/project-detail/P179249
-#> P179337 https://projects.worldbank.org/en/projects-operations/project-detail/P179337
-#> P178418 https://projects.worldbank.org/en/projects-operations/project-detail/P178418
-#> P177917 https://projects.worldbank.org/en/projects-operations/project-detail/P177917
-#> P177980 https://projects.worldbank.org/en/projects-operations/project-detail/P177980
-#> P177876 https://projects.worldbank.org/en/projects-operations/project-detail/P177876
-#> P178072 https://projects.worldbank.org/en/projects-operations/project-detail/P178072
-#> P177671 https://projects.worldbank.org/en/projects-operations/project-detail/P177671
-#> P176982 https://projects.worldbank.org/en/projects-operations/project-detail/P176982
-#> P179039 https://projects.worldbank.org/en/projects-operations/project-detail/P179039
-#> P175811 https://projects.worldbank.org/en/projects-operations/project-detail/P175811
-#> P174593 https://projects.worldbank.org/en/projects-operations/project-detail/P174593
-#> P178888 https://projects.worldbank.org/en/projects-operations/project-detail/P178888
-#> P175728 https://projects.worldbank.org/en/projects-operations/project-detail/P175728
-#> P178252 https://projects.worldbank.org/en/projects-operations/project-detail/P178252
-#> P175261 https://projects.worldbank.org/en/projects-operations/project-detail/P175261
-#> P178339 https://projects.worldbank.org/en/projects-operations/project-detail/P178339
-#> P177070 https://projects.worldbank.org/en/projects-operations/project-detail/P177070
-#> P178146 https://projects.worldbank.org/en/projects-operations/project-detail/P178146
-#> P171750 https://projects.worldbank.org/en/projects-operations/project-detail/P171750
-#> P175676 https://projects.worldbank.org/en/projects-operations/project-detail/P175676
-#> P177915 https://projects.worldbank.org/en/projects-operations/project-detail/P177915
-#> P174798 https://projects.worldbank.org/en/projects-operations/project-detail/P174798
-#> P178729 https://projects.worldbank.org/en/projects-operations/project-detail/P178729
-#> P176404 https://projects.worldbank.org/en/projects-operations/project-detail/P176404
-#> P177856 https://projects.worldbank.org/en/projects-operations/project-detail/P177856
-#> P178563 https://projects.worldbank.org/en/projects-operations/project-detail/P178563
-#> P177632 https://projects.worldbank.org/en/projects-operations/project-detail/P177632
-#> P168634 https://projects.worldbank.org/en/projects-operations/project-detail/P168634
-#> P174067 https://projects.worldbank.org/en/projects-operations/project-detail/P174067
-#> P174564 https://projects.worldbank.org/en/projects-operations/project-detail/P174564
-#> P176107 https://projects.worldbank.org/en/projects-operations/project-detail/P176107
-#> P172187 https://projects.worldbank.org/en/projects-operations/project-detail/P172187
-#> P170590 https://projects.worldbank.org/en/projects-operations/project-detail/P170590
-#> P174732 https://projects.worldbank.org/en/projects-operations/project-detail/P174732
-#> P173589 https://projects.worldbank.org/en/projects-operations/project-detail/P173589
-#> P175221 https://projects.worldbank.org/en/projects-operations/project-detail/P175221
-#> P174778 https://projects.worldbank.org/en/projects-operations/project-detail/P174778
-#> P173978 https://projects.worldbank.org/en/projects-operations/project-detail/P173978
-#> P172226 https://projects.worldbank.org/en/projects-operations/project-detail/P172226
-#> P173958 https://projects.worldbank.org/en/projects-operations/project-detail/P173958
-#> P170811 https://projects.worldbank.org/en/projects-operations/project-detail/P170811
-#> P173704 https://projects.worldbank.org/en/projects-operations/project-detail/P173704
-#> P168633 https://projects.worldbank.org/en/projects-operations/project-detail/P168633
-#> P172213 https://projects.worldbank.org/en/projects-operations/project-detail/P172213
-#> P170873 https://projects.worldbank.org/en/projects-operations/project-detail/P170873
-#> P170645 https://projects.worldbank.org/en/projects-operations/project-detail/P170645
-#> P166020 https://projects.worldbank.org/en/projects-operations/project-detail/P166020
-#> P168097 https://projects.worldbank.org/en/projects-operations/project-detail/P168097
-#> P172605 https://projects.worldbank.org/en/projects-operations/project-detail/P172605
-#> P169111 https://projects.worldbank.org/en/projects-operations/project-detail/P169111
-#> P174312 https://projects.worldbank.org/en/projects-operations/project-detail/P174312
-#> P166868 https://projects.worldbank.org/en/projects-operations/project-detail/P166868
-#> P170850 https://projects.worldbank.org/en/projects-operations/project-detail/P170850
-#> P168590 https://projects.worldbank.org/en/projects-operations/project-detail/P168590
-#> P169140 https://projects.worldbank.org/en/projects-operations/project-detail/P169140
-#> P167350 https://projects.worldbank.org/en/projects-operations/project-detail/P167350
-#> P163328 https://projects.worldbank.org/en/projects-operations/project-detail/P163328
-#> P170682 https://projects.worldbank.org/en/projects-operations/project-detail/P170682
-#> P169134 https://projects.worldbank.org/en/projects-operations/project-detail/P169134
-#> P165129 https://projects.worldbank.org/en/projects-operations/project-detail/P165129
-#> P168310 https://projects.worldbank.org/en/projects-operations/project-detail/P168310
-#> P157929 https://projects.worldbank.org/en/projects-operations/project-detail/P157929
-#> P162679 https://projects.worldbank.org/en/projects-operations/project-detail/P162679
-#> P163533 https://projects.worldbank.org/en/projects-operations/project-detail/P163533
-#> P165055 https://projects.worldbank.org/en/projects-operations/project-detail/P165055
-#> P167455 https://projects.worldbank.org/en/projects-operations/project-detail/P167455
-#> P167581 https://projects.worldbank.org/en/projects-operations/project-detail/P167581
-#> P160379 https://projects.worldbank.org/en/projects-operations/project-detail/P160379
-#> P157141 https://projects.worldbank.org/en/projects-operations/project-detail/P157141
-#> P167523 https://projects.worldbank.org/en/projects-operations/project-detail/P167523
-#> P166923 https://projects.worldbank.org/en/projects-operations/project-detail/P166923
-#> P165683 https://projects.worldbank.org/en/projects-operations/project-detail/P165683
-#> P166578 https://projects.worldbank.org/en/projects-operations/project-detail/P166578
-#> P165695 https://projects.worldbank.org/en/projects-operations/project-detail/P165695
-#> P158502 https://projects.worldbank.org/en/projects-operations/project-detail/P158502
-#> P160463 https://projects.worldbank.org/en/projects-operations/project-detail/P160463
-#> P162086 https://projects.worldbank.org/en/projects-operations/project-detail/P162086
-#> P158119 https://projects.worldbank.org/en/projects-operations/project-detail/P158119
-#> P156869 https://projects.worldbank.org/en/projects-operations/project-detail/P156869
-#> P158146 https://projects.worldbank.org/en/projects-operations/project-detail/P158146
-#> P163868 https://projects.worldbank.org/en/projects-operations/project-detail/P163868
-#> P158522 https://projects.worldbank.org/en/projects-operations/project-detail/P158522
-#> P157702 https://projects.worldbank.org/en/projects-operations/project-detail/P157702
-#> P147158 https://projects.worldbank.org/en/projects-operations/project-detail/P147158
-#> P155617 https://projects.worldbank.org/en/projects-operations/project-detail/P155617
-#> P156241 https://projects.worldbank.org/en/projects-operations/project-detail/P156241
-#> P153012 https://projects.worldbank.org/en/projects-operations/project-detail/P153012
-#> P148775 https://projects.worldbank.org/en/projects-operations/project-detail/P148775
-#> P155303 https://projects.worldbank.org/en/projects-operations/project-detail/P155303
-#> P152698 https://projects.worldbank.org/en/projects-operations/project-detail/P152698
-#> P148531 https://projects.worldbank.org/en/projects-operations/project-detail/P148531
-#> P155007 https://projects.worldbank.org/en/projects-operations/project-detail/P155007
-#> P130544 https://projects.worldbank.org/en/projects-operations/project-detail/P130544
-#> P127725 https://projects.worldbank.org/en/projects-operations/project-detail/P127725
-#> P154990 https://projects.worldbank.org/en/projects-operations/project-detail/P154990
-#> P096124 https://projects.worldbank.org/en/projects-operations/project-detail/P096124
-#> P039027 https://projects.worldbank.org/en/projects-operations/project-detail/P039027
-#> P108190 https://projects.worldbank.org/en/projects-operations/project-detail/P108190
-#> P505866 https://projects.worldbank.org/en/projects-operations/project-detail/P505866
-#> P507322 https://projects.worldbank.org/en/projects-operations/project-detail/P507322
-#> P500380 https://projects.worldbank.org/en/projects-operations/project-detail/P500380
-#> P502493 https://projects.worldbank.org/en/projects-operations/project-detail/P502493
-#> P110539 https://projects.worldbank.org/en/projects-operations/project-detail/P110539
-#> P500469 https://projects.worldbank.org/en/projects-operations/project-detail/P500469
-#> P501071 https://projects.worldbank.org/en/projects-operations/project-detail/P501071
-#> P105370 https://projects.worldbank.org/en/projects-operations/project-detail/P105370
-#> P181511 https://projects.worldbank.org/en/projects-operations/project-detail/P181511
-#> P500252 https://projects.worldbank.org/en/projects-operations/project-detail/P500252
-#> P508840 https://projects.worldbank.org/en/projects-operations/project-detail/P508840
-#> P506955 https://projects.worldbank.org/en/projects-operations/project-detail/P506955
-#> P504126 https://projects.worldbank.org/en/projects-operations/project-detail/P504126
-#> P507066 https://projects.worldbank.org/en/projects-operations/project-detail/P507066
-#> P508221 https://projects.worldbank.org/en/projects-operations/project-detail/P508221
-#> P507029 https://projects.worldbank.org/en/projects-operations/project-detail/P507029
-#> P508202 https://projects.worldbank.org/en/projects-operations/project-detail/P508202
-#> P508363 https://projects.worldbank.org/en/projects-operations/project-detail/P508363
-#> P180716 https://projects.worldbank.org/en/projects-operations/project-detail/P180716
-#> P504276 https://projects.worldbank.org/en/projects-operations/project-detail/P504276
-#> P500570 https://projects.worldbank.org/en/projects-operations/project-detail/P500570
-#> P507910 https://projects.worldbank.org/en/projects-operations/project-detail/P507910
-#> P504899 https://projects.worldbank.org/en/projects-operations/project-detail/P504899
-#> P500501 https://projects.worldbank.org/en/projects-operations/project-detail/P500501
-#> P181020 https://projects.worldbank.org/en/projects-operations/project-detail/P181020
-#> P114896 https://projects.worldbank.org/en/projects-operations/project-detail/P114896
-#> P502491 https://projects.worldbank.org/en/projects-operations/project-detail/P502491
-#> P504253 https://projects.worldbank.org/en/projects-operations/project-detail/P504253
-#> P181524 https://projects.worldbank.org/en/projects-operations/project-detail/P181524
-#> P181244 https://projects.worldbank.org/en/projects-operations/project-detail/P181244
-#> P502499 https://projects.worldbank.org/en/projects-operations/project-detail/P502499
-#> P500151 https://projects.worldbank.org/en/projects-operations/project-detail/P500151
-#> P508719 https://projects.worldbank.org/en/projects-operations/project-detail/P508719
-#> P505563 https://projects.worldbank.org/en/projects-operations/project-detail/P505563
-#> P507628 https://projects.worldbank.org/en/projects-operations/project-detail/P507628
-#> P180699 https://projects.worldbank.org/en/projects-operations/project-detail/P180699
-#> P507340 https://projects.worldbank.org/en/projects-operations/project-detail/P507340
-#> P114890 https://projects.worldbank.org/en/projects-operations/project-detail/P114890
-#> P178053 https://projects.worldbank.org/en/projects-operations/project-detail/P178053
-#> P500564 https://projects.worldbank.org/en/projects-operations/project-detail/P500564
-#> P505590 https://projects.worldbank.org/en/projects-operations/project-detail/P505590
-#> P180932 https://projects.worldbank.org/en/projects-operations/project-detail/P180932
-#> P505235 https://projects.worldbank.org/en/projects-operations/project-detail/P505235
-#> P507629 https://projects.worldbank.org/en/projects-operations/project-detail/P507629
-#> P506976 https://projects.worldbank.org/en/projects-operations/project-detail/P506976
-#> P181767 https://projects.worldbank.org/en/projects-operations/project-detail/P181767
-#> P506329 https://projects.worldbank.org/en/projects-operations/project-detail/P506329
-#> P508489 https://projects.worldbank.org/en/projects-operations/project-detail/P508489
-#> P506272 https://projects.worldbank.org/en/projects-operations/project-detail/P506272
-#> P506321 https://projects.worldbank.org/en/projects-operations/project-detail/P506321
-#> P173090 https://projects.worldbank.org/en/projects-operations/project-detail/P173090
-#> P505177 https://projects.worldbank.org/en/projects-operations/project-detail/P505177
-#> P181608 https://projects.worldbank.org/en/projects-operations/project-detail/P181608
-#> P508025 https://projects.worldbank.org/en/projects-operations/project-detail/P508025
-#> P179349 https://projects.worldbank.org/en/projects-operations/project-detail/P179349
-#> P504543 https://projects.worldbank.org/en/projects-operations/project-detail/P504543
-#> P509041 https://projects.worldbank.org/en/projects-operations/project-detail/P509041
-#> P506142 https://projects.worldbank.org/en/projects-operations/project-detail/P506142
-#> P505914 https://projects.worldbank.org/en/projects-operations/project-detail/P505914
-#> P500614 https://projects.worldbank.org/en/projects-operations/project-detail/P500614
-#> P506861 https://projects.worldbank.org/en/projects-operations/project-detail/P506861
-#> P500168 https://projects.worldbank.org/en/projects-operations/project-detail/P500168
-#> P506320 https://projects.worldbank.org/en/projects-operations/project-detail/P506320
-#> P500431 https://projects.worldbank.org/en/projects-operations/project-detail/P500431
-#> P508453 https://projects.worldbank.org/en/projects-operations/project-detail/P508453
-#> P504897 https://projects.worldbank.org/en/projects-operations/project-detail/P504897
-#> P503872 https://projects.worldbank.org/en/projects-operations/project-detail/P503872
-#> P506340 https://projects.worldbank.org/en/projects-operations/project-detail/P506340
-#> P507236 https://projects.worldbank.org/en/projects-operations/project-detail/P507236
-#> P132620 https://projects.worldbank.org/en/projects-operations/project-detail/P132620
-#> P122387 https://projects.worldbank.org/en/projects-operations/project-detail/P122387
-#> P171257 https://projects.worldbank.org/en/projects-operations/project-detail/P171257
-#> P172497 https://projects.worldbank.org/en/projects-operations/project-detail/P172497
-#> P164602 https://projects.worldbank.org/en/projects-operations/project-detail/P164602
-#> P073882 https://projects.worldbank.org/en/projects-operations/project-detail/P073882
-#> P177159 https://projects.worldbank.org/en/projects-operations/project-detail/P177159
-#> P152285 https://projects.worldbank.org/en/projects-operations/project-detail/P152285
-#> P009585 https://projects.worldbank.org/en/projects-operations/project-detail/P009585
-#> P128921 https://projects.worldbank.org/en/projects-operations/project-detail/P128921
-#> P158000 https://projects.worldbank.org/en/projects-operations/project-detail/P158000
-#> P160018 https://projects.worldbank.org/en/projects-operations/project-detail/P160018
+#>          id
+#> 1   P507508
+#> 2   P178253
+#> 3   P181463
+#> 4   P179935
+#> 5   P180429
+#> 6   P178254
+#> 7   P180555
+#> 8   P181501
+#> 9   P181195
+#> 10  P177965
+#> 11  P180462
+#> 12  P180430
+#> 13  P174825
+#> 14  P178557
+#> 15  P179357
+#> 16  P179749
+#> 17  P500524
+#> 18  P180497
+#> 19  P177474
+#> 20  P178581
+#> 21  P175723
+#> 22  P180634
+#> 23  P179189
+#> 24  P179365
+#> 25  P179182
+#> 26  P178993
+#> 27  P178567
+#> 28  P178663
+#> 29  P179046
+#> 30  P179088
+#> 31  P176733
+#> 32  P176032
+#> 33  P178418
+#> 34  P179337
+#> 35  P179249
+#> 36  P177917
+#> 37  P177980
+#> 38  P177876
+#> 39  P178072
+#> 40  P177671
+#> 41  P176982
+#> 42  P179039
+#> 43  P175811
+#> 44  P174593
+#> 45  P178888
+#> 46  P175728
+#> 47  P178252
+#> 48  P175261
+#> 49  P178339
+#> 50  P177070
+#> 51  P171750
+#> 52  P178146
+#> 53  P175676
+#> 54  P177915
+#> 55  P174798
+#> 56  P178729
+#> 57  P176404
+#> 58  P177856
+#> 59  P178563
+#> 60  P177632
+#> 61  P168634
+#> 62  P174067
+#> 63  P174564
+#> 64  P176107
+#> 65  P172187
+#> 66  P170590
+#> 67  P174732
+#> 68  P175221
+#> 69  P173589
+#> 70  P174778
+#> 71  P173978
+#> 72  P172226
+#> 73  P173958
+#> 74  P170811
+#> 75  P173704
+#> 76  P168633
+#> 77  P170645
+#> 78  P172213
+#> 79  P170873
+#> 80  P166020
+#> 81  P168097
+#> 82  P172605
+#> 83  P174312
+#> 84  P169111
+#> 85  P166868
+#> 86  P170850
+#> 87  P168590
+#> 88  P169140
+#> 89  P163328
+#> 90  P167350
+#> 91  P170682
+#> 92  P169134
+#> 93  P165129
+#> 94  P168310
+#> 95  P157929
+#> 96  P162679
+#> 97  P163533
+#> 98  P165055
+#> 99  P167455
+#> 100 P167581
+#> 101 P160379
+#> 102 P157141
+#> 103 P167523
+#> 104 P166923
+#> 105 P165683
+#> 106 P166578
+#> 107 P165695
+#> 108 P158502
+#> 109 P160463
+#> 110 P162086
+#> 111 P158119
+#> 112 P156869
+#> 113 P158146
+#> 114 P163868
+#> 115 P158522
+#> 116 P157702
+#> 117 P147158
+#> 118 P155617
+#> 119 P156241
+#> 120 P153012
+#> 121 P155303
+#> 122 P148775
+#> 123 P152698
+#> 124 P148531
+#> 125 P155007
+#> 126 P130544
+#> 127 P127725
+#> 128 P154990
+#> 129 P096124
+#> 130 P039027
+#> 131 P507322
+#> 132 P108190
+#> 133 P505866
+#> 134 P500380
+#> 135 P502493
+#> 136 P110539
+#> 137 P181511
+#> 138 P500469
+#> 139 P501071
+#> 140 P105370
+#> 141 P180699
+#> 142 P507340
+#> 143 P114890
+#> 144 P180716
+#> 145 P504276
+#> 146 P500570
+#> 147 P173090
+#> 148 P505177
+#> 149 P506272
+#> 150 P506321
+#> 151 P181608
+#> 152 P508025
+#> 153 P181244
+#> 154 P502499
+#> 155 P500151
+#> 156 P508719
+#> 157 P505563
+#> 158 P507628
+#> 159 P178053
+#> 160 P500564
+#> 161 P505590
+#> 162 P180932
+#> 163 P505235
+#> 164 P507629
+#> 165 P506976
+#> 166 P181767
+#> 167 P506329
+#> 168 P508489
+#> 169 P500168
+#> 170 P506320
+#> 171 P500431
+#> 172 P508453
+#> 173 P504897
+#> 174 P503872
+#> 175 P506340
+#> 176 P507236
+#> 177 P179349
+#> 178 P504543
+#> 179 P509041
+#> 180 P506142
+#> 181 P505914
+#> 182 P500614
+#> 183 P506861
+#> 184 P507910
+#> 185 P504899
+#> 186 P500501
+#> 187 P181020
+#> 188 P500252
+#> 189 P506955
+#> 190 P508840
+#> 191 P504126
+#> 192 P507066
+#> 193 P508221
+#> 194 P507029
+#> 195 P508202
+#> 196 P508363
+#> 197 P114896
+#> 198 P502491
+#> 199 P504253
+#> 200 P181524
+#> 201 P073882
+#> 202 P177159
+#> 203 P132620
+#> 204 P122387
+#> 205 P128921
+#> 206 P158000
+#> 207 P160018
+#> 208 P171257
+#> 209 P172497
+#> 210 P164602
+#> 211 P009585
+#> 212 P152285
+#>                                                                                                        project_name
+#> 1                                                                    Amaravati Integrated Urban Development Program
+#> 2                             Uttar Pradesh Agriculture Growth and Rural Enterprise Ecosystem Strengthening Project
+#> 3                   Maharashtra Strengthening Institutional Capabilities in Districts for Enabling Growth Operation
+#> 4                                                    Enhancing Landscape and Ecosystem Management (ELEMENT) Project
+#> 5                                                                       Bahia Sustainable Rural Development Project
+#> 6                                           Kerala Climate Resilient Agri- Value Chain Modernization (KERA) Project
+#> 7                              Brazil Proactive, Safe, and Resilient Road Asset Management Program - State of Bahia
+#> 8                   BR Enhancing Prosperity and Sustainability in the State of Sergipe Development Policy Financing
+#> 9                                                Second Low-Carbon Energy Programmatic Development Policy Financing
+#> 10  Development of Applied Knowledge and Skills for Human Development in Maharashtra  - (DAKSH) Maharashtra Program
+#> 11                                                                      Espírito Santo Digital Acceleration Project
+#> 12                                                   Brazil: Pernambuco Rural Water and Sanitation Project (PROSAR)
+#> 13                                         West Bengal Boosting Logistics Efficiency and Trade Facilitation Program
+#> 14                                          Integrated Sustainable Mobility Project in the Foz do Rio Itajaí Region
+#> 15                                                           Uttarakhand Climate Responsive Rainfed Farming Project
+#> 16                                                         Uttarakhand Disaster Preparedness and Resilience Project
+#> 17                                                       Sustainable Human Development Project in the State of Pará
+#> 18                                                            BR State of Ceará Sustainable Development Policy Loan
+#> 19                                                           Piauí Pillars of Growth and Social Inclusion Project 2
+#> 20                                                                            Assam Resilient Rural Bridges Program
+#> 21                                                            Mato Grosso Sustainable Development of Family Farming
+#> 22                             Sikkim: Integrated Service Provision and Innovation for Reviving Economies Operation
+#> 23                                                           Tamil Nadu Climate Resilient Urban Development Program
+#> 24                                           Brazil: Support to New Bolsa Familia Conditional Cash Transfer Program
+#> 25                                         Rio de Janeiro Fiscal Management and Sustainable Development Policy Loan
+#> 26                                               Mato Grosso Resilient, Inclusive, and Sustainable Learning Project
+#> 27                                                           Piauí Health and Social Protection Development Project
+#> 28                                                             Progestão Piauí: Public Sector Management Efficiency
+#> 29                                                              Progestão Acre: Public Sector Management Efficiency
+#> 30                                                         Progestão Tocantins: Public Sector Management Efficiency
+#> 31                                                                 IN: Manipur Infotech eNabled Development Project
+#> 32                                                                Himachal Pradesh Power Sector Development Program
+#> 33                                                       Tripura Rural Economic Growth and Service Delivery Project
+#> 34                 Assam State Secondary Healthcare Initiative for Service Delivery Transformation (ASSIST) Project
+#> 35                                                       Chhattisgarh: Accelerated Learning for a Knowledge-Economy
+#> 36                                      Multidisciplinary Education and Research Improvement in Technical Education
+#> 37                                                                Additional Financing for Resilient Kerala Program
+#> 38                                       West Bengal Accelerated Development of Minor Irrigation Project - Phase II
+#> 39                                  Green, Resilient and Inclusive Regeneration of the Central Area of Porto Alegre
+#> 40                                                     Animal Health System Support for One Health Program (AHSSOH)
+#> 41                                                         Brazil: Espirito Santo Water Security Management Project
+#> 42                                                                 Karnataka Sustainable Rural Water Supply Program
+#> 43                                                             Odisha State Capability and Resilient Growth Program
+#> 44                                                                  Assam Integrated River Basin Management Program
+#> 45                                                                                   Brazil Climate Finance Project
+#> 46                                          Gujarat Resilient Cities Partnership: Ahmedabad City Resilience Project
+#> 47                              Systems Reform Endeavours for Transformed Health Achievement in Gujarat (SRESTHA-G)
+#> 48                                                             Punjab: Building Fiscal and Institutional Resilience
+#> 49                                                       Progestão Mato Grosso: Public Sector Management Efficiency
+#> 50                                                           Progestão Alagoas: Public Sector Management Efficiency
+#> 51                                               Additional Financing: Rooftop Solar Program for Residential sector
+#> 52                                                                 India's Enhanced Health Service Delivery Program
+#> 53                              PHSPP: Transforming India’s Public Health Systems for Pandemic Preparedness Program
+#> 54                                     GUJARAT OUTCOMES FOR ACCELERATED LEARNING (GOAL) - ADDITIONAL FINANCING (AF)
+#> 55                                                                              Fisheries Sector Prosperity Project
+#> 56                                                Rio de Janeiro Adjustment and Sustainable Development Policy Loan
+#> 57                   RIGHTS: Inclusion, Accessibility and Opportunities for Persons with Disabilities in Tamil Nadu
+#> 58                                                                                           Rail Logistics Project
+#> 59                                                      RECOVERING LEARNING LOSSES FROM COVID-19 PANDEMIC IN BRAZIL
+#> 60                                                                       BR State of Goias Sustainable Recovery DPF
+#> 61                                 Parana Public Sector Modernization and Innovation for Service Delivery Operation
+#> 62                                                                    Public Service Capability Enhancement Project
+#> 63                                  West Bengal Building State Capability for Inclusive Social Protection Operation
+#> 64                                        Additional Financing - Karnataka Urban Water Supply Modernization Project
+#> 65                               Rejuvenating Watersheds for Agricultural Resilience through Innovative Development
+#> 66                                                  West Bengal Electricity Distribution Grid Modernization Project
+#> 67                           Shimla-Himachal Pradesh Water Supply and Sewerage Services Improvement Program (PforR)
+#> 68                                                     Chennai City Partnership: Sustainable Urban Services Program
+#> 69                                                                   Meghalaya Health Systems Strengthening Project
+#> 70                                                                                     The Resilient Kerala Program
+#> 71                                                                      Supporting Andhra's Learning Transformation
+#> 72                                                                        Raising and Accelerating MSME Performance
+#> 73                                                                     Mizoram Health Systems Strengthening Project
+#> 74                                                                    Punjab Municipal Services Improvement Project
+#> 75                                                                 Gujarat Outcomes for Accelerated Learning (GOAL)
+#> 76                                                                            Kerala Solid Waste Management Project
+#> 77                                          Chhattisgarh Inclusive Rural and Accelerated Agriculture Growth Project
+#> 78                                                             Nagaland: Enhancing Classroom Teaching and Resources
+#> 79                             Second Dam Rehabilitation and Improvement Project - Additional Financing (DRIP-2 AF)
+#> 80                                    West Bengal Inland Water Transport, Logistics and Spatial Development Project
+#> 81                                                                           Meghalaya Integrated Transport Project
+#> 82                                                         Salvador Social Multi-Sector Service Delivery Project II
+#> 83                                                                      Second National Ganga River Basin Guarantee
+#> 84                                                                        Second National Ganga River Basin Project
+#> 85                                                          Strengthening Teaching-Learning  And Results for States
+#> 86                                                              Energy and Mineral Sectors Strengthening Project II
+#> 87                                                               Tamil Nadu Housing and Habitat Development Project
+#> 88                                                                  São Paulo Aricanduva Bus Rapid Transit Corridor
+#> 89                                                              Himachal Pradesh State Roads Transformation Project
+#> 90                                                                         Green National Highways Corridor Project
+#> 91                                                        Linha de Crédito para Resiliência Urbana no Sul do Brasil
+#> 92                                Improving Mobility and Urban Inclusion in the Amazonas Corridor in Belo Horizonte
+#> 93      Integrated Project for Source Sustainability and Climate Resilient Rain-fed Agriculture in Himachal Pradesh
+#> 94                                             State of Maharashtra's Agribusiness and Rural Transformation Project
+#> 95                                                                             Assam Inland Water Transport Project
+#> 96                                                        West Bengal Major Irrigation and Flood Management Project
+#> 97                                           Odisha Integrated Irrigation Project for Climate Resilient Agriculture
+#> 98                                                                              Ceará Water Security and Governance
+#> 99                                                 Ceara Rural Sustainable Development and Competitiveness Phase II
+#> 100                                                             Andhra Pradesh Health Systems Strengthening Project
+#> 101                                                               Innovation in Solar Power and Hybrid Technologies
+#> 102                                                                 Rajasthan State Highways Development Program II
+#> 103                                                                     Program Towards Elimination of Tuberculosis
+#> 104                                                   Uttarakhand Public Financial Management Strengthening Project
+#> 105                                             Paraiba Improving Water Resources Management and Services Provision
+#> 106                                             Chhattisgarh Public Financial Management and Accountability Program
+#> 107            SABESP - IMPROVING WATER SERVICE ACCESS AND SECURITY IN THE METROPOLITAN REGION OF SÃO PAULO PROJECT
+#> 108                                                                         Jharkhand Municipal Development Project
+#> 109                                                   AP Integrated Irrigation & Agriculture Transformation Project
+#> 110                                                                      Jharkhand Power System Improvement Project
+#> 111                                           Atal Bhujal Yojana (Abhy)-National Groundwater Management Improvement
+#> 112                                                          Strengthening Public Financial Management in Rajasthan
+#> 113                                                           Uttarakhand Water Supply Program for Peri Urban Areas
+#> 114                                                           Support to Upper Secondary Reform in Brazil Operation
+#> 115                                                          Tamil Nadu Irrigated Agriculture Modernization Project
+#> 116                                                                 Tamil Nadu Rural Transformation Project (TNRTP)
+#> 117                                                                           Paraiba Sustainable Rural Development
+#> 118                                                             Assam Agribusiness and Rural Transformation Project
+#> 119                                                                             Innovate in India for Inclusiveness
+#> 120                                                                 Fortaleza Sustainable Urban Development Project
+#> 121                                                                        Madhya Pradesh Urban Development Project
+#> 122                                     Capacity Augmentation of the National Waterway- 1 (JAL MARG VIKAS)  Project
+#> 123                                                                                      National Hydrology Project
+#> 124                                                                  Uttarakhand Health Systems Development Project
+#> 125                                                                            Grid-Connected Rooftop Solar Program
+#> 126                                                           IN Karnataka Urban Water Supply Modernization Project
+#> 127                                                                            Bihar Kosi Basin Development Project
+#> 128                                                                          Jhelum and Tawi Flood Recovery Project
+#> 129                                                                      Vishnugad Pipalkoti Hydro Electric Project
+#> 130                                                               RF Science Centers - Emergency Assistance Project
+#> 131                                                 Brazil Enhancing Productivity, Sustainability and Inclusion DPF
+#> 132                                                            Subterranean Arsenic Removal: Experiment to Delivery
+#> 133                                                                                                       BR PE DPL
+#> 134  India Supporting Socioeconomic Development and Livelihood Security among Particularly Vulnerable Tribal Groups
+#> 135                                             Rio Grande do Norte: Sustainable Development and Governance Project
+#> 136                                                                    India: FaL-G High Capacity Automation Plants
+#> 137                                                   Expanding Clean Hydrogen in Brazil - Ceara Green Hydrogen Hub
+#> 138  Brazil Proactive, Safe and Resilient Road Asset Management Program - State of Espirito Santo Project - Phase 2
+#> 139                                                          Rajasthan Highway Modernization Project (RHMP) Phase-2
+#> 140                                                                          Allian Duhangan Hydro Electric Project
+#> 141                                                    Tamil Nadu Women Employment and Safety (TN WESAFE) Operation
+#> 142                                                               Himachal Disaster Recovery and Resilience Project
+#> 143                                                         Combining income and forest protection: açaí production
+#> 144                                                                               Promoting Green Hydrogen in India
+#> 145                                                                                                 SP Metro Line 2
+#> 146                                                                  Sergipe Efficient Digital Acceleration project
+#> 147                                         Second Amazona Fiscal and Environmental Sustainability Programmatic DPF
+#> 148                                                            India - Enhancing Innovation among ICMR Institutions
+#> 149                                                                 Karnataka Water Security and Resilience Program
+#> 150                                                                                                   Bahia SIP DPL
+#> 151                                                      Progestão Program - MPA Phase 1 State of Rio Grande do Sul
+#> 152                                                                                                             SS3
+#> 153                                                                  India-West Bengal Health System Reform Program
+#> 154                                                                            Surat Resilience Enhancement Project
+#> 155                                                                                                   PForR Project
+#> 156                                                                                                           AHEAD
+#> 157                                                                                                        PoCRA-II
+#> 158                                                             Energy Transition of the Northeast Region of Brazil
+#> 159                                                                      Uttar Pradesh Clean Air Management Program
+#> 160                                                      Punjab Outcomes-Acceleration In School Education Operation
+#> 161                                                                                                    MS Pro-Roads
+#> 162                                                                Strengthening Coastal Resilience and the Economy
+#> 163                BR State of Rio Grande do Sul Sustainable Recovery and Climate Resilient Development Policy Loan
+#> 164                                                Brazil: Decarbonization of Energy-Intensive Value Chains Project
+#> 165                                                                        West Bengal Health System Reform Program
+#> 166                                                        Hybrid PPP - São Paulo Commuter Rail Lines 11, 12 and 13
+#> 167                                                    Private-Delivered Metro Sao Paulo Line 4 Phase III Extension
+#> 168                                                                                                         SRH P4R
+#> 169                                                                                                     IPF Regular
+#> 170                                                         Accelerating the Energy Transition in the Amazon (AETA)
+#> 171                                                     Agroecology and Sustainable Rural Development in Pernambuco
+#> 172                                                                                                            MEGA
+#> 173                                                                  Bahia Urban Socio-Productive Inclusion Project
+#> 174                                                                       Kerala Health Systems Improvement Program
+#> 175                                                                                                            MRDP
+#> 176                                                                   Assam Governance and Service Delivery Program
+#> 177                                        Electric Vehicle Operations and Lending for a Vibrant Ecosystem (EVOLVE)
+#> 178                                                    Brazil Electromobility and Energy Transition Finance Project
+#> 179                                                                                                 Tocantins PRIDP
+#> 180                                      Santa Catarina Rural Development Project for Sustainability and Innovation
+#> 181                                                          IN: Digital Empowerment and Services to Harness Growth
+#> 182                                                         BR State of Alagoas Sustainable Development Policy Loan
+#> 183                                                                                                  AM Sustainable
+#> 184                                                                        Skills: National ITI Upgradation Program
+#> 185                                Strengthening Social Assistance Delivery System in the Municipality of São Paulo
+#> 186                                        Electrification and Improvement of the São Paulo Urban Transport Program
+#> 187                                                                      Gurugram Metro Huda to Cyber City, Haryana
+#> 188                                                                                                             IPF
+#> 189                                                                                                    PPP SP Rails
+#> 190                                                                              Institutions MPA – Phase 1 (Assam)
+#> 191                                                                                       Brazil: ASL Xingu project
+#> 192                   Meghalaya Multisectoral Project for Adolescent Wellbeing, Empowerment and Resilience (MPOWER)
+#> 193                                                                                                   SC Resilience
+#> 194                                  Brazil Electromobility Multiphase Programmatic Approach – MPA Phase 2 Salvador
+#> 195                        Amazon and Cerrado Bioeconomy, Forest Restoration, and Climate-Smart Agriculture Project
+#> 196                                                                                                      BR Digital
+#> 197                                                                       Collective Land Ownership Model for Women
+#> 198                                                           Haryana Clean Air and Sustainable Development Program
+#> 199 Brazil Proactive, Safe, and Resilient Road Asset Management Program - State of Santa Catarina Project - Phase 3
+#> 200                              Second Dam Rehabilitation and Improvement Project - Additional Financing (DRIP -3)
+#> 201                                                                  RF 2nd Amazon Fire Prevention and Mobilization
+#> 202                                                       Monitoring and Evaluation capacity building in South Asia
+#> 203                                                              Partial Risk Sharing Facility in Energy Efficiency
+#> 204                                                                     DFID TF III Supervision and Fiduciary Costs
+#> 205                                                              Partial Risk Sharing Facility in Energy Efficiency
+#> 206                                                                           Amazon Sustainable Landscapes Project
+#> 207                                                   Additional Financing for Grid-Connected Rooftop Solar Program
+#> 208                                                            Brazil Amazon Sustainable Landscapes Project Phase 2
+#> 209                                                          Sustainable Multiple Use Landscape Consortia in Brazil
+#> 210                                                    Integrated Landscape Management in the Cerrado Biome Project
+#> 211                                                                                                           ODS I
+#> 212                                                                     Brazil Investment Plan Coordination Project
+#>       status approval_date closing_date country_code country
+#> 1     Active    2024-12-19         <NA>           IN   India
+#> 2     Active    2024-12-12   2030-09-30           IN   India
+#> 3     Active    2024-12-03   2030-03-31           IN   India
+#> 4     Active    2024-11-25   2030-06-30           IN   India
+#> 5     Active    2024-11-07   2030-10-30           BR  Brazil
+#> 6     Active    2024-10-31   2029-11-30           IN   India
+#> 7     Active    2024-09-10   2032-11-30           BR  Brazil
+#> 8     Active    2024-08-27   2026-12-31           BR  Brazil
+#> 9     Active    2024-06-28   2026-06-30           IN   India
+#> 10    Active    2024-05-22   2029-03-30           IN   India
+#> 11    Active    2024-05-17   2029-06-30           BR  Brazil
+#> 12    Active    2024-05-17   2032-07-14           BR  Brazil
+#> 13    Active    2024-04-24   2028-06-30           IN   India
+#> 14    Active    2024-04-12   2031-11-30           BR  Brazil
+#> 15    Active    2024-04-01   2030-03-31           IN   India
+#> 16    Active    2024-04-01   2029-06-30           IN   India
+#> 17    Active    2024-03-28   2029-04-30           BR  Brazil
+#> 18    Active    2024-03-28   2025-12-31           BR  Brazil
+#> 19    Active    2024-03-14   2029-07-31           BR  Brazil
+#> 20    Active    2024-03-01   2030-06-28           IN   India
+#> 21    Active    2024-02-05   2030-05-15           BR  Brazil
+#> 22    Active    2023-12-21   2029-04-30           IN   India
+#> 23    Active    2023-12-21   2030-12-31           IN   India
+#> 24    Active    2023-12-06   2026-04-30           BR  Brazil
+#> 25    Active    2023-11-16   2024-12-31           BR  Brazil
+#> 26    Active    2023-10-26   2028-12-31           BR  Brazil
+#> 27    Active    2023-10-05   2029-06-30           BR  Brazil
+#> 28    Active    2023-10-03   2029-06-29           BR  Brazil
+#> 29    Active    2023-07-24   2028-12-29           BR  Brazil
+#> 30    Active    2023-07-24   2028-12-29           BR  Brazil
+#> 31    Active    2023-07-06   2028-09-30           IN   India
+#> 32    Active    2023-06-27   2028-03-31           IN   India
+#> 33    Active    2023-06-26   2029-06-30           IN   India
+#> 34    Active    2023-06-26   2029-11-30           IN   India
+#> 35    Active    2023-06-26   2028-09-29           IN   India
+#> 36    Active    2023-06-23   2028-12-29           IN   India
+#> 37    Active    2023-06-16         <NA>           IN   India
+#> 38    Active    2023-06-09   2029-06-29           IN   India
+#> 39    Active    2023-06-07   2028-12-29           BR  Brazil
+#> 40    Active    2023-05-10   2027-11-30           IN   India
+#> 41    Active    2023-05-09   2029-06-30           BR  Brazil
+#> 42    Active    2023-03-28   2028-06-01           IN   India
+#> 43    Active    2023-03-28   2028-04-26           IN   India
+#> 44    Active    2023-03-24   2027-07-31           IN   India
+#> 45    Active    2022-12-22   2028-04-30           BR  Brazil
+#> 46    Active    2022-11-22   2028-12-31           IN   India
+#> 47    Active    2022-09-21   2028-03-31           IN   India
+#> 48    Active    2022-09-19   2027-06-30           IN   India
+#> 49    Active    2022-08-23   2028-06-30           BR  Brazil
+#> 50    Active    2022-07-21   2028-03-31           BR  Brazil
+#> 51    Active    2022-06-28         <NA>           IN   India
+#> 52    Active    2022-06-28   2027-06-30           IN   India
+#> 53    Active    2022-06-28   2027-12-31           IN   India
+#> 54    Active    2022-06-21         <NA>           IN   India
+#> 55    Active    2022-06-17   2027-06-30           IN   India
+#> 56    Active    2022-06-16   2024-12-31           BR  Brazil
+#> 57    Active    2022-06-14   2028-06-30           IN   India
+#> 58    Active    2022-06-10   2027-06-30           IN   India
+#> 59    Active    2022-05-12   2027-12-31           BR  Brazil
+#> 60    Active    2022-04-28   2024-12-31           BR  Brazil
+#> 61    Active    2022-04-28   2027-10-31           BR  Brazil
+#> 62    Active    2022-04-27   2027-03-31           IN   India
+#> 63    Active    2022-01-19   2028-08-31           IN   India
+#> 64    Active    2021-12-21         <NA>           IN   India
+#> 65    Active    2021-12-10   2026-06-30           IN   India
+#> 66    Active    2021-11-29   2026-11-30           IN   India
+#> 67    Active    2021-11-05   2026-12-31           IN   India
+#> 68    Active    2021-09-30   2026-12-31           IN   India
+#> 69    Active    2021-09-30   2027-03-31           IN   India
+#> 70    Active    2021-06-24   2028-06-30           IN   India
+#> 71    Active    2021-06-17   2026-12-31           IN   India
+#> 72    Active    2021-06-04   2026-09-30           IN   India
+#> 73    Active    2021-03-31   2026-03-31           IN   India
+#> 74    Active    2021-03-31   2026-09-30           IN   India
+#> 75    Active    2021-03-24   2027-09-30           IN   India
+#> 76    Active    2021-03-09   2027-06-30           IN   India
+#> 77    Active    2020-12-15   2026-07-31           IN   India
+#> 78    Active    2020-12-15   2026-06-30           IN   India
+#> 79    Active    2020-12-15   2027-12-31           IN   India
+#> 80    Active    2020-11-30   2026-03-31           IN   India
+#> 81    Active    2020-10-23   2026-10-31           IN   India
+#> 82    Active    2020-09-22   2025-12-30           BR  Brazil
+#> 83    Active    2020-06-25   2026-12-31           IN   India
+#> 84    Active    2020-06-25   2026-12-31           IN   India
+#> 85    Active    2020-06-24   2025-12-31           IN   India
+#> 86    Active    2020-05-22   2025-12-31           BR  Brazil
+#> 87    Active    2020-05-18   2025-06-30           IN   India
+#> 88    Active    2020-04-22   2026-06-30           BR  Brazil
+#> 89    Active    2020-03-27   2026-06-30           IN   India
+#> 90    Active    2020-03-27   2025-03-18           IN   India
+#> 91    Active    2020-03-24   2026-06-30           BR  Brazil
+#> 92    Active    2020-03-24   2028-09-30           BR  Brazil
+#> 93    Active    2020-02-18   2025-03-31           IN   India
+#> 94    Active    2019-12-17   2027-03-31           IN   India
+#> 95    Active    2019-12-13   2025-12-31           IN   India
+#> 96    Active    2019-12-10   2025-11-30           IN   India
+#> 97    Active    2019-09-30   2025-12-31           IN   India
+#> 98    Active    2019-08-08   2026-12-31           BR  Brazil
+#> 99    Active    2019-07-18   2025-12-31           BR  Brazil
+#> 100   Active    2019-05-15   2025-03-31           IN   India
+#> 101   Active    2019-03-29   2025-12-31           IN   India
+#> 102   Active    2019-03-29   2024-12-31           IN   India
+#> 103   Active    2019-03-29   2025-03-31           IN   India
+#> 104   Active    2019-03-07   2025-06-30           IN   India
+#> 105   Active    2019-02-28   2026-06-30           BR  Brazil
+#> 106   Active    2019-02-21   2025-03-31           IN   India
+#> 107   Active    2018-12-18   2026-06-16           BR  Brazil
+#> 108   Active    2018-12-12   2025-10-31           IN   India
+#> 109   Active    2018-10-23   2025-10-31           IN   India
+#> 110   Active    2018-10-01   2024-12-31           IN   India
+#> 111   Active    2018-06-05   2025-09-28           IN   India
+#> 112   Active    2018-05-01   2025-03-31           IN   India
+#> 113   Active    2018-01-04   2025-06-30           IN   India
+#> 114   Active    2017-12-14   2024-12-31           BR  Brazil
+#> 115   Active    2017-12-01   2025-06-02           IN   India
+#> 116   Active    2017-12-01   2025-06-30           IN   India
+#> 117   Active    2017-10-20   2025-06-15           BR  Brazil
+#> 118   Active    2017-08-31   2025-09-30           IN   India
+#> 119   Active    2017-05-31   2025-06-23           IN   India
+#> 120   Active    2017-04-28   2025-03-31           BR  Brazil
+#> 121   Active    2017-04-12   2024-12-30           IN   India
+#> 122   Active    2017-04-12   2025-12-24           IN   India
+#> 123   Active    2017-03-15   2025-03-31           IN   India
+#> 124   Active    2017-01-26   2024-12-31           IN   India
+#> 125   Active    2016-05-13   2027-11-30           IN   India
+#> 126   Active    2016-03-31   2026-06-30           IN   India
+#> 127   Active    2015-12-08   2025-03-27           IN   India
+#> 128   Active    2015-06-02   2024-12-31           IN   India
+#> 129   Active    2011-06-30   2024-12-31           IN   India
+#> 130   Active    1994-10-28         <NA>           BR  Brazil
+#> 131 Pipeline          <NA>         <NA>           BR  Brazil
+#> 132 Pipeline          <NA>   2008-12-31           IN   India
+#> 133 Pipeline          <NA>         <NA>           BR  Brazil
+#> 134 Pipeline          <NA>         <NA>           IN   India
+#> 135 Pipeline          <NA>         <NA>           BR  Brazil
+#> 136 Pipeline          <NA>         <NA>           IN   India
+#> 137 Pipeline          <NA>         <NA>           BR  Brazil
+#> 138 Pipeline          <NA>         <NA>           BR  Brazil
+#> 139 Pipeline          <NA>         <NA>           IN   India
+#> 140 Pipeline          <NA>   2018-05-04           IN   India
+#> 141 Pipeline          <NA>         <NA>           IN   India
+#> 142 Pipeline          <NA>         <NA>           IN   India
+#> 143 Pipeline          <NA>   2011-10-01           BR  Brazil
+#> 144 Pipeline          <NA>         <NA>           IN   India
+#> 145 Pipeline          <NA>         <NA>           BR  Brazil
+#> 146 Pipeline          <NA>         <NA>           BR  Brazil
+#> 147 Pipeline          <NA>         <NA>           BR  Brazil
+#> 148 Pipeline          <NA>         <NA>           IN   India
+#> 149 Pipeline          <NA>         <NA>           IN   India
+#> 150 Pipeline          <NA>         <NA>           BR  Brazil
+#> 151 Pipeline          <NA>         <NA>           BR  Brazil
+#> 152 Pipeline          <NA>         <NA>           BR  Brazil
+#> 153 Pipeline          <NA>         <NA>           IN   India
+#> 154 Pipeline          <NA>         <NA>           IN   India
+#> 155 Pipeline          <NA>         <NA>           IN   India
+#> 156 Pipeline          <NA>         <NA>           IN   India
+#> 157 Pipeline          <NA>         <NA>           IN   India
+#> 158 Pipeline          <NA>         <NA>           BR  Brazil
+#> 159 Pipeline          <NA>         <NA>           IN   India
+#> 160 Pipeline          <NA>         <NA>           IN   India
+#> 161 Pipeline          <NA>         <NA>           BR  Brazil
+#> 162 Pipeline          <NA>         <NA>           IN   India
+#> 163 Pipeline          <NA>         <NA>           BR  Brazil
+#> 164 Pipeline          <NA>         <NA>           BR  Brazil
+#> 165 Pipeline          <NA>         <NA>           IN   India
+#> 166 Pipeline          <NA>         <NA>           BR  Brazil
+#> 167 Pipeline          <NA>         <NA>           BR  Brazil
+#> 168 Pipeline          <NA>         <NA>           IN   India
+#> 169 Pipeline          <NA>         <NA>           IN   India
+#> 170 Pipeline          <NA>         <NA>           BR  Brazil
+#> 171 Pipeline          <NA>         <NA>           BR  Brazil
+#> 172 Pipeline          <NA>         <NA>           IN   India
+#> 173 Pipeline          <NA>         <NA>           BR  Brazil
+#> 174 Pipeline          <NA>         <NA>           IN   India
+#> 175 Pipeline          <NA>         <NA>           IN   India
+#> 176 Pipeline          <NA>         <NA>           IN   India
+#> 177 Pipeline          <NA>         <NA>           IN   India
+#> 178 Pipeline          <NA>         <NA>           BR  Brazil
+#> 179 Pipeline          <NA>         <NA>           BR  Brazil
+#> 180 Pipeline          <NA>         <NA>           BR  Brazil
+#> 181 Pipeline          <NA>         <NA>           IN   India
+#> 182 Pipeline          <NA>         <NA>           BR  Brazil
+#> 183 Pipeline          <NA>         <NA>           BR  Brazil
+#> 184 Pipeline          <NA>         <NA>           IN   India
+#> 185 Pipeline          <NA>         <NA>           BR  Brazil
+#> 186 Pipeline          <NA>         <NA>           BR  Brazil
+#> 187 Pipeline          <NA>         <NA>           IN   India
+#> 188 Pipeline          <NA>         <NA>           IN   India
+#> 189 Pipeline          <NA>         <NA>           BR  Brazil
+#> 190 Pipeline          <NA>         <NA>           IN   India
+#> 191 Pipeline          <NA>         <NA>           BR  Brazil
+#> 192 Pipeline          <NA>         <NA>           IN   India
+#> 193 Pipeline          <NA>         <NA>           BR  Brazil
+#> 194 Pipeline          <NA>         <NA>           BR  Brazil
+#> 195 Pipeline          <NA>         <NA>           BR  Brazil
+#> 196 Pipeline          <NA>         <NA>           BR  Brazil
+#> 197 Pipeline          <NA>   2011-10-01           IN   India
+#> 198 Pipeline          <NA>         <NA>           IN   India
+#> 199 Pipeline          <NA>         <NA>           BR  Brazil
+#> 200 Pipeline          <NA>         <NA>           IN   India
+#> 201   Active          <NA>   2004-09-30           BR  Brazil
+#> 202   Active          <NA>   2025-06-30           IN   India
+#> 203   Active          <NA>   2025-03-31           IN   India
+#> 204   Active          <NA>         <NA>           IN   India
+#> 205   Active          <NA>   2025-03-31           IN   India
+#> 206   Active          <NA>   2026-12-31           BR  Brazil
+#> 207   Active          <NA>   2026-11-30           IN   India
+#> 208   Active          <NA>         <NA>           BR  Brazil
+#> 209   Active          <NA>   2027-11-30           BR  Brazil
+#> 210   Active          <NA>   2025-11-30           BR  Brazil
+#> 211   Active          <NA>         <NA>           IN   India
+#> 212   Active          <NA>   2024-11-30           BR  Brazil
+#>                          region total_commitment ibrd_commitment ida_commitment
+#> 1                    South Asia         0.000000          0.0000           0.00
+#> 2                    South Asia       325.100000        325.1000           0.00
+#> 3                    South Asia       188.280000        188.2800           0.00
+#> 4                    South Asia       225.520000        225.5200           0.00
+#> 5   Latin America and Caribbean       100.000000        100.0000           0.00
+#> 6                    South Asia       200.000000        200.0000           0.00
+#> 7   Latin America and Caribbean       150.000000        150.0000           0.00
+#> 8   Latin America and Caribbean       110.000000        110.0000           0.00
+#> 9                    South Asia      1500.000000       1468.5000          31.50
+#> 10                   South Asia       195.000000        195.0000           0.00
+#> 11  Latin America and Caribbean        61.220000         61.2200           0.00
+#> 12  Latin America and Caribbean        90.000000         90.0000           0.00
+#> 13                   South Asia       150.000000        150.0000           0.00
+#> 14  Latin America and Caribbean        90.000000         90.0000           0.00
+#> 15                   South Asia        96.200000         96.2000           0.00
+#> 16                   South Asia       135.000000        135.0000           0.00
+#> 17  Latin America and Caribbean       350.000000         70.0000         280.00
+#> 18  Latin America and Caribbean       541.880000        541.8800           0.00
+#> 19  Latin America and Caribbean        50.000000         50.0000           0.00
+#> 20                   South Asia       452.000000        452.0000           0.00
+#> 21  Latin America and Caribbean        80.000000         80.0000           0.00
+#> 22                   South Asia       100.000000        100.0000           0.00
+#> 23                   South Asia       300.000000        300.0000           0.00
+#> 24  Latin America and Caribbean       300.000000        300.0000           0.00
+#> 25  Latin America and Caribbean       135.238245        135.2382           0.00
+#> 26  Latin America and Caribbean       100.000000        100.0000           0.00
+#> 27  Latin America and Caribbean        50.000000         50.0000           0.00
+#> 28  Latin America and Caribbean        50.000000         50.0000           0.00
+#> 29  Latin America and Caribbean        40.000000         40.0000           0.00
+#> 30  Latin America and Caribbean        50.000000         50.0000           0.00
+#> 31                   South Asia        46.000000         46.0000           0.00
+#> 32                   South Asia       200.000000        200.0000           0.00
+#> 33                   South Asia       140.000000        140.0000           0.00
+#> 34                   South Asia       251.030000        251.0300           0.00
+#> 35                   South Asia       300.000000        300.0000           0.00
+#> 36                   South Asia       255.500000        255.5000           0.00
+#> 37                   South Asia       150.000000        150.0000           0.00
+#> 38                   South Asia       148.000000        148.0000           0.00
+#> 39  Latin America and Caribbean        84.550000         84.5500           0.00
+#> 40                   South Asia        82.000000         82.0000           0.00
+#> 41  Latin America and Caribbean        86.100000         86.1000           0.00
+#> 42                   South Asia       363.000000        363.0000           0.00
+#> 43                   South Asia       100.000000        100.0000           0.00
+#> 44                   South Asia       108.000000        108.0000           0.00
+#> 45  Latin America and Caribbean       500.000000        500.0000           0.00
+#> 46                   South Asia       280.000000        280.0000           0.00
+#> 47                   South Asia       350.000000        350.0000           0.00
+#> 48                   South Asia       150.000000        150.0000           0.00
+#> 49  Latin America and Caribbean        40.000000         40.0000           0.00
+#> 50  Latin America and Caribbean        40.000000         40.0000           0.00
+#> 51                   South Asia       165.000000        150.0000           0.00
+#> 52                   South Asia       500.000000        500.0000           0.00
+#> 53                   South Asia       500.000000        500.0000           0.00
+#> 54                   South Asia       250.000000        250.0000           0.00
+#> 55                   South Asia       200.000000        150.0000           0.00
+#> 56  Latin America and Caribbean       135.238245        135.2382           0.00
+#> 57                   South Asia       162.000000        162.0000           0.00
+#> 58                   South Asia       245.000000        245.0000           0.00
+#> 59  Latin America and Caribbean       250.000000        250.0000           0.00
+#> 60  Latin America and Caribbean       500.000000        500.0000           0.00
+#> 61  Latin America and Caribbean       130.000000        130.0000           0.00
+#> 62                   South Asia        47.000000         47.0000           0.00
+#> 63                   South Asia       125.000000        125.0000           0.00
+#> 64                   South Asia       150.000000        150.0000           0.00
+#> 65                   South Asia       115.000000        115.0000           0.00
+#> 66                   South Asia       270.000000        135.0000           0.00
+#> 67                   South Asia       160.000000        160.0000           0.00
+#> 68                   South Asia       300.000000        150.0000           0.00
+#> 69                   South Asia        40.000000         40.0000           0.00
+#> 70                   South Asia       370.000000        125.0000           0.00
+#> 71                   South Asia       250.000000        250.0000           0.00
+#> 72                   South Asia       500.000000        500.0000           0.00
+#> 73                   South Asia        32.000000         32.0000           0.00
+#> 74                   South Asia       210.000000        105.0000           0.00
+#> 75                   South Asia       750.000000        500.0000           0.00
+#> 76                   South Asia       210.000000        105.0000           0.00
+#> 77                   South Asia       167.000000        100.0000           0.00
+#> 78                   South Asia        68.000000         68.0000           0.00
+#> 79                   South Asia       500.000000        250.0000           0.00
+#> 80                   South Asia       105.000000        105.0000           0.00
+#> 81                   South Asia       120.000000        120.0000           0.00
+#> 82  Latin America and Caribbean       125.000000        125.0000           0.00
+#> 83                   South Asia       381.000000        381.0000           0.00
+#> 84                   South Asia       381.000000        381.0000           0.00
+#> 85                   South Asia       500.000000        500.0000           0.00
+#> 86  Latin America and Caribbean        38.000000         38.0000           0.00
+#> 87                   South Asia        50.000000         50.0000           0.00
+#> 88  Latin America and Caribbean        97.000000         97.0000           0.00
+#> 89                   South Asia        82.000000         82.0000           0.00
+#> 90                   South Asia       466.350000        466.3500           0.00
+#> 91  Latin America and Caribbean        98.800000         98.8000           0.00
+#> 92  Latin America and Caribbean        80.000000         80.0000           0.00
+#> 93                   South Asia        80.000000         80.0000           0.00
+#> 94                   South Asia       210.000000        210.0000           0.00
+#> 95                   South Asia        88.000000         88.0000           0.00
+#> 96                   South Asia       290.000000        145.0000           0.00
+#> 97                   South Asia       165.000000        165.0000           0.00
+#> 98  Latin America and Caribbean       139.880000        139.8800           0.00
+#> 99  Latin America and Caribbean       100.000000        100.0000           0.00
+#> 100                  South Asia       328.000000        328.0000           0.00
+#> 101                  South Asia       199.810000        150.0000           0.00
+#> 102                  South Asia       250.000000        250.0000           0.00
+#> 103                  South Asia       400.000000        400.0000           0.00
+#> 104                  South Asia        31.580000         31.5800           0.00
+#> 105 Latin America and Caribbean       126.886000        126.8860           0.00
+#> 106                  South Asia        25.200000         25.2000           0.00
+#> 107 Latin America and Caribbean       250.000000        250.0000           0.00
+#> 108                  South Asia       122.000000        122.0000           0.00
+#> 109                  South Asia       172.200000        172.2000           0.00
+#> 110                  South Asia       310.000000        310.0000           0.00
+#> 111                  South Asia       450.000000        450.0000           0.00
+#> 112                  South Asia        21.700000         21.7000           0.00
+#> 113                  South Asia       120.000000        120.0000           0.00
+#> 114 Latin America and Caribbean       250.000000        250.0000           0.00
+#> 115                  South Asia       318.000000        318.0000           0.00
+#> 116                  South Asia       100.000000        100.0000           0.00
+#> 117 Latin America and Caribbean        50.000000         50.0000           0.00
+#> 118                  South Asia       200.000000        200.0000           0.00
+#> 119                  South Asia       125.000000        125.0000           0.00
+#> 120 Latin America and Caribbean        73.300000         73.3000           0.00
+#> 121                  South Asia       116.200000        116.2000           0.00
+#> 122                  South Asia       375.000000        375.0000           0.00
+#> 123                  South Asia       175.000000        175.0000           0.00
+#> 124                  South Asia       100.000000          0.0000         100.00
+#> 125                  South Asia       648.000000        500.0000           0.00
+#> 126                  South Asia       100.000000        100.0000           0.00
+#> 127                  South Asia       250.000000          0.0000         250.00
+#> 128                  South Asia       250.000000          0.0000         250.00
+#> 129                  South Asia       648.000000        648.0000           0.00
+#> 130 Latin America and Caribbean         6.400000          0.0000           0.00
+#> 131 Latin America and Caribbean         0.000000          0.0000           0.00
+#> 132                  South Asia         0.000000          0.0000           0.00
+#> 133 Latin America and Caribbean         0.000000          0.0000           0.00
+#> 134                  South Asia         0.000000          0.0000           0.00
+#> 135 Latin America and Caribbean        45.000000          0.0000          45.00
+#> 136                  South Asia         0.000000          0.0000           0.00
+#> 137 Latin America and Caribbean        90.000000         90.0000           0.00
+#> 138 Latin America and Caribbean       162.400000          0.0000         162.40
+#> 139                  South Asia       250.000000          0.0000         250.00
+#> 140                  South Asia         0.000000          0.0000           0.00
+#> 141                  South Asia       150.000000        150.0000           0.00
+#> 142                  South Asia         0.000000          0.0000           0.00
+#> 143 Latin America and Caribbean         0.000000          0.0000           0.00
+#> 144                  South Asia      1000.000000       1000.0000           0.00
+#> 145 Latin America and Caribbean       900.000000          0.0000         900.00
+#> 146 Latin America and Caribbean        13.400000         13.4000           0.00
+#> 147 Latin America and Caribbean       200.000000        200.0000           0.00
+#> 148                  South Asia         1.000000          1.0000           0.00
+#> 149                  South Asia         0.000000          0.0000           0.00
+#> 150 Latin America and Caribbean         0.000000          0.0000           0.00
+#> 151 Latin America and Caribbean        50.000000         50.0000           0.00
+#> 152 Latin America and Caribbean         0.000000          0.0000           0.00
+#> 153                  South Asia       315.000000        315.0000           0.00
+#> 154                  South Asia       196.000000          0.0000         196.00
+#> 155                  South Asia         0.000000          0.0000           0.00
+#> 156                  South Asia         0.000000          0.0000           0.00
+#> 157                  South Asia       490.000000          0.0000         490.00
+#> 158 Latin America and Caribbean         0.000000          0.0000           0.00
+#> 159                  South Asia       350.000000        350.0000           0.00
+#> 160                  South Asia       135.000000          0.0000         135.00
+#> 161 Latin America and Caribbean       200.000000          0.0000         200.00
+#> 162                  South Asia       212.640000        212.6400           0.00
+#> 163 Latin America and Caribbean         0.000000          0.0000           0.00
+#> 164 Latin America and Caribbean         0.000000          0.0000           0.00
+#> 165                  South Asia         0.000000          0.0000           0.00
+#> 166 Latin America and Caribbean       100.000000        100.0000           0.00
+#> 167 Latin America and Caribbean         0.000000          0.0000           0.00
+#> 168                  South Asia         0.000000          0.0000           0.00
+#> 169                  South Asia         0.000000          0.0000           0.00
+#> 170 Latin America and Caribbean         0.000000          0.0000           0.00
+#> 171 Latin America and Caribbean        50.000000          0.0000          50.00
+#> 172                  South Asia         0.000000          0.0000           0.00
+#> 173 Latin America and Caribbean        30.000000          0.0000          30.00
+#> 174                  South Asia       280.000000          0.0000         280.00
+#> 175                  South Asia         0.000000          0.0000           0.00
+#> 176                  South Asia         0.000000          0.0000           0.00
+#> 177                  South Asia         0.000000          0.0000           0.00
+#> 178 Latin America and Caribbean         0.000000          0.0000           0.00
+#> 179 Latin America and Caribbean         0.000000          0.0000           0.00
+#> 180 Latin America and Caribbean         0.000000          0.0000           0.00
+#> 181                  South Asia      5400.000000          0.0000        5400.00
+#> 182 Latin America and Caribbean         0.000000          0.0000           0.00
+#> 183 Latin America and Caribbean         0.000000          0.0000           0.00
+#> 184                  South Asia         0.000000          0.0000           0.00
+#> 185 Latin America and Caribbean         0.000000          0.0000           0.00
+#> 186 Latin America and Caribbean      2300.000000       2300.0000           0.00
+#> 187                  South Asia       131.000000        131.0000           0.00
+#> 188                  South Asia         0.000000          0.0000           0.00
+#> 189 Latin America and Caribbean         0.000000          0.0000           0.00
+#> 190                  South Asia         0.000000          0.0000           0.00
+#> 191 Latin America and Caribbean         8.560000          0.0000           8.56
+#> 192                  South Asia         0.000000          0.0000           0.00
+#> 193 Latin America and Caribbean         0.000000          0.0000           0.00
+#> 194 Latin America and Caribbean         0.000000          0.0000           0.00
+#> 195 Latin America and Caribbean         0.000000          0.0000           0.00
+#> 196 Latin America and Caribbean         0.000000          0.0000           0.00
+#> 197                  South Asia         0.000000          0.0000           0.00
+#> 198                  South Asia      2830.250000        128.0000        2702.25
+#> 199 Latin America and Caribbean       375.000000          0.0000         375.00
+#> 200                  South Asia       420.000000        420.0000           0.00
+#> 201 Latin America and Caribbean         1.100000          0.0000           0.00
+#> 202                  South Asia         0.852516          0.0000           0.00
+#> 203                  South Asia        25.000000          0.0000           0.00
+#> 204                  South Asia         1.160000          0.0000           0.00
+#> 205                  South Asia        18.000000          0.0000           0.00
+#> 206 Latin America and Caribbean        60.330000          0.0000           0.00
+#> 207                  South Asia        22.935780          0.0000           0.00
+#> 208 Latin America and Caribbean        19.284404          0.0000           0.00
+#> 209 Latin America and Caribbean        24.577982          0.0000           0.00
+#> 210 Latin America and Caribbean        21.000000          0.0000           0.00
+#> 211                  South Asia         1.300000          0.0000           0.00
+#> 212 Latin America and Caribbean         1.000000          0.0000           0.00
+#>                lending_instrument
+#> 1   Program-for-Results Financing
+#> 2    Investment Project Financing
+#> 3   Program-for-Results Financing
+#> 4    Investment Project Financing
+#> 5    Investment Project Financing
+#> 6    Investment Project Financing
+#> 7    Investment Project Financing
+#> 8      Development Policy Lending
+#> 9      Development Policy Lending
+#> 10  Program-for-Results Financing
+#> 11   Investment Project Financing
+#> 12   Investment Project Financing
+#> 13  Program-for-Results Financing
+#> 14   Investment Project Financing
+#> 15   Investment Project Financing
+#> 16   Investment Project Financing
+#> 17   Investment Project Financing
+#> 18     Development Policy Lending
+#> 19   Investment Project Financing
+#> 20  Program-for-Results Financing
+#> 21   Investment Project Financing
+#> 22  Program-for-Results Financing
+#> 23  Program-for-Results Financing
+#> 24   Investment Project Financing
+#> 25     Development Policy Lending
+#> 26   Investment Project Financing
+#> 27   Investment Project Financing
+#> 28   Investment Project Financing
+#> 29   Investment Project Financing
+#> 30   Investment Project Financing
+#> 31   Investment Project Financing
+#> 32  Program-for-Results Financing
+#> 33   Investment Project Financing
+#> 34   Investment Project Financing
+#> 35  Program-for-Results Financing
+#> 36   Investment Project Financing
+#> 37  Program-for-Results Financing
+#> 38   Investment Project Financing
+#> 39   Investment Project Financing
+#> 40  Program-for-Results Financing
+#> 41   Investment Project Financing
+#> 42  Program-for-Results Financing
+#> 43  Program-for-Results Financing
+#> 44   Investment Project Financing
+#> 45   Investment Project Financing
+#> 46   Investment Project Financing
+#> 47  Program-for-Results Financing
+#> 48  Program-for-Results Financing
+#> 49   Investment Project Financing
+#> 50   Investment Project Financing
+#> 51  Program-for-Results Financing
+#> 52  Program-for-Results Financing
+#> 53  Program-for-Results Financing
+#> 54  Program-for-Results Financing
+#> 55   Investment Project Financing
+#> 56     Development Policy Lending
+#> 57   Investment Project Financing
+#> 58   Investment Project Financing
+#> 59  Program-for-Results Financing
+#> 60     Development Policy Lending
+#> 61  Program-for-Results Financing
+#> 62   Investment Project Financing
+#> 63  Program-for-Results Financing
+#> 64   Investment Project Financing
+#> 65  Program-for-Results Financing
+#> 66   Investment Project Financing
+#> 67  Program-for-Results Financing
+#> 68  Program-for-Results Financing
+#> 69   Investment Project Financing
+#> 70  Program-for-Results Financing
+#> 71  Program-for-Results Financing
+#> 72  Program-for-Results Financing
+#> 73   Investment Project Financing
+#> 74   Investment Project Financing
+#> 75  Program-for-Results Financing
+#> 76   Investment Project Financing
+#> 77   Investment Project Financing
+#> 78   Investment Project Financing
+#> 79   Investment Project Financing
+#> 80   Investment Project Financing
+#> 81   Investment Project Financing
+#> 82   Investment Project Financing
+#> 83   Investment Project Financing
+#> 84   Investment Project Financing
+#> 85  Program-for-Results Financing
+#> 86   Investment Project Financing
+#> 87   Investment Project Financing
+#> 88   Investment Project Financing
+#> 89   Investment Project Financing
+#> 90   Investment Project Financing
+#> 91   Investment Project Financing
+#> 92   Investment Project Financing
+#> 93   Investment Project Financing
+#> 94   Investment Project Financing
+#> 95   Investment Project Financing
+#> 96   Investment Project Financing
+#> 97   Investment Project Financing
+#> 98   Investment Project Financing
+#> 99   Investment Project Financing
+#> 100  Investment Project Financing
+#> 101  Investment Project Financing
+#> 102  Investment Project Financing
+#> 103 Program-for-Results Financing
+#> 104  Investment Project Financing
+#> 105  Investment Project Financing
+#> 106 Program-for-Results Financing
+#> 107  Investment Project Financing
+#> 108  Investment Project Financing
+#> 109  Investment Project Financing
+#> 110  Investment Project Financing
+#> 111 Program-for-Results Financing
+#> 112  Investment Project Financing
+#> 113 Program-for-Results Financing
+#> 114 Program-for-Results Financing
+#> 115  Investment Project Financing
+#> 116  Investment Project Financing
+#> 117  Investment Project Financing
+#> 118  Investment Project Financing
+#> 119  Investment Project Financing
+#> 120  Investment Project Financing
+#> 121  Investment Project Financing
+#> 122  Investment Project Financing
+#> 123  Investment Project Financing
+#> 124  Investment Project Financing
+#> 125 Program-for-Results Financing
+#> 126  Investment Project Financing
+#> 127  Investment Project Financing
+#> 128  Investment Project Financing
+#> 129  Investment Project Financing
+#> 130                          <NA>
+#> 131    Development Policy Lending
+#> 132      Specific Investment Loan
+#> 133    Development Policy Lending
+#> 134  Investment Project Financing
+#> 135  Investment Project Financing
+#> 136                          <NA>
+#> 137  Investment Project Financing
+#> 138  Investment Project Financing
+#> 139  Investment Project Financing
+#> 140                          <NA>
+#> 141 Program-for-Results Financing
+#> 142  Investment Project Financing
+#> 143      Specific Investment Loan
+#> 144 Program-for-Results Financing
+#> 145  Investment Project Financing
+#> 146  Investment Project Financing
+#> 147    Development Policy Lending
+#> 148  Investment Project Financing
+#> 149 Program-for-Results Financing
+#> 150    Development Policy Lending
+#> 151  Investment Project Financing
+#> 152 Program-for-Results Financing
+#> 153 Program-for-Results Financing
+#> 154  Investment Project Financing
+#> 155 Program-for-Results Financing
+#> 156 Program-for-Results Financing
+#> 157  Investment Project Financing
+#> 158  Investment Project Financing
+#> 159 Program-for-Results Financing
+#> 160 Program-for-Results Financing
+#> 161  Investment Project Financing
+#> 162  Investment Project Financing
+#> 163    Development Policy Lending
+#> 164  Investment Project Financing
+#> 165 Program-for-Results Financing
+#> 166  Investment Project Financing
+#> 167  Investment Project Financing
+#> 168 Program-for-Results Financing
+#> 169  Investment Project Financing
+#> 170  Investment Project Financing
+#> 171  Investment Project Financing
+#> 172  Investment Project Financing
+#> 173  Investment Project Financing
+#> 174 Program-for-Results Financing
+#> 175  Investment Project Financing
+#> 176  Investment Project Financing
+#> 177  Investment Project Financing
+#> 178  Investment Project Financing
+#> 179  Investment Project Financing
+#> 180  Investment Project Financing
+#> 181  Investment Project Financing
+#> 182    Development Policy Lending
+#> 183    Development Policy Lending
+#> 184 Program-for-Results Financing
+#> 185  Investment Project Financing
+#> 186 Program-for-Results Financing
+#> 187  Investment Project Financing
+#> 188  Investment Project Financing
+#> 189  Investment Project Financing
+#> 190 Program-for-Results Financing
+#> 191  Investment Project Financing
+#> 192  Investment Project Financing
+#> 193  Investment Project Financing
+#> 194  Investment Project Financing
+#> 195  Investment Project Financing
+#> 196  Investment Project Financing
+#> 197      Specific Investment Loan
+#> 198 Program-for-Results Financing
+#> 199  Investment Project Financing
+#> 200  Investment Project Financing
+#> 201                          <NA>
+#> 202  Investment Project Financing
+#> 203  Investment Project Financing
+#> 204  Investment Project Financing
+#> 205  Investment Project Financing
+#> 206  Investment Project Financing
+#> 207 Program-for-Results Financing
+#> 208  Investment Project Financing
+#> 209  Investment Project Financing
+#> 210  Investment Project Financing
+#> 211      Specific Investment Loan
+#> 212  Investment Project Financing
+#>                                                                                                              borrower
+#> 1                                                                                                                <NA>
+#> 2                                                                                                                <NA>
+#> 3                                                                                                               India
+#> 4                                                                                                               India
+#> 5                                                                                    Government of the State of Bahia
+#> 6                                                                                                                <NA>
+#> 7                                                                                                                <NA>
+#> 8                                                                                                    State of Sergipe
+#> 9                                                                                                               India
+#> 10                                                                                                               <NA>
+#> 11                                                                              Secretaria de Economia e Planejamento
+#> 12                                                                              Government of the State of Pernambuco
+#> 13                                                                                                              India
+#> 14                                                CIM - AMFRI (Foz do Rio Itaja� Region Consortium of Municipalities)
+#> 15                                                                                     Department of Economic Affairs
+#> 16                                                                                                Government of India
+#> 17                                                                                                               <NA>
+#> 18                                                                                           State Government of Cear
+#> 19                                                                                                      State of Piau
+#> 20                                                                                                              India
+#> 21                                                                                               State of Mato Grosso
+#> 22                                                                                                              India
+#> 23                                                                                                Ministry of Finance
+#> 24                                                                                      Federative Republic of Brazil
+#> 25                                                                                     Municipality of Rio de Janeiro
+#> 26                                                                                               STATE OF MATO GROSSO
+#> 27                                                                                                               <NA>
+#> 28                                                                                                     State of Piaui
+#> 29                                                                                                      State of Acre
+#> 30                                                                             State Secretariat of Planning (SEPLAN)
+#> 31                                                                                                              India
+#> 32                                                                                                              India
+#> 33                                                                                                              India
+#> 34                                                                                                              India
+#> 35                                                                                                              India
+#> 36                                                                                                              India
+#> 37                                                                                                              India
+#> 38                                                                                                              India
+#> 39                                                                                                               <NA>
+#> 40                                                                                                              India
+#> 41                                                                                            State of Espirito Santo
+#> 42                                                                                                              India
+#> 43                                                                                                              India
+#> 44                                                                                                              India
+#> 45                                                                                                    Banco do Brasil
+#> 46                                                                                                              India
+#> 47                                                                                                              India
+#> 48                                                                                                              India
+#> 49                                                                                               State of Mato Grosso
+#> 50                                          State of Alagoas, with the guarantee of the Federative Republic of Brazil
+#> 51                                                                                                State Bank of India
+#> 52                                                                                                              India
+#> 53                                                                                                              India
+#> 54                                                                         Government of Gujarat, Ministry of Finance
+#> 55                                                                                                              INDIA
+#> 56                                                                                     Municipality of Rio de Janeiro
+#> 57                                                                                                              India
+#> 58                                                            Dedicated Freight Corridor Corporation of India Limited
+#> 59                                                                                  THE FEDERATIVE REPUBLIC OF BRAZIL
+#> 60                                                                                                     State of Goi�s
+#> 61                                                                                                    State of Parana
+#> 62                                                                                                              India
+#> 63                                                                                                              India
+#> 64                                                                                                              India
+#> 65                                                                                                              India
+#> 66                                                                                                              INDIA
+#> 67                                                                                                              India
+#> 68                                                                                                              India
+#> 69                                                                                                              India
+#> 70                                                                                                              India
+#> 71                                                                                                              India
+#> 72                                                                                                              India
+#> 73                                                        India (Department of Economic Affairs, Government of India)
+#> 74                                                                                                              India
+#> 75                                                                                                Ministry of Finance
+#> 76                                                                                                              India
+#> 77                                                                                                Ministry of Finance
+#> 78                                                                                                              India
+#> 79                                                                Ministry of Finance, Department of Economic Affairs
+#> 80                                                                                                  Republic of India
+#> 81                                                                                                              India
+#> 82                                                                                           Municipality of Salvador
+#> 83                                                                                                               <NA>
+#> 84                                                                                                              India
+#> 85                                                                                                              India
+#> 86                                                                                      Federative Republic of Brazil
+#> 87                                                                                                              India
+#> 88                                                                                          Municipality of S�o Paulo
+#> 89                                                                                                              India
+#> 90                                                                                                              India
+#> 91                                                            Banco Regional de Desenvolvimento do Extremo Sul (BRDE)
+#> 92                                                                                        Municipio de Belo Horizonte
+#> 93                                                                                                  Republic of India
+#> 94                                                                                                  Republic of India
+#> 95                                                                                                              India
+#> 96                                                                                                  Republic of India
+#> 97                                                                                                  Republic of India
+#> 98                                                                                                     State of Ceara
+#> 99                                                                                                     State of Ceara
+#> 100                                                                                                 Republic of India
+#> 101                                                                                                             India
+#> 102                                                                                                             India
+#> 103                                                                                                 Republic of India
+#> 104                                                                                                             India
+#> 105                                                                                                              <NA>
+#> 106                                                                                                             India
+#> 107                                                                                                            SABESP
+#> 108                                                                                                             India
+#> 109                                                                                                 Republic of India
+#> 110                                                                                               Government of India
+#> 111                                          Department of Economic Affairs, Ministry of Finance, Government of India
+#> 112                                                                                                             India
+#> 113                                                                                                             India
+#> 114                                                                      Ministry of Economy (Minist�rio da Economia)
+#> 115                                                                                                             India
+#> 116                                                                    Department of Economic Affairs, Govt. of India
+#> 117                                                                                       State Government of Paraiba
+#> 118                                                                                                 Republic of India
+#> 119                                                                                                             India
+#> 120                                                                                         Municipality of Fortaleza
+#> 121                                                                                                             India
+#> 122                                                               Department of Economic Affairs, Government of India
+#> 123                                                               Ministry of Finance, Department of Economic Affairs
+#> 124                                                                                                             India
+#> 125                                                                                               State Bank of India
+#> 126                                                                                                             India
+#> 127                                                                                                             India
+#> 128                                                                                                             India
+#> 129                                                                                                             India
+#> 130                                                                                                              <NA>
+#> 131                                                                                                              <NA>
+#> 132                                                                                                              <NA>
+#> 133                                                                                                              <NA>
+#> 134                                                                                                              <NA>
+#> 135                                                                                                              <NA>
+#> 136                                                                                                              <NA>
+#> 137                                                                     Complexo Industrial Portuario de Pecem (CIPP)
+#> 138                                                                                                              <NA>
+#> 139                                                                                                              <NA>
+#> 140                                                                                                              <NA>
+#> 141                                                                                                             India
+#> 142                                                                                                              <NA>
+#> 143                                                                                                              <NA>
+#> 144                                                                                               Ministry of Finance
+#> 145                                                                                                              <NA>
+#> 146                                                                                                              <NA>
+#> 147                                                                                                              <NA>
+#> 148                                                                                                              <NA>
+#> 149                                                                                                              <NA>
+#> 150                                                                                                              <NA>
+#> 151                                                                                                 State of Amazonas
+#> 152                                                                                                              <NA>
+#> 153                                                                                               Ministry of Finance
+#> 154                                                                                                              <NA>
+#> 155                                                                                                              <NA>
+#> 156                                                                                                              <NA>
+#> 157                                                                                                              <NA>
+#> 158                                                                                                              <NA>
+#> 159                                                                                                 Republic of India
+#> 160                                                                                                              <NA>
+#> 161                                                                                                              <NA>
+#> 162                                                                                                             India
+#> 163                                                                                                              <NA>
+#> 164                                                                                                              <NA>
+#> 165                                                                                                              <NA>
+#> 166                                                                                                              <NA>
+#> 167                                                                                                              <NA>
+#> 168                                                                                                              <NA>
+#> 169                                                                                                              <NA>
+#> 170                                                                                                              <NA>
+#> 171                                                                                                              <NA>
+#> 172                                                                                                              <NA>
+#> 173                                                                                                              <NA>
+#> 174                                                                                                              <NA>
+#> 175                                                                                                              <NA>
+#> 176                                                                                                              <NA>
+#> 177                                                                                                              <NA>
+#> 178                                                                                                              <NA>
+#> 179                                                                                                              <NA>
+#> 180                                                                                                              <NA>
+#> 181                                                                                                              <NA>
+#> 182                                                                                                              <NA>
+#> 183                                                                                                              <NA>
+#> 184                                                                                                              <NA>
+#> 185                                                                                                              <NA>
+#> 186                                                                                                              <NA>
+#> 187                                                                                               Government of India
+#> 188                                                                                                              <NA>
+#> 189                                                                                                              <NA>
+#> 190                                                                                                              <NA>
+#> 191                                                                                                              <NA>
+#> 192                                                                                                              <NA>
+#> 193                                                                                                              <NA>
+#> 194                                                                                                              <NA>
+#> 195                                                                                                              <NA>
+#> 196                                                                                                              <NA>
+#> 197                                                                                                              <NA>
+#> 198                                                                                                              <NA>
+#> 199                                                                                                              <NA>
+#> 200                                                               Ministry of Finance, Department of Economic Affairs
+#> 201                                                                                                              <NA>
+#> 202                                                            Institute for Financial Management and Research (IFMR)
+#> 203                                                                                        Government of India, India
+#> 204                                                                                                              <NA>
+#> 205                                                                                                              <NA>
+#> 206 Fundo Brasileiro de Biodiversidade - FUNBIO, Conserva��o Internacional - CI Brazil, Funda��o Get�lio Vargas - FGV
+#> 207                                                                                               State Bank of India
+#> 208 Fundo Brasileiro de Biodiversidade - FUNBIO, Fundacao Getulio Vargas - FGV, Conservacao Internacional - CI Brazil
+#> 209                                                                                                              IICA
+#> 210                                       Brazil - Deutsche Gesellschaft f�r Internationale Zusammenarbeit GmbH (GIZ)
+#> 211                                                                                                              <NA>
+#> 212                                                                                  Funda��o Pro-Natureza - FUNATURA
+#>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          implementing_agency
+#> 1                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       <NA>
+#> 2                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     Department of Agriculture, Government of Uttar Pradesh
+#> 3                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             Planning Department, Government of Maharashtra
+#> 4                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             Government of Tripura, Government of Nagaland, Ministry of Development of North Eastern Region
+#> 5                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         CAR - Companhia de Desenvolvimento e Acao Regional
+#> 6                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 Ishita Roy
+#> 7                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          Secretary of Infrastructure of the State of Bahia
+#> 8                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              State Secretariate of Finance
+#> 9                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       Ministry of New and Renewable Energy
+#> 10                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      <NA>
+#> 11                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             Secretaria de Estado da Ci�ncia, Tecnologia, Inova��o, Educa��o Profissional,
+#> 12                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 Pernambuco Water and Climate Agency (Ag�ncia Pernambucana de �guas e Clima - APAC), Pernambuco Sanitation Company (Companhia Pernambucana de Saneamento - COMPESA), Secretariat of Water Resources and WSS (Secretaria de Recursos H�dricos e Saneamento)
+#> 13                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            West Bengal Department of Industries, Commerce and Enterprises
+#> 14                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         Consorcio Intermunicipal Multifinalit�rio - AMFRI
+#> 15                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          Watershed Management Directorate
+#> 16                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                Uttarakhand State Disaster Management Authority, Government of Uttarakhand
+#> 17                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      <NA>
+#> 18                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                State Secretary of Finance
+#> 19                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             Piau� State Secretariat for Planning (SEPLAN)
+#> 20                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        Public Works Roads Department, Government of Assam
+#> 21                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             State Secretary for Family Agriculture (SEAF)
+#> 22                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 Planning and Development Department, Government of Sikkim
+#> 23                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 Tamil Nadu Urban Infrastructure Financial Services Limited, Tamil Nadu Municipal Administration & Water Supply Department
+#> 24                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   Ministry of Citizenship
+#> 25                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       Secretaria Municipal de Fazenda e Planejamento, Secretaria Municipal de Transportes
+#> 26                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    SECRETARIAT OF EDUCATION - MATO GROSSO
+#> 27                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       State Secretariat of Health (SESAPI), State Secretariat of Social Assistance, Labor and Human Rights (SASC), State Secretariat of Planning (SEPLAN)
+#> 28                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           Secretariat of Finance of Piaui
+#> 29                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             State Secretariat of Planning
+#> 30                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       UGP
+#> 31                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      Cyber Corporation of Manipur Limited
+#> 32                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     Directorate of Energy, HimUrja, HPPCL (Himachal Pradesh Power Corporation Limited), HPSEBL (Himachal Pradesh State Electricity Board Limited), HPPTCL (Himachal Pradesh Power Transmission Corporation Limited), HPSLDC (Himachal Pradesh State Load Despatch Centre)
+#> 33                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       Department of Tribal Welfare, Government of Tripura
+#> 34                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        Assam Health Infrastructure Development and Management Society (AHIDMS), Health and Family Welfare
+#> 35                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     State of Chhattisgarh
+#> 36                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     Ministry of Education
+#> 37                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      Government of Kerala
+#> 38                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          DWRID, Government of West Bengal
+#> 39                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      <NA>
+#> 40                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             Ministry of Fisheries, Animal Husbandry & Dairying, Department of Animal Husbandry & Dairying
+#> 41                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                DER-ES - Buildings and Roads Department of Esp�rito Santo, CEPDEC - State Coordination for Protection and Civil Defense, SEAMA - State Secretariat for the Environment and Water Resources
+#> 42                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              Rural Drinking Water and Sanitation Department, Government of Karnataka, Rural Development and Panchayat Department, Government of Karnataka
+#> 43                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  Finance Department, Government of Odisha
+#> 44                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            Flood and River Erosion Management Agency of Assam, Government of Assam, Water Resources Department, Assam State Disaster Management Authority
+#> 45                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           Banco do Brasil
+#> 46                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        Ahmedabad Municipal Corporation, Gujarat Urban Development Mission, Urban Development and Urban Housing Department
+#> 47                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 Government of Gujarat through Health and Family Welfare Department (HFWD)
+#> 48                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               Department of Finance, Government of Punjab
+#> 49                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      Secretariat of Finance - Mato Grosso
+#> 50                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 Secretariat of Finance - State of Alagoas
+#> 51                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       State Bank of India
+#> 52                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           Department of Health and Family Welfare, Ministry of Health and Family Welfare, Government of India, Ministry of Health and Family Welfare, Government of India
+#> 53                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     Ministry of Health and Family Welfare
+#> 54                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               Education Department, Government of Gujarat
+#> 55                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       Department of Fisheries, Ministry of Fisheries, Animal Husbandry and Dairying, National Fisheries Development Board
+#> 56                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  Secretaria Municipal de Fazenda e Planejamento, Secretaria de Transporte
+#> 57                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          Department for the Welfare of Differently Abled Persons (DfWDAP)
+#> 58                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   Dedicated Freight Corridor Corporation of India Limited
+#> 59                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     MINISTRY OF EDUCATION
+#> 60                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    State Secretariat of Agriculture and Livestock (SEAPA)
+#> 61                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           Secretariat of Planning and Structured Projects
+#> 62                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               Capacity Building Commission, Department of Personnel and Training, Ministry of Personnel, Public Grievances and Pensions, Karmayogi Bharat
+#> 63                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       West Bengal Women & Child Development and Social Welfare Department, West Bengal Finance Department
+#> 64                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 Karnataka Urban Infrastructure Development & Finance Corporation (KUIDFC)
+#> 65                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    Karnataka Department of of Agriculture, Department of Land Resources, Odisha Department of Agriculture
+#> 66                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                West Bengal State Electricity Distribution Company Limited
+#> 67                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         Urban Development Department, Government of Himachal Pradesh, Shimla Jal Prabandhan Nigam Limited
+#> 68                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       State of Tamil Nadu
+#> 69                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          Department of Health and Family Welfare, Government of Meghalaya
+#> 70                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      Government of Kerala
+#> 71                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   State of Andhra Pradesh
+#> 72                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           Ministry of Micro, Small and Medium Enterprises
+#> 73                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               Health and Family Welfare Department, Government of Mizoram
+#> 74                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       Ludhiana Municipal Corporation, Amritsar Municipal Corporation, Punjab Municipal Infrastructure Development Company
+#> 75                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               Education Department, Government of Gujarat
+#> 76                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    Local Self Government Department, Government of Kerala
+#> 77                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  Chhattisgarh, Department of Agriculture Development and Farmer Welfare and Biotechnology
+#> 78                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 Nagaland (Department of School Education)
+#> 79  Uttarakhand Jal Vidyut Nigam Ltd., Kerala State Electricity Board (KSEB), Tamil Nadu Generation and Distribution Corporation Limited (TANGEDCO), Government of Gujarat, Water Resources Department, Government of Chhattisgarh, Water Resources Department, Government of Kerala, Water Resources Department, Government of West Bengal, Irrigation and Waterways Department, Government of Uttar Pradesh, Irrigation and Water Resources Department, Meghalaya Power Generation Corporation Ltd. (MePGCL), Government of Maharasthra, Water Resources Department, Government of Manipur, Water Resources Department, Central Water Commission (CWC), Ministry of Jal Shakti, Government of Rajasthan, Water Resources Department, Government of Odisha, Water Resources Department, Government of Tamil Nadu, Water Resources Department, Government of Madhya Pradesh, Water Resources Department, Government of Karnataka, Water Resources Department
+#> 80                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 Government of West Bengal
+#> 81                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  Meghalaya Infrastructure Development Finance Corporation
+#> 82                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                Casa Civil
+#> 83                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      <NA>
+#> 84                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  National Mission for Clean Ganga, Ministry of Jal Shakti
+#> 85                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     Ministry of Education
+#> 86                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             Minist�rio de Minas e Energia
+#> 87                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          Tamil Nadu Urban and Habitat Development Board, Chennai Metropolitan Development Authority (CMDA), Tamil Nadu Infrastructure Fund Management Corporation Limited
+#> 88                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              S�o Paulo Municipal Secretariat of Urban Infrastructure and Works, S�o Paulo Municipal Secretariat of Mobility and Transport
+#> 89                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      Himachal Pradesh Road & Other Infrastructure Development Corporation
+#> 90                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   Ministry of Road Transport and Highways
+#> 91                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   Banco Regional de Desenvolvimento do Extremo Sul (BRDE)
+#> 92                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               URBEL, SMPU, SMOBI, BHTRANS
+#> 93                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      Department of Forest, Government of Himachal Pradesh
+#> 94                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      Department of Agriculture, Government of Maharashtra
+#> 95                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          Transport Dept., Govt. of Assam, Dispur, Guwahati (Assam), India
+#> 96                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        Irrigation and Waterways Department of West Bengal
+#> 97                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             Agricultural Promotion and Investment Corporation of Odisha Limited, Odisha Community Tank Development and Management Society,  Department of Water Resources
+#> 98                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 Ceara Economic Research and Strategy Institute - IPECE, Ceara Water and Sanitation Utility - CAGECE, Secretariat of Water Resources - SRH
+#> 99                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       Secretariat of Agrarian Development
+#> 100                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                Department of Health, Medical and Family Welfare, Govt. of Andhra Pradesh
+#> 101                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                Solar Energy Corporation of India Limited
+#> 102                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         Rajasthan State Highway Authority (RSHA), The State of Rajasthan
+#> 103                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    Ministry of Health and Family Welfare
+#> 104                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            Finance Department, Government of Uttarakhand
+#> 105                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              CAGEPA - State Water and Sanitation Company
+#> 106                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           Finance Department, Government of Chhattisgarh
+#> 107                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   SABESP
+#> 108                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        Urban Development and Housing Department, Government of Jharkhand
+#> 109                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             Government of Andhra Pradesh
+#> 110                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   Jharkhand Urja Sancharan Nigam Ltd., Jharkhand Bijli Vitran Nigam Ltd.
+#> 111                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      The Department of Water Resources, Ganga Rejuvenation and River Development, Ministry of Jal Shakti
+#> 112                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     Department of Economic Affairs (MOF)
+#> 113                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   Department of Drinking Water and Sanitation, Government of Uttarakhand
+#> 114                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           Ministry of Education (Minist�rio da Educa��o)
+#> 115                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                Water Resources Department, Public Works Department, GoTN
+#> 116                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                Department of Rural Development & Panchayat Raj, Government of Tamil Nadu
+#> 117                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                Projeto COOPERAR (SEAFDS)
+#> 118                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 Assam Rural Infrastructure and Agricultural Services (ARIAS) Society, State Health Society, Government of Assam, Department of Health and Family Welfare
+#> 119                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       Biotechnology Industry Research Assistance Council
+#> 120                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                Secretaria Municipal de Urbanismo e Meio Ambiente (SEUMA), Secretaria Municipal de Infraestrutura (SEINF)
+#> 121                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    Urban Development and Environment Department, Govt. of Madhya Pradesh
+#> 122                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      Inland Waterways Authority of India
+#> 123                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           Department of Water Resources, RD & GR, Ministry of Jal Shakti
+#> 124                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               Department of Medical Health and Family Welfare, Government of Uttarakhand
+#> 125                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      State Bank of India
+#> 126                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                Karnataka Urban Infrastructure Development & Finance Corporation (KUIDFC)
+#> 127                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 Water Resources Department (WRD), Rural Works Department (RWD), Bihar Aapada Punarwas Evam Punarnirman Society (BAPEPS), Bihar Rajya Pul Nirman Nigam Limited (BRPNNL), Animal and Fisheries Resources Department (AFRD)
+#> 128                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              Project Implementing Entity
+#> 129                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               THDC (Tehri Hydro Development Corporation)
+#> 130                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
+#> 131                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
+#> 132                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
+#> 133                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
+#> 134                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
+#> 135                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
+#> 136                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
+#> 137                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   Complexo Industrial Portu�rio de Pec�m
+#> 138                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
+#> 139                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
+#> 140                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
+#> 141                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            Social Welfare & Women Empowerment Department
+#> 142                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
+#> 143                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
+#> 144                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     Ministry of New and Renewable Energy
+#> 145                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
+#> 146                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
+#> 147                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
+#> 148                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
+#> 149                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
+#> 150                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
+#> 151                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                State Secretariat of Administration and Management (SEAD)
+#> 152                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
+#> 153                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                Government of West Bengal
+#> 154                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
+#> 155                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
+#> 156                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
+#> 157                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
+#> 158                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
+#> 159                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           Department of Environment, Forests, and Climate Change, State of Uttar Pradesh
+#> 160                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
+#> 161                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
+#> 162                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        Government of Karnataka, Government of Tamil Nadu
+#> 163                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
+#> 164                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
+#> 165                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
+#> 166                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
+#> 167                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
+#> 168                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
+#> 169                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
+#> 170                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
+#> 171                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
+#> 172                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
+#> 173                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
+#> 174                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
+#> 175                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
+#> 176                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
+#> 177                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
+#> 178                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
+#> 179                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
+#> 180                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
+#> 181                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
+#> 182                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
+#> 183                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
+#> 184                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
+#> 185                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
+#> 186                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
+#> 187                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 Haryana Mass Rapid Transport Corporation Limited (HMRTC)
+#> 188                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
+#> 189                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
+#> 190                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
+#> 191                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
+#> 192                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
+#> 193                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
+#> 194                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
+#> 195                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
+#> 196                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
+#> 197                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
+#> 198                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
+#> 199                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
+#> 200 Uttarakhand Jal Vidyut Nigam Ltd., Kerala State Electricity Board (KSEB), Tamil Nadu Generation and Distribution Corporation Limited (TANGEDCO), Government of Gujarat, Water Resources Department, Government of Chhattisgarh, Water Resources Department, Government of Kerala, Water Resources Department, Government of West Bengal, Irrigation and Waterways Department, Government of Uttar Pradesh, Irrigation and Water Resources Department, Meghalaya Power Generation Corporation Ltd. (MePGCL), Government of Maharasthra, Water Resources Department, Government of Manipur, Water Resources Department, Central Water Commission (CWC), Ministry of Jal Shakti, Government of Rajasthan, Water Resources Department, Government of Odisha, Water Resources Department, Government of Tamil Nadu, Water Resources Department, Government of Madhya Pradesh, Water Resources Department, Government of Karnataka, Water Resources Department
+#> 201                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
+#> 202                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      Jameel Poverty Action Lab (J-PAL) South Asia at the Institute for Financial Management and Research
+#> 203                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      Small Industries Development Bank of India, EESL Energy Efficiency Services Limited
+#> 204                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
+#> 205                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
+#> 206                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                Funda��o Getulio Vargas, Ministry of Environment and Climate Change - MMA
+#> 207                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      State Bank of India
+#> 208                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   Ministry of Environment - MMA, Funda��o Getulio Vargas
+#> 209                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            Minist�rio do Meio Ambiente (MMA), Minist�rio da Agricultura, Pecu�ria e Abastecimento (MAPA)
+#> 210                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        Ministry of Agriculture and  Livestock(MAPA), National Rural Learning Service, Ministry of Environment / Brazilian Forest Service
+#> 211                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
+#> 212                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  Ministry of Environment
+#>                                                                              url
+#> 1   https://projects.worldbank.org/en/projects-operations/project-detail/P507508
+#> 2   https://projects.worldbank.org/en/projects-operations/project-detail/P178253
+#> 3   https://projects.worldbank.org/en/projects-operations/project-detail/P181463
+#> 4   https://projects.worldbank.org/en/projects-operations/project-detail/P179935
+#> 5   https://projects.worldbank.org/en/projects-operations/project-detail/P180429
+#> 6   https://projects.worldbank.org/en/projects-operations/project-detail/P178254
+#> 7   https://projects.worldbank.org/en/projects-operations/project-detail/P180555
+#> 8   https://projects.worldbank.org/en/projects-operations/project-detail/P181501
+#> 9   https://projects.worldbank.org/en/projects-operations/project-detail/P181195
+#> 10  https://projects.worldbank.org/en/projects-operations/project-detail/P177965
+#> 11  https://projects.worldbank.org/en/projects-operations/project-detail/P180462
+#> 12  https://projects.worldbank.org/en/projects-operations/project-detail/P180430
+#> 13  https://projects.worldbank.org/en/projects-operations/project-detail/P174825
+#> 14  https://projects.worldbank.org/en/projects-operations/project-detail/P178557
+#> 15  https://projects.worldbank.org/en/projects-operations/project-detail/P179357
+#> 16  https://projects.worldbank.org/en/projects-operations/project-detail/P179749
+#> 17  https://projects.worldbank.org/en/projects-operations/project-detail/P500524
+#> 18  https://projects.worldbank.org/en/projects-operations/project-detail/P180497
+#> 19  https://projects.worldbank.org/en/projects-operations/project-detail/P177474
+#> 20  https://projects.worldbank.org/en/projects-operations/project-detail/P178581
+#> 21  https://projects.worldbank.org/en/projects-operations/project-detail/P175723
+#> 22  https://projects.worldbank.org/en/projects-operations/project-detail/P180634
+#> 23  https://projects.worldbank.org/en/projects-operations/project-detail/P179189
+#> 24  https://projects.worldbank.org/en/projects-operations/project-detail/P179365
+#> 25  https://projects.worldbank.org/en/projects-operations/project-detail/P179182
+#> 26  https://projects.worldbank.org/en/projects-operations/project-detail/P178993
+#> 27  https://projects.worldbank.org/en/projects-operations/project-detail/P178567
+#> 28  https://projects.worldbank.org/en/projects-operations/project-detail/P178663
+#> 29  https://projects.worldbank.org/en/projects-operations/project-detail/P179046
+#> 30  https://projects.worldbank.org/en/projects-operations/project-detail/P179088
+#> 31  https://projects.worldbank.org/en/projects-operations/project-detail/P176733
+#> 32  https://projects.worldbank.org/en/projects-operations/project-detail/P176032
+#> 33  https://projects.worldbank.org/en/projects-operations/project-detail/P178418
+#> 34  https://projects.worldbank.org/en/projects-operations/project-detail/P179337
+#> 35  https://projects.worldbank.org/en/projects-operations/project-detail/P179249
+#> 36  https://projects.worldbank.org/en/projects-operations/project-detail/P177917
+#> 37  https://projects.worldbank.org/en/projects-operations/project-detail/P177980
+#> 38  https://projects.worldbank.org/en/projects-operations/project-detail/P177876
+#> 39  https://projects.worldbank.org/en/projects-operations/project-detail/P178072
+#> 40  https://projects.worldbank.org/en/projects-operations/project-detail/P177671
+#> 41  https://projects.worldbank.org/en/projects-operations/project-detail/P176982
+#> 42  https://projects.worldbank.org/en/projects-operations/project-detail/P179039
+#> 43  https://projects.worldbank.org/en/projects-operations/project-detail/P175811
+#> 44  https://projects.worldbank.org/en/projects-operations/project-detail/P174593
+#> 45  https://projects.worldbank.org/en/projects-operations/project-detail/P178888
+#> 46  https://projects.worldbank.org/en/projects-operations/project-detail/P175728
+#> 47  https://projects.worldbank.org/en/projects-operations/project-detail/P178252
+#> 48  https://projects.worldbank.org/en/projects-operations/project-detail/P175261
+#> 49  https://projects.worldbank.org/en/projects-operations/project-detail/P178339
+#> 50  https://projects.worldbank.org/en/projects-operations/project-detail/P177070
+#> 51  https://projects.worldbank.org/en/projects-operations/project-detail/P171750
+#> 52  https://projects.worldbank.org/en/projects-operations/project-detail/P178146
+#> 53  https://projects.worldbank.org/en/projects-operations/project-detail/P175676
+#> 54  https://projects.worldbank.org/en/projects-operations/project-detail/P177915
+#> 55  https://projects.worldbank.org/en/projects-operations/project-detail/P174798
+#> 56  https://projects.worldbank.org/en/projects-operations/project-detail/P178729
+#> 57  https://projects.worldbank.org/en/projects-operations/project-detail/P176404
+#> 58  https://projects.worldbank.org/en/projects-operations/project-detail/P177856
+#> 59  https://projects.worldbank.org/en/projects-operations/project-detail/P178563
+#> 60  https://projects.worldbank.org/en/projects-operations/project-detail/P177632
+#> 61  https://projects.worldbank.org/en/projects-operations/project-detail/P168634
+#> 62  https://projects.worldbank.org/en/projects-operations/project-detail/P174067
+#> 63  https://projects.worldbank.org/en/projects-operations/project-detail/P174564
+#> 64  https://projects.worldbank.org/en/projects-operations/project-detail/P176107
+#> 65  https://projects.worldbank.org/en/projects-operations/project-detail/P172187
+#> 66  https://projects.worldbank.org/en/projects-operations/project-detail/P170590
+#> 67  https://projects.worldbank.org/en/projects-operations/project-detail/P174732
+#> 68  https://projects.worldbank.org/en/projects-operations/project-detail/P175221
+#> 69  https://projects.worldbank.org/en/projects-operations/project-detail/P173589
+#> 70  https://projects.worldbank.org/en/projects-operations/project-detail/P174778
+#> 71  https://projects.worldbank.org/en/projects-operations/project-detail/P173978
+#> 72  https://projects.worldbank.org/en/projects-operations/project-detail/P172226
+#> 73  https://projects.worldbank.org/en/projects-operations/project-detail/P173958
+#> 74  https://projects.worldbank.org/en/projects-operations/project-detail/P170811
+#> 75  https://projects.worldbank.org/en/projects-operations/project-detail/P173704
+#> 76  https://projects.worldbank.org/en/projects-operations/project-detail/P168633
+#> 77  https://projects.worldbank.org/en/projects-operations/project-detail/P170645
+#> 78  https://projects.worldbank.org/en/projects-operations/project-detail/P172213
+#> 79  https://projects.worldbank.org/en/projects-operations/project-detail/P170873
+#> 80  https://projects.worldbank.org/en/projects-operations/project-detail/P166020
+#> 81  https://projects.worldbank.org/en/projects-operations/project-detail/P168097
+#> 82  https://projects.worldbank.org/en/projects-operations/project-detail/P172605
+#> 83  https://projects.worldbank.org/en/projects-operations/project-detail/P174312
+#> 84  https://projects.worldbank.org/en/projects-operations/project-detail/P169111
+#> 85  https://projects.worldbank.org/en/projects-operations/project-detail/P166868
+#> 86  https://projects.worldbank.org/en/projects-operations/project-detail/P170850
+#> 87  https://projects.worldbank.org/en/projects-operations/project-detail/P168590
+#> 88  https://projects.worldbank.org/en/projects-operations/project-detail/P169140
+#> 89  https://projects.worldbank.org/en/projects-operations/project-detail/P163328
+#> 90  https://projects.worldbank.org/en/projects-operations/project-detail/P167350
+#> 91  https://projects.worldbank.org/en/projects-operations/project-detail/P170682
+#> 92  https://projects.worldbank.org/en/projects-operations/project-detail/P169134
+#> 93  https://projects.worldbank.org/en/projects-operations/project-detail/P165129
+#> 94  https://projects.worldbank.org/en/projects-operations/project-detail/P168310
+#> 95  https://projects.worldbank.org/en/projects-operations/project-detail/P157929
+#> 96  https://projects.worldbank.org/en/projects-operations/project-detail/P162679
+#> 97  https://projects.worldbank.org/en/projects-operations/project-detail/P163533
+#> 98  https://projects.worldbank.org/en/projects-operations/project-detail/P165055
+#> 99  https://projects.worldbank.org/en/projects-operations/project-detail/P167455
+#> 100 https://projects.worldbank.org/en/projects-operations/project-detail/P167581
+#> 101 https://projects.worldbank.org/en/projects-operations/project-detail/P160379
+#> 102 https://projects.worldbank.org/en/projects-operations/project-detail/P157141
+#> 103 https://projects.worldbank.org/en/projects-operations/project-detail/P167523
+#> 104 https://projects.worldbank.org/en/projects-operations/project-detail/P166923
+#> 105 https://projects.worldbank.org/en/projects-operations/project-detail/P165683
+#> 106 https://projects.worldbank.org/en/projects-operations/project-detail/P166578
+#> 107 https://projects.worldbank.org/en/projects-operations/project-detail/P165695
+#> 108 https://projects.worldbank.org/en/projects-operations/project-detail/P158502
+#> 109 https://projects.worldbank.org/en/projects-operations/project-detail/P160463
+#> 110 https://projects.worldbank.org/en/projects-operations/project-detail/P162086
+#> 111 https://projects.worldbank.org/en/projects-operations/project-detail/P158119
+#> 112 https://projects.worldbank.org/en/projects-operations/project-detail/P156869
+#> 113 https://projects.worldbank.org/en/projects-operations/project-detail/P158146
+#> 114 https://projects.worldbank.org/en/projects-operations/project-detail/P163868
+#> 115 https://projects.worldbank.org/en/projects-operations/project-detail/P158522
+#> 116 https://projects.worldbank.org/en/projects-operations/project-detail/P157702
+#> 117 https://projects.worldbank.org/en/projects-operations/project-detail/P147158
+#> 118 https://projects.worldbank.org/en/projects-operations/project-detail/P155617
+#> 119 https://projects.worldbank.org/en/projects-operations/project-detail/P156241
+#> 120 https://projects.worldbank.org/en/projects-operations/project-detail/P153012
+#> 121 https://projects.worldbank.org/en/projects-operations/project-detail/P155303
+#> 122 https://projects.worldbank.org/en/projects-operations/project-detail/P148775
+#> 123 https://projects.worldbank.org/en/projects-operations/project-detail/P152698
+#> 124 https://projects.worldbank.org/en/projects-operations/project-detail/P148531
+#> 125 https://projects.worldbank.org/en/projects-operations/project-detail/P155007
+#> 126 https://projects.worldbank.org/en/projects-operations/project-detail/P130544
+#> 127 https://projects.worldbank.org/en/projects-operations/project-detail/P127725
+#> 128 https://projects.worldbank.org/en/projects-operations/project-detail/P154990
+#> 129 https://projects.worldbank.org/en/projects-operations/project-detail/P096124
+#> 130 https://projects.worldbank.org/en/projects-operations/project-detail/P039027
+#> 131 https://projects.worldbank.org/en/projects-operations/project-detail/P507322
+#> 132 https://projects.worldbank.org/en/projects-operations/project-detail/P108190
+#> 133 https://projects.worldbank.org/en/projects-operations/project-detail/P505866
+#> 134 https://projects.worldbank.org/en/projects-operations/project-detail/P500380
+#> 135 https://projects.worldbank.org/en/projects-operations/project-detail/P502493
+#> 136 https://projects.worldbank.org/en/projects-operations/project-detail/P110539
+#> 137 https://projects.worldbank.org/en/projects-operations/project-detail/P181511
+#> 138 https://projects.worldbank.org/en/projects-operations/project-detail/P500469
+#> 139 https://projects.worldbank.org/en/projects-operations/project-detail/P501071
+#> 140 https://projects.worldbank.org/en/projects-operations/project-detail/P105370
+#> 141 https://projects.worldbank.org/en/projects-operations/project-detail/P180699
+#> 142 https://projects.worldbank.org/en/projects-operations/project-detail/P507340
+#> 143 https://projects.worldbank.org/en/projects-operations/project-detail/P114890
+#> 144 https://projects.worldbank.org/en/projects-operations/project-detail/P180716
+#> 145 https://projects.worldbank.org/en/projects-operations/project-detail/P504276
+#> 146 https://projects.worldbank.org/en/projects-operations/project-detail/P500570
+#> 147 https://projects.worldbank.org/en/projects-operations/project-detail/P173090
+#> 148 https://projects.worldbank.org/en/projects-operations/project-detail/P505177
+#> 149 https://projects.worldbank.org/en/projects-operations/project-detail/P506272
+#> 150 https://projects.worldbank.org/en/projects-operations/project-detail/P506321
+#> 151 https://projects.worldbank.org/en/projects-operations/project-detail/P181608
+#> 152 https://projects.worldbank.org/en/projects-operations/project-detail/P508025
+#> 153 https://projects.worldbank.org/en/projects-operations/project-detail/P181244
+#> 154 https://projects.worldbank.org/en/projects-operations/project-detail/P502499
+#> 155 https://projects.worldbank.org/en/projects-operations/project-detail/P500151
+#> 156 https://projects.worldbank.org/en/projects-operations/project-detail/P508719
+#> 157 https://projects.worldbank.org/en/projects-operations/project-detail/P505563
+#> 158 https://projects.worldbank.org/en/projects-operations/project-detail/P507628
+#> 159 https://projects.worldbank.org/en/projects-operations/project-detail/P178053
+#> 160 https://projects.worldbank.org/en/projects-operations/project-detail/P500564
+#> 161 https://projects.worldbank.org/en/projects-operations/project-detail/P505590
+#> 162 https://projects.worldbank.org/en/projects-operations/project-detail/P180932
+#> 163 https://projects.worldbank.org/en/projects-operations/project-detail/P505235
+#> 164 https://projects.worldbank.org/en/projects-operations/project-detail/P507629
+#> 165 https://projects.worldbank.org/en/projects-operations/project-detail/P506976
+#> 166 https://projects.worldbank.org/en/projects-operations/project-detail/P181767
+#> 167 https://projects.worldbank.org/en/projects-operations/project-detail/P506329
+#> 168 https://projects.worldbank.org/en/projects-operations/project-detail/P508489
+#> 169 https://projects.worldbank.org/en/projects-operations/project-detail/P500168
+#> 170 https://projects.worldbank.org/en/projects-operations/project-detail/P506320
+#> 171 https://projects.worldbank.org/en/projects-operations/project-detail/P500431
+#> 172 https://projects.worldbank.org/en/projects-operations/project-detail/P508453
+#> 173 https://projects.worldbank.org/en/projects-operations/project-detail/P504897
+#> 174 https://projects.worldbank.org/en/projects-operations/project-detail/P503872
+#> 175 https://projects.worldbank.org/en/projects-operations/project-detail/P506340
+#> 176 https://projects.worldbank.org/en/projects-operations/project-detail/P507236
+#> 177 https://projects.worldbank.org/en/projects-operations/project-detail/P179349
+#> 178 https://projects.worldbank.org/en/projects-operations/project-detail/P504543
+#> 179 https://projects.worldbank.org/en/projects-operations/project-detail/P509041
+#> 180 https://projects.worldbank.org/en/projects-operations/project-detail/P506142
+#> 181 https://projects.worldbank.org/en/projects-operations/project-detail/P505914
+#> 182 https://projects.worldbank.org/en/projects-operations/project-detail/P500614
+#> 183 https://projects.worldbank.org/en/projects-operations/project-detail/P506861
+#> 184 https://projects.worldbank.org/en/projects-operations/project-detail/P507910
+#> 185 https://projects.worldbank.org/en/projects-operations/project-detail/P504899
+#> 186 https://projects.worldbank.org/en/projects-operations/project-detail/P500501
+#> 187 https://projects.worldbank.org/en/projects-operations/project-detail/P181020
+#> 188 https://projects.worldbank.org/en/projects-operations/project-detail/P500252
+#> 189 https://projects.worldbank.org/en/projects-operations/project-detail/P506955
+#> 190 https://projects.worldbank.org/en/projects-operations/project-detail/P508840
+#> 191 https://projects.worldbank.org/en/projects-operations/project-detail/P504126
+#> 192 https://projects.worldbank.org/en/projects-operations/project-detail/P507066
+#> 193 https://projects.worldbank.org/en/projects-operations/project-detail/P508221
+#> 194 https://projects.worldbank.org/en/projects-operations/project-detail/P507029
+#> 195 https://projects.worldbank.org/en/projects-operations/project-detail/P508202
+#> 196 https://projects.worldbank.org/en/projects-operations/project-detail/P508363
+#> 197 https://projects.worldbank.org/en/projects-operations/project-detail/P114896
+#> 198 https://projects.worldbank.org/en/projects-operations/project-detail/P502491
+#> 199 https://projects.worldbank.org/en/projects-operations/project-detail/P504253
+#> 200 https://projects.worldbank.org/en/projects-operations/project-detail/P181524
+#> 201 https://projects.worldbank.org/en/projects-operations/project-detail/P073882
+#> 202 https://projects.worldbank.org/en/projects-operations/project-detail/P177159
+#> 203 https://projects.worldbank.org/en/projects-operations/project-detail/P132620
+#> 204 https://projects.worldbank.org/en/projects-operations/project-detail/P122387
+#> 205 https://projects.worldbank.org/en/projects-operations/project-detail/P128921
+#> 206 https://projects.worldbank.org/en/projects-operations/project-detail/P158000
+#> 207 https://projects.worldbank.org/en/projects-operations/project-detail/P160018
+#> 208 https://projects.worldbank.org/en/projects-operations/project-detail/P171257
+#> 209 https://projects.worldbank.org/en/projects-operations/project-detail/P172497
+#> 210 https://projects.worldbank.org/en/projects-operations/project-detail/P164602
+#> 211 https://projects.worldbank.org/en/projects-operations/project-detail/P009585
+#> 212 https://projects.worldbank.org/en/projects-operations/project-detail/P152285
 
 # look up specific projects
 wb_project(id = c("P163868", "P180429"))
-#>              id                                          project_name status
-#> P180429 P180429           Bahia Sustainable Rural Development Project Active
-#> P163868 P163868 Support to Upper Secondary Reform in Brazil Operation Active
-#>         approval_date closing_date country_code country
-#> P180429    2024-11-07   2030-10-30           BR  Brazil
-#> P163868    2017-12-14   2024-12-31           BR  Brazil
-#>                              region total_commitment ibrd_commitment
-#> P180429 Latin America and Caribbean              100             100
-#> P163868 Latin America and Caribbean              250             250
-#>         ida_commitment            lending_instrument
-#> P180429              0  Investment Project Financing
-#> P163868              0 Program-for-Results Financing
-#>                                             borrower
-#> P180429             Government of the State of Bahia
-#> P163868 Ministry of Economy (Minist�rio da Economia)
-#>                                        implementing_agency
-#> P180429 CAR - Companhia de Desenvolvimento e Acao Regional
-#> P163868     Ministry of Education (Minist�rio da Educa��o)
-#>                                                                                  url
-#> P180429 https://projects.worldbank.org/en/projects-operations/project-detail/P180429
-#> P163868 https://projects.worldbank.org/en/projects-operations/project-detail/P163868
+#>        id                                          project_name status
+#> 1 P180429           Bahia Sustainable Rural Development Project Active
+#> 2 P163868 Support to Upper Secondary Reform in Brazil Operation Active
+#>   approval_date closing_date country_code country                      region
+#> 1    2024-11-07   2030-10-30           BR  Brazil Latin America and Caribbean
+#> 2    2017-12-14   2024-12-31           BR  Brazil Latin America and Caribbean
+#>   total_commitment ibrd_commitment ida_commitment            lending_instrument
+#> 1              100             100              0  Investment Project Financing
+#> 2              250             250              0 Program-for-Results Financing
+#>                                       borrower
+#> 1             Government of the State of Bahia
+#> 2 Ministry of Economy (Minist�rio da Economia)
+#>                                  implementing_agency
+#> 1 CAR - Companhia de Desenvolvimento e Acao Regional
+#> 2     Ministry of Education (Minist�rio da Educa��o)
+#>                                                                            url
+#> 1 https://projects.worldbank.org/en/projects-operations/project-detail/P180429
+#> 2 https://projects.worldbank.org/en/projects-operations/project-detail/P163868
 # }
 ```

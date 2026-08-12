@@ -122,9 +122,21 @@ Other indicators data:
 # \donttest{
 # single indicator for a single country (all available years)
 ind <- wb_data("NY.GDP.MKTP.CD", "US")
-#> Error in req_perform(req_error(req_url_query(req_url_path_append(wb_request("https://api.worldbank.org/v2"),     lang, resource), ..., format = "json", per_page = per_page),     is_error = is_wb_error, body = wb_error_body)): HTTP 400 Bad Request.
 head(ind)
-#> Error: object 'ind' not found
+#>   date   indicator_id    indicator_name country_id  country_name country_code
+#> 1 2025 NY.GDP.MKTP.CD GDP (current US$)         US United States          USA
+#> 2 2024 NY.GDP.MKTP.CD GDP (current US$)         US United States          USA
+#> 3 2023 NY.GDP.MKTP.CD GDP (current US$)         US United States          USA
+#> 4 2022 NY.GDP.MKTP.CD GDP (current US$)         US United States          USA
+#> 5 2021 NY.GDP.MKTP.CD GDP (current US$)         US United States          USA
+#> 6 2020 NY.GDP.MKTP.CD GDP (current US$)         US United States          USA
+#>          value unit obs_status decimal
+#> 1 3.076970e+13 <NA>       <NA>       0
+#> 2 2.929801e+13 <NA>       <NA>       0
+#> 3 2.781152e+13 <NA>       <NA>       0
+#> 4 2.605461e+13 <NA>       <NA>       0
+#> 5 2.372564e+13 <NA>       <NA>       0
+#> 6 2.137528e+13 <NA>       <NA>       0
 
 # multiple indicators for multiple countries (2015-2023)
 ind <- wb_data(
@@ -132,8 +144,6 @@ ind <- wb_data(
   country = c("US", "DE", "FR", "CH", "JP"),
   start_date = 2015, end_date = 2023
 )
-#> iterating ■■■■■■■■■■■■■■■■                  50% | ETA:  4s
-#> iterating ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■  100% | ETA:  0s
 head(ind)
 #>   date   indicator_id    indicator_name country_id country_name country_code
 #> 1 2023 NY.GDP.MKTP.CD GDP (current US$)         CH  Switzerland          CHE

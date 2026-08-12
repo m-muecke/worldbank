@@ -43,6 +43,8 @@
 <ul><li>
 <code><a href="../reference/fone.html">fone_dataset()</a></code> and <code><a href="../reference/fone.html">fone_view()</a></code> now return no more than the requested <code>limit</code> when pagination is required.</li>
 <li>
+<code><a href="../reference/fone.html">fone_dataset()</a></code>, <code><a href="../reference/fone.html">fone_view()</a></code>, and the PIP functions now keep Namibia’s <code>"NA"</code> country code, instead of reading it as a missing value.</li>
+<li>
 <code><a href="../reference/fone.html">fone_view()</a></code> now trims whitespace and returns <code>NA</code> instead of <code>""</code> for empty fields, matching <code><a href="../reference/fone.html">fone_dataset()</a></code> and the rest of the package.</li>
 <li>The PIP functions now require <code>release_version</code> and <code>ppp_version</code> to be exactly 8 and 4 digits, given as a string or a number.</li>
 <li>
@@ -57,6 +59,8 @@
 <code><a href="../reference/wb_project.html">wb_project()</a></code> now accepts multiple values for <code>id</code>, <code>status</code>, and <code>region</code>, returning the projects that match any of them.</li>
 <li>
 <code><a href="../reference/wb_project.html">wb_project()</a></code> now requires <code>status</code> to be one of <code>"active"</code>, <code>"closed"</code>, <code>"dropped"</code>, or <code>"pipeline"</code>.</li>
+<li>
+<code><a href="../reference/wb_project.html">wb_project()</a></code> now numbers the rows of the returned data frame, instead of naming them after the project IDs already held in the <code>id</code> column.</li>
 </ul></div>
     <div class="section level2">
 <h2 class="pkg-version" data-toc-text="0.9.1" id="worldbank-091">worldbank 0.9.1<a class="anchor" aria-label="anchor" href="#worldbank-091"></a></h2><p class="text-muted">CRAN release: 2026-06-29</p>
