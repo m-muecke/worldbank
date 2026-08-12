@@ -12,7 +12,8 @@ wb_data(
   start_date = NULL,
   end_date = NULL,
   mrv = NULL,
-  gapfill = FALSE
+  gapfill = FALSE,
+  footnote = FALSE
 )
 
 wb_country_indicator(
@@ -22,7 +23,8 @@ wb_country_indicator(
   start_date = NULL,
   end_date = NULL,
   mrv = NULL,
-  gapfill = FALSE
+  gapfill = FALSE,
+  footnote = FALSE
 )
 ```
 
@@ -76,6 +78,13 @@ wb_country_indicator(
   Whether to fill missing values by carrying forward the last available
   value. Only used when `mrv` is set. Default `FALSE`.
 
+- footnote:
+
+  (`logical(1)`)  
+  Whether to return the footnotes published alongside the observations,
+  such as uncertainty bounds or the survey a figure was derived from.
+  Default `FALSE`.
+
 ## Value
 
 A [`data.frame()`](https://rdrr.io/r/base/data.frame.html) with the
@@ -101,6 +110,9 @@ available country indicators. The columns are:
 - `obs_status`: The observation status.
 
 - `decimal`: The decimal.
+
+- `footnote`: The observation footnote, or `NA` if there is none. Only
+  present when `footnote = TRUE`.
 
 ## See also
 
@@ -159,5 +171,23 @@ head(ind)
 #> 4 756096180222 <NA>       <NA>       0
 #> 5 736384764157 <NA>       <NA>       0
 #> 6 740766531454 <NA>       <NA>       0
+
+# include the per-observation footnotes
+ind <- wb_data("SI.POV.DDAY", "ALB", footnote = TRUE)
+head(ind[c("date", "value", "footnote")])
+#>   date value
+#> 1 2020   0.3
+#> 2 2019   0.3
+#> 3 2018   1.0
+#> 4 2017   1.4
+#> 5 2016   1.1
+#> 6 2015   1.1
+#>                                                               footnote
+#> 1 Based on data from HBS. Estimated from unit-record consumption data.
+#> 2 Based on data from HBS. Estimated from unit-record consumption data.
+#> 3 Based on data from HBS. Estimated from unit-record consumption data.
+#> 4 Based on data from HBS. Estimated from unit-record consumption data.
+#> 5 Based on data from HBS. Estimated from unit-record consumption data.
+#> 6 Based on data from HBS. Estimated from unit-record consumption data.
 # }
 ```

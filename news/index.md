@@ -29,6 +29,9 @@
   columns of the `country` table, instead of reading it as a missing
   value.
 - [`wb_data()`](https://m-muecke.github.io/worldbank/reference/wb_data.md)
+  gains a `footnote` argument to return the footnotes published with
+  each observation.
+- [`wb_data()`](https://m-muecke.github.io/worldbank/reference/wb_data.md)
   no longer returns `NA` dates when a query mixes annual and sub-annual
   indicators.
 - [`wb_project()`](https://m-muecke.github.io/worldbank/reference/wb_project.md)

@@ -52,7 +52,8 @@
 <span>  start_date <span class="op">=</span> <span class="cn">NULL</span>,</span>
 <span>  end_date <span class="op">=</span> <span class="cn">NULL</span>,</span>
 <span>  mrv <span class="op">=</span> <span class="cn">NULL</span>,</span>
-<span>  gapfill <span class="op">=</span> <span class="cn">FALSE</span></span>
+<span>  gapfill <span class="op">=</span> <span class="cn">FALSE</span>,</span>
+<span>  footnote <span class="op">=</span> <span class="cn">FALSE</span></span>
 <span><span class="op">)</span></span>
 <span></span>
 <span><span class="fu">wb_country_indicator</span><span class="op">(</span></span>
@@ -62,7 +63,8 @@
 <span>  start_date <span class="op">=</span> <span class="cn">NULL</span>,</span>
 <span>  end_date <span class="op">=</span> <span class="cn">NULL</span>,</span>
 <span>  mrv <span class="op">=</span> <span class="cn">NULL</span>,</span>
-<span>  gapfill <span class="op">=</span> <span class="cn">FALSE</span></span>
+<span>  gapfill <span class="op">=</span> <span class="cn">FALSE</span>,</span>
+<span>  footnote <span class="op">=</span> <span class="cn">FALSE</span></span>
 <span><span class="op">)</span></span></code></pre></div>
     </div>
 
@@ -112,6 +114,12 @@ Most recent values to return. An alternative to <code>start_date</code>/<code>en
 Whether to fill missing values by carrying forward the last available value. Only used when
 <code>mrv</code> is set. Default <code>FALSE</code>.</p></dd>
 
+
+<dt id="arg-footnote">footnote<a class="anchor" aria-label="anchor" href="#arg-footnote"></a></dt>
+<dd><p>(<code>logical(1)</code>)<br>
+Whether to return the footnotes published alongside the observations, such as uncertainty
+bounds or the survey a figure was derived from. Default <code>FALSE</code>.</p></dd>
+
 </dl></div>
     <div class="section level2">
     <h2 id="value">Value<a class="anchor" aria-label="anchor" href="#value"></a></h2>
@@ -126,6 +134,8 @@ The columns are:</p><ul><li><p><code>date</code>: The date. An integer if all ob
 <li><p><code>unit</code>: The indicator unit.</p></li>
 <li><p><code>obs_status</code>: The observation status.</p></li>
 <li><p><code>decimal</code>: The decimal.</p></li>
+<li><p><code>footnote</code>: The observation footnote, or <code>NA</code> if there is none. Only present when
+<code>footnote = TRUE</code>.</p></li>
 </ul></div>
     <div class="section level2">
     <h2 id="see-also">See also<a class="anchor" aria-label="anchor" href="#see-also"></a></h2>
@@ -184,6 +194,24 @@ The columns are:</p><ul><li><p><code>date</code>: The date. An integer if all ob
 <span class="r-out co"><span class="r-pr">#&gt;</span> 4 756096180222 &lt;NA&gt;       &lt;NA&gt;       0</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 5 736384764157 &lt;NA&gt;       &lt;NA&gt;       0</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 6 740766531454 &lt;NA&gt;       &lt;NA&gt;       0</span>
+<span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="co"># include the per-observation footnotes</span></span></span>
+<span class="r-in"><span><span class="va">ind</span> <span class="op">&lt;-</span> <span class="fu">wb_data</span><span class="op">(</span><span class="st">"SI.POV.DDAY"</span>, <span class="st">"ALB"</span>, footnote <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="va">ind</span><span class="op">[</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"date"</span>, <span class="st">"value"</span>, <span class="st">"footnote"</span><span class="op">)</span><span class="op">]</span><span class="op">)</span></span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   date value</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1 2020   0.3</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2 2019   0.3</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 3 2018   1.0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 4 2017   1.4</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 5 2016   1.1</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 6 2015   1.1</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                                                               footnote</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1 Based on data from HBS. Estimated from unit-record consumption data.</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2 Based on data from HBS. Estimated from unit-record consumption data.</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 3 Based on data from HBS. Estimated from unit-record consumption data.</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 4 Based on data from HBS. Estimated from unit-record consumption data.</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 5 Based on data from HBS. Estimated from unit-record consumption data.</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 6 Based on data from HBS. Estimated from unit-record consumption data.</span>
 <span class="r-in"><span><span class="co"># }</span></span></span>
 </code></pre></div>
     </div>
