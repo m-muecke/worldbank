@@ -6,10 +6,11 @@ test_that("fone_dataset basic checks", {
   res <- fone_dataset(dataset_id = "DS00047", resource_id = "RS00005")
   expect_s3_class(res, "data.frame")
   expect_gt(nrow(res), 100L)
+  expect_contains(names(res), c("country", "country_code", "loan_number", "project_id"))
 
   res <- fone_dataset(dataset_id = "DS00047", resource_id = "RS00005", limit = 10L)
   expect_s3_class(res, "data.frame")
-  expect_shape(res, dim = c(10L, 33L))
+  expect_shape(res, nrow = 10L)
 })
 
 test_that("fone_view basic checks", {
@@ -20,10 +21,11 @@ test_that("fone_view basic checks", {
   res <- fone_view(view_id = "DS01538")
   expect_s3_class(res, "data.frame")
   expect_gt(nrow(res), 100L)
+  expect_contains(names(res), c("country", "original_principal_amount", "disbursed_amount"))
 
   res <- fone_view(view_id = "DS01538", limit = 10L)
   expect_s3_class(res, "data.frame")
-  expect_shape(res, dim = c(10L, 6L))
+  expect_shape(res, nrow = 10L)
 })
 
 test_that("fone limit caps results across pages", {
