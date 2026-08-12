@@ -15,5 +15,5 @@ wb_request <- function(url) {
 
 resp_body_csv <- function(resp) {
   body <- resp_body_string(resp, "UTF-8")
-  utils::read.csv(textConnection(body, encoding = "UTF-8"))
+  utils::read.csv(textConnection(body, encoding = "UTF-8"), na.strings = character())
 }
