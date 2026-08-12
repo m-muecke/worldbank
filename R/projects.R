@@ -133,7 +133,8 @@ parse_projects <- function(data) {
     borrower = map_chr(data, \(x) x$borrower %||% NA_character_),
     implementing_agency = map_chr(data, \(x) x$impagency %||% NA_character_),
     url = map_chr(data, \(x) x$url %||% NA_character_),
-    check.names = FALSE
+    check.names = FALSE,
+    row.names = NULL
   )
   res$approval_date <- as.Date(sub("T.*", "", res$approval_date))
   res$closing_date <- as.Date(res$closing_date, format = "%m/%d/%Y")
