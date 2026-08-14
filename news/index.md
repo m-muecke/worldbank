@@ -48,6 +48,9 @@
 - [`wb_project()`](https://m-muecke.github.io/worldbank/reference/wb_project.md)
   now numbers the rows of the returned data frame, instead of naming
   them after the project IDs already held in the `id` column.
+- [`wb_search()`](https://m-muecke.github.io/worldbank/reference/wb_search.md)
+  now numbers the rows of the returned data frame, instead of naming
+  them after each match’s position in the indicator catalog.
 
 ## worldbank 0.9.1
 
