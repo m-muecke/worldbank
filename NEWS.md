@@ -12,6 +12,7 @@
 * `wb_project()` now accepts multiple values for `id`, `status`, and `region`, returning the projects that match any of them.
 * `wb_project()` now requires `status` to be one of `"active"`, `"closed"`, `"dropped"`, or `"pipeline"`.
 * `wb_project()` now numbers the rows of the returned data frame, instead of naming them after the project IDs already held in the `id` column.
+* `wb_search()` now numbers the rows of the returned data frame, instead of naming them after each match's position in the indicator catalog.
 
 # worldbank 0.9.1
 

@@ -384,7 +384,9 @@ wb_search <- function(
     m & !is.na(m)
   })
   hit <- Reduce(`|`, hit)
-  catalog[hit, , drop = FALSE]
+  res <- catalog[hit, , drop = FALSE]
+  row.names(res) <- NULL
+  res
 }
 
 #' World Bank WDI bulk download
