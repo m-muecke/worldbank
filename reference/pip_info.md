@@ -120,16 +120,16 @@ pip_info()
 #> [1] "bit_4.6.0"
 #> 
 #> $other_packages[[4]]
-#> [1] "bit64_4.6.0-1"
+#> [1] "bit64_4.8.2"
 #> 
 #> $other_packages[[5]]
 #> [1] "cachem_1.1.0"
 #> 
 #> $other_packages[[6]]
-#> [1] "cli_3.6.5"
+#> [1] "cli_3.6.6"
 #> 
 #> $other_packages[[7]]
-#> [1] "collapse_2.1.6"
+#> [1] "collapse_2.1.7"
 #> 
 #> $other_packages[[8]]
 #> [1] "compiler_4.3.2"
@@ -138,7 +138,7 @@ pip_info()
 #> [1] "crayon_1.5.3"
 #> 
 #> $other_packages[[10]]
-#> [1] "data.table_1.18.2.1"
+#> [1] "data.table_1.18.4"
 #> 
 #> $other_packages[[11]]
 #> [1] "DBI_1.3.0"
@@ -150,13 +150,13 @@ pip_info()
 #> [1] "fastmap_1.2.0"
 #> 
 #> $other_packages[[14]]
-#> [1] "fs_2.0.1"
+#> [1] "fs_2.1.0"
 #> 
 #> $other_packages[[15]]
 #> [1] "fst_0.9.8"
 #> 
 #> $other_packages[[16]]
-#> [1] "glue_1.8.0"
+#> [1] "glue_1.8.1"
 #> 
 #> $other_packages[[17]]
 #> [1] "hms_1.1.4"
@@ -180,96 +180,93 @@ pip_info()
 #> [1] "magrittr_2.0.5"
 #> 
 #> $other_packages[[24]]
-#> [1] "MASS_7.3-60"
-#> 
-#> $other_packages[[25]]
 #> [1] "memoise_2.0.1"
 #> 
-#> $other_packages[[26]]
+#> $other_packages[[25]]
 #> [1] "otel_0.2.0"
 #> 
-#> $other_packages[[27]]
+#> $other_packages[[26]]
 #> [1] "parallel_4.3.2"
 #> 
-#> $other_packages[[28]]
+#> $other_packages[[27]]
 #> [1] "pillar_1.11.1"
 #> 
-#> $other_packages[[29]]
+#> $other_packages[[28]]
 #> [1] "pkgconfig_2.0.3"
 #> 
-#> $other_packages[[30]]
+#> $other_packages[[29]]
 #> [1] "promises_1.5.0"
 #> 
+#> $other_packages[[30]]
+#> [1] "purrr_1.2.2"
+#> 
 #> $other_packages[[31]]
-#> [1] "purrr_1.2.1"
+#> [1] "qs2_0.2.2"
 #> 
 #> $other_packages[[32]]
-#> [1] "qs2_0.1.7"
-#> 
-#> $other_packages[[33]]
 #> [1] "R.methodsS3_1.8.2"
 #> 
-#> $other_packages[[34]]
+#> $other_packages[[33]]
 #> [1] "R.oo_1.27.1"
 #> 
-#> $other_packages[[35]]
+#> $other_packages[[34]]
 #> [1] "R.utils_2.13.0"
 #> 
-#> $other_packages[[36]]
+#> $other_packages[[35]]
 #> [1] "R6_2.6.1"
 #> 
-#> $other_packages[[37]]
+#> $other_packages[[36]]
 #> [1] "rappdirs_0.3.4"
 #> 
+#> $other_packages[[37]]
+#> [1] "Rcpp_1.1.2"
+#> 
 #> $other_packages[[38]]
-#> [1] "Rcpp_1.1.1"
+#> [1] "RcppParallel_6.2.0"
 #> 
 #> $other_packages[[39]]
-#> [1] "RcppParallel_5.1.11-2"
-#> 
-#> $other_packages[[40]]
 #> [1] "readr_2.2.0"
 #> 
+#> $other_packages[[40]]
+#> [1] "rlang_1.3.0"
+#> 
 #> $other_packages[[41]]
-#> [1] "rlang_1.2.0"
+#> [1] "stringfish_0.19.2"
 #> 
 #> $other_packages[[42]]
-#> [1] "stringfish_0.18.0"
+#> [1] "stringi_1.8.9"
 #> 
 #> $other_packages[[43]]
-#> [1] "stringi_1.8.7"
-#> 
-#> $other_packages[[44]]
 #> [1] "swagger_5.32.1"
 #> 
-#> $other_packages[[45]]
+#> $other_packages[[44]]
 #> [1] "tibble_3.3.1"
 #> 
-#> $other_packages[[46]]
+#> $other_packages[[45]]
 #> [1] "tidyselect_1.2.1"
 #> 
-#> $other_packages[[47]]
+#> $other_packages[[46]]
 #> [1] "tools_4.3.2"
 #> 
-#> $other_packages[[48]]
+#> $other_packages[[47]]
 #> [1] "triebeard_0.4.1"
 #> 
-#> $other_packages[[49]]
+#> $other_packages[[48]]
 #> [1] "tzdb_0.5.0"
 #> 
-#> $other_packages[[50]]
+#> $other_packages[[49]]
 #> [1] "urltools_1.7.3.1"
 #> 
-#> $other_packages[[51]]
-#> [1] "vctrs_0.7.2"
+#> $other_packages[[50]]
+#> [1] "vctrs_0.7.3"
 #> 
-#> $other_packages[[52]]
+#> $other_packages[[51]]
 #> [1] "vroom_1.7.1"
 #> 
-#> $other_packages[[53]]
-#> [1] "webutils_1.2.2"
+#> $other_packages[[52]]
+#> [1] "webutils_1.2.3"
 #> 
-#> $other_packages[[54]]
+#> $other_packages[[53]]
 #> [1] "yaml_2.3.12"
 #> 
 #> 
@@ -285,7 +282,7 @@ pip_info()
 #> 
 #> $server_time
 #> $server_time[[1]]
-#> [1] "2026-08-14 09:13:34"
+#> [1] "2026-08-19 11:08:48"
 #> 
 #> 
 # }
