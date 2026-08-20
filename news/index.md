@@ -20,6 +20,13 @@
   and the rest of the package.
 - [`pip_cp()`](https://m-muecke.github.io/worldbank/reference/pip_cp.md),
   [`pip_data()`](https://m-muecke.github.io/worldbank/reference/pip_data.md),
+  [`pip_group()`](https://m-muecke.github.io/worldbank/reference/pip_group.md),
+  and
+  [`pip_versions()`](https://m-muecke.github.io/worldbank/reference/pip_versions.md)
+  now trim whitespace and return `NA` instead of `""` for empty fields,
+  matching the rest of the package.
+- [`pip_cp()`](https://m-muecke.github.io/worldbank/reference/pip_cp.md),
+  [`pip_data()`](https://m-muecke.github.io/worldbank/reference/pip_data.md),
   and
   [`pip_group()`](https://m-muecke.github.io/worldbank/reference/pip_group.md)
   now require `povline` to be a number between `0` and `2700`, and

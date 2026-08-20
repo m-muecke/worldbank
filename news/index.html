@@ -48,6 +48,8 @@
 <li>
 <code><a href="../reference/fone.html">fone_view()</a></code> now trims whitespace and returns <code>NA</code> instead of <code>""</code> for empty fields, matching <code><a href="../reference/fone.html">fone_dataset()</a></code> and the rest of the package.</li>
 <li>
+<code><a href="../reference/pip_cp.html">pip_cp()</a></code>, <code><a href="../reference/pip_data.html">pip_data()</a></code>, <code><a href="../reference/pip_group.html">pip_group()</a></code>, and <code><a href="../reference/pip_versions.html">pip_versions()</a></code> now trim whitespace and return <code>NA</code> instead of <code>""</code> for empty fields, matching the rest of the package.</li>
+<li>
 <code><a href="../reference/pip_cp.html">pip_cp()</a></code>, <code><a href="../reference/pip_data.html">pip_data()</a></code>, and <code><a href="../reference/pip_group.html">pip_group()</a></code> now require <code>povline</code> to be a number between <code>0</code> and <code>2700</code>, and <code><a href="../reference/pip_data.html">pip_data()</a></code> and <code><a href="../reference/pip_group.html">pip_group()</a></code> require <code>popshare</code> to be a number between <code>0</code> and <code>1</code>.</li>
 <li>
 <code><a href="../reference/pip_data.html">pip_data()</a></code> and <code><a href="../reference/pip_group.html">pip_group()</a></code> now correctly document <code>popshare</code> as taking precedence over <code>povline</code>; the documentation previously claimed the opposite. The behavior is unchanged.</li>
