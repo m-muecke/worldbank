@@ -1,4 +1,4 @@
-# worldbank (development version)
+# worldbank 0.10.0
 
 * The PIP functions now require `release_version` and `ppp_version` to be exactly 8 and 4 digits, given as a string or a number.
 * `fone_dataset()` and `fone_view()` now return no more than the requested `limit` when pagination is required.
