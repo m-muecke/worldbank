@@ -1,16 +1,17 @@
 # worldbank (development version)
 
+* The PIP functions now require `release_version` and `ppp_version` to be exactly 8 and 4 digits, given as a string or a number.
 * `fone_dataset()` and `fone_view()` now return no more than the requested `limit` when pagination is required.
 * `fone_dataset()`, `fone_view()`, and the PIP functions now keep Namibia's `"NA"` country code, instead of reading it as a missing value.
 * `fone_view()` now trims whitespace and returns `NA` instead of `""` for empty fields, matching `fone_dataset()` and the rest of the package.
-* The PIP functions now require `release_version` and `ppp_version` to be exactly 8 and 4 digits, given as a string or a number.
-* `pip_data()`, `pip_cp()`, and `pip_group()` now require `povline` and `popshare` to be numbers within the ranges accepted by the API.
+* `pip_cp()`, `pip_data()`, and `pip_group()` now require `povline` to be a number between `0` and `2700`, and `pip_data()` and `pip_group()` require `popshare` to be a number between `0` and `1`.
+* `pip_data()` and `pip_group()` now correctly document `popshare` as taking precedence over `povline`; the documentation previously claimed the opposite. The behavior is unchanged.
 * `wb_bulk()` now keeps Namibia's `"NA"` code in the `iso2_code` and `wb_iso2_code` columns of the `country` table, instead of reading it as a missing value.
 * `wb_data()` gains a `footnote` argument to return the footnotes published with each observation.
 * `wb_data()` no longer returns `NA` dates when a query mixes annual and sub-annual indicators.
 * `wb_project()` now returns results when `country` holds more than one code, instead of silently returning no rows. Codes are also upper-cased before querying, and must be two characters, since the Projects API matches them exactly.
 * `wb_project()` now accepts multiple values for `id`, `status`, and `region`, returning the projects that match any of them.
-* `wb_project()` now requires `status` to be one of `"active"`, `"closed"`, `"dropped"`, or `"pipeline"`.
+* `wb_project()` now requires `status` to be one of `"active"`, `"closed"`, `"dropped"`, or `"pipeline"`, matched case insensitively.
 * `wb_project()` now numbers the rows of the returned data frame, instead of naming them after the project IDs already held in the `id` column.
 * `wb_search()` now numbers the rows of the returned data frame, instead of naming them after each match's position in the indicator catalog.
 
