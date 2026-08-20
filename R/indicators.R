@@ -440,7 +440,8 @@ wb_bulk <- function(timeout = 600L) {
     data
   }
 
-  # `NA` is Namibia's ISO-2 code, not a missing-value sentinel.
+  # `NA` is Namibia's ISO-2 code, not a missing-value sentinel. Only the code columns
+  # contain `NA`; the rest of the file marks missing values with an empty string.
   country <- read_csv("WDICountry.csv", na_strings = character())
   names(country)[names(country) == "x2_alpha_code"] <- "iso2_code"
   names(country)[names(country) == "wb_2_code"] <- "wb_iso2_code"
