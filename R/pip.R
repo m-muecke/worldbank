@@ -288,7 +288,7 @@ pip_aux <- function(
     )
     map_chr(res, "tables")
   } else {
-    res <- pip(
+    pip(
       resource = "aux",
       table = table,
       release_version = release_version,
@@ -296,7 +296,6 @@ pip_aux <- function(
       version = version,
       format = "csv"
     )
-    clean_strings(res)
   }
 }
 
@@ -326,7 +325,7 @@ pip_valid_params <- function(
     is_string(version, null_ok = TRUE)
   )
   endpoint <- match.arg(endpoint)
-  res <- pip(
+  pip(
     resource = "valid-params",
     endpoint = endpoint,
     release_version = release_version,
@@ -334,7 +333,6 @@ pip_valid_params <- function(
     version = version,
     format = "csv"
   )
-  clean_strings(res)
 }
 
 #' Return information about the API
@@ -388,7 +386,7 @@ pip <- function(resource, ..., format = c("json", "csv", "xml", "rds")) {
   switch(
     format,
     json = resp_body_json(resp),
-    csv = resp_body_csv(resp),
+    csv = clean_strings(resp_body_csv(resp)),
     xml = resp_body_xml(resp),
     rds = resp_body_raw(resp)
   )

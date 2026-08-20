@@ -4,6 +4,7 @@
 * `fone_dataset()` and `fone_view()` now return no more than the requested `limit` when pagination is required.
 * `fone_dataset()`, `fone_view()`, and the PIP functions now keep Namibia's `"NA"` country code, instead of reading it as a missing value.
 * `fone_view()` now trims whitespace and returns `NA` instead of `""` for empty fields, matching `fone_dataset()` and the rest of the package.
+* `pip_cp()`, `pip_data()`, `pip_group()`, and `pip_versions()` now trim whitespace and return `NA` instead of `""` for empty fields, matching the rest of the package.
 * `pip_cp()`, `pip_data()`, and `pip_group()` now require `povline` to be a number between `0` and `2700`, and `pip_data()` and `pip_group()` require `popshare` to be a number between `0` and `1`.
 * `pip_data()` and `pip_group()` now correctly document `popshare` as taking precedence over `povline`; the documentation previously claimed the opposite. The behavior is unchanged.
 * `wb_bulk()` now keeps Namibia's `"NA"` code in the `iso2_code` and `wb_iso2_code` columns of the `country` table, instead of reading it as a missing value.
