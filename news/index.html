@@ -40,15 +40,17 @@
 
     <div class="section level2">
 <h2 class="pkg-version" data-toc-text="development version" id="worldbank-development-version">worldbank (development version)<a class="anchor" aria-label="anchor" href="#worldbank-development-version"></a></h2>
-<ul><li>
+<ul><li>The PIP functions now require <code>release_version</code> and <code>ppp_version</code> to be exactly 8 and 4 digits, given as a string or a number.</li>
+<li>
 <code><a href="../reference/fone.html">fone_dataset()</a></code> and <code><a href="../reference/fone.html">fone_view()</a></code> now return no more than the requested <code>limit</code> when pagination is required.</li>
 <li>
 <code><a href="../reference/fone.html">fone_dataset()</a></code>, <code><a href="../reference/fone.html">fone_view()</a></code>, and the PIP functions now keep Namibia’s <code>"NA"</code> country code, instead of reading it as a missing value.</li>
 <li>
 <code><a href="../reference/fone.html">fone_view()</a></code> now trims whitespace and returns <code>NA</code> instead of <code>""</code> for empty fields, matching <code><a href="../reference/fone.html">fone_dataset()</a></code> and the rest of the package.</li>
-<li>The PIP functions now require <code>release_version</code> and <code>ppp_version</code> to be exactly 8 and 4 digits, given as a string or a number.</li>
 <li>
-<code><a href="../reference/pip_data.html">pip_data()</a></code>, <code><a href="../reference/pip_cp.html">pip_cp()</a></code>, and <code><a href="../reference/pip_group.html">pip_group()</a></code> now require <code>povline</code> and <code>popshare</code> to be numbers within the ranges accepted by the API.</li>
+<code><a href="../reference/pip_cp.html">pip_cp()</a></code>, <code><a href="../reference/pip_data.html">pip_data()</a></code>, and <code><a href="../reference/pip_group.html">pip_group()</a></code> now require <code>povline</code> to be a number between <code>0</code> and <code>2700</code>, and <code><a href="../reference/pip_data.html">pip_data()</a></code> and <code><a href="../reference/pip_group.html">pip_group()</a></code> require <code>popshare</code> to be a number between <code>0</code> and <code>1</code>.</li>
+<li>
+<code><a href="../reference/pip_data.html">pip_data()</a></code> and <code><a href="../reference/pip_group.html">pip_group()</a></code> now correctly document <code>popshare</code> as taking precedence over <code>povline</code>; the documentation previously claimed the opposite. The behavior is unchanged.</li>
 <li>
 <code><a href="../reference/wb_bulk.html">wb_bulk()</a></code> now keeps Namibia’s <code>"NA"</code> code in the <code>iso2_code</code> and <code>wb_iso2_code</code> columns of the <code>country</code> table, instead of reading it as a missing value.</li>
 <li>
@@ -60,7 +62,7 @@
 <li>
 <code><a href="../reference/wb_project.html">wb_project()</a></code> now accepts multiple values for <code>id</code>, <code>status</code>, and <code>region</code>, returning the projects that match any of them.</li>
 <li>
-<code><a href="../reference/wb_project.html">wb_project()</a></code> now requires <code>status</code> to be one of <code>"active"</code>, <code>"closed"</code>, <code>"dropped"</code>, or <code>"pipeline"</code>.</li>
+<code><a href="../reference/wb_project.html">wb_project()</a></code> now requires <code>status</code> to be one of <code>"active"</code>, <code>"closed"</code>, <code>"dropped"</code>, or <code>"pipeline"</code>, matched case insensitively.</li>
 <li>
 <code><a href="../reference/wb_project.html">wb_project()</a></code> now numbers the rows of the returned data frame, instead of naming them after the project IDs already held in the <code>id</code> column.</li>
 <li>

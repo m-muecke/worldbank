@@ -2,6 +2,8 @@
 
 ## worldbank (development version)
 
+- The PIP functions now require `release_version` and `ppp_version` to
+  be exactly 8 and 4 digits, given as a string or a number.
 - [`fone_dataset()`](https://m-muecke.github.io/worldbank/reference/fone.md)
   and
   [`fone_view()`](https://m-muecke.github.io/worldbank/reference/fone.md)
@@ -16,14 +18,21 @@
   fields, matching
   [`fone_dataset()`](https://m-muecke.github.io/worldbank/reference/fone.md)
   and the rest of the package.
-- The PIP functions now require `release_version` and `ppp_version` to
-  be exactly 8 and 4 digits, given as a string or a number.
-- [`pip_data()`](https://m-muecke.github.io/worldbank/reference/pip_data.md),
-  [`pip_cp()`](https://m-muecke.github.io/worldbank/reference/pip_cp.md),
+- [`pip_cp()`](https://m-muecke.github.io/worldbank/reference/pip_cp.md),
+  [`pip_data()`](https://m-muecke.github.io/worldbank/reference/pip_data.md),
   and
   [`pip_group()`](https://m-muecke.github.io/worldbank/reference/pip_group.md)
-  now require `povline` and `popshare` to be numbers within the ranges
-  accepted by the API.
+  now require `povline` to be a number between `0` and `2700`, and
+  [`pip_data()`](https://m-muecke.github.io/worldbank/reference/pip_data.md)
+  and
+  [`pip_group()`](https://m-muecke.github.io/worldbank/reference/pip_group.md)
+  require `popshare` to be a number between `0` and `1`.
+- [`pip_data()`](https://m-muecke.github.io/worldbank/reference/pip_data.md)
+  and
+  [`pip_group()`](https://m-muecke.github.io/worldbank/reference/pip_group.md)
+  now correctly document `popshare` as taking precedence over `povline`;
+  the documentation previously claimed the opposite. The behavior is
+  unchanged.
 - [`wb_bulk()`](https://m-muecke.github.io/worldbank/reference/wb_bulk.md)
   now keeps Namibia’s `"NA"` code in the `iso2_code` and `wb_iso2_code`
   columns of the `country` table, instead of reading it as a missing
@@ -44,7 +53,7 @@
   returning the projects that match any of them.
 - [`wb_project()`](https://m-muecke.github.io/worldbank/reference/wb_project.md)
   now requires `status` to be one of `"active"`, `"closed"`,
-  `"dropped"`, or `"pipeline"`.
+  `"dropped"`, or `"pipeline"`, matched case insensitively.
 - [`wb_project()`](https://m-muecke.github.io/worldbank/reference/wb_project.md)
   now numbers the rows of the returned data frame, instead of naming
   them after the project IDs already held in the `id` column.
