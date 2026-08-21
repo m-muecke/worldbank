@@ -18,7 +18,8 @@ Depends:
 Imports:
     httr2 (>= 1.1.0),
     stats,
-    tools
+    tools,
+    utils
 Suggests:
     ggplot2,
     scales,
