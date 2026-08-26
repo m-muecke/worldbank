@@ -7,7 +7,7 @@ test_that("wb_language", {
   expect_shape(actual, dim = c(23L, 3L))
   expect_all_true(map_lgl(actual, is.character))
   expect_all_true(map_lgl(actual, \(x) all(nzchar(x))))
-  expect_false(any(map_lgl(actual, has_ws)))
+  expect_all_false(map_lgl(actual, has_ws))
 })
 
 test_that("wb_lending_type", {
@@ -19,7 +19,7 @@ test_that("wb_lending_type", {
   expect_shape(actual, dim = c(4L, 3L))
   expect_all_true(map_lgl(actual, is.character))
   expect_all_true(map_lgl(actual, \(x) all(nzchar(x))))
-  expect_false(any(map_lgl(actual, has_ws)))
+  expect_all_false(map_lgl(actual, has_ws))
 })
 
 test_that("wb_income_level", {
@@ -31,7 +31,7 @@ test_that("wb_income_level", {
   expect_shape(actual, dim = c(7L, 3L))
   expect_all_true(map_lgl(actual, is.character))
   expect_all_true(map_lgl(actual, \(x) all(nzchar(x))))
-  expect_false(any(map_lgl(actual, has_ws)))
+  expect_all_false(map_lgl(actual, has_ws))
 })
 
 test_that("wb_source", {
@@ -250,9 +250,9 @@ test_that("wb_search filters indicators by pattern", {
   hit <- grepl("HCount", catalog$id, ignore.case = TRUE) |
     grepl("HCount", catalog$name, ignore.case = TRUE) |
     grepl("HCount", catalog$source_note, ignore.case = TRUE)
-  expect_identical(nrow(actual), sum(hit, na.rm = TRUE))
+  expect_shape(actual, nrow = sum(hit, na.rm = TRUE))
 
-  expect_identical(nrow(wb_search("zzz_no_match_zzz")), 0L)
+  expect_shape(wb_search("zzz_no_match_zzz"), nrow = 0L)
 
   expect_true(
     nrow(wb_search("hcount")) >= nrow(wb_search("hcount", ignore.case = FALSE))
@@ -283,14 +283,14 @@ test_that("wdi_pivot_long pivots wide WDI data to long format", {
     names(long),
     c("country_name", "country_code", "indicator_name", "indicator_code", "year", "value")
   )
-  expect_identical(nrow(long), 6L)
+  expect_shape(long, nrow = 6L)
   expect_identical(long$year, rep(1960:1962, each = 2L))
   expect_identical(long$country_code, rep(c("DEU", "USA"), times = 3L))
   expect_identical(
     long$value,
     c(NA, 543300000000, NA, 563300000000, NA, 605100000000)
   )
-  expect_false("X" %in% names(long))
+  expect_disjoint(names(long), "X")
 })
 
 test_that("wb_bulk input validation works", {
@@ -384,7 +384,7 @@ test_that("wb_data returns footnotes only when asked", {
     }
   )
 
-  expect_false("footnote" %in% names(wb_data("SI.POV.DDAY", "ALB")))
+  expect_disjoint(names(wb_data("SI.POV.DDAY", "ALB")), "footnote")
   expect_null(captured)
 
   actual <- wb_data("SI.POV.DDAY", "ALB", footnote = TRUE)
