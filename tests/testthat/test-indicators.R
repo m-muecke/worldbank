@@ -1,6 +1,6 @@
 test_that("wb_language", {
   local_mocked_bindings(
-    worldbank = function(...) readRDS(test_path("fixtures", "wb-language.rds"))
+    worldbank = \(...) readRDS(test_path("fixtures", "wb-language.rds"))
   )
   actual <- wb_language()
   expect_s3_class(actual, "data.frame")
@@ -12,7 +12,7 @@ test_that("wb_language", {
 
 test_that("wb_lending_type", {
   local_mocked_bindings(
-    worldbank = function(...) readRDS(test_path("fixtures", "wb-lending-type.rds"))
+    worldbank = \(...) readRDS(test_path("fixtures", "wb-lending-type.rds"))
   )
   actual <- wb_lending_type()
   expect_s3_class(actual, "data.frame")
@@ -24,7 +24,7 @@ test_that("wb_lending_type", {
 
 test_that("wb_income_level", {
   local_mocked_bindings(
-    worldbank = function(...) readRDS(test_path("fixtures", "wb-income-level.rds"))
+    worldbank = \(...) readRDS(test_path("fixtures", "wb-income-level.rds"))
   )
   actual <- wb_income_level()
   expect_s3_class(actual, "data.frame")
@@ -36,7 +36,7 @@ test_that("wb_income_level", {
 
 test_that("wb_source", {
   local_mocked_bindings(
-    worldbank = function(...) readRDS(test_path("fixtures", "wb-source.rds"))
+    worldbank = \(...) readRDS(test_path("fixtures", "wb-source.rds"))
   )
   actual <- wb_source()
   expect_s3_class(actual, "data.frame")
@@ -51,7 +51,7 @@ test_that("wb_source", {
 
 test_that("wb_topic", {
   local_mocked_bindings(
-    worldbank = function(...) readRDS(test_path("fixtures", "wb-topic.rds"))
+    worldbank = \(...) readRDS(test_path("fixtures", "wb-topic.rds"))
   )
   actual <- wb_topic()
   expect_s3_class(actual, "data.frame")
@@ -66,7 +66,7 @@ test_that("wb_topic", {
 
 test_that("wb_region", {
   local_mocked_bindings(
-    worldbank = function(...) readRDS(test_path("fixtures", "wb-region.rds"))
+    worldbank = \(...) readRDS(test_path("fixtures", "wb-region.rds"))
   )
   actual <- wb_region()
   expect_s3_class(actual, "data.frame")
@@ -81,7 +81,7 @@ test_that("wb_region", {
 
 test_that("wb_country", {
   local_mocked_bindings(
-    worldbank = function(...) readRDS(test_path("fixtures", "wb-country.rds"))
+    worldbank = \(...) readRDS(test_path("fixtures", "wb-country.rds"))
   )
   actual <- wb_country()
   expect_s3_class(actual, "data.frame")
@@ -96,7 +96,7 @@ test_that("wb_country", {
 
 test_that("wb_indicator", {
   local_mocked_bindings(
-    worldbank = function(...) readRDS(test_path("fixtures", "wb-indicator.rds"))
+    worldbank = \(...) readRDS(test_path("fixtures", "wb-indicator.rds"))
   )
   actual <- wb_indicator()
   expect_s3_class(actual, "data.frame")
@@ -111,7 +111,7 @@ test_that("wb_indicator", {
 
 test_that("wb_country_indicator", {
   local_mocked_bindings(
-    worldbank = function(...) readRDS(test_path("fixtures", "wb-country-indicator.rds"))
+    worldbank = \(...) readRDS(test_path("fixtures", "wb-country-indicator.rds"))
   )
   actual <- wb_country_indicator()
   expect_s3_class(actual, "data.frame")
@@ -238,7 +238,7 @@ test_that("wb_indicator input validation works", {
 test_that("wb_search filters indicators by pattern", {
   indicators <- readRDS(test_path("fixtures", "wb-indicator.rds"))
   local_mocked_bindings(
-    worldbank = function(...) indicators
+    worldbank = \(...) indicators
   )
 
   catalog <- wb_indicator()
@@ -304,7 +304,7 @@ test_that("wb_bulk input validation works", {
 test_that("wb_search input validation works", {
   catalog <- readRDS(test_path("fixtures", "wb-indicator.rds"))
   local_mocked_bindings(
-    worldbank = function(...) catalog
+    worldbank = \(...) catalog
   )
   expect_error(wb_search(NULL))
   expect_error(wb_search(c("a", "b")))
@@ -337,7 +337,7 @@ test_that("wb_country_indicator input validation works", {
 })
 
 test_that("wb_data returns an empty data.frame when there are no observations", {
-  local_mocked_bindings(worldbank = function(...) NULL)
+  local_mocked_bindings(worldbank = \(...) NULL)
   actual <- wb_data("NY.GDP.MKTP.CD", "US")
   expect_s3_class(actual, "data.frame")
   expect_shape(actual, dim = c(0L, 10L))
