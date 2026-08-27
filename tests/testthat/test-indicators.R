@@ -245,8 +245,8 @@ test_that("wb_search filters indicators by pattern", {
 
   actual <- wb_search("HCount")
   expect_s3_class(actual, "data.frame")
-  expect_identical(names(actual), names(catalog))
-  expect_true(nrow(actual) > 0L)
+  expect_named(actual, names(catalog))
+  expect_gt(nrow(actual), 0L)
   hit <- grepl("HCount", catalog$id, ignore.case = TRUE) |
     grepl("HCount", catalog$name, ignore.case = TRUE) |
     grepl("HCount", catalog$source_note, ignore.case = TRUE)
