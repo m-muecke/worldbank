@@ -37,7 +37,7 @@ is_count <- function(x, null_ok = FALSE) {
   if (null_ok && is.null(x)) {
     return(TRUE)
   }
-  is.numeric(x) && length(x) == 1L && is.finite(x) && trunc(x) == x && x > 0L
+  is.numeric(x) && length(x) == 1L && is.finite(x) && x == trunc(x) && x > 0L
 }
 
 is_number <- function(x, lower = -Inf, upper = Inf, null_ok = FALSE) {
