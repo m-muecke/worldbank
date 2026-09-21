@@ -110,7 +110,7 @@ projects <- function(..., per_page = 1000L) {
     max_reqs = Inf
   )
 
-  resps_data(resps, \(resp) resp_body_json(resp)$projects)
+  resps_data(resps, \(resp) unname(resp_body_json(resp)$projects))
 }
 
 parse_projects <- function(data) {
@@ -133,8 +133,7 @@ parse_projects <- function(data) {
     borrower = map_chr(data, \(x) x$borrower %||% NA_character_),
     implementing_agency = map_chr(data, \(x) x$impagency %||% NA_character_),
     url = map_chr(data, \(x) x$url %||% NA_character_),
-    check.names = FALSE,
-    row.names = NULL
+    check.names = FALSE
   )
   res$approval_date <- as.Date(sub("T.*", "", res$approval_date))
   res$closing_date <- as.Date(res$closing_date, format = "%m/%d/%Y")
