@@ -196,14 +196,11 @@ wb_topic <- function(topic = NULL, lang = "en") {
 #' head(region)
 #' }
 wb_region <- function(region = NULL, lang = "en") {
-  stopifnot(
-    is_character(region, null_ok = TRUE),
-    is_string(lang, n_chars = 2L)
-  )
+  stopifnot(is_character(region, null_ok = TRUE))
   region <- format_param(region)
 
-  resource <- sprintf("%s/region/%s", lang, region)
-  data <- worldbank(resource = resource)
+  resource <- sprintf("region/%s", region)
+  data <- worldbank(resource = resource, lang = lang)
   res <- data.frame(
     id = as.integer(na_if_empty(map_chr(data, "id"))),
     code = map_chr(data, "code"),
@@ -269,14 +266,14 @@ wb_country <- function(
     is_character(country, null_ok = TRUE, n_chars = 2:3),
     is_character(region, null_ok = TRUE, n_chars = 3L),
     is_character(income_level, null_ok = TRUE, n_chars = 3L),
-    is_character(lending_type, null_ok = TRUE, n_chars = 3L),
-    is_string(lang, n_chars = 2L)
+    is_character(lending_type, null_ok = TRUE, n_chars = 3L)
   )
   country <- tolower(format_param(country))
 
-  resource <- sprintf("%s/country/%s", lang, country)
+  resource <- sprintf("country/%s", country)
   data <- worldbank(
     resource = resource,
+    lang = lang,
     region = region,
     incomeLevel = income_level,
     lendingType = lending_type
