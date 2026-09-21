@@ -45,7 +45,13 @@
 
     <div class="section level2">
     <h2 id="ref-usage">Usage<a class="anchor" aria-label="anchor" href="#ref-usage"></a></h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">wb_country</span><span class="op">(</span>country <span class="op">=</span> <span class="cn">NULL</span>, lang <span class="op">=</span> <span class="st">"en"</span><span class="op">)</span></span></code></pre></div>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">wb_country</span><span class="op">(</span></span>
+<span>  country <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  region <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  income_level <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  lending_type <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  lang <span class="op">=</span> <span class="st">"en"</span></span>
+<span><span class="op">)</span></span></code></pre></div>
     </div>
 
     <div class="section level2">
@@ -59,6 +65,21 @@
 <dl><dt id="arg-country">country<a class="anchor" aria-label="anchor" href="#arg-country"></a></dt>
 <dd><p>(<code>NULL</code> | <code><a href="https://rdrr.io/r/base/character.html" class="external-link">character()</a></code>)<br>
 Country to query. Default <code>NULL</code>. If <code>NULL</code>, all countries are returned.</p></dd>
+
+
+<dt id="arg-region">region<a class="anchor" aria-label="anchor" href="#arg-region"></a></dt>
+<dd><p>(<code>NULL</code> | <code><a href="https://rdrr.io/r/base/character.html" class="external-link">character()</a></code>)<br>
+Region IDs to filter by, as listed by <code><a href="wb_region.html">wb_region()</a></code>. Default <code>NULL</code>.</p></dd>
+
+
+<dt id="arg-income-level">income_level<a class="anchor" aria-label="anchor" href="#arg-income-level"></a></dt>
+<dd><p>(<code>NULL</code> | <code><a href="https://rdrr.io/r/base/character.html" class="external-link">character()</a></code>)<br>
+Income level IDs to filter by, as listed by <code><a href="wb_income_level.html">wb_income_level()</a></code>. Default <code>NULL</code>.</p></dd>
+
+
+<dt id="arg-lending-type">lending_type<a class="anchor" aria-label="anchor" href="#arg-lending-type"></a></dt>
+<dd><p>(<code>NULL</code> | <code><a href="https://rdrr.io/r/base/character.html" class="external-link">character()</a></code>)<br>
+Lending type IDs to filter by, as listed by <code><a href="wb_lending_type.html">wb_lending_type()</a></code>. Default <code>NULL</code>.</p></dd>
 
 
 <dt id="arg-lang">lang<a class="anchor" aria-label="anchor" href="#arg-lang"></a></dt>
@@ -149,6 +170,119 @@ Language to query. Default <code>"en"</code>.</p></dd>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 4              &lt;NA&gt;         Aggregates         &lt;NA&gt;        NA       NA</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 5              &lt;NA&gt;         Aggregates         &lt;NA&gt;        NA       NA</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 6                XF               IBRD       Luanda   13.2420 -8.81155</span>
+<span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="co"># low income countries in Sub-Saharan Africa</span></span></span>
+<span class="r-in"><span><span class="fu">wb_country</span><span class="op">(</span>region <span class="op">=</span> <span class="st">"SSF"</span>, income_level <span class="op">=</span> <span class="st">"LIC"</span><span class="op">)</span></span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    country_id country_code             country_name region_id region_code</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1         BDI           BI                  Burundi       SSF          ZG</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2         BFA           BF             Burkina Faso       SSF          ZG</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 3         CAF           CF Central African Republic       SSF          ZG</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 4         COD           CD         Congo, Dem. Rep.       SSF          ZG</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 5         ERI           ER                  Eritrea       SSF          ZG</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 6         ETH           ET                 Ethiopia       SSF          ZG</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 7         GMB           GM              Gambia, The       SSF          ZG</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 8         GNB           GW            Guinea-Bissau       SSF          ZG</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 9         LBR           LR                  Liberia       SSF          ZG</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 10        MDG           MG               Madagascar       SSF          ZG</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 11        MLI           ML                     Mali       SSF          ZG</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 12        MOZ           MZ               Mozambique       SSF          ZG</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 13        MWI           MW                   Malawi       SSF          ZG</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 14        NER           NE                    Niger       SSF          ZG</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 15        RWA           RW                   Rwanda       SSF          ZG</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 16        SDN           SD                    Sudan       SSF          ZG</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 17        SLE           SL             Sierra Leone       SSF          ZG</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 18        SOM           SO       Somalia, Fed. Rep.       SSF          ZG</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 19        SSD           SS              South Sudan       SSF          ZG</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 20        TCD           TD                     Chad       SSF          ZG</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 21        UGA           UG                   Uganda       SSF          ZG</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>          region_value admin_region_id admin_region_code</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1  Sub-Saharan Africa             SSA                ZF</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2  Sub-Saharan Africa             SSA                ZF</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 3  Sub-Saharan Africa             SSA                ZF</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 4  Sub-Saharan Africa             SSA                ZF</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 5  Sub-Saharan Africa             SSA                ZF</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 6  Sub-Saharan Africa             SSA                ZF</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 7  Sub-Saharan Africa             SSA                ZF</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 8  Sub-Saharan Africa             SSA                ZF</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 9  Sub-Saharan Africa             SSA                ZF</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 10 Sub-Saharan Africa             SSA                ZF</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 11 Sub-Saharan Africa             SSA                ZF</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 12 Sub-Saharan Africa             SSA                ZF</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 13 Sub-Saharan Africa             SSA                ZF</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 14 Sub-Saharan Africa             SSA                ZF</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 15 Sub-Saharan Africa             SSA                ZF</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 16 Sub-Saharan Africa             SSA                ZF</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 17 Sub-Saharan Africa             SSA                ZF</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 18 Sub-Saharan Africa             SSA                ZF</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 19 Sub-Saharan Africa             SSA                ZF</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 20 Sub-Saharan Africa             SSA                ZF</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 21 Sub-Saharan Africa             SSA                ZF</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                            admin_region_value income_level_id income_level_code</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1  Sub-Saharan Africa (excluding high income)             LIC                XM</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2  Sub-Saharan Africa (excluding high income)             LIC                XM</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 3  Sub-Saharan Africa (excluding high income)             LIC                XM</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 4  Sub-Saharan Africa (excluding high income)             LIC                XM</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 5  Sub-Saharan Africa (excluding high income)             LIC                XM</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 6  Sub-Saharan Africa (excluding high income)             LIC                XM</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 7  Sub-Saharan Africa (excluding high income)             LIC                XM</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 8  Sub-Saharan Africa (excluding high income)             LIC                XM</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 9  Sub-Saharan Africa (excluding high income)             LIC                XM</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 10 Sub-Saharan Africa (excluding high income)             LIC                XM</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 11 Sub-Saharan Africa (excluding high income)             LIC                XM</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 12 Sub-Saharan Africa (excluding high income)             LIC                XM</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 13 Sub-Saharan Africa (excluding high income)             LIC                XM</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 14 Sub-Saharan Africa (excluding high income)             LIC                XM</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 15 Sub-Saharan Africa (excluding high income)             LIC                XM</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 16 Sub-Saharan Africa (excluding high income)             LIC                XM</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 17 Sub-Saharan Africa (excluding high income)             LIC                XM</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 18 Sub-Saharan Africa (excluding high income)             LIC                XM</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 19 Sub-Saharan Africa (excluding high income)             LIC                XM</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 20 Sub-Saharan Africa (excluding high income)             LIC                XM</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 21 Sub-Saharan Africa (excluding high income)             LIC                XM</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    income_level_value lending_type_id lending_type_code lending_type_value</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1          Low income             IDX                XI                IDA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2          Low income             IDX                XI                IDA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 3          Low income             IDX                XI                IDA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 4          Low income             IDX                XI                IDA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 5          Low income             IDX                XI                IDA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 6          Low income             IDX                XI                IDA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 7          Low income             IDX                XI                IDA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 8          Low income             IDX                XI                IDA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 9          Low income             IDX                XI                IDA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 10         Low income             IDX                XI                IDA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 11         Low income             IDX                XI                IDA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 12         Low income             IDX                XI                IDA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 13         Low income             IDX                XI                IDA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 14         Low income             IDX                XI                IDA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 15         Low income             IDX                XI                IDA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 16         Low income             IDX                XI                IDA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 17         Low income             IDX                XI                IDA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 18         Low income             IDX                XI                IDA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 19         Low income             IDX                XI                IDA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 20         Low income             IDX                XI                IDA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 21         Low income             IDX                XI                IDA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    capital_city longitude   latitude</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1     Bujumbura  29.36390  -3.378400</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2   Ouagadougou  -1.53395  12.360500</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 3        Bangui  21.64070   5.630560</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 4      Kinshasa  15.32220  -4.325000</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 5        Asmara  38.91830  15.331500</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 6   Addis Ababa  38.74680   9.022740</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 7        Banjul -16.58850  13.449500</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 8        Bissau -15.18040  11.803700</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 9      Monrovia -10.79570   6.300390</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 10 Antananarivo  45.71670 -20.466700</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 11       Bamako  -7.50034  13.566700</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 12       Maputo  32.57130 -25.966400</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 13     Lilongwe  33.77030 -13.989900</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 14       Niamey   2.10730  13.514000</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 15       Kigali  30.05870  -1.953250</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 16     Khartoum  32.53630  15.593200</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 17     Freetown -13.21340   8.482100</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 18    Mogadishu  45.32540   2.075150</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 19         Juba  31.60000   4.850000</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 20    N'Djamena  15.04450  12.104800</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 21      Kampala  32.57290   0.314269</span>
 <span class="r-in"><span><span class="co"># }</span></span></span>
 </code></pre></div>
     </div>
