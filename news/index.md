@@ -5,7 +5,6 @@
 - [`wb_country()`](https://m-muecke.github.io/worldbank/reference/wb_country.md)
   gains `region`, `income_level`, and `lending_type` arguments to filter
   countries server-side instead of downloading the full list.
-
 - [`wb_data()`](https://m-muecke.github.io/worldbank/reference/wb_data.md)
   gains a `source` argument to query a database other than the World
   Development Indicators, as listed by
