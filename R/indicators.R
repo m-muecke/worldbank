@@ -481,6 +481,10 @@ wb_bulk <- function(timeout = 600L) {
 #' @param footnote (`logical(1)`)\cr
 #'   Whether to return the footnotes published alongside the observations, such as uncertainty
 #'   bounds or the survey a figure was derived from. Default `FALSE`.
+#' @param source (`NULL` | `integer(1)`)\cr
+#'   ID of the database to query, as listed by [wb_source()]. Default `NULL`, which queries the
+#'   World Development Indicators. Set this for indicators that are only published in another
+#'   database.
 #' @returns A `data.frame()` with the available country indicators.
 #'   The columns are:
 #' * `date`: The date. An integer if all observations are annual, otherwise a character vector.
@@ -515,6 +519,10 @@ wb_bulk <- function(timeout = 600L) {
 #' # include the per-observation footnotes
 #' ind <- wb_data("SI.POV.DDAY", "ALB", footnote = TRUE)
 #' head(ind[c("date", "value", "footnote")])
+#'
+#' # an indicator that is only published in the Africa Development Indicators
+#' ind <- wb_data("AG.AGR.TRAC.NO", "ZAF", source = 11)
+#' head(ind)
 #' }
 wb_data <- function(
   indicator = "NY.GDP.MKTP.CD",
@@ -524,7 +532,8 @@ wb_data <- function(
   end_date = NULL,
   mrv = NULL,
   gapfill = FALSE,
-  footnote = FALSE
+  footnote = FALSE,
+  source = NULL
 ) {
   stopifnot(
     is_character(indicator),
@@ -533,7 +542,8 @@ wb_data <- function(
     is_dateish(end_date, null_ok = TRUE),
     is_count(mrv, null_ok = TRUE),
     is_flag(gapfill),
-    is_flag(footnote)
+    is_flag(footnote),
+    is_count(source, null_ok = TRUE)
   )
   has_start_date <- !is.null(start_date)
   has_end_date <- !is.null(end_date)
@@ -559,7 +569,8 @@ wb_data <- function(
       date = date,
       mrv = mrv,
       gapfill = gapfill,
-      footnote = if (footnote) "Y"
+      footnote = if (footnote) "Y",
+      source = source
     )
     res <- parse_country_indicator(res, footnote = footnote)
   } else {
@@ -569,7 +580,8 @@ wb_data <- function(
       date = date,
       mrv = mrv,
       gapfill = gapfill,
-      footnote = if (footnote) "Y"
+      footnote = if (footnote) "Y",
+      source = source
     )
     res <- map(res, parse_country_indicator, footnote = footnote)
     res <- do.call(rbind, res)

@@ -405,6 +405,16 @@ test_that("wb_data returns footnotes for multiple indicators", {
   expect_identical(actual$footnote, c("note for A", "note for B"))
 })
 
+test_that("wb_data passes source to the API", {
+  captured <- NULL
+  local_mocked_bindings(worldbank = function(...) {
+    captured <<- list(...)$source
+    list(wb_observation())
+  })
+  wb_data("AG.AGR.TRAC.NO", "ZAF", source = 11)
+  expect_identical(captured, 11)
+})
+
 test_that("wb_data mrv and gapfill validation works", {
   expect_error(wb_data(mrv = 3, start_date = 2020), "mrv")
   expect_error(wb_data(mrv = 3, end_date = 2020), "mrv")
@@ -413,6 +423,8 @@ test_that("wb_data mrv and gapfill validation works", {
   expect_error(wb_data(mrv = "a"))
   expect_error(wb_data(footnote = "yes"))
   expect_error(wb_data(footnote = NA))
+  expect_error(wb_data(source = 0))
+  expect_error(wb_data(source = "2"))
 })
 
 test_that("error parsing works", {

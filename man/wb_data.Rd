@@ -16,7 +16,8 @@ wb_data(
   end_date = NULL,
   mrv = NULL,
   gapfill = FALSE,
-  footnote = FALSE
+  footnote = FALSE,
+  source = NULL
 )
 
 wb_country_indicator(
@@ -27,7 +28,8 @@ wb_country_indicator(
   end_date = NULL,
   mrv = NULL,
   gapfill = FALSE,
-  footnote = FALSE
+  footnote = FALSE,
+  source = NULL
 )
 }
 \arguments{
@@ -61,6 +63,11 @@ Whether to fill missing values by carrying forward the last available value. Onl
 \item{footnote}{(\code{logical(1)})\cr
 Whether to return the footnotes published alongside the observations, such as uncertainty
 bounds or the survey a figure was derived from. Default \code{FALSE}.}
+
+\item{source}{(\code{NULL} | \code{integer(1)})\cr
+ID of the database to query, as listed by \code{\link[=wb_source]{wb_source()}}. Default \code{NULL}, which queries the
+World Development Indicators. Set this for indicators that are only published in another
+database.}
 }
 \value{
 A \code{data.frame()} with the available country indicators.
@@ -101,6 +108,10 @@ head(ind)
 # include the per-observation footnotes
 ind <- wb_data("SI.POV.DDAY", "ALB", footnote = TRUE)
 head(ind[c("date", "value", "footnote")])
+
+# an indicator that is only published in the Africa Development Indicators
+ind <- wb_data("AG.AGR.TRAC.NO", "ZAF", source = 11)
+head(ind)
 }
 \dontshow{\}) # examplesIf}
 }
