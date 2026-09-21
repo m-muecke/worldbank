@@ -38,6 +38,13 @@ format_param <- function(x) {
   x
 }
 
+collapse_or <- function(x) {
+  if (length(x) == 0L) {
+    return()
+  }
+  paste0(x, collapse = "^")
+}
+
 format_date <- function(start_date, end_date) {
   if (!is.null(start_date) && !is.null(end_date)) {
     paste(start_date, end_date, sep = ":")

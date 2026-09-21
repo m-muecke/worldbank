@@ -88,13 +88,6 @@ wb_project <- function(
   parse_projects(data)
 }
 
-collapse_or <- function(x) {
-  if (length(x) == 0L) {
-    return()
-  }
-  paste0(x, collapse = "^")
-}
-
 projects <- function(..., per_page = 1000L) {
   req <- wb_request("https://search.worldbank.org/api/v2/projects") |>
     req_url_query(..., format = "json", rows = per_page)
