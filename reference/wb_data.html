@@ -53,7 +53,8 @@
 <span>  end_date <span class="op">=</span> <span class="cn">NULL</span>,</span>
 <span>  mrv <span class="op">=</span> <span class="cn">NULL</span>,</span>
 <span>  gapfill <span class="op">=</span> <span class="cn">FALSE</span>,</span>
-<span>  footnote <span class="op">=</span> <span class="cn">FALSE</span></span>
+<span>  footnote <span class="op">=</span> <span class="cn">FALSE</span>,</span>
+<span>  source <span class="op">=</span> <span class="cn">NULL</span></span>
 <span><span class="op">)</span></span>
 <span></span>
 <span><span class="fu">wb_country_indicator</span><span class="op">(</span></span>
@@ -64,7 +65,8 @@
 <span>  end_date <span class="op">=</span> <span class="cn">NULL</span>,</span>
 <span>  mrv <span class="op">=</span> <span class="cn">NULL</span>,</span>
 <span>  gapfill <span class="op">=</span> <span class="cn">FALSE</span>,</span>
-<span>  footnote <span class="op">=</span> <span class="cn">FALSE</span></span>
+<span>  footnote <span class="op">=</span> <span class="cn">FALSE</span>,</span>
+<span>  source <span class="op">=</span> <span class="cn">NULL</span></span>
 <span><span class="op">)</span></span></code></pre></div>
     </div>
 
@@ -119,6 +121,13 @@ Whether to fill missing values by carrying forward the last available value. Onl
 <dd><p>(<code>logical(1)</code>)<br>
 Whether to return the footnotes published alongside the observations, such as uncertainty
 bounds or the survey a figure was derived from. Default <code>FALSE</code>.</p></dd>
+
+
+<dt id="arg-source">source<a class="anchor" aria-label="anchor" href="#arg-source"></a></dt>
+<dd><p>(<code>NULL</code> | <code>integer(1)</code>)<br>
+ID of the database to query, as listed by <code><a href="wb_source.html">wb_source()</a></code>. Default <code>NULL</code>, which queries the
+World Development Indicators. Set this for indicators that are only published in another
+database.</p></dd>
 
 </dl></div>
     <div class="section level2">
@@ -212,6 +221,24 @@ The columns are:</p><ul><li><p><code>date</code>: The date. An integer if all ob
 <span class="r-out co"><span class="r-pr">#&gt;</span> 4 Based on data from HBS. Estimated from unit-record consumption data.</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 5 Based on data from HBS. Estimated from unit-record consumption data.</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 6 Based on data from HBS. Estimated from unit-record consumption data.</span>
+<span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="co"># an indicator that is only published in the Africa Development Indicators</span></span></span>
+<span class="r-in"><span><span class="va">ind</span> <span class="op">&lt;-</span> <span class="fu">wb_data</span><span class="op">(</span><span class="st">"AG.AGR.TRAC.NO"</span>, <span class="st">"ZAF"</span>, source <span class="op">=</span> <span class="fl">11</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="va">ind</span><span class="op">)</span></span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   date   indicator_id                   indicator_name country_id country_name</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1 2004 AG.AGR.TRAC.NO Agricultural machinery, tractors        ZAF South Africa</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2 2003 AG.AGR.TRAC.NO Agricultural machinery, tractors        ZAF South Africa</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 3 2002 AG.AGR.TRAC.NO Agricultural machinery, tractors        ZAF South Africa</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 4 2001 AG.AGR.TRAC.NO Agricultural machinery, tractors        ZAF South Africa</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 5 2000 AG.AGR.TRAC.NO Agricultural machinery, tractors        ZAF South Africa</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 6 1999 AG.AGR.TRAC.NO Agricultural machinery, tractors        ZAF South Africa</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   country_code value unit obs_status decimal</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1         &lt;NA&gt; 63200 &lt;NA&gt;       &lt;NA&gt;       0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2         &lt;NA&gt; 65475 &lt;NA&gt;       &lt;NA&gt;       0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 3         &lt;NA&gt; 67750 &lt;NA&gt;       &lt;NA&gt;       0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 4         &lt;NA&gt; 70025 &lt;NA&gt;       &lt;NA&gt;       0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 5         &lt;NA&gt; 72300 &lt;NA&gt;       &lt;NA&gt;       0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 6         &lt;NA&gt; 75500 &lt;NA&gt;       &lt;NA&gt;       0</span>
 <span class="r-in"><span><span class="co"># }</span></span></span>
 </code></pre></div>
     </div>

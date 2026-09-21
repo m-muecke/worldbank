@@ -13,7 +13,8 @@ wb_data(
   end_date = NULL,
   mrv = NULL,
   gapfill = FALSE,
-  footnote = FALSE
+  footnote = FALSE,
+  source = NULL
 )
 
 wb_country_indicator(
@@ -24,7 +25,8 @@ wb_country_indicator(
   end_date = NULL,
   mrv = NULL,
   gapfill = FALSE,
-  footnote = FALSE
+  footnote = FALSE,
+  source = NULL
 )
 ```
 
@@ -84,6 +86,14 @@ wb_country_indicator(
   Whether to return the footnotes published alongside the observations,
   such as uncertainty bounds or the survey a figure was derived from.
   Default `FALSE`.
+
+- source:
+
+  (`NULL` \| `integer(1)`)  
+  ID of the database to query, as listed by
+  [`wb_source()`](https://m-muecke.github.io/worldbank/reference/wb_source.md).
+  Default `NULL`, which queries the World Development Indicators. Set
+  this for indicators that are only published in another database.
 
 ## Value
 
@@ -189,5 +199,23 @@ head(ind[c("date", "value", "footnote")])
 #> 4 Based on data from HBS. Estimated from unit-record consumption data.
 #> 5 Based on data from HBS. Estimated from unit-record consumption data.
 #> 6 Based on data from HBS. Estimated from unit-record consumption data.
+
+# an indicator that is only published in the Africa Development Indicators
+ind <- wb_data("AG.AGR.TRAC.NO", "ZAF", source = 11)
+head(ind)
+#>   date   indicator_id                   indicator_name country_id country_name
+#> 1 2004 AG.AGR.TRAC.NO Agricultural machinery, tractors        ZAF South Africa
+#> 2 2003 AG.AGR.TRAC.NO Agricultural machinery, tractors        ZAF South Africa
+#> 3 2002 AG.AGR.TRAC.NO Agricultural machinery, tractors        ZAF South Africa
+#> 4 2001 AG.AGR.TRAC.NO Agricultural machinery, tractors        ZAF South Africa
+#> 5 2000 AG.AGR.TRAC.NO Agricultural machinery, tractors        ZAF South Africa
+#> 6 1999 AG.AGR.TRAC.NO Agricultural machinery, tractors        ZAF South Africa
+#>   country_code value unit obs_status decimal
+#> 1         <NA> 63200 <NA>       <NA>       0
+#> 2         <NA> 65475 <NA>       <NA>       0
+#> 3         <NA> 67750 <NA>       <NA>       0
+#> 4         <NA> 70025 <NA>       <NA>       0
+#> 5         <NA> 72300 <NA>       <NA>       0
+#> 6         <NA> 75500 <NA>       <NA>       0
 # }
 ```

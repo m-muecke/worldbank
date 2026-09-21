@@ -2,6 +2,11 @@
 
 ## worldbank (development version)
 
+- [`wb_data()`](https://m-muecke.github.io/worldbank/reference/wb_data.md)
+  gains a `source` argument to query a database other than the World
+  Development Indicators, as listed by
+  [`wb_source()`](https://m-muecke.github.io/worldbank/reference/wb_source.md).
+
 ## worldbank 0.10.0
 
 CRAN release: 2026-08-21
