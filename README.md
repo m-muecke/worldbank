@@ -24,6 +24,7 @@ APIs:
   API](https://pip.worldbank.org/api)
 - [Finances One API](https://financesone.worldbank.org)
 - [Projects API v2](https://search.worldbank.org/api/v2/projects)
+- [Documents & Reports API v3](https://search.worldbank.org/api/v3/wds)
 
 The main difference to other packages is that it’s a modern
 implementation using the [httr2](https://httr2.r-lib.org) package and

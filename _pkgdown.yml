@@ -41,6 +41,10 @@ reference:
     contents:
       - wb_project
 
+  - subtitle: Documents Data
+    contents:
+      - wb_document
+
   - subtitle: Cache Management
     contents:
       - wb_cache_dir
