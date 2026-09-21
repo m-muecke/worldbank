@@ -94,6 +94,20 @@ test_that("wb_country", {
   }
 })
 
+test_that("wb_country passes filters to the API", {
+  captured <- NULL
+  local_mocked_bindings(worldbank = function(...) {
+    captured <<- list(...)
+    readRDS(test_path("fixtures", "wb-country.rds"))
+  })
+  wb_country()
+  expect_null(captured$region)
+  wb_country(region = c("SSF", "LCN"), income_level = "LIC", lending_type = "IDX")
+  expect_identical(captured$region, c("SSF", "LCN"))
+  expect_identical(captured$incomeLevel, "LIC")
+  expect_identical(captured$lendingType, "IDX")
+})
+
 test_that("wb_indicator", {
   local_mocked_bindings(
     worldbank = \(...) readRDS(test_path("fixtures", "wb-indicator.rds"))
@@ -212,6 +226,9 @@ test_that("wb_country input validation works", {
   expect_error(wb_country(NA))
   expect_error(wb_country(1L))
   expect_error(wb_country(TRUE))
+  expect_error(wb_country(region = "SS"))
+  expect_error(wb_country(income_level = 1L))
+  expect_error(wb_country(lending_type = NA))
   # lang should be two letter code
   expect_error(wb_country(lang = "a"))
   expect_error(wb_country(lang = "abc"))

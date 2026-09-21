@@ -7,11 +7,26 @@
 \url{https://api.worldbank.org/v2/country}
 }
 \usage{
-wb_country(country = NULL, lang = "en")
+wb_country(
+  country = NULL,
+  region = NULL,
+  income_level = NULL,
+  lending_type = NULL,
+  lang = "en"
+)
 }
 \arguments{
 \item{country}{(\code{NULL} | \code{character()})\cr
 Country to query. Default \code{NULL}. If \code{NULL}, all countries are returned.}
+
+\item{region}{(\code{NULL} | \code{character()})\cr
+Region IDs to filter by, as listed by \code{\link[=wb_region]{wb_region()}}. Default \code{NULL}.}
+
+\item{income_level}{(\code{NULL} | \code{character()})\cr
+Income level IDs to filter by, as listed by \code{\link[=wb_income_level]{wb_income_level()}}. Default \code{NULL}.}
+
+\item{lending_type}{(\code{NULL} | \code{character()})\cr
+Lending type IDs to filter by, as listed by \code{\link[=wb_lending_type]{wb_lending_type()}}. Default \code{NULL}.}
 
 \item{lang}{(\code{character(1)})\cr
 Language to query. Default \code{"en"}.}
@@ -47,6 +62,9 @@ List all countries supported by the World Bank API.
 \donttest{
 country <- wb_country()
 head(country)
+
+# low income countries in Sub-Saharan Africa
+wb_country(region = "SSF", income_level = "LIC")
 }
 \dontshow{\}) # examplesIf}
 }
