@@ -1,7 +1,6 @@
 # worldbank (development version)
 
 * `wb_country()` gains `region`, `income_level`, and `lending_type` arguments to filter countries server-side instead of downloading the full list.
-
 * `wb_data()` gains a `source` argument to query a database other than the World Development Indicators, as listed by `wb_source()`.
 
 # worldbank 0.10.0
