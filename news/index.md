@@ -2,9 +2,15 @@
 
 ## worldbank (development version)
 
+- New
+  [`wb_document()`](https://m-muecke.github.io/worldbank/reference/wb_document.md)
+  searches the World Bank Documents & Reports archive by search term,
+  country, document type, project, and date.
+
 - [`wb_country()`](https://m-muecke.github.io/worldbank/reference/wb_country.md)
   gains `region`, `income_level`, and `lending_type` arguments to filter
   countries server-side instead of downloading the full list.
+
 - [`wb_data()`](https://m-muecke.github.io/worldbank/reference/wb_data.md)
   gains a `source` argument to query a database other than the World
   Development Indicators, as listed by

@@ -58,6 +58,11 @@
 - [`wb_project()`](https://m-muecke.github.io/worldbank/reference/wb_project.md)
   : World Bank project data
 
+### Documents Data
+
+- [`wb_document()`](https://m-muecke.github.io/worldbank/reference/wb_document.md)
+  : World Bank document data
+
 ### Cache Management
 
 - [`wb_cache_dir()`](https://m-muecke.github.io/worldbank/reference/cache.md)

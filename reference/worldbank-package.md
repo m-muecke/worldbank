@@ -2,7 +2,8 @@
 
 Download and search data from the 'World Bank' APIs, including the
 'Indicators' API, the 'Poverty and Inequality Platform (PIP)' API, the
-'Finances One' API, and the 'Projects' API. See
+'Finances One' API, the 'Projects' API, and the 'Documents & Reports'
+API. See
 <https://datahelpdesk.worldbank.org/knowledgebase/articles/889386-developer-information-overview>
 for further details.
 
