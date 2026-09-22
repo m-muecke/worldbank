@@ -123,6 +123,16 @@ test_that("wb_indicator", {
   }
 })
 
+test_that("wb_indicator passes source to the API", {
+  captured <- NULL
+  local_mocked_bindings(worldbank = function(...) {
+    captured <<- list(...)$source
+    readRDS(test_path("fixtures", "wb-indicator.rds"))
+  })
+  wb_indicator(source = 11)
+  expect_identical(captured, 11)
+})
+
 test_that("wb_country_indicator", {
   local_mocked_bindings(
     worldbank = \(...) readRDS(test_path("fixtures", "wb-country-indicator.rds"))
@@ -244,6 +254,8 @@ test_that("wb_indicator input validation works", {
   expect_error(wb_indicator(NA))
   expect_error(wb_indicator(1L))
   expect_error(wb_indicator(TRUE))
+  expect_error(wb_indicator(source = 0))
+  expect_error(wb_indicator(source = "2"))
   # lang should be two letter code
   expect_error(wb_indicator(lang = "a"))
   expect_error(wb_indicator(lang = "abc"))
@@ -279,6 +291,17 @@ test_that("wb_search filters indicators by pattern", {
     wb_search("HCount", catalog = catalog),
     wb_search("HCount")
   )
+})
+
+test_that("wb_search passes source to wb_indicator", {
+  captured <- NULL
+  indicators <- readRDS(test_path("fixtures", "wb-indicator.rds"))
+  local_mocked_bindings(worldbank = function(...) {
+    captured <<- list(...)$source
+    indicators
+  })
+  wb_search("HCount", source = 11)
+  expect_identical(captured, 11)
 })
 
 test_that("wdi_pivot_long pivots wide WDI data to long format", {
@@ -330,6 +353,8 @@ test_that("wb_search input validation works", {
   expect_error(wb_search("GDP", fields = character()))
   expect_error(wb_search("GDP", fields = "not_a_column"), "not_a_column")
   expect_error(wb_search("GDP", catalog = list()))
+  expect_error(wb_search("GDP", source = 0))
+  expect_error(wb_search("GDP", source = "2"))
 })
 
 test_that("wb_country_indicator input validation works", {

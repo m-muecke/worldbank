@@ -7,7 +7,7 @@
 \url{https://api.worldbank.org/v2/indicator}
 }
 \usage{
-wb_indicator(indicator = NULL, lang = "en")
+wb_indicator(indicator = NULL, lang = "en", source = NULL)
 }
 \arguments{
 \item{indicator}{(\code{NULL} | \code{character(1)})\cr
@@ -15,6 +15,10 @@ Indicator to query. Default \code{NULL}. If \code{NULL}, all indicators are retu
 
 \item{lang}{(\code{character(1)})\cr
 Language to query. Default \code{"en"}.}
+
+\item{source}{(\code{NULL} | \code{integer(1)})\cr
+ID of the source to query, as listed by \code{\link[=wb_source]{wb_source()}}. Default \code{NULL}, which uses the API
+default.}
 }
 \value{
 A \code{data.frame()} with the available indicators. The columns are:

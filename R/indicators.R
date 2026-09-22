@@ -310,6 +310,9 @@ wb_country <- function(
 #'   Indicator to query. Default `NULL`. If `NULL`, all indicators are returned.
 #' @param lang (`character(1)`)\cr
 #'   Language to query. Default `"en"`.
+#' @param source (`NULL` | `integer(1)`)\cr
+#'   ID of the source to query, as listed by [wb_source()]. Default `NULL`, which uses the API
+#'   default.
 #' @returns A `data.frame()` with the available indicators. The columns are:
 #' * `id`: The indicator ID.
 #' * `name`: The indicator name.
@@ -327,12 +330,15 @@ wb_country <- function(
 #' \donttest{
 #' wb_indicator("NY.GDP.MKTP.CD")
 #' }
-wb_indicator <- function(indicator = NULL, lang = "en") {
-  stopifnot(is_string(indicator, null_ok = TRUE))
+wb_indicator <- function(indicator = NULL, lang = "en", source = NULL) {
+  stopifnot(
+    is_string(indicator, null_ok = TRUE),
+    is_count(source, null_ok = TRUE)
+  )
   indicator <- format_param(indicator)
 
   resource <- sprintf("indicator/%s", indicator)
-  data <- worldbank(resource = resource, lang = lang)
+  data <- worldbank(resource = resource, lang = lang, source = source)
   res <- data.frame(
     id = map_chr(data, "id"),
     name = map_chr(data, "name"),
@@ -363,6 +369,9 @@ wb_indicator <- function(indicator = NULL, lang = "en") {
 #'   Language to query. Only used when `catalog` is `NULL`. Default `"en"`.
 #' @param ignore.case (`logical(1)`)\cr
 #'   Whether the match should be case insensitive. Default `TRUE`.
+#' @param source (`NULL` | `integer(1)`)\cr
+#'   ID of the source to query, as listed by [wb_source()]. Only used when `catalog` is `NULL`.
+#'   Default `NULL`, which uses the API default.
 #' @param ... (`any`)\cr
 #'   Additional arguments passed to [grepl()].
 #' @returns A `data.frame()` with the matching rows of the indicator catalog.
@@ -386,15 +395,17 @@ wb_search <- function(
   catalog = NULL,
   lang = "en",
   ignore.case = TRUE,
+  source = NULL,
   ...
 ) {
   stopifnot(
     is_string(pattern),
     is_character(fields),
     is.null(catalog) || is.data.frame(catalog),
-    is_flag(ignore.case)
+    is_flag(ignore.case),
+    is_count(source, null_ok = TRUE)
   )
-  catalog <- catalog %||% wb_indicator(lang = lang)
+  catalog <- catalog %||% wb_indicator(lang = lang, source = source)
   missing_fields <- setdiff(fields, names(catalog))
   if (length(missing_fields) > 0L) {
     stop(sprintf("`fields` not found in catalog: %s.", toString(missing_fields)), call. = FALSE)
