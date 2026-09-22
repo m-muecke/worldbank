@@ -167,6 +167,11 @@ test_that("wb_indicator keeps every topic", {
     wb_search("Environment", fields = "topics", catalog = actual)$id,
     indicator$id
   )
+  expect_shape(
+    wb_search("Development Climate", fields = "topics", catalog = actual),
+    nrow = 0L
+  )
+  expect_shape(wb_search("19", fields = "topics", catalog = actual), nrow = 0L)
 })
 
 test_that("wb_country_indicator", {
