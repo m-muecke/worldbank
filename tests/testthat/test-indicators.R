@@ -114,7 +114,11 @@ test_that("wb_indicator", {
   )
   actual <- wb_indicator()
   expect_s3_class(actual, "data.frame")
-  expect_shape(actual, dim = c(100L, 9L))
+  expect_shape(actual, dim = c(100L, 8L))
+  expect_all_true(map_lgl(actual$topics, is.data.frame))
+  expect_shape(actual$topics[[1L]], dim = c(1L, 2L))
+  expect_type(actual$topics[[1L]]$topic_id, "integer")
+  expect_type(actual$topics[[1L]]$topic_value, "character")
   for (x in actual) {
     if (is.character(x)) {
       expect_all_true(nzchar(x))
@@ -130,14 +134,28 @@ test_that("wb_indicator keeps every topic", {
     list(id = "19", value = "Climate Change"),
     list(id = "6", value = "Environment ")
   )
-  local_mocked_bindings(worldbank = \(...) list(indicator))
+  indicator_without_topics <- indicator
+  indicator_without_topics$id <- "NO.TOPICS"
+  indicator_without_topics$topics <- list()
+  local_mocked_bindings(worldbank = \(...) list(indicator, indicator_without_topics))
 
   actual <- wb_indicator(indicator$id)
 
-  expect_identical(actual$topic_id, "1;19;6")
   expect_identical(
-    actual$topic_value,
-    "Agriculture & Rural Development;Climate Change;Environment"
+    actual$topics[[1L]],
+    data.frame(
+      topic_id = c(1L, 19L, 6L),
+      topic_value = c(
+        "Agriculture & Rural Development",
+        "Climate Change",
+        "Environment"
+      )
+    )
+  )
+  expect_shape(actual$topics[[2L]], dim = c(0L, 2L))
+  expect_identical(
+    wb_search("Environment", fields = "topics", catalog = actual)$id,
+    indicator$id
   )
 })
 
