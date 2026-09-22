@@ -109,7 +109,6 @@ wb_document(
   start_date = "2024-01-01",
   end_date = "2024-12-31"
 )
-#> ⠙ iterating 2 done (0.13/s) | 15.3s
 #>         id
 #> 1 34409107
 #> 2 34380251
