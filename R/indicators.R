@@ -412,14 +412,14 @@ wb_search <- function(
     stop(sprintf("`fields` not found in catalog: %s.", toString(missing_fields)), call. = FALSE)
   }
   hit <- lapply(fields, function(x) {
-    values <- catalog[[x]]
-    if (is.list(values)) {
-      values <- map_chr(values, function(value) {
+    vals <- catalog[[x]]
+    if (is.list(vals)) {
+      vals <- map_chr(vals, function(value) {
         value <- unlist(value, use.names = FALSE)
         paste(value[!is.na(value)], collapse = " ")
       })
     }
-    m <- grepl(pattern, values, ignore.case = ignore.case, ...)
+    m <- grepl(pattern, vals, ignore.case = ignore.case, ...)
     m & !is.na(m)
   })
   hit <- Reduce(`|`, hit)
