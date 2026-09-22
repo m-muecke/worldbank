@@ -4,6 +4,10 @@
 
 ### Breaking changes
 
+- [`wb_cache_delete()`](https://m-muecke.github.io/worldbank/reference/cache.md),
+  deprecated since worldbank 0.8.0, is now defunct. Use
+  [`wb_cache_clear()`](https://m-muecke.github.io/worldbank/reference/cache.md)
+  instead.
 - [`wb_indicator()`](https://m-muecke.github.io/worldbank/reference/wb_indicator.md)
   now returns a `topics` list-column of data frames holding every topic
   associated with an indicator, replacing the `topic_id` and
