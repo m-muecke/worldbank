@@ -123,6 +123,24 @@ test_that("wb_indicator", {
   }
 })
 
+test_that("wb_indicator keeps every topic", {
+  indicator <- readRDS(test_path("fixtures", "wb-indicator.rds"))[[1L]]
+  indicator$topics <- list(
+    list(id = "1", value = "Agriculture & Rural Development  "),
+    list(id = "19", value = "Climate Change"),
+    list(id = "6", value = "Environment ")
+  )
+  local_mocked_bindings(worldbank = \(...) list(indicator))
+
+  actual <- wb_indicator(indicator$id)
+
+  expect_identical(actual$topic_id, "1;19;6")
+  expect_identical(
+    actual$topic_value,
+    "Agriculture & Rural Development;Climate Change;Environment"
+  )
+})
+
 test_that("wb_country_indicator", {
   local_mocked_bindings(
     worldbank = \(...) readRDS(test_path("fixtures", "wb-country-indicator.rds"))

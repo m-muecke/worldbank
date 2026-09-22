@@ -26,8 +26,10 @@ A \code{data.frame()} with the available indicators. The columns are:
 \item \code{source_value}: The source value.
 \item \code{source_note}: The source note.
 \item \code{source_organization}: The source organization.
-\item \code{topic_id}: The topic ID.
-\item \code{topic_value}: The topic value.
+\item \code{topic_id}: The topic IDs, separated by semicolons when an indicator belongs to multiple
+topics.
+\item \code{topic_value}: The topic values, separated by semicolons when an indicator belongs to multiple
+topics.
 }
 }
 \description{

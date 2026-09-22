@@ -1,8 +1,9 @@
 # worldbank (development version)
 
-* New `wb_document()` searches the World Bank Documents & Reports archive by search term, country, document type, project, and date.
 * `wb_country()` gains `region`, `income_level`, and `lending_type` arguments to filter countries server-side instead of downloading the full list.
 * `wb_data()` gains a `source` argument to query a database other than the World Development Indicators, as listed by `wb_source()`.
+* New `wb_document()` searches the World Bank Documents & Reports archive by search term, country, document type, project, and date.
+* `wb_indicator()` now returns all topics associated with each indicator, separated by semicolons, instead of returning only the first.
 
 # worldbank 0.10.0
 

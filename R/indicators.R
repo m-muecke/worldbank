@@ -318,8 +318,10 @@ wb_country <- function(
 #' * `source_value`: The source value.
 #' * `source_note`: The source note.
 #' * `source_organization`: The source organization.
-#' * `topic_id`: The topic ID.
-#' * `topic_value`: The topic value.
+#' * `topic_id`: The topic IDs, separated by semicolons when an indicator belongs to multiple
+#'   topics.
+#' * `topic_value`: The topic values, separated by semicolons when an indicator belongs to multiple
+#'   topics.
 #' @source <https://api.worldbank.org/v2/indicator>
 #' @family indicators data
 #' @export
@@ -341,8 +343,8 @@ wb_indicator <- function(indicator = NULL, lang = "en") {
     source_value = map_chr(data, \(x) x$source$value),
     source_note = map_chr(data, "sourceNote"),
     source_organization = map_chr(data, "sourceOrganization"),
-    topic_id = as.integer(map_chr(data, \(x) x$topics[1L][[1L]]$id %||% NA_character_)),
-    topic_value = map_chr(data, \(x) x$topics[1L][[1L]]$value %||% NA_character_),
+    topic_id = map_chr(data, \(x) paste(map_chr(x$topics, "id"), collapse = ";")),
+    topic_value = map_chr(data, \(x) paste(trimws(map_chr(x$topics, "value")), collapse = ";")),
     check.names = FALSE
   )
   clean_strings(res)
