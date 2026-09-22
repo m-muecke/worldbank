@@ -342,10 +342,9 @@ wb_indicator <- function(indicator = NULL, lang = "en") {
     source_note = map_chr(data, "sourceNote"),
     source_organization = map_chr(data, "sourceOrganization"),
     topics = I(map(data, function(x) {
-      topics <- x$topics %||% list()
       data.frame(
-        topic_id = as.integer(map_chr(topics, "id")),
-        topic_value = na_if_empty(trimws(map_chr(topics, "value"))),
+        topic_id = as.integer(map_chr(x$topics, "id")),
+        topic_value = na_if_empty(trimws(map_chr(x$topics, "value"))),
         check.names = FALSE
       )
     })),
