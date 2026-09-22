@@ -54,6 +54,7 @@ pattern across one or more text fields. By default the match is case insensitive
 <span>  catalog <span class="op">=</span> <span class="cn">NULL</span>,</span>
 <span>  lang <span class="op">=</span> <span class="st">"en"</span>,</span>
 <span>  ignore.case <span class="op">=</span> <span class="cn">TRUE</span>,</span>
+<span>  source <span class="op">=</span> <span class="cn">NULL</span>,</span>
 <span>  <span class="va">...</span></span>
 <span><span class="op">)</span></span></code></pre></div>
     </div>
@@ -89,6 +90,12 @@ Language to query. Only used when <code>catalog</code> is <code>NULL</code>. Def
 <dt id="arg-ignore-case">ignore.case<a class="anchor" aria-label="anchor" href="#arg-ignore-case"></a></dt>
 <dd><p>(<code>logical(1)</code>)<br>
 Whether the match should be case insensitive. Default <code>TRUE</code>.</p></dd>
+
+
+<dt id="arg-source">source<a class="anchor" aria-label="anchor" href="#arg-source"></a></dt>
+<dd><p>(<code>NULL</code> | <code>integer(1)</code>)<br>
+ID of the source to query, as listed by <code><a href="wb_source.html">wb_source()</a></code>. Only used when <code>catalog</code> is <code>NULL</code>.
+Default <code>NULL</code>, which uses the API default.</p></dd>
 
 
 <dt id="arg--">...<a class="anchor" aria-label="anchor" href="#arg--"></a></dt>

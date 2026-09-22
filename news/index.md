@@ -13,6 +13,12 @@
   gains a `source` argument to query a database other than the World
   Development Indicators, as listed by
   [`wb_source()`](https://m-muecke.github.io/worldbank/reference/wb_source.md).
+- [`wb_indicator()`](https://m-muecke.github.io/worldbank/reference/wb_indicator.md)
+  and
+  [`wb_search()`](https://m-muecke.github.io/worldbank/reference/wb_search.md)
+  gain a `source` argument to query indicators from a specific database,
+  as listed by
+  [`wb_source()`](https://m-muecke.github.io/worldbank/reference/wb_source.md).
 
 ## worldbank 0.10.0
 

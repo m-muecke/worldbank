@@ -5,7 +5,7 @@ List all indicators supported by the World Bank API.
 ## Usage
 
 ``` r
-wb_indicator(indicator = NULL, lang = "en")
+wb_indicator(indicator = NULL, lang = "en", source = NULL)
 ```
 
 ## Source
@@ -24,6 +24,13 @@ wb_indicator(indicator = NULL, lang = "en")
 
   (`character(1)`)  
   Language to query. Default `"en"`.
+
+- source:
+
+  (`NULL` \| `integer(1)`)  
+  ID of the source to query, as listed by
+  [`wb_source()`](https://m-muecke.github.io/worldbank/reference/wb_source.md).
+  Default `NULL`, which uses the API default.
 
 ## Value
 

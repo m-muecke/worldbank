@@ -14,6 +14,7 @@ wb_search(
   catalog = NULL,
   lang = "en",
   ignore.case = TRUE,
+  source = NULL,
   ...
 )
 ```
@@ -51,6 +52,14 @@ wb_search(
 
   (`logical(1)`)  
   Whether the match should be case insensitive. Default `TRUE`.
+
+- source:
+
+  (`NULL` \| `integer(1)`)  
+  ID of the source to query, as listed by
+  [`wb_source()`](https://m-muecke.github.io/worldbank/reference/wb_source.md).
+  Only used when `catalog` is `NULL`. Default `NULL`, which uses the API
+  default.
 
 - ...:
 

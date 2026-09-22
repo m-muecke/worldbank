@@ -72,13 +72,13 @@ Other poverty and inequality statistics:
 # \donttest{
 cp <- pip_cp("ZAF")
 head(cp)
-#>   country_code reporting_year poverty_line headcount gini.x welfare_time
-#> 1          ZAF           1993           NA        NA     NA      1993.00
-#> 2          ZAF           2000           NA        NA     NA      2000.75
-#> 3          ZAF           2005           NA        NA     NA      2005.00
-#> 4          ZAF           2008           NA        NA     NA      2008.67
-#> 5          ZAF           2010           NA        NA     NA      2010.00
-#> 6          ZAF           2014           NA        NA     NA      2014.83
+#>   country_code reporting_year poverty_line headcount welfare_time
+#> 1          ZAF           1993           NA        NA      1993.00
+#> 2          ZAF           2000           NA        NA      2000.75
+#> 3          ZAF           2005           NA        NA      2005.00
+#> 4          ZAF           2008           NA        NA      2008.67
+#> 5          ZAF           2010           NA        NA      2010.00
+#> 6          ZAF           2014           NA        NA      2014.83
 #>   survey_coverage is_interpolated survey_acronym survey_comparability
 #> 1               N           FALSE           KIDS                    0
 #> 2               N           FALSE           HIES                    2
@@ -93,7 +93,7 @@ head(cp)
 #> 4      2005 - 2022         CONS     0.3795021        0.5095397        0.7114064
 #> 5      2005 - 2022         CONS     0.2878022        0.4221426        0.6571829
 #> 6      2005 - 2022         CONS     0.2877533        0.4265898        0.6628935
-#>   headcount_national headcount_national_footnote    gini.y     theil
+#>   headcount_national headcount_national_footnote      gini     theil
 #> 1                 NA                          NA 0.5933394        NA
 #> 2                 NA                          NA 0.5776966        NA
 #> 3              0.575                           1 0.6500114 0.8784750
@@ -106,49 +106,49 @@ head(cp)
 #> 3               NA               NA             NA             NA
 #> 4               NA               NA             NA             NA
 #> 5               NA               NA             NA             NA
-#> 6        0.4167145        0.5832855       0.382385       0.617615
+#> 6               NA               NA             NA             NA
 #>   share_b40_rural share_t60_rural share_b40_urban share_t60_urban
 #> 1              NA              NA              NA              NA
 #> 2              NA              NA              NA              NA
 #> 3              NA              NA              NA              NA
 #> 4              NA              NA              NA              NA
 #> 5              NA              NA              NA              NA
-#> 6       0.6664004       0.3335996       0.2586327       0.7413673
+#> 6              NA              NA              NA              NA
 #>   share_b40agecat_0_14 share_t60agecat_0_14 share_b40agecat_15_64
 #> 1                   NA                   NA                    NA
 #> 2                   NA                   NA                    NA
 #> 3                   NA                   NA                    NA
 #> 4                   NA                   NA                    NA
 #> 5                   NA                   NA                    NA
-#> 6            0.5182659            0.4817341             0.3543191
+#> 6                   NA                   NA                    NA
 #>   share_t60agecat_15_64 share_b40agecat_65p share_t60agecat_65p
 #> 1                    NA                  NA                  NA
 #> 2                    NA                  NA                  NA
 #> 3                    NA                  NA                  NA
 #> 4                    NA                  NA                  NA
 #> 5                    NA                  NA                  NA
-#> 6             0.6456809           0.3171975           0.6828025
+#> 6                    NA                  NA                  NA
 #>   share_b40edu_noedu share_t60edu_noedu share_b40edu_pri share_t60edu_pri
 #> 1                 NA                 NA               NA               NA
 #> 2                 NA                 NA               NA               NA
 #> 3                 NA                 NA               NA               NA
 #> 4                 NA                 NA               NA               NA
 #> 5                 NA                 NA               NA               NA
-#> 6          0.6286923          0.3713077        0.5526696        0.4473303
+#> 6                 NA                 NA               NA               NA
 #>   share_b40edu_sec share_t60edu_sec share_b40edu_ter share_t60edu_ter datatype
 #> 1               NA               NA               NA               NA       NA
 #> 2               NA               NA               NA               NA       NA
 #> 3               NA               NA               NA               NA       NA
 #> 4               NA               NA               NA               NA       NA
 #> 5               NA               NA               NA               NA       NA
-#> 6        0.3573225        0.6426775         0.053892         0.946108        1
+#> 6               NA               NA               NA               NA       NA
 #>   display_cp mpm_education_attainment mpm_education_enrollment mpm_electricity
 #> 1         NA                       NA                       NA              NA
 #> 2         NA                       NA                       NA              NA
 #> 3         NA                       NA                       NA              NA
 #> 4         NA                       NA                       NA              NA
 #> 5         NA                       NA                       NA              NA
-#> 6          1                0.0232594                0.0215872       0.0411189
+#> 6         NA                0.0232594                0.0215872       0.0411189
 #>   mpm_sanitation mpm_water mpm_monetary mpm_headcount mpm_venn1 mpm_venn2
 #> 1             NA        NA           NA            NA        NA        NA
 #> 2             NA        NA           NA            NA        NA        NA
