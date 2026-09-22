@@ -40,14 +40,22 @@
 
     <div class="section level2">
 <h2 class="pkg-version" data-toc-text="development version" id="worldbank-development-version">worldbank (development version)<a class="anchor" aria-label="anchor" href="#worldbank-development-version"></a></h2>
-<ul><li>New <code><a href="../reference/wb_document.html">wb_document()</a></code> searches the World Bank Documents &amp; Reports archive by search term, country, document type, project, and date.</li>
-<li>
+<div class="section level3">
+<h3 id="breaking-changes-development-version">Breaking changes<a class="anchor" aria-label="anchor" href="#breaking-changes-development-version"></a></h3>
+<ul><li>
+<code><a href="../reference/wb_indicator.html">wb_indicator()</a></code> now returns a <code>topics</code> list-column of data frames holding every topic associated with an indicator, replacing the <code>topic_id</code> and <code>topic_value</code> columns, which previously kept only the first topic. Use <code>topics[[i]]$topic_id[1]</code> and <code>topics[[i]]$topic_value[1]</code> to recover the old values.</li>
+</ul></div>
+<div class="section level3">
+<h3 id="new-features-development-version">New features<a class="anchor" aria-label="anchor" href="#new-features-development-version"></a></h3>
+<ul><li>
 <code><a href="../reference/wb_country.html">wb_country()</a></code> gains <code>region</code>, <code>income_level</code>, and <code>lending_type</code> arguments to filter countries server-side instead of downloading the full list.</li>
 <li>
 <code><a href="../reference/wb_data.html">wb_data()</a></code> gains a <code>source</code> argument to query a database other than the World Development Indicators, as listed by <code><a href="../reference/wb_source.html">wb_source()</a></code>.</li>
+<li>New <code><a href="../reference/wb_document.html">wb_document()</a></code> searches the World Bank Documents &amp; Reports archive by search term, country, document type, project, and date.</li>
 <li>
 <code><a href="../reference/wb_indicator.html">wb_indicator()</a></code> and <code><a href="../reference/wb_search.html">wb_search()</a></code> gain a <code>source</code> argument to query indicators from a specific database, as listed by <code><a href="../reference/wb_source.html">wb_source()</a></code>.</li>
 </ul></div>
+</div>
     <div class="section level2">
 <h2 class="pkg-version" data-toc-text="0.10.0" id="worldbank-0100">worldbank 0.10.0<a class="anchor" aria-label="anchor" href="#worldbank-0100"></a></h2><p class="text-muted">CRAN release: 2026-08-21</p>
 <ul><li>The PIP functions now require <code>release_version</code> and <code>ppp_version</code> to be exactly 8 and 4 digits, given as a string or a number.</li>

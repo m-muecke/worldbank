@@ -51,9 +51,8 @@ available indicators. The columns are:
 
 - `source_organization`: The source organization.
 
-- `topic_id`: The topic ID.
-
-- `topic_value`: The topic value.
+- `topics`: A list-column of data frames containing the `topic_id` and
+  `topic_value` for every topic associated with the indicator.
 
 ## See also
 
@@ -80,7 +79,7 @@ wb_indicator("NY.GDP.MKTP.CD")
 #> 1 Gross domestic product is the total income earned through the production of goods and services in an economic territory during an accounting period. It can be measured in three different ways: using either the expenditure approach, the income approach, or the production approach. This indicator is expressed in current prices, meaning no adjustment has been made to account for price changes over time. This indicator is expressed in United States dollars.
 #>                                                                                                                                                                                                     source_organization
 #> 1 Country official statistics, National Statistical Organizations and/or Central Banks;\nNational Accounts data files, Organisation for Economic Co-operation and Development (OECD);\nStaff estimates, World Bank (WB)
-#>   topic_id      topic_value
-#> 1        3 Economy & Growth
+#>         topics
+#> 1 3, Econo....
 # }
 ```
