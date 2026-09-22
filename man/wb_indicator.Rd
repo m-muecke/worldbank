@@ -30,8 +30,8 @@ A \code{data.frame()} with the available indicators. The columns are:
 \item \code{source_value}: The source value.
 \item \code{source_note}: The source note.
 \item \code{source_organization}: The source organization.
-\item \code{topic_id}: The topic ID.
-\item \code{topic_value}: The topic value.
+\item \code{topics}: A list-column of data frames containing the \code{topic_id} and \code{topic_value} for every
+topic associated with the indicator.
 }
 }
 \description{

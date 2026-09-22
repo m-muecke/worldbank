@@ -1,8 +1,14 @@
 # worldbank (development version)
 
-* New `wb_document()` searches the World Bank Documents & Reports archive by search term, country, document type, project, and date.
+## Breaking changes
+
+* `wb_indicator()` now returns a `topics` list-column of data frames holding every topic associated with an indicator, replacing the `topic_id` and `topic_value` columns, which previously kept only the first topic. Use `topics[[i]]$topic_id[1]` and `topics[[i]]$topic_value[1]` to recover the old values.
+
+## New features
+
 * `wb_country()` gains `region`, `income_level`, and `lending_type` arguments to filter countries server-side instead of downloading the full list.
 * `wb_data()` gains a `source` argument to query a database other than the World Development Indicators, as listed by `wb_source()`.
+* New `wb_document()` searches the World Bank Documents & Reports archive by search term, country, document type, project, and date.
 * `wb_indicator()` and `wb_search()` gain a `source` argument to query indicators from a specific database, as listed by `wb_source()`.
 
 # worldbank 0.10.0

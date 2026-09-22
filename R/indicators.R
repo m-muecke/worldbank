@@ -321,8 +321,8 @@ wb_country <- function(
 #' * `source_value`: The source value.
 #' * `source_note`: The source note.
 #' * `source_organization`: The source organization.
-#' * `topic_id`: The topic ID.
-#' * `topic_value`: The topic value.
+#' * `topics`: A list-column of data frames containing the `topic_id` and `topic_value` for every
+#'   topic associated with the indicator.
 #' @source <https://api.worldbank.org/v2/indicator>
 #' @family indicators data
 #' @export
@@ -347,8 +347,13 @@ wb_indicator <- function(indicator = NULL, lang = "en", source = NULL) {
     source_value = map_chr(data, \(x) x$source$value),
     source_note = map_chr(data, "sourceNote"),
     source_organization = map_chr(data, "sourceOrganization"),
-    topic_id = as.integer(map_chr(data, \(x) x$topics[1L][[1L]]$id %||% NA_character_)),
-    topic_value = map_chr(data, \(x) x$topics[1L][[1L]]$value %||% NA_character_),
+    topics = I(map(data, function(x) {
+      data.frame(
+        topic_id = as.integer(map_chr(x$topics, "id")),
+        topic_value = na_if_empty(trimws(map_chr(x$topics, "value"))),
+        check.names = FALSE
+      )
+    })),
     check.names = FALSE
   )
   clean_strings(res)
@@ -362,7 +367,8 @@ wb_indicator <- function(indicator = NULL, lang = "en", source = NULL) {
 #' @param pattern (`character(1)`)\cr
 #'   Regular expression to match.
 #' @param fields (`character()`)\cr
-#'   Columns of the indicator catalog to search. Default `c("id", "name", "source_note")`.
+#'   Columns of the indicator catalog to search, including the nested `topics` column. Default
+#'   `c("id", "name", "source_note")`.
 #' @param catalog (`NULL` | `data.frame()`)\cr
 #'   Optional pre-fetched indicator catalog. If `NULL` (default), [wb_indicator()] is called.
 #' @param lang (`character(1)`)\cr
@@ -385,6 +391,9 @@ wb_indicator <- function(indicator = NULL, lang = "en", source = NULL) {
 #'
 #' # restrict the search to the indicator name
 #' wb_search("unemployment", fields = "name")
+#'
+#' # search the topics associated with each indicator
+#' wb_search("Climate Change", fields = "topics")
 #'
 #' # case-sensitive fixed-string match
 #' wb_search("GDP", ignore.case = FALSE, fixed = TRUE)
@@ -411,7 +420,14 @@ wb_search <- function(
     stop(sprintf("`fields` not found in catalog: %s.", toString(missing_fields)), call. = FALSE)
   }
   hit <- lapply(fields, function(x) {
-    m <- grepl(pattern, catalog[[x]], ignore.case = ignore.case, ...)
+    vals <- catalog[[x]]
+    if (is.list(vals)) {
+      vals <- map_chr(vals, function(value) {
+        value <- unlist(value, use.names = FALSE)
+        paste(value[!is.na(value)], collapse = " ")
+      })
+    }
+    m <- grepl(pattern, vals, ignore.case = ignore.case, ...)
     m & !is.na(m)
   })
   hit <- Reduce(`|`, hit)

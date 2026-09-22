@@ -22,7 +22,8 @@ wb_search(
 Regular expression to match.}
 
 \item{fields}{(\code{character()})\cr
-Columns of the indicator catalog to search. Default \code{c("id", "name", "source_note")}.}
+Columns of the indicator catalog to search, including the nested \code{topics} column. Default
+\code{c("id", "name", "source_note")}.}
 
 \item{catalog}{(\code{NULL} | \code{data.frame()})\cr
 Optional pre-fetched indicator catalog. If \code{NULL} (default), \code{\link[=wb_indicator]{wb_indicator()}} is called.}
@@ -55,6 +56,9 @@ wb_search("GDP")
 
 # restrict the search to the indicator name
 wb_search("unemployment", fields = "name")
+
+# search the topics associated with each indicator
+wb_search("Climate Change", fields = "topics")
 
 # case-sensitive fixed-string match
 wb_search("GDP", ignore.case = FALSE, fixed = TRUE)
