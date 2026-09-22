@@ -341,19 +341,17 @@ wb_indicator <- function(indicator = NULL, lang = "en") {
     source_value = map_chr(data, \(x) x$source$value),
     source_note = map_chr(data, "sourceNote"),
     source_organization = map_chr(data, "sourceOrganization"),
-    topics = I(map(data, \(x) parse_indicator_topics(x$topics))),
+    topics = I(map(data, function(x) {
+      topics <- x$topics %||% list()
+      data.frame(
+        topic_id = as.integer(map_chr(topics, "id")),
+        topic_value = na_if_empty(trimws(map_chr(topics, "value"))),
+        check.names = FALSE
+      )
+    })),
     check.names = FALSE
   )
   clean_strings(res)
-}
-
-parse_indicator_topics <- function(data) {
-  data <- data %||% list()
-  data.frame(
-    topic_id = as.integer(map_chr(data, "id")),
-    topic_value = na_if_empty(trimws(map_chr(data, "value"))),
-    check.names = FALSE
-  )
 }
 
 #' Search World Bank indicators
