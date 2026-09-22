@@ -46,8 +46,7 @@ wb_cache_clear <- function() {
 #' @rdname cache
 #' @export
 wb_cache_delete <- function() {
-  .Deprecated("wb_cache_clear")
-  wb_cache_clear()
+  .Defunct("wb_cache_clear")
 }
 
 req_wb_cache <- function(req) {

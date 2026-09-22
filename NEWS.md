@@ -2,6 +2,7 @@
 
 ## Breaking changes
 
+* `wb_cache_delete()`, deprecated since worldbank 0.8.0, is now defunct. Use `wb_cache_clear()` instead.
 * `wb_indicator()` now returns a `topics` list-column of data frames holding every topic associated with an indicator, replacing the `topic_id` and `topic_value` columns, which previously kept only the first topic. Use `topics[[i]]$topic_id[1]` and `topics[[i]]$topic_value[1]` to recover the old values.
 
 ## New features
