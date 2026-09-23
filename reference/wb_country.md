@@ -29,7 +29,7 @@ wb_country(
 - region:
 
   (`NULL` \| [`character()`](https://rdrr.io/r/base/character.html))  
-  Region IDs to filter by, as listed by
+  Region codes to filter by, as listed in the `code` column of
   [`wb_region()`](https://m-muecke.github.io/worldbank/reference/wb_region.md).
   Default `NULL`.
 

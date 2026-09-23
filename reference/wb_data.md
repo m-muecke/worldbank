@@ -92,8 +92,10 @@ wb_country_indicator(
   (`NULL` \| `integer(1)`)  
   ID of the database to query, as listed by
   [`wb_source()`](https://m-muecke.github.io/worldbank/reference/wb_source.md).
-  Default `NULL`, which queries the World Development Indicators. Set
-  this for indicators that are only published in another database.
+  Default `NULL`, which uses the World Development Indicators for
+  indicators published there. Set this to get an indicator's values from
+  another database, which can differ from those in the World Development
+  Indicators.
 
 ## Value
 
@@ -200,22 +202,22 @@ head(ind[c("date", "value", "footnote")])
 #> 5 Based on data from HBS. Estimated from unit-record consumption data.
 #> 6 Based on data from HBS. Estimated from unit-record consumption data.
 
-# an indicator that is only published in the Africa Development Indicators
-ind <- wb_data("AG.AGR.TRAC.NO", "ZAF", source = 11)
+# GDP as archived in the Africa Development Indicators, which ends in 2011
+ind <- wb_data("NY.GDP.MKTP.CD", "ZAF", source = 11)
 head(ind)
-#>   date   indicator_id                   indicator_name country_id country_name
-#> 1 2004 AG.AGR.TRAC.NO Agricultural machinery, tractors        ZAF South Africa
-#> 2 2003 AG.AGR.TRAC.NO Agricultural machinery, tractors        ZAF South Africa
-#> 3 2002 AG.AGR.TRAC.NO Agricultural machinery, tractors        ZAF South Africa
-#> 4 2001 AG.AGR.TRAC.NO Agricultural machinery, tractors        ZAF South Africa
-#> 5 2000 AG.AGR.TRAC.NO Agricultural machinery, tractors        ZAF South Africa
-#> 6 1999 AG.AGR.TRAC.NO Agricultural machinery, tractors        ZAF South Africa
-#>   country_code value unit obs_status decimal
-#> 1         <NA> 63200 <NA>       <NA>       0
-#> 2         <NA> 65475 <NA>       <NA>       0
-#> 3         <NA> 67750 <NA>       <NA>       0
-#> 4         <NA> 70025 <NA>       <NA>       0
-#> 5         <NA> 72300 <NA>       <NA>       0
-#> 6         <NA> 75500 <NA>       <NA>       0
+#>   date   indicator_id    indicator_name country_id country_name country_code
+#> 1 2011 NY.GDP.MKTP.CD GDP (current US$)        ZAF South Africa         <NA>
+#> 2 2010 NY.GDP.MKTP.CD GDP (current US$)        ZAF South Africa         <NA>
+#> 3 2009 NY.GDP.MKTP.CD GDP (current US$)        ZAF South Africa         <NA>
+#> 4 2008 NY.GDP.MKTP.CD GDP (current US$)        ZAF South Africa         <NA>
+#> 5 2007 NY.GDP.MKTP.CD GDP (current US$)        ZAF South Africa         <NA>
+#> 6 2006 NY.GDP.MKTP.CD GDP (current US$)        ZAF South Africa         <NA>
+#>          value unit obs_status decimal
+#> 1 408236752340 <NA>       <NA>       0
+#> 2 363523195186 <NA>       <NA>       0
+#> 3 283012416483 <NA>       <NA>       0
+#> 4 273870092687 <NA>       <NA>       0
+#> 5 286171830700 <NA>       <NA>       0
+#> 6 261007039378 <NA>       <NA>       0
 # }
 ```

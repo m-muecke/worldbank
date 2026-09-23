@@ -150,126 +150,135 @@ pip_info()
 #> [1] "digest_0.6.39"
 #> 
 #> $other_packages[[12]]
-#> [1] "duckdb_1.5.5"
+#> [1] "dplyr_1.2.1"
 #> 
 #> $other_packages[[13]]
-#> [1] "filelock_1.0.3"
+#> [1] "duckdb_1.5.5"
 #> 
 #> $other_packages[[14]]
-#> [1] "fs_2.1.0"
+#> [1] "filelock_1.0.3"
 #> 
 #> $other_packages[[15]]
-#> [1] "fst_0.9.8"
+#> [1] "fs_2.1.0"
 #> 
 #> $other_packages[[16]]
-#> [1] "glue_1.8.1"
+#> [1] "fst_0.9.8"
 #> 
 #> $other_packages[[17]]
-#> [1] "hms_1.1.4"
+#> [1] "generics_0.1.4"
 #> 
 #> $other_packages[[18]]
-#> [1] "httpuv_1.6.17"
+#> [1] "glue_1.8.1"
 #> 
 #> $other_packages[[19]]
-#> [1] "joyn_0.3.0"
+#> [1] "hms_1.1.4"
 #> 
 #> $other_packages[[20]]
-#> [1] "jsonlite_2.0.0"
+#> [1] "httpuv_1.6.17"
 #> 
 #> $other_packages[[21]]
-#> [1] "later_1.4.8"
+#> [1] "joyn_0.3.0"
 #> 
 #> $other_packages[[22]]
-#> [1] "lifecycle_1.0.5"
+#> [1] "jsonlite_2.0.0"
 #> 
 #> $other_packages[[23]]
-#> [1] "magrittr_2.0.5"
+#> [1] "later_1.4.8"
 #> 
 #> $other_packages[[24]]
-#> [1] "otel_0.2.0"
+#> [1] "lifecycle_1.0.5"
 #> 
 #> $other_packages[[25]]
-#> [1] "parallel_4.5.2"
+#> [1] "magrittr_2.0.5"
 #> 
 #> $other_packages[[26]]
-#> [1] "pillar_1.11.1"
+#> [1] "MASS_7.3-65"
 #> 
 #> $other_packages[[27]]
-#> [1] "pkgconfig_2.0.3"
+#> [1] "otel_0.2.0"
 #> 
 #> $other_packages[[28]]
-#> [1] "promises_1.5.0"
+#> [1] "parallel_4.5.2"
 #> 
 #> $other_packages[[29]]
-#> [1] "ps_1.9.3"
+#> [1] "pillar_1.11.1"
 #> 
 #> $other_packages[[30]]
-#> [1] "purrr_1.2.2"
+#> [1] "pkgconfig_2.0.3"
 #> 
 #> $other_packages[[31]]
-#> [1] "qs2_0.3.1"
+#> [1] "promises_1.5.0"
 #> 
 #> $other_packages[[32]]
-#> [1] "R.methodsS3_1.8.2"
+#> [1] "ps_1.9.3"
 #> 
 #> $other_packages[[33]]
-#> [1] "R.oo_1.27.1"
+#> [1] "purrr_1.2.2"
 #> 
 #> $other_packages[[34]]
-#> [1] "R.utils_2.13.0"
+#> [1] "qs2_0.3.1"
 #> 
 #> $other_packages[[35]]
-#> [1] "R6_2.6.1"
+#> [1] "R.methodsS3_1.8.2"
 #> 
 #> $other_packages[[36]]
-#> [1] "Rcpp_1.1.2"
+#> [1] "R.oo_1.27.1"
 #> 
 #> $other_packages[[37]]
-#> [1] "RcppParallel_6.2.1"
+#> [1] "R.utils_2.13.0"
 #> 
 #> $other_packages[[38]]
-#> [1] "readr_2.2.0"
+#> [1] "R6_2.6.1"
 #> 
 #> $other_packages[[39]]
-#> [1] "rlang_1.3.0"
+#> [1] "Rcpp_1.1.2"
 #> 
 #> $other_packages[[40]]
-#> [1] "stringfish_0.19.2"
+#> [1] "RcppParallel_6.2.1"
 #> 
 #> $other_packages[[41]]
-#> [1] "stringi_1.8.9"
+#> [1] "readr_2.2.0"
 #> 
 #> $other_packages[[42]]
-#> [1] "swagger_5.32.1"
+#> [1] "rlang_1.3.0"
 #> 
 #> $other_packages[[43]]
-#> [1] "tibble_3.3.1"
+#> [1] "stringfish_0.19.2"
 #> 
 #> $other_packages[[44]]
-#> [1] "tidyselect_1.2.1"
+#> [1] "stringi_1.8.9"
 #> 
 #> $other_packages[[45]]
-#> [1] "tools_4.5.2"
+#> [1] "swagger_5.32.1"
 #> 
 #> $other_packages[[46]]
-#> [1] "triebeard_0.4.1"
+#> [1] "tibble_3.3.1"
 #> 
 #> $other_packages[[47]]
-#> [1] "tzdb_0.5.0"
+#> [1] "tidyselect_1.2.1"
 #> 
 #> $other_packages[[48]]
-#> [1] "urltools_1.7.3.1"
+#> [1] "tools_4.5.2"
 #> 
 #> $other_packages[[49]]
-#> [1] "vctrs_0.7.3"
+#> [1] "triebeard_0.4.1"
 #> 
 #> $other_packages[[50]]
-#> [1] "vroom_1.7.1"
+#> [1] "tzdb_0.5.0"
 #> 
 #> $other_packages[[51]]
-#> [1] "webutils_1.2.3"
+#> [1] "urltools_1.7.3.1"
 #> 
 #> $other_packages[[52]]
+#> [1] "vctrs_0.7.3"
+#> 
+#> $other_packages[[53]]
+#> [1] "vroom_1.7.1"
+#> 
+#> $other_packages[[54]]
+#> [1] "webutils_1.2.3"
+#> 
+#> $other_packages[[55]]
 #> [1] "yaml_2.3.12"
 #> 
 #> 
@@ -285,7 +294,7 @@ pip_info()
 #> 
 #> $server_time
 #> $server_time[[1]]
-#> [1] "2026-09-22 18:24:12"
+#> [1] "2026-09-23 09:17:06"
 #> 
 #> 
 # }
