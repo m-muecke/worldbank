@@ -611,9 +611,9 @@ wb_data <- function(
   gapfill <- if (gapfill) "Y" else NULL
 
   resource <- sprintf("country/%s/indicator/%s", country, indicator)
-  if (length(resource) == 1L) {
-    res <- worldbank(
-      resource = resource,
+  res <- map(resource, function(x) {
+    data <- worldbank(
+      resource = x,
       lang = lang,
       date = date,
       mrv = mrv,
@@ -621,20 +621,9 @@ wb_data <- function(
       footnote = if (footnote) "Y",
       source = source
     )
-    res <- parse_country_indicator(res, footnote = footnote)
-  } else {
-    res <- worldbank_seq(
-      resource = resource,
-      lang = lang,
-      date = date,
-      mrv = mrv,
-      gapfill = gapfill,
-      footnote = if (footnote) "Y",
-      source = source
-    )
-    res <- map(res, parse_country_indicator, footnote = footnote)
-    res <- do.call(rbind, res)
-  }
+    parse_country_indicator(data, footnote = footnote)
+  })
+  res <- do.call(rbind, res)
   if (nrow(res) == 0L) {
     return(res)
   }
@@ -688,23 +677,8 @@ wdi_pivot_long <- function(data) {
 
 worldbank <- function(resource, ..., lang = NULL, per_page = 32500L) {
   stopifnot(is_string(lang, null_ok = TRUE, n_chars = 2L))
-  json <- wb_request("https://api.worldbank.org/v2") |>
-    req_url_path_append(lang, resource) |>
-    req_url_query(
-      ...,
-      format = "json",
-      per_page = per_page,
-      .multi = \(x) paste0(x, collapse = ";")
-    ) |>
-    req_error(is_error = is_wb_error, body = wb_error_body) |>
-    req_perform() |>
-    resp_body_json()
-  json[[2L]]
-}
-
-worldbank_seq <- function(resource, ..., lang = NULL, per_page = 32500L) {
-  stopifnot(is_string(lang, null_ok = TRUE, n_chars = 2L))
   req <- wb_request("https://api.worldbank.org/v2") |>
+    req_url_path_append(lang, resource) |>
     req_url_query(
       ...,
       format = "json",
@@ -713,10 +687,15 @@ worldbank_seq <- function(resource, ..., lang = NULL, per_page = 32500L) {
     ) |>
     req_error(is_error = is_wb_error, body = wb_error_body)
 
-  resource |>
-    map(\(x) req_url_path_append(req, lang, x)) |>
-    req_perform_sequential() |>
-    map(\(x) resp_body_json(x)[[2L]])
+  resps <- req_perform_iterative(
+    req,
+    next_req = iterate_with_offset(
+      "page",
+      resp_pages = \(resp) max(as.integer(resp_body_json(resp)[[1L]]$pages), 1L)
+    ),
+    max_reqs = Inf
+  )
+  resps_data(resps, \(resp) resp_body_json(resp)[[2L]])
 }
 
 is_wb_error <- function(resp) {

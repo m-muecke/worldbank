@@ -13,6 +13,10 @@
 * New `wb_document()` searches the World Bank Documents & Reports archive by search term, country, document type, project, and date.
 * `wb_indicator()` and `wb_search()` gain a `source` argument to query indicators from a specific database, as listed by `wb_source()`.
 
+## Bug fixes
+
+* `wb_data()` and the other Indicators API functions now fetch every page of results, instead of silently returning only the first 32,500 rows.
+
 # worldbank 0.10.0
 
 * The PIP functions now require `release_version` and `ppp_version` to be exactly 8 and 4 digits, given as a string or a number.

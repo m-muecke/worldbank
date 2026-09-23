@@ -453,12 +453,10 @@ test_that("wb_data preserves mixed-frequency dates as character", {
     )
   }
   local_mocked_bindings(
-    worldbank_seq = function(resource, ...) {
-      lapply(resource, function(x) {
-        indicator <- sub(".*/", "", x)
-        date <- if (indicator == "ANNUAL") "2020" else "2020Q1"
-        list(observation(date, indicator))
-      })
+    worldbank = function(resource, ...) {
+      indicator <- sub(".*/", "", resource)
+      date <- if (indicator == "ANNUAL") "2020" else "2020Q1"
+      list(observation(date, indicator))
     }
   )
 
@@ -490,11 +488,9 @@ test_that("wb_data returns footnotes only when asked", {
 
 test_that("wb_data returns footnotes for multiple indicators", {
   local_mocked_bindings(
-    worldbank_seq = function(resource, ...) {
-      lapply(resource, function(x) {
-        indicator <- sub(".*/", "", x)
-        list(wb_observation(indicator, footnote = paste("note for", indicator)))
-      })
+    worldbank = function(resource, ...) {
+      indicator <- sub(".*/", "", resource)
+      list(wb_observation(indicator, footnote = paste("note for", indicator)))
     }
   )
   actual <- wb_data(c("a", "b"), "ALB", footnote = TRUE)
@@ -521,6 +517,31 @@ test_that("wb_data mrv and gapfill validation works", {
   expect_error(wb_data(footnote = NA))
   expect_error(wb_data(source = 0))
   expect_error(wb_data(source = "2"))
+})
+
+test_that("worldbank fetches every page", {
+  httr2::local_mocked_responses(function(req) {
+    page <- httr2::url_parse(req$url)$query$page %||% "1"
+    httr2::response(
+      status_code = 200L,
+      headers = list("content-type" = "application/json"),
+      body = charToRaw(sprintf('[{"page":%s,"pages":"3"},[{"id":"%s"}]]', page, page))
+    )
+  })
+
+  expect_identical(map_chr(worldbank("indicator"), "id"), c("1", "2", "3"))
+})
+
+test_that("worldbank returns NULL when there is no data", {
+  httr2::local_mocked_responses(\(req) {
+    httr2::response(
+      status_code = 200L,
+      headers = list("content-type" = "application/json"),
+      body = charToRaw('[{"page":1,"pages":0,"total":0},null]')
+    )
+  })
+
+  expect_null(worldbank("indicator"))
 })
 
 test_that("error parsing works", {
