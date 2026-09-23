@@ -41,6 +41,12 @@
   as listed by
   [`wb_source()`](https://m-muecke.github.io/worldbank/reference/wb_source.md).
 
+### Bug fixes
+
+- [`wb_data()`](https://m-muecke.github.io/worldbank/reference/wb_data.md)
+  and the other Indicators API functions now fetch every page of
+  results, instead of silently returning only the first 32,500 rows.
+
 ## worldbank 0.10.0
 
 CRAN release: 2026-08-21
