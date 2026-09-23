@@ -420,15 +420,12 @@ wb_search <- function(
     stop(sprintf("`fields` not found in catalog: %s.", toString(missing_fields)), call. = FALSE)
   }
   hit <- lapply(fields, function(field) {
-    vals <- catalog[[field]]
-    if (is.list(vals)) {
-      map_lgl(vals, function(cell) {
-        text <- unlist(Filter(is.character, cell), use.names = FALSE)
-        any(grepl(pattern, text, ignore.case = ignore.case, ...))
-      })
-    } else {
-      grepl(pattern, vals, ignore.case = ignore.case, ...)
+    if (field == "topics") {
+      return(map_lgl(catalog$topics, function(x) {
+        any(grepl(pattern, x$topic_value, ignore.case = ignore.case, ...))
+      }))
     }
+    grepl(pattern, catalog[[field]], ignore.case = ignore.case, ...)
   })
   hit <- Reduce(`|`, hit)
   res <- catalog[hit, , drop = FALSE]
