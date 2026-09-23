@@ -218,7 +218,7 @@ wb_region <- function(region = NULL, lang = "en") {
 #' @param country (`NULL` | `character()`)\cr
 #'   Country to query. Default `NULL`. If `NULL`, all countries are returned.
 #' @param region (`NULL` | `character()`)\cr
-#'   Region IDs to filter by, as listed by [wb_region()]. Default `NULL`.
+#'   Region codes to filter by, as listed in the `code` column of [wb_region()]. Default `NULL`.
 #' @param income_level (`NULL` | `character()`)\cr
 #'   Income level IDs to filter by, as listed by [wb_income_level()]. Default `NULL`.
 #' @param lending_type (`NULL` | `character()`)\cr
@@ -529,9 +529,10 @@ wb_bulk <- function(timeout = 600L) {
 #'   Whether to return the footnotes published alongside the observations, such as uncertainty
 #'   bounds or the survey a figure was derived from. Default `FALSE`.
 #' @param source (`NULL` | `integer(1)`)\cr
-#'   ID of the database to query, as listed by [wb_source()]. Default `NULL`, which queries the
-#'   World Development Indicators. Set this for indicators that are only published in another
-#'   database.
+#'   ID of the database to query, as listed by [wb_source()]. Default `NULL`, which uses the
+#'   World Development Indicators for indicators published there. Set this to get an indicator's
+#'   values from another database, which can differ from those in the World Development
+#'   Indicators.
 #' @returns A `data.frame()` with the available country indicators.
 #'   The columns are:
 #' * `date`: The date. An integer if all observations are annual, otherwise a character vector.
@@ -567,8 +568,8 @@ wb_bulk <- function(timeout = 600L) {
 #' ind <- wb_data("SI.POV.DDAY", "ALB", footnote = TRUE)
 #' head(ind[c("date", "value", "footnote")])
 #'
-#' # an indicator that is only published in the Africa Development Indicators
-#' ind <- wb_data("AG.AGR.TRAC.NO", "ZAF", source = 11)
+#' # GDP as archived in the Africa Development Indicators, which ends in 2011
+#' ind <- wb_data("NY.GDP.MKTP.CD", "ZAF", source = 11)
 #' head(ind)
 #' }
 wb_data <- function(
@@ -723,7 +724,7 @@ is_wb_error <- function(resp) {
     return(TRUE)
   }
   json <- resp_body_json(resp)
-  if (length(json) == 1L && length(json[[1L]]$message) == 1L) {
+  if (length(json) == 1L && length(json[[1L]]$message) >= 1L) {
     return(TRUE)
   }
   FALSE

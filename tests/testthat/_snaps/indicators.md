@@ -9,3 +9,14 @@
       The provided parameter value is not valid
       Read more at <https://datahelpdesk.worldbank.org/knowledgebase/articles/898620-api-error-codes>
 
+# error parsing works with multiple messages
+
+    Code
+      wb_data("NY.GDP.MKTP.CD", "ZAF", source = 99999)
+    Condition
+      Error in `req_perform()`:
+      ! HTTP 200 OK.
+      Error code: 120
+      The provided parameter value is not valid
+      Read more at <https://datahelpdesk.worldbank.org/knowledgebase/articles/898620-api-error-codes>
+

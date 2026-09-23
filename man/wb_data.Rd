@@ -65,9 +65,10 @@ Whether to return the footnotes published alongside the observations, such as un
 bounds or the survey a figure was derived from. Default \code{FALSE}.}
 
 \item{source}{(\code{NULL} | \code{integer(1)})\cr
-ID of the database to query, as listed by \code{\link[=wb_source]{wb_source()}}. Default \code{NULL}, which queries the
-World Development Indicators. Set this for indicators that are only published in another
-database.}
+ID of the database to query, as listed by \code{\link[=wb_source]{wb_source()}}. Default \code{NULL}, which uses the
+World Development Indicators for indicators published there. Set this to get an indicator's
+values from another database, which can differ from those in the World Development
+Indicators.}
 }
 \value{
 A \code{data.frame()} with the available country indicators.
@@ -109,8 +110,8 @@ head(ind)
 ind <- wb_data("SI.POV.DDAY", "ALB", footnote = TRUE)
 head(ind[c("date", "value", "footnote")])
 
-# an indicator that is only published in the Africa Development Indicators
-ind <- wb_data("AG.AGR.TRAC.NO", "ZAF", source = 11)
+# GDP as archived in the Africa Development Indicators, which ends in 2011
+ind <- wb_data("NY.GDP.MKTP.CD", "ZAF", source = 11)
 head(ind)
 }
 \dontshow{\}) # examplesIf}

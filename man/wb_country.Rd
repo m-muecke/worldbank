@@ -20,7 +20,7 @@ wb_country(
 Country to query. Default \code{NULL}. If \code{NULL}, all countries are returned.}
 
 \item{region}{(\code{NULL} | \code{character()})\cr
-Region IDs to filter by, as listed by \code{\link[=wb_region]{wb_region()}}. Default \code{NULL}.}
+Region codes to filter by, as listed in the \code{code} column of \code{\link[=wb_region]{wb_region()}}. Default \code{NULL}.}
 
 \item{income_level}{(\code{NULL} | \code{character()})\cr
 Income level IDs to filter by, as listed by \code{\link[=wb_income_level]{wb_income_level()}}. Default \code{NULL}.}

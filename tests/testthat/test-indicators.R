@@ -517,3 +517,16 @@ test_that("error parsing works", {
 
   expect_snapshot(wb_indicator("something.wrong"), error = TRUE)
 })
+
+test_that("error parsing works with multiple messages", {
+  msg <- '{"id":"120","key":"Invalid value","value":"The provided parameter value is not valid"}'
+  httr2::local_mocked_responses(\(req) {
+    httr2::response(
+      status_code = 200L,
+      headers = list("content-type" = "application/json"),
+      body = charToRaw(sprintf('[{"message":[%s,%s]}]', msg, msg))
+    )
+  })
+
+  expect_snapshot(wb_data("NY.GDP.MKTP.CD", "ZAF", source = 99999), error = TRUE)
+})
