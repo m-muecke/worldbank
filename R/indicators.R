@@ -278,6 +278,8 @@ wb_country <- function(
     incomeLevel = income_level,
     lendingType = lending_type
   )
+  # the API returns every country twice when filtering by lending type
+  data <- data[!duplicated(map_chr(data, "id"))]
   res <- data.frame(
     country_id = map_chr(data, "id"),
     country_code = map_chr(data, "iso2Code"),

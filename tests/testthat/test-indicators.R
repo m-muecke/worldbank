@@ -108,6 +108,13 @@ test_that("wb_country passes filters to the API", {
   expect_identical(captured$lendingType, "IDX")
 })
 
+test_that("wb_country drops duplicated countries", {
+  countries <- readRDS(test_path("fixtures", "wb-country.rds"))
+  local_mocked_bindings(worldbank = \(...) rep(countries[1:2], each = 2L))
+  actual <- wb_country(lending_type = "IDX")
+  expect_identical(actual$country_id, map_chr(countries[1:2], "id"))
+})
+
 test_that("wb_indicator", {
   local_mocked_bindings(
     worldbank = \(...) readRDS(test_path("fixtures", "wb-indicator.rds"))
