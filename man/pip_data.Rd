@@ -10,7 +10,7 @@
 pip_data(
   country = NULL,
   year = NULL,
-  povline = 2.15,
+  povline = NULL,
   popshare = NULL,
   fill_gaps = FALSE,
   nowcast = FALSE,
@@ -31,7 +31,8 @@ Years for which statistics are to be computed, specified as YYYY. Default \code{
 
 \item{povline}{(\code{NULL} | \code{numeric(1)})\cr
 Poverty line to be used to compute poverty measures, between \code{0} and \code{2700}. Poverty lines
-are only accepted up to 3 decimals. Default \code{2.15}.}
+are only accepted up to 3 decimals. Default \code{NULL}, which uses the international poverty
+line of the requested \code{ppp_version}, e.g. \code{3} for 2021 PPPs and \code{2.15} for 2017 PPPs.}
 
 \item{popshare}{(\code{NULL} | \code{numeric(1)})\cr
 Proportion of the population living below the poverty line, between \code{0} and \code{1}. Takes

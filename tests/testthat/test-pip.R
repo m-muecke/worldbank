@@ -24,6 +24,23 @@ test_that("pip CSV responses are trimmed and blanks become NA", {
   expect_equal(res$value, c(1.5, NA))
 })
 
+test_that("pip functions leave the poverty line to the API by default", {
+  urls <- character()
+  httr2::local_mocked_responses(function(req) {
+    urls <<- c(urls, req$url)
+    httr2::response(
+      status_code = 200L,
+      headers = list("content-type" = "text/csv"),
+      body = charToRaw("country_code\nZAF\n")
+    )
+  })
+
+  pip_data("ZAF")
+  pip_cp("ZAF")
+  pip_group("SSF")
+  expect_all_false(grepl("povline", urls, fixed = TRUE))
+})
+
 test_that("pip_data nowcast requires fill_gaps", {
   expect_error(pip_data(nowcast = TRUE), "fill_gaps")
 })

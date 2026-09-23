@@ -9,7 +9,7 @@
 \usage{
 pip_cp(
   country = NULL,
-  povline = 2.15,
+  povline = NULL,
   release_version = NULL,
   ppp_version = NULL,
   version = NULL
@@ -21,7 +21,8 @@ Countries for which statistics are to be computed, specified as ISO3 codes. Defa
 
 \item{povline}{(\code{NULL} | \code{numeric(1)})\cr
 Poverty line to be used to compute poverty measures, between \code{0} and \code{2700}. Poverty lines
-are only accepted up to 3 decimals. Default \code{2.15}.}
+are only accepted up to 3 decimals. Default \code{NULL}, which uses the international poverty
+line of the requested \code{ppp_version}, e.g. \code{3} for 2021 PPPs and \code{2.15} for 2017 PPPs.}
 
 \item{release_version}{(\code{NULL} | \code{character(1)} | \code{numeric(1)})\cr
 Version of the data release in YYYYMMDD format. Default \code{NULL}.}

@@ -6,7 +6,8 @@
 #'   Years for which statistics are to be computed, specified as YYYY. Default `NULL`.
 #' @param povline (`NULL` | `numeric(1)`)\cr
 #'   Poverty line to be used to compute poverty measures, between `0` and `2700`. Poverty lines
-#'   are only accepted up to 3 decimals. Default `2.15`.
+#'   are only accepted up to 3 decimals. Default `NULL`, which uses the international poverty
+#'   line of the requested `ppp_version`, e.g. `3` for 2021 PPPs and `2.15` for 2017 PPPs.
 #' @param popshare (`NULL` | `numeric(1)`)\cr
 #'   Proportion of the population living below the poverty line, between `0` and `1`. Takes
 #'   precedence over `povline`: if both are supplied, the poverty line is derived from `popshare`.
@@ -39,7 +40,7 @@
 pip_data <- function(
   country = NULL,
   year = NULL,
-  povline = 2.15,
+  povline = NULL,
   popshare = NULL,
   fill_gaps = FALSE,
   nowcast = FALSE,
@@ -102,7 +103,7 @@ pip_data <- function(
 #' }
 pip_cp <- function(
   country = NULL,
-  povline = 2.15,
+  povline = NULL,
   release_version = NULL,
   ppp_version = NULL,
   version = NULL
@@ -143,7 +144,7 @@ pip_cp <- function(
 pip_group <- function(
   country = NULL,
   year = NULL,
-  povline = 2.15,
+  povline = NULL,
   popshare = NULL,
   group_by = c("wb", "none"),
   fill_gaps = FALSE,
