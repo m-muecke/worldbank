@@ -17,7 +17,9 @@ test_that("wb_document", {
 
 test_that("wb_document returns an empty data.frame when nothing matches", {
   local_mocked_bindings(documents = \(...) list())
-  expect_shape(wb_document(search = "nothing"), dim = c(0L, 14L))
+  actual <- wb_document(search = "nothing")
+  expect_shape(actual, dim = c(0L, 14L))
+  expect_type(actual$project_id, "character")
 })
 
 test_that("wb_document joins multi-value filters with the API separator", {

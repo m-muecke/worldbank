@@ -141,10 +141,8 @@ parse_documents <- function(data) {
   )
   res$date <- as.Date(sub("T.*", "", res$date))
   # the project ID is only available as a suffix of the project name, e.g. "BR-Name -- P180429"
-  res$project_id <- ifelse(
-    grepl(" -- P\\d+$", res$project_id),
-    sub(".* -- ", "", res$project_id),
-    NA_character_
-  )
+  has_project_id <- grepl(" -- P\\d+$", res$project_id)
+  res$project_id <- sub(".* -- ", "", res$project_id)
+  res$project_id[!has_project_id] <- NA_character_
   clean_strings(res)
 }
