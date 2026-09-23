@@ -15,6 +15,7 @@
 
 ## Bug fixes
 
+* Requests are now also retried on HTTP 502 and 504 responses, which the World Bank APIs return for temporary gateway failures.
 * `wb_data()` and the other Indicators API functions now fetch every page of results, instead of silently returning only the first 32,500 rows.
 
 # worldbank 0.10.0
