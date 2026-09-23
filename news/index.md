@@ -4,6 +4,12 @@
 
 ### Breaking changes
 
+- [`pip_cp()`](https://m-muecke.github.io/worldbank/reference/pip_cp.md),
+  [`pip_data()`](https://m-muecke.github.io/worldbank/reference/pip_data.md),
+  and
+  [`pip_group()`](https://m-muecke.github.io/worldbank/reference/pip_group.md)
+  now default to `povline = NULL`, which uses the international poverty
+  line of the requested `ppp_version` instead of the outdated `2.15`.
 - [`wb_cache_delete()`](https://m-muecke.github.io/worldbank/reference/cache.md),
   deprecated since worldbank 0.8.0, is now defunct. Use
   [`wb_cache_clear()`](https://m-muecke.github.io/worldbank/reference/cache.md)

@@ -43,6 +43,8 @@
 <div class="section level3">
 <h3 id="breaking-changes-development-version">Breaking changes<a class="anchor" aria-label="anchor" href="#breaking-changes-development-version"></a></h3>
 <ul><li>
+<code><a href="../reference/pip_cp.html">pip_cp()</a></code>, <code><a href="../reference/pip_data.html">pip_data()</a></code>, and <code><a href="../reference/pip_group.html">pip_group()</a></code> now default to <code>povline = NULL</code>, which uses the international poverty line of the requested <code>ppp_version</code> instead of the outdated <code>2.15</code>.</li>
+<li>
 <code><a href="../reference/cache.html">wb_cache_delete()</a></code>, deprecated since worldbank 0.8.0, is now defunct. Use <code><a href="../reference/cache.html">wb_cache_clear()</a></code> instead.</li>
 <li>
 <code><a href="../reference/wb_indicator.html">wb_indicator()</a></code> now returns a <code>topics</code> list-column of data frames holding every topic associated with an indicator, replacing the <code>topic_id</code> and <code>topic_value</code> columns, which previously kept only the first topic. Use <code>topics[[i]]$topic_id[1]</code> and <code>topics[[i]]$topic_value[1]</code> to recover the old values.</li>

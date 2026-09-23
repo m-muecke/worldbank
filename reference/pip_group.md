@@ -8,7 +8,7 @@ Return aggregation of PIP statistics
 pip_group(
   country = NULL,
   year = NULL,
-  povline = 2.15,
+  povline = NULL,
   popshare = NULL,
   group_by = c("wb", "none"),
   fill_gaps = FALSE,
@@ -45,7 +45,8 @@ pip_group(
   (`NULL` \| `numeric(1)`)  
   Poverty line to be used to compute poverty measures, between `0` and
   `2700`. Poverty lines are only accepted up to 3 decimals. Default
-  `2.15`.
+  `NULL`, which uses the international poverty line of the requested
+  `ppp_version`, e.g. `3` for 2021 PPPs and `2.15` for 2017 PPPs.
 
 - popshare:
 
@@ -118,25 +119,25 @@ Other poverty and inequality statistics:
 grp <- pip_group(c("AFE", "LAC"))
 head(grp)
 #>   region_code                 region_name reporting_year poverty_line
-#> 1         AFE Eastern and Southern Africa           1981         2.15
-#> 2         AFE Eastern and Southern Africa           1982         2.15
-#> 3         AFE Eastern and Southern Africa           1983         2.15
-#> 4         AFE Eastern and Southern Africa           1984         2.15
-#> 5         AFE Eastern and Southern Africa           1985         2.15
-#> 6         AFE Eastern and Southern Africa           1986         2.15
+#> 1         AFE Eastern and Southern Africa           1981            3
+#> 2         AFE Eastern and Southern Africa           1982            3
+#> 3         AFE Eastern and Southern Africa           1983            3
+#> 4         AFE Eastern and Southern Africa           1984            3
+#> 5         AFE Eastern and Southern Africa           1985            3
+#> 6         AFE Eastern and Southern Africa           1986            3
 #>   reporting_pop headcount poverty_gap poverty_severity     watts     mean
-#> 1     238043099 0.4491860   0.1803920       0.09601235 0.2722762 4.620314
-#> 2     245822010 0.4529310   0.1833875       0.09820633 0.2780057 4.564970
-#> 3     253644643 0.4610831   0.1896610       0.10285639 0.2900256 4.484695
-#> 4     261458202 0.4703827   0.1947065       0.10595121 0.2985325 4.429398
-#> 5     269450407 0.4785722   0.1986180       0.10817873 0.3045951 4.362157
-#> 6     277621771 0.4720145   0.1955952       0.10661543 0.3003416 4.388316
+#> 1     238043099 0.5965929   0.2791532        0.1630652 0.4471287 4.620314
+#> 2     245822010 0.5994378   0.2823006        0.1657086 0.4540460 4.564970
+#> 3     253644643 0.6061125   0.2888617        0.1712578 0.4685138 4.484695
+#> 4     261458202 0.6152549   0.2951063        0.1756477 0.4801159 4.429398
+#> 5     269450407 0.6226119   0.3001387        0.1790228 0.4888074 4.362157
+#> 6     277621771 0.6176100   0.2963107        0.1765062 0.4825891 4.388316
 #>         spr       pg pop_in_poverty estimate_type
-#> 1 0.6201646 15.83368      106925621    projection
-#> 2 0.6222839 16.05505      111340398    projection
-#> 3 0.6273182 16.50500      116951254    projection
-#> 4 0.6352590 16.81880      122985422    projection
-#> 5 0.6408765 17.02746      128951486    projection
-#> 6 0.6360982 16.91017      131041498    projection
+#> 1 0.6201646 15.83368      142014821    projection
+#> 2 0.6222839 16.05505      147355011    projection
+#> 3 0.6273182 16.50500      153737190    projection
+#> 4 0.6352590 16.81880      160863442    projection
+#> 5 0.6408765 17.02746      167763017    projection
+#> 6 0.6360982 16.91017      171461969    projection
 # }
 ```

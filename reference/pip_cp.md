@@ -7,7 +7,7 @@ Return country profile data
 ``` r
 pip_cp(
   country = NULL,
-  povline = 2.15,
+  povline = NULL,
   release_version = NULL,
   ppp_version = NULL,
   version = NULL
@@ -31,7 +31,8 @@ pip_cp(
   (`NULL` \| `numeric(1)`)  
   Poverty line to be used to compute poverty measures, between `0` and
   `2700`. Poverty lines are only accepted up to 3 decimals. Default
-  `2.15`.
+  `NULL`, which uses the international poverty line of the requested
+  `ppp_version`, e.g. `3` for 2021 PPPs and `2.15` for 2017 PPPs.
 
 - release_version:
 

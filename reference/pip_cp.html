@@ -47,7 +47,7 @@
     <h2 id="ref-usage">Usage<a class="anchor" aria-label="anchor" href="#ref-usage"></a></h2>
     <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">pip_cp</span><span class="op">(</span></span>
 <span>  country <span class="op">=</span> <span class="cn">NULL</span>,</span>
-<span>  povline <span class="op">=</span> <span class="fl">2.15</span>,</span>
+<span>  povline <span class="op">=</span> <span class="cn">NULL</span>,</span>
 <span>  release_version <span class="op">=</span> <span class="cn">NULL</span>,</span>
 <span>  ppp_version <span class="op">=</span> <span class="cn">NULL</span>,</span>
 <span>  version <span class="op">=</span> <span class="cn">NULL</span></span>
@@ -70,7 +70,8 @@ Countries for which statistics are to be computed, specified as ISO3 codes. Defa
 <dt id="arg-povline">povline<a class="anchor" aria-label="anchor" href="#arg-povline"></a></dt>
 <dd><p>(<code>NULL</code> | <code>numeric(1)</code>)<br>
 Poverty line to be used to compute poverty measures, between <code>0</code> and <code>2700</code>. Poverty lines
-are only accepted up to 3 decimals. Default <code>2.15</code>.</p></dd>
+are only accepted up to 3 decimals. Default <code>NULL</code>, which uses the international poverty
+line of the requested <code>ppp_version</code>, e.g. <code>3</code> for 2021 PPPs and <code>2.15</code> for 2017 PPPs.</p></dd>
 
 
 <dt id="arg-release-version">release_version<a class="anchor" aria-label="anchor" href="#arg-release-version"></a></dt>
