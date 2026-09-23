@@ -154,7 +154,12 @@ test_that("wb_indicator keeps every topic", {
   indicator_without_topics <- indicator
   indicator_without_topics$id <- "NO.TOPICS"
   indicator_without_topics$topics <- list()
-  local_mocked_bindings(worldbank = \(...) list(indicator, indicator_without_topics))
+  indicator_with_empty_topic <- indicator
+  indicator_with_empty_topic$id <- "EMPTY.TOPIC"
+  indicator_with_empty_topic$topics <- list(setNames(list(), character()))
+  local_mocked_bindings(
+    worldbank = \(...) list(indicator, indicator_without_topics, indicator_with_empty_topic)
+  )
 
   actual <- wb_indicator(indicator$id)
 
@@ -169,6 +174,7 @@ test_that("wb_indicator keeps every topic", {
       )
     )
   )
+  expect_identical(actual$topics[[3L]], actual$topics[[2L]])
   expect_shape(actual$topics[[2L]], dim = c(0L, 2L))
   expect_identical(
     wb_search("Environment", fields = "topics", catalog = actual)$id,
