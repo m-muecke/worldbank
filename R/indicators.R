@@ -477,15 +477,18 @@ wb_bulk <- function(timeout = 600L) {
     req_perform(path = tf)
 
   utils::unzip(tf, exdir = td)
+  read_wdi(td)
+}
 
+read_wdi <- function(dir) {
   read_csv <- function(name, na_strings = "NA") {
     data <- utils::read.csv(
-      file.path(td, name),
+      file.path(dir, name),
       fileEncoding = "UTF-8-BOM",
       na.strings = na_strings
     )
     names(data) <- to_snake_case(names(data))
-    data
+    clean_strings(data)
   }
 
   # `NA` is Namibia's ISO-2 code, not a missing-value sentinel. Only the code columns
