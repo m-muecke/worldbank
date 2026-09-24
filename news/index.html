@@ -63,6 +63,8 @@
 <h3 id="bug-fixes-development-version">Bug fixes<a class="anchor" aria-label="anchor" href="#bug-fixes-development-version"></a></h3>
 <ul><li>Requests are now also retried on HTTP 502 and 504 responses, which the World Bank APIs return for temporary gateway failures.</li>
 <li>
+<code><a href="../reference/wb_bulk.html">wb_bulk()</a></code> now trims whitespace and returns <code>NA</code> instead of <code>""</code> for empty fields.</li>
+<li>
 <code><a href="../reference/wb_data.html">wb_data()</a></code> and the other Indicators API functions now fetch every page of results, instead of silently returning only the first 32,500 rows.</li>
 </ul></div>
 </div>
