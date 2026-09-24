@@ -33,7 +33,9 @@
 - New
   [`wb_document()`](https://m-muecke.github.io/worldbank/reference/wb_document.md)
   searches the World Bank Documents & Reports archive by search term,
-  country, document type, project, and date.
+  country, document type, project, and date. Use `limit` to cap the
+  number of documents returned, since broad queries can match hundreds
+  of thousands of documents.
 - [`wb_indicator()`](https://m-muecke.github.io/worldbank/reference/wb_indicator.md)
   and
   [`wb_search()`](https://m-muecke.github.io/worldbank/reference/wb_search.md)
