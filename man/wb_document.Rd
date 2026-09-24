@@ -14,7 +14,8 @@ wb_document(
   project = NULL,
   start_date = NULL,
   end_date = NULL,
-  id = NULL
+  id = NULL,
+  limit = NULL
 )
 }
 \arguments{
@@ -42,6 +43,10 @@ Document end date in \code{"YYYY-MM-DD"} format. Default \code{NULL}.}
 
 \item{id}{(\code{NULL} | \code{character()})\cr
 Document ID(s) to filter by, as returned in the \code{id} column. Default \code{NULL}.}
+
+\item{limit}{(\code{NULL} | \code{integer(1)})\cr
+The maximum number of documents to return. Default \code{NULL}. If \code{NULL}, all matching documents
+are returned, which can take many requests for broad queries.}
 }
 \value{
 A \code{data.frame()} with World Bank document data. The columns are:
@@ -78,6 +83,9 @@ wb_document(
 
 # all documents belonging to a project
 wb_document(project = "P180429")
+
+# the first 100 documents mentioning climate
+wb_document(search = "climate", limit = 100)
 }
 \dontshow{\}) # examplesIf}
 }

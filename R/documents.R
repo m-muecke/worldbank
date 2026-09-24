@@ -20,6 +20,9 @@
 #'   Document end date in `"YYYY-MM-DD"` format. Default `NULL`.
 #' @param id (`NULL` | `character()`)\cr
 #'   Document ID(s) to filter by, as returned in the `id` column. Default `NULL`.
+#' @param limit (`NULL` | `integer(1)`)\cr
+#'   The maximum number of documents to return. Default `NULL`. If `NULL`, all matching documents
+#'   are returned, which can take many requests for broad queries.
 #' @returns A `data.frame()` with World Bank document data. The columns are:
 #' * `id`: The document ID.
 #' * `title`: The document title.
@@ -50,6 +53,9 @@
 #'
 #' # all documents belonging to a project
 #' wb_document(project = "P180429")
+#'
+#' # the first 100 documents mentioning climate
+#' wb_document(search = "climate", limit = 100)
 #' }
 wb_document <- function(
   search = NULL,
@@ -58,7 +64,8 @@ wb_document <- function(
   project = NULL,
   start_date = NULL,
   end_date = NULL,
-  id = NULL
+  id = NULL,
+  limit = NULL
 ) {
   stopifnot(
     is_string(search, null_ok = TRUE),
@@ -67,7 +74,8 @@ wb_document <- function(
     is_character(project, null_ok = TRUE),
     is_string(start_date, null_ok = TRUE, pattern = "^\\d{4}-\\d{2}-\\d{2}$"),
     is_string(end_date, null_ok = TRUE, pattern = "^\\d{4}-\\d{2}-\\d{2}$"),
-    is_character(id, null_ok = TRUE)
+    is_character(id, null_ok = TRUE),
+    is_count(limit, null_ok = TRUE)
   )
 
   data <- documents(
@@ -77,12 +85,16 @@ wb_document <- function(
     proid = collapse_or(toupper(project)),
     strdate = start_date,
     enddate = end_date,
-    id = collapse_or(id)
+    id = collapse_or(id),
+    limit = limit
   )
   parse_documents(data)
 }
 
-documents <- function(..., per_page = 1000L) {
+documents <- function(..., limit = NULL) {
+  per_page <- min(limit %||% 1000L, 1000L)
+  max_reqs <- if (!is.null(limit)) ceiling(limit / per_page) else Inf
+
   fields <- c(
     "display_title",
     "docty",
@@ -109,10 +121,14 @@ documents <- function(..., per_page = 1000L) {
       offset = per_page,
       resp_complete = \(resp) length(resp_documents(resp)) == 0L
     ),
-    max_reqs = Inf
+    max_reqs = max_reqs
   )
 
-  resps_data(resps, resp_documents)
+  data <- resps_data(resps, resp_documents)
+  if (!is.null(limit)) {
+    data <- utils::head(data, limit)
+  }
+  data
 }
 
 resp_documents <- function(resp) {

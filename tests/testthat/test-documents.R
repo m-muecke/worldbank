@@ -48,6 +48,29 @@ test_that("wb_document joins multi-value filters with the API separator", {
   expect_identical(captured$id, "1^2")
 })
 
+test_that("wb_document limit caps results across pages", {
+  urls <- character()
+  docs <- lapply(seq_len(1000L), \(i) list(id = as.character(i)))
+  names(docs) <- paste0("D", seq_len(1000L))
+  httr2::local_mocked_responses(function(req) {
+    urls <<- c(urls, req$url)
+    httr2::response_json(body = list(documents = docs))
+  })
+
+  actual <- wb_document(search = "climate", limit = 1500L)
+
+  expect_shape(actual, nrow = 1500L)
+  expect_length(urls, 2L)
+  expect_match(urls, "rows=1000", all = TRUE, fixed = TRUE)
+  expect_match(urls[[2L]], "os=1000", fixed = TRUE)
+
+  urls <- character()
+  actual <- wb_document(search = "climate", limit = 10L)
+  expect_shape(actual, nrow = 10L)
+  expect_length(urls, 1L)
+  expect_match(urls, "rows=10", fixed = TRUE)
+})
+
 test_that("wb_document input validation works", {
   expect_error(wb_document(id = 1L))
   expect_error(wb_document(search = c("a", "b")))
@@ -57,4 +80,6 @@ test_that("wb_document input validation works", {
   expect_error(wb_document(project = TRUE))
   expect_error(wb_document(start_date = "2024"))
   expect_error(wb_document(end_date = "not-a-date"))
+  expect_error(wb_document(limit = 0L))
+  expect_error(wb_document(limit = 1.5))
 })
