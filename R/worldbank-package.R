@@ -5,7 +5,6 @@
 #' @importFrom httr2 req_perform
 #' @importFrom httr2 req_perform_iterative
 #' @importFrom httr2 req_retry
-#' @importFrom httr2 req_perform_sequential
 #' @importFrom httr2 req_timeout
 #' @importFrom httr2 req_url_path_append
 #' @importFrom httr2 req_url_query
