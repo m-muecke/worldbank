@@ -119,6 +119,7 @@ documents <- function(..., limit = NULL) {
       "os",
       start = 0L,
       offset = per_page,
+      resp_pages = \(resp) resp_total_pages(resp, per_page),
       resp_complete = \(resp) length(resp_documents(resp)) == 0L
     ),
     max_reqs = max_reqs

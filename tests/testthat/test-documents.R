@@ -71,6 +71,17 @@ test_that("wb_document limit caps results across pages", {
   expect_match(urls, "rows=10", fixed = TRUE)
 })
 
+test_that("documents stops paging once the total is reached", {
+  urls <- character()
+  httr2::local_mocked_responses(function(req) {
+    urls <<- c(urls, req$url)
+    data <- if (length(urls) == 1L) list(D1 = list(id = "D1")) else list()
+    httr2::response_json(body = list(total = 5L, documents = data))
+  })
+  expect_length(documents(), 1L)
+  expect_length(urls, 1L)
+})
+
 test_that("wb_document input validation works", {
   expect_error(wb_document(id = 1L))
   expect_error(wb_document(search = c("a", "b")))

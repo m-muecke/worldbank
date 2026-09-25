@@ -24,6 +24,17 @@ test_that("project_fields covers every field parse_projects reads", {
 })
 
 
+test_that("projects stops paging once the total is reached", {
+  urls <- character()
+  httr2::local_mocked_responses(function(req) {
+    urls <<- c(urls, req$url)
+    data <- if (length(urls) <= 2L) list(P1 = list(id = "P1")) else list()
+    httr2::response_json(body = list(total = "2", projects = data))
+  })
+  expect_length(projects(per_page = 1L), 2L)
+  expect_length(urls, 2L)
+})
+
 test_that("wb_project input validation works", {
   expect_error(wb_project(id = 1L))
   expect_error(wb_project(id = TRUE))

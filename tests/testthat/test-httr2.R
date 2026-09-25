@@ -15,3 +15,11 @@ test_that("is_wb_transient retries gateway and server errors", {
   expect_all_true(transient)
   expect_all_false(permanent)
 })
+
+test_that("resp_total_pages derives the page count from the total", {
+  resp <- \(total) httr2::response_json(body = list(total = total))
+  expect_identical(resp_total_pages(resp("2500"), 1000L), 3)
+  expect_identical(resp_total_pages(resp(1000L), 1000L), 1)
+  expect_identical(resp_total_pages(resp(0L), 1000L), 1)
+  expect_null(resp_total_pages(httr2::response_json(body = list()), 1000L))
+})
