@@ -611,7 +611,6 @@ wb_data <- function(
   indicator <- toupper(indicator)
   country <- tolower(format_param(country))
   date <- format_date(start_date, end_date)
-  gapfill <- if (gapfill) "Y" else NULL
 
   resource <- sprintf("country/%s/indicator/%s", country, indicator)
   res <- map(resource, function(x) {
@@ -620,7 +619,7 @@ wb_data <- function(
       lang = lang,
       date = date,
       mrv = mrv,
-      gapfill = gapfill,
+      gapfill = if (gapfill) "Y",
       footnote = if (footnote) "Y",
       source = source
     )
