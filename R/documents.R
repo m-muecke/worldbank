@@ -78,6 +78,10 @@ wb_document <- function(
     is_count(limit, null_ok = TRUE)
   )
 
+  if (!is.null(start_date) && !is.null(end_date) && start_date > end_date) {
+    stop("`start_date` must be earlier than `end_date`.", call. = FALSE)
+  }
+
   data <- documents(
     qterm = search,
     countrycode_exact = collapse_or(toupper(country)),

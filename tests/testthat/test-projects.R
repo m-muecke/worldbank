@@ -52,6 +52,10 @@ test_that("wb_project input validation works", {
   expect_error(wb_project(end_date = "2024"))
 })
 
+test_that("wb_project rejects start_date after end_date", {
+  expect_snapshot(wb_project(start_date = "2024-12-31", end_date = "2024-01-01"), error = TRUE)
+})
+
 test_that("wb_project forwards status", {
   captured <- NULL
   local_mocked_bindings(

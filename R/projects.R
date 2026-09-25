@@ -73,6 +73,10 @@ wb_project <- function(
     is_string(end_date, null_ok = TRUE, pattern = "^\\d{4}-\\d{2}-\\d{2}$")
   )
 
+  if (!is.null(start_date) && !is.null(end_date) && start_date > end_date) {
+    stop("`start_date` must be earlier than `end_date`.", call. = FALSE)
+  }
+
   if (!is.null(id)) {
     data <- projects(id = collapse_or(id))
   } else {

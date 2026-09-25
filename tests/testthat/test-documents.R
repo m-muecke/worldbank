@@ -94,3 +94,7 @@ test_that("wb_document input validation works", {
   expect_error(wb_document(limit = 0L))
   expect_error(wb_document(limit = 1.5))
 })
+
+test_that("wb_document rejects start_date after end_date", {
+  expect_snapshot(wb_document(start_date = "2024-12-31", end_date = "2024-01-01"), error = TRUE)
+})
