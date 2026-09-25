@@ -31,11 +31,7 @@ to_logical <- function(x) {
 }
 
 format_param <- function(x) {
-  x <- x %||% "all"
-  if (length(x) > 1L) {
-    x <- paste0(x, collapse = ";")
-  }
-  x
+  paste(x %||% "all", collapse = ";")
 }
 
 collapse_or <- function(x) {

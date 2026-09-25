@@ -30,6 +30,12 @@ test_that("clean_strings", {
   expect_identical(actual, expected)
 })
 
+test_that("format_param", {
+  expect_identical(format_param(NULL), "all")
+  expect_identical(format_param("US"), "US")
+  expect_identical(format_param(c("US", "DE")), "US;DE")
+})
+
 test_that("format_date works", {
   # both dates provided
   expect_identical(format_date("2024", "2025"), "2024:2025")
