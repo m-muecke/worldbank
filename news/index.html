@@ -58,6 +58,8 @@
 <li>New <code><a href="../reference/wb_document.html">wb_document()</a></code> searches the World Bank Documents &amp; Reports archive by search term, country, document type, project, and date. Use <code>limit</code> to cap the number of documents returned, since broad queries can match hundreds of thousands of documents.</li>
 <li>
 <code><a href="../reference/wb_indicator.html">wb_indicator()</a></code> and <code><a href="../reference/wb_search.html">wb_search()</a></code> gain a <code>source</code> argument to query indicators from a specific database, as listed by <code><a href="../reference/wb_source.html">wb_source()</a></code>.</li>
+<li>
+<code><a href="../reference/wb_project.html">wb_project()</a></code> is now several times faster, since it only requests the fields it returns.</li>
 </ul></div>
 <div class="section level3">
 <h3 id="bug-fixes-development-version">Bug fixes<a class="anchor" aria-label="anchor" href="#bug-fixes-development-version"></a></h3>
@@ -66,6 +68,8 @@
 <code><a href="../reference/wb_bulk.html">wb_bulk()</a></code> now trims whitespace and returns <code>NA</code> instead of <code>""</code> for empty fields.</li>
 <li>
 <code><a href="../reference/wb_data.html">wb_data()</a></code> and the other Indicators API functions now fetch every page of results, instead of silently returning only the first 32,500 rows.</li>
+<li>
+<code><a href="../reference/wb_project.html">wb_project()</a></code> now errors when <code>start_date</code> is after <code>end_date</code>, instead of silently returning no projects.</li>
 </ul></div>
 </div>
     <div class="section level2">

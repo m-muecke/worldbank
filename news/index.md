@@ -42,6 +42,9 @@
   gain a `source` argument to query indicators from a specific database,
   as listed by
   [`wb_source()`](https://m-muecke.github.io/worldbank/reference/wb_source.md).
+- [`wb_project()`](https://m-muecke.github.io/worldbank/reference/wb_project.md)
+  is now several times faster, since it only requests the fields it
+  returns.
 
 ### Bug fixes
 
@@ -53,6 +56,9 @@
 - [`wb_data()`](https://m-muecke.github.io/worldbank/reference/wb_data.md)
   and the other Indicators API functions now fetch every page of
   results, instead of silently returning only the first 32,500 rows.
+- [`wb_project()`](https://m-muecke.github.io/worldbank/reference/wb_project.md)
+  now errors when `start_date` is after `end_date`, instead of silently
+  returning no projects.
 
 ## worldbank 0.10.0
 
