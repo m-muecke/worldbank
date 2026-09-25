@@ -376,7 +376,7 @@ pip_error_body <- function(resp) {
   }
 }
 
-pip <- function(resource, ..., format = c("json", "csv", "xml", "rds")) {
+pip <- function(resource, ..., format = c("json", "csv")) {
   format <- match.arg(format)
   resp <- wb_request("https://api.worldbank.org/pip/v1") |>
     req_url_path_append(resource) |>
@@ -387,8 +387,6 @@ pip <- function(resource, ..., format = c("json", "csv", "xml", "rds")) {
   switch(
     format,
     json = resp_body_json(resp),
-    csv = clean_strings(resp_body_csv(resp)),
-    xml = resp_body_xml(resp),
-    rds = resp_body_raw(resp)
+    csv = clean_strings(resp_body_csv(resp))
   )
 }
