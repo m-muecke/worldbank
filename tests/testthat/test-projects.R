@@ -17,6 +17,12 @@ test_that("wb_project", {
   }
 })
 
+test_that("project_fields covers every field parse_projects reads", {
+  data <- readRDS(test_path("fixtures", "wb-project.rds"))
+  restricted <- lapply(data, \(x) x[intersect(names(x), project_fields)])
+  expect_identical(parse_projects(restricted), parse_projects(data))
+})
+
 
 test_that("wb_project input validation works", {
   expect_error(wb_project(id = 1L))

@@ -12,6 +12,7 @@
 * `wb_data()` gains a `source` argument to query a database other than the World Development Indicators, as listed by `wb_source()`.
 * New `wb_document()` searches the World Bank Documents & Reports archive by search term, country, document type, project, and date. Use `limit` to cap the number of documents returned, since broad queries can match hundreds of thousands of documents.
 * `wb_indicator()` and `wb_search()` gain a `source` argument to query indicators from a specific database, as listed by `wb_source()`.
+* `wb_project()` is now several times faster, since it only requests the fields it returns.
 
 ## Bug fixes
 

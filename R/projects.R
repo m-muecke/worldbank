@@ -88,9 +88,27 @@ wb_project <- function(
   parse_projects(data)
 }
 
+project_fields <- c(
+  "id",
+  "project_name",
+  "status",
+  "boardapprovaldate",
+  "closingdate",
+  "countrycode",
+  "countryshortname",
+  "regionname",
+  "curr_total_commitment",
+  "curr_ibrd_commitment",
+  "curr_ida_commitment",
+  "lendinginstr",
+  "borrower",
+  "impagency",
+  "url"
+)
+
 projects <- function(..., per_page = 1000L) {
   req <- wb_request("https://search.worldbank.org/api/v2/projects") |>
-    req_url_query(..., format = "json", rows = per_page)
+    req_url_query(..., format = "json", rows = per_page, fl = project_fields, .multi = "comma")
 
   resps <- req_perform_iterative(
     req,
