@@ -95,27 +95,28 @@ wb_document <- function(
   parse_documents(data)
 }
 
+document_fields <- c(
+  "display_title",
+  "docty",
+  "majdocty",
+  "countrycode",
+  "count",
+  "admreg",
+  "lang",
+  "docdt",
+  "repnb",
+  "projn",
+  "url",
+  "pdfurl",
+  "abstracts"
+)
+
 documents <- function(..., limit = NULL) {
   per_page <- min(limit %||% 1000L, 1000L)
   max_reqs <- if (!is.null(limit)) ceiling(limit / per_page) else Inf
 
-  fields <- c(
-    "display_title",
-    "docty",
-    "majdocty",
-    "countrycode",
-    "count",
-    "admreg",
-    "lang",
-    "docdt",
-    "repnb",
-    "projn",
-    "url",
-    "pdfurl",
-    "abstracts"
-  )
   req <- wb_request("https://search.worldbank.org/api/v3/wds") |>
-    req_url_query(..., format = "json", rows = per_page, fl = fields, .multi = "comma")
+    req_url_query(..., format = "json", rows = per_page, fl = document_fields, .multi = "comma")
 
   resps <- req_perform_iterative(
     req,
