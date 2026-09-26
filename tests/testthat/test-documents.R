@@ -10,7 +10,7 @@ test_that("wb_document", {
   for (x in actual) {
     if (is.character(x)) {
       expect_all_true(is.na(x) | nzchar(x))
-      expect_false(has_ws(x))
+      expect_all_false(has_ws(x))
     }
   }
 })

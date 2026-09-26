@@ -7,7 +7,7 @@ test_that("wb_language", {
   expect_shape(actual, dim = c(23L, 3L))
   expect_all_true(map_lgl(actual, is.character))
   expect_all_true(map_lgl(actual, \(x) all(nzchar(x))))
-  expect_all_false(map_lgl(actual, has_ws))
+  expect_all_false(has_ws(unlist(actual)))
 })
 
 test_that("wb_lending_type", {
@@ -19,7 +19,7 @@ test_that("wb_lending_type", {
   expect_shape(actual, dim = c(4L, 3L))
   expect_all_true(map_lgl(actual, is.character))
   expect_all_true(map_lgl(actual, \(x) all(nzchar(x))))
-  expect_all_false(map_lgl(actual, has_ws))
+  expect_all_false(has_ws(unlist(actual)))
 })
 
 test_that("wb_income_level", {
@@ -31,7 +31,7 @@ test_that("wb_income_level", {
   expect_shape(actual, dim = c(7L, 3L))
   expect_all_true(map_lgl(actual, is.character))
   expect_all_true(map_lgl(actual, \(x) all(nzchar(x))))
-  expect_all_false(map_lgl(actual, has_ws))
+  expect_all_false(has_ws(unlist(actual)))
 })
 
 test_that("wb_source", {
@@ -44,7 +44,7 @@ test_that("wb_source", {
   for (x in actual) {
     if (is.character(x)) {
       expect_all_true(nzchar(x))
-      expect_false(has_ws(x))
+      expect_all_false(has_ws(x))
     }
   }
 })
@@ -59,7 +59,7 @@ test_that("wb_topic", {
   for (x in actual) {
     if (is.character(x)) {
       expect_all_true(nzchar(x))
-      expect_false(has_ws(x))
+      expect_all_false(has_ws(x))
     }
   }
 })
@@ -74,7 +74,7 @@ test_that("wb_region", {
   for (x in actual) {
     if (is.character(x)) {
       expect_all_true(nzchar(x))
-      expect_false(has_ws(x))
+      expect_all_false(has_ws(x))
     }
   }
 })
@@ -89,7 +89,7 @@ test_that("wb_country", {
   for (x in actual) {
     if (is.character(x)) {
       expect_all_true(nzchar(x))
-      expect_false(has_ws(x))
+      expect_all_false(has_ws(x))
     }
   }
 })
@@ -129,7 +129,7 @@ test_that("wb_indicator", {
   for (x in actual) {
     if (is.character(x)) {
       expect_all_true(nzchar(x))
-      expect_false(has_ws(x))
+      expect_all_false(has_ws(x))
     }
   }
 })
@@ -198,7 +198,7 @@ test_that("wb_country_indicator", {
   for (x in actual) {
     if (is.character(x)) {
       expect_all_true(nzchar(x))
-      expect_false(has_ws(x))
+      expect_all_false(has_ws(x))
     }
   }
 })

@@ -12,7 +12,7 @@ test_that("wb_project", {
   for (x in actual) {
     if (is.character(x)) {
       expect_all_true(nzchar(x))
-      expect_false(has_ws(x))
+      expect_all_false(has_ws(x))
     }
   }
 })
