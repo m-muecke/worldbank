@@ -83,16 +83,16 @@ test_that("documents stops paging once the total is reached", {
 })
 
 test_that("wb_document input validation works", {
-  expect_error(wb_document(id = 1L))
-  expect_error(wb_document(search = c("a", "b")))
-  expect_error(wb_document(country = "BRA"))
-  expect_error(wb_document(country = NA))
-  expect_error(wb_document(type = 1L))
-  expect_error(wb_document(project = TRUE))
-  expect_error(wb_document(start_date = "2024"))
-  expect_error(wb_document(end_date = "not-a-date"))
-  expect_error(wb_document(limit = 0L))
-  expect_error(wb_document(limit = 1.5))
+  expect_snapshot(wb_document(id = 1L), error = TRUE)
+  expect_snapshot(wb_document(search = c("a", "b")), error = TRUE)
+  expect_snapshot(wb_document(country = "BRA"), error = TRUE)
+  expect_snapshot(wb_document(country = NA), error = TRUE)
+  expect_snapshot(wb_document(type = 1L), error = TRUE)
+  expect_snapshot(wb_document(project = TRUE), error = TRUE)
+  expect_snapshot(wb_document(start_date = "2024"), error = TRUE)
+  expect_snapshot(wb_document(end_date = "not-a-date"), error = TRUE)
+  expect_snapshot(wb_document(limit = 0L), error = TRUE)
+  expect_snapshot(wb_document(limit = 1.5), error = TRUE)
 })
 
 test_that("wb_document rejects start_date after end_date", {

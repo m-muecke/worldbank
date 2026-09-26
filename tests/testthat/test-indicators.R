@@ -290,9 +290,9 @@ test_that("wb_country input validation works", {
   expect_error(wb_country(NA))
   expect_error(wb_country(1L))
   expect_error(wb_country(TRUE))
-  expect_error(wb_country(region = "SS"))
-  expect_error(wb_country(income_level = 1L))
-  expect_error(wb_country(lending_type = NA))
+  expect_snapshot(wb_country(region = "SS"), error = TRUE)
+  expect_snapshot(wb_country(income_level = 1L), error = TRUE)
+  expect_snapshot(wb_country(lending_type = NA), error = TRUE)
   # lang should be two letter code
   expect_error(wb_country(lang = "a"))
   expect_error(wb_country(lang = "abc"))
@@ -308,8 +308,8 @@ test_that("wb_indicator input validation works", {
   expect_error(wb_indicator(NA))
   expect_error(wb_indicator(1L))
   expect_error(wb_indicator(TRUE))
-  expect_error(wb_indicator(source = 0))
-  expect_error(wb_indicator(source = "2"))
+  expect_snapshot(wb_indicator(source = 0), error = TRUE)
+  expect_snapshot(wb_indicator(source = "2"), error = TRUE)
   # lang should be two letter code
   expect_error(wb_indicator(lang = "a"))
   expect_error(wb_indicator(lang = "abc"))
@@ -407,8 +407,8 @@ test_that("wb_search input validation works", {
   expect_error(wb_search("GDP", fields = character()))
   expect_error(wb_search("GDP", fields = "not_a_column"), "not_a_column")
   expect_error(wb_search("GDP", catalog = list()))
-  expect_error(wb_search("GDP", source = 0))
-  expect_error(wb_search("GDP", source = "2"))
+  expect_snapshot(wb_search("GDP", source = 0), error = TRUE)
+  expect_snapshot(wb_search("GDP", source = "2"), error = TRUE)
 })
 
 test_that("wb_country_indicator input validation works", {
@@ -515,8 +515,8 @@ test_that("wb_data mrv and gapfill validation works", {
   expect_error(wb_data(mrv = "a"))
   expect_error(wb_data(footnote = "yes"))
   expect_error(wb_data(footnote = NA))
-  expect_error(wb_data(source = 0))
-  expect_error(wb_data(source = "2"))
+  expect_snapshot(wb_data(source = 0), error = TRUE)
+  expect_snapshot(wb_data(source = "2"), error = TRUE)
 })
 
 test_that("worldbank fetches every page", {
@@ -533,7 +533,7 @@ test_that("worldbank fetches every page", {
 })
 
 test_that("worldbank returns NULL when there is no data", {
-  httr2::local_mocked_responses(\(req) {
+  httr2::local_mocked_responses(function(req) {
     httr2::response(
       status_code = 200L,
       headers = list("content-type" = "application/json"),
@@ -554,7 +554,7 @@ test_that("error parsing works", {
 
 test_that("error parsing works with multiple messages", {
   msg <- '{"id":"120","key":"Invalid value","value":"The provided parameter value is not valid"}'
-  httr2::local_mocked_responses(\(req) {
+  httr2::local_mocked_responses(function(req) {
     httr2::response(
       status_code = 200L,
       headers = list("content-type" = "application/json"),
