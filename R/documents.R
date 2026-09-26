@@ -23,20 +23,22 @@
 #' @param limit (`NULL` | `integer(1)`)\cr
 #'   The maximum number of documents to return. Default `NULL`. If `NULL`, all matching documents
 #'   are returned, which can take many requests for broad queries.
-#' @returns A `data.frame()` with World Bank document data. The columns are:
+#' @returns A `data.frame()` with World Bank document data. Since a document can have several
+#'   types, countries, regions, and projects, `type`, `country_code`, `country`, `region`, and
+#'   `project_id` hold all of them separated by `;`, which never occurs within a value. Use
+#'   `strsplit(x, ";")` to split them. The columns are:
 #' * `id`: The document ID.
 #' * `title`: The document title.
-#' * `type`: The document type.
+#' * `type`: The document types.
 #' * `major_type`: The major document type.
-#' * `country_code`: The ISO country codes, separated by `;` if there are several.
-#' * `country`: The country names, as returned by the API. Names are separated by `,` if there are
-#'   several, but since names can contain commas themselves, use `country_code` to split them.
-#' * `region`: The administrative region names, separated by `;` if there are several.
+#' * `country_code`: The World Bank country codes.
+#' * `country`: The country names. They are not in the same order as `country_code`, and a code can
+#'   have more than one name, so the two can't be matched by position.
+#' * `region`: The administrative region names.
 #' * `language`: The document language.
 #' * `date`: The document date.
 #' * `report_number`: The report number.
-#' * `project_id`: The IDs of the associated projects, separated by `;` if there are several, or
-#'   `NA` if there are none.
+#' * `project_id`: The IDs of the associated projects, or `NA` if there are none.
 #' * `url`: The document URL.
 #' * `pdf_url`: The PDF URL.
 #' * `abstract`: The abstract.
@@ -57,7 +59,10 @@
 #' wb_document(project = "P180429")
 #'
 #' # the first 100 documents mentioning climate
-#' wb_document(search = "climate", limit = 100)
+#' docs <- wb_document(search = "climate", limit = 100)
+#'
+#' # the ones covering more than one country
+#' docs[grepl(";", docs$country_code), c("title", "country_code")]
 #' }
 wb_document <- function(
   search = NULL,
@@ -165,7 +170,23 @@ parse_documents <- function(data) {
     check.names = FALSE
   )
   res$date <- as.Date(sub("T.*", "", res$date))
-  res$country_code <- gsub(",", ";", res$country_code, fixed = TRUE)
-  res$project_id <- gsub(",", ";", res$project_id, fixed = TRUE)
-  clean_strings(res)
+  res <- clean_strings(res)
+  res$type <- normalize_values(res$type, ";")
+  res$country_code <- normalize_values(res$country_code, ",")
+  # names can contain ", " themselves, e.g. "Congo, Democratic Republic of"
+  res$country <- normalize_values(res$country, ",(?! )")
+  res$region <- normalize_values(res$region, ";")
+  res$project_id <- normalize_values(res$project_id, ",")
+  res
+}
+
+normalize_values <- function(x, split) {
+  res <- map_chr(x, function(value) {
+    if (is.na(value)) {
+      return(NA_character_)
+    }
+    value <- trimws(strsplit(value, split, perl = TRUE)[[1L]])
+    paste(value[nzchar(value)], collapse = ";")
+  })
+  na_if_empty(res)
 }

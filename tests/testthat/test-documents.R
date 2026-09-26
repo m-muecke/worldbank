@@ -15,10 +15,25 @@ test_that("wb_document", {
   }
 })
 
-test_that("parse_documents separates multiple country codes and project IDs with `;`", {
-  actual <- parse_documents(list(list(countrycode = "1W,MK", projectid = "P163618,P156362")))
-  expect_identical(actual$country_code, "1W;MK")
-  expect_identical(actual$project_id, "P163618;P156362")
+test_that("parse_documents separates multi-value fields with `;`", {
+  actual <- parse_documents(list(
+    list(
+      docty = "Environmental Assessment; Social Assessment",
+      countrycode = "3A,ZR",
+      count = "Congo, Democratic Republic of,Africa",
+      admreg = "Middle East, North Africa, Afghanistan, and Pakistan; Other",
+      projectid = "P163618,P156362"
+    ),
+    list(countrycode = "BR", count = "Brazil")
+  ))
+  expect_identical(actual$type, c("Environmental Assessment;Social Assessment", NA))
+  expect_identical(actual$country_code, c("3A;ZR", "BR"))
+  expect_identical(actual$country, c("Congo, Democratic Republic of;Africa", "Brazil"))
+  expect_identical(
+    actual$region,
+    c("Middle East, North Africa, Afghanistan, and Pakistan;Other", NA)
+  )
+  expect_identical(actual$project_id, c("P163618;P156362", NA))
 })
 
 test_that("wb_document returns an empty data.frame when nothing matches", {

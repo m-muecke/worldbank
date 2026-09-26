@@ -49,21 +49,23 @@ The maximum number of documents to return. Default \code{NULL}. If \code{NULL}, 
 are returned, which can take many requests for broad queries.}
 }
 \value{
-A \code{data.frame()} with World Bank document data. The columns are:
+A \code{data.frame()} with World Bank document data. Since a document can have several
+types, countries, regions, and projects, \code{type}, \code{country_code}, \code{country}, \code{region}, and
+\code{project_id} hold all of them separated by \verb{;}, which never occurs within a value. Use
+\code{strsplit(x, ";")} to split them. The columns are:
 \itemize{
 \item \code{id}: The document ID.
 \item \code{title}: The document title.
-\item \code{type}: The document type.
+\item \code{type}: The document types.
 \item \code{major_type}: The major document type.
-\item \code{country_code}: The ISO country codes, separated by \verb{;} if there are several.
-\item \code{country}: The country names, as returned by the API. Names are separated by \verb{,} if there are
-several, but since names can contain commas themselves, use \code{country_code} to split them.
-\item \code{region}: The administrative region names, separated by \verb{;} if there are several.
+\item \code{country_code}: The World Bank country codes.
+\item \code{country}: The country names. They are not in the same order as \code{country_code}, and a code can
+have more than one name, so the two can't be matched by position.
+\item \code{region}: The administrative region names.
 \item \code{language}: The document language.
 \item \code{date}: The document date.
 \item \code{report_number}: The report number.
-\item \code{project_id}: The IDs of the associated projects, separated by \verb{;} if there are several, or
-\code{NA} if there are none.
+\item \code{project_id}: The IDs of the associated projects, or \code{NA} if there are none.
 \item \code{url}: The document URL.
 \item \code{pdf_url}: The PDF URL.
 \item \code{abstract}: The abstract.
@@ -87,7 +89,10 @@ wb_document(
 wb_document(project = "P180429")
 
 # the first 100 documents mentioning climate
-wb_document(search = "climate", limit = 100)
+docs <- wb_document(search = "climate", limit = 100)
+
+# the ones covering more than one country
+docs[grepl(";", docs$country_code), c("title", "country_code")]
 }
 \dontshow{\}) # examplesIf}
 }
