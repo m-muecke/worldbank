@@ -19,6 +19,7 @@ test_that("parse_documents separates multi-value fields with `;`", {
   actual <- parse_documents(list(
     list(
       docty = "Environmental Assessment; Social Assessment",
+      majdocty = "Publications; Publications & Research",
       countrycode = "3A,ZR",
       count = "Congo, Democratic Republic of,Africa",
       admreg = "Middle East, North Africa, Afghanistan, and Pakistan; Other",
@@ -27,6 +28,7 @@ test_that("parse_documents separates multi-value fields with `;`", {
     list(countrycode = "BR", count = "Brazil")
   ))
   expect_identical(actual$type, c("Environmental Assessment;Social Assessment", NA))
+  expect_identical(actual$major_type, c("Publications;Publications & Research", NA))
   expect_identical(actual$country_code, c("3A;ZR", "BR"))
   expect_identical(actual$country, c("Congo, Democratic Republic of;Africa", "Brazil"))
   expect_identical(

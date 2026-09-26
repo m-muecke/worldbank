@@ -24,13 +24,13 @@
 #'   The maximum number of documents to return. Default `NULL`. If `NULL`, all matching documents
 #'   are returned, which can take many requests for broad queries.
 #' @returns A `data.frame()` with World Bank document data. Since a document can have several
-#'   types, countries, regions, and projects, `type`, `country_code`, `country`, `region`, and
-#'   `project_id` hold all of them separated by `;`, which never occurs within a value. Use
-#'   `strsplit(x, ";")` to split them. The columns are:
+#'   types, countries, regions, and projects, `type`, `major_type`, `country_code`, `country`,
+#'   `region`, and `project_id` hold all of them separated by `;`, which never occurs within a
+#'   value. Use `strsplit(x, ";")` to split them. The columns are:
 #' * `id`: The document ID.
 #' * `title`: The document title.
 #' * `type`: The document types.
-#' * `major_type`: The major document type.
+#' * `major_type`: The major document types.
 #' * `country_code`: The World Bank country codes.
 #' * `country`: The country names. They are not in the same order as `country_code`, and a code can
 #'   have more than one name, so the two can't be matched by position.
@@ -172,6 +172,7 @@ parse_documents <- function(data) {
   res$date <- as.Date(sub("T.*", "", res$date))
   res <- clean_strings(res)
   res$type <- normalize_values(res$type, ";")
+  res$major_type <- normalize_values(res$major_type, ";")
   res$country_code <- normalize_values(res$country_code, ",")
   # names can contain ", " themselves, e.g. "Congo, Democratic Republic of"
   res$country <- normalize_values(res$country, ",(?! )")

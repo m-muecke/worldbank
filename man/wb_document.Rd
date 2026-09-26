@@ -50,14 +50,14 @@ are returned, which can take many requests for broad queries.}
 }
 \value{
 A \code{data.frame()} with World Bank document data. Since a document can have several
-types, countries, regions, and projects, \code{type}, \code{country_code}, \code{country}, \code{region}, and
-\code{project_id} hold all of them separated by \verb{;}, which never occurs within a value. Use
-\code{strsplit(x, ";")} to split them. The columns are:
+types, countries, regions, and projects, \code{type}, \code{major_type}, \code{country_code}, \code{country},
+\code{region}, and \code{project_id} hold all of them separated by \verb{;}, which never occurs within a
+value. Use \code{strsplit(x, ";")} to split them. The columns are:
 \itemize{
 \item \code{id}: The document ID.
 \item \code{title}: The document title.
 \item \code{type}: The document types.
-\item \code{major_type}: The major document type.
+\item \code{major_type}: The major document types.
 \item \code{country_code}: The World Bank country codes.
 \item \code{country}: The country names. They are not in the same order as \code{country_code}, and a code can
 have more than one name, so the two can't be matched by position.
