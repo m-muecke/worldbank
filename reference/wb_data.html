@@ -52,6 +52,7 @@
 <span>  start_date <span class="op">=</span> <span class="cn">NULL</span>,</span>
 <span>  end_date <span class="op">=</span> <span class="cn">NULL</span>,</span>
 <span>  mrv <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  mrnev <span class="op">=</span> <span class="cn">NULL</span>,</span>
 <span>  gapfill <span class="op">=</span> <span class="cn">FALSE</span>,</span>
 <span>  footnote <span class="op">=</span> <span class="cn">FALSE</span>,</span>
 <span>  source <span class="op">=</span> <span class="cn">NULL</span></span>
@@ -64,6 +65,7 @@
 <span>  start_date <span class="op">=</span> <span class="cn">NULL</span>,</span>
 <span>  end_date <span class="op">=</span> <span class="cn">NULL</span>,</span>
 <span>  mrv <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  mrnev <span class="op">=</span> <span class="cn">NULL</span>,</span>
 <span>  gapfill <span class="op">=</span> <span class="cn">FALSE</span>,</span>
 <span>  footnote <span class="op">=</span> <span class="cn">FALSE</span>,</span>
 <span>  source <span class="op">=</span> <span class="cn">NULL</span></span>
@@ -109,6 +111,14 @@ End date to query, in the same format as start_date. Default <code>NULL</code>.<
 <dt id="arg-mrv">mrv<a class="anchor" aria-label="anchor" href="#arg-mrv"></a></dt>
 <dd><p>(<code>NULL</code> | <code>integer(1)</code>)<br>
 Most recent values to return. An alternative to <code>start_date</code>/<code>end_date</code>. Default <code>NULL</code>.</p></dd>
+
+
+<dt id="arg-mrnev">mrnev<a class="anchor" aria-label="anchor" href="#arg-mrnev"></a></dt>
+<dd><p>(<code>NULL</code> | <code>integer(1)</code>)<br>
+Most recent non-empty values to return for each country. Unlike <code>mrv</code>, which returns the
+same most recent dates for every country and drops countries without a value for them, the
+dates can differ between countries. An alternative to <code>start_date</code>/<code>end_date</code> and <code>mrv</code>.
+Default <code>NULL</code>.</p></dd>
 
 
 <dt id="arg-gapfill">gapfill<a class="anchor" aria-label="anchor" href="#arg-gapfill"></a></dt>
@@ -193,6 +203,14 @@ The columns are:</p><ul><li><p><code>date</code>: The date. An integer if all ob
 <span class="r-out co"><span class="r-pr">#&gt;</span> 4 756096180222 &lt;NA&gt;       &lt;NA&gt;       0</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 5 736384764157 &lt;NA&gt;       &lt;NA&gt;       0</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 6 740766531454 &lt;NA&gt;       &lt;NA&gt;       0</span>
+<span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="co"># latest available poverty rate for each country, even if from different years</span></span></span>
+<span class="r-in"><span><span class="va">ind</span> <span class="op">&lt;-</span> <span class="fu">wb_data</span><span class="op">(</span><span class="st">"SI.POV.DDAY"</span>, <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"ALB"</span>, <span class="st">"BRA"</span>, <span class="st">"IND"</span><span class="op">)</span>, mrnev <span class="op">=</span> <span class="fl">1</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="va">ind</span><span class="op">[</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"country_code"</span>, <span class="st">"date"</span>, <span class="st">"value"</span><span class="op">)</span><span class="op">]</span></span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   country_code date value</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1          ALB 2020   0.3</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2          BRA 2024   3.0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 3          IND 2022   5.3</span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co"># include the per-observation footnotes</span></span></span>
 <span class="r-in"><span><span class="va">ind</span> <span class="op">&lt;-</span> <span class="fu">wb_data</span><span class="op">(</span><span class="st">"SI.POV.DDAY"</span>, <span class="st">"ALB"</span>, footnote <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span></span>

@@ -32,6 +32,10 @@
   gains `region`, `income_level`, and `lending_type` arguments to filter
   countries server-side instead of downloading the full list.
 - [`wb_data()`](https://m-muecke.github.io/worldbank/reference/wb_data.md)
+  gains an `mrnev` argument to return the most recent non-empty values
+  for each country, even if they are from different years. Unlike `mrv`,
+  it keeps countries without a value in the most recent year.
+- [`wb_data()`](https://m-muecke.github.io/worldbank/reference/wb_data.md)
   gains a `source` argument to query a database other than the World
   Development Indicators, as listed by
   [`wb_source()`](https://m-muecke.github.io/worldbank/reference/wb_source.md).

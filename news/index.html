@@ -55,6 +55,8 @@
 <li>
 <code><a href="../reference/wb_country.html">wb_country()</a></code> gains <code>region</code>, <code>income_level</code>, and <code>lending_type</code> arguments to filter countries server-side instead of downloading the full list.</li>
 <li>
+<code><a href="../reference/wb_data.html">wb_data()</a></code> gains an <code>mrnev</code> argument to return the most recent non-empty values for each country, even if they are from different years. Unlike <code>mrv</code>, it keeps countries without a value in the most recent year.</li>
+<li>
 <code><a href="../reference/wb_data.html">wb_data()</a></code> gains a <code>source</code> argument to query a database other than the World Development Indicators, as listed by <code><a href="../reference/wb_source.html">wb_source()</a></code>.</li>
 <li>New <code><a href="../reference/wb_document.html">wb_document()</a></code> searches the World Bank Documents &amp; Reports archive by search term, country, document type, project, and date. Use <code>limit</code> to cap the number of documents returned, since broad queries can match hundreds of thousands of documents.</li>
 <li>
