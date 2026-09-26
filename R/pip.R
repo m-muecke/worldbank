@@ -278,18 +278,16 @@ pip_aux <- function(
     is_version(ppp_version, 4L, null_ok = TRUE),
     is_string(version, null_ok = TRUE)
   )
+  has_table <- !is.null(table)
   res <- pip(
     resource = "aux",
     table = table,
     release_version = release_version,
     ppp_version = ppp_version,
     version = version,
-    format = if (is.null(table)) "json" else "csv"
+    format = if (has_table) "csv" else "json"
   )
-  if (is.null(table)) {
-    return(map_chr(res, "tables"))
-  }
-  res
+  if (has_table) res else map_chr(res, "tables")
 }
 
 #' Return valid query parameters
