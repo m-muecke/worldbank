@@ -66,8 +66,7 @@
 </ul></div>
 <div class="section level3">
 <h3 id="bug-fixes-development-version">Bug fixes<a class="anchor" aria-label="anchor" href="#bug-fixes-development-version"></a></h3>
-<ul><li>The Indicators API functions now check <code>lang</code> themselves, so an invalid value errors in the function that was called, and <code>lang = NULL</code> errors instead of silently falling back to English.</li>
-<li>Requests are now also retried on HTTP 502 and 504 responses, which the World Bank APIs return for temporary gateway failures.</li>
+<ul><li>Requests are now also retried on HTTP 502 and 504 responses, which the World Bank APIs return for temporary gateway failures.</li>
 <li>
 <code><a href="../reference/wb_bulk.html">wb_bulk()</a></code> now trims whitespace and returns <code>NA</code> instead of <code>""</code> for empty fields.</li>
 <li>

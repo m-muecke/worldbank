@@ -57,9 +57,6 @@
 
 ### Bug fixes
 
-- The Indicators API functions now check `lang` themselves, so an
-  invalid value errors in the function that was called, and
-  `lang = NULL` errors instead of silently falling back to English.
 - Requests are now also retried on HTTP 502 and 504 responses, which the
   World Bank APIs return for temporary gateway failures.
 - [`wb_bulk()`](https://m-muecke.github.io/worldbank/reference/wb_bulk.md)
