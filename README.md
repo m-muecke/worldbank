@@ -97,7 +97,7 @@ str(country)
 ind <- wb_search("GDP")
 ind <- subset(ind, source_value == "World Development Indicators")
 str(ind)
-#> 'data.frame':    103 obs. of  9 variables:
+#> 'data.frame':    103 obs. of  8 variables:
 #>  $ id                 : chr  "BG.GSR.NFSV.GD.ZS" "BM.KLT.DINV.WD.GD.ZS" "BN.C"..
 #>  $ name               : chr  "Trade in services (% of GDP)" "Foreign direct i"..
 #>  $ unit               : chr  NA NA NA NA ...
@@ -105,8 +105,306 @@ str(ind)
 #>  $ source_value       : chr  "World Development Indicators" "World Developmen"..
 #>  $ source_note        : chr  "Total trade in services includes services provi"..
 #>  $ source_organization: chr  "Balance of Payments Statistics Yearbook and dat"..
-#>  $ topic_id           : int  3 3 3 3 3 7 7 5 5 5 ...
-#>  $ topic_value        : chr  "Economy & Growth" "Economy & Growth" "Economy &"..
+#>  $ topics             :List of 103
+#>   ..$ :'data.frame': 3 obs. of  2 variables:
+#>   .. ..$ topic_id   : int  3 12 21
+#>   .. ..$ topic_value: chr  "Economy & Growth" "Private Sector" "Trade"
+#>   ..$ :'data.frame': 2 obs. of  2 variables:
+#>   .. ..$ topic_id   : int  3 7
+#>   .. ..$ topic_value: chr  "Economy & Growth" "Financial Sector"
+#>   ..$ :'data.frame': 1 obs. of  2 variables:
+#>   .. ..$ topic_id   : int 3
+#>   .. ..$ topic_value: chr "Economy & Growth"
+#>   ..$ :'data.frame': 3 obs. of  2 variables:
+#>   .. ..$ topic_id   : int  3 7 19
+#>   .. ..$ topic_value: chr  "Economy & Growth" "Financial Sector" "Climate Cha"..
+#>   ..$ :'data.frame': 2 obs. of  2 variables:
+#>   .. ..$ topic_id   : int  3 7
+#>   .. ..$ topic_value: chr  "Economy & Growth" "Financial Sector"
+#>   ..$ :'data.frame': 1 obs. of  2 variables:
+#>   .. ..$ topic_id   : int 7
+#>   .. ..$ topic_value: chr "Financial Sector"
+#>   ..$ :'data.frame': 1 obs. of  2 variables:
+#>   .. ..$ topic_id   : int 7
+#>   .. ..$ topic_value: chr "Financial Sector"
+#>   ..$ :'data.frame': 2 obs. of  2 variables:
+#>   .. ..$ topic_id   : int  5 6
+#>   .. ..$ topic_value: chr  "Energy & Mining" "Environment"
+#>   ..$ :'data.frame': 1 obs. of  2 variables:
+#>   .. ..$ topic_id   : int 5
+#>   .. ..$ topic_value: chr "Energy & Mining"
+#>   ..$ :'data.frame': 1 obs. of  2 variables:
+#>   .. ..$ topic_id   : int 5
+#>   .. ..$ topic_value: chr "Energy & Mining"
+#>   ..$ :'data.frame': 2 obs. of  2 variables:
+#>   .. ..$ topic_id   : int  5 19
+#>   .. ..$ topic_value: chr  "Energy & Mining" "Climate Change"
+#>   ..$ :'data.frame': 1 obs. of  2 variables:
+#>   .. ..$ topic_id   : int 6
+#>   .. ..$ topic_value: chr "Environment"
+#>   ..$ :'data.frame': 1 obs. of  2 variables:
+#>   .. ..$ topic_id   : int 6
+#>   .. ..$ topic_value: chr "Environment"
+#>   ..$ :'data.frame': 1 obs. of  2 variables:
+#>   .. ..$ topic_id   : int 6
+#>   .. ..$ topic_value: chr "Environment"
+#>   ..$ :'data.frame': 1 obs. of  2 variables:
+#>   .. ..$ topic_id   : int 7
+#>   .. ..$ topic_value: chr "Financial Sector"
+#>   ..$ :'data.frame': 1 obs. of  2 variables:
+#>   .. ..$ topic_id   : int 7
+#>   .. ..$ topic_value: chr "Financial Sector"
+#>   ..$ :'data.frame': 1 obs. of  2 variables:
+#>   .. ..$ topic_id   : int 7
+#>   .. ..$ topic_value: chr "Financial Sector"
+#>   ..$ :'data.frame': 1 obs. of  2 variables:
+#>   .. ..$ topic_id   : int 7
+#>   .. ..$ topic_value: chr "Financial Sector"
+#>   ..$ :'data.frame': 1 obs. of  2 variables:
+#>   .. ..$ topic_id   : int 7
+#>   .. ..$ topic_value: chr "Financial Sector"
+#>   ..$ :'data.frame': 1 obs. of  2 variables:
+#>   .. ..$ topic_id   : int 7
+#>   .. ..$ topic_value: chr "Financial Sector"
+#>   ..$ :'data.frame': 1 obs. of  2 variables:
+#>   .. ..$ topic_id   : int 7
+#>   .. ..$ topic_value: chr "Financial Sector"
+#>   ..$ :'data.frame': 2 obs. of  2 variables:
+#>   .. ..$ topic_id   : int  7 12
+#>   .. ..$ topic_value: chr  "Financial Sector" "Private Sector"
+#>   ..$ :'data.frame': 1 obs. of  2 variables:
+#>   .. ..$ topic_id   : int 14
+#>   .. ..$ topic_value: chr "Science & Technology"
+#>   ..$ :'data.frame': 1 obs. of  2 variables:
+#>   .. ..$ topic_id   : int 13
+#>   .. ..$ topic_value: chr "Public Sector"
+#>   ..$ :'data.frame': 2 obs. of  2 variables:
+#>   .. ..$ topic_id   : int  3 13
+#>   .. ..$ topic_value: chr  "Economy & Growth" "Public Sector"
+#>   ..$ :'data.frame': 1 obs. of  2 variables:
+#>   .. ..$ topic_id   : int 13
+#>   .. ..$ topic_value: chr "Public Sector"
+#>   ..$ :'data.frame': 1 obs. of  2 variables:
+#>   .. ..$ topic_id   : int 13
+#>   .. ..$ topic_value: chr "Public Sector"
+#>   ..$ :'data.frame': 1 obs. of  2 variables:
+#>   .. ..$ topic_id   : int 13
+#>   .. ..$ topic_value: chr "Public Sector"
+#>   ..$ :'data.frame': 2 obs. of  2 variables:
+#>   .. ..$ topic_id   : int  3 13
+#>   .. ..$ topic_value: chr  "Economy & Growth" "Public Sector"
+#>   ..$ :'data.frame': 1 obs. of  2 variables:
+#>   .. ..$ topic_id   : int 13
+#>   .. ..$ topic_value: chr "Public Sector"
+#>   ..$ :'data.frame': 2 obs. of  2 variables:
+#>   .. ..$ topic_id   : int  3 13
+#>   .. ..$ topic_value: chr  "Economy & Growth" "Public Sector"
+#>   ..$ :'data.frame': 1 obs. of  2 variables:
+#>   .. ..$ topic_id   : int 13
+#>   .. ..$ topic_value: chr "Public Sector"
+#>   ..$ :'data.frame': 1 obs. of  2 variables:
+#>   .. ..$ topic_id   : int 3
+#>   .. ..$ topic_value: chr "Economy & Growth"
+#>   ..$ :'data.frame': 0 obs. of  2 variables:
+#>   .. ..$ topic_id   : int 
+#>   .. ..$ topic_value: chr 
+#>   ..$ :'data.frame': 0 obs. of  2 variables:
+#>   .. ..$ topic_id   : int 
+#>   .. ..$ topic_value: chr 
+#>   ..$ :'data.frame': 1 obs. of  2 variables:
+#>   .. ..$ topic_id   : int 3
+#>   .. ..$ topic_value: chr "Economy & Growth"
+#>   ..$ :'data.frame': 1 obs. of  2 variables:
+#>   .. ..$ topic_id   : int 3
+#>   .. ..$ topic_value: chr "Economy & Growth"
+#>   ..$ :'data.frame': 1 obs. of  2 variables:
+#>   .. ..$ topic_id   : int 3
+#>   .. ..$ topic_value: chr "Economy & Growth"
+#>   ..$ :'data.frame': 1 obs. of  2 variables:
+#>   .. ..$ topic_id   : int 3
+#>   .. ..$ topic_value: chr "Economy & Growth"
+#>   ..$ :'data.frame': 1 obs. of  2 variables:
+#>   .. ..$ topic_id   : int 3
+#>   .. ..$ topic_value: chr "Economy & Growth"
+#>   ..$ :'data.frame': 2 obs. of  2 variables:
+#>   .. ..$ topic_id   : int  3 21
+#>   .. ..$ topic_value: chr  "Economy & Growth" "Trade"
+#>   ..$ :'data.frame': 1 obs. of  2 variables:
+#>   .. ..$ topic_id   : int 3
+#>   .. ..$ topic_value: chr "Economy & Growth"
+#>   ..$ :'data.frame': 1 obs. of  2 variables:
+#>   .. ..$ topic_id   : int 3
+#>   .. ..$ topic_value: chr "Economy & Growth"
+#>   ..$ :'data.frame': 1 obs. of  2 variables:
+#>   .. ..$ topic_id   : int 3
+#>   .. ..$ topic_value: chr "Economy & Growth"
+#>   ..$ :'data.frame': 2 obs. of  2 variables:
+#>   .. ..$ topic_id   : int  3 21
+#>   .. ..$ topic_value: chr  "Economy & Growth" "Trade"
+#>   ..$ :'data.frame': 2 obs. of  2 variables:
+#>   .. ..$ topic_id   : int  3 21
+#>   .. ..$ topic_value: chr  "Economy & Growth" "Trade"
+#>   ..$ :'data.frame': 2 obs. of  2 variables:
+#>   .. ..$ topic_id   : int  3 21
+#>   .. ..$ topic_value: chr  "Economy & Growth" "Trade"
+#>   ..$ :'data.frame': 3 obs. of  2 variables:
+#>   .. ..$ topic_id   : int  1 3 19
+#>   .. ..$ topic_value: chr  "Agriculture & Rural Development" "Economy & Growt"..
+#>   ..$ :'data.frame': 1 obs. of  2 variables:
+#>   .. ..$ topic_id   : int 3
+#>   .. ..$ topic_value: chr "Economy & Growth"
+#>   ..$ :'data.frame': 1 obs. of  2 variables:
+#>   .. ..$ topic_id   : int 3
+#>   .. ..$ topic_value: chr "Economy & Growth"
+#>   ..$ :'data.frame': 1 obs. of  2 variables:
+#>   .. ..$ topic_id   : int 3
+#>   .. ..$ topic_value: chr "Economy & Growth"
+#>   ..$ :'data.frame': 1 obs. of  2 variables:
+#>   .. ..$ topic_id   : int 6
+#>   .. ..$ topic_value: chr "Environment"
+#>   ..$ :'data.frame': 1 obs. of  2 variables:
+#>   .. ..$ topic_id   : int 3
+#>   .. ..$ topic_value: chr "Economy & Growth"
+#>   ..$ :'data.frame': 1 obs. of  2 variables:
+#>   .. ..$ topic_id   : int 7
+#>   .. ..$ topic_value: chr "Financial Sector"
+#>   ..$ :'data.frame': 1 obs. of  2 variables:
+#>   .. ..$ topic_id   : int 3
+#>   .. ..$ topic_value: chr "Economy & Growth"
+#>   ..$ :'data.frame': 1 obs. of  2 variables:
+#>   .. ..$ topic_id   : int 7
+#>   .. ..$ topic_value: chr "Financial Sector"
+#>   ..$ :'data.frame': 1 obs. of  2 variables:
+#>   .. ..$ topic_id   : int 3
+#>   .. ..$ topic_value: chr "Economy & Growth"
+#>   ..$ :'data.frame': 1 obs. of  2 variables:
+#>   .. ..$ topic_id   : int 3
+#>   .. ..$ topic_value: chr "Economy & Growth"
+#>   ..$ :'data.frame': 1 obs. of  2 variables:
+#>   .. ..$ topic_id   : int 3
+#>   .. ..$ topic_value: chr "Economy & Growth"
+#>   ..$ :'data.frame': 1 obs. of  2 variables:
+#>   .. ..$ topic_id   : int 3
+#>   .. ..$ topic_value: chr "Economy & Growth"
+#>   ..$ :'data.frame': 1 obs. of  2 variables:
+#>   .. ..$ topic_id   : int 3
+#>   .. ..$ topic_value: chr "Economy & Growth"
+#>   ..$ :'data.frame': 1 obs. of  2 variables:
+#>   .. ..$ topic_id   : int 3
+#>   .. ..$ topic_value: chr "Economy & Growth"
+#>   ..$ :'data.frame': 1 obs. of  2 variables:
+#>   .. ..$ topic_id   : int 6
+#>   .. ..$ topic_value: chr "Environment"
+#>   ..$ :'data.frame': 2 obs. of  2 variables:
+#>   .. ..$ topic_id   : int  5 6
+#>   .. ..$ topic_value: chr  "Energy & Mining" "Environment"
+#>   ..$ :'data.frame': 1 obs. of  2 variables:
+#>   .. ..$ topic_id   : int 3
+#>   .. ..$ topic_value: chr "Economy & Growth"
+#>   ..$ :'data.frame': 1 obs. of  2 variables:
+#>   .. ..$ topic_id   : int 3
+#>   .. ..$ topic_value: chr "Economy & Growth"
+#>   ..$ :'data.frame': 1 obs. of  2 variables:
+#>   .. ..$ topic_id   : int 3
+#>   .. ..$ topic_value: chr "Economy & Growth"
+#>   ..$ :'data.frame': 1 obs. of  2 variables:
+#>   .. ..$ topic_id   : int 3
+#>   .. ..$ topic_value: chr "Economy & Growth"
+#>   ..$ :'data.frame': 1 obs. of  2 variables:
+#>   .. ..$ topic_id   : int 3
+#>   .. ..$ topic_value: chr "Economy & Growth"
+#>   ..$ :'data.frame': 1 obs. of  2 variables:
+#>   .. ..$ topic_id   : int 3
+#>   .. ..$ topic_value: chr "Economy & Growth"
+#>   ..$ :'data.frame': 1 obs. of  2 variables:
+#>   .. ..$ topic_id   : int 3
+#>   .. ..$ topic_value: chr "Economy & Growth"
+#>   ..$ :'data.frame': 1 obs. of  2 variables:
+#>   .. ..$ topic_id   : int 3
+#>   .. ..$ topic_value: chr "Economy & Growth"
+#>   ..$ :'data.frame': 2 obs. of  2 variables:
+#>   .. ..$ topic_id   : int  5 6
+#>   .. ..$ topic_value: chr  "Energy & Mining" "Environment"
+#>   ..$ :'data.frame': 1 obs. of  2 variables:
+#>   .. ..$ topic_id   : int 3
+#>   .. ..$ topic_value: chr "Economy & Growth"
+#>   ..$ :'data.frame': 1 obs. of  2 variables:
+#>   .. ..$ topic_id   : int 3
+#>   .. ..$ topic_value: chr "Economy & Growth"
+#>   ..$ :'data.frame': 1 obs. of  2 variables:
+#>   .. ..$ topic_id   : int 3
+#>   .. ..$ topic_value: chr "Economy & Growth"
+#>   ..$ :'data.frame': 1 obs. of  2 variables:
+#>   .. ..$ topic_id   : int 3
+#>   .. ..$ topic_value: chr "Economy & Growth"
+#>   ..$ :'data.frame': 1 obs. of  2 variables:
+#>   .. ..$ topic_id   : int 3
+#>   .. ..$ topic_value: chr "Economy & Growth"
+#>   ..$ :'data.frame': 1 obs. of  2 variables:
+#>   .. ..$ topic_id   : int 3
+#>   .. ..$ topic_value: chr "Economy & Growth"
+#>   ..$ :'data.frame': 1 obs. of  2 variables:
+#>   .. ..$ topic_id   : int 3
+#>   .. ..$ topic_value: chr "Economy & Growth"
+#>   ..$ :'data.frame': 2 obs. of  2 variables:
+#>   .. ..$ topic_id   : int  5 6
+#>   .. ..$ topic_value: chr  "Energy & Mining" "Environment"
+#>   ..$ :'data.frame': 2 obs. of  2 variables:
+#>   .. ..$ topic_id   : int  5 6
+#>   .. ..$ topic_value: chr  "Energy & Mining" "Environment"
+#>   ..$ :'data.frame': 1 obs. of  2 variables:
+#>   .. ..$ topic_id   : int 3
+#>   .. ..$ topic_value: chr "Economy & Growth"
+#>   ..$ :'data.frame': 1 obs. of  2 variables:
+#>   .. ..$ topic_id   : int 3
+#>   .. ..$ topic_value: chr "Economy & Growth"
+#>   ..$ :'data.frame': 1 obs. of  2 variables:
+#>   .. ..$ topic_id   : int 3
+#>   .. ..$ topic_value: chr "Economy & Growth"
+#>   ..$ :'data.frame': 1 obs. of  2 variables:
+#>   .. ..$ topic_id   : int 3
+#>   .. ..$ topic_value: chr "Economy & Growth"
+#>   ..$ :'data.frame': 1 obs. of  2 variables:
+#>   .. ..$ topic_id   : int 3
+#>   .. ..$ topic_value: chr "Economy & Growth"
+#>   ..$ :'data.frame': 1 obs. of  2 variables:
+#>   .. ..$ topic_id   : int 3
+#>   .. ..$ topic_value: chr "Economy & Growth"
+#>   ..$ :'data.frame': 1 obs. of  2 variables:
+#>   .. ..$ topic_id   : int 3
+#>   .. ..$ topic_value: chr "Economy & Growth"
+#>   ..$ :'data.frame': 1 obs. of  2 variables:
+#>   .. ..$ topic_id   : int 3
+#>   .. ..$ topic_value: chr "Economy & Growth"
+#>   ..$ :'data.frame': 1 obs. of  2 variables:
+#>   .. ..$ topic_id   : int 3
+#>   .. ..$ topic_value: chr "Economy & Growth"
+#>   ..$ :'data.frame': 0 obs. of  2 variables:
+#>   .. ..$ topic_id   : int 
+#>   .. ..$ topic_value: chr 
+#>   ..$ :'data.frame': 1 obs. of  2 variables:
+#>   .. ..$ topic_id   : int 3
+#>   .. ..$ topic_value: chr "Economy & Growth"
+#>   ..$ :'data.frame': 1 obs. of  2 variables:
+#>   .. ..$ topic_id   : int 3
+#>   .. ..$ topic_value: chr "Economy & Growth"
+#>   ..$ :'data.frame': 1 obs. of  2 variables:
+#>   .. ..$ topic_id   : int 4
+#>   .. ..$ topic_value: chr "Education"
+#>   ..$ :'data.frame': 1 obs. of  2 variables:
+#>   .. ..$ topic_id   : int 4
+#>   .. ..$ topic_value: chr "Education"
+#>   ..$ :'data.frame': 1 obs. of  2 variables:
+#>   .. ..$ topic_id   : int 4
+#>   .. ..$ topic_value: chr "Education"
+#>   ..$ :'data.frame': 1 obs. of  2 variables:
+#>   .. ..$ topic_id   : int 4
+#>   .. ..$ topic_value: chr "Education"
+#>   ..$ :'data.frame': 3 obs. of  2 variables:
+#>   .. ..$ topic_id   : int  8 17 2
+#>   .. ..$ topic_value: chr  "Health" "Gender" "Aid Effectiveness"
+#>   .. [list output truncated]
+#>   ..- attr(*, "class")= chr "AsIs"
 
 # fetch indicator data for specific or all countries (default)
 gdp <- wb_data("NY.GDP.MKTP.CD", c("US", "DE", "FR", "CH", "JP"))
