@@ -61,7 +61,8 @@ A \code{data.frame()} with World Bank document data. The columns are:
 \item \code{language}: The document language.
 \item \code{date}: The document date.
 \item \code{report_number}: The report number.
-\item \code{project_id}: The ID of the associated project, or \code{NA} if there is none.
+\item \code{project_id}: The IDs of the associated projects, separated by \verb{;} if there are several, or
+\code{NA} if there are none.
 \item \code{url}: The document URL.
 \item \code{pdf_url}: The PDF URL.
 \item \code{abstract}: The abstract.

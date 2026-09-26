@@ -34,7 +34,8 @@
 #' * `language`: The document language.
 #' * `date`: The document date.
 #' * `report_number`: The report number.
-#' * `project_id`: The ID of the associated project, or `NA` if there is none.
+#' * `project_id`: The IDs of the associated projects, separated by `;` if there are several, or
+#'   `NA` if there are none.
 #' * `url`: The document URL.
 #' * `pdf_url`: The PDF URL.
 #' * `abstract`: The abstract.
@@ -105,7 +106,7 @@ document_fields <- c(
   "lang",
   "docdt",
   "repnb",
-  "projn",
+  "projectid",
   "url",
   "pdfurl",
   "abstracts"
@@ -156,16 +157,13 @@ parse_documents <- function(data) {
     language = map_chr(data, \(x) x$lang %||% NA_character_),
     date = map_chr(data, \(x) x$docdt %||% NA_character_),
     report_number = map_chr(data, \(x) x$repnb %||% NA_character_),
-    project_id = map_chr(data, \(x) x$projn %||% NA_character_),
+    project_id = map_chr(data, \(x) x$projectid %||% NA_character_),
     url = map_chr(data, \(x) x$url %||% NA_character_),
     pdf_url = map_chr(data, \(x) x$pdfurl %||% NA_character_),
     abstract = map_chr(data, \(x) x$abstracts[["cdata!"]] %||% NA_character_),
     check.names = FALSE
   )
   res$date <- as.Date(sub("T.*", "", res$date))
-  # the project ID is only available as a suffix of the project name, e.g. "BR-Name -- P180429"
-  has_project_id <- grepl(" -- P\\d+$", res$project_id)
-  res$project_id <- sub(".* -- ", "", res$project_id)
-  res$project_id[!has_project_id] <- NA_character_
+  res$project_id <- gsub(",", ";", res$project_id, fixed = TRUE)
   clean_strings(res)
 }
