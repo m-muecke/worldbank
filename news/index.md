@@ -20,6 +20,9 @@
   `topic_value` columns, which previously kept only the first topic. Use
   `topics[[i]]$topic_id[1]` and `topics[[i]]$topic_value[1]` to recover
   the old values.
+  [`wb_search()`](https://m-muecke.github.io/worldbank/reference/wb_search.md)
+  matches against every topic with `fields = "topics"`, and
+  `fields = "topic_id"` or `fields = "topic_value"` now error.
 
 ### New features
 
