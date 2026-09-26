@@ -1953,513 +1953,513 @@ wb_project(id = c("P163868", "P180429"))
 wb_project(search = "climate", limit = 100)
 #>          id
 #> 1   P111669
-#> 2   P120932
-#> 3   P122687
+#> 2   P122687
+#> 3   P120932
 #> 4   P127201
 #> 5   P154586
 #> 6   P117081
 #> 7   P123760
 #> 8   P125669
-#> 9   P154403
-#> 10  P160268
+#> 9   P160268
+#> 10  P154403
 #> 11  P127254
 #> 12  P101076
 #> 13  P128434
 #> 14  P145345
-#> 15  P090731
-#> 16  P110849
-#> 17  P122667
-#> 18  P125447
-#> 19  P159600
+#> 15  P159600
+#> 16  P090731
+#> 17  P125447
+#> 18  P122667
+#> 19  P110849
 #> 20  P125804
 #> 21  P144712
 #> 22  P160552
-#> 23  P127015
+#> 23  P157795
 #> 24  P151800
-#> 25  P117956
+#> 25  P127015
 #> 26  P059161
-#> 27  P145586
-#> 28  P155968
+#> 27  P117956
+#> 28  P145586
 #> 29  P160267
-#> 30  P157795
+#> 30  P127486
 #> 31  P124181
-#> 32  P072554
-#> 33  P158816
-#> 34  P145482
-#> 35  P127486
-#> 36  P143185
-#> 37  P125032
-#> 38  P120134
-#> 39  P151604
-#> 40  P100438
-#> 41  P129633
-#> 42  P152805
-#> 43  P143334
-#> 44  P145316
+#> 32  P155968
+#> 33  P129633
+#> 34  P072554
+#> 35  P158816
+#> 36  P145482
+#> 37  P120134
+#> 38  P125032
+#> 39  P100438
+#> 40  P143185
+#> 41  P143334
+#> 42  P151604
+#> 43  P152805
+#> 44  P128268
 #> 45  P115001
 #> 46  P152797
-#> 47  P125542
-#> 48  P160157
-#> 49  P160234
-#> 50  P121986
-#> 51  P120313
-#> 52  P112329
-#> 53  P078143
-#> 54  P073389
-#> 55  P158987
-#> 56  P128268
-#> 57  P132620
-#> 58  P154291
-#> 59  P074426
-#> 60  P126214
+#> 47  P121986
+#> 48  P160234
+#> 49  P145316
+#> 50  P078143
+#> 51  P160157
+#> 52  P120313
+#> 53  P125542
+#> 54  P158987
+#> 55  P112329
+#> 56  P073389
+#> 57  P126214
+#> 58  P132620
+#> 59  P154291
+#> 60  P099618
 #> 61  P148620
-#> 62  P099618
-#> 63  P145765
-#> 64  P160383
-#> 65  P160523
-#> 66  P151363
-#> 67  P159217
-#> 68  P116974
-#> 69  P105229
-#> 70  P127508
-#> 71  P148125
-#> 72  P128445
-#> 73  P160408
-#> 74  P148499
-#> 75  P153404
-#> 76  P145618
-#> 77  P121006
-#> 78  P155260
-#> 79  P109687
-#> 80  P127088
-#> 81  P160463
-#> 82  P152039
-#> 83  P155827
-#> 84  P160658
-#> 85  P157919
-#> 86  P129182
-#> 87  P145434
-#> 88  P100530
-#> 89  P159901
-#> 90  P105370
-#> 91  P148183
-#> 92  P091979
-#> 93  P153420
-#> 94  P145298
-#> 95  P008501
-#> 96  P106133
-#> 97  P155126
-#> 98  P160493
-#> 99  P090058
-#> 100 P158119
+#> 62  P074426
+#> 63  P145618
+#> 64  P148125
+#> 65  P153404
+#> 66  P160408
+#> 67  P145765
+#> 68  P160523
+#> 69  P160658
+#> 70  P128445
+#> 71  P105229
+#> 72  P151363
+#> 73  P127508
+#> 74  P160383
+#> 75  P159217
+#> 76  P148499
+#> 77  P116974
+#> 78  P145434
+#> 79  P160463
+#> 80  P105370
+#> 81  P155260
+#> 82  P155126
+#> 83  P109687
+#> 84  P127088
+#> 85  P121006
+#> 86  P157919
+#> 87  P129182
+#> 88  P132116
+#> 89  P100530
+#> 90  P152039
+#> 91  P158119
+#> 92  P153420
+#> 93  P091979
+#> 94  P008501
+#> 95  P148294
+#> 96  P159901
+#> 97  P145298
+#> 98  P148183
+#> 99  P160493
+#> 100 P087979
 #>                                                                                                                             project_name
 #> 1                                                                                                Sao Tome - Adaptation to Climate Change
-#> 2                                                                                                China Technology Needs Assessment (TNA)
-#> 3                                                                           Yemen: Pilot Program for Climate Resilience Phase I (PPCR I)
+#> 2                                                                           Yemen: Pilot Program for Climate Resilience Phase I (PPCR I)
+#> 3                                                                                                China Technology Needs Assessment (TNA)
 #> 4                                                                                            Vietnam Climate Change Development Policy 2
 #> 5                                                                                                         Kenya Climate Venture Facility
 #> 6                                                                Integrating Climate Change in the Implementation of the Plan Maroc Vert
 #> 7                                                                                              Mexico Forests and Climate Change Project
 #> 8                                                                                  Niger Community Action Project for Climate Resilience
-#> 9                                 IGAD - Building Disaster Resilience to Disasters through Risk Management and Climate Change Adaptation
-#> 10                                                                                           Rwanda Pilot Program for Climate Resilience
+#> 9                                                                                            Rwanda Pilot Program for Climate Resilience
+#> 10                                IGAD - Building Disaster Resilience to Disasters through Risk Management and Climate Change Adaptation
 #> 11                                                                               Zambia Strengthening Climate Resilience (PPCR Phase II)
 #> 12                                                                                                     Climate Change Adaptation Program
 #> 13                                                                                Mozambique Climate Change Development Policy Operation
 #> 14                                                                   Dropped Andes Adaptation Impact of Climate Change in Water Resource
-#> 15                                                                      CARIB-GEF-Implementation of Adaptation Measures in Coastal Zones
-#> 16                                                                                       Mexico - Climate Change Development Policy Loan
-#> 17                                                                                             Vietnam Climate Change Development Policy
-#> 18                                                                                                      Community Climate Change Project
-#> 19                                                                               Preparation of Strategic Program for Climate Resilience
+#> 15                                                                               Preparation of Strategic Program for Climate Resilience
+#> 16                                                                      CARIB-GEF-Implementation of Adaptation Measures in Coastal Zones
+#> 17                                                                                                      Community Climate Change Project
+#> 18                                                                                             Vietnam Climate Change Development Policy
+#> 19                                                                                       Mexico - Climate Change Development Policy Loan
 #> 20  Adaptation Fund: Increasing Climate Resilience & Enhancing Sustainable Land Management in the Southwest of the Buenos Aires Province
 #> 21                                                                        Strengthening Hydro-Meteorological and Climate Services in DRC
 #> 22                                                                                                     Climate Mitigation Action Support
-#> 23                                                               Climate Resilient Participatory Afforestation and Reforestation Project
+#> 23                                                                           Honduras Pilot Program for Climate Resilience Phase 1 Grant
 #> 24                                                                                                    SL- Climate finance for renewables
-#> 25                     Capacity Development for Sustainable Forest Management through Climate Change Mitigation in Non-Annex I Countries
+#> 25                                                               Climate Resilient Participatory Afforestation and Reforestation Project
 #> 26                                                                                Introduction of Climate Friendly measures in Transport
-#> 27                                                                                                China Partnership for Market Readiness
-#> 28                                                                                                            Climate Adaptation Project
+#> 27                     Capacity Development for Sustainable Forest Management through Climate Change Mitigation in Non-Annex I Countries
+#> 28                                                                                                China Partnership for Market Readiness
 #> 29                                                                                       Forest Investment Program (FIP) Investment Plan
-#> 30                                                                           Honduras Pilot Program for Climate Resilience Phase 1 Grant
+#> 30                                                                   SUSTAINABLE AGRICULTURE AND CLIMATE CHANGE MITIGATION PROJECT (GEF)
 #> 31                                                                        Sustainable Management of Natural Resources and Climate Change
-#> 32                                                                          Global Environment Facility Climate Change Enabling Activity
-#> 33                                                                               Madagascar Pilot Program for Climate Resilience Phase I
-#> 34                                                               Accelerating Sustainable Private Investment in Renewable Energy Project
-#> 35                                                                   SUSTAINABLE AGRICULTURE AND CLIMATE CHANGE MITIGATION PROJECT (GEF)
-#> 36                                  Development of systems to prevent forest fires and monitor vegetation cover in the Brazilian Cerrado
-#> 37                                                                                           Timor Leste Road Climate Resilience Project
-#> 38                                                                               MX DPL Adaptation to Climate Change in the Water Sector
-#> 39                                                                                        Mexico Dedicated Grant Mechanism for IP and LC
-#> 40                                                    Adaptation to Climate Change Impacts on the Coastal Wetlands in the Gulf of Mexico
-#> 41                                                                                     Improving Climate Data and Information Management
-#> 42                                                                   Carbon Asset Development - Methane Recovery from Waste Mgmt Project
-#> 43                                                             FIP: Environmental regularization of rural lands in the Cerrado of Brazil
-#> 44                                                                               Dedicated Grant Mechanism for Local Communities Project
+#> 32                                                                                                            Climate Adaptation Project
+#> 33                                                                                     Improving Climate Data and Information Management
+#> 34                                                                          Global Environment Facility Climate Change Enabling Activity
+#> 35                                                                               Madagascar Pilot Program for Climate Resilience Phase I
+#> 36                                                               Accelerating Sustainable Private Investment in Renewable Energy Project
+#> 37                                                                               MX DPL Adaptation to Climate Change in the Water Sector
+#> 38                                                                                           Timor Leste Road Climate Resilience Project
+#> 39                                                    Adaptation to Climate Change Impacts on the Coastal Wetlands in the Gulf of Mexico
+#> 40                                  Development of systems to prevent forest fires and monitor vegetation cover in the Brazilian Cerrado
+#> 41                                                             FIP: Environmental regularization of rural lands in the Cerrado of Brazil
+#> 42                                                                                        Mexico Dedicated Grant Mechanism for IP and LC
+#> 43                                                                   Carbon Asset Development - Methane Recovery from Waste Mgmt Project
+#> 44                                                                                 Maldives: Clean Energy for Climate Mitigation Project
 #> 45                                                                                                       RY-Climate Resilient ICZM (LDC)
 #> 46                                                                                              Vietnam-Partnership for Market Readiness
-#> 47                                                                                                  Burkina Faso FIP Investment Strategy
-#> 48                                                                                              KTDA Small Hydro Programme of Activities
-#> 49                                                                                  Bangladesh - FIP Investment Plan Preparation Project
-#> 50                                                                                 Zambia Pilot Program for Climate Resilience - Phase I
-#> 51                                                                                   Indonesia Climate Change Development Policy Project
-#> 52                                                                                              EarthCare Solid Waste Composting Project
-#> 53                     Enabling Activity for 2nd National Communication of Argentine Goverment to the Convention on Climate Change (GEF)
-#> 54                                                                                    Mainstreaming Adaptation to Climate Change Project
-#> 55                                                                               Multi-sector Investment Planning for Climate Resilience
-#> 56                                                                                 Maldives: Clean Energy for Climate Mitigation Project
-#> 57                                                                                    Partial Risk Sharing Facility in Energy Efficiency
-#> 58                                                                                                           Indonesia Energy Sector DPL
-#> 59                                                                                                      Jepirachi Carbon Off Set Project
-#> 60                                                                                           DRC - FIP Investment Plan Preparation Grant
+#> 47                                                                                 Zambia Pilot Program for Climate Resilience - Phase I
+#> 48                                                                                  Bangladesh - FIP Investment Plan Preparation Project
+#> 49                                                                               Dedicated Grant Mechanism for Local Communities Project
+#> 50                     Enabling Activity for 2nd National Communication of Argentine Goverment to the Convention on Climate Change (GEF)
+#> 51                                                                                              KTDA Small Hydro Programme of Activities
+#> 52                                                                                   Indonesia Climate Change Development Policy Project
+#> 53                                                                                                  Burkina Faso FIP Investment Strategy
+#> 54                                                                               Multi-sector Investment Planning for Climate Resilience
+#> 55                                                                                              EarthCare Solid Waste Composting Project
+#> 56                                                                                    Mainstreaming Adaptation to Climate Change Project
+#> 57                                                                                           DRC - FIP Investment Plan Preparation Grant
+#> 58                                                                                    Partial Risk Sharing Facility in Energy Efficiency
+#> 59                                                                                                           Indonesia Energy Sector DPL
+#> 60                                                                                                                  MA-Energy Sector DPL
 #> 61                                                                                              Large Enterprises Energy Efficiency Proj
-#> 62                                                                                                                  MA-Energy Sector DPL
-#> 63                                                                                                       Ghana Climate Innovation Center
-#> 64                                                                               Zambia Scaling Renewable Energy Program Investment Plan
-#> 65                                                                                      Nepal - Forest Investment Plan Preparation Grant
-#> 66                                                                 Climate Adaptation and Mitigation Program for Aral Sea Basin CAMP4ASB
-#> 67                                                                               Strengthening Hydro-Meteorological and Climate Services
-#> 68                                                                                                AR Third National Communication UNFCCC
-#> 69                                                              Mainstreaming Climate Change Adaptation in Irrigated Agriculture Project
-#> 70                                                                                        Building Resilience to Climate Related Hazards
-#> 71                                                                     Disaster and Climate Risk Management Project Additional Financing
-#> 72                                                                                                 Capacity Building & Secretariat BCCRF
-#> 73                                                                                  Maharashtra Project on Climate Resilient Agriculture
-#> 74                                                                                              Saweto Dedicated Grant Mechanism in Peru
-#> 75                                                                                             Solar PV Demonstration & Scale Up Project
-#> 76                                                                 MEXICO Sustainable Energy Technologies Development for Climate Change
-#> 77                                                                Indigenous Wisdom and Biomathematics: Amazonians Tackle Climate Change
-#> 78                                                                                         Vietnam Climate Innovation Center (VCIC) RETF
-#> 79                                                                                               Carbon Partnership Facility development
-#> 80                                                                           Adaptation of Nicaragua's  Water Supplies to Climate Change
-#> 81                                                                         AP Integrated Irrigation & Agriculture Transformation Project
-#> 82                                                                                               Geothermal Exploratory Drilling Project
-#> 83                                           EASTERN PROVINCE JURISDICTIONAL SUSTAINABLE LANDSCAPE PROGRAM - EMISSIONS REDUCTION PROJECT
-#> 84                                                                                                Rural Electrification Project Stage II
-#> 85                                                                                    TUNISIA FOREST INVESTMENT PLAN PREPARATION PROJECT
-#> 86                                               Lao PDR - Mainstreaming  Disaster and Climate Risk Management into Investment Decisions
-#> 87                                                                                            Yemen: Preparation of SREP Investment Plan
-#> 88                                                                                          INDIA - Financing Energy Efficiency at MSMEs
-#> 89                                                                                            FODER - Argentina Renewable Fund Guarantee
-#> 90                                                                                                Allian Duhangan Hydro Electric Project
-#> 91                                                                Ghana FIP - Enhancing Natural Forest and Agroforest Landscapes Project
-#> 92                                                              Kenya: Adaptation to Climate Change in Arid and Semi-Arid Lands (KACCAL)
-#> 93                                                                                             Climate Smart Agriculture Support Project
-#> 94                                                                                                     Algeria Energy Efficiency Project
-#> 95                                                                                                Petroleum Technical Assistance Project
-#> 96                                                                                                Yunnan Whitewaters Hydro Project (ICF)
-#> 97                                                                                                       Small Islands ASPIRE Supplement
-#> 98                                                                                 Zambia Integrated Forest Landcape Program BioCF Grant
-#> 99                                                                                                          Renewable Energy GEF Project
-#> 100                                                                Atal Bhujal Yojana (Abhy)-National Groundwater Management Improvement
+#> 62                                                                                                      Jepirachi Carbon Off Set Project
+#> 63                                                                 MEXICO Sustainable Energy Technologies Development for Climate Change
+#> 64                                                                     Disaster and Climate Risk Management Project Additional Financing
+#> 65                                                                                             Solar PV Demonstration & Scale Up Project
+#> 66                                                                                  Maharashtra Project on Climate Resilient Agriculture
+#> 67                                                                                                       Ghana Climate Innovation Center
+#> 68                                                                                      Nepal - Forest Investment Plan Preparation Grant
+#> 69                                                                                                Rural Electrification Project Stage II
+#> 70                                                                                                 Capacity Building & Secretariat BCCRF
+#> 71                                                              Mainstreaming Climate Change Adaptation in Irrigated Agriculture Project
+#> 72                                                                 Climate Adaptation and Mitigation Program for Aral Sea Basin CAMP4ASB
+#> 73                                                                                        Building Resilience to Climate Related Hazards
+#> 74                                                                               Zambia Scaling Renewable Energy Program Investment Plan
+#> 75                                                                               Strengthening Hydro-Meteorological and Climate Services
+#> 76                                                                                              Saweto Dedicated Grant Mechanism in Peru
+#> 77                                                                                                AR Third National Communication UNFCCC
+#> 78                                                                                            Yemen: Preparation of SREP Investment Plan
+#> 79                                                                         AP Integrated Irrigation & Agriculture Transformation Project
+#> 80                                                                                                Allian Duhangan Hydro Electric Project
+#> 81                                                                                         Vietnam Climate Innovation Center (VCIC) RETF
+#> 82                                                                                                       Small Islands ASPIRE Supplement
+#> 83                                                                                               Carbon Partnership Facility development
+#> 84                                                                           Adaptation of Nicaragua's  Water Supplies to Climate Change
+#> 85                                                                Indigenous Wisdom and Biomathematics: Amazonians Tackle Climate Change
+#> 86                                                                                    TUNISIA FOREST INVESTMENT PLAN PREPARATION PROJECT
+#> 87                                               Lao PDR - Mainstreaming  Disaster and Climate Risk Management into Investment Decisions
+#> 88                                                                                      Climate Information System and PPCR Coordination
+#> 89                                                                                          INDIA - Financing Energy Efficiency at MSMEs
+#> 90                                                                                               Geothermal Exploratory Drilling Project
+#> 91                                                                 Atal Bhujal Yojana (Abhy)-National Groundwater Management Improvement
+#> 92                                                                                             Climate Smart Agriculture Support Project
+#> 93                                                              Kenya: Adaptation to Climate Change in Arid and Semi-Arid Lands (KACCAL)
+#> 94                                                                                                Petroleum Technical Assistance Project
+#> 95                                                                                                Wuhan Integrated Transport Development
+#> 96                                                                                            FODER - Argentina Renewable Fund Guarantee
+#> 97                                                                                                     Algeria Energy Efficiency Project
+#> 98                                                                Ghana FIP - Enhancing Natural Forest and Agroforest Landscapes Project
+#> 99                                                                                 Zambia Integrated Forest Landcape Program BioCF Grant
+#> 100                                                                                      Guatemala, El Canada 43MW Hydroelectric Project
 #>       status approval_date closing_date country_code
 #> 1     Closed          <NA>   2017-12-31           ST
-#> 2     Closed          <NA>   2016-06-30           CN
-#> 3     Closed    2010-08-22         <NA>           RY
+#> 2     Closed    2010-08-22         <NA>           RY
+#> 3     Closed          <NA>   2016-06-30           CN
 #> 4     Closed    2012-11-08   2013-09-30           VN
 #> 5     Closed          <NA>   2020-06-25           KE
 #> 6     Closed          <NA>   2015-10-15           MA
 #> 7     Closed    2012-01-31   2018-02-28           MX
 #> 8     Closed          <NA>   2021-05-31           NE
-#> 9     Closed          <NA>   2021-05-31           3E
-#> 10    Closed          <NA>   2019-04-30           RW
+#> 9     Closed          <NA>   2019-04-30           RW
+#> 10    Closed          <NA>   2021-05-31           3E
 #> 11    Closed          <NA>   2022-12-31           ZM
 #> 12    Closed          <NA>   2016-12-31           PH
 #> 13    Closed    2013-01-24   2013-06-30           MZ
 #> 14   Dropped          <NA>         <NA>           6A
-#> 15    Closed          <NA>   2011-12-31           6R
-#> 16    Closed    2008-04-08   2011-07-19           MX
-#> 17    Closed    2012-02-02   2012-09-30           VN
-#> 18    Closed          <NA>   2016-12-31           BD
-#> 19    Closed          <NA>   2021-03-31           BT
+#> 15    Closed          <NA>   2021-03-31           BT
+#> 16    Closed          <NA>   2011-12-31           6R
+#> 17    Closed          <NA>   2016-12-31           BD
+#> 18    Closed    2012-02-02   2012-09-30           VN
+#> 19    Closed    2008-04-08   2011-07-19           MX
 #> 20    Closed          <NA>   2019-09-30           AR
 #> 21   Dropped          <NA>         <NA>           ZR
 #> 22    Closed          <NA>   2021-02-28           LK
-#> 23    Closed          <NA>   2016-12-31           BD
+#> 23    Closed          <NA>   2020-06-30           HN
 #> 24   Dropped          <NA>         <NA>           LK
-#> 25    Closed    2009-08-11         <NA>           1W
+#> 25    Closed          <NA>   2016-12-31           BD
 #> 26    Closed          <NA>   2009-03-31           MX
-#> 27    Closed          <NA>   2020-08-31           CN
-#> 28    Closed    2017-06-09   2023-09-30           MD
+#> 27    Closed    2009-08-11         <NA>           1W
+#> 28    Closed          <NA>   2020-08-31           CN
 #> 29    Closed          <NA>   2018-06-30           ZM
-#> 30    Closed          <NA>   2020-06-30           HN
+#> 30    Closed          <NA>   2018-03-31           UZ
 #> 31    Closed    2011-11-17   2021-11-16           UY
-#> 32    Closed    2001-06-22   2003-06-30           BY
-#> 33    Closed          <NA>   2020-09-30           MG
-#> 34    Active    2014-06-26   2025-06-30           MV
-#> 35    Closed          <NA>   2018-03-31           UZ
-#> 36    Closed          <NA>   2021-12-29           BR
-#> 37    Closed    2011-05-17   2022-12-31           TP
-#> 38    Closed    2010-06-10   2012-12-31           MX
-#> 39    Closed          <NA>   2024-06-28           MX
-#> 40    Closed          <NA>   2016-10-31           MX
-#> 41    Closed          <NA>   2022-08-31           JM
-#> 42    Closed          <NA>   2021-04-30           PH
-#> 43    Closed          <NA>   2022-12-31           BR
-#> 44    Closed          <NA>   2021-11-30           GH
+#> 32    Closed    2017-06-09   2023-09-30           MD
+#> 33    Closed          <NA>   2022-08-31           JM
+#> 34    Closed    2001-06-22   2003-06-30           BY
+#> 35    Closed          <NA>   2020-09-30           MG
+#> 36    Active    2014-06-26   2025-06-30           MV
+#> 37    Closed    2010-06-10   2012-12-31           MX
+#> 38    Closed    2011-05-17   2022-12-31           TP
+#> 39    Closed          <NA>   2016-10-31           MX
+#> 40    Closed          <NA>   2021-12-29           BR
+#> 41    Closed          <NA>   2022-12-31           BR
+#> 42    Closed          <NA>   2024-06-28           MX
+#> 43    Closed          <NA>   2021-04-30           PH
+#> 44    Closed    2012-03-28   2014-11-30           MV
 #> 45   Dropped          <NA>         <NA>           RY
 #> 46    Closed          <NA>   2020-12-31           VN
-#> 47    Closed    2011-01-28         <NA>           BF
-#> 48    Active          <NA>         <NA>           KE
-#> 49    Closed          <NA>   2018-11-30           BD
-#> 50    Active          <NA>         <NA>           ZM
-#> 51    Closed    2010-05-25   2010-12-31           ID
-#> 52    Closed    2010-06-29   2019-12-31           NG
-#> 53    Closed          <NA>   2007-03-31           AR
-#> 54    Closed          <NA>   2009-03-30           6R
-#> 55    Closed          <NA>   2018-04-30           ET
-#> 56    Closed    2012-03-28   2014-11-30           MV
-#> 57    Active          <NA>   2025-03-31           IN
-#> 58    Closed    2015-12-01   2016-06-30           ID
-#> 59    Closed    2002-12-10   2020-05-31           CO
-#> 60    Closed    2011-05-31         <NA>           ZR
+#> 47    Active          <NA>         <NA>           ZM
+#> 48    Closed          <NA>   2018-11-30           BD
+#> 49    Closed          <NA>   2021-11-30           GH
+#> 50    Closed          <NA>   2007-03-31           AR
+#> 51    Active          <NA>         <NA>           KE
+#> 52    Closed    2010-05-25   2010-12-31           ID
+#> 53    Closed    2011-01-28         <NA>           BF
+#> 54    Closed          <NA>   2018-04-30           ET
+#> 55    Closed    2010-06-29   2019-12-31           NG
+#> 56    Closed          <NA>   2009-03-30           6R
+#> 57    Closed    2011-05-31         <NA>           ZR
+#> 58    Active          <NA>   2025-03-31           IN
+#> 59    Closed    2015-12-01   2016-06-30           ID
+#> 60    Closed    2007-05-29   2007-12-31           MA
 #> 61   Dropped          <NA>         <NA>           ID
-#> 62    Closed    2007-05-29   2007-12-31           MA
-#> 63    Closed    2016-02-02   2020-11-30           GH
-#> 64    Closed          <NA>   2018-06-18           ZM
-#> 65    Closed          <NA>   2018-09-30           NP
-#> 66    Closed    2015-11-03   2024-05-31           7C
-#> 67    Closed          <NA>   2023-01-15           ZR
-#> 68    Closed          <NA>   2015-06-30           AR
-#> 69    Closed          <NA>   2012-06-30           CN
-#> 70    Closed          <NA>   2020-11-15           NP
-#> 71    Closed    2015-05-19         <NA>           MD
-#> 72    Closed    2011-08-30   2014-12-31           BD
-#> 73    Closed    2018-02-27   2024-06-30           IN
-#> 74    Closed          <NA>   2021-06-25           PE
-#> 75    Closed          <NA>   2019-09-30           6O
-#> 76    Closed          <NA>   2020-12-31           MX
-#> 77  Pipeline          <NA>   2012-12-31           PE
-#> 78    Closed          <NA>   2020-08-31           VN
-#> 79  Pipeline          <NA>         <NA>           1W
-#> 80    Closed          <NA>   2018-06-30           NI
-#> 81    Active    2018-10-23   2025-10-31           IN
-#> 82    Closed          <NA>   2019-05-31           AM
-#> 83    Active          <NA>   2030-10-31           ZM
-#> 84    Closed    2017-05-31   2022-06-30           VU
-#> 85    Closed          <NA>   2017-12-31           TN
-#> 86    Closed    2011-11-28   2016-01-30           LA
-#> 87    Closed    2013-04-16         <NA>           RY
-#> 88    Closed          <NA>   2019-05-04           IN
-#> 89    Closed    2017-02-28   2022-06-30           AR
-#> 90  Pipeline          <NA>   2018-05-04           IN
-#> 91    Closed          <NA>   2024-06-14           GH
-#> 92    Closed          <NA>   2017-06-30           KE
-#> 93    Closed    2016-05-26   2022-12-31           NE
-#> 94   Dropped          <NA>         <NA>           DZ
-#> 95    Closed    1994-06-02   2000-03-31           KZ
-#> 96  Pipeline          <NA>   2017-12-18           CN
-#> 97   Dropped          <NA>         <NA>           MV
-#> 98   Dropped          <NA>         <NA>           ZM
-#> 99    Closed          <NA>   2011-06-30           AM
-#> 100   Active    2018-06-05   2025-09-28           IN
+#> 62    Closed    2002-12-10   2020-05-31           CO
+#> 63    Closed          <NA>   2020-12-31           MX
+#> 64    Closed    2015-05-19         <NA>           MD
+#> 65    Closed          <NA>   2019-09-30           6O
+#> 66    Closed    2018-02-27   2024-06-30           IN
+#> 67    Closed    2016-02-02   2020-11-30           GH
+#> 68    Closed          <NA>   2018-09-30           NP
+#> 69    Closed    2017-05-31   2022-06-30           VU
+#> 70    Closed    2011-08-30   2014-12-31           BD
+#> 71    Closed          <NA>   2012-06-30           CN
+#> 72    Closed    2015-11-03   2024-05-31           7C
+#> 73    Closed          <NA>   2020-11-15           NP
+#> 74    Closed          <NA>   2018-06-18           ZM
+#> 75    Closed          <NA>   2023-01-15           ZR
+#> 76    Closed          <NA>   2021-06-25           PE
+#> 77    Closed          <NA>   2015-06-30           AR
+#> 78    Closed    2013-04-16         <NA>           RY
+#> 79    Active    2018-10-23   2025-10-31           IN
+#> 80  Pipeline          <NA>   2018-05-04           IN
+#> 81    Closed          <NA>   2020-08-31           VN
+#> 82   Dropped          <NA>         <NA>           MV
+#> 83  Pipeline          <NA>         <NA>           1W
+#> 84    Closed          <NA>   2018-06-30           NI
+#> 85  Pipeline          <NA>   2012-12-31           PE
+#> 86    Closed          <NA>   2017-12-31           TN
+#> 87    Closed    2011-11-28   2016-01-30           LA
+#> 88    Closed          <NA>   2017-01-17           RY
+#> 89    Closed          <NA>   2019-05-04           IN
+#> 90    Closed          <NA>   2019-05-31           AM
+#> 91    Active    2018-06-05   2025-09-28           IN
+#> 92    Closed    2016-05-26   2022-12-31           NE
+#> 93    Closed          <NA>   2017-06-30           KE
+#> 94    Closed    1994-06-02   2000-03-31           KZ
+#> 95    Closed    2016-02-26   2024-10-31           CN
+#> 96    Closed    2017-02-28   2022-06-30           AR
+#> 97   Dropped          <NA>         <NA>           DZ
+#> 98    Closed          <NA>   2024-06-14           GH
+#> 99   Dropped          <NA>         <NA>           ZM
+#> 100   Closed    2003-08-12   2024-04-29           GT
 #>                              country                       region
 #> 1              Sao Tome and Principe  Eastern and Southern Africa
-#> 2                              China        East Asia and Pacific
-#> 3                 Yemen, Republic of Middle East and North Africa
+#> 2                 Yemen, Republic of Middle East and North Africa
+#> 3                              China        East Asia and Pacific
 #> 4                            Vietnam        East Asia and Pacific
 #> 5                              Kenya  Eastern and Southern Africa
 #> 6                            Morocco Middle East and North Africa
 #> 7                             Mexico  Latin America and Caribbean
 #> 8                              Niger   Western and Central Africa
-#> 9        Eastern and Southern Africa  Eastern and Southern Africa
-#> 10                            Rwanda  Eastern and Southern Africa
+#> 9                             Rwanda  Eastern and Southern Africa
+#> 10       Eastern and Southern Africa  Eastern and Southern Africa
 #> 11                            Zambia  Eastern and Southern Africa
 #> 12                       Philippines        East Asia and Pacific
 #> 13                        Mozambique  Eastern and Southern Africa
 #> 14                  Andean Countries  Latin America and Caribbean
-#> 15                         Caribbean  Latin America and Caribbean
-#> 16                            Mexico  Latin America and Caribbean
-#> 17                           Vietnam        East Asia and Pacific
-#> 18                        Bangladesh                   South Asia
-#> 19                            Bhutan                   South Asia
+#> 15                            Bhutan                   South Asia
+#> 16                         Caribbean  Latin America and Caribbean
+#> 17                        Bangladesh                   South Asia
+#> 18                           Vietnam        East Asia and Pacific
+#> 19                            Mexico  Latin America and Caribbean
 #> 20                         Argentina  Latin America and Caribbean
 #> 21     Congo, Democratic Republic of  Eastern and Southern Africa
 #> 22                         Sri Lanka                   South Asia
-#> 23                        Bangladesh                   South Asia
+#> 23                          Honduras  Latin America and Caribbean
 #> 24                         Sri Lanka                   South Asia
-#> 25                             World                        Other
+#> 25                        Bangladesh                   South Asia
 #> 26                            Mexico  Latin America and Caribbean
-#> 27                             China        East Asia and Pacific
-#> 28                           Moldova      Europe and Central Asia
+#> 27                             World                        Other
+#> 28                             China        East Asia and Pacific
 #> 29                            Zambia  Eastern and Southern Africa
-#> 30                          Honduras  Latin America and Caribbean
+#> 30                        Uzbekistan      Europe and Central Asia
 #> 31                           Uruguay  Latin America and Caribbean
-#> 32                           Belarus      Europe and Central Asia
-#> 33                        Madagascar  Eastern and Southern Africa
-#> 34                          Maldives                   South Asia
-#> 35                        Uzbekistan      Europe and Central Asia
-#> 36                            Brazil  Latin America and Caribbean
-#> 37                       Timor-Leste        East Asia and Pacific
-#> 38                            Mexico  Latin America and Caribbean
+#> 32                           Moldova      Europe and Central Asia
+#> 33                           Jamaica  Latin America and Caribbean
+#> 34                           Belarus      Europe and Central Asia
+#> 35                        Madagascar  Eastern and Southern Africa
+#> 36                          Maldives                   South Asia
+#> 37                            Mexico  Latin America and Caribbean
+#> 38                       Timor-Leste        East Asia and Pacific
 #> 39                            Mexico  Latin America and Caribbean
-#> 40                            Mexico  Latin America and Caribbean
-#> 41                           Jamaica  Latin America and Caribbean
-#> 42                       Philippines        East Asia and Pacific
-#> 43                            Brazil  Latin America and Caribbean
-#> 44                             Ghana   Western and Central Africa
+#> 40                            Brazil  Latin America and Caribbean
+#> 41                            Brazil  Latin America and Caribbean
+#> 42                            Mexico  Latin America and Caribbean
+#> 43                       Philippines        East Asia and Pacific
+#> 44                          Maldives                   South Asia
 #> 45                Yemen, Republic of Middle East and North Africa
 #> 46                           Vietnam        East Asia and Pacific
-#> 47                      Burkina Faso   Western and Central Africa
-#> 48                             Kenya  Eastern and Southern Africa
-#> 49                        Bangladesh                   South Asia
-#> 50                            Zambia  Eastern and Southern Africa
-#> 51                         Indonesia        East Asia and Pacific
-#> 52                           Nigeria   Western and Central Africa
-#> 53                         Argentina  Latin America and Caribbean
-#> 54                         Caribbean  Latin America and Caribbean
-#> 55                          Ethiopia  Eastern and Southern Africa
-#> 56                          Maldives                   South Asia
-#> 57                             India                   South Asia
-#> 58                         Indonesia        East Asia and Pacific
-#> 59                          Colombia  Latin America and Caribbean
-#> 60     Congo, Democratic Republic of  Eastern and Southern Africa
+#> 47                            Zambia  Eastern and Southern Africa
+#> 48                        Bangladesh                   South Asia
+#> 49                             Ghana   Western and Central Africa
+#> 50                         Argentina  Latin America and Caribbean
+#> 51                             Kenya  Eastern and Southern Africa
+#> 52                         Indonesia        East Asia and Pacific
+#> 53                      Burkina Faso   Western and Central Africa
+#> 54                          Ethiopia  Eastern and Southern Africa
+#> 55                           Nigeria   Western and Central Africa
+#> 56                         Caribbean  Latin America and Caribbean
+#> 57     Congo, Democratic Republic of  Eastern and Southern Africa
+#> 58                             India                   South Asia
+#> 59                         Indonesia        East Asia and Pacific
+#> 60                           Morocco Middle East and North Africa
 #> 61                         Indonesia        East Asia and Pacific
-#> 62                           Morocco Middle East and North Africa
-#> 63                             Ghana   Western and Central Africa
-#> 64                            Zambia  Eastern and Southern Africa
-#> 65                             Nepal                   South Asia
-#> 66                      Central Asia      Europe and Central Asia
-#> 67     Congo, Democratic Republic of  Eastern and Southern Africa
-#> 68                         Argentina  Latin America and Caribbean
-#> 69                             China        East Asia and Pacific
-#> 70                             Nepal                   South Asia
-#> 71                           Moldova      Europe and Central Asia
-#> 72                        Bangladesh                   South Asia
-#> 73                             India                   South Asia
-#> 74                              Peru  Latin America and Caribbean
-#> 75                    OECS Countries  Latin America and Caribbean
-#> 76                            Mexico  Latin America and Caribbean
-#> 77                              Peru  Latin America and Caribbean
-#> 78                           Vietnam        East Asia and Pacific
-#> 79                             World                        Other
-#> 80                         Nicaragua  Latin America and Caribbean
-#> 81                             India                   South Asia
-#> 82                           Armenia      Europe and Central Asia
-#> 83                            Zambia  Eastern and Southern Africa
-#> 84                           Vanuatu        East Asia and Pacific
-#> 85                           Tunisia Middle East and North Africa
-#> 86  Lao People's Democratic Republic        East Asia and Pacific
-#> 87                Yemen, Republic of Middle East and North Africa
-#> 88                             India                   South Asia
-#> 89                         Argentina  Latin America and Caribbean
-#> 90                             India                   South Asia
-#> 91                             Ghana   Western and Central Africa
-#> 92                             Kenya  Eastern and Southern Africa
-#> 93                             Niger   Western and Central Africa
-#> 94                           Algeria Middle East and North Africa
-#> 95                        Kazakhstan      Europe and Central Asia
-#> 96                             China        East Asia and Pacific
-#> 97                          Maldives                   South Asia
-#> 98                            Zambia  Eastern and Southern Africa
-#> 99                           Armenia      Europe and Central Asia
-#> 100                            India                   South Asia
+#> 62                          Colombia  Latin America and Caribbean
+#> 63                            Mexico  Latin America and Caribbean
+#> 64                           Moldova      Europe and Central Asia
+#> 65                    OECS Countries  Latin America and Caribbean
+#> 66                             India                   South Asia
+#> 67                             Ghana   Western and Central Africa
+#> 68                             Nepal                   South Asia
+#> 69                           Vanuatu        East Asia and Pacific
+#> 70                        Bangladesh                   South Asia
+#> 71                             China        East Asia and Pacific
+#> 72                      Central Asia      Europe and Central Asia
+#> 73                             Nepal                   South Asia
+#> 74                            Zambia  Eastern and Southern Africa
+#> 75     Congo, Democratic Republic of  Eastern and Southern Africa
+#> 76                              Peru  Latin America and Caribbean
+#> 77                         Argentina  Latin America and Caribbean
+#> 78                Yemen, Republic of Middle East and North Africa
+#> 79                             India                   South Asia
+#> 80                             India                   South Asia
+#> 81                           Vietnam        East Asia and Pacific
+#> 82                          Maldives                   South Asia
+#> 83                             World                        Other
+#> 84                         Nicaragua  Latin America and Caribbean
+#> 85                              Peru  Latin America and Caribbean
+#> 86                           Tunisia Middle East and North Africa
+#> 87  Lao People's Democratic Republic        East Asia and Pacific
+#> 88                Yemen, Republic of Middle East and North Africa
+#> 89                             India                   South Asia
+#> 90                           Armenia      Europe and Central Asia
+#> 91                             India                   South Asia
+#> 92                             Niger   Western and Central Africa
+#> 93                             Kenya  Eastern and Southern Africa
+#> 94                        Kazakhstan      Europe and Central Asia
+#> 95                             China        East Asia and Pacific
+#> 96                         Argentina  Latin America and Caribbean
+#> 97                           Algeria Middle East and North Africa
+#> 98                             Ghana   Western and Central Africa
+#> 99                            Zambia  Eastern and Southern Africa
+#> 100                        Guatemala  Latin America and Caribbean
 #>     total_commitment ibrd_commitment ida_commitment
 #> 1           4.147800            0.00            0.0
-#> 2           5.000000            0.00            0.0
-#> 3           1.500000            0.00            0.0
+#> 2           1.500000            0.00            0.0
+#> 3           5.000000            0.00            0.0
 #> 4          70.000000            0.00           70.0
 #> 5           4.900000            0.00            0.0
 #> 6           4.345454            0.00            0.0
 #> 7         392.000000          350.00            0.0
 #> 8          63.000000            0.00            0.0
-#> 9           4.999999            0.00            0.0
-#> 10          1.500000            0.00            0.0
+#> 9           1.500000            0.00            0.0
+#> 10          4.999999            0.00            0.0
 #> 11         36.000000            0.00            0.0
 #> 12          4.970000            0.00            0.0
 #> 13         50.000000            0.00           50.0
 #> 14          0.000000            0.00            0.0
-#> 15          3.450000            0.00            0.0
-#> 16        501.250000          501.25            0.0
-#> 17         70.000000            0.00           70.0
-#> 18         12.500000            0.00            0.0
-#> 19          1.500000            0.00            0.0
+#> 15          1.500000            0.00            0.0
+#> 16          3.450000            0.00            0.0
+#> 17         12.500000            0.00            0.0
+#> 18         70.000000            0.00           70.0
+#> 19        501.250000          501.25            0.0
 #> 20          3.960200            0.00            0.0
 #> 21          0.000000            0.00            0.0
 #> 22          1.800000            0.00            0.0
-#> 23         33.800000            0.00            0.0
+#> 23          1.400000            0.00            0.0
 #> 24          0.000000            0.00            0.0
-#> 25          2.568060            0.00            0.0
+#> 25         33.800000            0.00            0.0
 #> 26          5.800000            0.00            0.0
-#> 27          8.000000            0.00            0.0
-#> 28         25.200000           12.40           12.8
+#> 27          2.568060            0.00            0.0
+#> 28          8.000000            0.00            0.0
 #> 29          0.250000            0.00            0.0
-#> 30          1.400000            0.00            0.0
+#> 30         12.699000            0.00            0.0
 #> 31         49.000000           49.00            0.0
-#> 32          0.310825            0.00            0.0
-#> 33          1.500000            0.00            0.0
-#> 34         11.684000            0.00           16.0
-#> 35         12.699000            0.00            0.0
-#> 36          9.250000            0.00            0.0
-#> 37         20.000000            0.00           20.0
-#> 38        450.000000          450.00            0.0
-#> 39          6.000000            0.00            0.0
-#> 40          6.361000            0.00            0.0
-#> 41          6.800000            0.00            0.0
-#> 42          0.410000            0.00            0.0
-#> 43         32.480000            0.00            0.0
-#> 44          5.500000            0.00            0.0
+#> 32         25.200000           12.40           12.8
+#> 33          6.800000            0.00            0.0
+#> 34          0.310825            0.00            0.0
+#> 35          1.500000            0.00            0.0
+#> 36         11.684000            0.00           16.0
+#> 37        450.000000          450.00            0.0
+#> 38         20.000000            0.00           20.0
+#> 39          6.361000            0.00            0.0
+#> 40          9.250000            0.00            0.0
+#> 41         32.480000            0.00            0.0
+#> 42          6.000000            0.00            0.0
+#> 43          0.410000            0.00            0.0
+#> 44          2.530000            0.00            0.0
 #> 45          0.000000            0.00            0.0
 #> 46          3.000000            0.00            0.0
-#> 47          0.250000            0.00            0.0
-#> 48          5.148000            0.00            0.0
-#> 49          0.250000            0.00            0.0
-#> 50          1.500000            0.00            0.0
-#> 51        200.000000          200.00            0.0
-#> 52          7.125000            0.00            0.0
-#> 53          1.140000            0.00            0.0
-#> 54          7.800000            0.00            0.0
-#> 55          1.500000            0.00            0.0
-#> 56          2.530000            0.00            0.0
-#> 57         25.000000            0.00            0.0
-#> 58        500.000000          500.00            0.0
-#> 59          0.000000            0.00            0.0
-#> 60          0.250000            0.00            0.0
+#> 47          1.500000            0.00            0.0
+#> 48          0.250000            0.00            0.0
+#> 49          5.500000            0.00            0.0
+#> 50          1.140000            0.00            0.0
+#> 51          5.148000            0.00            0.0
+#> 52        200.000000          200.00            0.0
+#> 53          0.250000            0.00            0.0
+#> 54          1.500000            0.00            0.0
+#> 55          7.125000            0.00            0.0
+#> 56          7.800000            0.00            0.0
+#> 57          0.250000            0.00            0.0
+#> 58         25.000000            0.00            0.0
+#> 59        500.000000          500.00            0.0
+#> 60        100.000000          100.00            0.0
 #> 61          0.000000            0.00            0.0
-#> 62        100.000000          100.00            0.0
-#> 63         11.700000            0.00            0.0
-#> 64          0.300000            0.00            0.0
-#> 65          0.250000            0.00            0.0
-#> 66         38.000000            0.00           38.0
-#> 67          8.029452            0.00            0.0
-#> 68          2.439210            0.00            0.0
-#> 69          5.000000            0.00            0.0
-#> 70         31.000000            0.00            0.0
-#> 71          2.000000            0.00            2.0
-#> 72          0.200000            0.00            0.0
-#> 73        420.000000          420.00            0.0
-#> 74          5.500000            0.00            0.0
-#> 75          1.800000            0.00            0.0
-#> 76         16.880734            0.00            0.0
-#> 77          0.000000            0.00            0.0
-#> 78          4.600000            0.00            0.0
-#> 79          0.000000            0.00            0.0
-#> 80          6.000000            0.00            0.0
-#> 81        172.200000          172.20            0.0
-#> 82          8.550000            0.00            0.0
+#> 62          0.000000            0.00            0.0
+#> 63         16.880734            0.00            0.0
+#> 64          2.000000            0.00            2.0
+#> 65          1.800000            0.00            0.0
+#> 66        420.000000          420.00            0.0
+#> 67         11.700000            0.00            0.0
+#> 68          0.250000            0.00            0.0
+#> 69          4.000000            0.00            4.0
+#> 70          0.200000            0.00            0.0
+#> 71          5.000000            0.00            0.0
+#> 72         38.000000            0.00           38.0
+#> 73         31.000000            0.00            0.0
+#> 74          0.300000            0.00            0.0
+#> 75          8.029452            0.00            0.0
+#> 76          5.500000            0.00            0.0
+#> 77          2.439210            0.00            0.0
+#> 78          0.300000            0.00            0.0
+#> 79        172.200000          172.20            0.0
+#> 80          0.000000            0.00            0.0
+#> 81          4.600000            0.00            0.0
+#> 82          0.000000            0.00            0.0
 #> 83          0.000000            0.00            0.0
-#> 84          4.000000            0.00            4.0
-#> 85          0.250000            0.00            0.0
-#> 86          2.718000            0.00            0.0
-#> 87          0.300000            0.00            0.0
-#> 88         11.300000            0.00            0.0
-#> 89        480.000000          480.00            0.0
-#> 90          0.000000            0.00            0.0
-#> 91         29.500000            0.00            0.0
-#> 92          5.500000            0.00            0.0
-#> 93        111.000000            0.00          111.0
-#> 94          0.000000            0.00            0.0
-#> 95         15.700000           15.70            0.0
-#> 96          0.000000            0.00            0.0
+#> 84          6.000000            0.00            0.0
+#> 85          0.000000            0.00            0.0
+#> 86          0.250000            0.00            0.0
+#> 87          2.718000            0.00            0.0
+#> 88         19.000000            0.00            0.0
+#> 89         11.300000            0.00            0.0
+#> 90          8.550000            0.00            0.0
+#> 91        450.000000          450.00            0.0
+#> 92        111.000000            0.00          111.0
+#> 93          5.500000            0.00            0.0
+#> 94         15.700000           15.70            0.0
+#> 95        120.000000          120.00            0.0
+#> 96        480.000000          480.00            0.0
 #> 97          0.000000            0.00            0.0
-#> 98          0.000000            0.00            0.0
-#> 99          3.000000            0.00            0.0
-#> 100       450.000000          450.00            0.0
+#> 98         29.500000            0.00            0.0
+#> 99          0.000000            0.00            0.0
+#> 100         0.000000            0.00            0.0
 #>                lending_instrument
 #> 1    Investment Project Financing
-#> 2    Investment Project Financing
-#> 3       Technical Assistance Loan
+#> 2       Technical Assistance Loan
+#> 3    Investment Project Financing
 #> 4      Development Policy Lending
 #> 5    Investment Project Financing
 #> 6    Investment Project Financing
@@ -2471,394 +2471,394 @@ wb_project(search = "climate", limit = 100)
 #> 12   Investment Project Financing
 #> 13     Development Policy Lending
 #> 14   Investment Project Financing
-#> 15       Specific Investment Loan
-#> 16     Development Policy Lending
-#> 17     Development Policy Lending
-#> 18   Investment Project Financing
-#> 19   Investment Project Financing
+#> 15   Investment Project Financing
+#> 16       Specific Investment Loan
+#> 17   Investment Project Financing
+#> 18     Development Policy Lending
+#> 19     Development Policy Lending
 #> 20   Investment Project Financing
 #> 21   Investment Project Financing
 #> 22   Investment Project Financing
 #> 23   Investment Project Financing
 #> 24   Investment Project Financing
-#> 25       Specific Investment Loan
+#> 25   Investment Project Financing
 #> 26       Specific Investment Loan
-#> 27   Investment Project Financing
+#> 27       Specific Investment Loan
 #> 28   Investment Project Financing
 #> 29   Investment Project Financing
 #> 30   Investment Project Financing
 #> 31   Investment Project Financing
-#> 32      Technical Assistance Loan
+#> 32   Investment Project Financing
 #> 33   Investment Project Financing
-#> 34     Development Policy Lending
+#> 34      Technical Assistance Loan
 #> 35   Investment Project Financing
-#> 36   Investment Project Financing
-#> 37   Investment Project Financing
-#> 38     Development Policy Lending
+#> 36     Development Policy Lending
+#> 37     Development Policy Lending
+#> 38   Investment Project Financing
 #> 39   Investment Project Financing
 #> 40   Investment Project Financing
 #> 41   Investment Project Financing
 #> 42   Investment Project Financing
 #> 43   Investment Project Financing
-#> 44   Investment Project Financing
+#> 44       Specific Investment Loan
 #> 45       Specific Investment Loan
 #> 46   Investment Project Financing
-#> 47      Technical Assistance Loan
+#> 47   Investment Project Financing
 #> 48   Investment Project Financing
 #> 49   Investment Project Financing
-#> 50   Investment Project Financing
-#> 51     Development Policy Lending
-#> 52   Investment Project Financing
-#> 53       Specific Investment Loan
-#> 54       Specific Investment Loan
+#> 50       Specific Investment Loan
+#> 51   Investment Project Financing
+#> 52     Development Policy Lending
+#> 53      Technical Assistance Loan
+#> 54   Investment Project Financing
 #> 55   Investment Project Financing
 #> 56       Specific Investment Loan
-#> 57   Investment Project Financing
-#> 58     Development Policy Lending
-#> 59   Investment Project Financing
-#> 60      Technical Assistance Loan
+#> 57      Technical Assistance Loan
+#> 58   Investment Project Financing
+#> 59     Development Policy Lending
+#> 60     Development Policy Lending
 #> 61   Investment Project Financing
-#> 62     Development Policy Lending
+#> 62   Investment Project Financing
 #> 63   Investment Project Financing
 #> 64   Investment Project Financing
 #> 65   Investment Project Financing
 #> 66   Investment Project Financing
 #> 67   Investment Project Financing
 #> 68   Investment Project Financing
-#> 69       Specific Investment Loan
-#> 70   Investment Project Financing
-#> 71   Investment Project Financing
-#> 72      Technical Assistance Loan
+#> 69   Investment Project Financing
+#> 70      Technical Assistance Loan
+#> 71       Specific Investment Loan
+#> 72   Investment Project Financing
 #> 73   Investment Project Financing
 #> 74   Investment Project Financing
 #> 75   Investment Project Financing
 #> 76   Investment Project Financing
-#> 77      Technical Assistance Loan
-#> 78   Investment Project Financing
-#> 79                           <NA>
-#> 80   Investment Project Financing
+#> 77   Investment Project Financing
+#> 78      Technical Assistance Loan
+#> 79   Investment Project Financing
+#> 80                           <NA>
 #> 81   Investment Project Financing
 #> 82   Investment Project Financing
-#> 83   Investment Project Financing
+#> 83                           <NA>
 #> 84   Investment Project Financing
-#> 85   Investment Project Financing
-#> 86      Technical Assistance Loan
+#> 85      Technical Assistance Loan
+#> 86   Investment Project Financing
 #> 87      Technical Assistance Loan
 #> 88   Investment Project Financing
 #> 89   Investment Project Financing
-#> 90                           <NA>
-#> 91   Investment Project Financing
+#> 90   Investment Project Financing
+#> 91  Program-for-Results Financing
 #> 92   Investment Project Financing
 #> 93   Investment Project Financing
-#> 94      Technical Assistance Loan
-#> 95       Specific Investment Loan
-#> 96                           <NA>
-#> 97   Investment Project Financing
+#> 94       Specific Investment Loan
+#> 95   Investment Project Financing
+#> 96   Investment Project Financing
+#> 97      Technical Assistance Loan
 #> 98   Investment Project Financing
-#> 99       Specific Investment Loan
-#> 100 Program-for-Results Financing
+#> 99   Investment Project Financing
+#> 100  Investment Project Financing
 #>                                                                                                                                                                     borrower
 #> 1                                                                                                                              Ministry of Public Works, NR, and Environment
-#> 2                                                                                                                                                 PEOPLE'S REPUBLIC OF CHINA
-#> 3                                                                                                                                                                       <NA>
+#> 2                                                                                                                                                                       <NA>
+#> 3                                                                                                                                                 PEOPLE'S REPUBLIC OF CHINA
 #> 4                                                                                                                                                                       <NA>
 #> 5                                                                                                                                            Kenya Climate Innovation Centre
 #> 6                                                                                                                                                      Government of Morocco
 #> 7                                                                                                                                                        Ministry of Finance
 #> 8                                                                                                           Ministry of Planning, Local Government and Community Development
-#> 9                                                                                                                                Inter-Governmental Authority on Development
-#> 10                                                                                                                     Ministry of Finance and Economic Planning (MINECOFIN)
+#> 9                                                                                                                      Ministry of Finance and Economic Planning (MINECOFIN)
+#> 10                                                                                                                               Inter-Governmental Authority on Development
 #> 11                                                                                                                                                        Republic of Zambia
 #> 12                                                                                                                           Department of Environment and Natural Resources
 #> 13                                                                                                                                  The Ministry of Planning and Development
 #> 14                                                                                                                                 Secretaria General de la Comunidad Andina
-#> 15                                                                                                                                                                      <NA>
+#> 15                                                                                                                                                Royal Government of Bhutan
 #> 16                                                                                                                                                                      <NA>
-#> 17                                                                                                                                                                      <NA>
-#> 18                                                                                                                          Economic Relations Division, Ministry of Finance
-#> 19                                                                                                                                                Royal Government of Bhutan
+#> 17                                                                                                                          Economic Relations Division, Ministry of Finance
+#> 18                                                                                                                                                                      <NA>
+#> 19                                                                                                                                                                      <NA>
 #> 20                                                                                                                              The Argentine Republic, Ministry of Treasury
 #> 21                                                                                                                                                                      <NA>
 #> 22                                                                                                                                Democratic Socialist Republic of Sri Lanka
-#> 23                                                                                                                                           People's Republic of Bangladesh
+#> 23                                                                                                                                Secretaria de Finanzas de Honduras (SEFIN)
 #> 24                                                                                 Ministry of Power and  Renewable Energy, Ministry of Mahaweli Development and Environment
-#> 25                                                                                                                                                                      <NA>
+#> 25                                                                                                                                           People's Republic of Bangladesh
 #> 26                                                                                                                                                                      <NA>
-#> 27                                                                                                                                                People's Republic of China
-#> 28                                                                                                                                                       Republic of Moldova
+#> 27                                                                                                                                                                      <NA>
+#> 28                                                                                                                                                People's Republic of China
 #> 29                                                                                                                                 Ministry of National Development Planning
-#> 30                                                                                                                                Secretaria de Finanzas de Honduras (SEFIN)
+#> 30                                                                                                                                                    Republic of Uzbekistan
 #> 31                                                                                                                                              ORIENTAL REPUBLIC OF URUGUAY
-#> 32                                                                                                                                                                      <NA>
-#> 33                                                                                                                              Republic of Madagascar (Ministry of Finance)
-#> 34                                                                                                                                                  Maryam Abdul Nasir (Ms.)
-#> 35                                                                                                                                                    Republic of Uzbekistan
-#> 36                                                                                                                                                                      <NA>
-#> 37                                                                                                                                        Democratic Republic of Timor-Leste
-#> 38                                                                                                                                                                      <NA>
-#> 39                                                                                                                                                       Rainforest Alliance
-#> 40                                                                                                                           Secretaria de Hacienda y Credito Publico (SHCP)
-#> 41                                                                                                                                                                   Jamaica
-#> 42                                                                                                                                              The Land Bank of Philippines
-#> 43                                                                                                                                             Federative Republic of Brazil
-#> 44                                                                                                                                               National Steering Committee
+#> 32                                                                                                                                                       Republic of Moldova
+#> 33                                                                                                                                                                   Jamaica
+#> 34                                                                                                                                                                      <NA>
+#> 35                                                                                                                              Republic of Madagascar (Ministry of Finance)
+#> 36                                                                                                                                                  Maryam Abdul Nasir (Ms.)
+#> 37                                                                                                                                                                      <NA>
+#> 38                                                                                                                                        Democratic Republic of Timor-Leste
+#> 39                                                                                                                           Secretaria de Hacienda y Credito Publico (SHCP)
+#> 40                                                                                                                                                                      <NA>
+#> 41                                                                                                                                             Federative Republic of Brazil
+#> 42                                                                                                                                                       Rainforest Alliance
+#> 43                                                                                                                                              The Land Bank of Philippines
+#> 44                                                                                                                                                                      <NA>
 #> 45                                                                                                                                                                      <NA>
 #> 46                                                                                                                                             Socialist Republic of Vietnam
 #> 47                                                                                                                                                                      <NA>
-#> 48                                                                                                                                                    KTDA Power Company Ltd
-#> 49                                                                                                                                       Ministry of Environment and Forests
+#> 48                                                                                                                                       Ministry of Environment and Forests
+#> 49                                                                                                                                               National Steering Committee
 #> 50                                                                                                                                                                      <NA>
-#> 51                                                                                                                                                                      <NA>
+#> 51                                                                                                                                                    KTDA Power Company Ltd
 #> 52                                                                                                                                                                      <NA>
 #> 53                                                                                                                                                                      <NA>
-#> 54                                                                                                                                                                      <NA>
-#> 55                                                                                                                                   Federal Democratic Republic of Ethiopia
+#> 54                                                                                                                                   Federal Democratic Republic of Ethiopia
+#> 55                                                                                                                                                                      <NA>
 #> 56                                                                                                                                                                      <NA>
-#> 57                                                                                                                                                Government of India, India
-#> 58                                                                                                                                                                      <NA>
+#> 57                                                                                                                                                                      <NA>
+#> 58                                                                                                                                                Government of India, India
 #> 59                                                                                                                                                                      <NA>
 #> 60                                                                                                                                                                      <NA>
 #> 61                                                                                                                                                      Ministry of Industry
 #> 62                                                                                                                                                                      <NA>
-#> 63                                                                                                                                                                      <NA>
-#> 64                                                                                                                                                       Ministry of Finance
-#> 65                                                                                                                    Government of Nepal represented by Ministry of Finance
-#> 66  Executive Committee for International Fund for Saving the Aral Sea, Ministry of Finance of the Republic of Tajikistan, Ministry of Finance of the Republic of Uzbekistan
-#> 67                                                                                                                                              Democratic Republic of Congo
-#> 68                                                                                                                                Ministerio de Economia y Finanzas Publicas
-#> 69                                                                                                                                                                      <NA>
-#> 70                                                                                                                                                                     Nepal
+#> 63                                                                                                                                                     United Mexican States
+#> 64                                                                                                                                                                      <NA>
+#> 65                                                                          Government of Saint Lucia, Government of Grenada, Government of Saint Vincent and the Grenadines
+#> 66                                                                                                                                                         Republic of India
+#> 67                                                                                                                                                                      <NA>
+#> 68                                                                                                                    Government of Nepal represented by Ministry of Finance
+#> 69                                                                                                                               Ministry of Finance and Economic Management
+#> 70                                                                                                                                                                      <NA>
 #> 71                                                                                                                                                                      <NA>
-#> 72                                                                                                                                                                      <NA>
-#> 73                                                                                                                                                         Republic of India
-#> 74                                                                                                                                                            AIDESEP, CONAP
-#> 75                                                                          Government of Saint Lucia, Government of Grenada, Government of Saint Vincent and the Grenadines
-#> 76                                                                                                                                                     United Mexican States
-#> 77                                                                                                                                                                      <NA>
-#> 78                                                                                                                                             Socialist Republic of Vietnam
-#> 79                                                                                                                                                                      <NA>
-#> 80                                                                                                                                     Ministry of Finance and Public Credit
-#> 81                                                                                                                                                         Republic of India
-#> 82                                                                                           MINISTRY OF FINANCE, Ministry of Territorial Administration and Infrastructures
-#> 83                                                                                                                                                       Ministry of Finance
-#> 84                                                                                                                               Ministry of Finance and Economic Management
-#> 85                                                                                                                                                     GOVERNMENT OF TUNISIA
-#> 86                                                                                                                                                                      <NA>
+#> 72  Executive Committee for International Fund for Saving the Aral Sea, Ministry of Finance of the Republic of Tajikistan, Ministry of Finance of the Republic of Uzbekistan
+#> 73                                                                                                                                                                     Nepal
+#> 74                                                                                                                                                       Ministry of Finance
+#> 75                                                                                                                                              Democratic Republic of Congo
+#> 76                                                                                                                                                            AIDESEP, CONAP
+#> 77                                                                                                                                Ministerio de Economia y Finanzas Publicas
+#> 78                                                                                                                                                                      <NA>
+#> 79                                                                                                                                                         Republic of India
+#> 80                                                                                                                                                                      <NA>
+#> 81                                                                                                                                             Socialist Republic of Vietnam
+#> 82                                                                                                                                    Ministry of Finance and Treasury, MoFT
+#> 83                                                                                                                                                                      <NA>
+#> 84                                                                                                                                     Ministry of Finance and Public Credit
+#> 85                                                                                                                                                                      <NA>
+#> 86                                                                                                                                                     GOVERNMENT OF TUNISIA
 #> 87                                                                                                                                                                      <NA>
-#> 88                                                                                                                                                         Republic of India
-#> 89                                                                                                                           Finance Ministry (Ministerio de Hacienda), BICE
-#> 90                                                                                                                                                                      <NA>
-#> 91                                                                                                                                                         Republic of Ghana
-#> 92                                                                                                                                                     The Republic of Kenya
-#> 93                                                                                                                                                       Government of Niger
+#> 88                                                                                                                          Ministry of Planning and Development Cooperation
+#> 89                                                                                                                                                         Republic of India
+#> 90                                                                                           MINISTRY OF FINANCE, Ministry of Territorial Administration and Infrastructures
+#> 91                                                                                                  Department of Economic Affairs, Ministry of Finance, Government of India
+#> 92                                                                                                                                                       Government of Niger
+#> 93                                                                                                                                                     The Republic of Kenya
 #> 94                                                                                                                                                                      <NA>
-#> 95                                                                                                                                                                      <NA>
-#> 96                                                                                                                                                                      <NA>
-#> 97                                                                                                                                    Ministry of Finance and Treasury, MoFT
-#> 98                                                                                                                                                       Ministry of Finance
-#> 99                                                                                                                                                                      <NA>
-#> 100                                                                                                 Department of Economic Affairs, Ministry of Finance, Government of India
+#> 95                                                                                                                                                People's Republic of China
+#> 96                                                                                                                           Finance Ministry (Ministerio de Hacienda), BICE
+#> 97                                                                                                                                                                      <NA>
+#> 98                                                                                                                                                         Republic of Ghana
+#> 99                                                                                                                                                       Ministry of Finance
+#> 100                                                                                                                                                                     <NA>
 #>                                                                                                                                                                                                      implementing_agency
 #> 1                                                                                                              Directorate das Pesca, CONPREC, Institute Nacional da meteorologia, Directorate Geral do Ambiente, MARAPA
-#> 2                                                                                                                                                                                     Department of Climate Change, NDRC
-#> 3                                                                                                                                                                                                                   <NA>
+#> 2                                                                                                                                                                                                                   <NA>
+#> 3                                                                                                                                                                                     Department of Climate Change, NDRC
 #> 4                                                                                                                                                                          Ministry of Natural Resources and Environment
 #> 5                                                                                                                                                                                        Kenya Climate Innovation Centre
 #> 6                                                                                                                                                                            Agence pour le Developpement Agricole (ADA)
 #> 7                                                                                                                                                                                                                CONAFOR
 #> 8                                                                                                                                                                       Ministry of Planning - Project Coordination Unit
-#> 9                                                                                                                                                                         IGAD Climate Prediction and Application Center
-#> 10                                                                                                                                                                       National Climate and Environment Fund (FONERWA)
+#> 9                                                                                                                                                                        National Climate and Environment Fund (FONERWA)
+#> 10                                                                                                                                                                        IGAD Climate Prediction and Application Center
 #> 11                                                                               Zambia Metrological Department, Disaster Management and Mitigation Unit, Ministry of Finance, Ministry of Green Economy and Environment
 #> 12                                                                                                                Department of Science and Technology, Philippines Climate Change Commission, Department of Agriculture
 #> 13                                                                                                                                                                                  Ministry of Planning and Development
 #> 14                                                                                                                                                                             Secretaria General de la Comunidad Andina
-#> 15                                                                                                                                                                                                                  <NA>
+#> 15                                                                                                                                                                                   Gross National Happiness Commission
 #> 16                                                                                                                                                                                                                  <NA>
-#> 17                                                                                                                                                                         Ministry of Natural Resources and Environment
-#> 18                                                                                                                                                  Palli Karma Shayak Foundation, Palli Karma-Sahayak Foundation (PKSF)
-#> 19                                                                                                                                                                                   Gross National Happiness Commission
+#> 17                                                                                                                                                  Palli Karma Shayak Foundation, Palli Karma-Sahayak Foundation (PKSF)
+#> 18                                                                                                                                                                         Ministry of Natural Resources and Environment
+#> 19                                                                                                                                                                                                                  <NA>
 #> 20                                                                                                                                                                   Ministry of Environment and Sustainable Development
 #> 21                                                                                                                                                                                                                  <NA>
 #> 22                                                                                                                                                                                           The Ministry of Environment
-#> 23                                                                                                                                                                Arannayk Foundation (AF), Bangladesh Forest Department
+#> 23                                                                                                                                                                       Honduran Strategic Investment Office (INVEST-H)
 #> 24                                                                                                                                         Ceylon Electricity Board, The Sri Lanka Climate Fund (Private) Limited (SLCF)
-#> 25                                                                                                                                                                                                                  <NA>
+#> 25                                                                                                                                                                Arannayk Foundation (AF), Bangladesh Forest Department
 #> 26                                                                                                                                                                                                                  <NA>
-#> 27                                                                                                                  National Center for Climate Change Strategy and International Cooperation (NCSC), Department of Clim
-#> 28                                                                                                                      Ministry of Internal Affairs, Ministry of Agriculture and Food Industry, Ministry of Environment
+#> 27                                                                                                                                                                                                                  <NA>
+#> 28                                                                                                                  National Center for Climate Change Strategy and International Cooperation (NCSC), Department of Clim
 #> 29                                                                                                                                                                                    Interim Climate Change Secretariat
-#> 30                                                                                                                                                                       Honduran Strategic Investment Office (INVEST-H)
+#> 30                                                                                             Ministry of Agriculture and Water Resources, Rural Restructuring Agency under Ministry of Agriculture and Water Resources
 #> 31                                                                                                                                                               Ministry of Livestock, Agriculture and Fisheries (MGAP)
-#> 32                                                                                                                                                                                                                  <NA>
-#> 33                                                                                                                                                                         Cellule de Prevention et Gestion des Urgences
-#> 34                                                                                                                                                                                                        Ajwad Musthafa
-#> 35                                                                                             Ministry of Agriculture and Water Resources, Rural Restructuring Agency under Ministry of Agriculture and Water Resources
-#> 36                                                                                                                          Fundacao de Desenvolvimento da Pesquisa, Ministerio da Ciencia, Tecnologia e Inovacao (MCTI)
-#> 37                                                                                                                                                                                              Ministry of Public Works
-#> 38                                                                                                                                                                                                                  <NA>
-#> 39                                                                                                                                                                                                   Rainforest Alliance
-#> 40                                                                                                               Instituto Nacional de Ecologia y Cambio Climatico (INECC), Mexican Institute of Water Technology (IMTA)
-#> 41                                                                                                                                                                                         Planning Institute of Jamaica
-#> 42                                                                                                                                                                                      The Land Bank of the Philippines
-#> 43                                                                                                                                                  Ministry of Enviroment and Climate Change - Brazilian Forest Service
-#> 44                                                                                                                                                                                                           Solidaridad
+#> 32                                                                                                                      Ministry of Internal Affairs, Ministry of Agriculture and Food Industry, Ministry of Environment
+#> 33                                                                                                                                                                                         Planning Institute of Jamaica
+#> 34                                                                                                                                                                                                                  <NA>
+#> 35                                                                                                                                                                         Cellule de Prevention et Gestion des Urgences
+#> 36                                                                                                                                                                                                        Ajwad Musthafa
+#> 37                                                                                                                                                                                                                  <NA>
+#> 38                                                                                                                                                                                              Ministry of Public Works
+#> 39                                                                                                               Instituto Nacional de Ecologia y Cambio Climatico (INECC), Mexican Institute of Water Technology (IMTA)
+#> 40                                                                                                                          Fundacao de Desenvolvimento da Pesquisa, Ministerio da Ciencia, Tecnologia e Inovacao (MCTI)
+#> 41                                                                                                                                                  Ministry of Enviroment and Climate Change - Brazilian Forest Service
+#> 42                                                                                                                                                                                                   Rainforest Alliance
+#> 43                                                                                                                                                                                      The Land Bank of the Philippines
+#> 44                                                                                                                                                                                                                  <NA>
 #> 45                                                                                                                                                                                                                  <NA>
 #> 46                                                                                                                                                                         Ministry of Natural Resources and Environment
 #> 47                                                                                                                                                                                                                  <NA>
-#> 48                                                                                                                                                                                                KTDA power company Ltd
-#> 49                                                                                                                                                                                          Bangladesh Forest Department
+#> 48                                                                                                                                                                                          Bangladesh Forest Department
+#> 49                                                                                                                                                                                                           Solidaridad
 #> 50                                                                                                                                                                                                                  <NA>
-#> 51                                                                                                                                                                                                                  <NA>
+#> 51                                                                                                                                                                                                KTDA power company Ltd
 #> 52                                                                                                                                                                                                                  <NA>
 #> 53                                                                                                                                                                                                                  <NA>
-#> 54                                                                                                                                                                                                                  <NA>
-#> 55                                                                                                                                                                          Ministry of Finance and Economic Cooperation
+#> 54                                                                                                                                                                          Ministry of Finance and Economic Cooperation
+#> 55                                                                                                                                                                                                                  <NA>
 #> 56                                                                                                                                                                                                                  <NA>
-#> 57                                                                                                                                   Small Industries Development Bank of India, EESL Energy Efficiency Services Limited
-#> 58  Fiscal Policy Office, Ministry of Finance, Coordinating Ministry for Economic Affairs, Ministry of Finance, Ministry of Energy and Mineral Resources, Bioenergy Department, Ministry of Energy and Mineral Resources
-#> 59                                                                                                                                                                                         Empresas Publicas de Medellin
+#> 57                                                                                                                                                                                                                  <NA>
+#> 58                                                                                                                                   Small Industries Development Bank of India, EESL Energy Efficiency Services Limited
+#> 59  Fiscal Policy Office, Ministry of Finance, Coordinating Ministry for Economic Affairs, Ministry of Finance, Ministry of Energy and Mineral Resources, Bioenergy Department, Ministry of Energy and Mineral Resources
 #> 60                                                                                                                                                                                                                  <NA>
 #> 61                                                                                                                                                                                                  Ministry of Industry
-#> 62                                                                                                                                                                                                                  <NA>
-#> 63                                                                                                                                                                                                                  <NA>
-#> 64                                                                                                                                                                              Ministry of Energy and Water Development
-#> 65                                                                                                                                                                                  Ministry of Forestry and Environment
-#> 66                                                                                                                                                       Committee for Environmental Protection, Ministry of Agriculture
+#> 62                                                                                                                                                                                         Empresas Publicas de Medellin
+#> 63                                                                                                                                                                                                                 SENER
+#> 64                                                                                                                                                                                                                  <NA>
+#> 65      Saint Lucia Project Coordination Unit, Ministry of Infrastructure, Energy Ports and Labour, Ministry of Finance, Planning, Sustainable Development and Information Technology, Grenada Project Coordination Unit
+#> 66                                                                                                                                                                  Department of Agriculture, Government of Maharashtra
 #> 67                                                                                                                                                                                                                  <NA>
-#> 68                                                                                                                                                        Secretariat of Environment and Sustainable Development (SAyDS)
-#> 69                                                                                                                                                                                                                  <NA>
-#> 70                                                                                                              Department of Hydrology and Meteorology (DHM), Ministry of Agriculture and Livestock Development (MoALD)
+#> 68                                                                                                                                                                                  Ministry of Forestry and Environment
+#> 69                                                                                            Department of Energy, Ministry is Ministry of Climate Change Adaptation, Meteorology & Geohazards, Environment, Energy and
+#> 70                                                                                                                                                                                                                  <NA>
 #> 71                                                                                                                                                                                                                  <NA>
-#> 72                                                                                                                                                                                                                  <NA>
-#> 73                                                                                                                                                                  Department of Agriculture, Government of Maharashtra
-#> 74                                                                                                                                                                                              World Wildlife Fund, INC
-#> 75      Saint Lucia Project Coordination Unit, Ministry of Infrastructure, Energy Ports and Labour, Ministry of Finance, Planning, Sustainable Development and Information Technology, Grenada Project Coordination Unit
-#> 76                                                                                                                                                                                                                 SENER
-#> 77                                                                                                                                                                                                                  <NA>
-#> 78                                                                                                                                                                             Ministry of Science and Technology (MOST)
-#> 79                                                                                                                                                                                                                  <NA>
-#> 80                                                                                                                           Ministry of Environment and Natural Resources, ANA, Emergency Social Investment Fund (FISE)
-#> 81                                                                                                                                                                                          Government of Andhra Pradesh
-#> 82                                                                                                                                                                        Renewable Resources and Energy Efficiency Fund
-#> 83                                                                                                                                                                             Ministry of Green Economy and Environment
-#> 84                                                                                            Department of Energy, Ministry is Ministry of Climate Change Adaptation, Meteorology & Geohazards, Environment, Energy and
-#> 85                                                                                                                                                                                         Direction G�n�rale des For�ts
-#> 86                                                                                                                                                                                                                  <NA>
+#> 72                                                                                                                                                       Committee for Environmental Protection, Ministry of Agriculture
+#> 73                                                                                                              Department of Hydrology and Meteorology (DHM), Ministry of Agriculture and Livestock Development (MoALD)
+#> 74                                                                                                                                                                              Ministry of Energy and Water Development
+#> 75                                                                                                                                                                                                                  <NA>
+#> 76                                                                                                                                                                                              World Wildlife Fund, INC
+#> 77                                                                                                                                                        Secretariat of Environment and Sustainable Development (SAyDS)
+#> 78                                                                                                                                                                                                                  <NA>
+#> 79                                                                                                                                                                                          Government of Andhra Pradesh
+#> 80                                                                                                                                                                                                                  <NA>
+#> 81                                                                                                                                                                             Ministry of Science and Technology (MOST)
+#> 82                                                                                                                                                                               Ministry of Environment and Energy, MEE
+#> 83                                                                                                                                                                                                                  <NA>
+#> 84                                                                                                                           Ministry of Environment and Natural Resources, ANA, Emergency Social Investment Fund (FISE)
+#> 85                                                                                                                                                                                                                  <NA>
+#> 86                                                                                                                                                                                         Direction G�n�rale des For�ts
 #> 87                                                                                                                                                                                                                  <NA>
-#> 88                                                                                            Small Industries Development Bank of India, Bureau of Energy Efficiency, Ministry of Environment Forest and Climate Change
-#> 89                                                                                                                                                                                                                  <NA>
-#> 90                                                                                                                                                                                                                  <NA>
-#> 91                                                                                                                                                                               Ministry of Lands and Natural Resources
-#> 92                                                                                                                                                                      Ministry of Agriculture, Livestock and Fisheries
-#> 93                                                                                                                                                                                               Ministry of Agriculture
+#> 88                                                                                                                                                                               EPA (Environmental Protection Authority
+#> 89                                                                                            Small Industries Development Bank of India, Bureau of Energy Efficiency, Ministry of Environment Forest and Climate Change
+#> 90                                                                                                                                                                        Renewable Resources and Energy Efficiency Fund
+#> 91                                                                                                                   The Department of Water Resources, Ganga Rejuvenation and River Development, Ministry of Jal Shakti
+#> 92                                                                                                                                                                                               Ministry of Agriculture
+#> 93                                                                                                                                                                      Ministry of Agriculture, Livestock and Fisheries
 #> 94                                                                                                                                                                                                                  <NA>
-#> 95                                                                                                                                                                                                                  <NA>
+#> 95                                                                                                                                                                             Anlu Project Management Office, Wuhan PMO
 #> 96                                                                                                                                                                                                                  <NA>
-#> 97                                                                                                                                                                               Ministry of Environment and Energy, MEE
-#> 98                                                                                                                                                                                    Interim Climate Change Secretariat
-#> 99                                                                                                                                                                                                                  <NA>
-#> 100                                                                                                                  The Department of Water Resources, Ganga Rejuvenation and River Development, Ministry of Jal Shakti
+#> 97                                                                                                                                                                                                                  <NA>
+#> 98                                                                                                                                                                               Ministry of Lands and Natural Resources
+#> 99                                                                                                                                                                                    Interim Climate Change Secretariat
+#> 100                                                                                                                                                                                                                 <NA>
 #>                                                                              url
 #> 1   https://projects.worldbank.org/en/projects-operations/project-detail/P111669
-#> 2   https://projects.worldbank.org/en/projects-operations/project-detail/P120932
-#> 3   https://projects.worldbank.org/en/projects-operations/project-detail/P122687
+#> 2   https://projects.worldbank.org/en/projects-operations/project-detail/P122687
+#> 3   https://projects.worldbank.org/en/projects-operations/project-detail/P120932
 #> 4   https://projects.worldbank.org/en/projects-operations/project-detail/P127201
 #> 5   https://projects.worldbank.org/en/projects-operations/project-detail/P154586
 #> 6   https://projects.worldbank.org/en/projects-operations/project-detail/P117081
 #> 7   https://projects.worldbank.org/en/projects-operations/project-detail/P123760
 #> 8   https://projects.worldbank.org/en/projects-operations/project-detail/P125669
-#> 9   https://projects.worldbank.org/en/projects-operations/project-detail/P154403
-#> 10  https://projects.worldbank.org/en/projects-operations/project-detail/P160268
+#> 9   https://projects.worldbank.org/en/projects-operations/project-detail/P160268
+#> 10  https://projects.worldbank.org/en/projects-operations/project-detail/P154403
 #> 11  https://projects.worldbank.org/en/projects-operations/project-detail/P127254
 #> 12  https://projects.worldbank.org/en/projects-operations/project-detail/P101076
 #> 13  https://projects.worldbank.org/en/projects-operations/project-detail/P128434
 #> 14  https://projects.worldbank.org/en/projects-operations/project-detail/P145345
-#> 15  https://projects.worldbank.org/en/projects-operations/project-detail/P090731
-#> 16  https://projects.worldbank.org/en/projects-operations/project-detail/P110849
-#> 17  https://projects.worldbank.org/en/projects-operations/project-detail/P122667
-#> 18  https://projects.worldbank.org/en/projects-operations/project-detail/P125447
-#> 19  https://projects.worldbank.org/en/projects-operations/project-detail/P159600
+#> 15  https://projects.worldbank.org/en/projects-operations/project-detail/P159600
+#> 16  https://projects.worldbank.org/en/projects-operations/project-detail/P090731
+#> 17  https://projects.worldbank.org/en/projects-operations/project-detail/P125447
+#> 18  https://projects.worldbank.org/en/projects-operations/project-detail/P122667
+#> 19  https://projects.worldbank.org/en/projects-operations/project-detail/P110849
 #> 20  https://projects.worldbank.org/en/projects-operations/project-detail/P125804
 #> 21  https://projects.worldbank.org/en/projects-operations/project-detail/P144712
 #> 22  https://projects.worldbank.org/en/projects-operations/project-detail/P160552
-#> 23  https://projects.worldbank.org/en/projects-operations/project-detail/P127015
+#> 23  https://projects.worldbank.org/en/projects-operations/project-detail/P157795
 #> 24  https://projects.worldbank.org/en/projects-operations/project-detail/P151800
-#> 25  https://projects.worldbank.org/en/projects-operations/project-detail/P117956
+#> 25  https://projects.worldbank.org/en/projects-operations/project-detail/P127015
 #> 26  https://projects.worldbank.org/en/projects-operations/project-detail/P059161
-#> 27  https://projects.worldbank.org/en/projects-operations/project-detail/P145586
-#> 28  https://projects.worldbank.org/en/projects-operations/project-detail/P155968
+#> 27  https://projects.worldbank.org/en/projects-operations/project-detail/P117956
+#> 28  https://projects.worldbank.org/en/projects-operations/project-detail/P145586
 #> 29  https://projects.worldbank.org/en/projects-operations/project-detail/P160267
-#> 30  https://projects.worldbank.org/en/projects-operations/project-detail/P157795
+#> 30  https://projects.worldbank.org/en/projects-operations/project-detail/P127486
 #> 31  https://projects.worldbank.org/en/projects-operations/project-detail/P124181
-#> 32  https://projects.worldbank.org/en/projects-operations/project-detail/P072554
-#> 33  https://projects.worldbank.org/en/projects-operations/project-detail/P158816
-#> 34  https://projects.worldbank.org/en/projects-operations/project-detail/P145482
-#> 35  https://projects.worldbank.org/en/projects-operations/project-detail/P127486
-#> 36  https://projects.worldbank.org/en/projects-operations/project-detail/P143185
-#> 37  https://projects.worldbank.org/en/projects-operations/project-detail/P125032
-#> 38  https://projects.worldbank.org/en/projects-operations/project-detail/P120134
-#> 39  https://projects.worldbank.org/en/projects-operations/project-detail/P151604
-#> 40  https://projects.worldbank.org/en/projects-operations/project-detail/P100438
-#> 41  https://projects.worldbank.org/en/projects-operations/project-detail/P129633
-#> 42  https://projects.worldbank.org/en/projects-operations/project-detail/P152805
-#> 43  https://projects.worldbank.org/en/projects-operations/project-detail/P143334
-#> 44  https://projects.worldbank.org/en/projects-operations/project-detail/P145316
+#> 32  https://projects.worldbank.org/en/projects-operations/project-detail/P155968
+#> 33  https://projects.worldbank.org/en/projects-operations/project-detail/P129633
+#> 34  https://projects.worldbank.org/en/projects-operations/project-detail/P072554
+#> 35  https://projects.worldbank.org/en/projects-operations/project-detail/P158816
+#> 36  https://projects.worldbank.org/en/projects-operations/project-detail/P145482
+#> 37  https://projects.worldbank.org/en/projects-operations/project-detail/P120134
+#> 38  https://projects.worldbank.org/en/projects-operations/project-detail/P125032
+#> 39  https://projects.worldbank.org/en/projects-operations/project-detail/P100438
+#> 40  https://projects.worldbank.org/en/projects-operations/project-detail/P143185
+#> 41  https://projects.worldbank.org/en/projects-operations/project-detail/P143334
+#> 42  https://projects.worldbank.org/en/projects-operations/project-detail/P151604
+#> 43  https://projects.worldbank.org/en/projects-operations/project-detail/P152805
+#> 44  https://projects.worldbank.org/en/projects-operations/project-detail/P128268
 #> 45  https://projects.worldbank.org/en/projects-operations/project-detail/P115001
 #> 46  https://projects.worldbank.org/en/projects-operations/project-detail/P152797
-#> 47  https://projects.worldbank.org/en/projects-operations/project-detail/P125542
-#> 48  https://projects.worldbank.org/en/projects-operations/project-detail/P160157
-#> 49  https://projects.worldbank.org/en/projects-operations/project-detail/P160234
-#> 50  https://projects.worldbank.org/en/projects-operations/project-detail/P121986
-#> 51  https://projects.worldbank.org/en/projects-operations/project-detail/P120313
-#> 52  https://projects.worldbank.org/en/projects-operations/project-detail/P112329
-#> 53  https://projects.worldbank.org/en/projects-operations/project-detail/P078143
-#> 54  https://projects.worldbank.org/en/projects-operations/project-detail/P073389
-#> 55  https://projects.worldbank.org/en/projects-operations/project-detail/P158987
-#> 56  https://projects.worldbank.org/en/projects-operations/project-detail/P128268
-#> 57  https://projects.worldbank.org/en/projects-operations/project-detail/P132620
-#> 58  https://projects.worldbank.org/en/projects-operations/project-detail/P154291
-#> 59  https://projects.worldbank.org/en/projects-operations/project-detail/P074426
-#> 60  https://projects.worldbank.org/en/projects-operations/project-detail/P126214
+#> 47  https://projects.worldbank.org/en/projects-operations/project-detail/P121986
+#> 48  https://projects.worldbank.org/en/projects-operations/project-detail/P160234
+#> 49  https://projects.worldbank.org/en/projects-operations/project-detail/P145316
+#> 50  https://projects.worldbank.org/en/projects-operations/project-detail/P078143
+#> 51  https://projects.worldbank.org/en/projects-operations/project-detail/P160157
+#> 52  https://projects.worldbank.org/en/projects-operations/project-detail/P120313
+#> 53  https://projects.worldbank.org/en/projects-operations/project-detail/P125542
+#> 54  https://projects.worldbank.org/en/projects-operations/project-detail/P158987
+#> 55  https://projects.worldbank.org/en/projects-operations/project-detail/P112329
+#> 56  https://projects.worldbank.org/en/projects-operations/project-detail/P073389
+#> 57  https://projects.worldbank.org/en/projects-operations/project-detail/P126214
+#> 58  https://projects.worldbank.org/en/projects-operations/project-detail/P132620
+#> 59  https://projects.worldbank.org/en/projects-operations/project-detail/P154291
+#> 60  https://projects.worldbank.org/en/projects-operations/project-detail/P099618
 #> 61  https://projects.worldbank.org/en/projects-operations/project-detail/P148620
-#> 62  https://projects.worldbank.org/en/projects-operations/project-detail/P099618
-#> 63  https://projects.worldbank.org/en/projects-operations/project-detail/P145765
-#> 64  https://projects.worldbank.org/en/projects-operations/project-detail/P160383
-#> 65  https://projects.worldbank.org/en/projects-operations/project-detail/P160523
-#> 66  https://projects.worldbank.org/en/projects-operations/project-detail/P151363
-#> 67  https://projects.worldbank.org/en/projects-operations/project-detail/P159217
-#> 68  https://projects.worldbank.org/en/projects-operations/project-detail/P116974
-#> 69  https://projects.worldbank.org/en/projects-operations/project-detail/P105229
-#> 70  https://projects.worldbank.org/en/projects-operations/project-detail/P127508
-#> 71  https://projects.worldbank.org/en/projects-operations/project-detail/P148125
-#> 72  https://projects.worldbank.org/en/projects-operations/project-detail/P128445
-#> 73  https://projects.worldbank.org/en/projects-operations/project-detail/P160408
-#> 74  https://projects.worldbank.org/en/projects-operations/project-detail/P148499
-#> 75  https://projects.worldbank.org/en/projects-operations/project-detail/P153404
-#> 76  https://projects.worldbank.org/en/projects-operations/project-detail/P145618
-#> 77  https://projects.worldbank.org/en/projects-operations/project-detail/P121006
-#> 78  https://projects.worldbank.org/en/projects-operations/project-detail/P155260
-#> 79  https://projects.worldbank.org/en/projects-operations/project-detail/P109687
-#> 80  https://projects.worldbank.org/en/projects-operations/project-detail/P127088
-#> 81  https://projects.worldbank.org/en/projects-operations/project-detail/P160463
-#> 82  https://projects.worldbank.org/en/projects-operations/project-detail/P152039
-#> 83  https://projects.worldbank.org/en/projects-operations/project-detail/P155827
-#> 84  https://projects.worldbank.org/en/projects-operations/project-detail/P160658
-#> 85  https://projects.worldbank.org/en/projects-operations/project-detail/P157919
-#> 86  https://projects.worldbank.org/en/projects-operations/project-detail/P129182
-#> 87  https://projects.worldbank.org/en/projects-operations/project-detail/P145434
-#> 88  https://projects.worldbank.org/en/projects-operations/project-detail/P100530
-#> 89  https://projects.worldbank.org/en/projects-operations/project-detail/P159901
-#> 90  https://projects.worldbank.org/en/projects-operations/project-detail/P105370
-#> 91  https://projects.worldbank.org/en/projects-operations/project-detail/P148183
-#> 92  https://projects.worldbank.org/en/projects-operations/project-detail/P091979
-#> 93  https://projects.worldbank.org/en/projects-operations/project-detail/P153420
-#> 94  https://projects.worldbank.org/en/projects-operations/project-detail/P145298
-#> 95  https://projects.worldbank.org/en/projects-operations/project-detail/P008501
-#> 96  https://projects.worldbank.org/en/projects-operations/project-detail/P106133
-#> 97  https://projects.worldbank.org/en/projects-operations/project-detail/P155126
-#> 98  https://projects.worldbank.org/en/projects-operations/project-detail/P160493
-#> 99  https://projects.worldbank.org/en/projects-operations/project-detail/P090058
-#> 100 https://projects.worldbank.org/en/projects-operations/project-detail/P158119
+#> 62  https://projects.worldbank.org/en/projects-operations/project-detail/P074426
+#> 63  https://projects.worldbank.org/en/projects-operations/project-detail/P145618
+#> 64  https://projects.worldbank.org/en/projects-operations/project-detail/P148125
+#> 65  https://projects.worldbank.org/en/projects-operations/project-detail/P153404
+#> 66  https://projects.worldbank.org/en/projects-operations/project-detail/P160408
+#> 67  https://projects.worldbank.org/en/projects-operations/project-detail/P145765
+#> 68  https://projects.worldbank.org/en/projects-operations/project-detail/P160523
+#> 69  https://projects.worldbank.org/en/projects-operations/project-detail/P160658
+#> 70  https://projects.worldbank.org/en/projects-operations/project-detail/P128445
+#> 71  https://projects.worldbank.org/en/projects-operations/project-detail/P105229
+#> 72  https://projects.worldbank.org/en/projects-operations/project-detail/P151363
+#> 73  https://projects.worldbank.org/en/projects-operations/project-detail/P127508
+#> 74  https://projects.worldbank.org/en/projects-operations/project-detail/P160383
+#> 75  https://projects.worldbank.org/en/projects-operations/project-detail/P159217
+#> 76  https://projects.worldbank.org/en/projects-operations/project-detail/P148499
+#> 77  https://projects.worldbank.org/en/projects-operations/project-detail/P116974
+#> 78  https://projects.worldbank.org/en/projects-operations/project-detail/P145434
+#> 79  https://projects.worldbank.org/en/projects-operations/project-detail/P160463
+#> 80  https://projects.worldbank.org/en/projects-operations/project-detail/P105370
+#> 81  https://projects.worldbank.org/en/projects-operations/project-detail/P155260
+#> 82  https://projects.worldbank.org/en/projects-operations/project-detail/P155126
+#> 83  https://projects.worldbank.org/en/projects-operations/project-detail/P109687
+#> 84  https://projects.worldbank.org/en/projects-operations/project-detail/P127088
+#> 85  https://projects.worldbank.org/en/projects-operations/project-detail/P121006
+#> 86  https://projects.worldbank.org/en/projects-operations/project-detail/P157919
+#> 87  https://projects.worldbank.org/en/projects-operations/project-detail/P129182
+#> 88  https://projects.worldbank.org/en/projects-operations/project-detail/P132116
+#> 89  https://projects.worldbank.org/en/projects-operations/project-detail/P100530
+#> 90  https://projects.worldbank.org/en/projects-operations/project-detail/P152039
+#> 91  https://projects.worldbank.org/en/projects-operations/project-detail/P158119
+#> 92  https://projects.worldbank.org/en/projects-operations/project-detail/P153420
+#> 93  https://projects.worldbank.org/en/projects-operations/project-detail/P091979
+#> 94  https://projects.worldbank.org/en/projects-operations/project-detail/P008501
+#> 95  https://projects.worldbank.org/en/projects-operations/project-detail/P148294
+#> 96  https://projects.worldbank.org/en/projects-operations/project-detail/P159901
+#> 97  https://projects.worldbank.org/en/projects-operations/project-detail/P145298
+#> 98  https://projects.worldbank.org/en/projects-operations/project-detail/P148183
+#> 99  https://projects.worldbank.org/en/projects-operations/project-detail/P160493
+#> 100 https://projects.worldbank.org/en/projects-operations/project-detail/P087979
 # }
 ```

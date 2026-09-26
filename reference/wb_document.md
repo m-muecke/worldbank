@@ -76,9 +76,10 @@ wb_document(
 
 A [`data.frame()`](https://rdrr.io/r/base/data.frame.html) with World
 Bank document data. Since a document can have several types, countries,
-regions, and projects, `type`, `country_code`, `country`, `region`, and
-`project_id` hold all of them separated by `;`, which never occurs
-within a value. Use `strsplit(x, ";")` to split them. The columns are:
+regions, and projects, `type`, `major_type`, `country_code`, `country`,
+`region`, and `project_id` hold all of them separated by `;`, which
+never occurs within a value. Use `strsplit(x, ";")` to split them. The
+columns are:
 
 - `id`: The document ID.
 
@@ -86,7 +87,7 @@ within a value. Use `strsplit(x, ";")` to split them. The columns are:
 
 - `type`: The document types.
 
-- `major_type`: The major document type.
+- `major_type`: The major document types.
 
 - `country_code`: The World Bank country codes.
 
@@ -122,6 +123,8 @@ wb_document(
   start_date = "2024-01-01",
   end_date = "2024-12-31"
 )
+#> ⠙ iterating 1 done (0.14/s) | 7.3s
+#> iterating ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■  100% | ETA:  0s
 #>         id
 #> 1 34409107
 #> 2 34380251
@@ -567,7 +570,7 @@ docs[grepl(";", docs$country_code), c("title", "country_code")]
 #> 13 Bangladesh - Climate Smart Investment Plan : Investment opportunities in the agriculture sector’s transition to a climate resilient growth path
 #> 38                                                                                                        Climate Resilient Road Assets in Albania
 #> 42                                                 Disclosable Restructuring Paper - Disaster and Climate Resilience Improvement Project - P154036
-#> 50                                    The Next Generation Africa Climate Business Plan : Ramping Up Development-Centered Climate Action - Overview
+#> 48                                    The Next Generation Africa Climate Business Plan : Ramping Up Development-Centered Climate Action - Overview
 #> 68                                                  Come hell or high water - integrating climate change vulnerability and adaption into Bank work
 #> 81                                            Disclosable Restructuring Paper - Bangladesh Weather and Climate Services Regional Project - P150220
 #>         country_code
@@ -575,7 +578,7 @@ docs[grepl(";", docs$country_code), c("title", "country_code")]
 #> 13             BD;1W
 #> 38             AL;7B
 #> 42             PK;1W
-#> 50             3A;1W
+#> 48             3A;1W
 #> 68 IN;EC;PG;WS;BD;GY
 #> 81             8S;BD
 # }
