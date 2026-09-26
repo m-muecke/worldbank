@@ -116,8 +116,8 @@ wb_project(country = "BR", status = "active", search = "education")
 #> 6  P177070
 #> 7  P179046
 #> 8  P178663
-#> 9  P073882
-#> 10 P179365
+#> 9  P179365
+#> 10 P073882
 #> 11 P153012
 #> 12 P172497
 #>                                                              project_name
@@ -129,8 +129,8 @@ wb_project(country = "BR", status = "active", search = "education")
 #> 6                  Progestão Alagoas: Public Sector Management Efficiency
 #> 7                     Progestão Acre: Public Sector Management Efficiency
 #> 8                    Progestão Piauí: Public Sector Management Efficiency
-#> 9                          RF 2nd Amazon Fire Prevention and Mobilization
-#> 10 Brazil: Support to New Bolsa Familia Conditional Cash Transfer Program
+#> 9  Brazil: Support to New Bolsa Familia Conditional Cash Transfer Program
+#> 10                         RF 2nd Amazon Fire Prevention and Mobilization
 #> 11                        Fortaleza Sustainable Urban Development Project
 #> 12                 Sustainable Multiple Use Landscape Consortia in Brazil
 #>    status approval_date closing_date country_code country
@@ -142,8 +142,8 @@ wb_project(country = "BR", status = "active", search = "education")
 #> 6  Active    2022-07-21   2028-03-31           BR  Brazil
 #> 7  Active    2023-07-24   2028-12-29           BR  Brazil
 #> 8  Active    2023-10-03   2029-06-29           BR  Brazil
-#> 9  Active          <NA>   2004-09-30           BR  Brazil
-#> 10 Active    2023-12-06   2026-04-30           BR  Brazil
+#> 9  Active    2023-12-06   2026-04-30           BR  Brazil
+#> 10 Active          <NA>   2004-09-30           BR  Brazil
 #> 11 Active    2017-04-28   2025-03-31           BR  Brazil
 #> 12 Active          <NA>   2027-11-30           BR  Brazil
 #>                         region total_commitment ibrd_commitment ida_commitment
@@ -155,8 +155,8 @@ wb_project(country = "BR", status = "active", search = "education")
 #> 6  Latin America and Caribbean         40.00000            40.0              0
 #> 7  Latin America and Caribbean         40.00000            40.0              0
 #> 8  Latin America and Caribbean         50.00000            50.0              0
-#> 9  Latin America and Caribbean          1.10000             0.0              0
-#> 10 Latin America and Caribbean        300.00000           300.0              0
+#> 9  Latin America and Caribbean        300.00000           300.0              0
+#> 10 Latin America and Caribbean          1.10000             0.0              0
 #> 11 Latin America and Caribbean         73.30000            73.3              0
 #> 12 Latin America and Caribbean         24.57798             0.0              0
 #>               lending_instrument
@@ -168,8 +168,8 @@ wb_project(country = "BR", status = "active", search = "education")
 #> 6   Investment Project Financing
 #> 7   Investment Project Financing
 #> 8   Investment Project Financing
-#> 9                           <NA>
-#> 10  Investment Project Financing
+#> 9   Investment Project Financing
+#> 10                          <NA>
 #> 11  Investment Project Financing
 #> 12  Investment Project Financing
 #>                                                                     borrower
@@ -181,8 +181,8 @@ wb_project(country = "BR", status = "active", search = "education")
 #> 6  State of Alagoas, with the guarantee of the Federative Republic of Brazil
 #> 7                                                              State of Acre
 #> 8                                                             State of Piaui
-#> 9                                                                       <NA>
-#> 10                                             Federative Republic of Brazil
+#> 9                                              Federative Republic of Brazil
+#> 10                                                                      <NA>
 #> 11                                                 Municipality of Fortaleza
 #> 12                                                                      IICA
 #>                                                                                          implementing_agency
@@ -194,8 +194,8 @@ wb_project(country = "BR", status = "active", search = "education")
 #> 6                                                                  Secretariat of Finance - State of Alagoas
 #> 7                                                                              State Secretariat of Planning
 #> 8                                                                            Secretariat of Finance of Piaui
-#> 9                                                                                                       <NA>
-#> 10                                                                                   Ministry of Citizenship
+#> 9                                                                                    Ministry of Citizenship
+#> 10                                                                                                      <NA>
 #> 11 Secretaria Municipal de Urbanismo e Meio Ambiente (SEUMA), Secretaria Municipal de Infraestrutura (SEINF)
 #> 12             Minist�rio do Meio Ambiente (MMA), Minist�rio da Agricultura, Pecu�ria e Abastecimento (MAPA)
 #>                                                                             url
@@ -207,8 +207,8 @@ wb_project(country = "BR", status = "active", search = "education")
 #> 6  https://projects.worldbank.org/en/projects-operations/project-detail/P177070
 #> 7  https://projects.worldbank.org/en/projects-operations/project-detail/P179046
 #> 8  https://projects.worldbank.org/en/projects-operations/project-detail/P178663
-#> 9  https://projects.worldbank.org/en/projects-operations/project-detail/P073882
-#> 10 https://projects.worldbank.org/en/projects-operations/project-detail/P179365
+#> 9  https://projects.worldbank.org/en/projects-operations/project-detail/P179365
+#> 10 https://projects.worldbank.org/en/projects-operations/project-detail/P073882
 #> 11 https://projects.worldbank.org/en/projects-operations/project-detail/P153012
 #> 12 https://projects.worldbank.org/en/projects-operations/project-detail/P172497
 
