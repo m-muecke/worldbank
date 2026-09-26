@@ -352,11 +352,10 @@ wb_indicator <- function(indicator = NULL, lang = "en", source = NULL) {
     topics = I(map(data, function(x) {
       # the API returns `[{}]` for some indicators without topics
       topics <- Filter(\(topic) !is.null(topic$id), x$topics)
-      data.frame(
+      list2DF(list(
         topic_id = as.integer(map_chr(topics, "id")),
-        topic_value = na_if_empty(trimws(map_chr(topics, "value"))),
-        check.names = FALSE
-      )
+        topic_value = na_if_empty(trimws(map_chr(topics, "value")))
+      ))
     })),
     check.names = FALSE
   )
