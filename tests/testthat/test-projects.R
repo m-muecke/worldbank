@@ -23,16 +23,36 @@ test_that("project_fields covers every field parse_projects reads", {
   expect_identical(parse_projects(restricted), parse_projects(data))
 })
 
-
 test_that("projects stops paging once the total is reached", {
   urls <- character()
   httr2::local_mocked_responses(function(req) {
     urls <<- c(urls, req$url)
-    data <- if (length(urls) <= 2L) list(P1 = list(id = "P1")) else list()
-    httr2::response_json(body = list(total = "2", projects = data))
+    httr2::response_json(body = list(total = "1500", projects = list(P1 = list(id = "P1"))))
   })
-  expect_length(projects(per_page = 1L), 2L)
+  expect_length(projects(), 2L)
   expect_length(urls, 2L)
+})
+
+test_that("wb_project limit caps results across pages", {
+  urls <- character()
+  data <- lapply(seq_len(1000L), \(i) list(id = paste0("P", i)))
+  names(data) <- paste0("P", seq_len(1000L))
+  httr2::local_mocked_responses(function(req) {
+    urls <<- c(urls, req$url)
+    httr2::response_json(body = list(projects = data))
+  })
+
+  actual <- wb_project(search = "climate", limit = 1500L)
+  expect_shape(actual, nrow = 1500L)
+  expect_length(urls, 2L)
+  expect_match(urls, "rows=1000", all = TRUE, fixed = TRUE)
+  expect_match(urls[[2L]], "os=1000", fixed = TRUE)
+
+  urls <- character()
+  actual <- wb_project(id = "P1", limit = 10L)
+  expect_shape(actual, nrow = 10L)
+  expect_length(urls, 1L)
+  expect_match(urls, "rows=10", fixed = TRUE)
 })
 
 test_that("wb_project input validation works", {
@@ -50,6 +70,11 @@ test_that("wb_project input validation works", {
   expect_error(wb_project(start_date = "2024"))
   expect_error(wb_project(start_date = "not-a-date"))
   expect_error(wb_project(end_date = "2024"))
+})
+
+test_that("wb_project rejects invalid limit", {
+  expect_snapshot(wb_project(limit = 0L), error = TRUE)
+  expect_snapshot(wb_project(limit = 1.5), error = TRUE)
 })
 
 test_that("wb_project rejects start_date after end_date", {

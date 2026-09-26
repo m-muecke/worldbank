@@ -1,3 +1,19 @@
+# wb_project rejects invalid limit
+
+    Code
+      wb_project(limit = 0L)
+    Condition
+      Error in `wb_project()`:
+      ! is_count(limit, null_ok = TRUE) is not TRUE
+
+---
+
+    Code
+      wb_project(limit = 1.5)
+    Condition
+      Error in `wb_project()`:
+      ! is_count(limit, null_ok = TRUE) is not TRUE
+
 # wb_project rejects start_date after end_date
 
     Code

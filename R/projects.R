@@ -23,6 +23,9 @@
 #'   Board approval start date in `"YYYY-MM-DD"` format. Default `NULL`.
 #' @param end_date (`NULL` | `character(1)`)\cr
 #'   Board approval end date in `"YYYY-MM-DD"` format. Default `NULL`.
+#' @param limit (`NULL` | `integer(1)`)\cr
+#'   The maximum number of projects to return. Default `NULL`. If `NULL`, all matching projects are
+#'   returned, which can take many requests for broad queries.
 #' @returns A `data.frame()` with World Bank project data. The columns are:
 #' * `id`: The project ID.
 #' * `project_name`: The project name.
@@ -52,6 +55,9 @@
 #'
 #' # look up specific projects
 #' wb_project(id = c("P163868", "P180429"))
+#'
+#' # the first 100 projects mentioning climate
+#' wb_project(search = "climate", limit = 100)
 #' }
 wb_project <- function(
   id = NULL,
@@ -60,7 +66,8 @@ wb_project <- function(
   region = NULL,
   search = NULL,
   start_date = NULL,
-  end_date = NULL
+  end_date = NULL,
+  limit = NULL
 ) {
   stopifnot(
     is_character(id, null_ok = TRUE),
@@ -70,7 +77,8 @@ wb_project <- function(
     is_character(region, null_ok = TRUE),
     is_string(search, null_ok = TRUE),
     is_string(start_date, null_ok = TRUE, pattern = "^\\d{4}-\\d{2}-\\d{2}$"),
-    is_string(end_date, null_ok = TRUE, pattern = "^\\d{4}-\\d{2}-\\d{2}$")
+    is_string(end_date, null_ok = TRUE, pattern = "^\\d{4}-\\d{2}-\\d{2}$"),
+    is_count(limit, null_ok = TRUE)
   )
 
   if (!is.null(start_date) && !is.null(end_date) && start_date > end_date) {
@@ -78,7 +86,7 @@ wb_project <- function(
   }
 
   if (!is.null(id)) {
-    data <- projects(id = collapse_or(id))
+    data <- projects(id = collapse_or(id), limit = limit)
   } else {
     data <- projects(
       countrycode_exact = collapse_or(toupper(country)),
@@ -86,7 +94,8 @@ wb_project <- function(
       regionname = collapse_or(region),
       qterm = search,
       strdate = start_date,
-      enddate = end_date
+      enddate = end_date,
+      limit = limit
     )
   }
   parse_projects(data)
@@ -110,7 +119,10 @@ project_fields <- c(
   "url"
 )
 
-projects <- function(..., per_page = 1000L) {
+projects <- function(..., limit = NULL) {
+  per_page <- min(limit %||% 1000L, 1000L)
+  max_reqs <- if (!is.null(limit)) ceiling(limit / per_page) else Inf
+
   req <- wb_request("https://search.worldbank.org/api/v2/projects") |>
     req_url_query(..., format = "json", rows = per_page, fl = project_fields, .multi = "comma")
 
@@ -123,11 +135,15 @@ projects <- function(..., per_page = 1000L) {
       resp_pages = \(resp) resp_total_pages(resp, per_page),
       resp_complete = \(resp) length(resp_body_json(resp)$projects) == 0L
     ),
-    max_reqs = Inf,
+    max_reqs = max_reqs,
     progress = wb_progress()
   )
 
-  resps_data(resps, \(resp) unname(resp_body_json(resp)$projects))
+  data <- resps_data(resps, \(resp) unname(resp_body_json(resp)$projects))
+  if (!is.null(limit)) {
+    data <- utils::head(data, limit)
+  }
+  data
 }
 
 parse_projects <- function(data) {
