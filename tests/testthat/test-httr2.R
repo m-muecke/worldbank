@@ -23,3 +23,9 @@ test_that("resp_total_pages derives the page count from the total", {
   expect_identical(resp_total_pages(resp(0L), 1000L), 1)
   expect_null(resp_total_pages(httr2::response_json(body = list()), 1000L))
 })
+
+test_that("wb_progress respects the worldbank.progress option", {
+  expect_true(wb_progress())
+  withr::local_options(worldbank.progress = FALSE)
+  expect_false(wb_progress())
+})

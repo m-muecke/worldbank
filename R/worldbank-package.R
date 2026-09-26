@@ -1,3 +1,10 @@
+#' @section Options:
+#' * `worldbank.cache`: Cache API responses on disk. Default `FALSE`. See [wb_cache_dir()].
+#' * `worldbank.cache_max_age`: Maximum age of cached responses in seconds. Default `86400` (1
+#'   day).
+#' * `worldbank.progress`: Show a progress bar for paginated requests that take longer than a few
+#'   seconds. Default `TRUE`. Set to `FALSE` to hide it.
+#'
 #' @keywords internal
 #' @importFrom httr2 iterate_with_offset
 #' @importFrom httr2 req_cache

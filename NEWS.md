@@ -8,6 +8,7 @@
 
 ## New features
 
+* Progress bars for slow paginated requests can now be turned off with `options(worldbank.progress = FALSE)`.
 * `wb_country()` gains `region`, `income_level`, and `lending_type` arguments to filter countries server-side instead of downloading the full list.
 * `wb_data()` gains a `source` argument to query a database other than the World Development Indicators, as listed by `wb_source()`.
 * New `wb_document()` searches the World Bank Documents & Reports archive by search term, country, document type, project, and date. Use `limit` to cap the number of documents returned, since broad queries can match hundreds of thousands of documents.

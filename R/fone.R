@@ -64,7 +64,8 @@ fone <- function(resource, ..., limit = NULL) {
       offset = page_size,
       resp_complete = \(resp) !resp_has_body(resp)
     ),
-    max_reqs = max_reqs
+    max_reqs = max_reqs,
+    progress = wb_progress()
   )
 
   data <- resps_data(resps, function(resp) {

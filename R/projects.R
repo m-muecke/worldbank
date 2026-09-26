@@ -123,7 +123,8 @@ projects <- function(..., per_page = 1000L) {
       resp_pages = \(resp) resp_total_pages(resp, per_page),
       resp_complete = \(resp) length(resp_body_json(resp)$projects) == 0L
     ),
-    max_reqs = Inf
+    max_reqs = Inf,
+    progress = wb_progress()
   )
 
   resps_data(resps, \(resp) unname(resp_body_json(resp)$projects))

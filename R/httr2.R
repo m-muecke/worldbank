@@ -2,6 +2,10 @@ wb_user_agent <- function() {
   sprintf("worldbank/%s", utils::packageVersion("worldbank"))
 }
 
+wb_progress <- function() {
+  getOption("worldbank.progress", TRUE)
+}
+
 req_wb_retry <- function(req) {
   req_retry(req, max_tries = 3L, is_transient = is_wb_transient)
 }

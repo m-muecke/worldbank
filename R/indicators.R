@@ -694,7 +694,8 @@ worldbank <- function(resource, ..., lang = NULL, per_page = 32500L) {
       "page",
       resp_pages = \(resp) max(as.integer(resp_body_json(resp)[[1L]]$pages), 1L)
     ),
-    max_reqs = Inf
+    max_reqs = Inf,
+    progress = wb_progress()
   )
   resps_data(resps, \(resp) resp_body_json(resp)[[2L]])
 }
