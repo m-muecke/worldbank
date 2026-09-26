@@ -543,6 +543,18 @@ test_that("wb_data mrnev validation works", {
   expect_snapshot(wb_data(mrnev = 1, mrv = 1), error = TRUE)
 })
 
+test_that("lang is validated", {
+  expect_snapshot(wb_lending_type(lang = "english"), error = TRUE)
+  expect_snapshot(wb_income_level(lang = "english"), error = TRUE)
+  expect_snapshot(wb_source(lang = "english"), error = TRUE)
+  expect_snapshot(wb_topic(lang = "english"), error = TRUE)
+  expect_snapshot(wb_region(lang = NULL), error = TRUE)
+  expect_snapshot(wb_country(lang = NULL), error = TRUE)
+  expect_snapshot(wb_indicator(lang = c("en", "es")), error = TRUE)
+  expect_snapshot(wb_search("gdp", lang = "english"), error = TRUE)
+  expect_snapshot(wb_data(lang = NA_character_), error = TRUE)
+})
+
 test_that("worldbank fetches every page", {
   httr2::local_mocked_responses(function(req) {
     page <- httr2::url_parse(req$url)$query$page %||% "1"

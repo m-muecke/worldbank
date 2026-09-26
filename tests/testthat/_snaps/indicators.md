@@ -94,6 +94,78 @@
       Error:
       ! `mrv` and `mrnev` cannot be used together.
 
+# lang is validated
+
+    Code
+      wb_lending_type(lang = "english")
+    Condition
+      Error in `wb_lending_type()`:
+      ! is_string(lang, n_chars = 2L) is not TRUE
+
+---
+
+    Code
+      wb_income_level(lang = "english")
+    Condition
+      Error in `wb_income_level()`:
+      ! is_string(lang, n_chars = 2L) is not TRUE
+
+---
+
+    Code
+      wb_source(lang = "english")
+    Condition
+      Error in `wb_source()`:
+      ! is_string(lang, n_chars = 2L) is not TRUE
+
+---
+
+    Code
+      wb_topic(lang = "english")
+    Condition
+      Error in `wb_topic()`:
+      ! is_string(lang, n_chars = 2L) is not TRUE
+
+---
+
+    Code
+      wb_region(lang = NULL)
+    Condition
+      Error in `wb_region()`:
+      ! is_string(lang, n_chars = 2L) is not TRUE
+
+---
+
+    Code
+      wb_country(lang = NULL)
+    Condition
+      Error in `wb_country()`:
+      ! is_string(lang, n_chars = 2L) is not TRUE
+
+---
+
+    Code
+      wb_indicator(lang = c("en", "es"))
+    Condition
+      Error in `wb_indicator()`:
+      ! is_string(lang, n_chars = 2L) is not TRUE
+
+---
+
+    Code
+      wb_search("gdp", lang = "english")
+    Condition
+      Error in `wb_search()`:
+      ! is_string(lang, n_chars = 2L) is not TRUE
+
+---
+
+    Code
+      wb_data(lang = NA_character_)
+    Condition
+      Error in `wb_data()`:
+      ! is_string(lang, n_chars = 2L) is not TRUE
+
 # error parsing works
 
     Code

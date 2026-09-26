@@ -44,7 +44,10 @@ wb_language <- function() {
 #' wb_lending_type()
 #' }
 wb_lending_type <- function(type = NULL, lang = "en") {
-  stopifnot(is_character(type, null_ok = TRUE, n_chars = 3L))
+  stopifnot(
+    is_character(type, null_ok = TRUE, n_chars = 3L),
+    is_string(lang, n_chars = 2L)
+  )
   type <- format_param(type)
 
   resource <- sprintf("lendingType/%s", type)
@@ -78,7 +81,10 @@ wb_lending_type <- function(type = NULL, lang = "en") {
 #' wb_income_level()
 #' }
 wb_income_level <- function(income = NULL, lang = "en") {
-  stopifnot(is_character(income, null_ok = TRUE, n_chars = 3L))
+  stopifnot(
+    is_character(income, null_ok = TRUE, n_chars = 3L),
+    is_string(lang, n_chars = 2L)
+  )
   income <- format_param(income)
 
   resource <- sprintf("incomeLevel/%s", income)
@@ -119,7 +125,10 @@ wb_income_level <- function(income = NULL, lang = "en") {
 #' head(src)
 #' }
 wb_source <- function(source = NULL, lang = "en") {
-  stopifnot(is_character(source, null_ok = TRUE))
+  stopifnot(
+    is_character(source, null_ok = TRUE),
+    is_string(lang, n_chars = 2L)
+  )
   source <- format_param(source)
 
   resource <- sprintf("source/%s", source)
@@ -160,7 +169,10 @@ wb_source <- function(source = NULL, lang = "en") {
 #' head(topic)
 #' }
 wb_topic <- function(topic = NULL, lang = "en") {
-  stopifnot(is_character(topic, null_ok = TRUE))
+  stopifnot(
+    is_character(topic, null_ok = TRUE),
+    is_string(lang, n_chars = 2L)
+  )
   topic <- format_param(topic)
 
   resource <- sprintf("topic/%s", topic)
@@ -196,7 +208,10 @@ wb_topic <- function(topic = NULL, lang = "en") {
 #' head(region)
 #' }
 wb_region <- function(region = NULL, lang = "en") {
-  stopifnot(is_character(region, null_ok = TRUE))
+  stopifnot(
+    is_character(region, null_ok = TRUE),
+    is_string(lang, n_chars = 2L)
+  )
   region <- format_param(region)
 
   resource <- sprintf("region/%s", region)
@@ -266,7 +281,8 @@ wb_country <- function(
     is_character(country, null_ok = TRUE, n_chars = 2:3),
     is_character(region, null_ok = TRUE, n_chars = 3L),
     is_character(income_level, null_ok = TRUE, n_chars = 3L),
-    is_character(lending_type, null_ok = TRUE, n_chars = 3L)
+    is_character(lending_type, null_ok = TRUE, n_chars = 3L),
+    is_string(lang, n_chars = 2L)
   )
   country <- tolower(format_param(country))
 
@@ -335,6 +351,7 @@ wb_country <- function(
 wb_indicator <- function(indicator = NULL, lang = "en", source = NULL) {
   stopifnot(
     is_string(indicator, null_ok = TRUE),
+    is_string(lang, n_chars = 2L),
     is_count(source, null_ok = TRUE)
   )
   indicator <- format_param(indicator)
@@ -414,6 +431,7 @@ wb_search <- function(
     is_string(pattern),
     is_character(fields),
     is.null(catalog) || is.data.frame(catalog),
+    is_string(lang, n_chars = 2L),
     is_flag(ignore.case),
     is_count(source, null_ok = TRUE)
   )
@@ -599,6 +617,7 @@ wb_data <- function(
   stopifnot(
     is_character(indicator),
     is_character(country, null_ok = TRUE, n_chars = 2:3),
+    is_string(lang, n_chars = 2L),
     is_dateish(start_date, null_ok = TRUE),
     is_dateish(end_date, null_ok = TRUE),
     is_count(mrv, null_ok = TRUE),
