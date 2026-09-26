@@ -116,9 +116,9 @@ wb_project(country = "BR", status = "active", search = "education")
 #> 6  P177070
 #> 7  P179046
 #> 8  P178663
-#> 9  P179365
-#> 10 P153012
-#> 11 P073882
+#> 9  P073882
+#> 10 P179365
+#> 11 P153012
 #> 12 P172497
 #>                                                              project_name
 #> 1                   Support to Upper Secondary Reform in Brazil Operation
@@ -129,9 +129,9 @@ wb_project(country = "BR", status = "active", search = "education")
 #> 6                  Progestão Alagoas: Public Sector Management Efficiency
 #> 7                     Progestão Acre: Public Sector Management Efficiency
 #> 8                    Progestão Piauí: Public Sector Management Efficiency
-#> 9  Brazil: Support to New Bolsa Familia Conditional Cash Transfer Program
-#> 10                        Fortaleza Sustainable Urban Development Project
-#> 11                         RF 2nd Amazon Fire Prevention and Mobilization
+#> 9                          RF 2nd Amazon Fire Prevention and Mobilization
+#> 10 Brazil: Support to New Bolsa Familia Conditional Cash Transfer Program
+#> 11                        Fortaleza Sustainable Urban Development Project
 #> 12                 Sustainable Multiple Use Landscape Consortia in Brazil
 #>    status approval_date closing_date country_code country
 #> 1  Active    2017-12-14   2024-12-31           BR  Brazil
@@ -142,9 +142,9 @@ wb_project(country = "BR", status = "active", search = "education")
 #> 6  Active    2022-07-21   2028-03-31           BR  Brazil
 #> 7  Active    2023-07-24   2028-12-29           BR  Brazil
 #> 8  Active    2023-10-03   2029-06-29           BR  Brazil
-#> 9  Active    2023-12-06   2026-04-30           BR  Brazil
-#> 10 Active    2017-04-28   2025-03-31           BR  Brazil
-#> 11 Active          <NA>   2004-09-30           BR  Brazil
+#> 9  Active          <NA>   2004-09-30           BR  Brazil
+#> 10 Active    2023-12-06   2026-04-30           BR  Brazil
+#> 11 Active    2017-04-28   2025-03-31           BR  Brazil
 #> 12 Active          <NA>   2027-11-30           BR  Brazil
 #>                         region total_commitment ibrd_commitment ida_commitment
 #> 1  Latin America and Caribbean        250.00000           250.0              0
@@ -155,9 +155,9 @@ wb_project(country = "BR", status = "active", search = "education")
 #> 6  Latin America and Caribbean         40.00000            40.0              0
 #> 7  Latin America and Caribbean         40.00000            40.0              0
 #> 8  Latin America and Caribbean         50.00000            50.0              0
-#> 9  Latin America and Caribbean        300.00000           300.0              0
-#> 10 Latin America and Caribbean         73.30000            73.3              0
-#> 11 Latin America and Caribbean          1.10000             0.0              0
+#> 9  Latin America and Caribbean          1.10000             0.0              0
+#> 10 Latin America and Caribbean        300.00000           300.0              0
+#> 11 Latin America and Caribbean         73.30000            73.3              0
 #> 12 Latin America and Caribbean         24.57798             0.0              0
 #>               lending_instrument
 #> 1  Program-for-Results Financing
@@ -168,9 +168,9 @@ wb_project(country = "BR", status = "active", search = "education")
 #> 6   Investment Project Financing
 #> 7   Investment Project Financing
 #> 8   Investment Project Financing
-#> 9   Investment Project Financing
+#> 9                           <NA>
 #> 10  Investment Project Financing
-#> 11                          <NA>
+#> 11  Investment Project Financing
 #> 12  Investment Project Financing
 #>                                                                     borrower
 #> 1                               Ministry of Economy (Minist�rio da Economia)
@@ -181,9 +181,9 @@ wb_project(country = "BR", status = "active", search = "education")
 #> 6  State of Alagoas, with the guarantee of the Federative Republic of Brazil
 #> 7                                                              State of Acre
 #> 8                                                             State of Piaui
-#> 9                                              Federative Republic of Brazil
-#> 10                                                 Municipality of Fortaleza
-#> 11                                                                      <NA>
+#> 9                                                                       <NA>
+#> 10                                             Federative Republic of Brazil
+#> 11                                                 Municipality of Fortaleza
 #> 12                                                                      IICA
 #>                                                                                          implementing_agency
 #> 1                                                             Ministry of Education (Minist�rio da Educa��o)
@@ -194,9 +194,9 @@ wb_project(country = "BR", status = "active", search = "education")
 #> 6                                                                  Secretariat of Finance - State of Alagoas
 #> 7                                                                              State Secretariat of Planning
 #> 8                                                                            Secretariat of Finance of Piaui
-#> 9                                                                                    Ministry of Citizenship
-#> 10 Secretaria Municipal de Urbanismo e Meio Ambiente (SEUMA), Secretaria Municipal de Infraestrutura (SEINF)
-#> 11                                                                                                      <NA>
+#> 9                                                                                                       <NA>
+#> 10                                                                                   Ministry of Citizenship
+#> 11 Secretaria Municipal de Urbanismo e Meio Ambiente (SEUMA), Secretaria Municipal de Infraestrutura (SEINF)
 #> 12             Minist�rio do Meio Ambiente (MMA), Minist�rio da Agricultura, Pecu�ria e Abastecimento (MAPA)
 #>                                                                             url
 #> 1  https://projects.worldbank.org/en/projects-operations/project-detail/P163868
@@ -207,9 +207,9 @@ wb_project(country = "BR", status = "active", search = "education")
 #> 6  https://projects.worldbank.org/en/projects-operations/project-detail/P177070
 #> 7  https://projects.worldbank.org/en/projects-operations/project-detail/P179046
 #> 8  https://projects.worldbank.org/en/projects-operations/project-detail/P178663
-#> 9  https://projects.worldbank.org/en/projects-operations/project-detail/P179365
-#> 10 https://projects.worldbank.org/en/projects-operations/project-detail/P153012
-#> 11 https://projects.worldbank.org/en/projects-operations/project-detail/P073882
+#> 9  https://projects.worldbank.org/en/projects-operations/project-detail/P073882
+#> 10 https://projects.worldbank.org/en/projects-operations/project-detail/P179365
+#> 11 https://projects.worldbank.org/en/projects-operations/project-detail/P153012
 #> 12 https://projects.worldbank.org/en/projects-operations/project-detail/P172497
 
 # active or pipeline projects across two countries
@@ -231,8 +231,8 @@ wb_project(country = c("BR", "IN"), status = c("active", "pipeline"))
 #> 14  P178557
 #> 15  P179357
 #> 16  P179749
-#> 17  P180497
-#> 18  P500524
+#> 17  P500524
+#> 18  P180497
 #> 19  P177474
 #> 20  P178581
 #> 21  P175723
@@ -243,8 +243,8 @@ wb_project(country = c("BR", "IN"), status = c("active", "pipeline"))
 #> 26  P178993
 #> 27  P178567
 #> 28  P178663
-#> 29  P179088
-#> 30  P179046
+#> 29  P179046
+#> 30  P179088
 #> 31  P176733
 #> 32  P176032
 #> 33  P179249
@@ -256,8 +256,8 @@ wb_project(country = c("BR", "IN"), status = c("active", "pipeline"))
 #> 39  P178072
 #> 40  P177671
 #> 41  P176982
-#> 42  P175811
-#> 43  P179039
+#> 42  P179039
+#> 43  P175811
 #> 44  P174593
 #> 45  P178888
 #> 46  P175728
@@ -351,82 +351,82 @@ wb_project(country = c("BR", "IN"), status = c("active", "pipeline"))
 #> 134 P500380
 #> 135 P502493
 #> 136 P110539
-#> 137 P180716
-#> 138 P504276
-#> 139 P500570
-#> 140 P500168
-#> 141 P506320
-#> 142 P500431
-#> 143 P508453
-#> 144 P504897
-#> 145 P503872
-#> 146 P506340
-#> 147 P507236
-#> 148 P500469
-#> 149 P501071
-#> 150 P105370
-#> 151 P181511
-#> 152 P180932
-#> 153 P505235
-#> 154 P507629
-#> 155 P178053
-#> 156 P500564
-#> 157 P505590
-#> 158 P506976
-#> 159 P181767
-#> 160 P506329
-#> 161 P508489
-#> 162 P180699
-#> 163 P507340
-#> 164 P114890
-#> 165 P114896
-#> 166 P502491
-#> 167 P504253
-#> 168 P181524
-#> 169 P181244
-#> 170 P500151
-#> 171 P502499
-#> 172 P505563
-#> 173 P507628
-#> 174 P508719
-#> 175 P179349
-#> 176 P504543
-#> 177 P505914
-#> 178 P509041
-#> 179 P506142
-#> 180 P500614
-#> 181 P506861
-#> 182 P506272
-#> 183 P506321
-#> 184 P173090
-#> 185 P505177
-#> 186 P181608
-#> 187 P508025
-#> 188 P507910
-#> 189 P504899
-#> 190 P500501
-#> 191 P181020
-#> 192 P500252
-#> 193 P508840
-#> 194 P506955
-#> 195 P504126
-#> 196 P507066
-#> 197 P508221
-#> 198 P507029
-#> 199 P508202
-#> 200 P508363
-#> 201 P171257
-#> 202 P172497
-#> 203 P164602
-#> 204 P132620
-#> 205 P122387
-#> 206 P128921
-#> 207 P158000
-#> 208 P160018
-#> 209 P152285
-#> 210 P009585
-#> 211 P073882
-#> 212 P177159
+#> 137 P181511
+#> 138 P500469
+#> 139 P501071
+#> 140 P105370
+#> 141 P173090
+#> 142 P506272
+#> 143 P506321
+#> 144 P505177
+#> 145 P181608
+#> 146 P508025
+#> 147 P180932
+#> 148 P505235
+#> 149 P507629
+#> 150 P178053
+#> 151 P181767
+#> 152 P506329
+#> 153 P508489
+#> 154 P500564
+#> 155 P505590
+#> 156 P506976
+#> 157 P500252
+#> 158 P508840
+#> 159 P506955
+#> 160 P504126
+#> 161 P507066
+#> 162 P508221
+#> 163 P507029
+#> 164 P508202
+#> 165 P508363
+#> 166 P180699
+#> 167 P507340
+#> 168 P114890
+#> 169 P180716
+#> 170 P504276
+#> 171 P500570
+#> 172 P114896
+#> 173 P502491
+#> 174 P504253
+#> 175 P181524
+#> 176 P181244
+#> 177 P502499
+#> 178 P500151
+#> 179 P508719
+#> 180 P505563
+#> 181 P507628
+#> 182 P179349
+#> 183 P504543
+#> 184 P505914
+#> 185 P509041
+#> 186 P506142
+#> 187 P500614
+#> 188 P506861
+#> 189 P500168
+#> 190 P506320
+#> 191 P500431
+#> 192 P508453
+#> 193 P504897
+#> 194 P503872
+#> 195 P506340
+#> 196 P507236
+#> 197 P507910
+#> 198 P504899
+#> 199 P500501
+#> 200 P181020
+#> 201 P073882
+#> 202 P177159
+#> 203 P171257
+#> 204 P172497
+#> 205 P164602
+#> 206 P132620
+#> 207 P122387
+#> 208 P128921
+#> 209 P158000
+#> 210 P160018
+#> 211 P009585
+#> 212 P152285
 #>                                                                                                        project_name
 #> 1                                                                    Amaravati Integrated Urban Development Program
 #> 2                             Uttar Pradesh Agriculture Growth and Rural Enterprise Ecosystem Strengthening Project
@@ -444,8 +444,8 @@ wb_project(country = c("BR", "IN"), status = c("active", "pipeline"))
 #> 14                                          Integrated Sustainable Mobility Project in the Foz do Rio Itajaí Region
 #> 15                                                           Uttarakhand Climate Responsive Rainfed Farming Project
 #> 16                                                         Uttarakhand Disaster Preparedness and Resilience Project
-#> 17                                                            BR State of Ceará Sustainable Development Policy Loan
-#> 18                                                       Sustainable Human Development Project in the State of Pará
+#> 17                                                       Sustainable Human Development Project in the State of Pará
+#> 18                                                            BR State of Ceará Sustainable Development Policy Loan
 #> 19                                                           Piauí Pillars of Growth and Social Inclusion Project 2
 #> 20                                                                            Assam Resilient Rural Bridges Program
 #> 21                                                            Mato Grosso Sustainable Development of Family Farming
@@ -456,8 +456,8 @@ wb_project(country = c("BR", "IN"), status = c("active", "pipeline"))
 #> 26                                               Mato Grosso Resilient, Inclusive, and Sustainable Learning Project
 #> 27                                                           Piauí Health and Social Protection Development Project
 #> 28                                                             Progestão Piauí: Public Sector Management Efficiency
-#> 29                                                         Progestão Tocantins: Public Sector Management Efficiency
-#> 30                                                              Progestão Acre: Public Sector Management Efficiency
+#> 29                                                              Progestão Acre: Public Sector Management Efficiency
+#> 30                                                         Progestão Tocantins: Public Sector Management Efficiency
 #> 31                                                                 IN: Manipur Infotech eNabled Development Project
 #> 32                                                                Himachal Pradesh Power Sector Development Program
 #> 33                                                       Chhattisgarh: Accelerated Learning for a Knowledge-Economy
@@ -469,8 +469,8 @@ wb_project(country = c("BR", "IN"), status = c("active", "pipeline"))
 #> 39                                  Green, Resilient and Inclusive Regeneration of the Central Area of Porto Alegre
 #> 40                                                     Animal Health System Support for One Health Program (AHSSOH)
 #> 41                                                         Brazil: Espirito Santo Water Security Management Project
-#> 42                                                             Odisha State Capability and Resilient Growth Program
-#> 43                                                                 Karnataka Sustainable Rural Water Supply Program
+#> 42                                                                 Karnataka Sustainable Rural Water Supply Program
+#> 43                                                             Odisha State Capability and Resilient Growth Program
 #> 44                                                                  Assam Integrated River Basin Management Program
 #> 45                                                                                   Brazil Climate Finance Project
 #> 46                                          Gujarat Resilient Cities Partnership: Ahmedabad City Resilience Project
@@ -564,82 +564,82 @@ wb_project(country = c("BR", "IN"), status = c("active", "pipeline"))
 #> 134  India Supporting Socioeconomic Development and Livelihood Security among Particularly Vulnerable Tribal Groups
 #> 135                                             Rio Grande do Norte: Sustainable Development and Governance Project
 #> 136                                                                    India: FaL-G High Capacity Automation Plants
-#> 137                                                                               Promoting Green Hydrogen in India
-#> 138                                                                                                 SP Metro Line 2
-#> 139                                                                  Sergipe Efficient Digital Acceleration project
-#> 140                                                                                                     IPF Regular
-#> 141                                                         Accelerating the Energy Transition in the Amazon (AETA)
-#> 142                                                     Agroecology and Sustainable Rural Development in Pernambuco
-#> 143                                                                                                            MEGA
-#> 144                                                                  Bahia Urban Socio-Productive Inclusion Project
-#> 145                                                                       Kerala Health Systems Improvement Program
-#> 146                                                                                                            MRDP
-#> 147                                                                   Assam Governance and Service Delivery Program
-#> 148  Brazil Proactive, Safe and Resilient Road Asset Management Program - State of Espirito Santo Project - Phase 2
-#> 149                                                          Rajasthan Highway Modernization Project (RHMP) Phase-2
-#> 150                                                                          Allian Duhangan Hydro Electric Project
-#> 151                                                   Expanding Clean Hydrogen in Brazil - Ceara Green Hydrogen Hub
-#> 152                                                                Strengthening Coastal Resilience and the Economy
-#> 153                BR State of Rio Grande do Sul Sustainable Recovery and Climate Resilient Development Policy Loan
-#> 154                                                Brazil: Decarbonization of Energy-Intensive Value Chains Project
-#> 155                                                                      Uttar Pradesh Clean Air Management Program
-#> 156                                                      Punjab Outcomes-Acceleration In School Education Operation
-#> 157                                                                                                    MS Pro-Roads
-#> 158                                                                        West Bengal Health System Reform Program
-#> 159                                                        Hybrid PPP - São Paulo Commuter Rail Lines 11, 12 and 13
-#> 160                                                    Private-Delivered Metro Sao Paulo Line 4 Phase III Extension
-#> 161                                                                                                         SRH P4R
-#> 162                                                    Tamil Nadu Women Employment and Safety (TN WESAFE) Operation
-#> 163                                                               Himachal Disaster Recovery and Resilience Project
-#> 164                                                         Combining income and forest protection: açaí production
-#> 165                                                                       Collective Land Ownership Model for Women
-#> 166                                                           Haryana Clean Air and Sustainable Development Program
-#> 167 Brazil Proactive, Safe, and Resilient Road Asset Management Program - State of Santa Catarina Project - Phase 3
-#> 168                              Second Dam Rehabilitation and Improvement Project - Additional Financing (DRIP -3)
-#> 169                                                                  India-West Bengal Health System Reform Program
-#> 170                                                                                                   PForR Project
-#> 171                                                                            Surat Resilience Enhancement Project
-#> 172                                                                                                        PoCRA-II
-#> 173                                                             Energy Transition of the Northeast Region of Brazil
-#> 174                                                                                                           AHEAD
-#> 175                                        Electric Vehicle Operations and Lending for a Vibrant Ecosystem (EVOLVE)
-#> 176                                                    Brazil Electromobility and Energy Transition Finance Project
-#> 177                                                          IN: Digital Empowerment and Services to Harness Growth
-#> 178                                                                                                 Tocantins PRIDP
-#> 179                                      Santa Catarina Rural Development Project for Sustainability and Innovation
-#> 180                                                         BR State of Alagoas Sustainable Development Policy Loan
-#> 181                                                                                                  AM Sustainable
-#> 182                                                                 Karnataka Water Security and Resilience Program
-#> 183                                                                                                   Bahia SIP DPL
-#> 184                                         Second Amazona Fiscal and Environmental Sustainability Programmatic DPF
-#> 185                                                            India - Enhancing Innovation among ICMR Institutions
-#> 186                                                      Progestão Program - MPA Phase 1 State of Rio Grande do Sul
-#> 187                                                                                                             SS3
-#> 188                                                                        Skills: National ITI Upgradation Program
-#> 189                                Strengthening Social Assistance Delivery System in the Municipality of São Paulo
-#> 190                                        Electrification and Improvement of the São Paulo Urban Transport Program
-#> 191                                                                      Gurugram Metro Huda to Cyber City, Haryana
-#> 192                                                                                                             IPF
-#> 193                                                                              Institutions MPA – Phase 1 (Assam)
-#> 194                                                                                                    PPP SP Rails
-#> 195                                                                                       Brazil: ASL Xingu project
-#> 196                   Meghalaya Multisectoral Project for Adolescent Wellbeing, Empowerment and Resilience (MPOWER)
-#> 197                                                                                                   SC Resilience
-#> 198                                  Brazil Electromobility Multiphase Programmatic Approach – MPA Phase 2 Salvador
-#> 199                        Amazon and Cerrado Bioeconomy, Forest Restoration, and Climate-Smart Agriculture Project
-#> 200                                                                                                      BR Digital
-#> 201                                                            Brazil Amazon Sustainable Landscapes Project Phase 2
-#> 202                                                          Sustainable Multiple Use Landscape Consortia in Brazil
-#> 203                                                    Integrated Landscape Management in the Cerrado Biome Project
-#> 204                                                              Partial Risk Sharing Facility in Energy Efficiency
-#> 205                                                                     DFID TF III Supervision and Fiduciary Costs
+#> 137                                                   Expanding Clean Hydrogen in Brazil - Ceara Green Hydrogen Hub
+#> 138  Brazil Proactive, Safe and Resilient Road Asset Management Program - State of Espirito Santo Project - Phase 2
+#> 139                                                          Rajasthan Highway Modernization Project (RHMP) Phase-2
+#> 140                                                                          Allian Duhangan Hydro Electric Project
+#> 141                                         Second Amazona Fiscal and Environmental Sustainability Programmatic DPF
+#> 142                                                                 Karnataka Water Security and Resilience Program
+#> 143                                                                                                   Bahia SIP DPL
+#> 144                                                            India - Enhancing Innovation among ICMR Institutions
+#> 145                                                      Progestão Program - MPA Phase 1 State of Rio Grande do Sul
+#> 146                                                                                                             SS3
+#> 147                                                                Strengthening Coastal Resilience and the Economy
+#> 148                BR State of Rio Grande do Sul Sustainable Recovery and Climate Resilient Development Policy Loan
+#> 149                                                Brazil: Decarbonization of Energy-Intensive Value Chains Project
+#> 150                                                                      Uttar Pradesh Clean Air Management Program
+#> 151                                                        Hybrid PPP - São Paulo Commuter Rail Lines 11, 12 and 13
+#> 152                                                    Private-Delivered Metro Sao Paulo Line 4 Phase III Extension
+#> 153                                                                                                         SRH P4R
+#> 154                                                      Punjab Outcomes-Acceleration In School Education Operation
+#> 155                                                                                                    MS Pro-Roads
+#> 156                                                                        West Bengal Health System Reform Program
+#> 157                                                                                                             IPF
+#> 158                                                                              Institutions MPA – Phase 1 (Assam)
+#> 159                                                                                                    PPP SP Rails
+#> 160                                                                                       Brazil: ASL Xingu project
+#> 161                   Meghalaya Multisectoral Project for Adolescent Wellbeing, Empowerment and Resilience (MPOWER)
+#> 162                                                                                                   SC Resilience
+#> 163                                  Brazil Electromobility Multiphase Programmatic Approach – MPA Phase 2 Salvador
+#> 164                        Amazon and Cerrado Bioeconomy, Forest Restoration, and Climate-Smart Agriculture Project
+#> 165                                                                                                      BR Digital
+#> 166                                                    Tamil Nadu Women Employment and Safety (TN WESAFE) Operation
+#> 167                                                               Himachal Disaster Recovery and Resilience Project
+#> 168                                                         Combining income and forest protection: açaí production
+#> 169                                                                               Promoting Green Hydrogen in India
+#> 170                                                                                                 SP Metro Line 2
+#> 171                                                                  Sergipe Efficient Digital Acceleration project
+#> 172                                                                       Collective Land Ownership Model for Women
+#> 173                                                           Haryana Clean Air and Sustainable Development Program
+#> 174 Brazil Proactive, Safe, and Resilient Road Asset Management Program - State of Santa Catarina Project - Phase 3
+#> 175                              Second Dam Rehabilitation and Improvement Project - Additional Financing (DRIP -3)
+#> 176                                                                  India-West Bengal Health System Reform Program
+#> 177                                                                            Surat Resilience Enhancement Project
+#> 178                                                                                                   PForR Project
+#> 179                                                                                                           AHEAD
+#> 180                                                                                                        PoCRA-II
+#> 181                                                             Energy Transition of the Northeast Region of Brazil
+#> 182                                        Electric Vehicle Operations and Lending for a Vibrant Ecosystem (EVOLVE)
+#> 183                                                    Brazil Electromobility and Energy Transition Finance Project
+#> 184                                                          IN: Digital Empowerment and Services to Harness Growth
+#> 185                                                                                                 Tocantins PRIDP
+#> 186                                      Santa Catarina Rural Development Project for Sustainability and Innovation
+#> 187                                                         BR State of Alagoas Sustainable Development Policy Loan
+#> 188                                                                                                  AM Sustainable
+#> 189                                                                                                     IPF Regular
+#> 190                                                         Accelerating the Energy Transition in the Amazon (AETA)
+#> 191                                                     Agroecology and Sustainable Rural Development in Pernambuco
+#> 192                                                                                                            MEGA
+#> 193                                                                  Bahia Urban Socio-Productive Inclusion Project
+#> 194                                                                       Kerala Health Systems Improvement Program
+#> 195                                                                                                            MRDP
+#> 196                                                                   Assam Governance and Service Delivery Program
+#> 197                                                                        Skills: National ITI Upgradation Program
+#> 198                                Strengthening Social Assistance Delivery System in the Municipality of São Paulo
+#> 199                                        Electrification and Improvement of the São Paulo Urban Transport Program
+#> 200                                                                      Gurugram Metro Huda to Cyber City, Haryana
+#> 201                                                                  RF 2nd Amazon Fire Prevention and Mobilization
+#> 202                                                       Monitoring and Evaluation capacity building in South Asia
+#> 203                                                            Brazil Amazon Sustainable Landscapes Project Phase 2
+#> 204                                                          Sustainable Multiple Use Landscape Consortia in Brazil
+#> 205                                                    Integrated Landscape Management in the Cerrado Biome Project
 #> 206                                                              Partial Risk Sharing Facility in Energy Efficiency
-#> 207                                                                           Amazon Sustainable Landscapes Project
-#> 208                                                   Additional Financing for Grid-Connected Rooftop Solar Program
-#> 209                                                                     Brazil Investment Plan Coordination Project
-#> 210                                                                                                           ODS I
-#> 211                                                                  RF 2nd Amazon Fire Prevention and Mobilization
-#> 212                                                       Monitoring and Evaluation capacity building in South Asia
+#> 207                                                                     DFID TF III Supervision and Fiduciary Costs
+#> 208                                                              Partial Risk Sharing Facility in Energy Efficiency
+#> 209                                                                           Amazon Sustainable Landscapes Project
+#> 210                                                   Additional Financing for Grid-Connected Rooftop Solar Program
+#> 211                                                                                                           ODS I
+#> 212                                                                     Brazil Investment Plan Coordination Project
 #>       status approval_date closing_date country_code country
 #> 1     Active    2024-12-19         <NA>           IN   India
 #> 2     Active    2024-12-12   2030-09-30           IN   India
@@ -657,8 +657,8 @@ wb_project(country = c("BR", "IN"), status = c("active", "pipeline"))
 #> 14    Active    2024-04-12   2031-11-30           BR  Brazil
 #> 15    Active    2024-04-01   2030-03-31           IN   India
 #> 16    Active    2024-04-01   2029-06-30           IN   India
-#> 17    Active    2024-03-28   2025-12-31           BR  Brazil
-#> 18    Active    2024-03-28   2029-04-30           BR  Brazil
+#> 17    Active    2024-03-28   2029-04-30           BR  Brazil
+#> 18    Active    2024-03-28   2025-12-31           BR  Brazil
 #> 19    Active    2024-03-14   2029-07-31           BR  Brazil
 #> 20    Active    2024-03-01   2030-06-28           IN   India
 #> 21    Active    2024-02-05   2030-05-15           BR  Brazil
@@ -682,8 +682,8 @@ wb_project(country = c("BR", "IN"), status = c("active", "pipeline"))
 #> 39    Active    2023-06-07   2028-12-29           BR  Brazil
 #> 40    Active    2023-05-10   2027-11-30           IN   India
 #> 41    Active    2023-05-09   2029-06-30           BR  Brazil
-#> 42    Active    2023-03-28   2028-04-26           IN   India
-#> 43    Active    2023-03-28   2028-06-01           IN   India
+#> 42    Active    2023-03-28   2028-06-01           IN   India
+#> 43    Active    2023-03-28   2028-04-26           IN   India
 #> 44    Active    2023-03-24   2027-07-31           IN   India
 #> 45    Active    2022-12-22   2028-04-30           BR  Brazil
 #> 46    Active    2022-11-22   2028-12-31           IN   India
@@ -777,82 +777,82 @@ wb_project(country = c("BR", "IN"), status = c("active", "pipeline"))
 #> 134 Pipeline          <NA>         <NA>           IN   India
 #> 135 Pipeline          <NA>         <NA>           BR  Brazil
 #> 136 Pipeline          <NA>         <NA>           IN   India
-#> 137 Pipeline          <NA>         <NA>           IN   India
+#> 137 Pipeline          <NA>         <NA>           BR  Brazil
 #> 138 Pipeline          <NA>         <NA>           BR  Brazil
-#> 139 Pipeline          <NA>         <NA>           BR  Brazil
-#> 140 Pipeline          <NA>         <NA>           IN   India
+#> 139 Pipeline          <NA>         <NA>           IN   India
+#> 140 Pipeline          <NA>   2018-05-04           IN   India
 #> 141 Pipeline          <NA>         <NA>           BR  Brazil
-#> 142 Pipeline          <NA>         <NA>           BR  Brazil
-#> 143 Pipeline          <NA>         <NA>           IN   India
-#> 144 Pipeline          <NA>         <NA>           BR  Brazil
-#> 145 Pipeline          <NA>         <NA>           IN   India
-#> 146 Pipeline          <NA>         <NA>           IN   India
+#> 142 Pipeline          <NA>         <NA>           IN   India
+#> 143 Pipeline          <NA>         <NA>           BR  Brazil
+#> 144 Pipeline          <NA>         <NA>           IN   India
+#> 145 Pipeline          <NA>         <NA>           BR  Brazil
+#> 146 Pipeline          <NA>         <NA>           BR  Brazil
 #> 147 Pipeline          <NA>         <NA>           IN   India
 #> 148 Pipeline          <NA>         <NA>           BR  Brazil
-#> 149 Pipeline          <NA>         <NA>           IN   India
-#> 150 Pipeline          <NA>   2018-05-04           IN   India
+#> 149 Pipeline          <NA>         <NA>           BR  Brazil
+#> 150 Pipeline          <NA>         <NA>           IN   India
 #> 151 Pipeline          <NA>         <NA>           BR  Brazil
-#> 152 Pipeline          <NA>         <NA>           IN   India
-#> 153 Pipeline          <NA>         <NA>           BR  Brazil
-#> 154 Pipeline          <NA>         <NA>           BR  Brazil
-#> 155 Pipeline          <NA>         <NA>           IN   India
+#> 152 Pipeline          <NA>         <NA>           BR  Brazil
+#> 153 Pipeline          <NA>         <NA>           IN   India
+#> 154 Pipeline          <NA>         <NA>           IN   India
+#> 155 Pipeline          <NA>         <NA>           BR  Brazil
 #> 156 Pipeline          <NA>         <NA>           IN   India
-#> 157 Pipeline          <NA>         <NA>           BR  Brazil
+#> 157 Pipeline          <NA>         <NA>           IN   India
 #> 158 Pipeline          <NA>         <NA>           IN   India
 #> 159 Pipeline          <NA>         <NA>           BR  Brazil
 #> 160 Pipeline          <NA>         <NA>           BR  Brazil
 #> 161 Pipeline          <NA>         <NA>           IN   India
-#> 162 Pipeline          <NA>         <NA>           IN   India
-#> 163 Pipeline          <NA>         <NA>           IN   India
-#> 164 Pipeline          <NA>   2011-10-01           BR  Brazil
-#> 165 Pipeline          <NA>   2011-10-01           IN   India
+#> 162 Pipeline          <NA>         <NA>           BR  Brazil
+#> 163 Pipeline          <NA>         <NA>           BR  Brazil
+#> 164 Pipeline          <NA>         <NA>           BR  Brazil
+#> 165 Pipeline          <NA>         <NA>           BR  Brazil
 #> 166 Pipeline          <NA>         <NA>           IN   India
-#> 167 Pipeline          <NA>         <NA>           BR  Brazil
-#> 168 Pipeline          <NA>         <NA>           IN   India
+#> 167 Pipeline          <NA>         <NA>           IN   India
+#> 168 Pipeline          <NA>   2011-10-01           BR  Brazil
 #> 169 Pipeline          <NA>         <NA>           IN   India
-#> 170 Pipeline          <NA>         <NA>           IN   India
-#> 171 Pipeline          <NA>         <NA>           IN   India
-#> 172 Pipeline          <NA>         <NA>           IN   India
-#> 173 Pipeline          <NA>         <NA>           BR  Brazil
-#> 174 Pipeline          <NA>         <NA>           IN   India
+#> 170 Pipeline          <NA>         <NA>           BR  Brazil
+#> 171 Pipeline          <NA>         <NA>           BR  Brazil
+#> 172 Pipeline          <NA>   2011-10-01           IN   India
+#> 173 Pipeline          <NA>         <NA>           IN   India
+#> 174 Pipeline          <NA>         <NA>           BR  Brazil
 #> 175 Pipeline          <NA>         <NA>           IN   India
-#> 176 Pipeline          <NA>         <NA>           BR  Brazil
+#> 176 Pipeline          <NA>         <NA>           IN   India
 #> 177 Pipeline          <NA>         <NA>           IN   India
-#> 178 Pipeline          <NA>         <NA>           BR  Brazil
-#> 179 Pipeline          <NA>         <NA>           BR  Brazil
-#> 180 Pipeline          <NA>         <NA>           BR  Brazil
+#> 178 Pipeline          <NA>         <NA>           IN   India
+#> 179 Pipeline          <NA>         <NA>           IN   India
+#> 180 Pipeline          <NA>         <NA>           IN   India
 #> 181 Pipeline          <NA>         <NA>           BR  Brazil
 #> 182 Pipeline          <NA>         <NA>           IN   India
 #> 183 Pipeline          <NA>         <NA>           BR  Brazil
-#> 184 Pipeline          <NA>         <NA>           BR  Brazil
-#> 185 Pipeline          <NA>         <NA>           IN   India
+#> 184 Pipeline          <NA>         <NA>           IN   India
+#> 185 Pipeline          <NA>         <NA>           BR  Brazil
 #> 186 Pipeline          <NA>         <NA>           BR  Brazil
 #> 187 Pipeline          <NA>         <NA>           BR  Brazil
-#> 188 Pipeline          <NA>         <NA>           IN   India
-#> 189 Pipeline          <NA>         <NA>           BR  Brazil
+#> 188 Pipeline          <NA>         <NA>           BR  Brazil
+#> 189 Pipeline          <NA>         <NA>           IN   India
 #> 190 Pipeline          <NA>         <NA>           BR  Brazil
-#> 191 Pipeline          <NA>         <NA>           IN   India
+#> 191 Pipeline          <NA>         <NA>           BR  Brazil
 #> 192 Pipeline          <NA>         <NA>           IN   India
-#> 193 Pipeline          <NA>         <NA>           IN   India
-#> 194 Pipeline          <NA>         <NA>           BR  Brazil
-#> 195 Pipeline          <NA>         <NA>           BR  Brazil
+#> 193 Pipeline          <NA>         <NA>           BR  Brazil
+#> 194 Pipeline          <NA>         <NA>           IN   India
+#> 195 Pipeline          <NA>         <NA>           IN   India
 #> 196 Pipeline          <NA>         <NA>           IN   India
-#> 197 Pipeline          <NA>         <NA>           BR  Brazil
+#> 197 Pipeline          <NA>         <NA>           IN   India
 #> 198 Pipeline          <NA>         <NA>           BR  Brazil
 #> 199 Pipeline          <NA>         <NA>           BR  Brazil
-#> 200 Pipeline          <NA>         <NA>           BR  Brazil
-#> 201   Active          <NA>         <NA>           BR  Brazil
-#> 202   Active          <NA>   2027-11-30           BR  Brazil
-#> 203   Active          <NA>   2025-11-30           BR  Brazil
-#> 204   Active          <NA>   2025-03-31           IN   India
-#> 205   Active          <NA>         <NA>           IN   India
+#> 200 Pipeline          <NA>         <NA>           IN   India
+#> 201   Active          <NA>   2004-09-30           BR  Brazil
+#> 202   Active          <NA>   2025-06-30           IN   India
+#> 203   Active          <NA>         <NA>           BR  Brazil
+#> 204   Active          <NA>   2027-11-30           BR  Brazil
+#> 205   Active          <NA>   2025-11-30           BR  Brazil
 #> 206   Active          <NA>   2025-03-31           IN   India
-#> 207   Active          <NA>   2026-12-31           BR  Brazil
-#> 208   Active          <NA>   2026-11-30           IN   India
-#> 209   Active          <NA>   2024-11-30           BR  Brazil
-#> 210   Active          <NA>         <NA>           IN   India
-#> 211   Active          <NA>   2004-09-30           BR  Brazil
-#> 212   Active          <NA>   2025-06-30           IN   India
+#> 207   Active          <NA>         <NA>           IN   India
+#> 208   Active          <NA>   2025-03-31           IN   India
+#> 209   Active          <NA>   2026-12-31           BR  Brazil
+#> 210   Active          <NA>   2026-11-30           IN   India
+#> 211   Active          <NA>         <NA>           IN   India
+#> 212   Active          <NA>   2024-11-30           BR  Brazil
 #>                          region total_commitment ibrd_commitment ida_commitment
 #> 1                    South Asia         0.000000          0.0000           0.00
 #> 2                    South Asia       325.100000        325.1000           0.00
@@ -870,8 +870,8 @@ wb_project(country = c("BR", "IN"), status = c("active", "pipeline"))
 #> 14  Latin America and Caribbean        90.000000         90.0000           0.00
 #> 15                   South Asia        96.200000         96.2000           0.00
 #> 16                   South Asia       135.000000        135.0000           0.00
-#> 17  Latin America and Caribbean       541.880000        541.8800           0.00
-#> 18  Latin America and Caribbean       350.000000         70.0000         280.00
+#> 17  Latin America and Caribbean       350.000000         70.0000         280.00
+#> 18  Latin America and Caribbean       541.880000        541.8800           0.00
 #> 19  Latin America and Caribbean        50.000000         50.0000           0.00
 #> 20                   South Asia       452.000000        452.0000           0.00
 #> 21  Latin America and Caribbean        80.000000         80.0000           0.00
@@ -882,8 +882,8 @@ wb_project(country = c("BR", "IN"), status = c("active", "pipeline"))
 #> 26  Latin America and Caribbean       100.000000        100.0000           0.00
 #> 27  Latin America and Caribbean        50.000000         50.0000           0.00
 #> 28  Latin America and Caribbean        50.000000         50.0000           0.00
-#> 29  Latin America and Caribbean        50.000000         50.0000           0.00
-#> 30  Latin America and Caribbean        40.000000         40.0000           0.00
+#> 29  Latin America and Caribbean        40.000000         40.0000           0.00
+#> 30  Latin America and Caribbean        50.000000         50.0000           0.00
 #> 31                   South Asia        46.000000         46.0000           0.00
 #> 32                   South Asia       200.000000        200.0000           0.00
 #> 33                   South Asia       300.000000        300.0000           0.00
@@ -895,8 +895,8 @@ wb_project(country = c("BR", "IN"), status = c("active", "pipeline"))
 #> 39  Latin America and Caribbean        84.550000         84.5500           0.00
 #> 40                   South Asia        82.000000         82.0000           0.00
 #> 41  Latin America and Caribbean        86.100000         86.1000           0.00
-#> 42                   South Asia       100.000000        100.0000           0.00
-#> 43                   South Asia       363.000000        363.0000           0.00
+#> 42                   South Asia       363.000000        363.0000           0.00
+#> 43                   South Asia       100.000000        100.0000           0.00
 #> 44                   South Asia       108.000000        108.0000           0.00
 #> 45  Latin America and Caribbean       500.000000        500.0000           0.00
 #> 46                   South Asia       280.000000        280.0000           0.00
@@ -990,82 +990,82 @@ wb_project(country = c("BR", "IN"), status = c("active", "pipeline"))
 #> 134                  South Asia         0.000000          0.0000           0.00
 #> 135 Latin America and Caribbean        45.000000          0.0000          45.00
 #> 136                  South Asia         0.000000          0.0000           0.00
-#> 137                  South Asia      1000.000000       1000.0000           0.00
-#> 138 Latin America and Caribbean       900.000000          0.0000         900.00
-#> 139 Latin America and Caribbean        13.400000         13.4000           0.00
+#> 137 Latin America and Caribbean        90.000000         90.0000           0.00
+#> 138 Latin America and Caribbean       162.400000          0.0000         162.40
+#> 139                  South Asia       250.000000          0.0000         250.00
 #> 140                  South Asia         0.000000          0.0000           0.00
-#> 141 Latin America and Caribbean         0.000000          0.0000           0.00
-#> 142 Latin America and Caribbean        50.000000          0.0000          50.00
-#> 143                  South Asia         0.000000          0.0000           0.00
-#> 144 Latin America and Caribbean        30.000000          0.0000          30.00
-#> 145                  South Asia       280.000000          0.0000         280.00
-#> 146                  South Asia         0.000000          0.0000           0.00
-#> 147                  South Asia         0.000000          0.0000           0.00
-#> 148 Latin America and Caribbean       162.400000          0.0000         162.40
-#> 149                  South Asia       250.000000          0.0000         250.00
-#> 150                  South Asia         0.000000          0.0000           0.00
-#> 151 Latin America and Caribbean        90.000000         90.0000           0.00
-#> 152                  South Asia       212.640000        212.6400           0.00
-#> 153 Latin America and Caribbean         0.000000          0.0000           0.00
-#> 154 Latin America and Caribbean         0.000000          0.0000           0.00
-#> 155                  South Asia       350.000000        350.0000           0.00
-#> 156                  South Asia       135.000000          0.0000         135.00
-#> 157 Latin America and Caribbean       200.000000          0.0000         200.00
+#> 141 Latin America and Caribbean       200.000000        200.0000           0.00
+#> 142                  South Asia         0.000000          0.0000           0.00
+#> 143 Latin America and Caribbean         0.000000          0.0000           0.00
+#> 144                  South Asia         1.000000          1.0000           0.00
+#> 145 Latin America and Caribbean        50.000000         50.0000           0.00
+#> 146 Latin America and Caribbean         0.000000          0.0000           0.00
+#> 147                  South Asia       212.640000        212.6400           0.00
+#> 148 Latin America and Caribbean         0.000000          0.0000           0.00
+#> 149 Latin America and Caribbean         0.000000          0.0000           0.00
+#> 150                  South Asia       350.000000        350.0000           0.00
+#> 151 Latin America and Caribbean       100.000000        100.0000           0.00
+#> 152 Latin America and Caribbean         0.000000          0.0000           0.00
+#> 153                  South Asia         0.000000          0.0000           0.00
+#> 154                  South Asia       135.000000          0.0000         135.00
+#> 155 Latin America and Caribbean       200.000000          0.0000         200.00
+#> 156                  South Asia         0.000000          0.0000           0.00
+#> 157                  South Asia         0.000000          0.0000           0.00
 #> 158                  South Asia         0.000000          0.0000           0.00
-#> 159 Latin America and Caribbean       100.000000        100.0000           0.00
-#> 160 Latin America and Caribbean         0.000000          0.0000           0.00
+#> 159 Latin America and Caribbean         0.000000          0.0000           0.00
+#> 160 Latin America and Caribbean         8.560000          0.0000           8.56
 #> 161                  South Asia         0.000000          0.0000           0.00
-#> 162                  South Asia       150.000000        150.0000           0.00
-#> 163                  South Asia         0.000000          0.0000           0.00
+#> 162 Latin America and Caribbean         0.000000          0.0000           0.00
+#> 163 Latin America and Caribbean         0.000000          0.0000           0.00
 #> 164 Latin America and Caribbean         0.000000          0.0000           0.00
-#> 165                  South Asia         0.000000          0.0000           0.00
-#> 166                  South Asia      2830.250000        128.0000        2702.25
-#> 167 Latin America and Caribbean       375.000000          0.0000         375.00
-#> 168                  South Asia       420.000000        420.0000           0.00
-#> 169                  South Asia       315.000000        315.0000           0.00
-#> 170                  South Asia         0.000000          0.0000           0.00
-#> 171                  South Asia       196.000000          0.0000         196.00
-#> 172                  South Asia       490.000000          0.0000         490.00
-#> 173 Latin America and Caribbean         0.000000          0.0000           0.00
-#> 174                  South Asia         0.000000          0.0000           0.00
-#> 175                  South Asia         0.000000          0.0000           0.00
-#> 176 Latin America and Caribbean         0.000000          0.0000           0.00
-#> 177                  South Asia      5400.000000          0.0000        5400.00
-#> 178 Latin America and Caribbean         0.000000          0.0000           0.00
-#> 179 Latin America and Caribbean         0.000000          0.0000           0.00
-#> 180 Latin America and Caribbean         0.000000          0.0000           0.00
+#> 165 Latin America and Caribbean         0.000000          0.0000           0.00
+#> 166                  South Asia       150.000000        150.0000           0.00
+#> 167                  South Asia         0.000000          0.0000           0.00
+#> 168 Latin America and Caribbean         0.000000          0.0000           0.00
+#> 169                  South Asia      1000.000000       1000.0000           0.00
+#> 170 Latin America and Caribbean       900.000000          0.0000         900.00
+#> 171 Latin America and Caribbean        13.400000         13.4000           0.00
+#> 172                  South Asia         0.000000          0.0000           0.00
+#> 173                  South Asia      2830.250000        128.0000        2702.25
+#> 174 Latin America and Caribbean       375.000000          0.0000         375.00
+#> 175                  South Asia       420.000000        420.0000           0.00
+#> 176                  South Asia       315.000000        315.0000           0.00
+#> 177                  South Asia       196.000000          0.0000         196.00
+#> 178                  South Asia         0.000000          0.0000           0.00
+#> 179                  South Asia         0.000000          0.0000           0.00
+#> 180                  South Asia       490.000000          0.0000         490.00
 #> 181 Latin America and Caribbean         0.000000          0.0000           0.00
 #> 182                  South Asia         0.000000          0.0000           0.00
 #> 183 Latin America and Caribbean         0.000000          0.0000           0.00
-#> 184 Latin America and Caribbean       200.000000        200.0000           0.00
-#> 185                  South Asia         1.000000          1.0000           0.00
-#> 186 Latin America and Caribbean        50.000000         50.0000           0.00
+#> 184                  South Asia      5400.000000          0.0000        5400.00
+#> 185 Latin America and Caribbean         0.000000          0.0000           0.00
+#> 186 Latin America and Caribbean         0.000000          0.0000           0.00
 #> 187 Latin America and Caribbean         0.000000          0.0000           0.00
-#> 188                  South Asia         0.000000          0.0000           0.00
-#> 189 Latin America and Caribbean         0.000000          0.0000           0.00
-#> 190 Latin America and Caribbean      2300.000000       2300.0000           0.00
-#> 191                  South Asia       131.000000        131.0000           0.00
+#> 188 Latin America and Caribbean         0.000000          0.0000           0.00
+#> 189                  South Asia         0.000000          0.0000           0.00
+#> 190 Latin America and Caribbean         0.000000          0.0000           0.00
+#> 191 Latin America and Caribbean        50.000000          0.0000          50.00
 #> 192                  South Asia         0.000000          0.0000           0.00
-#> 193                  South Asia         0.000000          0.0000           0.00
-#> 194 Latin America and Caribbean         0.000000          0.0000           0.00
-#> 195 Latin America and Caribbean         8.560000          0.0000           8.56
+#> 193 Latin America and Caribbean        30.000000          0.0000          30.00
+#> 194                  South Asia       280.000000          0.0000         280.00
+#> 195                  South Asia         0.000000          0.0000           0.00
 #> 196                  South Asia         0.000000          0.0000           0.00
-#> 197 Latin America and Caribbean         0.000000          0.0000           0.00
+#> 197                  South Asia         0.000000          0.0000           0.00
 #> 198 Latin America and Caribbean         0.000000          0.0000           0.00
-#> 199 Latin America and Caribbean         0.000000          0.0000           0.00
-#> 200 Latin America and Caribbean         0.000000          0.0000           0.00
-#> 201 Latin America and Caribbean        19.284404          0.0000           0.00
-#> 202 Latin America and Caribbean        24.577982          0.0000           0.00
-#> 203 Latin America and Caribbean        21.000000          0.0000           0.00
-#> 204                  South Asia        25.000000          0.0000           0.00
-#> 205                  South Asia         1.160000          0.0000           0.00
-#> 206                  South Asia        18.000000          0.0000           0.00
-#> 207 Latin America and Caribbean        60.330000          0.0000           0.00
-#> 208                  South Asia        22.935780          0.0000           0.00
-#> 209 Latin America and Caribbean         1.000000          0.0000           0.00
-#> 210                  South Asia         1.300000          0.0000           0.00
-#> 211 Latin America and Caribbean         1.100000          0.0000           0.00
-#> 212                  South Asia         0.852516          0.0000           0.00
+#> 199 Latin America and Caribbean      2300.000000       2300.0000           0.00
+#> 200                  South Asia       131.000000        131.0000           0.00
+#> 201 Latin America and Caribbean         1.100000          0.0000           0.00
+#> 202                  South Asia         0.852516          0.0000           0.00
+#> 203 Latin America and Caribbean        19.284404          0.0000           0.00
+#> 204 Latin America and Caribbean        24.577982          0.0000           0.00
+#> 205 Latin America and Caribbean        21.000000          0.0000           0.00
+#> 206                  South Asia        25.000000          0.0000           0.00
+#> 207                  South Asia         1.160000          0.0000           0.00
+#> 208                  South Asia        18.000000          0.0000           0.00
+#> 209 Latin America and Caribbean        60.330000          0.0000           0.00
+#> 210                  South Asia        22.935780          0.0000           0.00
+#> 211                  South Asia         1.300000          0.0000           0.00
+#> 212 Latin America and Caribbean         1.000000          0.0000           0.00
 #>                lending_instrument
 #> 1   Program-for-Results Financing
 #> 2    Investment Project Financing
@@ -1083,8 +1083,8 @@ wb_project(country = c("BR", "IN"), status = c("active", "pipeline"))
 #> 14   Investment Project Financing
 #> 15   Investment Project Financing
 #> 16   Investment Project Financing
-#> 17     Development Policy Lending
-#> 18   Investment Project Financing
+#> 17   Investment Project Financing
+#> 18     Development Policy Lending
 #> 19   Investment Project Financing
 #> 20  Program-for-Results Financing
 #> 21   Investment Project Financing
@@ -1203,81 +1203,81 @@ wb_project(country = c("BR", "IN"), status = c("active", "pipeline"))
 #> 134  Investment Project Financing
 #> 135  Investment Project Financing
 #> 136                          <NA>
-#> 137 Program-for-Results Financing
+#> 137  Investment Project Financing
 #> 138  Investment Project Financing
 #> 139  Investment Project Financing
-#> 140  Investment Project Financing
-#> 141  Investment Project Financing
-#> 142  Investment Project Financing
-#> 143  Investment Project Financing
+#> 140                          <NA>
+#> 141    Development Policy Lending
+#> 142 Program-for-Results Financing
+#> 143    Development Policy Lending
 #> 144  Investment Project Financing
-#> 145 Program-for-Results Financing
-#> 146  Investment Project Financing
+#> 145  Investment Project Financing
+#> 146 Program-for-Results Financing
 #> 147  Investment Project Financing
-#> 148  Investment Project Financing
+#> 148    Development Policy Lending
 #> 149  Investment Project Financing
-#> 150                          <NA>
+#> 150 Program-for-Results Financing
 #> 151  Investment Project Financing
 #> 152  Investment Project Financing
-#> 153    Development Policy Lending
-#> 154  Investment Project Financing
-#> 155 Program-for-Results Financing
+#> 153 Program-for-Results Financing
+#> 154 Program-for-Results Financing
+#> 155  Investment Project Financing
 #> 156 Program-for-Results Financing
 #> 157  Investment Project Financing
 #> 158 Program-for-Results Financing
 #> 159  Investment Project Financing
 #> 160  Investment Project Financing
-#> 161 Program-for-Results Financing
-#> 162 Program-for-Results Financing
+#> 161  Investment Project Financing
+#> 162  Investment Project Financing
 #> 163  Investment Project Financing
-#> 164      Specific Investment Loan
-#> 165      Specific Investment Loan
+#> 164  Investment Project Financing
+#> 165  Investment Project Financing
 #> 166 Program-for-Results Financing
 #> 167  Investment Project Financing
-#> 168  Investment Project Financing
+#> 168      Specific Investment Loan
 #> 169 Program-for-Results Financing
-#> 170 Program-for-Results Financing
+#> 170  Investment Project Financing
 #> 171  Investment Project Financing
-#> 172  Investment Project Financing
-#> 173  Investment Project Financing
-#> 174 Program-for-Results Financing
+#> 172      Specific Investment Loan
+#> 173 Program-for-Results Financing
+#> 174  Investment Project Financing
 #> 175  Investment Project Financing
-#> 176  Investment Project Financing
+#> 176 Program-for-Results Financing
 #> 177  Investment Project Financing
-#> 178  Investment Project Financing
-#> 179  Investment Project Financing
-#> 180    Development Policy Lending
-#> 181    Development Policy Lending
-#> 182 Program-for-Results Financing
-#> 183    Development Policy Lending
-#> 184    Development Policy Lending
+#> 178 Program-for-Results Financing
+#> 179 Program-for-Results Financing
+#> 180  Investment Project Financing
+#> 181  Investment Project Financing
+#> 182  Investment Project Financing
+#> 183  Investment Project Financing
+#> 184  Investment Project Financing
 #> 185  Investment Project Financing
 #> 186  Investment Project Financing
-#> 187 Program-for-Results Financing
-#> 188 Program-for-Results Financing
+#> 187    Development Policy Lending
+#> 188    Development Policy Lending
 #> 189  Investment Project Financing
-#> 190 Program-for-Results Financing
+#> 190  Investment Project Financing
 #> 191  Investment Project Financing
 #> 192  Investment Project Financing
-#> 193 Program-for-Results Financing
-#> 194  Investment Project Financing
+#> 193  Investment Project Financing
+#> 194 Program-for-Results Financing
 #> 195  Investment Project Financing
 #> 196  Investment Project Financing
-#> 197  Investment Project Financing
+#> 197 Program-for-Results Financing
 #> 198  Investment Project Financing
-#> 199  Investment Project Financing
+#> 199 Program-for-Results Financing
 #> 200  Investment Project Financing
-#> 201  Investment Project Financing
+#> 201                          <NA>
 #> 202  Investment Project Financing
 #> 203  Investment Project Financing
 #> 204  Investment Project Financing
 #> 205  Investment Project Financing
 #> 206  Investment Project Financing
 #> 207  Investment Project Financing
-#> 208 Program-for-Results Financing
+#> 208  Investment Project Financing
 #> 209  Investment Project Financing
-#> 210      Specific Investment Loan
-#> 211                          <NA>
+#> 210 Program-for-Results Financing
+#> 211      Specific Investment Loan
 #> 212  Investment Project Financing
 #>                                                                                                              borrower
 #> 1                                                                                                                <NA>
@@ -1296,8 +1296,8 @@ wb_project(country = c("BR", "IN"), status = c("active", "pipeline"))
 #> 14                                                CIM - AMFRI (Foz do Rio Itaja� Region Consortium of Municipalities)
 #> 15                                                                                     Department of Economic Affairs
 #> 16                                                                                                Government of India
-#> 17                                                                                           State Government of Cear
-#> 18                                                                                                               <NA>
+#> 17                                                                                                               <NA>
+#> 18                                                                                           State Government of Cear
 #> 19                                                                                                      State of Piau
 #> 20                                                                                                              India
 #> 21                                                                                               State of Mato Grosso
@@ -1308,8 +1308,8 @@ wb_project(country = c("BR", "IN"), status = c("active", "pipeline"))
 #> 26                                                                                               STATE OF MATO GROSSO
 #> 27                                                                                                               <NA>
 #> 28                                                                                                     State of Piaui
-#> 29                                                                             State Secretariat of Planning (SEPLAN)
-#> 30                                                                                                      State of Acre
+#> 29                                                                                                      State of Acre
+#> 30                                                                             State Secretariat of Planning (SEPLAN)
 #> 31                                                                                                              India
 #> 32                                                                                                              India
 #> 33                                                                                                              India
@@ -1416,7 +1416,7 @@ wb_project(country = c("BR", "IN"), status = c("active", "pipeline"))
 #> 134                                                                                                              <NA>
 #> 135                                                                                                              <NA>
 #> 136                                                                                                              <NA>
-#> 137                                                                                               Ministry of Finance
+#> 137                                                                     Complexo Industrial Portuario de Pecem (CIPP)
 #> 138                                                                                                              <NA>
 #> 139                                                                                                              <NA>
 #> 140                                                                                                              <NA>
@@ -1424,38 +1424,38 @@ wb_project(country = c("BR", "IN"), status = c("active", "pipeline"))
 #> 142                                                                                                              <NA>
 #> 143                                                                                                              <NA>
 #> 144                                                                                                              <NA>
-#> 145                                                                                                              <NA>
+#> 145                                                                                                 State of Amazonas
 #> 146                                                                                                              <NA>
-#> 147                                                                                                              <NA>
+#> 147                                                                                                             India
 #> 148                                                                                                              <NA>
 #> 149                                                                                                              <NA>
-#> 150                                                                                                              <NA>
-#> 151                                                                     Complexo Industrial Portuario de Pecem (CIPP)
-#> 152                                                                                                             India
+#> 150                                                                                                 Republic of India
+#> 151                                                                                                              <NA>
+#> 152                                                                                                              <NA>
 #> 153                                                                                                              <NA>
 #> 154                                                                                                              <NA>
-#> 155                                                                                                 Republic of India
+#> 155                                                                                                              <NA>
 #> 156                                                                                                              <NA>
 #> 157                                                                                                              <NA>
 #> 158                                                                                                              <NA>
 #> 159                                                                                                              <NA>
 #> 160                                                                                                              <NA>
 #> 161                                                                                                              <NA>
-#> 162                                                                                                             India
+#> 162                                                                                                              <NA>
 #> 163                                                                                                              <NA>
 #> 164                                                                                                              <NA>
 #> 165                                                                                                              <NA>
-#> 166                                                                                                              <NA>
+#> 166                                                                                                             India
 #> 167                                                                                                              <NA>
-#> 168                                                               Ministry of Finance, Department of Economic Affairs
+#> 168                                                                                                              <NA>
 #> 169                                                                                               Ministry of Finance
 #> 170                                                                                                              <NA>
 #> 171                                                                                                              <NA>
 #> 172                                                                                                              <NA>
 #> 173                                                                                                              <NA>
 #> 174                                                                                                              <NA>
-#> 175                                                                                                              <NA>
-#> 176                                                                                                              <NA>
+#> 175                                                               Ministry of Finance, Department of Economic Affairs
+#> 176                                                                                               Ministry of Finance
 #> 177                                                                                                              <NA>
 #> 178                                                                                                              <NA>
 #> 179                                                                                                              <NA>
@@ -1465,12 +1465,12 @@ wb_project(country = c("BR", "IN"), status = c("active", "pipeline"))
 #> 183                                                                                                              <NA>
 #> 184                                                                                                              <NA>
 #> 185                                                                                                              <NA>
-#> 186                                                                                                 State of Amazonas
+#> 186                                                                                                              <NA>
 #> 187                                                                                                              <NA>
 #> 188                                                                                                              <NA>
 #> 189                                                                                                              <NA>
 #> 190                                                                                                              <NA>
-#> 191                                                                                               Government of India
+#> 191                                                                                                              <NA>
 #> 192                                                                                                              <NA>
 #> 193                                                                                                              <NA>
 #> 194                                                                                                              <NA>
@@ -1479,19 +1479,19 @@ wb_project(country = c("BR", "IN"), status = c("active", "pipeline"))
 #> 197                                                                                                              <NA>
 #> 198                                                                                                              <NA>
 #> 199                                                                                                              <NA>
-#> 200                                                                                                              <NA>
-#> 201 Fundo Brasileiro de Biodiversidade - FUNBIO, Fundacao Getulio Vargas - FGV, Conservacao Internacional - CI Brazil
-#> 202                                                                                                              IICA
-#> 203                                       Brazil - Deutsche Gesellschaft f�r Internationale Zusammenarbeit GmbH (GIZ)
-#> 204                                                                                        Government of India, India
-#> 205                                                                                                              <NA>
-#> 206                                                                                                              <NA>
-#> 207 Fundo Brasileiro de Biodiversidade - FUNBIO, Conserva��o Internacional - CI Brazil, Funda��o Get�lio Vargas - FGV
-#> 208                                                                                               State Bank of India
-#> 209                                                                                  Funda��o Pro-Natureza - FUNATURA
-#> 210                                                                                                              <NA>
+#> 200                                                                                               Government of India
+#> 201                                                                                                              <NA>
+#> 202                                                            Institute for Financial Management and Research (IFMR)
+#> 203 Fundo Brasileiro de Biodiversidade - FUNBIO, Fundacao Getulio Vargas - FGV, Conservacao Internacional - CI Brazil
+#> 204                                                                                                              IICA
+#> 205                                       Brazil - Deutsche Gesellschaft f�r Internationale Zusammenarbeit GmbH (GIZ)
+#> 206                                                                                        Government of India, India
+#> 207                                                                                                              <NA>
+#> 208                                                                                                              <NA>
+#> 209 Fundo Brasileiro de Biodiversidade - FUNBIO, Conserva��o Internacional - CI Brazil, Funda��o Get�lio Vargas - FGV
+#> 210                                                                                               State Bank of India
 #> 211                                                                                                              <NA>
-#> 212                                                            Institute for Financial Management and Research (IFMR)
+#> 212                                                                                  Funda��o Pro-Natureza - FUNATURA
 #>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          implementing_agency
 #> 1                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       <NA>
 #> 2                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     Department of Agriculture, Government of Uttar Pradesh
@@ -1509,8 +1509,8 @@ wb_project(country = c("BR", "IN"), status = c("active", "pipeline"))
 #> 14                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         Consorcio Intermunicipal Multifinalit�rio - AMFRI
 #> 15                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          Watershed Management Directorate
 #> 16                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                Uttarakhand State Disaster Management Authority, Government of Uttarakhand
-#> 17                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                State Secretary of Finance
-#> 18                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      <NA>
+#> 17                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      <NA>
+#> 18                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                State Secretary of Finance
 #> 19                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             Piau� State Secretariat for Planning (SEPLAN)
 #> 20                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        Public Works Roads Department, Government of Assam
 #> 21                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             State Secretary for Family Agriculture (SEAF)
@@ -1521,8 +1521,8 @@ wb_project(country = c("BR", "IN"), status = c("active", "pipeline"))
 #> 26                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    SECRETARIAT OF EDUCATION - MATO GROSSO
 #> 27                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       State Secretariat of Health (SESAPI), State Secretariat of Social Assistance, Labor and Human Rights (SASC), State Secretariat of Planning (SEPLAN)
 #> 28                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           Secretariat of Finance of Piaui
-#> 29                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       UGP
-#> 30                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             State Secretariat of Planning
+#> 29                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             State Secretariat of Planning
+#> 30                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       UGP
 #> 31                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      Cyber Corporation of Manipur Limited
 #> 32                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     Directorate of Energy, HimUrja, HPPCL (Himachal Pradesh Power Corporation Limited), HPSEBL (Himachal Pradesh State Electricity Board Limited), HPPTCL (Himachal Pradesh Power Transmission Corporation Limited), HPSLDC (Himachal Pradesh State Load Despatch Centre)
 #> 33                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     State of Chhattisgarh
@@ -1534,8 +1534,8 @@ wb_project(country = c("BR", "IN"), status = c("active", "pipeline"))
 #> 39                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      <NA>
 #> 40                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             Ministry of Fisheries, Animal Husbandry & Dairying, Department of Animal Husbandry & Dairying
 #> 41                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                DER-ES - Buildings and Roads Department of Esp�rito Santo, CEPDEC - State Coordination for Protection and Civil Defense, SEAMA - State Secretariat for the Environment and Water Resources
-#> 42                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  Finance Department, Government of Odisha
-#> 43                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              Rural Drinking Water and Sanitation Department, Government of Karnataka, Rural Development and Panchayat Department, Government of Karnataka
+#> 42                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              Rural Drinking Water and Sanitation Department, Government of Karnataka, Rural Development and Panchayat Department, Government of Karnataka
+#> 43                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  Finance Department, Government of Odisha
 #> 44                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            Flood and River Erosion Management Agency of Assam, Government of Assam, Water Resources Department, Assam State Disaster Management Authority
 #> 45                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           Banco do Brasil
 #> 46                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        Ahmedabad Municipal Corporation, Gujarat Urban Development Mission, Urban Development and Urban Housing Department
@@ -1629,7 +1629,7 @@ wb_project(country = c("BR", "IN"), status = c("active", "pipeline"))
 #> 134                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
 #> 135                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
 #> 136                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
-#> 137                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     Ministry of New and Renewable Energy
+#> 137                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   Complexo Industrial Portu�rio de Pec�m
 #> 138                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
 #> 139                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
 #> 140                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
@@ -1637,38 +1637,38 @@ wb_project(country = c("BR", "IN"), status = c("active", "pipeline"))
 #> 142                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
 #> 143                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
 #> 144                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
-#> 145                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
+#> 145                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                State Secretariat of Administration and Management (SEAD)
 #> 146                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
-#> 147                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
+#> 147                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        Government of Karnataka, Government of Tamil Nadu
 #> 148                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
 #> 149                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
-#> 150                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
-#> 151                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   Complexo Industrial Portu�rio de Pec�m
-#> 152                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        Government of Karnataka, Government of Tamil Nadu
+#> 150                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           Department of Environment, Forests, and Climate Change, State of Uttar Pradesh
+#> 151                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
+#> 152                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
 #> 153                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
 #> 154                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
-#> 155                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           Department of Environment, Forests, and Climate Change, State of Uttar Pradesh
+#> 155                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
 #> 156                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
 #> 157                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
 #> 158                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
 #> 159                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
 #> 160                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
 #> 161                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
-#> 162                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            Social Welfare & Women Empowerment Department
+#> 162                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
 #> 163                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
 #> 164                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
 #> 165                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
-#> 166                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
+#> 166                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            Social Welfare & Women Empowerment Department
 #> 167                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
-#> 168 Uttarakhand Jal Vidyut Nigam Ltd., Kerala State Electricity Board (KSEB), Tamil Nadu Generation and Distribution Corporation Limited (TANGEDCO), Government of Gujarat, Water Resources Department, Government of Chhattisgarh, Water Resources Department, Government of Kerala, Water Resources Department, Government of West Bengal, Irrigation and Waterways Department, Government of Uttar Pradesh, Irrigation and Water Resources Department, Meghalaya Power Generation Corporation Ltd. (MePGCL), Government of Maharasthra, Water Resources Department, Government of Manipur, Water Resources Department, Central Water Commission (CWC), Ministry of Jal Shakti, Government of Rajasthan, Water Resources Department, Government of Odisha, Water Resources Department, Government of Tamil Nadu, Water Resources Department, Government of Madhya Pradesh, Water Resources Department, Government of Karnataka, Water Resources Department
-#> 169                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                Government of West Bengal
+#> 168                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
+#> 169                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     Ministry of New and Renewable Energy
 #> 170                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
 #> 171                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
 #> 172                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
 #> 173                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
 #> 174                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
-#> 175                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
-#> 176                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
+#> 175 Uttarakhand Jal Vidyut Nigam Ltd., Kerala State Electricity Board (KSEB), Tamil Nadu Generation and Distribution Corporation Limited (TANGEDCO), Government of Gujarat, Water Resources Department, Government of Chhattisgarh, Water Resources Department, Government of Kerala, Water Resources Department, Government of West Bengal, Irrigation and Waterways Department, Government of Uttar Pradesh, Irrigation and Water Resources Department, Meghalaya Power Generation Corporation Ltd. (MePGCL), Government of Maharasthra, Water Resources Department, Government of Manipur, Water Resources Department, Central Water Commission (CWC), Ministry of Jal Shakti, Government of Rajasthan, Water Resources Department, Government of Odisha, Water Resources Department, Government of Tamil Nadu, Water Resources Department, Government of Madhya Pradesh, Water Resources Department, Government of Karnataka, Water Resources Department
+#> 176                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                Government of West Bengal
 #> 177                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
 #> 178                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
 #> 179                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
@@ -1678,12 +1678,12 @@ wb_project(country = c("BR", "IN"), status = c("active", "pipeline"))
 #> 183                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
 #> 184                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
 #> 185                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
-#> 186                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                State Secretariat of Administration and Management (SEAD)
+#> 186                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
 #> 187                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
 #> 188                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
 #> 189                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
 #> 190                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
-#> 191                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 Haryana Mass Rapid Transport Corporation Limited (HMRTC)
+#> 191                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
 #> 192                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
 #> 193                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
 #> 194                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
@@ -1692,19 +1692,19 @@ wb_project(country = c("BR", "IN"), status = c("active", "pipeline"))
 #> 197                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
 #> 198                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
 #> 199                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
-#> 200                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
-#> 201                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   Ministry of Environment - MMA, Funda��o Getulio Vargas
-#> 202                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            Minist�rio do Meio Ambiente (MMA), Minist�rio da Agricultura, Pecu�ria e Abastecimento (MAPA)
-#> 203                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        Ministry of Agriculture and  Livestock(MAPA), National Rural Learning Service, Ministry of Environment / Brazilian Forest Service
-#> 204                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      Small Industries Development Bank of India, EESL Energy Efficiency Services Limited
-#> 205                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
-#> 206                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
-#> 207                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                Funda��o Getulio Vargas, Ministry of Environment and Climate Change - MMA
-#> 208                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      State Bank of India
-#> 209                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  Ministry of Environment
-#> 210                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
+#> 200                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 Haryana Mass Rapid Transport Corporation Limited (HMRTC)
+#> 201                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
+#> 202                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      Jameel Poverty Action Lab (J-PAL) South Asia at the Institute for Financial Management and Research
+#> 203                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   Ministry of Environment - MMA, Funda��o Getulio Vargas
+#> 204                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            Minist�rio do Meio Ambiente (MMA), Minist�rio da Agricultura, Pecu�ria e Abastecimento (MAPA)
+#> 205                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        Ministry of Agriculture and  Livestock(MAPA), National Rural Learning Service, Ministry of Environment / Brazilian Forest Service
+#> 206                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      Small Industries Development Bank of India, EESL Energy Efficiency Services Limited
+#> 207                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
+#> 208                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
+#> 209                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                Funda��o Getulio Vargas, Ministry of Environment and Climate Change - MMA
+#> 210                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      State Bank of India
 #> 211                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <NA>
-#> 212                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      Jameel Poverty Action Lab (J-PAL) South Asia at the Institute for Financial Management and Research
+#> 212                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  Ministry of Environment
 #>                                                                              url
 #> 1   https://projects.worldbank.org/en/projects-operations/project-detail/P507508
 #> 2   https://projects.worldbank.org/en/projects-operations/project-detail/P178253
@@ -1722,8 +1722,8 @@ wb_project(country = c("BR", "IN"), status = c("active", "pipeline"))
 #> 14  https://projects.worldbank.org/en/projects-operations/project-detail/P178557
 #> 15  https://projects.worldbank.org/en/projects-operations/project-detail/P179357
 #> 16  https://projects.worldbank.org/en/projects-operations/project-detail/P179749
-#> 17  https://projects.worldbank.org/en/projects-operations/project-detail/P180497
-#> 18  https://projects.worldbank.org/en/projects-operations/project-detail/P500524
+#> 17  https://projects.worldbank.org/en/projects-operations/project-detail/P500524
+#> 18  https://projects.worldbank.org/en/projects-operations/project-detail/P180497
 #> 19  https://projects.worldbank.org/en/projects-operations/project-detail/P177474
 #> 20  https://projects.worldbank.org/en/projects-operations/project-detail/P178581
 #> 21  https://projects.worldbank.org/en/projects-operations/project-detail/P175723
@@ -1734,8 +1734,8 @@ wb_project(country = c("BR", "IN"), status = c("active", "pipeline"))
 #> 26  https://projects.worldbank.org/en/projects-operations/project-detail/P178993
 #> 27  https://projects.worldbank.org/en/projects-operations/project-detail/P178567
 #> 28  https://projects.worldbank.org/en/projects-operations/project-detail/P178663
-#> 29  https://projects.worldbank.org/en/projects-operations/project-detail/P179088
-#> 30  https://projects.worldbank.org/en/projects-operations/project-detail/P179046
+#> 29  https://projects.worldbank.org/en/projects-operations/project-detail/P179046
+#> 30  https://projects.worldbank.org/en/projects-operations/project-detail/P179088
 #> 31  https://projects.worldbank.org/en/projects-operations/project-detail/P176733
 #> 32  https://projects.worldbank.org/en/projects-operations/project-detail/P176032
 #> 33  https://projects.worldbank.org/en/projects-operations/project-detail/P179249
@@ -1747,8 +1747,8 @@ wb_project(country = c("BR", "IN"), status = c("active", "pipeline"))
 #> 39  https://projects.worldbank.org/en/projects-operations/project-detail/P178072
 #> 40  https://projects.worldbank.org/en/projects-operations/project-detail/P177671
 #> 41  https://projects.worldbank.org/en/projects-operations/project-detail/P176982
-#> 42  https://projects.worldbank.org/en/projects-operations/project-detail/P175811
-#> 43  https://projects.worldbank.org/en/projects-operations/project-detail/P179039
+#> 42  https://projects.worldbank.org/en/projects-operations/project-detail/P179039
+#> 43  https://projects.worldbank.org/en/projects-operations/project-detail/P175811
 #> 44  https://projects.worldbank.org/en/projects-operations/project-detail/P174593
 #> 45  https://projects.worldbank.org/en/projects-operations/project-detail/P178888
 #> 46  https://projects.worldbank.org/en/projects-operations/project-detail/P175728
@@ -1842,82 +1842,82 @@ wb_project(country = c("BR", "IN"), status = c("active", "pipeline"))
 #> 134 https://projects.worldbank.org/en/projects-operations/project-detail/P500380
 #> 135 https://projects.worldbank.org/en/projects-operations/project-detail/P502493
 #> 136 https://projects.worldbank.org/en/projects-operations/project-detail/P110539
-#> 137 https://projects.worldbank.org/en/projects-operations/project-detail/P180716
-#> 138 https://projects.worldbank.org/en/projects-operations/project-detail/P504276
-#> 139 https://projects.worldbank.org/en/projects-operations/project-detail/P500570
-#> 140 https://projects.worldbank.org/en/projects-operations/project-detail/P500168
-#> 141 https://projects.worldbank.org/en/projects-operations/project-detail/P506320
-#> 142 https://projects.worldbank.org/en/projects-operations/project-detail/P500431
-#> 143 https://projects.worldbank.org/en/projects-operations/project-detail/P508453
-#> 144 https://projects.worldbank.org/en/projects-operations/project-detail/P504897
-#> 145 https://projects.worldbank.org/en/projects-operations/project-detail/P503872
-#> 146 https://projects.worldbank.org/en/projects-operations/project-detail/P506340
-#> 147 https://projects.worldbank.org/en/projects-operations/project-detail/P507236
-#> 148 https://projects.worldbank.org/en/projects-operations/project-detail/P500469
-#> 149 https://projects.worldbank.org/en/projects-operations/project-detail/P501071
-#> 150 https://projects.worldbank.org/en/projects-operations/project-detail/P105370
-#> 151 https://projects.worldbank.org/en/projects-operations/project-detail/P181511
-#> 152 https://projects.worldbank.org/en/projects-operations/project-detail/P180932
-#> 153 https://projects.worldbank.org/en/projects-operations/project-detail/P505235
-#> 154 https://projects.worldbank.org/en/projects-operations/project-detail/P507629
-#> 155 https://projects.worldbank.org/en/projects-operations/project-detail/P178053
-#> 156 https://projects.worldbank.org/en/projects-operations/project-detail/P500564
-#> 157 https://projects.worldbank.org/en/projects-operations/project-detail/P505590
-#> 158 https://projects.worldbank.org/en/projects-operations/project-detail/P506976
-#> 159 https://projects.worldbank.org/en/projects-operations/project-detail/P181767
-#> 160 https://projects.worldbank.org/en/projects-operations/project-detail/P506329
-#> 161 https://projects.worldbank.org/en/projects-operations/project-detail/P508489
-#> 162 https://projects.worldbank.org/en/projects-operations/project-detail/P180699
-#> 163 https://projects.worldbank.org/en/projects-operations/project-detail/P507340
-#> 164 https://projects.worldbank.org/en/projects-operations/project-detail/P114890
-#> 165 https://projects.worldbank.org/en/projects-operations/project-detail/P114896
-#> 166 https://projects.worldbank.org/en/projects-operations/project-detail/P502491
-#> 167 https://projects.worldbank.org/en/projects-operations/project-detail/P504253
-#> 168 https://projects.worldbank.org/en/projects-operations/project-detail/P181524
-#> 169 https://projects.worldbank.org/en/projects-operations/project-detail/P181244
-#> 170 https://projects.worldbank.org/en/projects-operations/project-detail/P500151
-#> 171 https://projects.worldbank.org/en/projects-operations/project-detail/P502499
-#> 172 https://projects.worldbank.org/en/projects-operations/project-detail/P505563
-#> 173 https://projects.worldbank.org/en/projects-operations/project-detail/P507628
-#> 174 https://projects.worldbank.org/en/projects-operations/project-detail/P508719
-#> 175 https://projects.worldbank.org/en/projects-operations/project-detail/P179349
-#> 176 https://projects.worldbank.org/en/projects-operations/project-detail/P504543
-#> 177 https://projects.worldbank.org/en/projects-operations/project-detail/P505914
-#> 178 https://projects.worldbank.org/en/projects-operations/project-detail/P509041
-#> 179 https://projects.worldbank.org/en/projects-operations/project-detail/P506142
-#> 180 https://projects.worldbank.org/en/projects-operations/project-detail/P500614
-#> 181 https://projects.worldbank.org/en/projects-operations/project-detail/P506861
-#> 182 https://projects.worldbank.org/en/projects-operations/project-detail/P506272
-#> 183 https://projects.worldbank.org/en/projects-operations/project-detail/P506321
-#> 184 https://projects.worldbank.org/en/projects-operations/project-detail/P173090
-#> 185 https://projects.worldbank.org/en/projects-operations/project-detail/P505177
-#> 186 https://projects.worldbank.org/en/projects-operations/project-detail/P181608
-#> 187 https://projects.worldbank.org/en/projects-operations/project-detail/P508025
-#> 188 https://projects.worldbank.org/en/projects-operations/project-detail/P507910
-#> 189 https://projects.worldbank.org/en/projects-operations/project-detail/P504899
-#> 190 https://projects.worldbank.org/en/projects-operations/project-detail/P500501
-#> 191 https://projects.worldbank.org/en/projects-operations/project-detail/P181020
-#> 192 https://projects.worldbank.org/en/projects-operations/project-detail/P500252
-#> 193 https://projects.worldbank.org/en/projects-operations/project-detail/P508840
-#> 194 https://projects.worldbank.org/en/projects-operations/project-detail/P506955
-#> 195 https://projects.worldbank.org/en/projects-operations/project-detail/P504126
-#> 196 https://projects.worldbank.org/en/projects-operations/project-detail/P507066
-#> 197 https://projects.worldbank.org/en/projects-operations/project-detail/P508221
-#> 198 https://projects.worldbank.org/en/projects-operations/project-detail/P507029
-#> 199 https://projects.worldbank.org/en/projects-operations/project-detail/P508202
-#> 200 https://projects.worldbank.org/en/projects-operations/project-detail/P508363
-#> 201 https://projects.worldbank.org/en/projects-operations/project-detail/P171257
-#> 202 https://projects.worldbank.org/en/projects-operations/project-detail/P172497
-#> 203 https://projects.worldbank.org/en/projects-operations/project-detail/P164602
-#> 204 https://projects.worldbank.org/en/projects-operations/project-detail/P132620
-#> 205 https://projects.worldbank.org/en/projects-operations/project-detail/P122387
-#> 206 https://projects.worldbank.org/en/projects-operations/project-detail/P128921
-#> 207 https://projects.worldbank.org/en/projects-operations/project-detail/P158000
-#> 208 https://projects.worldbank.org/en/projects-operations/project-detail/P160018
-#> 209 https://projects.worldbank.org/en/projects-operations/project-detail/P152285
-#> 210 https://projects.worldbank.org/en/projects-operations/project-detail/P009585
-#> 211 https://projects.worldbank.org/en/projects-operations/project-detail/P073882
-#> 212 https://projects.worldbank.org/en/projects-operations/project-detail/P177159
+#> 137 https://projects.worldbank.org/en/projects-operations/project-detail/P181511
+#> 138 https://projects.worldbank.org/en/projects-operations/project-detail/P500469
+#> 139 https://projects.worldbank.org/en/projects-operations/project-detail/P501071
+#> 140 https://projects.worldbank.org/en/projects-operations/project-detail/P105370
+#> 141 https://projects.worldbank.org/en/projects-operations/project-detail/P173090
+#> 142 https://projects.worldbank.org/en/projects-operations/project-detail/P506272
+#> 143 https://projects.worldbank.org/en/projects-operations/project-detail/P506321
+#> 144 https://projects.worldbank.org/en/projects-operations/project-detail/P505177
+#> 145 https://projects.worldbank.org/en/projects-operations/project-detail/P181608
+#> 146 https://projects.worldbank.org/en/projects-operations/project-detail/P508025
+#> 147 https://projects.worldbank.org/en/projects-operations/project-detail/P180932
+#> 148 https://projects.worldbank.org/en/projects-operations/project-detail/P505235
+#> 149 https://projects.worldbank.org/en/projects-operations/project-detail/P507629
+#> 150 https://projects.worldbank.org/en/projects-operations/project-detail/P178053
+#> 151 https://projects.worldbank.org/en/projects-operations/project-detail/P181767
+#> 152 https://projects.worldbank.org/en/projects-operations/project-detail/P506329
+#> 153 https://projects.worldbank.org/en/projects-operations/project-detail/P508489
+#> 154 https://projects.worldbank.org/en/projects-operations/project-detail/P500564
+#> 155 https://projects.worldbank.org/en/projects-operations/project-detail/P505590
+#> 156 https://projects.worldbank.org/en/projects-operations/project-detail/P506976
+#> 157 https://projects.worldbank.org/en/projects-operations/project-detail/P500252
+#> 158 https://projects.worldbank.org/en/projects-operations/project-detail/P508840
+#> 159 https://projects.worldbank.org/en/projects-operations/project-detail/P506955
+#> 160 https://projects.worldbank.org/en/projects-operations/project-detail/P504126
+#> 161 https://projects.worldbank.org/en/projects-operations/project-detail/P507066
+#> 162 https://projects.worldbank.org/en/projects-operations/project-detail/P508221
+#> 163 https://projects.worldbank.org/en/projects-operations/project-detail/P507029
+#> 164 https://projects.worldbank.org/en/projects-operations/project-detail/P508202
+#> 165 https://projects.worldbank.org/en/projects-operations/project-detail/P508363
+#> 166 https://projects.worldbank.org/en/projects-operations/project-detail/P180699
+#> 167 https://projects.worldbank.org/en/projects-operations/project-detail/P507340
+#> 168 https://projects.worldbank.org/en/projects-operations/project-detail/P114890
+#> 169 https://projects.worldbank.org/en/projects-operations/project-detail/P180716
+#> 170 https://projects.worldbank.org/en/projects-operations/project-detail/P504276
+#> 171 https://projects.worldbank.org/en/projects-operations/project-detail/P500570
+#> 172 https://projects.worldbank.org/en/projects-operations/project-detail/P114896
+#> 173 https://projects.worldbank.org/en/projects-operations/project-detail/P502491
+#> 174 https://projects.worldbank.org/en/projects-operations/project-detail/P504253
+#> 175 https://projects.worldbank.org/en/projects-operations/project-detail/P181524
+#> 176 https://projects.worldbank.org/en/projects-operations/project-detail/P181244
+#> 177 https://projects.worldbank.org/en/projects-operations/project-detail/P502499
+#> 178 https://projects.worldbank.org/en/projects-operations/project-detail/P500151
+#> 179 https://projects.worldbank.org/en/projects-operations/project-detail/P508719
+#> 180 https://projects.worldbank.org/en/projects-operations/project-detail/P505563
+#> 181 https://projects.worldbank.org/en/projects-operations/project-detail/P507628
+#> 182 https://projects.worldbank.org/en/projects-operations/project-detail/P179349
+#> 183 https://projects.worldbank.org/en/projects-operations/project-detail/P504543
+#> 184 https://projects.worldbank.org/en/projects-operations/project-detail/P505914
+#> 185 https://projects.worldbank.org/en/projects-operations/project-detail/P509041
+#> 186 https://projects.worldbank.org/en/projects-operations/project-detail/P506142
+#> 187 https://projects.worldbank.org/en/projects-operations/project-detail/P500614
+#> 188 https://projects.worldbank.org/en/projects-operations/project-detail/P506861
+#> 189 https://projects.worldbank.org/en/projects-operations/project-detail/P500168
+#> 190 https://projects.worldbank.org/en/projects-operations/project-detail/P506320
+#> 191 https://projects.worldbank.org/en/projects-operations/project-detail/P500431
+#> 192 https://projects.worldbank.org/en/projects-operations/project-detail/P508453
+#> 193 https://projects.worldbank.org/en/projects-operations/project-detail/P504897
+#> 194 https://projects.worldbank.org/en/projects-operations/project-detail/P503872
+#> 195 https://projects.worldbank.org/en/projects-operations/project-detail/P506340
+#> 196 https://projects.worldbank.org/en/projects-operations/project-detail/P507236
+#> 197 https://projects.worldbank.org/en/projects-operations/project-detail/P507910
+#> 198 https://projects.worldbank.org/en/projects-operations/project-detail/P504899
+#> 199 https://projects.worldbank.org/en/projects-operations/project-detail/P500501
+#> 200 https://projects.worldbank.org/en/projects-operations/project-detail/P181020
+#> 201 https://projects.worldbank.org/en/projects-operations/project-detail/P073882
+#> 202 https://projects.worldbank.org/en/projects-operations/project-detail/P177159
+#> 203 https://projects.worldbank.org/en/projects-operations/project-detail/P171257
+#> 204 https://projects.worldbank.org/en/projects-operations/project-detail/P172497
+#> 205 https://projects.worldbank.org/en/projects-operations/project-detail/P164602
+#> 206 https://projects.worldbank.org/en/projects-operations/project-detail/P132620
+#> 207 https://projects.worldbank.org/en/projects-operations/project-detail/P122387
+#> 208 https://projects.worldbank.org/en/projects-operations/project-detail/P128921
+#> 209 https://projects.worldbank.org/en/projects-operations/project-detail/P158000
+#> 210 https://projects.worldbank.org/en/projects-operations/project-detail/P160018
+#> 211 https://projects.worldbank.org/en/projects-operations/project-detail/P009585
+#> 212 https://projects.worldbank.org/en/projects-operations/project-detail/P152285
 
 # look up specific projects
 wb_project(id = c("P163868", "P180429"))

@@ -23,6 +23,8 @@
 
 ### New features
 
+- Progress bars for slow paginated requests can now be turned off with
+  `options(worldbank.progress = FALSE)`.
 - [`wb_country()`](https://m-muecke.github.io/worldbank/reference/wb_country.md)
   gains `region`, `income_level`, and `lending_type` arguments to filter
   countries server-side instead of downloading the full list.

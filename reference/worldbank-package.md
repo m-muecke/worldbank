@@ -7,6 +7,18 @@ API. See
 <https://datahelpdesk.worldbank.org/knowledgebase/articles/889386-developer-information-overview>
 for further details.
 
+## Options
+
+- `worldbank.cache`: Cache API responses on disk. Default `FALSE`. See
+  [`wb_cache_dir()`](https://m-muecke.github.io/worldbank/reference/cache.md).
+
+- `worldbank.cache_max_age`: Maximum age of cached responses in seconds.
+  Default `86400` (1 day).
+
+- `worldbank.progress`: Show a progress bar for paginated requests that
+  take longer than a few seconds. Default `TRUE`. Set to `FALSE` to hide
+  it.
+
 ## See also
 
 Useful links:
