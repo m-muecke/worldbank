@@ -55,9 +55,10 @@ A \code{data.frame()} with World Bank document data. The columns are:
 \item \code{title}: The document title.
 \item \code{type}: The document type.
 \item \code{major_type}: The major document type.
-\item \code{country_code}: The ISO country code.
-\item \code{country}: The country name.
-\item \code{region}: The administrative region name.
+\item \code{country_code}: The ISO country codes, separated by \verb{;} if there are several.
+\item \code{country}: The country names, as returned by the API. Names are separated by \verb{,} if there are
+several, but since names can contain commas themselves, use \code{country_code} to split them.
+\item \code{region}: The administrative region names, separated by \verb{;} if there are several.
 \item \code{language}: The document language.
 \item \code{date}: The document date.
 \item \code{report_number}: The report number.

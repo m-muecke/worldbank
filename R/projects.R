@@ -29,7 +29,7 @@
 #' * `status`: The project status.
 #' * `approval_date`: The board approval date.
 #' * `closing_date`: The closing date.
-#' * `country_code`: The ISO country code.
+#' * `country_code`: The ISO country codes, separated by `;` if there are several.
 #' * `country`: The country name.
 #' * `region`: The region name.
 #' * `total_commitment`: The total commitment amount in millions USD.

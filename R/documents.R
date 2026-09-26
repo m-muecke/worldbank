@@ -28,9 +28,10 @@
 #' * `title`: The document title.
 #' * `type`: The document type.
 #' * `major_type`: The major document type.
-#' * `country_code`: The ISO country code.
-#' * `country`: The country name.
-#' * `region`: The administrative region name.
+#' * `country_code`: The ISO country codes, separated by `;` if there are several.
+#' * `country`: The country names, as returned by the API. Names are separated by `,` if there are
+#'   several, but since names can contain commas themselves, use `country_code` to split them.
+#' * `region`: The administrative region names, separated by `;` if there are several.
 #' * `language`: The document language.
 #' * `date`: The document date.
 #' * `report_number`: The report number.
@@ -164,6 +165,7 @@ parse_documents <- function(data) {
     check.names = FALSE
   )
   res$date <- as.Date(sub("T.*", "", res$date))
+  res$country_code <- gsub(",", ";", res$country_code, fixed = TRUE)
   res$project_id <- gsub(",", ";", res$project_id, fixed = TRUE)
   clean_strings(res)
 }

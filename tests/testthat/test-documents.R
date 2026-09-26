@@ -15,9 +15,10 @@ test_that("wb_document", {
   }
 })
 
-test_that("parse_documents keeps every project ID", {
-  actual <- parse_documents(list(list(projectid = "P163618,P156362,P157197")))
-  expect_identical(actual$project_id, "P163618;P156362;P157197")
+test_that("parse_documents separates multiple country codes and project IDs with `;`", {
+  actual <- parse_documents(list(list(countrycode = "1W,MK", projectid = "P163618,P156362")))
+  expect_identical(actual$country_code, "1W;MK")
+  expect_identical(actual$project_id, "P163618;P156362")
 })
 
 test_that("wb_document returns an empty data.frame when nothing matches", {
