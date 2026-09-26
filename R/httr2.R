@@ -3,7 +3,7 @@ wb_user_agent <- function() {
 }
 
 wb_progress <- function() {
-  getOption("worldbank.progress", TRUE)
+  isTRUE(getOption("worldbank.progress", TRUE))
 }
 
 req_wb_retry <- function(req) {
