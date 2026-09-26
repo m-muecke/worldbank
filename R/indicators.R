@@ -525,6 +525,11 @@ read_wdi <- function(dir) {
 #'   End date to query, in the same format as start_date. Default `NULL`.
 #' @param mrv (`NULL` | `integer(1)`)\cr
 #'   Most recent values to return. An alternative to `start_date`/`end_date`. Default `NULL`.
+#' @param mrnev (`NULL` | `integer(1)`)\cr
+#'   Most recent non-empty values to return for each country. Unlike `mrv`, which returns the
+#'   same most recent dates for every country and drops countries without a value for them, the
+#'   dates can differ between countries. An alternative to `start_date`/`end_date` and `mrv`.
+#'   Default `NULL`.
 #' @param gapfill (`logical(1)`)\cr
 #'   Whether to fill missing values by carrying forward the last available value. Only used when
 #'   `mrv` is set. Default `FALSE`.
@@ -567,6 +572,10 @@ read_wdi <- function(dir) {
 #' )
 #' head(ind)
 #'
+#' # latest available poverty rate for each country, even if from different years
+#' ind <- wb_data("SI.POV.DDAY", c("ALB", "BRA", "IND"), mrnev = 1)
+#' ind[c("country_code", "date", "value")]
+#'
 #' # include the per-observation footnotes
 #' ind <- wb_data("SI.POV.DDAY", "ALB", footnote = TRUE)
 #' head(ind[c("date", "value", "footnote")])
@@ -582,6 +591,7 @@ wb_data <- function(
   start_date = NULL,
   end_date = NULL,
   mrv = NULL,
+  mrnev = NULL,
   gapfill = FALSE,
   footnote = FALSE,
   source = NULL
@@ -592,6 +602,7 @@ wb_data <- function(
     is_dateish(start_date, null_ok = TRUE),
     is_dateish(end_date, null_ok = TRUE),
     is_count(mrv, null_ok = TRUE),
+    is_count(mrnev, null_ok = TRUE),
     is_flag(gapfill),
     is_flag(footnote),
     is_count(source, null_ok = TRUE)
@@ -603,6 +614,12 @@ wb_data <- function(
   }
   if (!is.null(mrv) && (has_start_date || has_end_date)) {
     stop("`mrv` cannot be used together with `start_date`/`end_date`.", call. = FALSE)
+  }
+  if (!is.null(mrnev) && (has_start_date || has_end_date)) {
+    stop("`mrnev` cannot be used together with `start_date`/`end_date`.", call. = FALSE)
+  }
+  if (!is.null(mrv) && !is.null(mrnev)) {
+    stop("`mrv` and `mrnev` cannot be used together.", call. = FALSE)
   }
   if (gapfill && is.null(mrv)) {
     stop("`gapfill = TRUE` requires `mrv` to be set.", call. = FALSE)
@@ -618,6 +635,7 @@ wb_data <- function(
       lang = lang,
       date = date,
       mrv = mrv,
+      mrnev = mrnev,
       gapfill = if (gapfill) "Y",
       footnote = if (footnote) "Y",
       source = source
@@ -648,7 +666,7 @@ parse_country_indicator <- function(data, footnote = FALSE) {
     country_name = map_chr(data, \(x) x$country$value),
     country_code = map_chr(data, "countryiso3code"),
     value = map_dbl(data, "value"),
-    unit = map_chr(data, "unit"),
+    unit = map_chr(data, \(x) x$unit %||% NA_character_),
     obs_status = map_chr(data, "obs_status"),
     decimal = map_int(data, "decimal"),
     check.names = FALSE

@@ -507,6 +507,24 @@ test_that("wb_data passes source to the API", {
   expect_identical(captured, 11)
 })
 
+test_that("wb_data passes mrnev to the API", {
+  captured <- NULL
+  local_mocked_bindings(worldbank = function(...) {
+    captured <<- list(...)$mrnev
+    list(wb_observation())
+  })
+  wb_data("SI.POV.DDAY", "ALB", mrnev = 1)
+  expect_identical(captured, 1)
+})
+
+test_that("wb_data handles observations without a unit", {
+  obs <- wb_observation()
+  obs$unit <- NULL
+  local_mocked_bindings(worldbank = \(...) list(obs))
+  actual <- wb_data("SI.POV.DDAY", "ALB", mrnev = 1)
+  expect_identical(actual$unit, NA_character_)
+})
+
 test_that("wb_data mrv and gapfill validation works", {
   expect_error(wb_data(mrv = 3, start_date = 2020), "mrv")
   expect_error(wb_data(mrv = 3, end_date = 2020), "mrv")
@@ -517,6 +535,12 @@ test_that("wb_data mrv and gapfill validation works", {
   expect_error(wb_data(footnote = NA))
   expect_snapshot(wb_data(source = 0), error = TRUE)
   expect_snapshot(wb_data(source = "2"), error = TRUE)
+})
+
+test_that("wb_data mrnev validation works", {
+  expect_snapshot(wb_data(mrnev = 0), error = TRUE)
+  expect_snapshot(wb_data(mrnev = 1, start_date = 2020), error = TRUE)
+  expect_snapshot(wb_data(mrnev = 1, mrv = 1), error = TRUE)
 })
 
 test_that("worldbank fetches every page", {

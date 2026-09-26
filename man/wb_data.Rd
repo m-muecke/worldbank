@@ -15,6 +15,7 @@ wb_data(
   start_date = NULL,
   end_date = NULL,
   mrv = NULL,
+  mrnev = NULL,
   gapfill = FALSE,
   footnote = FALSE,
   source = NULL
@@ -27,6 +28,7 @@ wb_country_indicator(
   start_date = NULL,
   end_date = NULL,
   mrv = NULL,
+  mrnev = NULL,
   gapfill = FALSE,
   footnote = FALSE,
   source = NULL
@@ -55,6 +57,12 @@ End date to query, in the same format as start_date. Default \code{NULL}.}
 
 \item{mrv}{(\code{NULL} | \code{integer(1)})\cr
 Most recent values to return. An alternative to \code{start_date}/\code{end_date}. Default \code{NULL}.}
+
+\item{mrnev}{(\code{NULL} | \code{integer(1)})\cr
+Most recent non-empty values to return for each country. Unlike \code{mrv}, which returns the
+same most recent dates for every country and drops countries without a value for them, the
+dates can differ between countries. An alternative to \code{start_date}/\code{end_date} and \code{mrv}.
+Default \code{NULL}.}
 
 \item{gapfill}{(\code{logical(1)})\cr
 Whether to fill missing values by carrying forward the last available value. Only used when
@@ -105,6 +113,10 @@ ind <- wb_data(
   start_date = 2015, end_date = 2023
 )
 head(ind)
+
+# latest available poverty rate for each country, even if from different years
+ind <- wb_data("SI.POV.DDAY", c("ALB", "BRA", "IND"), mrnev = 1)
+ind[c("country_code", "date", "value")]
 
 # include the per-observation footnotes
 ind <- wb_data("SI.POV.DDAY", "ALB", footnote = TRUE)

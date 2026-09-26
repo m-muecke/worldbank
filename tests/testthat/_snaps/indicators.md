@@ -70,6 +70,30 @@
       Error in `wb_data()`:
       ! is_count(source, null_ok = TRUE) is not TRUE
 
+# wb_data mrnev validation works
+
+    Code
+      wb_data(mrnev = 0)
+    Condition
+      Error in `wb_data()`:
+      ! is_count(mrnev, null_ok = TRUE) is not TRUE
+
+---
+
+    Code
+      wb_data(mrnev = 1, start_date = 2020)
+    Condition
+      Error:
+      ! `mrnev` cannot be used together with `start_date`/`end_date`.
+
+---
+
+    Code
+      wb_data(mrnev = 1, mrv = 1)
+    Condition
+      Error:
+      ! `mrv` and `mrnev` cannot be used together.
+
 # error parsing works
 
     Code
