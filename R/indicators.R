@@ -690,6 +690,9 @@ parse_country_indicator <- function(data, footnote = FALSE) {
     decimal = map_int(data, "decimal"),
     check.names = FALSE
   )
+  # some sources leave `countryiso3code` empty and put the ISO3 code in `country$id`
+  missing <- !nzchar(res$country_code) & nchar(res$country_id) == 3L
+  res$country_code[missing] <- res$country_id[missing]
   if (footnote) {
     res$footnote <- map_chr(data, \(x) x$footnote %||% NA_character_)
   }

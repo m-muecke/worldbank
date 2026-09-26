@@ -507,6 +507,20 @@ test_that("wb_data passes source to the API", {
   expect_identical(captured, 11)
 })
 
+test_that("wb_data falls back to the country ID for missing ISO3 codes", {
+  observation <- function(id, iso3) {
+    obs <- wb_observation()
+    obs$country$id <- id
+    obs$countryiso3code <- iso3
+    obs
+  }
+  local_mocked_bindings(
+    worldbank = \(...) list(observation("ZAF", ""), observation("XD", ""), wb_observation())
+  )
+  actual <- wb_data("NY.GDP.MKTP.CD", "ZAF", source = 11)
+  expect_identical(actual$country_code, c("ZAF", NA, "ALB"))
+})
+
 test_that("wb_data passes mrnev to the API", {
   captured <- NULL
   local_mocked_bindings(worldbank = function(...) {
