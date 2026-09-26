@@ -52,6 +52,8 @@
   as listed by
   [`wb_source()`](https://m-muecke.github.io/worldbank/reference/wb_source.md).
 - [`wb_project()`](https://m-muecke.github.io/worldbank/reference/wb_project.md)
+  gains a `limit` argument to cap the number of projects returned.
+- [`wb_project()`](https://m-muecke.github.io/worldbank/reference/wb_project.md)
   is now several times faster, since it only requests the fields it
   returns.
 
