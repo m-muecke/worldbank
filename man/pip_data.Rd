@@ -27,7 +27,9 @@ pip_data(
 Countries for which statistics are to be computed, specified as ISO3 codes. Default \code{NULL}.}
 
 \item{year}{(\code{NULL} | \code{character()} | \code{numeric()})\cr
-Years for which statistics are to be computed, specified as YYYY. Default \code{NULL}.}
+Years for which statistics are to be computed, specified as YYYY, or \code{"all"} for every
+available year or \code{"MRV"} for the most recent year. Default \code{NULL}, which returns every
+available year.}
 
 \item{povline}{(\code{NULL} | \code{numeric(1)})\cr
 Poverty line to be used to compute poverty measures, between \code{0} and \code{2700}. Poverty lines

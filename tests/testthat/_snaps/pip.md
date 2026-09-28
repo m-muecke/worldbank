@@ -49,3 +49,26 @@
       Error in `pip_group()`:
       ! is_version(ppp_version, 4L, null_ok = TRUE) is not TRUE
 
+# PIP year rejects invalid values
+
+    Code
+      pip_data(year = "latest")
+    Condition
+      Error in `pip_data()`:
+      ! is_pip_year(year) is not TRUE
+    Code
+      pip_data(year = c("2019", "MRV"))
+    Condition
+      Error in `pip_data()`:
+      ! is_pip_year(year) is not TRUE
+    Code
+      pip_data(year = 19)
+    Condition
+      Error in `pip_data()`:
+      ! is_pip_year(year) is not TRUE
+    Code
+      pip_group(year = "2019a")
+    Condition
+      Error in `pip_group()`:
+      ! is_pip_year(year) is not TRUE
+

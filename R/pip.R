@@ -3,7 +3,9 @@
 #' @param country (`NULL` | `character()`)\cr
 #'   Countries for which statistics are to be computed, specified as ISO3 codes. Default `NULL`.
 #' @param year (`NULL` | `character()` | `numeric()`)\cr
-#'   Years for which statistics are to be computed, specified as YYYY. Default `NULL`.
+#'   Years for which statistics are to be computed, specified as YYYY, or `"all"` for every
+#'   available year or `"MRV"` for the most recent year. Default `NULL`, which returns every
+#'   available year.
 #' @param povline (`NULL` | `numeric(1)`)\cr
 #'   Poverty line to be used to compute poverty measures, between `0` and `2700`. Poverty lines
 #'   are only accepted up to 3 decimals. Default `NULL`, which uses the international poverty
@@ -56,7 +58,7 @@ pip_data <- function(
   year <- year %&&% as.character(year)
   stopifnot(
     is_character(country, null_ok = TRUE, n_chars = 3L),
-    is_character(year, n_chars = 4L, pattern = "[0-9]{4}", null_ok = TRUE),
+    is_pip_year(year),
     is_number(povline, lower = 0, upper = 2700, null_ok = TRUE),
     is_number(popshare, lower = 0, upper = 1, null_ok = TRUE),
     is_flag(fill_gaps),
@@ -161,7 +163,7 @@ pip_group <- function(
   year <- year %&&% as.character(year)
   stopifnot(
     is_character(country, null_ok = TRUE, n_chars = 3L),
-    is_character(year, n_chars = 4L, pattern = "[0-9]{4}", null_ok = TRUE),
+    is_pip_year(year),
     is_number(povline, lower = 0, upper = 2700, null_ok = TRUE),
     is_number(popshare, lower = 0, upper = 1, null_ok = TRUE),
     is_flag(fill_gaps),
@@ -353,6 +355,12 @@ pip_info <- function() {
 pip_health_check <- function() {
   msg <- pip("health-check", format = "json")
   msg[[1L]]
+}
+
+is_pip_year <- function(x) {
+  is.null(x) ||
+    is_character(x, pattern = "^[0-9]{4}$") ||
+    is_string(x, pattern = "^(all|mrv)$", ignore.case = TRUE)
 }
 
 pip_error_body <- function(resp) {

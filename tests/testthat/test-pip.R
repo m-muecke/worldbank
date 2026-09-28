@@ -76,6 +76,34 @@ test_that("PIP version inputs reject values that are not 8 or 4 digits", {
   })
 })
 
+test_that("PIP year accepts years and the all and MRV keywords", {
+  urls <- character()
+  httr2::local_mocked_responses(function(req) {
+    urls <<- c(urls, req$url)
+    httr2::response(
+      status_code = 200L,
+      headers = list("content-type" = "text/csv"),
+      body = charToRaw("country_code\nZAF\n")
+    )
+  })
+
+  pip_data("ZAF", year = c(2019, 2020))
+  pip_data("ZAF", year = "MRV")
+  pip_data("ZAF", year = "all")
+  pip_group("SSF", year = "mrv")
+  years <- regmatches(urls, regexpr("year=[^&]+", urls))
+  expect_identical(years, c("year=2019,2020", "year=MRV", "year=all", "year=mrv"))
+})
+
+test_that("PIP year rejects invalid values", {
+  expect_snapshot(error = TRUE, {
+    pip_data(year = "latest")
+    pip_data(year = c("2019", "MRV"))
+    pip_data(year = 19)
+    pip_group(year = "2019a")
+  })
+})
+
 test_that("pip_cp basic checks", {
   skip_if_offline()
   skip_on_cran()
