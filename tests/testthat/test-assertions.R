@@ -44,3 +44,24 @@ test_that("is_version accepts digits as string or number", {
   ))
   expect_true(is_version(NULL, 4L, null_ok = TRUE))
 })
+
+test_that("is_pip_year accepts years or a single all or MRV keyword", {
+  expect_all_true(c(
+    is_pip_year("2019"),
+    is_pip_year(c("2019", "2020")),
+    is_pip_year("all"),
+    is_pip_year("MRV"),
+    is_pip_year("mrv")
+  ))
+  expect_all_false(c(
+    is_pip_year("19"),
+    is_pip_year("2019a"),
+    is_pip_year("latest"),
+    is_pip_year(c("2019", "MRV")),
+    is_pip_year(c("all", "MRV")),
+    is_pip_year(NA_character_),
+    is_pip_year(2019),
+    is_pip_year(NULL)
+  ))
+  expect_true(is_pip_year(NULL, null_ok = TRUE))
+})

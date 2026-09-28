@@ -57,6 +57,14 @@ is_version <- function(x, n_digits, null_ok = FALSE) {
   is_string(x, n_chars = n_digits, pattern = "^[0-9]+$")
 }
 
+is_pip_year <- function(x, null_ok = FALSE) {
+  if (null_ok && is.null(x)) {
+    return(TRUE)
+  }
+  is_character(x, pattern = "^[0-9]{4}$") ||
+    is_string(x, pattern = "^(all|mrv)$", ignore.case = TRUE)
+}
+
 is_dateish <- function(x, null_ok = FALSE) {
   if (null_ok && is.null(x)) {
     return(TRUE)

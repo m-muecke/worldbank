@@ -58,7 +58,7 @@ pip_data <- function(
   year <- year %&&% as.character(year)
   stopifnot(
     is_character(country, null_ok = TRUE, n_chars = 3L),
-    is_pip_year(year),
+    is_pip_year(year, null_ok = TRUE),
     is_number(povline, lower = 0, upper = 2700, null_ok = TRUE),
     is_number(popshare, lower = 0, upper = 1, null_ok = TRUE),
     is_flag(fill_gaps),
@@ -163,7 +163,7 @@ pip_group <- function(
   year <- year %&&% as.character(year)
   stopifnot(
     is_character(country, null_ok = TRUE, n_chars = 3L),
-    is_pip_year(year),
+    is_pip_year(year, null_ok = TRUE),
     is_number(povline, lower = 0, upper = 2700, null_ok = TRUE),
     is_number(popshare, lower = 0, upper = 1, null_ok = TRUE),
     is_flag(fill_gaps),
@@ -355,12 +355,6 @@ pip_info <- function() {
 pip_health_check <- function() {
   msg <- pip("health-check", format = "json")
   msg[[1L]]
-}
-
-is_pip_year <- function(x) {
-  is.null(x) ||
-    is_character(x, pattern = "^[0-9]{4}$") ||
-    is_string(x, pattern = "^(all|mrv)$", ignore.case = TRUE)
 }
 
 pip_error_body <- function(resp) {

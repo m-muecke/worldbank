@@ -55,20 +55,20 @@
       pip_data(year = "latest")
     Condition
       Error in `pip_data()`:
-      ! is_pip_year(year) is not TRUE
+      ! is_pip_year(year, null_ok = TRUE) is not TRUE
     Code
       pip_data(year = c("2019", "MRV"))
     Condition
       Error in `pip_data()`:
-      ! is_pip_year(year) is not TRUE
+      ! is_pip_year(year, null_ok = TRUE) is not TRUE
     Code
       pip_data(year = 19)
     Condition
       Error in `pip_data()`:
-      ! is_pip_year(year) is not TRUE
+      ! is_pip_year(year, null_ok = TRUE) is not TRUE
     Code
       pip_group(year = "2019a")
     Condition
       Error in `pip_group()`:
-      ! is_pip_year(year) is not TRUE
+      ! is_pip_year(year, null_ok = TRUE) is not TRUE
 
