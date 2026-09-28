@@ -398,6 +398,8 @@ wb_indicator <- function(indicator = NULL, lang = "en", source = NULL) {
 #' @param source (`NULL` | `integer(1)`)\cr
 #'   ID of the source to query, as listed by [wb_source()]. Only used when `catalog` is `NULL`.
 #'   Default `NULL`, which uses the API default.
+#' @param fixed (`logical(1)`)\cr
+#'   Whether to match `pattern` as a literal string. See [grepl()] for details. Default `FALSE`.
 #' @param ... (`any`)\cr
 #'   Additional arguments passed to [grepl()].
 #' @returns A `data.frame()` with the matching rows of the indicator catalog.
@@ -415,8 +417,8 @@ wb_indicator <- function(indicator = NULL, lang = "en", source = NULL) {
 #' # search the topics associated with each indicator
 #' wb_search("Climate Change", fields = "topics")
 #'
-#' # case-sensitive fixed-string match
-#' wb_search("GDP", ignore.case = FALSE, fixed = TRUE)
+#' # literal match
+#' wb_search("(% of GDP)", fixed = TRUE)
 #' }
 wb_search <- function(
   pattern,
@@ -425,6 +427,7 @@ wb_search <- function(
   lang = "en",
   ignore.case = TRUE,
   source = NULL,
+  fixed = FALSE,
   ...
 ) {
   stopifnot(
@@ -433,20 +436,22 @@ wb_search <- function(
     is.null(catalog) || is.data.frame(catalog),
     is_string(lang, n_chars = 2L),
     is_flag(ignore.case),
-    is_count(source, null_ok = TRUE)
+    is_count(source, null_ok = TRUE),
+    is_flag(fixed)
   )
   catalog <- catalog %||% wb_indicator(lang = lang, source = source)
   missing_fields <- setdiff(fields, names(catalog))
   if (length(missing_fields) > 0L) {
     stop(sprintf("`fields` not found in catalog: %s.", toString(missing_fields)), call. = FALSE)
   }
+  # grepl() warns that it ignores `ignore.case` for fixed patterns
+  matches <- function(x) grepl(pattern, x, ignore.case = ignore.case && !fixed, fixed = fixed, ...)
   hit <- lapply(fields, function(field) {
     if (field == "topics") {
-      return(map_lgl(catalog$topics, function(x) {
-        any(grepl(pattern, x$topic_value, ignore.case = ignore.case, ...))
-      }))
+      map_lgl(catalog$topics, \(x) any(matches(x$topic_value)))
+    } else {
+      matches(catalog[[field]])
     }
-    grepl(pattern, catalog[[field]], ignore.case = ignore.case, ...)
   })
   hit <- Reduce(`|`, hit)
   res <- catalog[hit, , drop = FALSE]

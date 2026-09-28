@@ -14,6 +14,7 @@ wb_search(
   lang = "en",
   ignore.case = TRUE,
   source = NULL,
+  fixed = FALSE,
   ...
 )
 }
@@ -38,6 +39,9 @@ Whether the match should be case insensitive. Default \code{TRUE}.}
 ID of the source to query, as listed by \code{\link[=wb_source]{wb_source()}}. Only used when \code{catalog} is \code{NULL}.
 Default \code{NULL}, which uses the API default.}
 
+\item{fixed}{(\code{logical(1)})\cr
+Whether to match \code{pattern} as a literal string. See \code{\link[=grepl]{grepl()}} for details. Default \code{FALSE}.}
+
 \item{...}{(\code{any})\cr
 Additional arguments passed to \code{\link[=grepl]{grepl()}}.}
 }
@@ -60,8 +64,8 @@ wb_search("unemployment", fields = "name")
 # search the topics associated with each indicator
 wb_search("Climate Change", fields = "topics")
 
-# case-sensitive fixed-string match
-wb_search("GDP", ignore.case = FALSE, fixed = TRUE)
+# literal match
+wb_search("(\% of GDP)", fixed = TRUE)
 }
 \dontshow{\}) # examplesIf}
 }

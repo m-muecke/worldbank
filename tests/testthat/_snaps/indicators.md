@@ -54,6 +54,14 @@
       Error in `wb_search()`:
       ! is_count(source, null_ok = TRUE) is not TRUE
 
+---
+
+    Code
+      wb_search("GDP", fixed = NA)
+    Condition
+      Error in `wb_search()`:
+      ! is_flag(fixed) is not TRUE
+
 # wb_data mrv and gapfill validation works
 
     Code

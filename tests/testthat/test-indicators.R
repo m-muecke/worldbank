@@ -347,6 +347,24 @@ test_that("wb_search filters indicators by pattern", {
   )
 })
 
+test_that("wb_search matches fixed patterns literally and case sensitively", {
+  catalog <- data.frame(id = c("A", "B", "C"), name = c("GDP (%)", "gdp (%)", "GDP"))
+  catalog$topics <- I(list(
+    data.frame(topic_id = 1L, topic_value = "Economy (%)"),
+    data.frame(topic_id = integer(), topic_value = character()),
+    data.frame(topic_id = 2L, topic_value = "economy (%)")
+  ))
+
+  expect_no_warning(
+    actual <- wb_search("GDP (%)", fields = "name", catalog = catalog, fixed = TRUE)
+  )
+  expect_identical(actual$id, "A")
+  expect_no_warning(
+    actual <- wb_search("economy (%)", fields = "topics", catalog = catalog, fixed = TRUE)
+  )
+  expect_identical(actual$id, "C")
+})
+
 test_that("wb_search passes source to wb_indicator", {
   captured <- NULL
   indicators <- readRDS(test_path("fixtures", "wb-indicator.rds"))
@@ -409,6 +427,7 @@ test_that("wb_search input validation works", {
   expect_error(wb_search("GDP", catalog = list()))
   expect_snapshot(wb_search("GDP", source = 0), error = TRUE)
   expect_snapshot(wb_search("GDP", source = "2"), error = TRUE)
+  expect_snapshot(wb_search("GDP", fixed = NA), error = TRUE)
 })
 
 test_that("wb_country_indicator input validation works", {
