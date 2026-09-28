@@ -746,15 +746,11 @@ worldbank <- function(resource, ..., lang = NULL, per_page = 32500L) {
 }
 
 is_wb_error <- function(resp) {
-  status <- resp_status(resp)
-  if (status >= 400L) {
+  if (resp_status(resp) >= 400L) {
     return(TRUE)
   }
   json <- resp_body_json(resp)
-  if (length(json) == 1L && length(json[[1L]]$message) >= 1L) {
-    return(TRUE)
-  }
-  FALSE
+  length(json) == 1L && length(json[[1L]]$message) >= 1L
 }
 
 wb_error_body <- function(resp) {
