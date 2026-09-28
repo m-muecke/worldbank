@@ -55,7 +55,6 @@ pip_data <- function(
 ) {
   welfare_type <- match.arg(welfare_type)
   reporting_level <- match.arg(reporting_level)
-  year <- year %&&% as.character(year)
   stopifnot(
     is_character(country, null_ok = TRUE, n_chars = 3L),
     is_pip_year(year, null_ok = TRUE),
@@ -160,7 +159,6 @@ pip_group <- function(
   group_by <- match.arg(group_by)
   welfare_type <- match.arg(welfare_type)
   reporting_level <- match.arg(reporting_level)
-  year <- year %&&% as.character(year)
   stopifnot(
     is_character(country, null_ok = TRUE, n_chars = 3L),
     is_pip_year(year, null_ok = TRUE),

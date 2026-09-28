@@ -61,6 +61,9 @@ is_pip_year <- function(x, null_ok = FALSE) {
   if (null_ok && is.null(x)) {
     return(TRUE)
   }
+  if (is.numeric(x)) {
+    x <- as.character(x)
+  }
   is_character(x, pattern = "^[0-9]{4}$") ||
     is_string(x, pattern = "^(all|mrv)$", ignore.case = TRUE)
 }

@@ -49,6 +49,8 @@ test_that("is_pip_year accepts years or a single all or MRV keyword", {
   expect_all_true(c(
     is_pip_year("2019"),
     is_pip_year(c("2019", "2020")),
+    is_pip_year(2019),
+    is_pip_year(c(2019L, 2020L)),
     is_pip_year("all"),
     is_pip_year("MRV"),
     is_pip_year("mrv")
@@ -60,7 +62,8 @@ test_that("is_pip_year accepts years or a single all or MRV keyword", {
     is_pip_year(c("2019", "MRV")),
     is_pip_year(c("all", "MRV")),
     is_pip_year(NA_character_),
-    is_pip_year(2019),
+    is_pip_year(2019.5),
+    is_pip_year(NA_real_),
     is_pip_year(NULL)
   ))
   expect_true(is_pip_year(NULL, null_ok = TRUE))
