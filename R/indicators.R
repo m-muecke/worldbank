@@ -395,11 +395,11 @@ wb_indicator <- function(indicator = NULL, lang = "en", source = NULL) {
 #'   Language to query. Only used when `catalog` is `NULL`. Default `"en"`.
 #' @param ignore.case (`logical(1)`)\cr
 #'   Whether the match should be case insensitive. Default `TRUE`.
+#' @param fixed (`logical(1)`)\cr
+#'   Whether to match `pattern` as a literal string. See [grepl()] for details. Default `FALSE`.
 #' @param source (`NULL` | `integer(1)`)\cr
 #'   ID of the source to query, as listed by [wb_source()]. Only used when `catalog` is `NULL`.
 #'   Default `NULL`, which uses the API default.
-#' @param fixed (`logical(1)`)\cr
-#'   Whether to match `pattern` as a literal string. See [grepl()] for details. Default `FALSE`.
 #' @param ... (`any`)\cr
 #'   Additional arguments passed to [grepl()].
 #' @returns A `data.frame()` with the matching rows of the indicator catalog.
@@ -426,8 +426,8 @@ wb_search <- function(
   catalog = NULL,
   lang = "en",
   ignore.case = TRUE,
-  source = NULL,
   fixed = FALSE,
+  source = NULL,
   ...
 ) {
   stopifnot(
@@ -436,8 +436,8 @@ wb_search <- function(
     is.null(catalog) || is.data.frame(catalog),
     is_string(lang, n_chars = 2L),
     is_flag(ignore.case),
-    is_count(source, null_ok = TRUE),
-    is_flag(fixed)
+    is_flag(fixed),
+    is_count(source, null_ok = TRUE)
   )
   catalog <- catalog %||% wb_indicator(lang = lang, source = source)
   missing_fields <- setdiff(fields, names(catalog))
