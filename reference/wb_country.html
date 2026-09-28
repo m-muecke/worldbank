@@ -127,8 +127,6 @@ Language to query. Default <code>"en"</code>.</p></dd>
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
     <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="co"># \donttest{</span></span></span>
 <span class="r-in"><span><span class="va">country</span> <span class="op">&lt;-</span> <span class="fu">wb_country</span><span class="op">(</span><span class="op">)</span></span></span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> ⠙ iterating 1 done (0.0054/s) | 3m 4.2s</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> iterating <span style="color: #00BB00;">■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■ </span> 100% | ETA:  0s</span>
 <span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="va">country</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   country_id country_code                country_name region_id region_code</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 1        ABW           AW                       Aruba       LCN          ZJ</span>
@@ -175,8 +173,6 @@ Language to query. Default <code>"en"</code>.</p></dd>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co"># low income countries in Sub-Saharan Africa</span></span></span>
 <span class="r-in"><span><span class="fu">wb_country</span><span class="op">(</span>region <span class="op">=</span> <span class="st">"SSF"</span>, income_level <span class="op">=</span> <span class="st">"LIC"</span><span class="op">)</span></span></span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> ⠙ iterating 1 done (0.091/s) | 11s</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> iterating <span style="color: #00BB00;">■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■ </span> 100% | ETA:  0s</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>    country_id country_code             country_name region_id region_code</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 1         BDI           BI                  Burundi       SSF          ZG</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 2         BFA           BF             Burkina Faso       SSF          ZG</span>

@@ -75,6 +75,10 @@
 - [`wb_project()`](https://m-muecke.github.io/worldbank/reference/wb_project.md)
   now errors when `start_date` is after `end_date`, instead of silently
   returning no projects.
+- [`wb_search()`](https://m-muecke.github.io/worldbank/reference/wb_search.md)
+  gains a `fixed` argument to match `pattern` as a literal string. As in
+  [`grepl()`](https://rdrr.io/r/base/grep.html), the match is case
+  sensitive, but it no longer warns about `ignore.case`.
 
 ## worldbank 0.10.0
 
