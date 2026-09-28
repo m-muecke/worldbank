@@ -564,20 +564,20 @@ docs <- wb_document(search = "climate", limit = 100)
 # the ones covering more than one country
 docs[grepl(";", docs$country_code), c("title", "country_code")]
 #>                                                                                                                                              title
-#> 8                 Implementation Completion and Results Report (ICR) Document -  Preparation of Strategic Program for Climate Resilience - P159600
+#> 9                 Implementation Completion and Results Report (ICR) Document -  Preparation of Strategic Program for Climate Resilience - P159600
 #> 13 Bangladesh - Climate Smart Investment Plan : Investment opportunities in the agriculture sector’s transition to a climate resilient growth path
 #> 38                                                                                                        Climate Resilient Road Assets in Albania
-#> 42                                                 Disclosable Restructuring Paper - Disaster and Climate Resilience Improvement Project - P154036
-#> 49                                    The Next Generation Africa Climate Business Plan : Ramping Up Development-Centered Climate Action - Overview
-#> 70                                                  Come hell or high water - integrating climate change vulnerability and adaption into Bank work
-#> 78                                            Disclosable Restructuring Paper - Bangladesh Weather and Climate Services Regional Project - P150220
+#> 41                                                 Disclosable Restructuring Paper - Disaster and Climate Resilience Improvement Project - P154036
+#> 52                                    The Next Generation Africa Climate Business Plan : Ramping Up Development-Centered Climate Action - Overview
+#> 75                                                  Come hell or high water - integrating climate change vulnerability and adaption into Bank work
+#> 79                                            Disclosable Restructuring Paper - Bangladesh Weather and Climate Services Regional Project - P150220
 #>         country_code
-#> 8              BT;1W
+#> 9              BT;1W
 #> 13             BD;1W
 #> 38             AL;7B
-#> 42             PK;1W
-#> 49             3A;1W
-#> 70 IN;EC;PG;WS;BD;GY
-#> 78             8S;BD
+#> 41             PK;1W
+#> 52             3A;1W
+#> 75 IN;EC;PG;WS;BD;GY
+#> 79             8S;BD
 # }
 ```

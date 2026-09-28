@@ -7,10 +7,10 @@ List all countries supported by the World Bank API.
 ``` r
 wb_country(
   country = NULL,
+  lang = "en",
   region = NULL,
   income_level = NULL,
-  lending_type = NULL,
-  lang = "en"
+  lending_type = NULL
 )
 ```
 
@@ -25,6 +25,11 @@ wb_country(
   (`NULL` \| [`character()`](https://rdrr.io/r/base/character.html))  
   Country to query. Default `NULL`. If `NULL`, all countries are
   returned.
+
+- lang:
+
+  (`character(1)`)  
+  Language to query. Default `"en"`.
 
 - region:
 
@@ -46,11 +51,6 @@ wb_country(
   Lending type IDs to filter by, as listed by
   [`wb_lending_type()`](https://m-muecke.github.io/worldbank/reference/wb_lending_type.md).
   Default `NULL`.
-
-- lang:
-
-  (`character(1)`)  
-  Language to query. Default `"en"`.
 
 ## Value
 
