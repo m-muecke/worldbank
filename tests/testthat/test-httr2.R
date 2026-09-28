@@ -25,6 +25,7 @@ test_that("resp_total_pages derives the page count from the total", {
 })
 
 test_that("wb_progress respects the worldbank.progress option", {
+  withr::local_options(worldbank.progress = NULL)
   expect_identical(wb_progress(), TRUE)
   withr::local_options(worldbank.progress = FALSE)
   expect_identical(wb_progress(), FALSE)
