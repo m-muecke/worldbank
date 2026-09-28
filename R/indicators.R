@@ -232,14 +232,14 @@ wb_region <- function(region = NULL, lang = "en") {
 #'
 #' @param country (`NULL` | `character()`)\cr
 #'   Country to query. Default `NULL`. If `NULL`, all countries are returned.
+#' @param lang (`character(1)`)\cr
+#'   Language to query. Default `"en"`.
 #' @param region (`NULL` | `character()`)\cr
 #'   Region codes to filter by, as listed in the `code` column of [wb_region()]. Default `NULL`.
 #' @param income_level (`NULL` | `character()`)\cr
 #'   Income level IDs to filter by, as listed by [wb_income_level()]. Default `NULL`.
 #' @param lending_type (`NULL` | `character()`)\cr
 #'   Lending type IDs to filter by, as listed by [wb_lending_type()]. Default `NULL`.
-#' @param lang (`character(1)`)\cr
-#'   Language to query. Default `"en"`.
 #' @returns A `data.frame()` with the available countries. The columns are:
 #' * `country_id`: The country ID.
 #' * `country_code`: The country code.
@@ -272,17 +272,17 @@ wb_region <- function(region = NULL, lang = "en") {
 #' }
 wb_country <- function(
   country = NULL,
+  lang = "en",
   region = NULL,
   income_level = NULL,
-  lending_type = NULL,
-  lang = "en"
+  lending_type = NULL
 ) {
   stopifnot(
     is_character(country, null_ok = TRUE, n_chars = 2:3),
+    is_string(lang, n_chars = 2L),
     is_character(region, null_ok = TRUE, n_chars = 3L),
     is_character(income_level, null_ok = TRUE, n_chars = 3L),
-    is_character(lending_type, null_ok = TRUE, n_chars = 3L),
-    is_string(lang, n_chars = 2L)
+    is_character(lending_type, null_ok = TRUE, n_chars = 3L)
   )
   country <- tolower(format_param(country))
 

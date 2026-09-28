@@ -9,15 +9,18 @@
 \usage{
 wb_country(
   country = NULL,
+  lang = "en",
   region = NULL,
   income_level = NULL,
-  lending_type = NULL,
-  lang = "en"
+  lending_type = NULL
 )
 }
 \arguments{
 \item{country}{(\code{NULL} | \code{character()})\cr
 Country to query. Default \code{NULL}. If \code{NULL}, all countries are returned.}
+
+\item{lang}{(\code{character(1)})\cr
+Language to query. Default \code{"en"}.}
 
 \item{region}{(\code{NULL} | \code{character()})\cr
 Region codes to filter by, as listed in the \code{code} column of \code{\link[=wb_region]{wb_region()}}. Default \code{NULL}.}
@@ -27,9 +30,6 @@ Income level IDs to filter by, as listed by \code{\link[=wb_income_level]{wb_inc
 
 \item{lending_type}{(\code{NULL} | \code{character()})\cr
 Lending type IDs to filter by, as listed by \code{\link[=wb_lending_type]{wb_lending_type()}}. Default \code{NULL}.}
-
-\item{lang}{(\code{character(1)})\cr
-Language to query. Default \code{"en"}.}
 }
 \value{
 A \code{data.frame()} with the available countries. The columns are:
