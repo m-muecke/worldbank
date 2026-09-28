@@ -569,15 +569,15 @@ docs[grepl(";", docs$country_code), c("title", "country_code")]
 #> 38                                                                                                        Climate Resilient Road Assets in Albania
 #> 41                                                 Disclosable Restructuring Paper - Disaster and Climate Resilience Improvement Project - P154036
 #> 52                                    The Next Generation Africa Climate Business Plan : Ramping Up Development-Centered Climate Action - Overview
-#> 75                                                  Come hell or high water - integrating climate change vulnerability and adaption into Bank work
-#> 79                                            Disclosable Restructuring Paper - Bangladesh Weather and Climate Services Regional Project - P150220
+#> 70                                                  Come hell or high water - integrating climate change vulnerability and adaption into Bank work
+#> 77                                            Disclosable Restructuring Paper - Bangladesh Weather and Climate Services Regional Project - P150220
 #>         country_code
 #> 9              BT;1W
 #> 13             BD;1W
 #> 38             AL;7B
 #> 41             PK;1W
 #> 52             3A;1W
-#> 75 IN;EC;PG;WS;BD;GY
-#> 79             8S;BD
+#> 70 IN;EC;PG;WS;BD;GY
+#> 77             8S;BD
 # }
 ```
