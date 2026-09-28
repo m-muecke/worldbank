@@ -37,8 +37,9 @@ pip_data(
 
   (`NULL` \| [`character()`](https://rdrr.io/r/base/character.html) \|
   [`numeric()`](https://rdrr.io/r/base/numeric.html))  
-  Years for which statistics are to be computed, specified as YYYY.
-  Default `NULL`.
+  Years for which statistics are to be computed, specified as YYYY, or
+  `"all"` for every available year or `"MRV"` for the most recent year.
+  Default `NULL`, which returns every available year.
 
 - povline:
 

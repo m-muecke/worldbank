@@ -61,6 +61,11 @@
 
 - Requests are now also retried on HTTP 502 and 504 responses, which the
   World Bank APIs return for temporary gateway failures.
+- [`pip_data()`](https://m-muecke.github.io/worldbank/reference/pip_data.md)
+  and
+  [`pip_group()`](https://m-muecke.github.io/worldbank/reference/pip_group.md)
+  now accept `year = "all"` and `year = "MRV"`, which the PIP API
+  supports, instead of only four-digit years.
 - [`wb_bulk()`](https://m-muecke.github.io/worldbank/reference/wb_bulk.md)
   now trims whitespace and returns `NA` instead of `""` for empty
   fields.

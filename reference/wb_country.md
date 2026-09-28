@@ -112,6 +112,8 @@ Other indicators data:
 ``` r
 # \donttest{
 country <- wb_country()
+#> ⠙ iterating 1 done (0.0054/s) | 3m 4.2s
+#> iterating ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■  100% | ETA:  0s
 head(country)
 #>   country_id country_code                country_name region_id region_code
 #> 1        ABW           AW                       Aruba       LCN          ZJ
@@ -158,6 +160,8 @@ head(country)
 
 # low income countries in Sub-Saharan Africa
 wb_country(region = "SSF", income_level = "LIC")
+#> ⠙ iterating 1 done (0.091/s) | 11s
+#> iterating ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■  100% | ETA:  0s
 #>    country_id country_code             country_name region_id region_code
 #> 1         BDI           BI                  Burundi       SSF          ZG
 #> 2         BFA           BF             Burkina Faso       SSF          ZG
