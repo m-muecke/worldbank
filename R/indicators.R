@@ -722,7 +722,6 @@ wdi_pivot_long <- function(data) {
 }
 
 worldbank <- function(resource, ..., lang = NULL, per_page = 32500L) {
-  stopifnot(is_string(lang, null_ok = TRUE, n_chars = 2L))
   req <- wb_request("https://api.worldbank.org/v2") |>
     req_url_path_append(lang, resource) |>
     req_url_query(
