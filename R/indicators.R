@@ -445,12 +445,12 @@ wb_search <- function(
     stop(sprintf("`fields` not found in catalog: %s.", toString(missing_fields)), call. = FALSE)
   }
   # grepl() warns that it ignores `ignore.case` for fixed patterns
-  matches <- function(x) grepl(pattern, x, ignore.case = ignore.case && !fixed, fixed = fixed, ...)
+  detect <- function(x) grepl(pattern, x, ignore.case = ignore.case && !fixed, fixed = fixed, ...)
   hit <- lapply(fields, function(field) {
     if (field == "topics") {
-      map_lgl(catalog$topics, \(x) any(matches(x$topic_value)))
+      map_lgl(catalog$topics, \(x) any(detect(x$topic_value)))
     } else {
-      matches(catalog[[field]])
+      detect(catalog[[field]])
     }
   })
   hit <- Reduce(`|`, hit)
