@@ -21,7 +21,10 @@ ID of the source to query, as listed by \code{\link[=wb_source]{wb_source()}}. D
 default.}
 }
 \value{
-A \code{data.frame()} with the available indicators. The columns are:
+A \code{data.frame()} with the available indicators. Since an indicator can have several
+topics, \code{topic_id} and \code{topic_value} hold all of them separated by \verb{;}, which never occurs
+within a value, or \code{NA} if there are none. Use \code{strsplit(x, ";")} to split them, or a pattern
+such as \code{"(^|;)Health(;|$)"} to match a single topic exactly. The columns are:
 \itemize{
 \item \code{id}: The indicator ID.
 \item \code{name}: The indicator name.
@@ -30,8 +33,8 @@ A \code{data.frame()} with the available indicators. The columns are:
 \item \code{source_value}: The source value.
 \item \code{source_note}: The source note.
 \item \code{source_organization}: The source organization.
-\item \code{topics}: A list-column of data frames containing the \code{topic_id} and \code{topic_value} for every
-topic associated with the indicator.
+\item \code{topic_id}: The topic IDs, as listed by \code{\link[=wb_topic]{wb_topic()}}.
+\item \code{topic_value}: The topic names, in the same order as \code{topic_id}.
 }
 }
 \description{

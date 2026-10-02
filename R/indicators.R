@@ -331,7 +331,10 @@ wb_country <- function(
 #' @param source (`NULL` | `integer(1)`)\cr
 #'   ID of the source to query, as listed by [wb_source()]. Default `NULL`, which uses the API
 #'   default.
-#' @returns A `data.frame()` with the available indicators. The columns are:
+#' @returns A `data.frame()` with the available indicators. Since an indicator can have several
+#'   topics, `topic_id` and `topic_value` hold all of them separated by `;`, which never occurs
+#'   within a value, or `NA` if there are none. Use `strsplit(x, ";")` to split them, or a pattern
+#'   such as `"(^|;)Health(;|$)"` to match a single topic exactly. The columns are:
 #' * `id`: The indicator ID.
 #' * `name`: The indicator name.
 #' * `unit`: The indicator unit.
@@ -339,8 +342,8 @@ wb_country <- function(
 #' * `source_value`: The source value.
 #' * `source_note`: The source note.
 #' * `source_organization`: The source organization.
-#' * `topics`: A list-column of data frames containing the `topic_id` and `topic_value` for every
-#'   topic associated with the indicator.
+#' * `topic_id`: The topic IDs, as listed by [wb_topic()].
+#' * `topic_value`: The topic names, in the same order as `topic_id`.
 #' @source <https://api.worldbank.org/v2/indicator>
 #' @family indicators data
 #' @export
@@ -358,6 +361,11 @@ wb_indicator <- function(indicator = NULL, lang = "en", source = NULL) {
 
   resource <- sprintf("indicator/%s", indicator)
   data <- worldbank(resource = resource, lang = lang, source = source)
+  topics <- map(data, function(x) {
+    # the API returns `[{}]` for some indicators without topics
+    topics <- Filter(\(topic) !is.null(topic$id), x$topics)
+    topics[!duplicated(map_chr(topics, "id"))]
+  })
   res <- data.frame(
     id = map_chr(data, "id"),
     name = map_chr(data, "name"),
@@ -366,15 +374,8 @@ wb_indicator <- function(indicator = NULL, lang = "en", source = NULL) {
     source_value = map_chr(data, \(x) x$source$value),
     source_note = map_chr(data, "sourceNote"),
     source_organization = map_chr(data, "sourceOrganization"),
-    topics = I(map(data, function(x) {
-      # the API returns `[{}]` for some indicators without topics
-      topics <- Filter(\(topic) !is.null(topic$id), x$topics)
-      topics <- topics[!duplicated(map_chr(topics, "id"))]
-      list2DF(list(
-        topic_id = as.integer(map_chr(topics, "id")),
-        topic_value = na_if_empty(trimws(map_chr(topics, "value")))
-      ))
-    })),
+    topic_id = map_chr(topics, \(x) paste(map_chr(x, "id"), collapse = ";")),
+    topic_value = map_chr(topics, \(x) paste(trimws(map_chr(x, "value")), collapse = ";")),
     check.names = FALSE
   )
   clean_strings(res)
@@ -388,8 +389,7 @@ wb_indicator <- function(indicator = NULL, lang = "en", source = NULL) {
 #' @param pattern (`character(1)`)\cr
 #'   Regular expression to match.
 #' @param fields (`character()`)\cr
-#'   Columns of the indicator catalog to search, including the nested `topics` column. Default
-#'   `c("id", "name", "source_note")`.
+#'   Columns of the indicator catalog to search. Default `c("id", "name", "source_note")`.
 #' @param catalog (`NULL` | `data.frame()`)\cr
 #'   Optional pre-fetched indicator catalog. If `NULL` (default), [wb_indicator()] is called.
 #' @param lang (`character(1)`)\cr
@@ -416,7 +416,7 @@ wb_indicator <- function(indicator = NULL, lang = "en", source = NULL) {
 #' wb_search("unemployment", fields = "name")
 #'
 #' # search the topics associated with each indicator
-#' wb_search("Climate Change", fields = "topics")
+#' wb_search("Climate Change", fields = "topic_value")
 #'
 #' # literal match
 #' wb_search("(% of GDP)", fixed = TRUE)
@@ -446,13 +446,8 @@ wb_search <- function(
     stop(sprintf("`fields` not found in catalog: %s.", toString(missing_fields)), call. = FALSE)
   }
   # grepl() warns that it ignores `ignore.case` for fixed patterns
-  detect <- function(x) grepl(pattern, x, ignore.case = ignore.case && !fixed, fixed = fixed, ...)
   hit <- lapply(fields, function(field) {
-    if (field == "topics") {
-      map_lgl(catalog$topics, \(x) any(detect(x$topic_value)))
-    } else {
-      detect(catalog[[field]])
-    }
+    grepl(pattern, catalog[[field]], ignore.case = ignore.case && !fixed, fixed = fixed, ...)
   })
   hit <- Reduce(`|`, hit)
   res <- catalog[hit, , drop = FALSE]

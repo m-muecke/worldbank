@@ -132,11 +132,9 @@ test_that("wb_indicator", {
   )
   actual <- wb_indicator()
   expect_s3_class(actual, "data.frame")
-  expect_shape(actual, dim = c(100L, 8L))
-  expect_all_true(map_lgl(actual$topics, is.data.frame))
-  expect_shape(actual$topics[[1L]], dim = c(1L, 2L))
-  expect_type(actual$topics[[1L]]$topic_id, "integer")
-  expect_type(actual$topics[[1L]]$topic_value, "character")
+  expect_shape(actual, dim = c(100L, 9L))
+  expect_type(actual$topic_id, "character")
+  expect_type(actual$topic_value, "character")
   for (x in actual) {
     if (is.character(x)) {
       expect_all_true(nzchar(x))
@@ -160,7 +158,8 @@ test_that("wb_indicator keeps every topic", {
   indicator$topics <- list(
     list(id = "1", value = "Agriculture & Rural Development  "),
     list(id = "19", value = "Climate Change"),
-    list(id = "6", value = "Environment ")
+    list(id = "6", value = "Environment "),
+    list(id = "19", value = "Climate Change")
   )
   indicator_without_topics <- indicator
   indicator_without_topics$id <- "NO.TOPICS"
@@ -174,28 +173,19 @@ test_that("wb_indicator keeps every topic", {
 
   actual <- wb_indicator(indicator$id)
 
+  expect_identical(actual$topic_id, c("1;19;6", NA, NA))
   expect_identical(
-    actual$topics[[1L]],
-    data.frame(
-      topic_id = c(1L, 19L, 6L),
-      topic_value = c(
-        "Agriculture & Rural Development",
-        "Climate Change",
-        "Environment"
-      )
-    )
+    actual$topic_value,
+    c("Agriculture & Rural Development;Climate Change;Environment", NA, NA)
   )
-  expect_identical(actual$topics[[3L]], actual$topics[[2L]])
-  expect_shape(actual$topics[[2L]], dim = c(0L, 2L))
   expect_identical(
-    wb_search("Environment", fields = "topics", catalog = actual)$id,
+    wb_search("Environment", fields = "topic_value", catalog = actual)$id,
     indicator$id
   )
   expect_shape(
-    wb_search("Development Climate", fields = "topics", catalog = actual),
+    wb_search("Development Climate", fields = "topic_value", catalog = actual),
     nrow = 0L
   )
-  expect_shape(wb_search("19", fields = "topics", catalog = actual), nrow = 0L)
 })
 
 test_that("wb_country_indicator", {
@@ -360,20 +350,11 @@ test_that("wb_search filters indicators by pattern", {
 
 test_that("wb_search matches fixed patterns literally and case sensitively", {
   catalog <- data.frame(id = c("A", "B", "C"), name = c("GDP (%)", "gdp (%)", "GDP"))
-  catalog$topics <- I(list(
-    data.frame(topic_id = 1L, topic_value = "Economy (%)"),
-    data.frame(topic_id = integer(), topic_value = character()),
-    data.frame(topic_id = 2L, topic_value = "economy (%)")
-  ))
 
   expect_no_warning(
     actual <- wb_search("GDP (%)", fields = "name", catalog = catalog, fixed = TRUE)
   )
   expect_identical(actual$id, "A")
-  expect_no_warning(
-    actual <- wb_search("economy (%)", fields = "topics", catalog = catalog, fixed = TRUE)
-  )
-  expect_identical(actual$id, "C")
 })
 
 test_that("wb_search passes source to wb_indicator", {
