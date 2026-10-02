@@ -33,7 +33,8 @@
 #' * `status`: The project status.
 #' * `approval_date`: The board approval date.
 #' * `closing_date`: The closing date.
-#' * `country_code`: The ISO country codes, separated by `;` if there are several.
+#' * `country_code`: The country code, or a regional code such as `"3A"` for projects spanning
+#'   several countries.
 #' * `country`: The country name.
 #' * `region`: The region name.
 #' * `total_commitment`: The total commitment amount in millions USD.
@@ -163,10 +164,7 @@ parse_projects <- function(data) {
     status = map_chr(data, \(x) x$status %||% NA_character_),
     approval_date = map_chr(data, \(x) x$boardapprovaldate %||% NA_character_),
     closing_date = map_chr(data, \(x) x$closingdate %||% NA_character_),
-    country_code = map_chr(data, function(x) {
-      cc <- x$countrycode
-      if (is.null(cc)) NA_character_ else paste0(cc, collapse = ";")
-    }),
+    country_code = map_chr(data, \(x) unlist(x$countrycode) %||% NA_character_),
     country = map_chr(data, \(x) x$countryshortname %||% NA_character_),
     region = map_chr(data, \(x) x$regionname %||% NA_character_),
     total_commitment = as.numeric(map_chr(data, \(x) x$curr_total_commitment %||% NA_character_)),
