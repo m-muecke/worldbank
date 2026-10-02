@@ -100,6 +100,8 @@ Other indicators data:
 # \donttest{
 # search for indicators related to GDP
 wb_search("GDP")
+#> ⠙ iterating 1 done (0.39/s) | 2.5s
+#> iterating ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■  100% | ETA:  0s
 #>                                      id
 #> 1                       6.0.GDP_current
 #> 2                        6.0.GDP_growth

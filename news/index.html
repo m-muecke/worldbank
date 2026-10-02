@@ -76,6 +76,8 @@
 <li>
 <code><a href="../reference/wb_data.html">wb_data()</a></code> and the other Indicators API functions now fetch every page of results, instead of silently returning only the first 32,500 rows.</li>
 <li>
+<code><a href="../reference/wb_project.html">wb_project()</a></code> no longer returns duplicated or missing projects for queries spanning several pages. Projects are now sorted by descending <code>id</code>.</li>
+<li>
 <code><a href="../reference/wb_project.html">wb_project()</a></code> now errors when <code>start_date</code> is after <code>end_date</code>, instead of silently returning no projects.</li>
 <li>
 <code><a href="../reference/wb_search.html">wb_search()</a></code> gains a <code>fixed</code> argument to match <code>pattern</code> as a literal string. As in <code><a href="https://rdrr.io/r/base/grep.html" class="external-link">grepl()</a></code>, the match is case sensitive, but it no longer warns about <code>ignore.case</code>.</li>
