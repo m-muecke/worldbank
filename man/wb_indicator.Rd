@@ -44,6 +44,11 @@ List all indicators supported by the World Bank API.
 \dontshow{if (httr2::is_online()) withAutoprint(\{ # examplesIf}
 \donttest{
 wb_indicator("NY.GDP.MKTP.CD")
+
+# an indicator can have several topics, separated by `;`
+ind <- wb_indicator("SE.ENR.PRSC.FM.ZS")
+ind[c("topic_id", "topic_value")]
+strsplit(ind$topic_value, ";")
 }
 \dontshow{\}) # examplesIf}
 }

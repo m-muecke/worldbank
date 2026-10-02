@@ -350,6 +350,11 @@ wb_country <- function(
 #' @examplesIf httr2::is_online()
 #' \donttest{
 #' wb_indicator("NY.GDP.MKTP.CD")
+#'
+#' # an indicator can have several topics, separated by `;`
+#' ind <- wb_indicator("SE.ENR.PRSC.FM.ZS")
+#' ind[c("topic_id", "topic_value")]
+#' strsplit(ind$topic_value, ";")
 #' }
 wb_indicator <- function(indicator = NULL, lang = "en", source = NULL) {
   stopifnot(
