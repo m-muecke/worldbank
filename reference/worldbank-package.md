@@ -12,8 +12,10 @@ for further details.
 - `worldbank.cache`: Cache API responses on disk. Default `FALSE`. See
   [`wb_cache_dir()`](https://m-muecke.github.io/worldbank/reference/cache.md).
 
-- `worldbank.cache_max_age`: Maximum age of cached responses in seconds.
-  Default `86400` (1 day).
+- `worldbank.cache_max_age`: Delete cached responses older than this
+  many seconds. Default `86400` (1 day). It doesn't extend how long a
+  response is reused, which each API decides. See
+  [`wb_cache_dir()`](https://m-muecke.github.io/worldbank/reference/cache.md).
 
 - `worldbank.progress`: Show a progress bar for paginated requests that
   take longer than a few seconds. Default `TRUE`. Set to `FALSE` to hide

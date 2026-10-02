@@ -63,9 +63,14 @@ responses and returns <code>NULL</code> invisibly.</p>
     </div>
     <div class="section level2">
     <h2 id="details">Details<a class="anchor" aria-label="anchor" href="#details"></a></h2>
-    <p>The cache is only used when enabled with <code>options(worldbank.cache = TRUE)</code>.
-Cached responses are stored for 1 day by default, but this can be customized with
-<code>options(worldbank.cache_max_age = seconds)</code>.</p>
+    <p>The cache is only used when enabled with <code>options(worldbank.cache = TRUE)</code>.</p>
+<p>Each API's caching headers decide whether and for how long a cached response is reused, so the
+cache helps more with some APIs than others. Indicators API responses are reused for up to a
+day. Projects and Documents &amp; Reports API responses are checked with the API on every call, which
+only saves downloading them again. Finances One and PIP API responses are never cached.</p>
+<p>Cached responses older than 1 day are deleted. Change this with
+<code>options(worldbank.cache_max_age = seconds)</code>. A higher value doesn't make responses be reused
+for longer than the API allows.</p>
     </div>
 
     <div class="section level2">

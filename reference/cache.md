@@ -23,9 +23,18 @@ responses and returns `NULL` invisibly.
 ## Details
 
 The cache is only used when enabled with
-`options(worldbank.cache = TRUE)`. Cached responses are stored for 1 day
-by default, but this can be customized with
-`options(worldbank.cache_max_age = seconds)`.
+`options(worldbank.cache = TRUE)`.
+
+Each API's caching headers decide whether and for how long a cached
+response is reused, so the cache helps more with some APIs than others.
+Indicators API responses are reused for up to a day. Projects and
+Documents & Reports API responses are checked with the API on every
+call, which only saves downloading them again. Finances One and PIP API
+responses are never cached.
+
+Cached responses older than 1 day are deleted. Change this with
+`options(worldbank.cache_max_age = seconds)`. A higher value doesn't
+make responses be reused for longer than the API allows.
 
 ## Examples
 
