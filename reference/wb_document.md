@@ -123,8 +123,6 @@ wb_document(
   start_date = "2024-01-01",
   end_date = "2024-12-31"
 )
-#> ⠙ iterating 1 done (0.25/s) | 3.9s
-#> iterating ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■  100% | ETA:  0s
 #>         id
 #> 1 34409107
 #> 2 34380251
@@ -568,18 +566,18 @@ docs[grepl(";", docs$country_code), c("title", "country_code")]
 #>                                                                                                                                              title
 #> 8                 Implementation Completion and Results Report (ICR) Document -  Preparation of Strategic Program for Climate Resilience - P159600
 #> 14 Bangladesh - Climate Smart Investment Plan : Investment opportunities in the agriculture sector’s transition to a climate resilient growth path
-#> 41                                                                                                        Climate Resilient Road Assets in Albania
-#> 48                                    The Next Generation Africa Climate Business Plan : Ramping Up Development-Centered Climate Action - Overview
-#> 49                                                 Disclosable Restructuring Paper - Disaster and Climate Resilience Improvement Project - P154036
-#> 67                                                  Come hell or high water - integrating climate change vulnerability and adaption into Bank work
-#> 81                                            Disclosable Restructuring Paper - Bangladesh Weather and Climate Services Regional Project - P150220
+#> 38                                                                                                        Climate Resilient Road Assets in Albania
+#> 43                                                 Disclosable Restructuring Paper - Disaster and Climate Resilience Improvement Project - P154036
+#> 50                                    The Next Generation Africa Climate Business Plan : Ramping Up Development-Centered Climate Action - Overview
+#> 68                                                  Come hell or high water - integrating climate change vulnerability and adaption into Bank work
+#> 80                                            Disclosable Restructuring Paper - Bangladesh Weather and Climate Services Regional Project - P150220
 #>         country_code
 #> 8              BT;1W
 #> 14             BD;1W
-#> 41             AL;7B
-#> 48             3A;1W
-#> 49             PK;1W
-#> 67 IN;EC;PG;WS;BD;GY
-#> 81             8S;BD
+#> 38             AL;7B
+#> 43             PK;1W
+#> 50             3A;1W
+#> 68 IN;EC;PG;WS;BD;GY
+#> 80             8S;BD
 # }
 ```

@@ -87,8 +87,8 @@ str(country)
 # search for indicators by keyword across id, name, and description
 ind <- wb_search("GDP")
 ind <- subset(ind, source_value == "World Development Indicators")
-str(ind, max.level = 1)
-#> 'data.frame':    103 obs. of  8 variables:
+str(ind)
+#> 'data.frame':    103 obs. of  9 variables:
 #>  $ id                 : chr  "BG.GSR.NFSV.GD.ZS" "BM.KLT.DINV.WD.GD.ZS" "BN.C"..
 #>  $ name               : chr  "Trade in services (% of GDP)" "Foreign direct i"..
 #>  $ unit               : chr  NA NA NA NA ...
@@ -96,15 +96,8 @@ str(ind, max.level = 1)
 #>  $ source_value       : chr  "World Development Indicators" "World Developmen"..
 #>  $ source_note        : chr  "Total trade in services includes services provi"..
 #>  $ source_organization: chr  "Balance of Payments Statistics Yearbook and dat"..
-#>  $ topics             :List of 103
-#>   ..- attr(*, "class")= chr "AsIs"
-
-# each indicator lists its topics in a nested data frame
-ind$topics[[1]]
-#>   topic_id      topic_value
-#> 1        3 Economy & Growth
-#> 2       12   Private Sector
-#> 3       21            Trade
+#>  $ topic_id           : chr  "3;12;21" "3;7" "3" "3;7;19" ...
+#>  $ topic_value        : chr  "Economy & Growth;Private Sector;Trade" "Economy"..
 
 # fetch indicator data for specific or all countries (default)
 gdp <- wb_data("NY.GDP.MKTP.CD", c("US", "DE", "FR", "CH", "JP"))

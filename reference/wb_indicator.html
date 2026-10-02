@@ -74,15 +74,18 @@ default.</p></dd>
 </dl></div>
     <div class="section level2">
     <h2 id="value">Value<a class="anchor" aria-label="anchor" href="#value"></a></h2>
-    <p>A <code><a href="https://rdrr.io/r/base/data.frame.html" class="external-link">data.frame()</a></code> with the available indicators. The columns are:</p><ul><li><p><code>id</code>: The indicator ID.</p></li>
+    <p>A <code><a href="https://rdrr.io/r/base/data.frame.html" class="external-link">data.frame()</a></code> with the available indicators. Since an indicator can have several
+topics, <code>topic_id</code> and <code>topic_value</code> hold all of them separated by <code>;</code>, which never occurs
+within a value, or <code>NA</code> if there are none. Use <code>strsplit(x, ";")</code> to split them, or a pattern
+such as <code>"(^|;)Health(;|$)"</code> to match a single topic exactly. The columns are:</p><ul><li><p><code>id</code>: The indicator ID.</p></li>
 <li><p><code>name</code>: The indicator name.</p></li>
 <li><p><code>unit</code>: The indicator unit.</p></li>
 <li><p><code>source_id</code>: The source ID.</p></li>
 <li><p><code>source_value</code>: The source value.</p></li>
 <li><p><code>source_note</code>: The source note.</p></li>
 <li><p><code>source_organization</code>: The source organization.</p></li>
-<li><p><code>topics</code>: A list-column of data frames containing the <code>topic_id</code> and <code>topic_value</code> for every
-topic associated with the indicator.</p></li>
+<li><p><code>topic_id</code>: The topic IDs, as listed by <code><a href="wb_topic.html">wb_topic()</a></code>.</p></li>
+<li><p><code>topic_value</code>: The topic names, in the same order as <code>topic_id</code>.</p></li>
 </ul></div>
     <div class="section level2">
     <h2 id="see-also">See also<a class="anchor" aria-label="anchor" href="#see-also"></a></h2>
@@ -109,8 +112,21 @@ topic associated with the indicator.</p></li>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 1 Gross domestic product is the total income earned through the production of goods and services in an economic territory during an accounting period. It can be measured in three different ways: using either the expenditure approach, the income approach, or the production approach. This indicator is expressed in current prices, meaning no adjustment has been made to account for price changes over time. This indicator is expressed in United States dollars.</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>                                                                                                                                                                                                     source_organization</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 1 Country official statistics, National Statistical Organizations and/or Central Banks;\nNational Accounts data files, Organisation for Economic Co-operation and Development (OECD);\nStaff estimates, World Bank (WB)</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>         topics</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 1 3, Econo....</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   topic_id      topic_value</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1        3 Economy &amp; Growth</span>
+<span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="co"># an indicator can have several topics, separated by `;`</span></span></span>
+<span class="r-in"><span><span class="va">ind</span> <span class="op">&lt;-</span> <span class="fu">wb_indicator</span><span class="op">(</span><span class="st">"SE.ENR.PRSC.FM.ZS"</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="va">ind</span><span class="op">[</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"topic_id"</span>, <span class="st">"topic_value"</span><span class="op">)</span><span class="op">]</span></span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>       topic_id</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1 2;19;4;17;15</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                                                            topic_value</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1 Aid Effectiveness;Climate Change;Education;Gender;Social Development</span>
+<span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/base/strsplit.html" class="external-link">strsplit</a></span><span class="op">(</span><span class="va">ind</span><span class="op">$</span><span class="va">topic_value</span>, <span class="st">";"</span><span class="op">)</span></span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[1]]</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "Aid Effectiveness"  "Climate Change"     "Education"         </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [4] "Gender"             "Social Development"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-in"><span><span class="co"># }</span></span></span>
 </code></pre></div>
     </div>

@@ -15,14 +15,11 @@
   [`wb_cache_clear()`](https://m-muecke.github.io/worldbank/reference/cache.md)
   instead.
 - [`wb_indicator()`](https://m-muecke.github.io/worldbank/reference/wb_indicator.md)
-  now returns a `topics` list-column of data frames holding every topic
-  associated with an indicator, replacing the `topic_id` and
-  `topic_value` columns, which previously kept only the first topic. Use
-  `topics[[i]]$topic_id[1]` and `topics[[i]]$topic_value[1]` to recover
-  the old values.
-  [`wb_search()`](https://m-muecke.github.io/worldbank/reference/wb_search.md)
-  matches against every topic with `fields = "topics"`, and
-  `fields = "topic_id"` or `fields = "topic_value"` now error.
+  now returns every topic of an indicator in `topic_id` and
+  `topic_value`, separated by `;`, instead of only the first. `topic_id`
+  is now character, and comparisons such as `topic_value == "Health"` no
+  longer match indicators with several topics. Use
+  `grepl("(^|;)Health(;|$)", topic_value)` instead.
 
 ### New features
 
