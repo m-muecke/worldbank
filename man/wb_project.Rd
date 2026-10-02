@@ -49,7 +49,8 @@ Board approval end date in \code{"YYYY-MM-DD"} format. Default \code{NULL}.}
 
 \item{limit}{(\code{NULL} | \code{integer(1)})\cr
 The maximum number of projects to return. Default \code{NULL}. If \code{NULL}, all matching projects are
-returned, which can take many requests for broad queries.}
+returned, which can take many requests for broad queries. Projects are returned in descending
+order of \code{id}, so the most recently created projects come first.}
 }
 \value{
 A \code{data.frame()} with World Bank project data. The columns are:

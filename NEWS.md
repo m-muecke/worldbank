@@ -23,6 +23,7 @@
 * `pip_data()` and `pip_group()` now accept `year = "all"` and `year = "MRV"`, which the PIP API supports, instead of only four-digit years.
 * `wb_bulk()` now trims whitespace and returns `NA` instead of `""` for empty fields.
 * `wb_data()` and the other Indicators API functions now fetch every page of results, instead of silently returning only the first 32,500 rows.
+* `wb_project()` no longer returns duplicated or missing projects for queries spanning several pages. Projects are now sorted by descending `id`.
 * `wb_project()` now errors when `start_date` is after `end_date`, instead of silently returning no projects.
 * `wb_search()` gains a `fixed` argument to match `pattern` as a literal string. As in `grepl()`, the match is case sensitive, but it no longer warns about `ignore.case`.
 

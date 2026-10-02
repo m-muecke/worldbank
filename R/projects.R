@@ -25,7 +25,8 @@
 #'   Board approval end date in `"YYYY-MM-DD"` format. Default `NULL`.
 #' @param limit (`NULL` | `integer(1)`)\cr
 #'   The maximum number of projects to return. Default `NULL`. If `NULL`, all matching projects are
-#'   returned, which can take many requests for broad queries.
+#'   returned, which can take many requests for broad queries. Projects are returned in descending
+#'   order of `id`, so the most recently created projects come first.
 #' @returns A `data.frame()` with World Bank project data. The columns are:
 #' * `id`: The project ID.
 #' * `project_name`: The project name.
@@ -123,8 +124,17 @@ projects <- function(..., limit = NULL) {
   per_page <- min(limit %||% 1000L, 1000L)
   max_reqs <- if (!is.null(limit)) ceiling(limit / per_page) else Inf
 
+  # the default order by approval date has ties, so paging by offset repeats and skips projects
   req <- wb_request("https://search.worldbank.org/api/v2/projects") |>
-    req_url_query(..., format = "json", rows = per_page, fl = project_fields, .multi = "comma")
+    req_url_query(
+      ...,
+      format = "json",
+      rows = per_page,
+      fl = project_fields,
+      srt = "id",
+      order = "desc",
+      .multi = "comma"
+    )
 
   resps <- req_perform_iterative(
     req,

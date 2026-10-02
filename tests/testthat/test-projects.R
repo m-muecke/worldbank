@@ -33,6 +33,16 @@ test_that("projects stops paging once the total is reached", {
   expect_length(urls, 2L)
 })
 
+test_that("projects sorts by id so paging is stable", {
+  urls <- character()
+  httr2::local_mocked_responses(function(req) {
+    urls <<- c(urls, req$url)
+    httr2::response_json(body = list(total = "1500", projects = list(P1 = list(id = "P1"))))
+  })
+  projects()
+  expect_match(urls, "srt=id&order=desc", all = TRUE, fixed = TRUE)
+})
+
 test_that("wb_project limit caps results across pages", {
   urls <- character()
   data <- lapply(seq_len(1000L), \(i) list(id = paste0("P", i)))
