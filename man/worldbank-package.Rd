@@ -12,8 +12,9 @@ Download and search data from the 'World Bank' APIs, including the 'Indicators' 
 
 \itemize{
 \item \code{worldbank.cache}: Cache API responses on disk. Default \code{FALSE}. See \code{\link[=wb_cache_dir]{wb_cache_dir()}}.
-\item \code{worldbank.cache_max_age}: Maximum age of cached responses in seconds. Default \code{86400} (1
-day).
+\item \code{worldbank.cache_max_age}: Delete cached responses older than this many seconds. Default
+\code{86400} (1 day). It doesn't extend how long a response is reused, which each API decides. See
+\code{\link[=wb_cache_dir]{wb_cache_dir()}}.
 \item \code{worldbank.progress}: Show a progress bar for paginated requests that take longer than a few
 seconds. Default \code{TRUE}. Set to \code{FALSE} to hide it.
 }
