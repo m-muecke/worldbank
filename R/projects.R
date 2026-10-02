@@ -33,8 +33,7 @@
 #' * `status`: The project status.
 #' * `approval_date`: The board approval date.
 #' * `closing_date`: The closing date.
-#' * `country_code`: The country code, or a regional code such as `"3A"` for projects spanning
-#'   several countries.
+#' * `country_code`: The country code, or a regional code such as `"3A"` for multi-country projects.
 #' * `country`: The country name.
 #' * `region`: The region name.
 #' * `total_commitment`: The total commitment amount in millions USD.

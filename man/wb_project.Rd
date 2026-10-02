@@ -60,8 +60,7 @@ A \code{data.frame()} with World Bank project data. The columns are:
 \item \code{status}: The project status.
 \item \code{approval_date}: The board approval date.
 \item \code{closing_date}: The closing date.
-\item \code{country_code}: The country code, or a regional code such as \code{"3A"} for projects spanning
-several countries.
+\item \code{country_code}: The country code, or a regional code such as \code{"3A"} for multi-country projects.
 \item \code{country}: The country name.
 \item \code{region}: The region name.
 \item \code{total_commitment}: The total commitment amount in millions USD.
