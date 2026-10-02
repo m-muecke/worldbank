@@ -565,19 +565,19 @@ docs <- wb_document(search = "climate", limit = 100)
 docs[grepl(";", docs$country_code), c("title", "country_code")]
 #>                                                                                                                                              title
 #> 8                 Implementation Completion and Results Report (ICR) Document -  Preparation of Strategic Program for Climate Resilience - P159600
-#> 14 Bangladesh - Climate Smart Investment Plan : Investment opportunities in the agriculture sector’s transition to a climate resilient growth path
-#> 37                                                                                                        Climate Resilient Road Assets in Albania
-#> 43                                                 Disclosable Restructuring Paper - Disaster and Climate Resilience Improvement Project - P154036
-#> 50                                    The Next Generation Africa Climate Business Plan : Ramping Up Development-Centered Climate Action - Overview
-#> 68                                                  Come hell or high water - integrating climate change vulnerability and adaption into Bank work
-#> 80                                            Disclosable Restructuring Paper - Bangladesh Weather and Climate Services Regional Project - P150220
+#> 13 Bangladesh - Climate Smart Investment Plan : Investment opportunities in the agriculture sector’s transition to a climate resilient growth path
+#> 39                                                                                                        Climate Resilient Road Assets in Albania
+#> 45                                                 Disclosable Restructuring Paper - Disaster and Climate Resilience Improvement Project - P154036
+#> 52                                    The Next Generation Africa Climate Business Plan : Ramping Up Development-Centered Climate Action - Overview
+#> 75                                                  Come hell or high water - integrating climate change vulnerability and adaption into Bank work
+#> 82                                            Disclosable Restructuring Paper - Bangladesh Weather and Climate Services Regional Project - P150220
 #>         country_code
 #> 8              BT;1W
-#> 14             BD;1W
-#> 37             AL;7B
-#> 43             PK;1W
-#> 50             3A;1W
-#> 68 IN;EC;PG;WS;BD;GY
-#> 80             8S;BD
+#> 13             BD;1W
+#> 39             AL;7B
+#> 45             PK;1W
+#> 52             3A;1W
+#> 75 IN;EC;PG;WS;BD;GY
+#> 82             8S;BD
 # }
 ```

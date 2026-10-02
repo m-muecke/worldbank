@@ -7,7 +7,7 @@
 
     <a class="navbar-brand me-2" href="../index.html">worldbank</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.10.0.9000</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.11.0</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -39,9 +39,9 @@
     </div>
 
     <div class="section level2">
-<h2 class="pkg-version" data-toc-text="development version" id="worldbank-development-version">worldbank (development version)<a class="anchor" aria-label="anchor" href="#worldbank-development-version"></a></h2>
+<h2 class="pkg-version" data-toc-text="0.11.0" id="worldbank-0110">worldbank 0.11.0<a class="anchor" aria-label="anchor" href="#worldbank-0110"></a></h2>
 <div class="section level3">
-<h3 id="breaking-changes-development-version">Breaking changes<a class="anchor" aria-label="anchor" href="#breaking-changes-development-version"></a></h3>
+<h3 id="breaking-changes-0-11-0">Breaking changes<a class="anchor" aria-label="anchor" href="#breaking-changes-0-11-0"></a></h3>
 <ul><li>
 <code><a href="../reference/pip_cp.html">pip_cp()</a></code>, <code><a href="../reference/pip_data.html">pip_data()</a></code>, and <code><a href="../reference/pip_group.html">pip_group()</a></code> now default to <code>povline = NULL</code>, which uses the international poverty line of the requested <code>ppp_version</code> instead of the outdated <code>2.15</code>.</li>
 <li>
@@ -50,7 +50,7 @@
 <code><a href="../reference/wb_indicator.html">wb_indicator()</a></code> now returns every topic of an indicator in <code>topic_id</code> and <code>topic_value</code>, separated by <code>;</code>, instead of only the first. <code>topic_id</code> is now character, and comparisons such as <code>topic_value == "Health"</code> no longer match indicators with several topics. Use <code>grepl("(^|;)Health(;|$)", topic_value)</code> instead.</li>
 </ul></div>
 <div class="section level3">
-<h3 id="new-features-development-version">New features<a class="anchor" aria-label="anchor" href="#new-features-development-version"></a></h3>
+<h3 id="new-features-0-11-0">New features<a class="anchor" aria-label="anchor" href="#new-features-0-11-0"></a></h3>
 <ul><li>Progress bars for slow paginated requests can now be turned off with <code>options(worldbank.progress = FALSE)</code>.</li>
 <li>
 <code><a href="../reference/wb_country.html">wb_country()</a></code> gains <code>region</code>, <code>income_level</code>, and <code>lending_type</code> arguments to filter countries server-side instead of downloading the full list.</li>
@@ -67,7 +67,7 @@
 <code><a href="../reference/wb_project.html">wb_project()</a></code> is now several times faster, since it only requests the fields it returns.</li>
 </ul></div>
 <div class="section level3">
-<h3 id="bug-fixes-development-version">Bug fixes<a class="anchor" aria-label="anchor" href="#bug-fixes-development-version"></a></h3>
+<h3 id="bug-fixes-0-11-0">Bug fixes<a class="anchor" aria-label="anchor" href="#bug-fixes-0-11-0"></a></h3>
 <ul><li>Requests are now also retried on HTTP 502 and 504 responses, which the World Bank APIs return for temporary gateway failures.</li>
 <li>
 <code><a href="../reference/pip_data.html">pip_data()</a></code> and <code><a href="../reference/pip_group.html">pip_group()</a></code> now accept <code>year = "all"</code> and <code>year = "MRV"</code>, which the PIP API supports, instead of only four-digit years.</li>
