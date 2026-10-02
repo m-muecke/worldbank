@@ -4,7 +4,7 @@
 
 * `pip_cp()`, `pip_data()`, and `pip_group()` now default to `povline = NULL`, which uses the international poverty line of the requested `ppp_version` instead of the outdated `2.15`.
 * `wb_cache_delete()`, deprecated since worldbank 0.8.0, is now defunct. Use `wb_cache_clear()` instead.
-* `wb_indicator()` now returns every topic of an indicator in `topic_id` and `topic_value`, separated by `;`, instead of only the first. `topic_id` is now character, and comparisons such as `topic_value == "Health"` no longer match indicators with several topics.
+* `wb_indicator()` now returns every topic of an indicator in `topic_id` and `topic_value`, separated by `;`, instead of only the first. `topic_id` is now character, and comparisons such as `topic_value == "Health"` no longer match indicators with several topics. Use `grepl("(^|;)Health(;|$)", topic_value)` instead.
 
 ## New features
 

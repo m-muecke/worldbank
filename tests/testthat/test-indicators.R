@@ -188,6 +188,17 @@ test_that("wb_indicator keeps every topic", {
   )
 })
 
+test_that("wb_indicator returns NA for untranslated topic names", {
+  indicator <- readRDS(test_path("fixtures", "wb-indicator.rds"))[[1L]]
+  indicator$topics <- list(list(id = "1", value = ""), list(id = "19", value = ""))
+  local_mocked_bindings(worldbank = \(...) list(indicator))
+
+  actual <- wb_indicator(indicator$id, lang = "vi")
+
+  expect_identical(actual$topic_id, "1;19")
+  expect_identical(actual$topic_value, NA_character_)
+})
+
 test_that("wb_country_indicator", {
   local_mocked_bindings(
     worldbank = \(...) readRDS(test_path("fixtures", "wb-country-indicator.rds"))

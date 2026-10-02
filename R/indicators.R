@@ -375,7 +375,10 @@ wb_indicator <- function(indicator = NULL, lang = "en", source = NULL) {
     source_note = map_chr(data, "sourceNote"),
     source_organization = map_chr(data, "sourceOrganization"),
     topic_id = map_chr(topics, \(x) paste(map_chr(x, "id"), collapse = ";")),
-    topic_value = map_chr(topics, \(x) paste(trimws(map_chr(x, "value")), collapse = ";")),
+    topic_value = map_chr(topics, function(x) {
+      value <- trimws(map_chr(x, "value"))
+      if (any(nzchar(value))) paste(value, collapse = ";") else NA_character_
+    }),
     check.names = FALSE
   )
   clean_strings(res)
