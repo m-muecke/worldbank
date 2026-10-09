@@ -201,7 +201,7 @@ ind[c("country_code", "date", "value")]
 #>   country_code date value
 #> 1          ALB 2020   0.3
 #> 2          BRA 2024   3.0
-#> 3          IND 2022   5.3
+#> 3          IND 2023   2.6
 
 # include the per-observation footnotes
 ind <- wb_data("SI.POV.DDAY", "ALB", footnote = TRUE)

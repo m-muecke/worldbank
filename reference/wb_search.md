@@ -100,6 +100,8 @@ Other indicators data:
 # \donttest{
 # search for indicators related to GDP
 wb_search("GDP")
+#> ⠙ iterating 1 done (0.41/s) | 2.4s
+#> iterating ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■  100% | ETA:  0s
 #>                                      id
 #> 1                       6.0.GDP_current
 #> 2                        6.0.GDP_growth
@@ -4467,13 +4469,13 @@ wb_search("unemployment", fields = "name")
 #> 25       ASPIRE: The Atlas of Social Protection - Indicators of Resilience and Equity, World Bank (WB), uri: datatopics.worldbank.org/aspire/, note: Data are based on national representative household surveys.
 #> 26       ASPIRE: The Atlas of Social Protection - Indicators of Resilience and Equity, World Bank (WB), uri: datatopics.worldbank.org/aspire/, note: Data are based on national representative household surveys.
 #> 27       ASPIRE: The Atlas of Social Protection - Indicators of Resilience and Equity, World Bank (WB), uri: datatopics.worldbank.org/aspire/, note: Data are based on national representative household surveys.
-#> 28            Labour Force Statistics database (LFS), International Labour Organization (ILO), uri: https://ilostat.ilo.org/data/bulk/, publisher: ILOSTAT, type: external database, date accessed: June 22, 2026
+#> 28       Labour Force Statistics database (LFS), International Labour Organization (ILO), uri: https://ilostat.ilo.org/data/bulk/, publisher: ILOSTAT, type: external database, date accessed: September 28, 2026
 #> 29       ILO Modelled Estimates database (ILOEST), International Labour Organization (ILO), uri: https://ilostat.ilo.org/data/bulk/, publisher: ILOSTAT, type: external database, date accessed: January 17, 2026
 #> 30                                      World Bank, World Development Indicators database. Estimates are based on data obtained from International Labour Organization, ILOSTAT at https://ilostat.ilo.org/data/.
 #> 31                                      World Bank, World Development Indicators database. Estimates are based on data obtained from International Labour Organization, ILOSTAT at https://ilostat.ilo.org/data/.
-#> 32            Labour Force Statistics database (LFS), International Labour Organization (ILO), uri: https://ilostat.ilo.org/data/bulk/, publisher: ILOSTAT, type: external database, date accessed: June 22, 2026
+#> 32       Labour Force Statistics database (LFS), International Labour Organization (ILO), uri: https://ilostat.ilo.org/data/bulk/, publisher: ILOSTAT, type: external database, date accessed: September 28, 2026
 #> 33       ILO Modelled Estimates database (ILOEST), International Labour Organization (ILO), uri: https://ilostat.ilo.org/data/bulk/, publisher: ILOSTAT, type: external database, date accessed: January 17, 2026
-#> 34            Labour Force Statistics database (LFS), International Labour Organization (ILO), uri: https://ilostat.ilo.org/data/bulk/, publisher: ILOSTAT, type: external database, date accessed: June 22, 2026
+#> 34       Labour Force Statistics database (LFS), International Labour Organization (ILO), uri: https://ilostat.ilo.org/data/bulk/, publisher: ILOSTAT, type: external database, date accessed: September 28, 2026
 #> 35       ILO Modelled Estimates database (ILOEST), International Labour Organization (ILO), uri: https://ilostat.ilo.org/data/bulk/, publisher: ILOSTAT, type: external database, date accessed: January 17, 2026
 #> 36 Education and Mismatch Indicators database (EMI), International Labour Organization (ILO), uri: https://ilostat.ilo.org/data/bulk/, publisher: ILOSTAT, type: external database, date accessed: March 30, 2026
 #> 37 Education and Mismatch Indicators database (EMI), International Labour Organization (ILO), uri: https://ilostat.ilo.org/data/bulk/, publisher: ILOSTAT, type: external database, date accessed: March 30, 2026
@@ -4496,11 +4498,11 @@ wb_search("unemployment", fields = "name")
 #> 54                                                                                                                               International Labour Organization, Key Indicators of the Labour Market database.
 #> 55                                                                                                                               International Labour Organization, Key Indicators of the Labour Market database.
 #> 56                                                                                                                               International Labour Organization, Key Indicators of the Labour Market database.
-#> 57            Labour Force Statistics database (LFS), International Labour Organization (ILO), uri: https://ilostat.ilo.org/data/bulk/, publisher: ILOSTAT, type: external database, date accessed: June 22, 2026
+#> 57       Labour Force Statistics database (LFS), International Labour Organization (ILO), uri: https://ilostat.ilo.org/data/bulk/, publisher: ILOSTAT, type: external database, date accessed: September 28, 2026
 #> 58       ILO Modelled Estimates database (ILOEST), International Labour Organization (ILO), uri: https://ilostat.ilo.org/data/bulk/, publisher: ILOSTAT, type: external database, date accessed: January 17, 2026
-#> 59            Labour Force Statistics database (LFS), International Labour Organization (ILO), uri: https://ilostat.ilo.org/data/bulk/, publisher: ILOSTAT, type: external database, date accessed: June 22, 2026
+#> 59       Labour Force Statistics database (LFS), International Labour Organization (ILO), uri: https://ilostat.ilo.org/data/bulk/, publisher: ILOSTAT, type: external database, date accessed: September 28, 2026
 #> 60       ILO Modelled Estimates database (ILOEST), International Labour Organization (ILO), uri: https://ilostat.ilo.org/data/bulk/, publisher: ILOSTAT, type: external database, date accessed: January 17, 2026
-#> 61            Labour Force Statistics database (LFS), International Labour Organization (ILO), uri: https://ilostat.ilo.org/data/bulk/, publisher: ILOSTAT, type: external database, date accessed: June 22, 2026
+#> 61       Labour Force Statistics database (LFS), International Labour Organization (ILO), uri: https://ilostat.ilo.org/data/bulk/, publisher: ILOSTAT, type: external database, date accessed: September 28, 2026
 #> 62       ILO Modelled Estimates database (ILOEST), International Labour Organization (ILO), uri: https://ilostat.ilo.org/data/bulk/, publisher: ILOSTAT, type: external database, date accessed: January 17, 2026
 #> 63                                                                                                                                                                                                           <NA>
 #>      topic_id                                                   topic_value

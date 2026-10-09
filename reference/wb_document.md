@@ -123,8 +123,6 @@ wb_document(
   start_date = "2024-01-01",
   end_date = "2024-12-31"
 )
-#> ⠙ iterating 1 done (0.066/s) | 15.2s
-#> iterating ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■  100% | ETA:  0s
 #>         id
 #> 1 34409107
 #> 2 34380251
@@ -231,8 +229,8 @@ wb_document(project = "P180429")
 #> 37 34321639
 #> 38 34319227
 #> 39 34308578
-#> 40 34308577
-#> 41 34308576
+#> 40 34308576
+#> 41 34308577
 #> 42 34306803
 #> 43 34402700
 #> 44 34173758
@@ -277,8 +275,8 @@ wb_document(project = "P180429")
 #> 37            Brazil - LATIN AMERICA AND CARIBBEAN- P180429- Bahia Sustainable Rural Development Project - Procurement Plan
 #> 38            Brazil - LATIN AMERICA AND CARIBBEAN- P180429- Bahia Sustainable Rural Development Project - Procurement Plan
 #> 39         Appraisal Environmental and Social Review Summary (ESRS) - Bahia Sustainable Rural Development Project - P180429
-#> 40                  Environmental and Social Commitment Plan (ESCP) - Bahia Sustainable Rural Development Project - P180429
-#> 41                                Stakeholder Engagement Plan (SEP) - Bahia Sustainable Rural Development Project - P180429
+#> 40                                Stakeholder Engagement Plan (SEP) - Bahia Sustainable Rural Development Project - P180429
+#> 41                  Environmental and Social Commitment Plan (ESCP) - Bahia Sustainable Rural Development Project - P180429
 #> 42               Revised  Environmental and Social Impact Assessment  Bahia Sustainable Rural Development Project (P180429)
 #> 43                                                                     Brazil - Bahia Sustainable Rural Development Project
 #> 44 Concept Environmental and Social Review Summary (ESRS) - Bahia Sustainable Rural Development Project - Phase 2 - P180429
@@ -323,8 +321,8 @@ wb_document(project = "P180429")
 #> 37                                                               Procurement Plan
 #> 38                                                               Procurement Plan
 #> 39                                        Environmental and Social Review Summary
-#> 40                                       Environmental and Social Commitment Plan
-#> 41                                                    Stakeholder Engagement Plan
+#> 40                                                    Stakeholder Engagement Plan
+#> 41                                       Environmental and Social Commitment Plan
 #> 42 Environmental and Social Assessment;Environmental Assessment;Social Assessment
 #> 43                                                   Project Information Document
 #> 44                                        Environmental and Social Review Summary
@@ -461,8 +459,8 @@ wb_document(project = "P180429")
 #> 37 http://documents.worldbank.org/curated/en/099052024161017643
 #> 38 http://documents.worldbank.org/curated/en/099051624092540072
 #> 39 http://documents.worldbank.org/curated/en/099042524173023798
-#> 40 http://documents.worldbank.org/curated/en/099042524172515208
-#> 41 http://documents.worldbank.org/curated/en/099042524172532795
+#> 40 http://documents.worldbank.org/curated/en/099042524172532795
+#> 41 http://documents.worldbank.org/curated/en/099042524172515208
 #> 42 http://documents.worldbank.org/curated/en/099042324123035354
 #> 43 http://documents.worldbank.org/curated/en/099722210102417323
 #> 44 http://documents.worldbank.org/curated/en/099100223155525902
@@ -507,8 +505,8 @@ wb_document(project = "P180429")
 #> 37           http://documents.worldbank.org/curated/en/099052024161017643/pdf/P180429105cc6d0e9184361d74250d9cb6f.pdf
 #> 38           http://documents.worldbank.org/curated/en/099051624092540072/pdf/P1804291a132cb06f1bf641782e1a92972b.pdf
 #> 39 https://documents.worldbank.org/curated/en/099042524173023798/pdf/P180429-1d48fee0-23da-4aac-a871-f469d7cbed3a.pdf
-#> 40            http://documents.worldbank.org/curated/en/099042524172515208/pdf/P1804291d63db20518dba154b4b0b2f037.pdf
-#> 41            http://documents.worldbank.org/curated/en/099042524172532795/pdf/P18042918be5fc031953916504ca1c0a43.pdf
+#> 40            http://documents.worldbank.org/curated/en/099042524172532795/pdf/P18042918be5fc031953916504ca1c0a43.pdf
+#> 41            http://documents.worldbank.org/curated/en/099042524172515208/pdf/P1804291d63db20518dba154b4b0b2f037.pdf
 #> 42            http://documents.worldbank.org/curated/en/099042324123035354/pdf/P1804291cd02f40418d5314ff0d3532d76.pdf
 #> 43     https://documents.worldbank.org/curated/en/099722210102417323/pdf/IDU-89129d52-de9f-4948-9da6-158954a709e1.pdf
 #> 44           http://documents.worldbank.org/curated/en/099100223155525902/pdf/P1804290a85f9b0c70b6ca0c313f67b9676.pdf
@@ -568,18 +566,18 @@ docs[grepl(";", docs$country_code), c("title", "country_code")]
 #>                                                                                                                                              title
 #> 8                 Implementation Completion and Results Report (ICR) Document -  Preparation of Strategic Program for Climate Resilience - P159600
 #> 13 Bangladesh - Climate Smart Investment Plan : Investment opportunities in the agriculture sector’s transition to a climate resilient growth path
-#> 39                                                                                                        Climate Resilient Road Assets in Albania
-#> 41                                                 Disclosable Restructuring Paper - Disaster and Climate Resilience Improvement Project - P154036
-#> 52                                    The Next Generation Africa Climate Business Plan : Ramping Up Development-Centered Climate Action - Overview
-#> 71                                                  Come hell or high water - integrating climate change vulnerability and adaption into Bank work
+#> 38                                                                                                        Climate Resilient Road Assets in Albania
+#> 42                                                 Disclosable Restructuring Paper - Disaster and Climate Resilience Improvement Project - P154036
+#> 51                                    The Next Generation Africa Climate Business Plan : Ramping Up Development-Centered Climate Action - Overview
+#> 70                                                  Come hell or high water - integrating climate change vulnerability and adaption into Bank work
 #> 78                                            Disclosable Restructuring Paper - Bangladesh Weather and Climate Services Regional Project - P150220
 #>         country_code
 #> 8              BT;1W
 #> 13             BD;1W
-#> 39             AL;7B
-#> 41             PK;1W
-#> 52             3A;1W
-#> 71 IN;EC;PG;WS;BD;GY
+#> 38             AL;7B
+#> 42             PK;1W
+#> 51             3A;1W
+#> 70 IN;EC;PG;WS;BD;GY
 #> 78             8S;BD
 # }
 ```

@@ -4,6 +4,8 @@
 
 ## worldbank 0.11.0
 
+CRAN release: 2026-10-02
+
 ### Breaking changes
 
 - [`pip_cp()`](https://m-muecke.github.io/worldbank/reference/pip_cp.md),
