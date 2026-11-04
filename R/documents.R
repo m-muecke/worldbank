@@ -22,7 +22,8 @@
 #'   Document ID(s) to filter by, as returned in the `id` column. Default `NULL`.
 #' @param limit (`NULL` | `integer(1)`)\cr
 #'   The maximum number of documents to return. Default `NULL`. If `NULL`, all matching documents
-#'   are returned, which can take many requests for broad queries.
+#'   are returned, which can take many requests for broad queries. Documents are returned in
+#'   descending order of `date`, so the most recent documents come first.
 #' @returns A `data.frame()` with World Bank document data. Since a document can have several
 #'   types, countries, regions, and projects, `type`, `major_type`, `country_code`, `country`,
 #'   `region`, and `project_id` hold all of them separated by `;`, which never occurs within a
@@ -122,8 +123,17 @@ documents <- function(..., limit = NULL) {
   per_page <- min(limit %||% 1000L, 1000L)
   max_reqs <- if (!is.null(limit)) ceiling(limit / per_page) else Inf
 
+  # the default order by relevance has ties, so paging by offset repeats and skips documents
   req <- wb_request("https://search.worldbank.org/api/v3/wds") |>
-    req_url_query(..., format = "json", rows = per_page, fl = document_fields, .multi = "comma")
+    req_url_query(
+      ...,
+      format = "json",
+      rows = per_page,
+      fl = document_fields,
+      srt = "docdt",
+      order = "desc",
+      .multi = "comma"
+    )
 
   resps <- req_perform_iterative(
     req,
@@ -139,6 +149,9 @@ documents <- function(..., limit = NULL) {
   )
 
   data <- resps_data(resps, resp_documents)
+  # documents with the same date can still shift between pages
+  ids <- map_chr(data, \(x) x$id %||% NA_character_)
+  data <- data[is.na(ids) | !duplicated(ids)]
   if (!is.null(limit)) {
     data <- utils::head(data, limit)
   }

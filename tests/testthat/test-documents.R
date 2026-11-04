@@ -73,10 +73,11 @@ test_that("wb_document joins multi-value filters with the API separator", {
 
 test_that("wb_document limit caps results across pages", {
   urls <- character()
-  docs <- lapply(seq_len(1000L), \(i) list(id = as.character(i)))
-  names(docs) <- paste0("D", seq_len(1000L))
   httr2::local_mocked_responses(function(req) {
     urls <<- c(urls, req$url)
+    offset <- as.integer(httr2::url_parse(req$url)$query$os %||% 0L)
+    ids <- as.character(offset + seq_len(1000L))
+    docs <- stats::setNames(lapply(ids, \(id) list(id = id)), paste0("D", ids))
     httr2::response_json(body = list(documents = docs))
   })
 
@@ -92,6 +93,22 @@ test_that("wb_document limit caps results across pages", {
   expect_shape(actual, nrow = 10L)
   expect_length(urls, 1L)
   expect_match(urls, "rows=10", fixed = TRUE)
+})
+
+test_that("documents sorts by date and drops documents repeated across pages", {
+  urls <- character()
+  httr2::local_mocked_responses(function(req) {
+    urls <<- c(urls, req$url)
+    data <- if (length(urls) == 1L) {
+      list(D1 = list(id = "1"), D2 = list(id = "2"))
+    } else {
+      list(D2 = list(id = "2"), D3 = list(id = "3"))
+    }
+    httr2::response_json(body = list(total = 2000L, documents = data))
+  })
+  actual <- documents()
+  expect_identical(map_chr(actual, "id"), c("1", "2", "3"))
+  expect_match(urls, "srt=docdt&order=desc", all = TRUE, fixed = TRUE)
 })
 
 test_that("documents stops paging once the total is reached", {

@@ -46,7 +46,8 @@ Document ID(s) to filter by, as returned in the \code{id} column. Default \code{
 
 \item{limit}{(\code{NULL} | \code{integer(1)})\cr
 The maximum number of documents to return. Default \code{NULL}. If \code{NULL}, all matching documents
-are returned, which can take many requests for broad queries.}
+are returned, which can take many requests for broad queries. Documents are returned in
+descending order of \code{date}, so the most recent documents come first.}
 }
 \value{
 A \code{data.frame()} with World Bank document data. Since a document can have several
