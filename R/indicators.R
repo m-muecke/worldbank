@@ -549,7 +549,8 @@ read_wdi <- function(dir) {
 #'   * YYYYQ\[1-4\] for quarterly data (e.g. `"2020Q1"`)
 #'   * YYYYM\[1-12\] for monthly data (e.g. `"2020M02"`)
 #' @param end_date (`NULL` | `character(1)` | `integer(1)`)\cr
-#'   End date to query, in the same format as start_date. Default `NULL`.
+#'   End date to query, in the same format as start_date. Default `NULL`. If only one of
+#'   `start_date` and `end_date` is given, only observations for that single date are returned.
 #' @param mrv (`NULL` | `integer(1)`)\cr
 #'   Most recent values to return. An alternative to `start_date`/`end_date`. Default `NULL`.
 #' @param mrnev (`NULL` | `integer(1)`)\cr

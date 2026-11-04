@@ -53,7 +53,8 @@ Start date to query. Default \code{NULL}. Supported formats:
 }}
 
 \item{end_date}{(\code{NULL} | \code{character(1)} | \code{integer(1)})\cr
-End date to query, in the same format as start_date. Default \code{NULL}.}
+End date to query, in the same format as start_date. Default \code{NULL}. If only one of
+\code{start_date} and \code{end_date} is given, only observations for that single date are returned.}
 
 \item{mrv}{(\code{NULL} | \code{integer(1)})\cr
 Most recent values to return. An alternative to \code{start_date}/\code{end_date}. Default \code{NULL}.}
