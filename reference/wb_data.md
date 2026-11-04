@@ -69,6 +69,8 @@ wb_country_indicator(
 
   (`NULL` \| `character(1)` \| `integer(1)`)  
   End date to query, in the same format as start_date. Default `NULL`.
+  If only one of `start_date` and `end_date` is given, only observations
+  for that single date are returned.
 
 - mrv:
 

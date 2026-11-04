@@ -2,6 +2,12 @@
 
 ## worldbank (development version)
 
+### Bug fixes
+
+- [`wb_document()`](https://m-muecke.github.io/worldbank/reference/wb_document.md)
+  no longer returns duplicated or missing documents for queries spanning
+  several pages. Documents are now sorted by descending `date`.
+
 ## worldbank 0.11.0
 
 CRAN release: 2026-10-02
