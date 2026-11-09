@@ -13,7 +13,6 @@
 ^\.Renviron$
 ^\.Rproj\.user$
 ^\.ccache$
-^\.claude$
 ^\.dockerignore$
 ^\.editorconfig$
 ^\.gitattributes$
