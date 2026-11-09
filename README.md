@@ -156,5 +156,5 @@ subset(gdp, date >= 1980) |>
   Worldbank API
 - [wbstats](https://github.com/gshs-ornl/wbstats): R package for
   searching and downloading data from the World Bank API
-- [wbwdi](https://github.com/tidy-intelligence/r-wbwdi): R package to
+- [wbwdi](https://github.com/econdataverse/r-wbwdi): R package to
   download World Bank indicator data
