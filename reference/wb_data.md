@@ -159,8 +159,6 @@ Other indicators data:
 # \donttest{
 # single indicator for a single country (all available years)
 ind <- wb_data("NY.GDP.MKTP.CD", "US")
-#> ⠙ iterating 1 done (0.13/s) | 8s
-#> iterating ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■  100% | ETA:  0s
 head(ind)
 #>   date   indicator_id    indicator_name country_id  country_name country_code
 #> 1 2025 NY.GDP.MKTP.CD GDP (current US$)         US United States          USA
@@ -183,8 +181,6 @@ ind <- wb_data(
   country = c("US", "DE", "FR", "CH", "JP"),
   start_date = 2015, end_date = 2023
 )
-#> ⠙ iterating 1 done (0.043/s) | 23.5s
-#> iterating ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■  100% | ETA:  0s
 head(ind)
 #>   date   indicator_id    indicator_name country_id country_name country_code
 #> 1 2023 NY.GDP.MKTP.CD GDP (current US$)         CH  Switzerland          CHE
