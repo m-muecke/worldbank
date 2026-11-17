@@ -184,17 +184,17 @@ parse_documents <- function(data) {
   )
   res$date <- as.Date(sub("T.*", "", res$date))
   res <- clean_strings(res)
-  res$type <- normalize_values(res$type, ";")
-  res$major_type <- normalize_values(res$major_type, ";")
-  res$country_code <- normalize_values(res$country_code, ",")
+  res$type <- rejoin(res$type, ";")
+  res$major_type <- rejoin(res$major_type, ";")
+  res$country_code <- rejoin(res$country_code, ",")
   # names can contain ", " themselves, e.g. "Congo, Democratic Republic of"
-  res$country <- normalize_values(res$country, ",(?! )")
-  res$region <- normalize_values(res$region, ";")
-  res$project_id <- normalize_values(res$project_id, ",")
+  res$country <- rejoin(res$country, ",(?! )")
+  res$region <- rejoin(res$region, ";")
+  res$project_id <- rejoin(res$project_id, ",")
   res
 }
 
-normalize_values <- function(x, split) {
+rejoin <- function(x, split) {
   res <- map_chr(x, function(value) {
     if (is.na(value)) {
       return(NA_character_)

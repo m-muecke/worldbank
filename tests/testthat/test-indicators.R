@@ -1,6 +1,6 @@
 test_that("wb_language", {
   local_mocked_bindings(
-    worldbank = \(...) readRDS(test_path("fixtures", "wb-language.rds"))
+    indicators = \(...) readRDS(test_path("fixtures", "wb-language.rds"))
   )
   actual <- wb_language()
   expect_s3_class(actual, "data.frame")
@@ -12,7 +12,7 @@ test_that("wb_language", {
 
 test_that("wb_lending_type", {
   local_mocked_bindings(
-    worldbank = \(...) readRDS(test_path("fixtures", "wb-lending-type.rds"))
+    indicators = \(...) readRDS(test_path("fixtures", "wb-lending-type.rds"))
   )
   actual <- wb_lending_type()
   expect_s3_class(actual, "data.frame")
@@ -24,7 +24,7 @@ test_that("wb_lending_type", {
 
 test_that("wb_income_level", {
   local_mocked_bindings(
-    worldbank = \(...) readRDS(test_path("fixtures", "wb-income-level.rds"))
+    indicators = \(...) readRDS(test_path("fixtures", "wb-income-level.rds"))
   )
   actual <- wb_income_level()
   expect_s3_class(actual, "data.frame")
@@ -36,7 +36,7 @@ test_that("wb_income_level", {
 
 test_that("wb_source", {
   local_mocked_bindings(
-    worldbank = \(...) readRDS(test_path("fixtures", "wb-source.rds"))
+    indicators = \(...) readRDS(test_path("fixtures", "wb-source.rds"))
   )
   actual <- wb_source()
   expect_s3_class(actual, "data.frame")
@@ -51,7 +51,7 @@ test_that("wb_source", {
 
 test_that("wb_topic", {
   local_mocked_bindings(
-    worldbank = \(...) readRDS(test_path("fixtures", "wb-topic.rds"))
+    indicators = \(...) readRDS(test_path("fixtures", "wb-topic.rds"))
   )
   actual <- wb_topic()
   expect_s3_class(actual, "data.frame")
@@ -66,7 +66,7 @@ test_that("wb_topic", {
 
 test_that("wb_region", {
   local_mocked_bindings(
-    worldbank = \(...) readRDS(test_path("fixtures", "wb-region.rds"))
+    indicators = \(...) readRDS(test_path("fixtures", "wb-region.rds"))
   )
   actual <- wb_region()
   expect_s3_class(actual, "data.frame")
@@ -81,7 +81,7 @@ test_that("wb_region", {
 
 test_that("wb_country", {
   local_mocked_bindings(
-    worldbank = \(...) readRDS(test_path("fixtures", "wb-country.rds"))
+    indicators = \(...) readRDS(test_path("fixtures", "wb-country.rds"))
   )
   actual <- wb_country()
   expect_s3_class(actual, "data.frame")
@@ -96,7 +96,7 @@ test_that("wb_country", {
 
 test_that("wb_country passes filters to the API", {
   captured <- NULL
-  local_mocked_bindings(worldbank = function(...) {
+  local_mocked_bindings(indicators = function(...) {
     captured <<- list(...)
     readRDS(test_path("fixtures", "wb-country.rds"))
   })
@@ -110,7 +110,7 @@ test_that("wb_country passes filters to the API", {
 
 test_that("wb_country takes lang as its second argument", {
   captured <- NULL
-  local_mocked_bindings(worldbank = function(...) {
+  local_mocked_bindings(indicators = function(...) {
     captured <<- list(...)
     readRDS(test_path("fixtures", "wb-country.rds"))
   })
@@ -121,14 +121,14 @@ test_that("wb_country takes lang as its second argument", {
 
 test_that("wb_country drops duplicated countries", {
   countries <- readRDS(test_path("fixtures", "wb-country.rds"))
-  local_mocked_bindings(worldbank = \(...) rep(countries[1:2], each = 2L))
+  local_mocked_bindings(indicators = \(...) rep(countries[1:2], each = 2L))
   actual <- wb_country(lending_type = "IDX")
   expect_identical(actual$country_id, map_chr(countries[1:2], "id"))
 })
 
 test_that("wb_indicator", {
   local_mocked_bindings(
-    worldbank = \(...) readRDS(test_path("fixtures", "wb-indicator.rds"))
+    indicators = \(...) readRDS(test_path("fixtures", "wb-indicator.rds"))
   )
   actual <- wb_indicator()
   expect_s3_class(actual, "data.frame")
@@ -145,7 +145,7 @@ test_that("wb_indicator", {
 
 test_that("wb_indicator passes source to the API", {
   captured <- NULL
-  local_mocked_bindings(worldbank = function(...) {
+  local_mocked_bindings(indicators = function(...) {
     captured <<- list(...)$source
     readRDS(test_path("fixtures", "wb-indicator.rds"))
   })
@@ -168,7 +168,7 @@ test_that("wb_indicator keeps every topic", {
   indicator_with_empty_topic$id <- "EMPTY.TOPIC"
   indicator_with_empty_topic$topics <- list(setNames(list(), character()))
   local_mocked_bindings(
-    worldbank = \(...) list(indicator, indicator_without_topics, indicator_with_empty_topic)
+    indicators = \(...) list(indicator, indicator_without_topics, indicator_with_empty_topic)
   )
 
   actual <- wb_indicator(indicator$id)
@@ -191,7 +191,7 @@ test_that("wb_indicator keeps every topic", {
 test_that("wb_indicator returns NA for untranslated topic names", {
   indicator <- readRDS(test_path("fixtures", "wb-indicator.rds"))[[1L]]
   indicator$topics <- list(list(id = "1", value = ""), list(id = "19", value = ""))
-  local_mocked_bindings(worldbank = \(...) list(indicator))
+  local_mocked_bindings(indicators = \(...) list(indicator))
 
   actual <- wb_indicator(indicator$id, lang = "vi")
 
@@ -201,7 +201,7 @@ test_that("wb_indicator returns NA for untranslated topic names", {
 
 test_that("wb_country_indicator", {
   local_mocked_bindings(
-    worldbank = \(...) readRDS(test_path("fixtures", "wb-country-indicator.rds"))
+    indicators = \(...) readRDS(test_path("fixtures", "wb-country-indicator.rds"))
   )
   actual <- wb_country_indicator()
   expect_s3_class(actual, "data.frame")
@@ -331,9 +331,9 @@ test_that("wb_indicator input validation works", {
 })
 
 test_that("wb_search filters indicators by pattern", {
-  indicators <- readRDS(test_path("fixtures", "wb-indicator.rds"))
+  fixture <- readRDS(test_path("fixtures", "wb-indicator.rds"))
   local_mocked_bindings(
-    worldbank = \(...) indicators
+    indicators = \(...) fixture
   )
 
   catalog <- wb_indicator()
@@ -370,10 +370,10 @@ test_that("wb_search matches fixed patterns literally and case sensitively", {
 
 test_that("wb_search passes source to wb_indicator", {
   captured <- NULL
-  indicators <- readRDS(test_path("fixtures", "wb-indicator.rds"))
-  local_mocked_bindings(worldbank = function(...) {
+  catalog <- readRDS(test_path("fixtures", "wb-indicator.rds"))
+  local_mocked_bindings(indicators = function(...) {
     captured <<- list(...)$source
-    indicators
+    catalog
   })
   wb_search("HCount", source = 11)
   expect_identical(captured, 11)
@@ -419,7 +419,7 @@ test_that("wb_bulk input validation works", {
 test_that("wb_search input validation works", {
   catalog <- readRDS(test_path("fixtures", "wb-indicator.rds"))
   local_mocked_bindings(
-    worldbank = \(...) catalog
+    indicators = \(...) catalog
   )
   expect_error(wb_search(NULL))
   expect_error(wb_search(c("a", "b")))
@@ -455,7 +455,7 @@ test_that("wb_country_indicator input validation works", {
 })
 
 test_that("wb_data returns an empty data.frame when there are no observations", {
-  local_mocked_bindings(worldbank = \(...) NULL)
+  local_mocked_bindings(indicators = \(...) NULL)
   actual <- wb_data("NY.GDP.MKTP.CD", "US")
   expect_s3_class(actual, "data.frame")
   expect_shape(actual, dim = c(0L, 10L))
@@ -475,7 +475,7 @@ test_that("wb_data preserves mixed-frequency dates as character", {
     )
   }
   local_mocked_bindings(
-    worldbank = function(resource, ...) {
+    indicators = function(resource, ...) {
       indicator <- sub(".*/", "", resource)
       date <- if (indicator == "ANNUAL") "2020" else "2020Q1"
       list(observation(date, indicator))
@@ -494,7 +494,7 @@ test_that("wb_data preserves mixed-frequency dates as character", {
 test_that("wb_data returns footnotes only when asked", {
   captured <- NULL
   local_mocked_bindings(
-    worldbank = function(...) {
+    indicators = function(...) {
       captured <<- list(...)$footnote
       list(wb_observation(footnote = "Based on data from LSMS."), wb_observation())
     }
@@ -510,7 +510,7 @@ test_that("wb_data returns footnotes only when asked", {
 
 test_that("wb_data returns footnotes for multiple indicators", {
   local_mocked_bindings(
-    worldbank = function(resource, ...) {
+    indicators = function(resource, ...) {
       indicator <- sub(".*/", "", resource)
       list(wb_observation(indicator, footnote = paste("note for", indicator)))
     }
@@ -521,7 +521,7 @@ test_that("wb_data returns footnotes for multiple indicators", {
 
 test_that("wb_data passes source to the API", {
   captured <- NULL
-  local_mocked_bindings(worldbank = function(...) {
+  local_mocked_bindings(indicators = function(...) {
     captured <<- list(...)$source
     list(wb_observation())
   })
@@ -537,7 +537,7 @@ test_that("wb_data falls back to the country ID for missing ISO3 codes", {
     obs
   }
   local_mocked_bindings(
-    worldbank = \(...) list(observation("ZAF", ""), observation("XD", ""), wb_observation())
+    indicators = \(...) list(observation("ZAF", ""), observation("XD", ""), wb_observation())
   )
   actual <- wb_data("NY.GDP.MKTP.CD", "ZAF", source = 11)
   expect_identical(actual$country_code, c("ZAF", NA, "ALB"))
@@ -545,7 +545,7 @@ test_that("wb_data falls back to the country ID for missing ISO3 codes", {
 
 test_that("wb_data passes mrnev to the API", {
   captured <- NULL
-  local_mocked_bindings(worldbank = function(...) {
+  local_mocked_bindings(indicators = function(...) {
     captured <<- list(...)$mrnev
     list(wb_observation())
   })
@@ -556,7 +556,7 @@ test_that("wb_data passes mrnev to the API", {
 test_that("wb_data handles observations without a unit", {
   obs <- wb_observation()
   obs$unit <- NULL
-  local_mocked_bindings(worldbank = \(...) list(obs))
+  local_mocked_bindings(indicators = \(...) list(obs))
   actual <- wb_data("SI.POV.DDAY", "ALB", mrnev = 1)
   expect_identical(actual$unit, NA_character_)
 })
@@ -591,7 +591,7 @@ test_that("lang is validated", {
   expect_snapshot(wb_data(lang = NA_character_), error = TRUE)
 })
 
-test_that("worldbank fetches every page", {
+test_that("indicators fetches every page", {
   httr2::local_mocked_responses(function(req) {
     page <- httr2::url_parse(req$url)$query$page %||% "1"
     httr2::response(
@@ -601,10 +601,10 @@ test_that("worldbank fetches every page", {
     )
   })
 
-  expect_identical(map_chr(worldbank("indicator"), "id"), c("1", "2", "3"))
+  expect_identical(map_chr(indicators("indicator"), "id"), c("1", "2", "3"))
 })
 
-test_that("worldbank returns NULL when there is no data", {
+test_that("indicators returns NULL when there is no data", {
   httr2::local_mocked_responses(function(req) {
     httr2::response(
       status_code = 200L,
@@ -613,7 +613,7 @@ test_that("worldbank returns NULL when there is no data", {
     )
   })
 
-  expect_null(worldbank("indicator"))
+  expect_null(indicators("indicator"))
 })
 
 test_that("error parsing works", {

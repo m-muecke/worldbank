@@ -68,7 +68,7 @@ is_pip_year <- function(x, null_ok = FALSE) {
     is_string(x, pattern = "^(all|mrv)$", ignore.case = TRUE)
 }
 
-is_dateish <- function(x, null_ok = FALSE) {
+is_wb_date <- function(x, null_ok = FALSE) {
   if (null_ok && is.null(x)) {
     return(TRUE)
   }

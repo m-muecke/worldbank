@@ -14,7 +14,7 @@
 #' wb_language()
 #' }
 wb_language <- function() {
-  data <- worldbank(resource = "languages")
+  data <- indicators(resource = "languages")
   res <- data.frame(
     code = map_chr(data, "code"),
     name = map_chr(data, "name"),
@@ -51,7 +51,7 @@ wb_lending_type <- function(type = NULL, lang = "en") {
   type <- format_param(type)
 
   resource <- sprintf("lendingType/%s", type)
-  data <- worldbank(resource = resource, lang = lang)
+  data <- indicators(resource = resource, lang = lang)
   res <- data.frame(
     id = map_chr(data, "id"),
     iso2code = map_chr(data, "iso2code"),
@@ -88,7 +88,7 @@ wb_income_level <- function(income = NULL, lang = "en") {
   income <- format_param(income)
 
   resource <- sprintf("incomeLevel/%s", income)
-  data <- worldbank(resource = resource, lang = lang)
+  data <- indicators(resource = resource, lang = lang)
   res <- data.frame(
     id = map_chr(data, "id"),
     iso2code = map_chr(data, "iso2code"),
@@ -132,7 +132,7 @@ wb_source <- function(source = NULL, lang = "en") {
   source <- format_param(source)
 
   resource <- sprintf("source/%s", source)
-  data <- worldbank(resource = resource, lang = lang)
+  data <- indicators(resource = resource, lang = lang)
   res <- data.frame(
     id = as.integer(map_chr(data, "id")),
     last_updated = as.Date(map_chr(data, "lastupdated")),
@@ -176,7 +176,7 @@ wb_topic <- function(topic = NULL, lang = "en") {
   topic <- format_param(topic)
 
   resource <- sprintf("topic/%s", topic)
-  data <- worldbank(resource = resource, lang = lang)
+  data <- indicators(resource = resource, lang = lang)
   res <- data.frame(
     id = as.integer(map_chr(data, "id")),
     value = map_chr(data, "value"),
@@ -215,7 +215,7 @@ wb_region <- function(region = NULL, lang = "en") {
   region <- format_param(region)
 
   resource <- sprintf("region/%s", region)
-  data <- worldbank(resource = resource, lang = lang)
+  data <- indicators(resource = resource, lang = lang)
   res <- data.frame(
     id = as.integer(na_if_empty(map_chr(data, "id"))),
     code = map_chr(data, "code"),
@@ -287,7 +287,7 @@ wb_country <- function(
   country <- tolower(format_param(country))
 
   resource <- sprintf("country/%s", country)
-  data <- worldbank(
+  data <- indicators(
     resource = resource,
     lang = lang,
     region = region,
@@ -365,7 +365,7 @@ wb_indicator <- function(indicator = NULL, lang = "en", source = NULL) {
   indicator <- format_param(indicator)
 
   resource <- sprintf("indicator/%s", indicator)
-  data <- worldbank(resource = resource, lang = lang, source = source)
+  data <- indicators(resource = resource, lang = lang, source = source)
   topics <- map(data, function(x) {
     # the API returns `[{}]` for some indicators without topics
     topics <- Filter(\(topic) !is.null(topic$id), x$topics)
@@ -628,8 +628,8 @@ wb_data <- function(
     is_character(indicator),
     is_character(country, null_ok = TRUE, n_chars = 2:3),
     is_string(lang, n_chars = 2L),
-    is_dateish(start_date, null_ok = TRUE),
-    is_dateish(end_date, null_ok = TRUE),
+    is_wb_date(start_date, null_ok = TRUE),
+    is_wb_date(end_date, null_ok = TRUE),
     is_count(mrv, null_ok = TRUE),
     is_count(mrnev, null_ok = TRUE),
     is_flag(gapfill),
@@ -655,11 +655,11 @@ wb_data <- function(
   }
   indicator <- toupper(indicator)
   country <- tolower(format_param(country))
-  date <- format_date(start_date, end_date)
+  date <- format_date_range(start_date, end_date)
 
   resource <- sprintf("country/%s/indicator/%s", country, indicator)
   res <- map(resource, function(x) {
-    data <- worldbank(
+    data <- indicators(
       resource = x,
       lang = lang,
       date = date,
@@ -726,7 +726,7 @@ wdi_pivot_long <- function(data) {
   )
 }
 
-worldbank <- function(resource, ..., lang = NULL, per_page = 32500L) {
+indicators <- function(resource, ..., lang = NULL, per_page = 32500L) {
   req <- wb_request("https://api.worldbank.org/v2") |>
     req_url_path_append(lang, resource) |>
     req_url_query(
