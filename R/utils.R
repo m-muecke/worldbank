@@ -26,10 +26,6 @@ to_snake_case <- function(x) {
   gsub("^_+|_+$", "", x)
 }
 
-to_logical <- function(x) {
-  x == "Y"
-}
-
 format_param <- function(x) {
   paste(x %||% "all", collapse = ";")
 }

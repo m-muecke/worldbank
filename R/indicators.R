@@ -140,8 +140,8 @@ wb_source <- function(source = NULL, lang = "en") {
     code = map_chr(data, "code"),
     description = map_chr(data, "description"),
     url = map_chr(data, "url"),
-    data_availability = to_logical(map_chr(data, "dataavailability")),
-    metadata_availability = to_logical(map_chr(data, "metadataavailability")),
+    data_availability = map_chr(data, "dataavailability") == "Y",
+    metadata_availability = map_chr(data, "metadataavailability") == "Y",
     concepts = as.integer(map_chr(data, "concepts")),
     check.names = FALSE
   )
