@@ -191,161 +191,164 @@ wb_document(
 # all documents belonging to a project
 wb_document(project = "P180429")
 #>          id
-#> 1  40138080
-#> 2  40137357
-#> 3  40131842
-#> 4  40131846
-#> 5  40127791
-#> 6  40123773
-#> 7  40122790
-#> 8  40121908
-#> 9  40117840
-#> 10 40117671
-#> 11 40116452
-#> 12 40111110
-#> 13 40109790
-#> 14 40101018
-#> 15 40092797
-#> 16 40090138
-#> 17 40088879
-#> 18 40088922
-#> 19 40086395
-#> 20 40077275
-#> 21 40064331
-#> 22 40061283
-#> 23 40055169
-#> 24 40055173
-#> 25 40054285
-#> 26 40055174
-#> 27 40039991
-#> 28 40038091
-#> 29 40037598
-#> 30 40033982
-#> 31 40034000
-#> 32 40030456
-#> 33 40029223
-#> 34 34457006
-#> 35 34450098
-#> 36 34420388
-#> 37 34420389
-#> 38 34409107
-#> 39 34382182
-#> 40 34382183
-#> 41 34321639
-#> 42 34319227
-#> 43 34308578
-#> 44 34308576
-#> 45 34308577
-#> 46 34306803
-#> 47 34402700
-#> 48 34173758
-#> 49 34078614
+#> 1  40138672
+#> 2  40138080
+#> 3  40137357
+#> 4  40131842
+#> 5  40131846
+#> 6  40127791
+#> 7  40123773
+#> 8  40122790
+#> 9  40121908
+#> 10 40117840
+#> 11 40117671
+#> 12 40116452
+#> 13 40111110
+#> 14 40109790
+#> 15 40101018
+#> 16 40092797
+#> 17 40090138
+#> 18 40088879
+#> 19 40088922
+#> 20 40086395
+#> 21 40077275
+#> 22 40064331
+#> 23 40061283
+#> 24 40055169
+#> 25 40055173
+#> 26 40054285
+#> 27 40055174
+#> 28 40039991
+#> 29 40038091
+#> 30 40037598
+#> 31 40033982
+#> 32 40034000
+#> 33 40030456
+#> 34 40029223
+#> 35 34457006
+#> 36 34450098
+#> 37 34420388
+#> 38 34420389
+#> 39 34409107
+#> 40 34382182
+#> 41 34382183
+#> 42 34321639
+#> 43 34319227
+#> 44 34308578
+#> 45 34308576
+#> 46 34308577
+#> 47 34306803
+#> 48 34402700
+#> 49 34173758
+#> 50 34078614
 #>                                                                                                                       title
 #> 1             Brazil - LATIN AMERICA AND CARIBBEAN- P180429- Bahia Sustainable Rural Development Project - Procurement Plan
 #> 2             Brazil - LATIN AMERICA AND CARIBBEAN- P180429- Bahia Sustainable Rural Development Project - Procurement Plan
-#> 3                                         Labor Management Procedures Bahia Sustainable Rural Development Project (P180429)
-#> 4                                      IP/SSAHUTLC Planning Framework Bahia Sustainable Rural Development Project (P180429)
-#> 5             Brazil - LATIN AMERICA AND CARIBBEAN- P180429- Bahia Sustainable Rural Development Project - Procurement Plan
+#> 3             Brazil - LATIN AMERICA AND CARIBBEAN- P180429- Bahia Sustainable Rural Development Project - Procurement Plan
+#> 4                                         Labor Management Procedures Bahia Sustainable Rural Development Project (P180429)
+#> 5                                      IP/SSAHUTLC Planning Framework Bahia Sustainable Rural Development Project (P180429)
 #> 6             Brazil - LATIN AMERICA AND CARIBBEAN- P180429- Bahia Sustainable Rural Development Project - Procurement Plan
 #> 7             Brazil - LATIN AMERICA AND CARIBBEAN- P180429- Bahia Sustainable Rural Development Project - Procurement Plan
 #> 8             Brazil - LATIN AMERICA AND CARIBBEAN- P180429- Bahia Sustainable Rural Development Project - Procurement Plan
 #> 9             Brazil - LATIN AMERICA AND CARIBBEAN- P180429- Bahia Sustainable Rural Development Project - Procurement Plan
 #> 10            Brazil - LATIN AMERICA AND CARIBBEAN- P180429- Bahia Sustainable Rural Development Project - Procurement Plan
-#> 11                 Disclosable Version of the ISR - Bahia Sustainable Rural Development Project - P180429 - Sequence No : 4
-#> 12            Brazil - LATIN AMERICA AND CARIBBEAN- P180429- Bahia Sustainable Rural Development Project - Procurement Plan
+#> 11            Brazil - LATIN AMERICA AND CARIBBEAN- P180429- Bahia Sustainable Rural Development Project - Procurement Plan
+#> 12                 Disclosable Version of the ISR - Bahia Sustainable Rural Development Project - P180429 - Sequence No : 4
 #> 13            Brazil - LATIN AMERICA AND CARIBBEAN- P180429- Bahia Sustainable Rural Development Project - Procurement Plan
 #> 14            Brazil - LATIN AMERICA AND CARIBBEAN- P180429- Bahia Sustainable Rural Development Project - Procurement Plan
 #> 15            Brazil - LATIN AMERICA AND CARIBBEAN- P180429- Bahia Sustainable Rural Development Project - Procurement Plan
 #> 16            Brazil - LATIN AMERICA AND CARIBBEAN- P180429- Bahia Sustainable Rural Development Project - Procurement Plan
 #> 17            Brazil - LATIN AMERICA AND CARIBBEAN- P180429- Bahia Sustainable Rural Development Project - Procurement Plan
 #> 18            Brazil - LATIN AMERICA AND CARIBBEAN- P180429- Bahia Sustainable Rural Development Project - Procurement Plan
-#> 19                 Disclosable Version of the ISR - Bahia Sustainable Rural Development Project - P180429 - Sequence No : 3
-#> 20            Brazil - LATIN AMERICA AND CARIBBEAN- P180429- Bahia Sustainable Rural Development Project - Procurement Plan
+#> 19            Brazil - LATIN AMERICA AND CARIBBEAN- P180429- Bahia Sustainable Rural Development Project - Procurement Plan
+#> 20                 Disclosable Version of the ISR - Bahia Sustainable Rural Development Project - P180429 - Sequence No : 3
 #> 21            Brazil - LATIN AMERICA AND CARIBBEAN- P180429- Bahia Sustainable Rural Development Project - Procurement Plan
 #> 22            Brazil - LATIN AMERICA AND CARIBBEAN- P180429- Bahia Sustainable Rural Development Project - Procurement Plan
-#> 23                                                                  Official Documents- Loan Agreement for Loan 9738-BR.pdf
-#> 24                                                             Official Documents- Guarantee Agreement for Loan 9738-BR.pdf
-#> 25                    Environmental and Social Commitment Plan (ESCP) Bahia Sustainable Rural Development Project (P180429)
-#> 26                                   Official Documents- Disbursement and Financial Information Letter for Loan 9738-BR.pdf
-#> 27            Brazil - LATIN AMERICA AND CARIBBEAN- P180429- Bahia Sustainable Rural Development Project - Procurement Plan
-#> 28                 Disclosable Version of the ISR - Bahia Sustainable Rural Development Project - P180429 - Sequence No : 2
-#> 29            Brazil - LATIN AMERICA AND CARIBBEAN- P180429- Bahia Sustainable Rural Development Project - Procurement Plan
+#> 23            Brazil - LATIN AMERICA AND CARIBBEAN- P180429- Bahia Sustainable Rural Development Project - Procurement Plan
+#> 24                                                                  Official Documents- Loan Agreement for Loan 9738-BR.pdf
+#> 25                                                             Official Documents- Guarantee Agreement for Loan 9738-BR.pdf
+#> 26                    Environmental and Social Commitment Plan (ESCP) Bahia Sustainable Rural Development Project (P180429)
+#> 27                                   Official Documents- Disbursement and Financial Information Letter for Loan 9738-BR.pdf
+#> 28            Brazil - LATIN AMERICA AND CARIBBEAN- P180429- Bahia Sustainable Rural Development Project - Procurement Plan
+#> 29                 Disclosable Version of the ISR - Bahia Sustainable Rural Development Project - P180429 - Sequence No : 2
 #> 30            Brazil - LATIN AMERICA AND CARIBBEAN- P180429- Bahia Sustainable Rural Development Project - Procurement Plan
 #> 31            Brazil - LATIN AMERICA AND CARIBBEAN- P180429- Bahia Sustainable Rural Development Project - Procurement Plan
 #> 32            Brazil - LATIN AMERICA AND CARIBBEAN- P180429- Bahia Sustainable Rural Development Project - Procurement Plan
 #> 33            Brazil - LATIN AMERICA AND CARIBBEAN- P180429- Bahia Sustainable Rural Development Project - Procurement Plan
-#> 34                 Disclosable Version of the ISR - Bahia Sustainable Rural Development Project - P180429 - Sequence No : 1
-#> 35            Brazil - LATIN AMERICA AND CARIBBEAN- P180429- Bahia Sustainable Rural Development Project - Procurement Plan
+#> 34            Brazil - LATIN AMERICA AND CARIBBEAN- P180429- Bahia Sustainable Rural Development Project - Procurement Plan
+#> 35                 Disclosable Version of the ISR - Bahia Sustainable Rural Development Project - P180429 - Sequence No : 1
 #> 36            Brazil - LATIN AMERICA AND CARIBBEAN- P180429- Bahia Sustainable Rural Development Project - Procurement Plan
 #> 37            Brazil - LATIN AMERICA AND CARIBBEAN- P180429- Bahia Sustainable Rural Development Project - Procurement Plan
-#> 38                                                                     Brazil - Bahia Sustainable Rural Development Project
-#> 39            Brazil - LATIN AMERICA AND CARIBBEAN- P180429- Bahia Sustainable Rural Development Project - Procurement Plan
+#> 38            Brazil - LATIN AMERICA AND CARIBBEAN- P180429- Bahia Sustainable Rural Development Project - Procurement Plan
+#> 39                                                                     Brazil - Bahia Sustainable Rural Development Project
 #> 40            Brazil - LATIN AMERICA AND CARIBBEAN- P180429- Bahia Sustainable Rural Development Project - Procurement Plan
 #> 41            Brazil - LATIN AMERICA AND CARIBBEAN- P180429- Bahia Sustainable Rural Development Project - Procurement Plan
 #> 42            Brazil - LATIN AMERICA AND CARIBBEAN- P180429- Bahia Sustainable Rural Development Project - Procurement Plan
-#> 43         Appraisal Environmental and Social Review Summary (ESRS) - Bahia Sustainable Rural Development Project - P180429
-#> 44                                Stakeholder Engagement Plan (SEP) - Bahia Sustainable Rural Development Project - P180429
-#> 45                  Environmental and Social Commitment Plan (ESCP) - Bahia Sustainable Rural Development Project - P180429
-#> 46               Revised  Environmental and Social Impact Assessment  Bahia Sustainable Rural Development Project (P180429)
-#> 47                                                                     Brazil - Bahia Sustainable Rural Development Project
-#> 48 Concept Environmental and Social Review Summary (ESRS) - Bahia Sustainable Rural Development Project - Phase 2 - P180429
-#> 49             Concept Project Information Document (PID) - Bahia Sustainable Rural Development Project - Phase 2 - P180429
+#> 43            Brazil - LATIN AMERICA AND CARIBBEAN- P180429- Bahia Sustainable Rural Development Project - Procurement Plan
+#> 44         Appraisal Environmental and Social Review Summary (ESRS) - Bahia Sustainable Rural Development Project - P180429
+#> 45                                Stakeholder Engagement Plan (SEP) - Bahia Sustainable Rural Development Project - P180429
+#> 46                  Environmental and Social Commitment Plan (ESCP) - Bahia Sustainable Rural Development Project - P180429
+#> 47               Revised  Environmental and Social Impact Assessment  Bahia Sustainable Rural Development Project (P180429)
+#> 48                                                                     Brazil - Bahia Sustainable Rural Development Project
+#> 49 Concept Environmental and Social Review Summary (ESRS) - Bahia Sustainable Rural Development Project - Phase 2 - P180429
+#> 50             Concept Project Information Document (PID) - Bahia Sustainable Rural Development Project - Phase 2 - P180429
 #>                                                                              type
 #> 1                                                                Procurement Plan
 #> 2                                                                Procurement Plan
-#> 3                                                         Procedure and Checklist
-#> 4                                   Environmental and Social Management Framework
-#> 5                                                                Procurement Plan
+#> 3                                                                Procurement Plan
+#> 4                                                         Procedure and Checklist
+#> 5                                   Environmental and Social Management Framework
 #> 6                                                                Procurement Plan
 #> 7                                                                Procurement Plan
 #> 8                                                                Procurement Plan
 #> 9                                                                Procurement Plan
 #> 10                                                               Procurement Plan
-#> 11                                       Implementation Status and Results Report
-#> 12                                                               Procurement Plan
+#> 11                                                               Procurement Plan
+#> 12                                       Implementation Status and Results Report
 #> 13                                                               Procurement Plan
 #> 14                                                               Procurement Plan
 #> 15                                                               Procurement Plan
 #> 16                                                               Procurement Plan
 #> 17                                                               Procurement Plan
 #> 18                                                               Procurement Plan
-#> 19                                       Implementation Status and Results Report
-#> 20                                                               Procurement Plan
+#> 19                                                               Procurement Plan
+#> 20                                       Implementation Status and Results Report
 #> 21                                                               Procurement Plan
 #> 22                                                               Procurement Plan
-#> 23                                                                 Loan Agreement
-#> 24                                                            Guarantee Agreement
-#> 25                                       Environmental and Social Commitment Plan
-#> 26                                                            Disbursement Letter
-#> 27                                                               Procurement Plan
-#> 28                                       Implementation Status and Results Report
-#> 29                                                               Procurement Plan
+#> 23                                                               Procurement Plan
+#> 24                                                                 Loan Agreement
+#> 25                                                            Guarantee Agreement
+#> 26                                       Environmental and Social Commitment Plan
+#> 27                                                            Disbursement Letter
+#> 28                                                               Procurement Plan
+#> 29                                       Implementation Status and Results Report
 #> 30                                                               Procurement Plan
 #> 31                                                               Procurement Plan
 #> 32                                                               Procurement Plan
 #> 33                                                               Procurement Plan
-#> 34                                       Implementation Status and Results Report
-#> 35                                                               Procurement Plan
+#> 34                                                               Procurement Plan
+#> 35                                       Implementation Status and Results Report
 #> 36                                                               Procurement Plan
 #> 37                                                               Procurement Plan
-#> 38                                                     Project Appraisal Document
-#> 39                                                               Procurement Plan
+#> 38                                                               Procurement Plan
+#> 39                                                     Project Appraisal Document
 #> 40                                                               Procurement Plan
 #> 41                                                               Procurement Plan
 #> 42                                                               Procurement Plan
-#> 43                                        Environmental and Social Review Summary
-#> 44                                                    Stakeholder Engagement Plan
-#> 45                                       Environmental and Social Commitment Plan
-#> 46 Environmental and Social Assessment;Environmental Assessment;Social Assessment
-#> 47                                                   Project Information Document
-#> 48                                        Environmental and Social Review Summary
-#> 49                                                   Project Information Document
+#> 43                                                               Procurement Plan
+#> 44                                        Environmental and Social Review Summary
+#> 45                                                    Stakeholder Engagement Plan
+#> 46                                       Environmental and Social Commitment Plan
+#> 47 Environmental and Social Assessment;Environmental Assessment;Social Assessment
+#> 48                                                   Project Information Document
+#> 49                                        Environmental and Social Review Summary
+#> 50                                                   Project Information Document
 #>                 major_type country_code country                      region
 #> 1        Project Documents           BR  Brazil Latin America and Caribbean
 #> 2        Project Documents           BR  Brazil Latin America and Caribbean
-#> 3  Publications & Research         <NA>    <NA>                        <NA>
-#> 4        Project Documents         <NA>    <NA>                        <NA>
-#> 5        Project Documents           BR  Brazil Latin America and Caribbean
+#> 3        Project Documents           BR  Brazil Latin America and Caribbean
+#> 4  Publications & Research         <NA>    <NA>                        <NA>
+#> 5        Project Documents         <NA>    <NA>                        <NA>
 #> 6        Project Documents           BR  Brazil Latin America and Caribbean
 #> 7        Project Documents           BR  Brazil Latin America and Caribbean
 #> 8        Project Documents           BR  Brazil Latin America and Caribbean
@@ -390,156 +393,160 @@ wb_document(project = "P180429")
 #> 47       Project Documents           BR  Brazil Latin America and Caribbean
 #> 48       Project Documents           BR  Brazil Latin America and Caribbean
 #> 49       Project Documents           BR  Brazil Latin America and Caribbean
+#> 50       Project Documents           BR  Brazil Latin America and Caribbean
 #>      language       date report_number project_id
-#> 1     English 2026-11-09          <NA>    P180429
-#> 2     English 2026-11-03          <NA>    P180429
-#> 3  Portuguese 2026-10-07          <NA>    P180429
+#> 1     English 2026-11-11          <NA>    P180429
+#> 2     English 2026-11-09          <NA>    P180429
+#> 3     English 2026-11-03          <NA>    P180429
 #> 4  Portuguese 2026-10-07          <NA>    P180429
-#> 5     English 2026-09-16          <NA>    P180429
-#> 6     English 2026-08-21          <NA>    P180429
-#> 7     English 2026-08-17          <NA>    P180429
-#> 8     English 2026-08-11          <NA>    P180429
-#> 9     English 2026-07-20          <NA>    P180429
-#> 10    English 2026-07-17          <NA>    P180429
-#> 11    English 2026-07-11      ISR08149    P180429
-#> 12    English 2026-06-22          <NA>    P180429
-#> 13    English 2026-06-17          <NA>    P180429
-#> 14    English 2026-05-04          <NA>    P180429
-#> 15    English 2026-03-20          <NA>    P180429
-#> 16    English 2026-03-05          <NA>    P180429
-#> 17    English 2026-02-26          <NA>    P180429
+#> 5  Portuguese 2026-10-07          <NA>    P180429
+#> 6     English 2026-09-16          <NA>    P180429
+#> 7     English 2026-08-21          <NA>    P180429
+#> 8     English 2026-08-17          <NA>    P180429
+#> 9     English 2026-08-11          <NA>    P180429
+#> 10    English 2026-07-20          <NA>    P180429
+#> 11    English 2026-07-17          <NA>    P180429
+#> 12    English 2026-07-11      ISR08149    P180429
+#> 13    English 2026-06-22          <NA>    P180429
+#> 14    English 2026-06-17          <NA>    P180429
+#> 15    English 2026-05-04          <NA>    P180429
+#> 16    English 2026-03-20          <NA>    P180429
+#> 17    English 2026-03-05          <NA>    P180429
 #> 18    English 2026-02-26          <NA>    P180429
-#> 19    English 2026-02-12      ISR06930    P180429
-#> 20    English 2025-12-18          <NA>    P180429
-#> 21    English 2025-10-24          <NA>    P180429
-#> 22    English 2025-10-21          <NA>    P180429
-#> 23    English 2025-10-10          <NA>    P180429
+#> 19    English 2026-02-26          <NA>    P180429
+#> 20    English 2026-02-12      ISR06930    P180429
+#> 21    English 2025-12-18          <NA>    P180429
+#> 22    English 2025-10-24          <NA>    P180429
+#> 23    English 2025-10-21          <NA>    P180429
 #> 24    English 2025-10-10          <NA>    P180429
 #> 25    English 2025-10-10          <NA>    P180429
 #> 26    English 2025-10-10          <NA>    P180429
-#> 27    English 2025-08-27          <NA>    P180429
-#> 28    English 2025-08-14      ISR04942    P180429
-#> 29    English 2025-08-12          <NA>    P180429
-#> 30    English 2025-07-24          <NA>    P180429
+#> 27    English 2025-10-10          <NA>    P180429
+#> 28    English 2025-08-27          <NA>    P180429
+#> 29    English 2025-08-14      ISR04942    P180429
+#> 30    English 2025-08-12          <NA>    P180429
 #> 31    English 2025-07-24          <NA>    P180429
-#> 32    English 2025-07-17          <NA>    P180429
-#> 33    English 2025-07-10          <NA>    P180429
-#> 34    English 2025-02-17      ISR03187    P180429
-#> 35    English 2025-01-28    STEP108212    P180429
-#> 36    English 2024-11-11    STEP105095    P180429
-#> 37    English 2024-11-11    STEP105094    P180429
-#> 38    English 2024-10-11      PAD00054    P180429
-#> 39    English 2024-08-27    STEP101542    P180429
-#> 40    English 2024-08-27    STEP101543    P180429
-#> 41    English 2024-05-20     STEP97111    P180429
-#> 42    English 2024-05-16     STEP96942    P180429
-#> 43    English 2024-04-25    ESRSA03285    P180429
-#> 44    English 2024-04-25          <NA>    P180429
+#> 32    English 2025-07-24          <NA>    P180429
+#> 33    English 2025-07-17          <NA>    P180429
+#> 34    English 2025-07-10          <NA>    P180429
+#> 35    English 2025-02-17      ISR03187    P180429
+#> 36    English 2025-01-28    STEP108212    P180429
+#> 37    English 2024-11-11    STEP105095    P180429
+#> 38    English 2024-11-11    STEP105094    P180429
+#> 39    English 2024-10-11      PAD00054    P180429
+#> 40    English 2024-08-27    STEP101542    P180429
+#> 41    English 2024-08-27    STEP101543    P180429
+#> 42    English 2024-05-20     STEP97111    P180429
+#> 43    English 2024-05-16     STEP96942    P180429
+#> 44    English 2024-04-25    ESRSA03285    P180429
 #> 45    English 2024-04-25          <NA>    P180429
-#> 46 Portuguese 2024-04-23          <NA>    P180429
-#> 47    English 2024-04-19    PIDIA00698    P180429
-#> 48    English 2023-10-02    ESRSC03692    P180429
-#> 49    English 2023-06-12     PIDC35569    P180429
+#> 46    English 2024-04-25          <NA>    P180429
+#> 47 Portuguese 2024-04-23          <NA>    P180429
+#> 48    English 2024-04-19    PIDIA00698    P180429
+#> 49    English 2023-10-02    ESRSC03692    P180429
+#> 50    English 2023-06-12     PIDC35569    P180429
 #>                                                             url
-#> 1  http://documents.worldbank.org/curated/en/099110826200034255
-#> 2  http://documents.worldbank.org/curated/en/099110326144584002
-#> 3  http://documents.worldbank.org/curated/en/099100726095518237
-#> 4  http://documents.worldbank.org/curated/en/099100726101079610
-#> 5  http://documents.worldbank.org/curated/en/099091626154016492
-#> 6  http://documents.worldbank.org/curated/en/099082126145525027
-#> 7  http://documents.worldbank.org/curated/en/099081726101040327
-#> 8  http://documents.worldbank.org/curated/en/099081126181012675
-#> 9  http://documents.worldbank.org/curated/en/099072026092022946
-#> 10 http://documents.worldbank.org/curated/en/099071726160039079
-#> 11 http://documents.worldbank.org/curated/en/099071026220592992
-#> 12 http://documents.worldbank.org/curated/en/099062226100034290
-#> 13 http://documents.worldbank.org/curated/en/099061626200538640
-#> 14 http://documents.worldbank.org/curated/en/099050426152020899
-#> 15 http://documents.worldbank.org/curated/en/099031926224040338
-#> 16 http://documents.worldbank.org/curated/en/099030526093089201
-#> 17 http://documents.worldbank.org/curated/en/099022626090011982
-#> 18 http://documents.worldbank.org/curated/en/099022626124530714
-#> 19 http://documents.worldbank.org/curated/en/099021226120039963
-#> 20 http://documents.worldbank.org/curated/en/099121825142040072
-#> 21 http://documents.worldbank.org/curated/en/099102425102526306
-#> 22 http://documents.worldbank.org/curated/en/099102125085039398
-#> 23 http://documents.worldbank.org/curated/en/099101425084529808
-#> 24 http://documents.worldbank.org/curated/en/099101425085038753
-#> 25 http://documents.worldbank.org/curated/en/099101025171518571
-#> 26 http://documents.worldbank.org/curated/en/099101425085021147
-#> 27 http://documents.worldbank.org/curated/en/099082725150515121
-#> 28 http://documents.worldbank.org/curated/en/099081425152038720
-#> 29 http://documents.worldbank.org/curated/en/099081225110512583
-#> 30 http://documents.worldbank.org/curated/en/099072425150031499
-#> 31 http://documents.worldbank.org/curated/en/099072425170025190
-#> 32 http://documents.worldbank.org/curated/en/099071725085522508
-#> 33 http://documents.worldbank.org/curated/en/099071025091532001
-#> 34 http://documents.worldbank.org/curated/en/099021725072518876
-#> 35 http://documents.worldbank.org/curated/en/099012725191536286
-#> 36 http://documents.worldbank.org/curated/en/099111124120510033
-#> 37 http://documents.worldbank.org/curated/en/099111124120067669
-#> 38 http://documents.worldbank.org/curated/en/099102124100530964
-#> 39 http://documents.worldbank.org/curated/en/099082724163512954
-#> 40 http://documents.worldbank.org/curated/en/099082724163588323
-#> 41 http://documents.worldbank.org/curated/en/099052024161017643
-#> 42 http://documents.worldbank.org/curated/en/099051624092540072
-#> 43 http://documents.worldbank.org/curated/en/099042524173023798
-#> 44 http://documents.worldbank.org/curated/en/099042524172532795
-#> 45 http://documents.worldbank.org/curated/en/099042524172515208
-#> 46 http://documents.worldbank.org/curated/en/099042324123035354
-#> 47 http://documents.worldbank.org/curated/en/099722210102417323
-#> 48 http://documents.worldbank.org/curated/en/099100223155525902
-#> 49 http://documents.worldbank.org/curated/en/099061223162019669
+#> 1  http://documents.worldbank.org/curated/en/099111126150035675
+#> 2  http://documents.worldbank.org/curated/en/099110826200034255
+#> 3  http://documents.worldbank.org/curated/en/099110326144584002
+#> 4  http://documents.worldbank.org/curated/en/099100726095518237
+#> 5  http://documents.worldbank.org/curated/en/099100726101079610
+#> 6  http://documents.worldbank.org/curated/en/099091626154016492
+#> 7  http://documents.worldbank.org/curated/en/099082126145525027
+#> 8  http://documents.worldbank.org/curated/en/099081726101040327
+#> 9  http://documents.worldbank.org/curated/en/099081126181012675
+#> 10 http://documents.worldbank.org/curated/en/099072026092022946
+#> 11 http://documents.worldbank.org/curated/en/099071726160039079
+#> 12 http://documents.worldbank.org/curated/en/099071026220592992
+#> 13 http://documents.worldbank.org/curated/en/099062226100034290
+#> 14 http://documents.worldbank.org/curated/en/099061626200538640
+#> 15 http://documents.worldbank.org/curated/en/099050426152020899
+#> 16 http://documents.worldbank.org/curated/en/099031926224040338
+#> 17 http://documents.worldbank.org/curated/en/099030526093089201
+#> 18 http://documents.worldbank.org/curated/en/099022626090011982
+#> 19 http://documents.worldbank.org/curated/en/099022626124530714
+#> 20 http://documents.worldbank.org/curated/en/099021226120039963
+#> 21 http://documents.worldbank.org/curated/en/099121825142040072
+#> 22 http://documents.worldbank.org/curated/en/099102425102526306
+#> 23 http://documents.worldbank.org/curated/en/099102125085039398
+#> 24 http://documents.worldbank.org/curated/en/099101425084529808
+#> 25 http://documents.worldbank.org/curated/en/099101425085038753
+#> 26 http://documents.worldbank.org/curated/en/099101025171518571
+#> 27 http://documents.worldbank.org/curated/en/099101425085021147
+#> 28 http://documents.worldbank.org/curated/en/099082725150515121
+#> 29 http://documents.worldbank.org/curated/en/099081425152038720
+#> 30 http://documents.worldbank.org/curated/en/099081225110512583
+#> 31 http://documents.worldbank.org/curated/en/099072425150031499
+#> 32 http://documents.worldbank.org/curated/en/099072425170025190
+#> 33 http://documents.worldbank.org/curated/en/099071725085522508
+#> 34 http://documents.worldbank.org/curated/en/099071025091532001
+#> 35 http://documents.worldbank.org/curated/en/099021725072518876
+#> 36 http://documents.worldbank.org/curated/en/099012725191536286
+#> 37 http://documents.worldbank.org/curated/en/099111124120510033
+#> 38 http://documents.worldbank.org/curated/en/099111124120067669
+#> 39 http://documents.worldbank.org/curated/en/099102124100530964
+#> 40 http://documents.worldbank.org/curated/en/099082724163512954
+#> 41 http://documents.worldbank.org/curated/en/099082724163588323
+#> 42 http://documents.worldbank.org/curated/en/099052024161017643
+#> 43 http://documents.worldbank.org/curated/en/099051624092540072
+#> 44 http://documents.worldbank.org/curated/en/099042524173023798
+#> 45 http://documents.worldbank.org/curated/en/099042524172532795
+#> 46 http://documents.worldbank.org/curated/en/099042524172515208
+#> 47 http://documents.worldbank.org/curated/en/099042324123035354
+#> 48 http://documents.worldbank.org/curated/en/099722210102417323
+#> 49 http://documents.worldbank.org/curated/en/099100223155525902
+#> 50 http://documents.worldbank.org/curated/en/099061223162019669
 #>                                                                                                               pdf_url
-#> 1  https://documents.worldbank.org/curated/en/099110826200034255/pdf/P180429-2918a876-097a-4819-ab36-818bef966f40.pdf
-#> 2  https://documents.worldbank.org/curated/en/099110326144584002/pdf/P180429-591f5cb3-682e-42de-bbc8-f9e5cb6d9f1a.pdf
-#> 3  https://documents.worldbank.org/curated/en/099100726095518237/pdf/P180429-b46c6584-878a-43ab-92cb-b2beb352e4c4.pdf
-#> 4  https://documents.worldbank.org/curated/en/099100726101079610/pdf/P180429-06e694c1-097a-416d-8d90-d761c46b56cd.pdf
-#> 5  https://documents.worldbank.org/curated/en/099091626154016492/pdf/P180429-c4c8c9e8-6bc6-4db9-9535-2d7b57a1f382.pdf
-#> 6  https://documents.worldbank.org/curated/en/099082126145525027/pdf/P180429-a8e4c1ab-7cdf-4930-b976-a6a378764894.pdf
-#> 7  https://documents.worldbank.org/curated/en/099081726101040327/pdf/P180429-09f45a51-4e0f-413b-9081-ca0654d5e723.pdf
-#> 8  https://documents.worldbank.org/curated/en/099081126181012675/pdf/P180429-db31c711-0b8a-4848-9b48-18342d8c500b.pdf
-#> 9  https://documents.worldbank.org/curated/en/099072026092022946/pdf/P180429-6111ba8b-0542-4eb5-baa1-46a6b09af0e7.pdf
-#> 10 https://documents.worldbank.org/curated/en/099071726160039079/pdf/P180429-3b942d65-0820-4d76-8465-3d6e2d94081f.pdf
-#> 11 https://documents.worldbank.org/curated/en/099071026220592992/pdf/P180429-f4bd206b-0b5e-4382-8e06-d9bc61295289.pdf
-#> 12 https://documents.worldbank.org/curated/en/099062226100034290/pdf/P180429-e64f5e60-35c4-4ed6-b779-41fe615c1041.pdf
-#> 13 https://documents.worldbank.org/curated/en/099061626200538640/pdf/P180429-e182b9eb-8dc6-4869-82ae-18be69069e79.pdf
-#> 14 https://documents.worldbank.org/curated/en/099050426152020899/pdf/P180429-c28c8d31-f667-41c1-ba28-096b33339e33.pdf
-#> 15 https://documents.worldbank.org/curated/en/099031926224040338/pdf/P180429-642a8ec3-9623-4778-8e55-8aee46cf8e2d.pdf
-#> 16 https://documents.worldbank.org/curated/en/099030526093089201/pdf/P180429-c6e9cb20-e8aa-40df-add7-3c254a2ab934.pdf
-#> 17 https://documents.worldbank.org/curated/en/099022626090011982/pdf/P180429-717b7661-b9fa-4780-9b68-85774d8214c9.pdf
-#> 18 https://documents.worldbank.org/curated/en/099022626124530714/pdf/P180429-089cb98f-8cf9-446b-bae3-11a0e0e392b2.pdf
-#> 19 https://documents.worldbank.org/curated/en/099021226120039963/pdf/P180429-68724d0c-8d4e-4cbc-83f1-b1ce413064a9.pdf
-#> 20 https://documents.worldbank.org/curated/en/099121825142040072/pdf/P180429-65d89127-f6ce-4e56-a6b7-8b2a7cc22ded.pdf
-#> 21 https://documents.worldbank.org/curated/en/099102425102526306/pdf/P180429-172aac50-2e38-4daa-a6ca-f8e85c7a58ec.pdf
-#> 22 https://documents.worldbank.org/curated/en/099102125085039398/pdf/P180429-82ca9736-1d37-4af9-a278-05381bde1921.pdf
-#> 23 https://documents.worldbank.org/curated/en/099101425084529808/pdf/P180429-78ae8360-e7d1-4e51-9dc4-c41870a0cf0a.pdf
-#> 24 https://documents.worldbank.org/curated/en/099101425085038753/pdf/P180429-3608e73a-1ed7-4067-93e9-37a1b62ac841.pdf
-#> 25 https://documents.worldbank.org/curated/en/099101025171518571/pdf/P180429-2d2f4c1b-6baf-4dbb-873f-fdf118497b99.pdf
-#> 26 https://documents.worldbank.org/curated/en/099101425085021147/pdf/P180429-f816ab84-be0f-48e0-9278-8a20c85a23b9.pdf
-#> 27 https://documents.worldbank.org/curated/en/099082725150515121/pdf/P180429-ae94e1d5-0fe3-46a1-bc68-2fb1ae1e2ef3.pdf
-#> 28 https://documents.worldbank.org/curated/en/099081425152038720/pdf/P180429-4580715f-4886-45a1-a4f5-da41e46fac77.pdf
-#> 29 https://documents.worldbank.org/curated/en/099081225110512583/pdf/P180429-ad591625-e4bb-46e9-8ccc-c103a6772d03.pdf
-#> 30 https://documents.worldbank.org/curated/en/099072425150031499/pdf/P180429-cda2d978-340e-4e8b-bb69-80ced2278669.pdf
-#> 31 https://documents.worldbank.org/curated/en/099072425170025190/pdf/P180429-ac1b6d43-689e-4e91-8848-1db55c32d42b.pdf
-#> 32 https://documents.worldbank.org/curated/en/099071725085522508/pdf/P180429-2db93244-de07-4797-9f09-93f5b61382bd.pdf
-#> 33 https://documents.worldbank.org/curated/en/099071025091532001/pdf/P180429-ffd3920a-b6c7-43f8-ba93-eef2f5f65797.pdf
-#> 34 https://documents.worldbank.org/curated/en/099021725072518876/pdf/P180429-11df8844-3b96-4157-8335-57433a521343.pdf
-#> 35 https://documents.worldbank.org/curated/en/099012725191536286/pdf/P180429-a6978926-7664-48b8-8841-5c9018105c47.pdf
-#> 36 https://documents.worldbank.org/curated/en/099111124120510033/pdf/P180429-6ca8b4ec-fb01-4cba-9f67-b46a6e8fc2b1.pdf
-#> 37 https://documents.worldbank.org/curated/en/099111124120067669/pdf/P180429-4abf7ab0-823d-4464-8639-f4d7fbd42fcf.pdf
-#> 38   https://documents.worldbank.org/curated/en/099102124100530964/pdf/BOSIB-9c8aa18f-cb4b-4a65-ab9e-208329249066.pdf
-#> 39 https://documents.worldbank.org/curated/en/099082724163512954/pdf/P180429-b6d12dc4-63ed-49f9-9994-22296ecc7990.pdf
-#> 40 https://documents.worldbank.org/curated/en/099082724163588323/pdf/P180429-9f89cdb2-45ea-43da-aa04-29009c946ecd.pdf
-#> 41           http://documents.worldbank.org/curated/en/099052024161017643/pdf/P180429105cc6d0e9184361d74250d9cb6f.pdf
-#> 42           http://documents.worldbank.org/curated/en/099051624092540072/pdf/P1804291a132cb06f1bf641782e1a92972b.pdf
-#> 43 https://documents.worldbank.org/curated/en/099042524173023798/pdf/P180429-1d48fee0-23da-4aac-a871-f469d7cbed3a.pdf
-#> 44            http://documents.worldbank.org/curated/en/099042524172532795/pdf/P18042918be5fc031953916504ca1c0a43.pdf
-#> 45            http://documents.worldbank.org/curated/en/099042524172515208/pdf/P1804291d63db20518dba154b4b0b2f037.pdf
-#> 46            http://documents.worldbank.org/curated/en/099042324123035354/pdf/P1804291cd02f40418d5314ff0d3532d76.pdf
-#> 47     https://documents.worldbank.org/curated/en/099722210102417323/pdf/IDU-89129d52-de9f-4948-9da6-158954a709e1.pdf
-#> 48           http://documents.worldbank.org/curated/en/099100223155525902/pdf/P1804290a85f9b0c70b6ca0c313f67b9676.pdf
-#> 49            http://documents.worldbank.org/curated/en/099061223162019669/pdf/P1804290e85ca50b0a55e09a3c27f757f4.pdf
+#> 1  https://documents.worldbank.org/curated/en/099111126150035675/pdf/P180429-8ab176bc-57c5-453b-ba23-77564f9eb295.pdf
+#> 2  https://documents.worldbank.org/curated/en/099110826200034255/pdf/P180429-2918a876-097a-4819-ab36-818bef966f40.pdf
+#> 3  https://documents.worldbank.org/curated/en/099110326144584002/pdf/P180429-591f5cb3-682e-42de-bbc8-f9e5cb6d9f1a.pdf
+#> 4  https://documents.worldbank.org/curated/en/099100726095518237/pdf/P180429-b46c6584-878a-43ab-92cb-b2beb352e4c4.pdf
+#> 5  https://documents.worldbank.org/curated/en/099100726101079610/pdf/P180429-06e694c1-097a-416d-8d90-d761c46b56cd.pdf
+#> 6  https://documents.worldbank.org/curated/en/099091626154016492/pdf/P180429-c4c8c9e8-6bc6-4db9-9535-2d7b57a1f382.pdf
+#> 7  https://documents.worldbank.org/curated/en/099082126145525027/pdf/P180429-a8e4c1ab-7cdf-4930-b976-a6a378764894.pdf
+#> 8  https://documents.worldbank.org/curated/en/099081726101040327/pdf/P180429-09f45a51-4e0f-413b-9081-ca0654d5e723.pdf
+#> 9  https://documents.worldbank.org/curated/en/099081126181012675/pdf/P180429-db31c711-0b8a-4848-9b48-18342d8c500b.pdf
+#> 10 https://documents.worldbank.org/curated/en/099072026092022946/pdf/P180429-6111ba8b-0542-4eb5-baa1-46a6b09af0e7.pdf
+#> 11 https://documents.worldbank.org/curated/en/099071726160039079/pdf/P180429-3b942d65-0820-4d76-8465-3d6e2d94081f.pdf
+#> 12 https://documents.worldbank.org/curated/en/099071026220592992/pdf/P180429-f4bd206b-0b5e-4382-8e06-d9bc61295289.pdf
+#> 13 https://documents.worldbank.org/curated/en/099062226100034290/pdf/P180429-e64f5e60-35c4-4ed6-b779-41fe615c1041.pdf
+#> 14 https://documents.worldbank.org/curated/en/099061626200538640/pdf/P180429-e182b9eb-8dc6-4869-82ae-18be69069e79.pdf
+#> 15 https://documents.worldbank.org/curated/en/099050426152020899/pdf/P180429-c28c8d31-f667-41c1-ba28-096b33339e33.pdf
+#> 16 https://documents.worldbank.org/curated/en/099031926224040338/pdf/P180429-642a8ec3-9623-4778-8e55-8aee46cf8e2d.pdf
+#> 17 https://documents.worldbank.org/curated/en/099030526093089201/pdf/P180429-c6e9cb20-e8aa-40df-add7-3c254a2ab934.pdf
+#> 18 https://documents.worldbank.org/curated/en/099022626090011982/pdf/P180429-717b7661-b9fa-4780-9b68-85774d8214c9.pdf
+#> 19 https://documents.worldbank.org/curated/en/099022626124530714/pdf/P180429-089cb98f-8cf9-446b-bae3-11a0e0e392b2.pdf
+#> 20 https://documents.worldbank.org/curated/en/099021226120039963/pdf/P180429-68724d0c-8d4e-4cbc-83f1-b1ce413064a9.pdf
+#> 21 https://documents.worldbank.org/curated/en/099121825142040072/pdf/P180429-65d89127-f6ce-4e56-a6b7-8b2a7cc22ded.pdf
+#> 22 https://documents.worldbank.org/curated/en/099102425102526306/pdf/P180429-172aac50-2e38-4daa-a6ca-f8e85c7a58ec.pdf
+#> 23 https://documents.worldbank.org/curated/en/099102125085039398/pdf/P180429-82ca9736-1d37-4af9-a278-05381bde1921.pdf
+#> 24 https://documents.worldbank.org/curated/en/099101425084529808/pdf/P180429-78ae8360-e7d1-4e51-9dc4-c41870a0cf0a.pdf
+#> 25 https://documents.worldbank.org/curated/en/099101425085038753/pdf/P180429-3608e73a-1ed7-4067-93e9-37a1b62ac841.pdf
+#> 26 https://documents.worldbank.org/curated/en/099101025171518571/pdf/P180429-2d2f4c1b-6baf-4dbb-873f-fdf118497b99.pdf
+#> 27 https://documents.worldbank.org/curated/en/099101425085021147/pdf/P180429-f816ab84-be0f-48e0-9278-8a20c85a23b9.pdf
+#> 28 https://documents.worldbank.org/curated/en/099082725150515121/pdf/P180429-ae94e1d5-0fe3-46a1-bc68-2fb1ae1e2ef3.pdf
+#> 29 https://documents.worldbank.org/curated/en/099081425152038720/pdf/P180429-4580715f-4886-45a1-a4f5-da41e46fac77.pdf
+#> 30 https://documents.worldbank.org/curated/en/099081225110512583/pdf/P180429-ad591625-e4bb-46e9-8ccc-c103a6772d03.pdf
+#> 31 https://documents.worldbank.org/curated/en/099072425150031499/pdf/P180429-cda2d978-340e-4e8b-bb69-80ced2278669.pdf
+#> 32 https://documents.worldbank.org/curated/en/099072425170025190/pdf/P180429-ac1b6d43-689e-4e91-8848-1db55c32d42b.pdf
+#> 33 https://documents.worldbank.org/curated/en/099071725085522508/pdf/P180429-2db93244-de07-4797-9f09-93f5b61382bd.pdf
+#> 34 https://documents.worldbank.org/curated/en/099071025091532001/pdf/P180429-ffd3920a-b6c7-43f8-ba93-eef2f5f65797.pdf
+#> 35 https://documents.worldbank.org/curated/en/099021725072518876/pdf/P180429-11df8844-3b96-4157-8335-57433a521343.pdf
+#> 36 https://documents.worldbank.org/curated/en/099012725191536286/pdf/P180429-a6978926-7664-48b8-8841-5c9018105c47.pdf
+#> 37 https://documents.worldbank.org/curated/en/099111124120510033/pdf/P180429-6ca8b4ec-fb01-4cba-9f67-b46a6e8fc2b1.pdf
+#> 38 https://documents.worldbank.org/curated/en/099111124120067669/pdf/P180429-4abf7ab0-823d-4464-8639-f4d7fbd42fcf.pdf
+#> 39   https://documents.worldbank.org/curated/en/099102124100530964/pdf/BOSIB-9c8aa18f-cb4b-4a65-ab9e-208329249066.pdf
+#> 40 https://documents.worldbank.org/curated/en/099082724163512954/pdf/P180429-b6d12dc4-63ed-49f9-9994-22296ecc7990.pdf
+#> 41 https://documents.worldbank.org/curated/en/099082724163588323/pdf/P180429-9f89cdb2-45ea-43da-aa04-29009c946ecd.pdf
+#> 42           http://documents.worldbank.org/curated/en/099052024161017643/pdf/P180429105cc6d0e9184361d74250d9cb6f.pdf
+#> 43           http://documents.worldbank.org/curated/en/099051624092540072/pdf/P1804291a132cb06f1bf641782e1a92972b.pdf
+#> 44 https://documents.worldbank.org/curated/en/099042524173023798/pdf/P180429-1d48fee0-23da-4aac-a871-f469d7cbed3a.pdf
+#> 45            http://documents.worldbank.org/curated/en/099042524172532795/pdf/P18042918be5fc031953916504ca1c0a43.pdf
+#> 46            http://documents.worldbank.org/curated/en/099042524172515208/pdf/P1804291d63db20518dba154b4b0b2f037.pdf
+#> 47            http://documents.worldbank.org/curated/en/099042324123035354/pdf/P1804291cd02f40418d5314ff0d3532d76.pdf
+#> 48     https://documents.worldbank.org/curated/en/099722210102417323/pdf/IDU-89129d52-de9f-4948-9da6-158954a709e1.pdf
+#> 49           http://documents.worldbank.org/curated/en/099100223155525902/pdf/P1804290a85f9b0c70b6ca0c313f67b9676.pdf
+#> 50            http://documents.worldbank.org/curated/en/099061223162019669/pdf/P1804290e85ca50b0a55e09a3c27f757f4.pdf
 #>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     abstract
 #> 1                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       <NA>
 #> 2                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       <NA>
@@ -578,8 +585,8 @@ wb_document(project = "P180429")
 #> 35                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      <NA>
 #> 36                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      <NA>
 #> 37                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      <NA>
-#> 38 The development objective of the Bahia Sustainable Rural Development Project for Brazil is to enhance resilience of family farmers in targeted states. The project comprises of five components. The first component, increasing agricultural productivity, access to markets, and resilience to shocks will finance technical studies, technical assistance (TA), and matching grants to co-finance business and the development plans of Producer Organizations (POs) and to support investments in climate-smart agriculture (CSA). It consists of following sub-components: (i) development of business plans and strengthening capacities of POs and family farmers; (ii) implementation of business and ethno-development plans; and (iii) improving access to complementary agricultural public policies. The second component, supplying safe drinking water services to rural communities will fund water infrastructure to improve food and nutrition security of low-income rural households through the expansion of access to drinking water services from rural dwellers, its main objective will be to support the Bahia’s efforts to develop a rural water state policy and bringing about institutional changes in the water sector to mainstream a strategy for managing rural water services. It consists of following sub-components: (i) strengthening and consolidating the multi-community management model for rural water supply services; and (ii) investments in rural water infrastructure and monitoring of service delivery. The third component, designing and scaling innovative solutions for agrifood production and commercialization will finance the scaling of innovations that can have a positive impact on the long-term sustainability of the interventions on POs (Component 1). It consists of following sub-component: (i) scaling innovations to improve productivity and access to markets. The fourth component, contingency emergency response component (CERC) is a mechanism for Borrowers (Bahia) to access funds rapidly to respond to an eligible crisis or disasters and health emergency. The fifth component, project management and institutional development will support the participation of the Project Management Unit (PMU) in the multiphase programmatic approach (MPA) coordination, learning and, monitoring efforts.
-#> 39                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      <NA>
+#> 38                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      <NA>
+#> 39 The development objective of the Bahia Sustainable Rural Development Project for Brazil is to enhance resilience of family farmers in targeted states. The project comprises of five components. The first component, increasing agricultural productivity, access to markets, and resilience to shocks will finance technical studies, technical assistance (TA), and matching grants to co-finance business and the development plans of Producer Organizations (POs) and to support investments in climate-smart agriculture (CSA). It consists of following sub-components: (i) development of business plans and strengthening capacities of POs and family farmers; (ii) implementation of business and ethno-development plans; and (iii) improving access to complementary agricultural public policies. The second component, supplying safe drinking water services to rural communities will fund water infrastructure to improve food and nutrition security of low-income rural households through the expansion of access to drinking water services from rural dwellers, its main objective will be to support the Bahia’s efforts to develop a rural water state policy and bringing about institutional changes in the water sector to mainstream a strategy for managing rural water services. It consists of following sub-components: (i) strengthening and consolidating the multi-community management model for rural water supply services; and (ii) investments in rural water infrastructure and monitoring of service delivery. The third component, designing and scaling innovative solutions for agrifood production and commercialization will finance the scaling of innovations that can have a positive impact on the long-term sustainability of the interventions on POs (Component 1). It consists of following sub-component: (i) scaling innovations to improve productivity and access to markets. The fourth component, contingency emergency response component (CERC) is a mechanism for Borrowers (Bahia) to access funds rapidly to respond to an eligible crisis or disasters and health emergency. The fifth component, project management and institutional development will support the participation of the Project Management Unit (PMU) in the multiphase programmatic approach (MPA) coordination, learning and, monitoring efforts.
 #> 40                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      <NA>
 #> 41                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      <NA>
 #> 42                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      <NA>
@@ -590,6 +597,7 @@ wb_document(project = "P180429")
 #> 47                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      <NA>
 #> 48                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      <NA>
 #> 49                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      <NA>
+#> 50                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      <NA>
 
 # the first 100 documents mentioning climate
 docs <- wb_document(search = "climate", limit = 100)

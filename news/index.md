@@ -5,6 +5,11 @@
 ### Bug fixes
 
 - [`wb_document()`](https://m-muecke.github.io/worldbank/reference/wb_document.md)
+  and
+  [`wb_project()`](https://m-muecke.github.io/worldbank/reference/wb_project.md)
+  work again after the World Bank search API started serving its JSON
+  responses as `text/plain`.
+- [`wb_document()`](https://m-muecke.github.io/worldbank/reference/wb_document.md)
   no longer returns duplicated or missing documents for queries spanning
   several pages. Documents are now sorted by descending `date`.
 
