@@ -25,10 +25,10 @@ resp_body_csv <- function(resp) {
   utils::read.csv(text = resp_body_string(resp, "UTF-8"), na.strings = character())
 }
 
-resp_total_pages <- function(resp, per_page) {
+resp_total_pages <- function(resp, page_size) {
   total <- resp_body_json(resp, check_type = FALSE)$total
   if (is.null(total)) {
     return()
   }
-  max(ceiling(as.integer(total) / per_page), 1L)
+  max(ceiling(as.integer(total) / page_size), 1L)
 }

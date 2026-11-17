@@ -120,15 +120,15 @@ document_fields <- c(
 )
 
 documents <- function(..., limit = NULL) {
-  per_page <- min(limit %||% 1000L, 1000L)
-  max_reqs <- if (!is.null(limit)) ceiling(limit / per_page) else Inf
+  page_size <- min(limit %||% 1000L, 1000L)
+  max_reqs <- if (!is.null(limit)) ceiling(limit / page_size) else Inf
 
   # the default order by relevance has ties, so paging by offset repeats and skips documents
   req <- wb_request("https://search.worldbank.org/api/v3/wds") |>
     req_url_query(
       ...,
       format = "json",
-      rows = per_page,
+      rows = page_size,
       fl = document_fields,
       srt = "docdt",
       order = "desc",
@@ -140,8 +140,8 @@ documents <- function(..., limit = NULL) {
     next_req = iterate_with_offset(
       "os",
       start = 0L,
-      offset = per_page,
-      resp_pages = \(resp) resp_total_pages(resp, per_page),
+      offset = page_size,
+      resp_pages = \(resp) resp_total_pages(resp, page_size),
       resp_complete = \(resp) length(resp_documents(resp)) == 0L
     ),
     max_reqs = max_reqs,
