@@ -143,13 +143,13 @@ projects <- function(..., limit = NULL) {
       start = 0L,
       offset = per_page,
       resp_pages = \(resp) resp_total_pages(resp, per_page),
-      resp_complete = \(resp) length(resp_body_json(resp)$projects) == 0L
+      resp_complete = \(resp) length(resp_body_json(resp, check_type = FALSE)$projects) == 0L
     ),
     max_reqs = max_reqs,
     progress = wb_progress()
   )
 
-  data <- resps_data(resps, \(resp) unname(resp_body_json(resp)$projects))
+  data <- resps_data(resps, \(resp) unname(resp_body_json(resp, check_type = FALSE)$projects))
   if (!is.null(limit)) {
     data <- utils::head(data, limit)
   }

@@ -2,6 +2,7 @@
 
 ## Bug fixes
 
+* `wb_document()` and `wb_project()` work again after the World Bank search API started serving its JSON responses as `text/plain`.
 * `wb_document()` no longer returns duplicated or missing documents for queries spanning several pages. Documents are now sorted by descending `date`.
 
 # worldbank 0.11.0

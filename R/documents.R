@@ -159,7 +159,7 @@ documents <- function(..., limit = NULL) {
 }
 
 resp_documents <- function(resp) {
-  docs <- resp_body_json(resp)$documents
+  docs <- resp_body_json(resp, check_type = FALSE)$documents
   docs$facets <- NULL
   unname(docs)
 }

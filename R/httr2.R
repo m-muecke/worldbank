@@ -26,7 +26,7 @@ resp_body_csv <- function(resp) {
 }
 
 resp_total_pages <- function(resp, per_page) {
-  total <- resp_body_json(resp)$total
+  total <- resp_body_json(resp, check_type = FALSE)$total
   if (is.null(total)) {
     return()
   }
