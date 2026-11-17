@@ -1,8 +1,6 @@
 # Changelog
 
-## worldbank (development version)
-
-### Bug fixes
+## worldbank 0.11.1
 
 - [`wb_document()`](https://m-muecke.github.io/worldbank/reference/wb_document.md)
   and
